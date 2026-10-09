@@ -2,6 +2,11 @@
 
 Milestones are listed with their intended tag. Tag pushes were blocked by the build environment's git policy, so tags are created locally with `scripts/tag-milestones.sh` (it maps each tag to its commit SHA).
 
+## v0.4.0: synthetic registry and sensitivity engine
+- Seeded generator for a labelled synthetic registry (16 entities, ~570 items); `is_synthetic` is enforced by the schema
+- 72-definition sensitivity sweep (unit x scope x threshold x guardrails) with a golden file for the TypeScript engine
+- `data/synthetic/DATASHEET.md`
+
 ## v0.3.0: scoring and status engines
 - `pipeline/score.py`: six-check verifiability score; checks that do not apply are excluded, not failed
 - `pipeline/status.py`: deterministic status; neutral default; media-only evidence never moves a status; unit mismatches flagged, never converted

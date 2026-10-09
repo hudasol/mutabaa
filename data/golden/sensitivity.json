@@ -1,0 +1,506 @@
+[
+ {
+  "unit": "services",
+  "scope": "citizen-services",
+  "threshold": 2,
+  "guardrails": "none",
+  "share": 0.705426
+ },
+ {
+  "unit": "services",
+  "scope": "citizen-services",
+  "threshold": 2,
+  "guardrails": "required",
+  "share": 0.375969
+ },
+ {
+  "unit": "services",
+  "scope": "citizen-services",
+  "threshold": 3,
+  "guardrails": "none",
+  "share": 0.426357
+ },
+ {
+  "unit": "services",
+  "scope": "citizen-services",
+  "threshold": 3,
+  "guardrails": "required",
+  "share": 0.302326
+ },
+ {
+  "unit": "services",
+  "scope": "citizen-services",
+  "threshold": 4,
+  "guardrails": "none",
+  "share": 0.205426
+ },
+ {
+  "unit": "services",
+  "scope": "citizen-services",
+  "threshold": 4,
+  "guardrails": "required",
+  "share": 0.170543
+ },
+ {
+  "unit": "services",
+  "scope": "all-services",
+  "threshold": 2,
+  "guardrails": "none",
+  "share": 0.700508
+ },
+ {
+  "unit": "services",
+  "scope": "all-services",
+  "threshold": 2,
+  "guardrails": "required",
+  "share": 0.36802
+ },
+ {
+  "unit": "services",
+  "scope": "all-services",
+  "threshold": 3,
+  "guardrails": "none",
+  "share": 0.401015
+ },
+ {
+  "unit": "services",
+  "scope": "all-services",
+  "threshold": 3,
+  "guardrails": "required",
+  "share": 0.281726
+ },
+ {
+  "unit": "services",
+  "scope": "all-services",
+  "threshold": 4,
+  "guardrails": "none",
+  "share": 0.170051
+ },
+ {
+  "unit": "services",
+  "scope": "all-services",
+  "threshold": 4,
+  "guardrails": "required",
+  "share": 0.137056
+ },
+ {
+  "unit": "services",
+  "scope": "services-and-operations",
+  "threshold": 2,
+  "guardrails": "none",
+  "share": 0.684119
+ },
+ {
+  "unit": "services",
+  "scope": "services-and-operations",
+  "threshold": 2,
+  "guardrails": "required",
+  "share": 0.366492
+ },
+ {
+  "unit": "services",
+  "scope": "services-and-operations",
+  "threshold": 3,
+  "guardrails": "none",
+  "share": 0.375218
+ },
+ {
+  "unit": "services",
+  "scope": "services-and-operations",
+  "threshold": 3,
+  "guardrails": "required",
+  "share": 0.263525
+ },
+ {
+  "unit": "services",
+  "scope": "services-and-operations",
+  "threshold": 4,
+  "guardrails": "none",
+  "share": 0.143106
+ },
+ {
+  "unit": "services",
+  "scope": "services-and-operations",
+  "threshold": 4,
+  "guardrails": "required",
+  "share": 0.118674
+ },
+ {
+  "unit": "transactions",
+  "scope": "citizen-services",
+  "threshold": 2,
+  "guardrails": "none",
+  "share": 0.771897
+ },
+ {
+  "unit": "transactions",
+  "scope": "citizen-services",
+  "threshold": 2,
+  "guardrails": "required",
+  "share": 0.609344
+ },
+ {
+  "unit": "transactions",
+  "scope": "citizen-services",
+  "threshold": 3,
+  "guardrails": "none",
+  "share": 0.634488
+ },
+ {
+  "unit": "transactions",
+  "scope": "citizen-services",
+  "threshold": 3,
+  "guardrails": "required",
+  "share": 0.577343
+ },
+ {
+  "unit": "transactions",
+  "scope": "citizen-services",
+  "threshold": 4,
+  "guardrails": "none",
+  "share": 0.127958
+ },
+ {
+  "unit": "transactions",
+  "scope": "citizen-services",
+  "threshold": 4,
+  "guardrails": "required",
+  "share": 0.121211
+ },
+ {
+  "unit": "transactions",
+  "scope": "all-services",
+  "threshold": 2,
+  "guardrails": "none",
+  "share": 0.767669
+ },
+ {
+  "unit": "transactions",
+  "scope": "all-services",
+  "threshold": 2,
+  "guardrails": "required",
+  "share": 0.480348
+ },
+ {
+  "unit": "transactions",
+  "scope": "all-services",
+  "threshold": 3,
+  "guardrails": "none",
+  "share": 0.575631
+ },
+ {
+  "unit": "transactions",
+  "scope": "all-services",
+  "threshold": 3,
+  "guardrails": "required",
+  "share": 0.446165
+ },
+ {
+  "unit": "transactions",
+  "scope": "all-services",
+  "threshold": 4,
+  "guardrails": "none",
+  "share": 0.102976
+ },
+ {
+  "unit": "transactions",
+  "scope": "all-services",
+  "threshold": 4,
+  "guardrails": "required",
+  "share": 0.096461
+ },
+ {
+  "unit": "transactions",
+  "scope": "services-and-operations",
+  "threshold": 2,
+  "guardrails": "none",
+  "share": 0.767692
+ },
+ {
+  "unit": "transactions",
+  "scope": "services-and-operations",
+  "threshold": 2,
+  "guardrails": "required",
+  "share": 0.491756
+ },
+ {
+  "unit": "transactions",
+  "scope": "services-and-operations",
+  "threshold": 3,
+  "guardrails": "none",
+  "share": 0.559847
+ },
+ {
+  "unit": "transactions",
+  "scope": "services-and-operations",
+  "threshold": 3,
+  "guardrails": "required",
+  "share": 0.438543
+ },
+ {
+  "unit": "transactions",
+  "scope": "services-and-operations",
+  "threshold": 4,
+  "guardrails": "none",
+  "share": 0.128873
+ },
+ {
+  "unit": "transactions",
+  "scope": "services-and-operations",
+  "threshold": 4,
+  "guardrails": "required",
+  "share": 0.119384
+ },
+ {
+  "unit": "entities",
+  "scope": "citizen-services",
+  "threshold": 2,
+  "guardrails": "none",
+  "share": 0.6875
+ },
+ {
+  "unit": "entities",
+  "scope": "citizen-services",
+  "threshold": 2,
+  "guardrails": "required",
+  "share": 0.25
+ },
+ {
+  "unit": "entities",
+  "scope": "citizen-services",
+  "threshold": 3,
+  "guardrails": "none",
+  "share": 0.25
+ },
+ {
+  "unit": "entities",
+  "scope": "citizen-services",
+  "threshold": 3,
+  "guardrails": "required",
+  "share": 0.25
+ },
+ {
+  "unit": "entities",
+  "scope": "citizen-services",
+  "threshold": 4,
+  "guardrails": "none",
+  "share": 0.1875
+ },
+ {
+  "unit": "entities",
+  "scope": "citizen-services",
+  "threshold": 4,
+  "guardrails": "required",
+  "share": 0.0
+ },
+ {
+  "unit": "entities",
+  "scope": "all-services",
+  "threshold": 2,
+  "guardrails": "none",
+  "share": 0.8125
+ },
+ {
+  "unit": "entities",
+  "scope": "all-services",
+  "threshold": 2,
+  "guardrails": "required",
+  "share": 0.25
+ },
+ {
+  "unit": "entities",
+  "scope": "all-services",
+  "threshold": 3,
+  "guardrails": "none",
+  "share": 0.25
+ },
+ {
+  "unit": "entities",
+  "scope": "all-services",
+  "threshold": 3,
+  "guardrails": "required",
+  "share": 0.25
+ },
+ {
+  "unit": "entities",
+  "scope": "all-services",
+  "threshold": 4,
+  "guardrails": "none",
+  "share": 0.125
+ },
+ {
+  "unit": "entities",
+  "scope": "all-services",
+  "threshold": 4,
+  "guardrails": "required",
+  "share": 0.0
+ },
+ {
+  "unit": "entities",
+  "scope": "services-and-operations",
+  "threshold": 2,
+  "guardrails": "none",
+  "share": 0.6875
+ },
+ {
+  "unit": "entities",
+  "scope": "services-and-operations",
+  "threshold": 2,
+  "guardrails": "required",
+  "share": 0.25
+ },
+ {
+  "unit": "entities",
+  "scope": "services-and-operations",
+  "threshold": 3,
+  "guardrails": "none",
+  "share": 0.25
+ },
+ {
+  "unit": "entities",
+  "scope": "services-and-operations",
+  "threshold": 3,
+  "guardrails": "required",
+  "share": 0.25
+ },
+ {
+  "unit": "entities",
+  "scope": "services-and-operations",
+  "threshold": 4,
+  "guardrails": "none",
+  "share": 0.0
+ },
+ {
+  "unit": "entities",
+  "scope": "services-and-operations",
+  "threshold": 4,
+  "guardrails": "required",
+  "share": 0.0
+ },
+ {
+  "unit": "sectors",
+  "scope": "citizen-services",
+  "threshold": 2,
+  "guardrails": "none",
+  "share": 0.75
+ },
+ {
+  "unit": "sectors",
+  "scope": "citizen-services",
+  "threshold": 2,
+  "guardrails": "required",
+  "share": 0.25
+ },
+ {
+  "unit": "sectors",
+  "scope": "citizen-services",
+  "threshold": 3,
+  "guardrails": "none",
+  "share": 0.375
+ },
+ {
+  "unit": "sectors",
+  "scope": "citizen-services",
+  "threshold": 3,
+  "guardrails": "required",
+  "share": 0.125
+ },
+ {
+  "unit": "sectors",
+  "scope": "citizen-services",
+  "threshold": 4,
+  "guardrails": "none",
+  "share": 0.0
+ },
+ {
+  "unit": "sectors",
+  "scope": "citizen-services",
+  "threshold": 4,
+  "guardrails": "required",
+  "share": 0.0
+ },
+ {
+  "unit": "sectors",
+  "scope": "all-services",
+  "threshold": 2,
+  "guardrails": "none",
+  "share": 0.875
+ },
+ {
+  "unit": "sectors",
+  "scope": "all-services",
+  "threshold": 2,
+  "guardrails": "required",
+  "share": 0.25
+ },
+ {
+  "unit": "sectors",
+  "scope": "all-services",
+  "threshold": 3,
+  "guardrails": "none",
+  "share": 0.375
+ },
+ {
+  "unit": "sectors",
+  "scope": "all-services",
+  "threshold": 3,
+  "guardrails": "required",
+  "share": 0.125
+ },
+ {
+  "unit": "sectors",
+  "scope": "all-services",
+  "threshold": 4,
+  "guardrails": "none",
+  "share": 0.0
+ },
+ {
+  "unit": "sectors",
+  "scope": "all-services",
+  "threshold": 4,
+  "guardrails": "required",
+  "share": 0.0
+ },
+ {
+  "unit": "sectors",
+  "scope": "services-and-operations",
+  "threshold": 2,
+  "guardrails": "none",
+  "share": 0.875
+ },
+ {
+  "unit": "sectors",
+  "scope": "services-and-operations",
+  "threshold": 2,
+  "guardrails": "required",
+  "share": 0.25
+ },
+ {
+  "unit": "sectors",
+  "scope": "services-and-operations",
+  "threshold": 3,
+  "guardrails": "none",
+  "share": 0.25
+ },
+ {
+  "unit": "sectors",
+  "scope": "services-and-operations",
+  "threshold": 3,
+  "guardrails": "required",
+  "share": 0.125
+ },
+ {
+  "unit": "sectors",
+  "scope": "services-and-operations",
+  "threshold": 4,
+  "guardrails": "none",
+  "share": 0.0
+ },
+ {
+  "unit": "sectors",
+  "scope": "services-and-operations",
+  "threshold": 4,
+  "guardrails": "required",
+  "share": 0.0
+ }
+]
