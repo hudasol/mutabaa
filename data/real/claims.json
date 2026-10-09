@@ -1,0 +1,75 @@
+[
+  {
+    "id": "K01",
+    "text": "The Proactive Government Performance System tracks over 150 million data points monthly.",
+    "text_ar": "يتتبع نظام الأداء الحكومي الاستباقي أكثر من 150 مليون نقطة بيانات شهرياً.",
+    "source_id": "S09",
+    "anchor": "tracks over 150 million data points monthly",
+    "corroboration": "not-in-official-statement",
+    "official_sources_checked": [
+      "S01"
+    ],
+    "commitment_ids": [
+      "C01"
+    ],
+    "note": "Also repeated in S07. Absent from the official statement S01. Not used in any status."
+  },
+  {
+    "id": "K02",
+    "text": "The system generates more than 50,000 proactive insights annually.",
+    "text_ar": "يولّد النظام أكثر من 50 ألف رؤية استباقية سنوياً.",
+    "source_id": "S09",
+    "anchor": "more than 50,000 proactive insights annually",
+    "corroboration": "not-in-official-statement",
+    "official_sources_checked": [
+      "S01"
+    ],
+    "commitment_ids": [
+      "C01"
+    ],
+    "note": "Absent from S01. Not used."
+  },
+  {
+    "id": "K03",
+    "text": "The federal strategic planning cycle is 3 years with AI embedded across 38 entities.",
+    "text_ar": "دورة التخطيط الاستراتيجي الاتحادية ثلاث سنوات مع تضمين الذكاء الاصطناعي في 38 جهة.",
+    "source_id": "S09",
+    "anchor": "AI embedded across 38 entities",
+    "corroboration": "not-in-official-statement",
+    "official_sources_checked": [
+      "S01"
+    ],
+    "commitment_ids": [
+      "C01"
+    ],
+    "note": "Absent from S01. Not used."
+  },
+  {
+    "id": "K04",
+    "text": "DGE's Faisal Al Hawi cites about 23,000 employees trained by early 2027, against an official target of 20,000 by end of 2026.",
+    "text_ar": "يذكر فيصل الهوي نحو 23 ألف موظف مدرَّب بحلول مطلع 2027، مقابل هدف رسمي هو 20 ألفاً بنهاية 2026.",
+    "source_id": "S08",
+    "anchor": "about 23,000 employees by early 2027",
+    "corroboration": "single-source",
+    "official_sources_checked": [],
+    "commitment_ids": [
+      "C16"
+    ],
+    "note": "Two figures for one programme in one article. Logged as a discrepancy, not resolved."
+  },
+  {
+    "id": "K05",
+    "text": "A training programme covers 80,000 federal employees.",
+    "text_ar": "برنامج تدريبي يغطي 80 ألف موظف اتحادي.",
+    "source_id": "S07",
+    "anchor": "80,000 federal employees are covered by a training programme",
+    "corroboration": "not-in-official-statement",
+    "official_sources_checked": [
+      "S01"
+    ],
+    "commitment_ids": [
+      "C03"
+    ],
+    "note": "Same figure as E07, held here as a claim."
+  }
+]

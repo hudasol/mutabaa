@@ -1,0 +1,131 @@
+[
+  {
+    "id": "E01",
+    "commitment_ids": [
+      "C10",
+      "C14",
+      "C19"
+    ],
+    "kind": "quantified-progress",
+    "summary": "Over 100 AI use cases deployed across more than 40 Abu Dhabi Government entities, moved from pilot to production.",
+    "summary_ar": "أكثر من 100 حالة استخدام للذكاء الاصطناعي منفذة في أكثر من 40 جهة حكومية في أبوظبي.",
+    "as_of": "2025-09-30",
+    "value": 100,
+    "value_text": "Over 100",
+    "unit": "use-cases",
+    "source_id": "S03",
+    "anchor": "Over 100 AI use cases deployed across more than 40",
+    "note": "Counted in use-cases. Not directly comparable with the 200+ 'solutions' target."
+  },
+  {
+    "id": "E02",
+    "commitment_ids": [
+      "C10"
+    ],
+    "kind": "activity",
+    "summary": "Over 95% of the 30,000+ government employees completed comprehensive AI training.",
+    "summary_ar": "أكثر من 95% من الموظفين الحكوميين أتموا تدريباً شاملاً على الذكاء الاصطناعي.",
+    "as_of": "2025-09-30",
+    "source_id": "S03",
+    "anchor": "Over 95% of the 30,000+ government employees completed comprehensive AI training"
+  },
+  {
+    "id": "E03",
+    "commitment_ids": [
+      "C10"
+    ],
+    "kind": "activity",
+    "summary": "TAMM reports 95% of requests resolved through AI and more than 1,150 services on the platform in 2025.",
+    "summary_ar": "تفيد تمّ بحل 95% من الطلبات عبر الذكاء الاصطناعي وبأكثر من 1150 خدمة على المنصة في 2025.",
+    "as_of": "2025-12-31",
+    "as_of_note": "Calendar 2025 as reported on 8 Jan 2026",
+    "source_id": "S04",
+    "anchor": "95% of requests resolved through AI"
+  },
+  {
+    "id": "E04",
+    "commitment_ids": [
+      "C10",
+      "C12"
+    ],
+    "kind": "activity",
+    "summary": "Partnerships with Microsoft and G42 expanded sovereign-cloud capability; a Unified Government Data Centre launched. Full migration is not reported as complete.",
+    "summary_ar": "توسعت القدرات السيادية للسحابة عبر شراكات مع مايكروسوفت وG42، مع إطلاق مركز بيانات حكومي موحد. ولم يُفد باكتمال الانتقال الكامل.",
+    "as_of": "2025-12-31",
+    "source_id": "S04",
+    "anchor": "partnerships with Microsoft and G42 expanded sovereign cloud capability",
+    "note": "Activity, not progress against 100%."
+  },
+  {
+    "id": "E05",
+    "commitment_ids": [
+      "C10"
+    ],
+    "kind": "activity",
+    "summary": "26,000 civil servants newly given Microsoft 365 Copilot across 27 entities (35,000 licences in total).",
+    "summary_ar": "منح 26 ألف موظف حكومي جديد ترخيص Microsoft 365 Copilot في 27 جهة (35 ألف ترخيص إجمالاً).",
+    "as_of": "2026-07-06",
+    "value": 26000,
+    "value_text": "26,000 new; 35,000 total",
+    "unit": "employees",
+    "source_id": "S05",
+    "anchor": "26,000 civil servants newly given Microsoft 365 Copilot across 27"
+  },
+  {
+    "id": "E06",
+    "commitment_ids": [
+      "C07"
+    ],
+    "kind": "activity",
+    "summary": "The Cabinet approved the data-sharing, digital-records and federal digital-government policies on 23 April 2026.",
+    "summary_ar": "اعتمد مجلس الوزراء سياسات مشاركة البيانات والسجلات الرقمية ودليل الحكومة الرقمية في 23 أبريل 2026.",
+    "as_of": "2026-04-23",
+    "source_id": "S01",
+    "anchor": "government services data sharing policy",
+    "note": "Approval only. No implementation report found."
+  },
+  {
+    "id": "E07",
+    "commitment_ids": [
+      "C03"
+    ],
+    "kind": "activity",
+    "summary": "A training programme is reported to cover 80,000 federal employees.",
+    "summary_ar": "يُفاد بأن برنامج تدريب يغطي 80 ألف موظف اتحادي.",
+    "source_id": "S07",
+    "anchor": "80,000 federal employees are covered by a training programme",
+    "corroboration": "single-source",
+    "note": "Media only. Not found in the official statement. Excluded from status."
+  },
+  {
+    "id": "E08",
+    "commitment_ids": [
+      "C01",
+      "C24"
+    ],
+    "kind": "activity",
+    "summary": "Media report that in May 2026 the Cabinet approved a first package of services to apply agentic AI tools.",
+    "summary_ar": "تفيد وسائل إعلام بأن مجلس الوزراء اعتمد في مايو 2026 حزمة أولى من الخدمات لتطبيق أدوات الذكاء الاصطناعي الوكيل.",
+    "as_of": "2026-05-31",
+    "as_of_note": "May 2026",
+    "source_id": "S07",
+    "anchor": "Cabinet approved a first package of services to apply agentic AI tools",
+    "corroboration": "single-source",
+    "note": "Media only. Not found in the official statement. Excluded from status."
+  },
+  {
+    "id": "E09",
+    "commitment_ids": [
+      "C04"
+    ],
+    "kind": "activity",
+    "summary": "Media report that frameworks to decide which tasks an agent may handle began at an August 2026 workshop; criteria are not described.",
+    "summary_ar": "تفيد وسائل إعلام بأن أطر تحديد المهام التي يتولاها الوكيل بدأت في ورشة أغسطس 2026 دون وصف المعايير.",
+    "as_of": "2026-08-31",
+    "as_of_note": "August 2026",
+    "source_id": "S07",
+    "anchor": "frameworks to decide which federal tasks can be handed to an AI agent",
+    "corroboration": "single-source",
+    "note": "Media only. Excluded from status."
+  }
+]
