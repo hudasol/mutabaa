@@ -366,7 +366,8 @@
     ],
     "source_ids": [
       "S02",
-      "S03"
+      "S03",
+      "S14"
     ],
     "anchors": [
       {
@@ -506,12 +507,13 @@
       "workforce"
     ],
     "source_ids": [
+      "S13",
       "S08"
     ],
     "anchors": [
       {
-        "source_id": "S08",
-        "text": "20,000 employees trained by end of 2026"
+        "source_id": "S13",
+        "text": "upskill 20,000 government employees by the end of the year"
       }
     ],
     "owner": "Department of Government Enablement",
@@ -523,7 +525,12 @@
     "deadline": "2026-12-31",
     "deadline_precision": "year",
     "announced": "2026-10-07",
-    "notes": "Only secondary media reports this. A second figure (about 23,000 by early 2027) is logged as a claim."
+    "notes": "Now confirmed by the official statement S13. The year is not stated on the page; 2026 is inferred from the announcement date. A second figure (about 23,000 by early 2027) is logged as a claim.",
+    "deadline_text": "End of the year; the page does not name the year",
+    "undefined_terms": [
+      "upskill (completion criterion)",
+      "which year"
+    ]
   },
   {
     "id": "C17",

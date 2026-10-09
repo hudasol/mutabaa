@@ -90,8 +90,8 @@
    "publisher": "Artificial Intelligence News",
    "url": "https://www.artificialintelligence-news.com/news/agentic-ai-in-government-uae-classification/",
    "kind": "secondary-media",
-   "published": null,
-   "published_note": "Undated; reports an August 2026 workshop.",
+   "published": "2026-08-20",
+   "published_note": "Date shown on the page, found in the second verification pass on 2026-10-10.",
    "retrieved": "2026-10-09",
    "extract_file": "data/real/extracts/S07.md",
    "content_hash": "d4698665eece47c0b5db7a29020685b47d0564da5c8e16b7dcc4dcc7026ce5eb",
@@ -118,8 +118,8 @@
    "publisher": "Middle East AI News",
    "url": "https://www.middleeastainews.com/p/uae-government-deploys-agentic-ai",
    "kind": "secondary-media",
-   "published": null,
-   "published_note": "No date on page. States it was written with AI assistance.",
+   "published": "2026-04-23",
+   "published_note": "Byline date shown on the page, found in the second verification pass. States it was written with AI assistance.",
    "retrieved": "2026-10-09",
    "extract_file": "data/real/extracts/S09.md",
    "content_hash": "332e30e707a2267033098c845d41b74b94db9faa002cf90fb32a62f6636de2fe",
@@ -165,6 +165,34 @@
    "retrieved": "2026-10-09",
    "extract_file": "data/real/extracts/S12.md",
    "content_hash": "513d5121176bfe64c60579fc20644bc40d753e76ee3e23cab6d1b78263467677",
+   "ai_assisted": false,
+   "notes": ""
+  },
+  {
+   "id": "S13",
+   "title": "DGE launches AiNative training programme with OpenAI, Microsoft and MBZUAI",
+   "publisher": "Abu Dhabi Media Office",
+   "url": "https://www.mediaoffice.abudhabi/en/government-affairs/department-of-government-enablement-abu-dhabi-launches-ainative-training-programme-in-collaboration-with-openai-microsoft-and-mbzuai/",
+   "kind": "official-statement",
+   "published": "2026-10-07",
+   "published_note": null,
+   "retrieved": "2026-10-10",
+   "extract_file": "data/real/extracts/S13.md",
+   "content_hash": "84bf46334e32fe0de1e35955a141f0621e081f6d85b6d5d193fd5f86e47e4a2b",
+   "ai_assisted": false,
+   "notes": ""
+  },
+  {
+   "id": "S14",
+   "title": "Abu Dhabi Government accelerates Digital Strategy with Microsoft and G42 partnership",
+   "publisher": "Abu Dhabi Media Office",
+   "url": "https://www.mediaoffice.abudhabi/en/technology/abu-dhabi-government-accelerates-digital-strategy-with-landmark-microsoft-g42-partnership/",
+   "kind": "official-statement",
+   "published": "2025-03-18",
+   "published_note": null,
+   "retrieved": "2026-10-10",
+   "extract_file": "data/real/extracts/S14.md",
+   "content_hash": "533b721f29b46a081997d688925de9cb1d285591354b44430efcca949594f025",
    "ai_assisted": false,
    "notes": ""
   }
@@ -640,7 +668,8 @@
    ],
    "source_ids": [
     "S02",
-    "S03"
+    "S03",
+    "S14"
    ],
    "anchors": [
     {
@@ -785,24 +814,28 @@
    "target_number": 20000.0,
    "target_comparator": ">=",
    "deadline": "2026-12-31",
-   "deadline_text": null,
+   "deadline_text": "End of the year; the page does not name the year",
    "deadline_precision": "year",
    "measurement_source": null,
-   "undefined_terms": [],
+   "undefined_terms": [
+    "upskill (completion criterion)",
+    "which year"
+   ],
    "announced": "2026-10-07",
    "tags": [
     "workforce"
    ],
    "source_ids": [
+    "S13",
     "S08"
    ],
    "anchors": [
     {
-     "source_id": "S08",
-     "text": "20,000 employees trained by end of 2026"
+     "source_id": "S13",
+     "text": "upskill 20,000 government employees by the end of the year"
     }
    ],
-   "notes": "Only secondary media reports this. A second figure (about 23,000 by early 2027) is logged as a claim."
+   "notes": "Now confirmed by the official statement S13. The year is not stated on the page; 2026 is inferred from the announcement date. A second figure (about 23,000 by early 2027) is logged as a claim."
   },
   {
    "id": "C17",
@@ -1322,6 +1355,24 @@
    "anchor": "frameworks to decide which federal tasks can be handed to an AI agent",
    "corroboration": "single-source",
    "note": "Media only. Excluded from status."
+  },
+  {
+   "id": "E10",
+   "commitment_ids": [
+    "C12"
+   ],
+   "kind": "activity",
+   "summary": "Multi-year sovereign cloud agreement signed with Microsoft and Core42; the environment is designed for more than 11 million daily digital interactions. The share of government on it is not stated.",
+   "summary_ar": "وُقّعت اتفاقية متعددة السنوات للسحابة السيادية مع مايكروسوفت وCore42، وتتسع البيئة لأكثر من 11 مليون تفاعل رقمي يومياً. ولا تذكر الصفحة نسبة الحكومة المنقولة إليها.",
+   "as_of": "2025-03-18",
+   "as_of_note": null,
+   "value": null,
+   "value_text": "11 million+ daily interactions (capacity)",
+   "unit": null,
+   "source_id": "S14",
+   "anchor": "more than 11 million daily digital interactions",
+   "corroboration": "official-confirmed",
+   "note": "A capacity figure, not an adoption share. It is not comparable with the 100% target."
   }
  ],
  "claims": [
@@ -1377,11 +1428,13 @@
    "source_id": "S08",
    "anchor": "about 23,000 employees by early 2027",
    "corroboration": "single-source",
-   "official_sources_checked": [],
+   "official_sources_checked": [
+    "S13"
+   ],
    "commitment_ids": [
     "C16"
    ],
-   "note": "Two figures for one programme in one article. Logged as a discrepancy, not resolved."
+   "note": "Two figures for one programme in one article. The official statement S13 gives 20,000 and does not give 23,000. Logged as a discrepancy, not resolved."
   },
   {
    "id": "K05",
@@ -1705,14 +1758,15 @@
     "dated_deadline": true,
     "owner_named": true,
     "measurement_source": false,
-    "terms_defined": true
+    "terms_defined": false
    },
    "applicable": 6,
-   "passed": 5,
-   "ratio": 0.8333,
-   "band": "checkable",
+   "passed": 4,
+   "ratio": 0.6667,
+   "band": "partly-checkable",
    "missing": [
-    "measurement_source"
+    "measurement_source",
+    "terms_defined"
    ]
   },
   {
@@ -2071,10 +2125,11 @@
     "activity reported without a figure comparable to the target"
    ],
    "evidence_ids": [
-    "E04"
+    "E04",
+    "E10"
    ],
    "excluded_evidence_ids": [],
-   "self_reported_only": true,
+   "self_reported_only": false,
    "unit_mismatch": false,
    "progress_ratio": null,
    "progress_as_of": null
