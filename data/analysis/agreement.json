@@ -1,0 +1,28 @@
+{
+ "blind_items": 46,
+ "ledger_commitments": 25,
+ "missed": [
+  "C06",
+  "C09",
+  "C16"
+ ],
+ "note": "The blind pass read the same extraction notes, so this measures consistency of reading, not faithfulness to the web pages. Precision is not reported: the blind pass counted reported achievements as commitments by design.",
+ "numeric_recall": {
+  "ci95": [
+   0.6429,
+   1.0
+  ],
+  "found": 12,
+  "n": 14,
+  "rate": 0.857
+ },
+ "recall": {
+  "ci95": [
+   0.72,
+   1.0
+  ],
+  "found": 22,
+  "n": 25,
+  "rate": 0.88
+ }
+}

@@ -87,3 +87,4 @@ Huda Mueen. Built as an independent project on UAE government AI-transformation 
 - `make reproduce` runs the whole check (needs Python, Node, git).
 - `python -m pipeline verify-live` re-checks source pages (needs network); `python -m pipeline diff HEAD~1` shows what changed.
 - Security notes: `docs/SECURITY.md`. Claim-to-test map: `docs/TRACEABILITY.md`.
+- `python -m pipeline analyse` recomputes the robustness, calibration and agreement results shown on the Assurance page.

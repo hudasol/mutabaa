@@ -92,7 +92,9 @@ export default function Overview() {
           <p><b>{t.ov_def_title2(pct(lo), pct(hi))}</b></p>
           <Strip rows={rows} label={t.ov_def_title} />
           <p className="small">{t.ov_def_note}</p>
-          <a className="textlink" href={buildHash("lab")}>{t.ov_def_cta}</a>
+          <p className="small">{t.ov_rob(data.analysis.robustness.registries, pct(data.analysis.robustness.flip_rate))}</p>
+          <p className="row-between"><a className="textlink" href={buildHash("lab")}>{t.ov_def_cta}</a>
+            <a className="textlink" href={buildHash("assurance")}>{t.ov_rob_cta}</a></p>
         </section>
       </div>
 

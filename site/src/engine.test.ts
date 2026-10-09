@@ -51,3 +51,14 @@ describe("csvCell", () => {
   });
   it("keeps plain numbers and null", () => { expect(csvCell(0.5)).toBe('"0.5"'); expect(csvCell(null)).toBe('""'); });
 });
+
+import { MAX_CSV_ROWS, readCsv } from "./engine";
+describe("csv size cap", () => {
+  it("flags truncation and keeps only the cap", () => {
+    const text = "a,b\n" + Array.from({ length: MAX_CSV_ROWS + 5 }, () => "1,2").join("\n");
+    const r = readCsv(text);
+    expect(r.truncated).toBe(true);
+    expect(r.rows).toHaveLength(MAX_CSV_ROWS);
+  });
+  it("does not flag a small file", () => expect(readCsv("a,b\n1,2").truncated).toBe(false));
+});

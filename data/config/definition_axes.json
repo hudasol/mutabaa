@@ -1,0 +1,24 @@
+{
+  "note": "The four choices that define 'X% of government is agentic'. These are Mutabaa's proposal, not a published standard. Each level has a rationale so a reviewer can argue with it.",
+  "unit": {
+    "services": "Count each service equally. Easy to publish, hides volume.",
+    "transactions": "Weight by annual transactions. Reflects what citizens experience, needs volume data.",
+    "entities": "Count entities where at least half of items qualify. Reflects organisational adoption.",
+    "sectors": "As entities, grouped by sector. Reflects policy domains."
+  },
+  "scope": {
+    "citizen-services": "Citizen-facing services only. The narrowest, most visible reading.",
+    "all-services": "Citizen, business and internal services.",
+    "services-and-operations": "Services plus back-office operations. The broadest reading, as in 'sectors, services and operations'."
+  },
+  "threshold": {
+    "2": "Assists: AI suggests, a person decides.",
+    "3": "Acts with approval: AI executes steps, a person approves outcomes.",
+    "4": "Acts autonomously within limits, with monitoring."
+  },
+  "guardrails": {
+    "none": "Maturity alone decides.",
+    "required": "Also requires human oversight, an audit trail, UAE data residency and a fallback path."
+  },
+  "mapping_status": "Not yet mapped to a published framework or reviewed by a practitioner. Tracked as an open item in docs/reviews/03-tii.md."
+}

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use Mutabaa, please cite it as below."
+title: "Mutabaa (متابعة): a verifiability workbench for UAE and Abu Dhabi AI-transformation targets"
+type: software
+authors:
+  - family-names: Mueen
+    given-names: Huda
+repository-code: "https://github.com/hudasol/mutabaa"
+license: MIT
+version: 1.3.0
+date-released: "2026-10-10"
+abstract: >-
+  Reads the public record on UAE and Abu Dhabi AI targets, grades how checkable each commitment is,
+  traces every status to a source, and shows how much a headline percentage depends on its definition.
+  Prototype; not an official product of any government entity.
+keywords: [AI governance, verifiability, UAE, public sector]

@@ -1,0 +1,56 @@
+{
+ "bands": {
+  "grid": 25,
+  "max_changed": 9,
+  "median_changed": 1.0,
+  "n": 25
+ },
+ "consistency": {
+  "dated_deadline": {
+   "agree": 22,
+   "ci95": [
+    0.4372,
+    1.0
+   ],
+   "kappa": 0.746,
+   "n": 25
+  },
+  "disagreements": [
+   "C01",
+   "C10",
+   "C14",
+   "C24"
+  ],
+  "numeric_target": {
+   "agree": 16,
+   "ci95": [
+    0.0,
+    1.0
+   ],
+   "kappa": 0.609,
+   "n": 18
+  }
+ },
+ "note": "Computed from the curated fields. The consistency check compares two readings that both come from the same curation, so it finds slips, not judgement errors. Human validation is still outstanding.",
+ "weights": {
+  "draws": 1000,
+  "leave_one_out": {
+   "dated_deadline": 0.914,
+   "measurement_source": 0.999,
+   "numeric_target": 0.879,
+   "owner_named": 0.946,
+   "terms_defined": 1.0,
+   "unit_defined": 0.879
+  },
+  "pass_rate": {
+   "dated_deadline": 0.36,
+   "measurement_source": 0.08,
+   "numeric_target": 0.778,
+   "owner_named": 0.72,
+   "terms_defined": 0.04,
+   "unit_defined": 0.778
+  },
+  "spearman_median": 0.936,
+  "spearman_p05": 0.521
+ }
+}
