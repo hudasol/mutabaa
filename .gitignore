@@ -20,3 +20,9 @@ data/real/.raw/
 Thumbs.db
 .idea/
 .vscode/
+
+# site
+site/dist/
+site/dist-offline/
+site/test-results/
+site/playwright-report/

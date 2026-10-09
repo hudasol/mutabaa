@@ -7,15 +7,25 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "test": "vitest run",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:offline": "vite build --config vite.single.config.ts",
+    "test:e2e": "playwright test",
+    "sbom": "npx --yes @cyclonedx/cyclonedx-npm@6.0.1 --omit dev --output-file ../sbom/site.cdx.json --spec-version 1.5"
   },
-  "dependencies": { "react": "18.3.1", "react-dom": "18.3.1" },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "5.2.7",
+    "@fontsource/ibm-plex-sans-arabic": "5.2.8",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
   "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.56.0",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
-    "@vitejs/plugin-react": "4.3.4",
+    "@vitejs/plugin-react": "6.1.2",
     "typescript": "5.6.3",
-    "vite": "5.4.11",
-    "vitest": "2.1.8"
+    "vite": "8.3.4",
+    "vitest": "5.0.3"
   }
 }

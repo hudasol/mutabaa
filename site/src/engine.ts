@@ -215,3 +215,10 @@ export function parseCsv(text: string, mapping?: Mapping): CsvResult {
   const { headers, rows, truncated } = readCsv(text);
   return convert(headers, rows, mapping ?? autoMap(headers), truncated);
 }
+
+/** Quote a value for CSV and neutralise spreadsheet formula injection (leading = + - @ tab or CR). */
+export function csvCell(v: unknown): string {
+  let s = String(v ?? "");
+  if (/^[=+\-@\t\r]/.test(s)) s = `'${s}`;
+  return `"${s.replace(/"/g, '""')}"`;
+}

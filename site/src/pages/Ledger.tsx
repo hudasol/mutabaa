@@ -1,5 +1,6 @@
 import { Fragment, useMemo } from "react";
 import { copyText, download, L, pct, useCtx } from "../ctx";
+import { csvCell } from "../engine";
 import { sortCommitments, type SortKey } from "../ledgerSort";
 import { CopyLink, Head, StatusPill, Ticks, VerifyChip } from "../parts";
 import type { Commitment } from "../types";
@@ -128,7 +129,7 @@ export default function Ledger() {
   const rows = useMemo(() => sortCommitments(filtered, data.scores, data.statuses, sortKey, dir, lang), [filtered, data, sortKey, dir, lang]);
 
   const exportCsv = () => {
-    const esc = (v: unknown) => `"${String(v ?? "").replace(/"/g, '""')}"`;
+    const esc = csvCell;
     const head = ["id", "title", "jurisdiction", "kind", "owner", "target", "unit", "deadline", "status", "specification_score", "band", "data_as_of"];
     const lines = rows.map((c) => {
       const s = data.statuses.find((x) => x.commitment_id === c.id)!, k = data.scores.find((x) => x.commitment_id === c.id)!;

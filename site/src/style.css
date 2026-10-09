@@ -1,9 +1,9 @@
 :root {
-  --paper: #f2f4f1; --panel: #fbfcfa; --ink: #12343b; --ink-2: #3c5558; --muted: #667a77;
+  --paper: #f2f4f1; --panel: #fbfcfa; --ink: #12343b; --ink-2: #3c5558; --muted: #55696a;
   --line: #cbd5d1; --line-2: #dfe6e2;
   --s-none: #8a9894; --s-activity: #a8650c; --s-milestone: #17705f; --s-met: #2a4aa0; --s-nocheck: #6a7471;
   --synthetic: #6a3fb0; --synthetic-bg: #efe9f8; --yours: #0b6b83; --yours-bg: #e2f1f5;
-  --focus: #1a56db; --flag: #b4440a;
+  --focus: #1a56db; --flag: #a63d08;
   --font: "IBM Plex Sans Arabic", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
   --measure: 68ch;
@@ -103,7 +103,7 @@ table.ledger { width: 100%; border-collapse: collapse; font-size: .92rem; }
 .checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: .3rem; }
 .checklist li { display: flex; gap: .6rem; align-items: center; }
 .ev { border-inline-start: 3px solid var(--line); padding-inline-start: .8rem; display: grid; gap: .2rem; }
-.ev.excluded { border-inline-start-style: dashed; opacity: .8; }
+.ev.excluded { border-inline-start-style: dashed; }
 .chip { font-size: .75rem; border: 1px solid var(--line); border-radius: 4px; padding: 0 .4rem; color: var(--ink-2); white-space: nowrap; }
 .chip.media { border-color: var(--flag); color: var(--flag); }
 blockquote { margin: 0; padding-inline-start: .8rem; border-inline-start: 3px solid var(--line); color: var(--ink-2); font-size: .88rem; }
@@ -209,3 +209,4 @@ blockquote { margin: 0; padding-inline-start: .8rem; border-inline-start: 3px so
 .chip.vf-none { opacity: .7; }
 .page-head h1 { text-wrap: balance; }
 .panel h2 { font-size: 1.2rem; }
+.clocks { list-style: none; margin: 0; padding: 0; }
