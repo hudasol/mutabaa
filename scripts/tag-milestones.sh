@@ -5,6 +5,7 @@
 set -euo pipefail
 
 while read -r tag sha; do
+  sha="${sha%$'\r'}"
   [ -z "${tag:-}" ] && continue
   case "$tag" in \#*) continue ;; esac
   if git rev-parse -q --verify "refs/tags/$tag" >/dev/null; then
