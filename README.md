@@ -80,3 +80,10 @@ Code: MIT. Dataset (`data/real`, `data/synthetic`): CC BY 4.0. Source material r
 ## Author
 
 Huda Mueen. Built as an independent project on UAE government AI-transformation targets.
+
+
+## Offline and verification
+- `cd site && npm run build:offline` writes `dist-offline/index.html`, one file that opens from a USB stick.
+- `make reproduce` runs the whole check (needs Python, Node, git).
+- `python -m pipeline verify-live` re-checks source pages (needs network); `python -m pipeline diff HEAD~1` shows what changed.
+- Security notes: `docs/SECURITY.md`. Claim-to-test map: `docs/TRACEABILITY.md`.

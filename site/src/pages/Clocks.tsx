@@ -15,15 +15,15 @@ export default function Clocks() {
       <Head title={t.ck_title} sub={t.ck_sub} />
       <section className="panel">
         <h2>{t.ck_dated}</h2>
-        <div role="table">
+        <ul className="clocks">
           {dated.map((c) => (
-            <div className="clock" role="row" key={c.id}>
+            <li className="clock" key={c.id}>
               <span><b className="mono">{c.id}</b> {L(lang, c.title, c.title_ar)}</span>
               <span className="track" aria-hidden><span className="now" style={{ insetInlineStart: pos(now.getTime()) }} /><span className="mark" style={{ insetInlineStart: pos(c.deadline as string) }} /></span>
               <span className="small">{c.deadline} · {t.ck_days(dayDiff(c.deadline as string, now))}</span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
         <p className="small">2025 → 2031. {t.ck_today}: {data.build.data_as_of}</p>
       </section>
       <section className="panel">

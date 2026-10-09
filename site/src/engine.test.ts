@@ -42,3 +42,12 @@ describe("csv", () => {
     expect(r.items[0].entity_id).toBe("Entity, with comma");
   });
 });
+
+import { csvCell } from "./engine";
+describe("csvCell", () => {
+  it("quotes and escapes", () => expect(csvCell('a"b')).toBe('"a""b"'));
+  it("neutralises formulas", () => {
+    for (const bad of ["=1+1", "+cmd", "-2+3", "@SUM(A1)"]) expect(csvCell(bad)).toBe(`"'${bad}"`);
+  });
+  it("keeps plain numbers and null", () => { expect(csvCell(0.5)).toBe('"0.5"'); expect(csvCell(null)).toBe('""'); });
+});

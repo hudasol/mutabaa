@@ -1,4 +1,4 @@
-"""CLI: python -m pipeline validate | rehash | synth | build | verify-live [--write] [--only S01,S02]"""
+"""CLI: validate | rehash | synth | build | diff [REF] | verify-live [--write] [--only S01,S02]"""
 
 from __future__ import annotations
 
@@ -6,6 +6,8 @@ import hashlib
 import json
 import sys
 
+from .diff import diff as payload_diff
+from .diff import load_at, load_current
 from .io import REAL, ROOT, load_real
 from .questions import questions
 from .score import score
@@ -75,6 +77,14 @@ def cmd_verify_live(args: list[str]) -> int:
     return 1 if failed else 0
 
 
+def cmd_diff(args: list[str]) -> int:
+    """python -m pipeline diff [REF]: commitment, status, band and verification changes since REF."""
+    ref = args[0] if args else "HEAD~1"
+    lines = payload_diff(load_at(ref), load_current())
+    print("\n".join(lines) if lines else f"no differences against {ref}")
+    return 0
+
+
 def data_as_of(d):
     return max(s.retrieved for s in d.sources)
 
@@ -140,6 +150,8 @@ def cmd_build() -> int:
 
 def main(argv: list[str]) -> int:
     cmds = {"validate": cmd_validate, "rehash": cmd_rehash, "synth": cmd_synth, "build": cmd_build}
+    if len(argv) >= 2 and argv[1] == "diff":
+        return cmd_diff(argv[2:])
     if len(argv) >= 2 and argv[1] == "verify-live":
         return cmd_verify_live(argv[2:])
     if len(argv) != 2 or argv[1] not in cmds:

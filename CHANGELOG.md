@@ -2,6 +2,13 @@
 
 Milestones are listed with their intended tag. Tag pushes were blocked by the build environment's git policy, so tags are created locally with `scripts/tag-milestones.sh` (it maps each tag to its commit SHA).
 
+## v1.2.0: EDGE review round
+- Self-hosted fonts, strict CSP (meta and headers), zero third-party requests (tested)
+- Single-file offline build with hash-pinned CSP; opens from file://
+- Playwright smoke and axe accessibility tests (EN/AR, light/dark); contrast and table-role fixes
+- docs/SECURITY.md (STRIDE), traceability matrix and checker, SBOMs, lock file, Dockerfile, `make reproduce`
+- `python -m pipeline diff REF`; CSV export neutralises formula injection; dev dependencies upgraded (0 audit findings)
+
 ## v1.1.0: ADEO review round
 - Live verifier (`verify-live`), search log and coverage, evidence staleness, data-as-of and payload hash
 - Home page leads with a tile map of the 25 real commitments; synthetic illustration moved second
