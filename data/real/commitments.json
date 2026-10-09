@@ -1,0 +1,775 @@
+[
+  {
+    "id": "C01",
+    "title": "50% of federal sectors, services and operations on agentic AI",
+    "title_ar": "تحويل 50% من القطاعات والخدمات والعمليات الاتحادية إلى الذكاء الاصطناعي الوكيل",
+    "statement": "Transform 50% of federal government sectors, services and operations to autonomous agentic AI within two years of the 23 April 2026 announcement.",
+    "statement_ar": "تحويل 50% من القطاعات والخدمات والعمليات الحكومية الاتحادية إلى الذكاء الاصطناعي الوكيل المستقل خلال عامين من إعلان 23 أبريل 2026.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "tags": [
+      "agentic-ai",
+      "headline-target"
+    ],
+    "source_ids": [
+      "S01",
+      "S06",
+      "S09"
+    ],
+    "anchors": [
+      {
+        "source_id": "S01",
+        "text": "50% of UAE federal government sectors, services and operations"
+      }
+    ],
+    "owner": "Taskforce chaired by the Minister of Cabinet Affairs",
+    "metric": "Share transformed",
+    "unit": null,
+    "target_value": "50%",
+    "target_number": 50,
+    "target_comparator": ">=",
+    "deadline_text": "Within two years; no start date given",
+    "deadline_precision": "relative",
+    "announced": "2026-04-23",
+    "undefined_terms": [
+      "agentic AI (autonomous)",
+      "transform",
+      "sector",
+      "service",
+      "operation",
+      "denominator of the 50%"
+    ],
+    "notes": "Three different things are counted in one percentage, with no stated denominator or unit."
+  },
+  {
+    "id": "C02",
+    "title": "Leaders assessed on AI transformation",
+    "title_ar": "تقييم القيادات على التحول بالذكاء الاصطناعي",
+    "statement": "Ministers, directors general and entity heads are assessed on adopting the transformation, speed, understanding of the new technology and mastery of AI tools.",
+    "statement_ar": "يُقيَّم الوزراء والمديرون العامون ورؤساء الجهات على القدرة على التبني والسرعة وفهم الواقع التقني الجديد وإتقان أدوات الذكاء الاصطناعي.",
+    "jurisdiction": "federal",
+    "kind": "assessment",
+    "tags": [
+      "agentic-ai",
+      "accountability"
+    ],
+    "source_ids": [
+      "S01"
+    ],
+    "anchors": [
+      {
+        "source_id": "S01",
+        "text": "ability to adopt the transformation"
+      }
+    ],
+    "owner": "Taskforce chaired by the Minister of Cabinet Affairs",
+    "announced": "2026-04-23",
+    "undefined_terms": [
+      "assessment scale",
+      "assessment frequency",
+      "publication of results"
+    ],
+    "notes": "The four criteria are named; no scale, cadence or publication commitment is stated."
+  },
+  {
+    "id": "C03",
+    "title": "Continuous generative-AI training for federal employees",
+    "title_ar": "تدريب مستمر للموظفين الاتحاديين على الذكاء الاصطناعي التوليدي",
+    "statement": "Federal employees receive continuous training in generative AI and related tools.",
+    "statement_ar": "يتلقى الموظفون الاتحاديون تدريباً مستمراً على الذكاء الاصطناعي التوليدي والأدوات ذات الصلة.",
+    "jurisdiction": "federal",
+    "kind": "input",
+    "tags": [
+      "agentic-ai",
+      "workforce"
+    ],
+    "source_ids": [
+      "S01"
+    ],
+    "anchors": [
+      {
+        "source_id": "S01",
+        "text": "continuous training in generative AI"
+      }
+    ],
+    "owner": "Federal government",
+    "announced": "2026-04-23",
+    "undefined_terms": [
+      "continuous",
+      "coverage",
+      "completion criterion"
+    ]
+  },
+  {
+    "id": "C04",
+    "title": "Self-assessment classification of agentic systems",
+    "title_ar": "آلية تقييم ذاتي لتصنيف الأنظمة الوكيلة",
+    "statement": "Systems are to be classified and assessed through a self-assessment mechanism based on technical and operational criteria.",
+    "statement_ar": "يجري تصنيف الأنظمة وتقييمها عبر آلية تقييم ذاتي تستند إلى معايير تقنية وتشغيلية.",
+    "jurisdiction": "federal",
+    "kind": "deliverable",
+    "tags": [
+      "agentic-ai",
+      "classification"
+    ],
+    "source_ids": [
+      "S06",
+      "S07"
+    ],
+    "anchors": [
+      {
+        "source_id": "S06",
+        "text": "self-assessment mechanism based on technical and operational criteria"
+      }
+    ],
+    "owner": "Higher Committee for Agentic AI",
+    "undefined_terms": [
+      "criteria",
+      "levels",
+      "who verifies a self-assessment"
+    ],
+    "notes": "Supports the idea behind the Definition Lab: the classification criteria are not published."
+  },
+  {
+    "id": "C05",
+    "title": "Federal Agentic AI Technology Platform (FedAI)",
+    "title_ar": "المنصة التقنية الاتحادية للذكاء الاصطناعي الوكيل (FedAI)",
+    "statement": "A shared platform for federal entities to build and adopt agentic AI solutions.",
+    "statement_ar": "منصة مشتركة تتيح للجهات الاتحادية بناء حلول الذكاء الاصطناعي الوكيل وتبنيها.",
+    "jurisdiction": "federal",
+    "kind": "deliverable",
+    "tags": [
+      "agentic-ai",
+      "infrastructure"
+    ],
+    "source_ids": [
+      "S06"
+    ],
+    "anchors": [
+      {
+        "source_id": "S06",
+        "text": "Federal Agentic AI Technology Platform (FedAI)"
+      }
+    ],
+    "owner": "Higher Committee for Agentic AI",
+    "undefined_terms": [
+      "go-live date",
+      "adoption measure"
+    ]
+  },
+  {
+    "id": "C06",
+    "title": "National AI Gateway",
+    "title_ar": "بوابة الذكاء الاصطناعي الوطنية",
+    "statement": "A single secure access point to multiple AI platforms, with commercial and open-source models hosted in sovereign infrastructure.",
+    "statement_ar": "نقطة وصول آمنة موحدة إلى منصات ذكاء اصطناعي متعددة، مع استضافة النماذج التجارية ومفتوحة المصدر في بنية سيادية.",
+    "jurisdiction": "federal",
+    "kind": "deliverable",
+    "tags": [
+      "agentic-ai",
+      "infrastructure",
+      "sovereign-cloud"
+    ],
+    "source_ids": [
+      "S06"
+    ],
+    "anchors": [
+      {
+        "source_id": "S06",
+        "text": "National AI Gateway"
+      }
+    ],
+    "owner": "Higher Committee for Agentic AI",
+    "undefined_terms": [
+      "go-live date",
+      "adoption measure"
+    ]
+  },
+  {
+    "id": "C07",
+    "title": "Digital records, data-sharing and federal digital-government policies",
+    "title_ar": "سياسات السجلات الرقمية ومشاركة البيانات ودليل الحكومة الرقمية",
+    "statement": "Three supporting policies approved on 23 April 2026: digital records, government-services data sharing and a federal guide for digital government projects.",
+    "statement_ar": "ثلاث سياسات داعمة اعتُمدت في 23 أبريل 2026: السجلات الرقمية، ومشاركة بيانات الخدمات الحكومية، ودليل مواءمة المشاريع الرقمية.",
+    "jurisdiction": "federal",
+    "kind": "deliverable",
+    "tags": [
+      "agentic-ai",
+      "data-governance"
+    ],
+    "source_ids": [
+      "S01",
+      "S09"
+    ],
+    "anchors": [
+      {
+        "source_id": "S01",
+        "text": "government services data sharing policy"
+      }
+    ],
+    "owner": "UAE Cabinet",
+    "deadline": "2026-04-23",
+    "deadline_precision": "day",
+    "announced": "2026-04-23",
+    "measurement_source": "Cabinet decision",
+    "notes": "Approval is the stated deliverable; implementation is not."
+  },
+  {
+    "id": "C08",
+    "title": "Regulatory intelligence cuts legislative effort by up to 70%",
+    "title_ar": "الذكاء التنظيمي يخفض جهد التشريع بنسبة تصل إلى 70%",
+    "statement": "The integrated regulatory intelligence ecosystem is expected to accelerate the legislative process by up to 70 percent.",
+    "statement_ar": "يُتوقع أن يسرّع منظومة الذكاء التنظيمي المتكاملة العملية التشريعية بنسبة تصل إلى 70%.",
+    "jurisdiction": "federal",
+    "kind": "projection",
+    "tags": [
+      "regulation",
+      "projection"
+    ],
+    "source_ids": [
+      "S10",
+      "S09"
+    ],
+    "anchors": [
+      {
+        "source_id": "S10",
+        "text": "accelerate the legislative process by up to 70 percent"
+      }
+    ],
+    "owner": "Regulatory Intelligence Office, General Secretariat of the Cabinet",
+    "metric": "Time and effort for legislative research, drafting, evaluation and enactment",
+    "unit": "percent-time",
+    "target_value": "up to 70%",
+    "target_number": 70,
+    "target_comparator": "up-to",
+    "announced": "2025-04-14",
+    "undefined_terms": [
+      "baseline",
+      "measurement method"
+    ],
+    "notes": "A projection. No baseline or measurement method is stated."
+  },
+  {
+    "id": "C09",
+    "title": "First globally for proactive legislation",
+    "title_ar": "المركز الأول عالمياً في التشريعات الاستباقية",
+    "statement": "We the UAE 2031: rank first globally for proactive legislation covering new economic sectors.",
+    "statement_ar": "نحن الإمارات 2031: المركز الأول عالمياً في التشريعات الاستباقية للقطاعات الاقتصادية الجديدة.",
+    "jurisdiction": "national",
+    "kind": "target",
+    "tags": [
+      "regulation"
+    ],
+    "source_ids": [
+      "S11"
+    ],
+    "anchors": [
+      {
+        "source_id": "S11",
+        "text": "1st globally for proactive legislation"
+      }
+    ],
+    "metric": "Global rank",
+    "unit": "rank",
+    "target_value": "1st",
+    "target_number": 1,
+    "target_comparator": "=",
+    "deadline": "2031-12-31",
+    "deadline_precision": "year",
+    "announced": "2022-11-22",
+    "undefined_terms": [
+      "the index that measures proactive legislation"
+    ],
+    "notes": "The page does not say which index measures this."
+  },
+  {
+    "id": "C10",
+    "title": "World's first fully AI-native government by 2027",
+    "title_ar": "أول حكومة أصلية الذكاء الاصطناعي بالكامل في العالم بحلول 2027",
+    "statement": "Abu Dhabi aims to be the world's first fully AI-native government by 2027.",
+    "statement_ar": "تهدف أبوظبي إلى أن تكون أول حكومة أصلية الذكاء الاصطناعي بالكامل في العالم بحلول 2027.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "target",
+    "tags": [
+      "ai-native",
+      "headline-target"
+    ],
+    "source_ids": [
+      "S03",
+      "S04"
+    ],
+    "anchors": [
+      {
+        "source_id": "S03",
+        "text": "world's first fully AI-native government by 2027"
+      }
+    ],
+    "owner": "Department of Government Enablement",
+    "deadline": "2027-12-31",
+    "deadline_precision": "year",
+    "announced": "2025-01-21",
+    "undefined_terms": [
+      "AI-native",
+      "fully",
+      "how 'first' is established"
+    ],
+    "notes": "No metric defines AI-native. This is the central example for the Definition Lab."
+  },
+  {
+    "id": "C11",
+    "title": "AED 13 billion Digital Strategy 2025-2027",
+    "title_ar": "استراتيجية رقمية بقيمة 13 مليار درهم 2025-2027",
+    "statement": "AED 13 billion committed through 2025-2027.",
+    "statement_ar": "التزام بقيمة 13 مليار درهم خلال 2025-2027.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "input",
+    "tags": [
+      "investment"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04"
+    ],
+    "anchors": [
+      {
+        "source_id": "S02",
+        "text": "AED 13 billion"
+      }
+    ],
+    "owner": "Department of Government Enablement",
+    "metric": "Funds committed",
+    "unit": "aed",
+    "target_value": "AED 13 billion",
+    "target_number": 13000000000.0,
+    "target_comparator": "=",
+    "deadline": "2027-12-31",
+    "deadline_precision": "year",
+    "announced": "2025-01-21",
+    "measurement_source": "Not stated",
+    "undefined_terms": [
+      "spend vs allocation",
+      "reporting of spend"
+    ],
+    "notes": "Reported spend is not published."
+  },
+  {
+    "id": "C12",
+    "title": "100% sovereign-cloud adoption",
+    "title_ar": "اعتماد السحابة السيادية بنسبة 100%",
+    "statement": "Full adoption of the sovereign cloud for government operations.",
+    "statement_ar": "اعتماد كامل للسحابة السيادية في العمليات الحكومية.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "target",
+    "tags": [
+      "sovereign-cloud"
+    ],
+    "source_ids": [
+      "S02",
+      "S03"
+    ],
+    "anchors": [
+      {
+        "source_id": "S02",
+        "text": "Sovereign cloud: target of full adoption"
+      }
+    ],
+    "owner": "Department of Government Enablement",
+    "metric": "Share of government operations on sovereign cloud",
+    "unit": "operations",
+    "target_value": "100%",
+    "target_number": 100,
+    "target_comparator": "=",
+    "announced": "2025-01-21",
+    "undefined_terms": [
+      "adoption",
+      "operations in scope",
+      "exceptions"
+    ],
+    "notes": "No separate deadline; sits within the 2025-2027 strategy."
+  },
+  {
+    "id": "C13",
+    "title": "100% of government processes digitised and automated",
+    "title_ar": "رقمنة وأتمتة 100% من العمليات الحكومية",
+    "statement": "Digitise and automate 100% of government processes.",
+    "statement_ar": "رقمنة وأتمتة 100% من العمليات الحكومية.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "target",
+    "tags": [
+      "digitisation"
+    ],
+    "source_ids": [
+      "S02",
+      "S04"
+    ],
+    "anchors": [
+      {
+        "source_id": "S02",
+        "text": "target of 100% of government processes"
+      }
+    ],
+    "owner": "Department of Government Enablement",
+    "metric": "Share of processes",
+    "unit": "processes",
+    "target_value": "100%",
+    "target_number": 100,
+    "target_comparator": "=",
+    "announced": "2025-01-21",
+    "undefined_terms": [
+      "process (what counts as one)",
+      "digitised vs automated",
+      "inventory of processes"
+    ],
+    "notes": "S04 says the strategy targets end-to-end digitisation and reports no progress against it."
+  },
+  {
+    "id": "C14",
+    "title": "200+ AI solutions across government services",
+    "title_ar": "أكثر من 200 حل ذكاء اصطناعي عبر الخدمات الحكومية",
+    "statement": "Over 200 AI solutions across government services under the Digital Strategy.",
+    "statement_ar": "أكثر من 200 حل ذكاء اصطناعي عبر الخدمات الحكومية ضمن الاستراتيجية الرقمية.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "target",
+    "tags": [
+      "ai-solutions"
+    ],
+    "source_ids": [
+      "S02",
+      "S04",
+      "S08"
+    ],
+    "anchors": [
+      {
+        "source_id": "S02",
+        "text": "over 200 across government services"
+      }
+    ],
+    "owner": "Department of Government Enablement",
+    "metric": "AI solutions",
+    "unit": "solutions",
+    "target_value": "200+",
+    "target_number": 200,
+    "target_comparator": ">=",
+    "deadline": "2027-12-31",
+    "deadline_precision": "year",
+    "announced": "2025-01-21",
+    "undefined_terms": [
+      "solution vs use case"
+    ],
+    "notes": "Reported progress is in 'use cases', not 'solutions'. The units differ."
+  },
+  {
+    "id": "C15",
+    "title": "1,000+ AI agents across the public sector",
+    "title_ar": "أكثر من 1000 وكيل ذكاء اصطناعي في القطاع العام",
+    "statement": "More than 1,000 AI agents across the public sector, through the AI Factory capability.",
+    "statement_ar": "أكثر من 1000 وكيل ذكاء اصطناعي في القطاع العام عبر مصنع الذكاء الاصطناعي.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "target",
+    "tags": [
+      "agentic-ai",
+      "ai-solutions"
+    ],
+    "source_ids": [
+      "S05",
+      "S08"
+    ],
+    "anchors": [
+      {
+        "source_id": "S05",
+        "text": "more than 1,000 AI agents across the public sector"
+      }
+    ],
+    "owner": "Department of Government Enablement",
+    "metric": "AI agents",
+    "unit": "agents",
+    "target_value": "1,000+",
+    "target_number": 1000,
+    "target_comparator": ">=",
+    "announced": "2026-07-06",
+    "undefined_terms": [
+      "AI agent",
+      "deadline"
+    ],
+    "notes": "No deadline is stated."
+  },
+  {
+    "id": "C16",
+    "title": "AiNative: 20,000 government employees trained by end of 2026",
+    "title_ar": "برنامج AiNative: تدريب 20 ألف موظف حكومي بنهاية 2026",
+    "statement": "The AiNative programme targets 20,000 employees trained by the end of 2026.",
+    "statement_ar": "يستهدف برنامج AiNative تدريب 20 ألف موظف بنهاية 2026.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "target",
+    "tags": [
+      "workforce"
+    ],
+    "source_ids": [
+      "S08"
+    ],
+    "anchors": [
+      {
+        "source_id": "S08",
+        "text": "20,000 employees trained by end of 2026"
+      }
+    ],
+    "owner": "Department of Government Enablement",
+    "metric": "Employees trained",
+    "unit": "employees",
+    "target_value": "20,000",
+    "target_number": 20000,
+    "target_comparator": ">=",
+    "deadline": "2026-12-31",
+    "deadline_precision": "year",
+    "announced": "2026-10-07",
+    "notes": "Only secondary media reports this. A second figure (about 23,000 by early 2027) is logged as a claim."
+  },
+  {
+    "id": "C17",
+    "title": "5,000+ new jobs from the Digital Strategy",
+    "title_ar": "أكثر من 5000 وظيفة جديدة من الاستراتيجية الرقمية",
+    "statement": "More than 5,000 jobs, supporting Emiratisation, expected from the strategy.",
+    "statement_ar": "أكثر من 5000 وظيفة، بما يدعم التوطين، متوقعة من الاستراتيجية.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "projection",
+    "tags": [
+      "projection",
+      "economy"
+    ],
+    "source_ids": [
+      "S02",
+      "S04"
+    ],
+    "anchors": [
+      {
+        "source_id": "S02",
+        "text": "more than 5,000 jobs"
+      }
+    ],
+    "metric": "Jobs",
+    "unit": "jobs",
+    "target_value": "5,000+",
+    "target_number": 5000,
+    "target_comparator": ">=",
+    "announced": "2025-01-21",
+    "undefined_terms": [
+      "direct vs indirect jobs"
+    ],
+    "notes": "S04 states this is a projection, not an achievement."
+  },
+  {
+    "id": "C18",
+    "title": "AED 24 billion GDP contribution by 2027",
+    "title_ar": "إسهام 24 مليار درهم في الناتج المحلي بحلول 2027",
+    "statement": "The strategy is expected to add more than AED 24 billion to GDP by 2027.",
+    "statement_ar": "يُتوقع أن تضيف الاستراتيجية أكثر من 24 مليار درهم إلى الناتج المحلي بحلول 2027.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "projection",
+    "tags": [
+      "projection",
+      "economy"
+    ],
+    "source_ids": [
+      "S02",
+      "S04"
+    ],
+    "anchors": [
+      {
+        "source_id": "S02",
+        "text": "expected to exceed AED 24 billion by 2027"
+      }
+    ],
+    "metric": "GDP contribution",
+    "unit": "aed",
+    "target_value": "AED 24 billion+",
+    "target_number": 24000000000.0,
+    "target_comparator": ">=",
+    "deadline": "2027-12-31",
+    "deadline_precision": "year",
+    "announced": "2025-01-21",
+    "undefined_terms": [
+      "attribution method"
+    ],
+    "notes": "A projection. No attribution method is stated."
+  },
+  {
+    "id": "C19",
+    "title": "Hundreds of AI use cases across the public sector",
+    "title_ar": "مئات حالات استخدام الذكاء الاصطناعي في القطاع العام",
+    "statement": "Hundreds of AI use cases across the public sector via the Frontier Employee Programme.",
+    "statement_ar": "مئات حالات استخدام الذكاء الاصطناعي في القطاع العام عبر برنامج الموظف الرائد.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "target",
+    "tags": [
+      "ai-solutions"
+    ],
+    "source_ids": [
+      "S05"
+    ],
+    "anchors": [
+      {
+        "source_id": "S05",
+        "text": "hundreds of AI use cases across the public sector"
+      }
+    ],
+    "owner": "Department of Government Enablement",
+    "unit": "use-cases",
+    "announced": "2026-07-06",
+    "undefined_terms": [
+      "hundreds (no number)",
+      "use case",
+      "deadline"
+    ],
+    "notes": "'Hundreds' has no number; it cannot be checked."
+  },
+  {
+    "id": "C20",
+    "title": "Unified digital ERP platform",
+    "title_ar": "منصة موحدة لتخطيط موارد المؤسسات",
+    "statement": "A unified digital enterprise resource planning platform to streamline processes.",
+    "statement_ar": "منصة رقمية موحدة لتخطيط موارد المؤسسات لتبسيط العمليات.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "deliverable",
+    "tags": [
+      "digitisation",
+      "infrastructure"
+    ],
+    "source_ids": [
+      "S02",
+      "S04"
+    ],
+    "anchors": [
+      {
+        "source_id": "S04",
+        "text": "unified ERP system as a target"
+      }
+    ],
+    "owner": "Department of Government Enablement",
+    "announced": "2025-01-21",
+    "undefined_terms": [
+      "go-live date",
+      "entities covered"
+    ]
+  },
+  {
+    "id": "C21",
+    "title": "AI for All citizen programme",
+    "title_ar": "برنامج الذكاء الاصطناعي للجميع",
+    "statement": "A programme to train and empower citizens in AI applications.",
+    "statement_ar": "برنامج لتدريب المواطنين وتمكينهم في تطبيقات الذكاء الاصطناعي.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "deliverable",
+    "tags": [
+      "ai-for-all"
+    ],
+    "source_ids": [
+      "S02"
+    ],
+    "anchors": [
+      {
+        "source_id": "S02",
+        "text": "AI for All"
+      }
+    ],
+    "owner": "Department of Government Enablement",
+    "announced": "2025-01-21",
+    "undefined_terms": [
+      "reach",
+      "completion criterion"
+    ]
+  },
+  {
+    "id": "C22",
+    "title": "100% of senior government leadership trained in AI",
+    "title_ar": "تدريب 100% من القيادات الحكومية العليا على الذكاء الاصطناعي",
+    "statement": "UAE National AI Strategy 2031: all Director-General, Ministerial and Senior-Ministerial leaders trained in AI.",
+    "statement_ar": "الاستراتيجية الوطنية للذكاء الاصطناعي 2031: تدريب جميع المديرين العامين والوزراء وكبار القيادات.",
+    "jurisdiction": "national",
+    "kind": "target",
+    "tags": [
+      "workforce",
+      "national"
+    ],
+    "source_ids": [
+      "S12"
+    ],
+    "anchors": [
+      {
+        "source_id": "S12",
+        "text": "100% of senior government leadership"
+      }
+    ],
+    "metric": "Leaders trained",
+    "unit": "employees",
+    "target_value": "100%",
+    "target_number": 100,
+    "target_comparator": "=",
+    "deadline": "2031-12-31",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "training standard",
+      "baseline headcount"
+    ]
+  },
+  {
+    "id": "C23",
+    "title": "Up to AED 335 billion of AI-driven gains",
+    "title_ar": "مكاسب تصل إلى 335 مليار درهم بفضل الذكاء الاصطناعي",
+    "statement": "The National AI Strategy cites up to AED 335 billion of potential AI-driven gains.",
+    "statement_ar": "تشير الاستراتيجية إلى مكاسب محتملة تصل إلى 335 مليار درهم.",
+    "jurisdiction": "national",
+    "kind": "projection",
+    "tags": [
+      "projection",
+      "national"
+    ],
+    "source_ids": [
+      "S12"
+    ],
+    "anchors": [
+      {
+        "source_id": "S12",
+        "text": "up to AED 335 billion"
+      }
+    ],
+    "metric": "Economic gains",
+    "unit": "aed",
+    "target_value": "up to AED 335 billion",
+    "target_number": 335000000000.0,
+    "target_comparator": "up-to",
+    "undefined_terms": [
+      "period",
+      "attribution method"
+    ]
+  },
+  {
+    "id": "C24",
+    "title": "Identify suitable services for agentic AI within 90 days",
+    "title_ar": "تحديد الخدمات المناسبة للذكاء الاصطناعي الوكيل خلال 90 يوماً",
+    "statement": "A June 2026 event aimed to identify suitable services within 90 days.",
+    "statement_ar": "هدفت فعالية في يونيو 2026 إلى تحديد الخدمات المناسبة خلال 90 يوماً.",
+    "jurisdiction": "federal",
+    "kind": "milestone",
+    "tags": [
+      "agentic-ai",
+      "services"
+    ],
+    "source_ids": [
+      "S07"
+    ],
+    "anchors": [
+      {
+        "source_id": "S07",
+        "text": "identify suitable services within 90 days"
+      }
+    ],
+    "deadline_text": "90 days from a June 2026 event",
+    "deadline_precision": "relative",
+    "undefined_terms": [
+      "suitable",
+      "output list published?"
+    ],
+    "notes": "Reported only by secondary media."
+  }
+]

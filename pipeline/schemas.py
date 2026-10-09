@@ -185,7 +185,7 @@ class Evidence(BaseModel):
 
 
 class Claim(BaseModel):
-    """A figure reported by media that we looked for in official statements and did not treat as fact."""
+    """A media-reported figure we checked against official statements and did not treat as fact."""
 
     model_config = _STRICT
 
