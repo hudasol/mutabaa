@@ -126,6 +126,7 @@ class Commitment(BaseModel):
     measurement_source: str | None = None
     undefined_terms: list[str] = Field(default_factory=list)
     announced: date | None = None
+    tags: list[str] = Field(default_factory=list)
     source_ids: list[str] = Field(min_length=1)
     anchors: list[Anchor] = Field(min_length=1)
     notes: str = ""
@@ -174,6 +175,29 @@ class Evidence(BaseModel):
         if v is not None and v not in UNITS:
             raise ValueError(f"unknown unit {v!r}")
         return v
+
+    @field_validator("anchor")
+    @classmethod
+    def _short(cls, v: str) -> str:
+        if len(v.split()) >= 15 or not v.strip():
+            raise ValueError("anchor must be 1-14 words")
+        return v
+
+
+class Claim(BaseModel):
+    """A figure reported by media that we looked for in official statements and did not treat as fact."""
+
+    model_config = _STRICT
+
+    id: str = Field(pattern=r"^K\d{2}$")
+    text: str = Field(max_length=300)
+    text_ar: str = Field(max_length=400)
+    source_id: str = Field(pattern=r"^S\d{2}$")
+    anchor: str
+    corroboration: Corroboration
+    official_sources_checked: list[str] = Field(default_factory=list)
+    commitment_ids: list[str] = Field(default_factory=list)
+    note: str = ""
 
     @field_validator("anchor")
     @classmethod
