@@ -106,3 +106,18 @@ def test_media_cannot_claim_official_confirmation(d):
 def test_json_files_are_utf8_arabic():
     raw = json.loads((REAL / "commitments.json").read_text(encoding="utf-8"))
     assert all(any("؀" <= ch <= "ۿ" for ch in r["title_ar"]) for r in raw)
+
+
+def test_site_payload_is_up_to_date(tmp_path):
+    """site/src/data/real.json is generated; it must match what the pipeline produces now."""
+    import subprocess
+    import sys
+
+    from pipeline.io import ROOT
+
+    p = ROOT / "site" / "src" / "data" / "real.json"
+    before = p.read_text(encoding="utf-8")
+    subprocess.run(
+        [sys.executable, "-m", "pipeline", "build"], check=True, capture_output=True, cwd=ROOT
+    )
+    assert p.read_text(encoding="utf-8") == before, "run `python -m pipeline build` and commit"

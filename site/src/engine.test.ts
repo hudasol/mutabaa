@@ -1,0 +1,44 @@
+import { describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { parseCsv, sweep, allDefinitions, CSV_TEMPLATE, share } from "./engine";
+import type { Registry } from "./types";
+
+const root = resolve(__dirname, "../..");
+const registry: Registry = JSON.parse(readFileSync(resolve(root, "data/synthetic/registry.json"), "utf8"));
+const golden = JSON.parse(readFileSync(resolve(root, "data/golden/sensitivity.json"), "utf8"));
+
+describe("engine parity with the Python reference", () => {
+  it("has 72 definitions", () => expect(allDefinitions()).toHaveLength(72));
+  it("matches the golden file on every definition", () => {
+    expect(sweep(registry.items)).toEqual(golden);
+  });
+});
+
+describe("share", () => {
+  it("is null for an empty scope", () => {
+    expect(share([], { unit: "services", scope: "all-services", threshold: 2, guardrails: "none" })).toBeNull();
+  });
+});
+
+describe("csv", () => {
+  it("accepts the template", () => {
+    const r = parseCsv(CSV_TEMPLATE);
+    expect(r.errors).toEqual([]);
+    expect(r.items).toHaveLength(1);
+  });
+  it("reports a missing column", () => {
+    expect(parseCsv("id,kind\na,service").errors[0]).toMatch(/Missing columns/);
+  });
+  it("reports row-level problems with the row number", () => {
+    const bad = CSV_TEMPLATE + "x,E,H,operation,citizen,5,9,maybe,true,true,true\n";
+    const r = parseCsv(bad);
+    expect(r.errors[0]).toMatch(/^Row 3:/);
+    expect(r.errors[0]).toMatch(/maturity/);
+    expect(r.items).toHaveLength(1);
+  });
+  it("handles quoted commas", () => {
+    const r = parseCsv(CSV_TEMPLATE.replace("Example Entity", '"Entity, with comma"'));
+    expect(r.items[0].entity_id).toBe("Entity, with comma");
+  });
+});

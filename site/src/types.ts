@@ -1,0 +1,58 @@
+export type Anchor = { source_id: string; text: string };
+export type Commitment = {
+  id: string; title: string; title_ar: string; statement: string; statement_ar: string;
+  jurisdiction: "federal" | "abu-dhabi" | "national";
+  kind: "target" | "milestone" | "deliverable" | "input" | "projection" | "assessment" | "vision";
+  owner: string | null; metric: string | null; unit: string | null; baseline: string | null;
+  target_value: string | null; target_number: number | null; target_comparator: string | null;
+  deadline: string | null; deadline_text: string | null; deadline_precision: string;
+  measurement_source: string | null; undefined_terms: string[]; announced: string | null;
+  tags: string[]; source_ids: string[]; anchors: Anchor[]; notes: string;
+};
+export type Evidence = {
+  id: string; commitment_ids: string[]; kind: "activity" | "quantified-progress" | "target-met-claim";
+  summary: string; summary_ar: string; as_of: string | null; as_of_note: string | null;
+  value: number | null; value_text: string | null; unit: string | null; source_id: string;
+  anchor: string; corroboration: string; note: string;
+};
+export type Source = {
+  id: string; title: string; publisher: string; url: string;
+  kind: "official-statement" | "official-self-report" | "secondary-media" | "third-party";
+  published: string | null; published_note: string | null; retrieved: string;
+  extract_file: string; content_hash: string; ai_assisted: boolean; notes: string;
+};
+export type Claim = {
+  id: string; text: string; text_ar: string; source_id: string; anchor: string;
+  corroboration: string; official_sources_checked: string[]; commitment_ids: string[]; note: string;
+};
+export type Score = {
+  commitment_id: string; checks: Record<string, boolean | null>; applicable: number; passed: number;
+  ratio: number; band: "checkable" | "partly-checkable" | "not-yet-checkable"; missing: string[];
+};
+export type Status = {
+  commitment_id: string;
+  status: "not-checkable" | "no-public-evidence" | "activity-reported" | "milestone-reported" | "target-claimed-met";
+  reasons: string[]; evidence_ids: string[]; excluded_evidence_ids: string[];
+  self_reported_only: boolean; unit_mismatch: boolean; progress_ratio: number | null; progress_as_of: string | null;
+};
+export type Item = {
+  id: string; entity_id: string; sector: string; kind: "service" | "operation";
+  audience: "citizen" | "business" | "internal"; name: string; annual_transactions: number;
+  maturity: 0 | 1 | 2 | 3 | 4; oversight: boolean; audit_trail: boolean; uae_residency: boolean; fallback: boolean;
+};
+export type Registry = {
+  meta: { seed: number; generator_version: string; is_synthetic: true; disclaimer: string };
+  entities: { id: string; name: string; sector: string; advancement: number }[];
+  items: Item[];
+};
+export type Definition = {
+  unit: "services" | "transactions" | "entities" | "sectors";
+  scope: "citizen-services" | "all-services" | "services-and-operations";
+  threshold: 2 | 3 | 4;
+  guardrails: "none" | "required";
+};
+export type SweepRow = Definition & { share: number | null };
+export type Payload = {
+  sources: Source[]; commitments: Commitment[]; evidence: Evidence[]; claims: Claim[];
+  scores: Score[]; statuses: Status[]; synthetic: Registry; sweep: SweepRow[];
+};
