@@ -20,6 +20,7 @@ export type Source = {
   kind: "official-statement" | "official-self-report" | "secondary-media" | "third-party";
   published: string | null; published_note: string | null; retrieved: string;
   extract_file: string; content_hash: string; ai_assisted: boolean; notes: string;
+  expect_present: string[]; expect_absent: string[];
 };
 export type Claim = {
   id: string; text: string; text_ar: string; source_id: string; anchor: string;
@@ -34,7 +35,19 @@ export type Status = {
   status: "not-checkable" | "no-public-evidence" | "activity-reported" | "milestone-reported" | "target-claimed-met";
   reasons: string[]; evidence_ids: string[]; excluded_evidence_ids: string[];
   self_reported_only: boolean; unit_mismatch: boolean; progress_ratio: number | null; progress_as_of: string | null;
+  latest_evidence_date: string | null; evidence_age_days: number | null; stale: boolean;
 };
+export type Question = { check: string; en: string; ar: string };
+export type Coverage = { commitment_id: string; searches: number; last_searched: string | null; found_sources: string[]; outcomes: string[] };
+export type SearchEntry = {
+  id: string; searched_on: string; tool: string; query: string; commitment_ids: string[];
+  outcome: "progress-found" | "target-restatement-only" | "nothing-official-found"; found_source_ids: string[]; note: string;
+};
+export type VerifyResult = {
+  result: "verified" | "failed" | "unreachable" | "no-expectations"; checked_at: string; http_status: number | null;
+  checked_present: number; checked_absent: number; missing: string[]; unexpected: string[]; error?: string;
+};
+export type Verification = { run_at: string; results: Record<string, VerifyResult> };
 export type Item = {
   id: string; entity_id: string; sector: string; kind: "service" | "operation";
   audience: "citizen" | "business" | "internal"; name: string; annual_transactions: number;
@@ -55,4 +68,6 @@ export type SweepRow = Definition & { share: number | null };
 export type Payload = {
   sources: Source[]; commitments: Commitment[]; evidence: Evidence[]; claims: Claim[];
   scores: Score[]; statuses: Status[]; synthetic: Registry; sweep: SweepRow[];
+  questions: Record<string, Question[]>; coverage: Coverage[]; searches: SearchEntry[];
+  verification: Verification; build: { data_as_of: string; payload_sha256: string; schema: number };
 };

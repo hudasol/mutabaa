@@ -79,9 +79,7 @@ def generate(seed: int = SEED, n_entities: int = 16, items_per_entity: int = 38)
         for j in range(k):
             operation = rng.random() < 0.28
             audience = (
-                "internal"
-                if operation
-                else rng.choices(["citizen", "business"], weights=[0.65, 0.35])[0]
+                "internal" if operation else rng.choices(["citizen", "business"], weights=[0.65, 0.35])[0]
             )
             m = _maturity(rng, e.advancement, operation)
             # Guardrails are more often present on high-maturity items, but not reliably.

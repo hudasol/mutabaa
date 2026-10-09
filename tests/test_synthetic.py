@@ -49,12 +49,8 @@ def test_there_are_72_definitions():
 def test_stricter_definition_never_raises_the_share():
     reg = generate()
     for unit in ("services", "transactions"):
-        loose = share(
-            reg, Definition(unit=unit, scope="all-services", threshold=2, guardrails="none")
-        )
-        tight = share(
-            reg, Definition(unit=unit, scope="all-services", threshold=4, guardrails="required")
-        )
+        loose = share(reg, Definition(unit=unit, scope="all-services", threshold=2, guardrails="none"))
+        tight = share(reg, Definition(unit=unit, scope="all-services", threshold=4, guardrails="required"))
         assert tight <= loose
 
 

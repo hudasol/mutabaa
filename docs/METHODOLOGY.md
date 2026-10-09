@@ -4,7 +4,7 @@
 A commitment is something an official source says a government will do, deliver, spend, expect or assess. Reported achievements are evidence, not commitments.
 
 ## Verifiability score (`pipeline/score.py`)
-Six yes/no checks: a number to reach, a defined unit, a dated deadline, a named owner, a named way to measure, and no undefined terms. Deliverables and assessments need no number, so those two checks are left out for them. Bands: 80% or more checkable, 50% or more partly checkable, otherwise not yet checkable. The score describes the wording of a commitment, not performance.
+Six yes/no checks: a number to reach, a defined unit, a dated deadline, a named owner, a named way to measure, and no undefined terms. Deliverables and assessments need no number, so those two checks are left out for them. Bands (named for the wording, not the entity): 80% or more "Fully specified", 50% or more "Partly specified", otherwise "Under-specified". The score describes the wording of a commitment, not performance.
 
 ## Status (`pipeline/status.py`)
 1. Vision, projection and assessment: `not-checkable`.
@@ -20,3 +20,10 @@ Each source has a SHA-256 of its extraction note. Each commitment, evidence item
 
 ## Synthetic data
 See `data/synthetic/DATASHEET.md`. Synthetic and real figures are never combined.
+
+
+## Live verification
+`python -m pipeline verify-live` fetches each source page and checks that the figures the extraction note relies on are present (and that figures which should be absent are absent), after normalising dashes, commas and "per cent"/"%". Results go to `data/real/verification.json`. A page that blocks automated requests is reported *unreachable*, never *verified*; TLS checks are never disabled. A weekly workflow runs it and fails only on a *failed* result.
+
+## Search log and staleness
+`data/real/searchlog.json` records where and when searches were run, so "no public evidence" means "searched these places on this date, found nothing". Evidence older than 180 days is flagged stale.

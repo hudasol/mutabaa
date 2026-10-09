@@ -1,8 +1,12 @@
 import { createContext, useContext } from "react";
 import type { Dict, Lang } from "./i18n";
+import type { Route } from "./route";
 import type { Payload } from "./types";
 
-export type Ctx = { lang: Lang; t: Dict; data: Payload };
+export type Ctx = {
+  lang: Lang; t: Dict; data: Payload; route: Route;
+  setParams: (u: Record<string, string | undefined>) => void;
+};
 export const C = createContext<Ctx>(null as unknown as Ctx);
 export const useCtx = () => useContext(C);
 
@@ -13,4 +17,7 @@ export function download(name: string, text: string, type: string) {
   const a = document.createElement("a");
   a.href = url; a.download = name; a.click();
   URL.revokeObjectURL(url);
+}
+export async function copyText(text: string): Promise<boolean> {
+  try { await navigator.clipboard.writeText(text); return true; } catch { return false; }
 }

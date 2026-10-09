@@ -67,9 +67,12 @@ export const CSV_COLUMNS = [
   "id", "entity", "sector", "kind", "audience", "annual_transactions", "maturity",
   "oversight", "audit_trail", "uae_residency", "fallback",
 ] as const;
+export type CsvColumn = (typeof CSV_COLUMNS)[number];
 
 export const CSV_TEMPLATE =
   CSV_COLUMNS.join(",") + "\nexample-1,Example Entity,Health,service,citizen,12000,2,true,true,true,false\n";
+
+export const MAX_CSV_ROWS = 200_000;
 
 function splitLine(line: string): string[] {
   const out: string[] = [];
@@ -96,30 +99,89 @@ const BOOL = (v: string): boolean | null => {
   return null;
 };
 
-export type CsvResult = { items: Item[]; errors: string[] };
+/** Words that commonly stand for each required column. Matched after lowercasing and stripping non-letters. */
+const SYNONYMS: Record<CsvColumn, string[]> = {
+  id: ["id", "serviceid", "code", "reference", "ref"],
+  entity: ["entity", "department", "authority", "organisation", "organization", "agency", "owner"],
+  sector: ["sector", "domain", "cluster"],
+  kind: ["kind", "type", "category"],
+  audience: ["audience", "customer", "user", "segment"],
+  annual_transactions: ["annualtransactions", "transactions", "volume", "annualvolume", "requests"],
+  maturity: ["maturity", "level", "automationlevel", "autonomy"],
+  oversight: ["oversight", "humanoversight", "humanreview"],
+  audit_trail: ["audittrail", "audit", "logging"],
+  uae_residency: ["uaeresidency", "residency", "dataresidency", "sovereign"],
+  fallback: ["fallback", "humanfallback", "manualfallback"],
+};
 
-export function parseCsv(text: string): CsvResult {
-  const lines = text.replace(/^﻿/, "").split(/\r?\n/).filter((l) => l.trim() !== "");
-  const errors: string[] = [];
-  if (lines.length < 2) return { items: [], errors: ["The file needs a header row and at least one data row."] };
-  const header = splitLine(lines[0]).map((h) => h.toLowerCase());
-  const missing = CSV_COLUMNS.filter((c) => !header.includes(c));
-  if (missing.length) return { items: [], errors: [`Missing columns: ${missing.join(", ")}.`] };
-  const idx = (c: string) => header.indexOf(c);
+const squash = (h: string) => h.toLowerCase().replace(/[^a-z]/g, "");
+
+export type Mapping = Partial<Record<CsvColumn, number>>;
+
+export function readCsv(text: string): { headers: string[]; rows: string[][]; truncated: boolean } {
+  const lines = text.replace(/^\uFEFF/, "").split(/\r?\n/).filter((l) => l.trim() !== "");
+  if (lines.length === 0) return { headers: [], rows: [], truncated: false };
+  const truncated = lines.length - 1 > MAX_CSV_ROWS;
+  return {
+    headers: splitLine(lines[0]),
+    rows: lines.slice(1, MAX_CSV_ROWS + 1).map(splitLine),
+    truncated,
+  };
+}
+
+export function autoMap(headers: string[]): Mapping {
+  const m: Mapping = {};
+  const used = new Set<number>();
+  for (const col of CSV_COLUMNS) {
+    const exact = headers.findIndex((h, i) => !used.has(i) && h.toLowerCase().trim() === col);
+    const idx = exact >= 0 ? exact : headers.findIndex((h, i) => !used.has(i) && SYNONYMS[col].includes(squash(h)));
+    if (idx >= 0) { m[col] = idx; used.add(idx); }
+  }
+  return m;
+}
+
+export type QualityReport = {
+  rows: number;
+  accepted: number;
+  rejected: number;
+  duplicates: number;
+  zeroTransactionShare: number;
+  citizenShare: number;
+  entities: number;
+  sectors: number;
+  truncated: boolean;
+  unmapped: CsvColumn[];
+};
+
+export type CsvResult = { items: Item[]; errors: string[]; report: QualityReport; headers: string[]; mapping: Mapping };
+
+export function convert(headers: string[], rows: string[][], mapping: Mapping, truncated = false): CsvResult {
+  const unmapped = CSV_COLUMNS.filter((c) => mapping[c] === undefined);
+  const empty: QualityReport = {
+    rows: rows.length, accepted: 0, rejected: 0, duplicates: 0, zeroTransactionShare: 0, citizenShare: 0,
+    entities: 0, sectors: 0, truncated, unmapped,
+  };
+  if (rows.length === 0) {
+    return { items: [], errors: ["The file needs a header row and at least one data row."], report: empty, headers, mapping };
+  }
+  if (unmapped.length) {
+    return { items: [], errors: [`Missing columns: ${unmapped.join(", ")}.`], report: empty, headers, mapping };
+  }
   const items: Item[] = [];
+  const errors: string[] = [];
   const seen = new Set<string>();
-  lines.slice(1).forEach((line, n) => {
+  let duplicates = 0;
+  rows.forEach((f, n) => {
     const row = n + 2;
-    const f = splitLine(line);
-    const get = (c: string) => f[idx(c)] ?? "";
-    const kind = get("kind");
-    const audience = get("audience");
+    const get = (c: CsvColumn) => f[mapping[c] as number] ?? "";
+    const kind = get("kind").toLowerCase();
+    const audience = get("audience").toLowerCase();
     const mat = Number(get("maturity"));
     const tx = Number(get("annual_transactions"));
-    const flags = ["oversight", "audit_trail", "uae_residency", "fallback"].map((c) => BOOL(get(c)));
+    const flags = (["oversight", "audit_trail", "uae_residency", "fallback"] as const).map((c) => BOOL(get(c)));
     const bad: string[] = [];
     if (!get("id")) bad.push("id is empty");
-    if (seen.has(get("id"))) bad.push("duplicate id");
+    if (seen.has(get("id"))) { bad.push("duplicate id"); duplicates++; }
     if (kind !== "service" && kind !== "operation") bad.push("kind must be service or operation");
     if (!["citizen", "business", "internal"].includes(audience)) bad.push("audience must be citizen, business or internal");
     if (kind === "operation" && audience !== "internal") bad.push("operations must be internal");
@@ -137,5 +199,19 @@ export function parseCsv(text: string): CsvResult {
       uae_residency: flags[2] as boolean, fallback: flags[3] as boolean,
     });
   });
-  return { items, errors };
+  const n = Math.max(1, items.length);
+  const report: QualityReport = {
+    rows: rows.length, accepted: items.length, rejected: rows.length - items.length, duplicates,
+    zeroTransactionShare: items.filter((i) => i.annual_transactions === 0).length / n,
+    citizenShare: items.filter((i) => i.audience === "citizen").length / n,
+    entities: new Set(items.map((i) => i.entity_id)).size,
+    sectors: new Set(items.map((i) => i.sector)).size,
+    truncated, unmapped,
+  };
+  return { items, errors, report, headers, mapping };
+}
+
+export function parseCsv(text: string, mapping?: Mapping): CsvResult {
+  const { headers, rows, truncated } = readCsv(text);
+  return convert(headers, rows, mapping ?? autoMap(headers), truncated);
 }
