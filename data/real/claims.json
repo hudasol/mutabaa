@@ -51,11 +51,13 @@
     "source_id": "S08",
     "anchor": "about 23,000 employees by early 2027",
     "corroboration": "single-source",
-    "official_sources_checked": [],
+    "official_sources_checked": [
+      "S13"
+    ],
     "commitment_ids": [
       "C16"
     ],
-    "note": "Two figures for one programme in one article. Logged as a discrepancy, not resolved."
+    "note": "Two figures for one programme in one article. The official statement S13 gives 20,000 and does not give 23,000. Logged as a discrepancy, not resolved."
   },
   {
     "id": "K05",

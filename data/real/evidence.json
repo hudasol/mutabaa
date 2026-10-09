@@ -127,5 +127,23 @@
     "anchor": "frameworks to decide which federal tasks can be handed to an AI agent",
     "corroboration": "single-source",
     "note": "Media only. Excluded from status."
+  },
+  {
+    "id": "E10",
+    "commitment_ids": [
+      "C12"
+    ],
+    "kind": "activity",
+    "summary": "Multi-year sovereign cloud agreement signed with Microsoft and Core42; the environment is designed for more than 11 million daily digital interactions. The share of government on it is not stated.",
+    "summary_ar": "وُقّعت اتفاقية متعددة السنوات للسحابة السيادية مع مايكروسوفت وCore42، وتتسع البيئة لأكثر من 11 مليون تفاعل رقمي يومياً. ولا تذكر الصفحة نسبة الحكومة المنقولة إليها.",
+    "as_of": "2025-03-18",
+    "as_of_note": null,
+    "value": null,
+    "value_text": "11 million+ daily interactions (capacity)",
+    "unit": null,
+    "source_id": "S14",
+    "anchor": "more than 11 million daily digital interactions",
+    "corroboration": "official-confirmed",
+    "note": "A capacity figure, not an adoption share. It is not comparable with the 100% target."
   }
 ]
