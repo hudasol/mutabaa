@@ -17,13 +17,28 @@ def eligible(e: Evidence, sources: dict[str, Source]) -> bool:
     return sources[e.source_id].kind != "secondary-media" or e.corroboration == "official-confirmed"
 
 
-def status(c: Commitment, evidence: list[Evidence], sources: dict[str, Source]) -> StatusResult:
+STALE_AFTER_DAYS = 180
+
+
+def status(
+    c: Commitment,
+    evidence: list[Evidence],
+    sources: dict[str, Source],
+    data_as_of: date | None = None,
+) -> StatusResult:
     mine = [e for e in evidence if c.id in e.commitment_ids]
     ok = [e for e in mine if eligible(e, sources)]
     excluded = [e.id for e in mine if not eligible(e, sources)]
 
+    dated = [e.as_of for e in ok if e.as_of]
+    latest = max(dated) if dated else None
+    age = (data_as_of - latest).days if (latest and data_as_of) else None
+
     def result(st, reasons, **kw):
         return StatusResult(
+            latest_evidence_date=latest,
+            evidence_age_days=age,
+            stale=age is not None and age > STALE_AFTER_DAYS,
             commitment_id=c.id,
             status=st,
             reasons=reasons,
@@ -37,9 +52,7 @@ def status(c: Commitment, evidence: list[Evidence], sources: dict[str, Source]) 
         )
 
     if c.kind in NON_OUTCOME_KINDS:
-        return result(
-            "not-checkable", [f"kind '{c.kind}' is not an outcome that can be delivered or missed"]
-        )
+        return result("not-checkable", [f"kind '{c.kind}' is not an outcome that can be delivered or missed"])
     if not ok:
         why = ["no eligible public evidence"]
         if excluded:
@@ -57,15 +70,15 @@ def status(c: Commitment, evidence: list[Evidence], sources: dict[str, Source]) 
     ]
     mismatch = any(e.kind == "quantified-progress" and e.unit != c.unit for e in ok)
     if comparable:
-        latest = max(comparable, key=lambda e: (e.as_of is not None, e.as_of or date.min))
-        ratio = latest.value / c.target_number
+        best = max(comparable, key=lambda e: (e.as_of is not None, e.as_of or date.min))
+        ratio = best.value / c.target_number
         claimed = any(e.kind == "target-met-claim" for e in ok)
         st = "target-claimed-met" if claimed else "milestone-reported"
         return result(
             st,
-            [f"{latest.value:g} of {c.target_number:g} {c.unit} reported"],
+            [f"{best.value:g} of {c.target_number:g} {c.unit} reported"],
             ratio=round(ratio, 4),
-            as_of=latest.as_of,
+            as_of=best.as_of,
             unit_mismatch=mismatch,
         )
     reasons = ["activity reported without a figure comparable to the target"]

@@ -83,6 +83,12 @@ class Source(BaseModel):
     content_hash: str = Field(pattern=r"^[0-9a-f]{64}$")
     ai_assisted: bool = False
     notes: str = ""
+    # Checked against the raw page by `python -m pipeline verify-live`.
+    # Each entry may list alternatives separated by "|" (formats differ between pages).
+    expect_present: list[str] = Field(default_factory=list)
+    # Things the notes say the page does NOT contain (for example media figures missing from
+    # the official statement). Checked the same way.
+    expect_absent: list[str] = Field(default_factory=list)
 
 
 class Anchor(BaseModel):
@@ -207,6 +213,24 @@ class Claim(BaseModel):
         return v
 
 
+SearchOutcome = Literal["progress-found", "target-restatement-only", "nothing-official-found"]
+
+
+class SearchEntry(BaseModel):
+    """One search we ran. Lets 'no public evidence' mean 'searched here, on this date, found nothing'."""
+
+    model_config = _STRICT
+
+    id: str = Field(pattern=r"^Q\d{2}$")
+    searched_on: date
+    tool: Literal["WebSearch", "WebFetch", "shell"]
+    query: str
+    commitment_ids: list[str] = Field(min_length=1)
+    outcome: SearchOutcome
+    found_source_ids: list[str] = Field(default_factory=list)
+    note: str = ""
+
+
 # --------------------------------------------------------------------------- derived
 
 
@@ -239,6 +263,9 @@ class StatusResult(BaseModel):
     unit_mismatch: bool
     progress_ratio: float | None = None
     progress_as_of: date | None = None
+    latest_evidence_date: date | None = None
+    evidence_age_days: int | None = None
+    stale: bool = False
 
 
 # --------------------------------------------------------------------------- synthetic

@@ -117,7 +117,39 @@ def test_site_payload_is_up_to_date(tmp_path):
 
     p = ROOT / "site" / "src" / "data" / "real.json"
     before = p.read_text(encoding="utf-8")
-    subprocess.run(
-        [sys.executable, "-m", "pipeline", "build"], check=True, capture_output=True, cwd=ROOT
-    )
+    subprocess.run([sys.executable, "-m", "pipeline", "build"], check=True, capture_output=True, cwd=ROOT)
     assert p.read_text(encoding="utf-8") == before, "run `python -m pipeline build` and commit"
+
+
+def test_staleness_flag_boundary(d, src):
+    from datetime import timedelta
+
+    c = by_id(d.commitments)["C12"]
+    e = by_id(d.evidence)["E04"]  # latest eligible evidence for C12, as_of 2025-12-31
+    fresh = status(c, d.evidence, src, e.as_of + timedelta(days=180))
+    stale = status(c, d.evidence, src, e.as_of + timedelta(days=181))
+    assert fresh.stale is False and stale.stale is True
+    assert stale.evidence_age_days == 181
+
+
+def test_questions_cover_every_missing_check(d):
+    from pipeline.questions import questions
+
+    for c in d.commitments:
+        s = score(c)
+        qs = questions(c, s)
+        checks = {q["check"] for q in qs}
+        for miss in s.missing:
+            assert miss in checks, (c.id, miss)
+        assert all(q["en"] and q["ar"] for q in qs)
+
+
+def test_every_commitment_has_search_coverage_or_is_flagged(d):
+    covered = {cid for q in d.searches for cid in q.commitment_ids}
+    assert len(covered) >= 10  # the search log is not decoration
+
+
+def test_unreachable_is_a_warning_not_an_error():
+    errors, warnings = validate()
+    assert not any("live verification" in e for e in errors)
+    assert any("unreachable" in w for w in warnings)

@@ -41,10 +41,7 @@ def share(reg: Registry, d: Definition) -> float | None:
         total = sum(i.annual_transactions for i in items)
         if total == 0:
             return None
-        return (
-            sum(i.annual_transactions for i in items if qualifies(i, d.threshold, d.guardrails))
-            / total
-        )
+        return sum(i.annual_transactions for i in items if qualifies(i, d.threshold, d.guardrails)) / total
     key = "entity_id" if d.unit == "entities" else "sector"
     groups: dict[str, list[ServiceItem]] = {}
     for i in items:
@@ -60,9 +57,7 @@ def share(reg: Registry, d: Definition) -> float | None:
 def all_definitions() -> list[Definition]:
     return [
         Definition(unit=u, scope=s, threshold=t, guardrails=g)
-        for u, s, t, g in product(
-            get_args(Unit), get_args(Scope), get_args(Threshold), get_args(Guardrails)
-        )
+        for u, s, t, g in product(get_args(Unit), get_args(Scope), get_args(Threshold), get_args(Guardrails))
     ]
 
 

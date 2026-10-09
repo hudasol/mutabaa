@@ -2,6 +2,11 @@
 
 Milestones are listed with their intended tag. Tag pushes were blocked by the build environment's git policy, so tags are created locally with `scripts/tag-milestones.sh` (it maps each tag to its commit SHA).
 
+## v1.1.0: ADEO review round
+- Live verifier (`verify-live`), search log and coverage, evidence staleness, data-as-of and payload hash
+- Home page leads with a tile map of the 25 real commitments; synthetic illustration moved second
+- Neutral band names; questions for the entity (EN/AR); shareable URL state; CSV column mapper and quality report; sortable and groupable ledger; EN/AR parity test; weekly drift workflow
+
 ## v1.0.0: evaluation and documentation
 - Blind second extraction (`docs/EVALUATION.md`): found one target the first pass missed (C25), added
 - METHODOLOGY, REVIEW_CHECKLIST, PROPOSAL; README run instructions and status

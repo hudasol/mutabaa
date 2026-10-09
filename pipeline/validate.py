@@ -103,6 +103,36 @@ def validate(data: RealData | None = None) -> tuple[list[str], list[str]]:
             if sid in src and src[sid].kind == "secondary-media":
                 errors.append(f"{k.id}: checked source {sid} is not official")
 
+    qids = set()
+    for q in d.searches:
+        if q.id in qids:
+            errors.append(f"duplicate search id {q.id}")
+        qids.add(q.id)
+        for cid in q.commitment_ids:
+            if cid not in cids:
+                errors.append(f"{q.id}: unknown commitment {cid}")
+        for sid in q.found_source_ids:
+            if sid not in src:
+                errors.append(f"{q.id}: unknown source {sid}")
+        if q.outcome != "nothing-official-found" and not q.found_source_ids:
+            errors.append(f"{q.id}: outcome says something was found but no source is listed")
+
+    ver = d.verification.get("results", {})
+    for sid, r in ver.items():
+        if sid not in src:
+            errors.append(f"verification: unknown source {sid}")
+        elif r["result"] == "failed":
+            errors.append(
+                f"{sid}: live verification failed: missing={r['missing']} unexpected={r['unexpected']}"
+            )
+    for s in d.sources:
+        if s.id not in ver:
+            warnings.append(f"{s.id}: not yet verified against the live page")
+        elif ver[s.id]["result"] == "unreachable":
+            warnings.append(f"{s.id}: live page unreachable ({ver[s.id].get('error')})")
+        if s.published is None and not s.published_note:
+            warnings.append(f"{s.id}: no publication date and no note explaining why")
+
     # every real commitment has an owner-less warning, so gaps stay visible
     for c in d.commitments:
         if c.owner is None and c.kind not in ("projection",):
