@@ -2,6 +2,12 @@
 
 Milestones are listed with their intended tag. Tag pushes were blocked by the build environment's git policy, so tags are created locally with `scripts/tag-milestones.sh` (it maps each tag to its commit SHA).
 
+## v1.3.0: TII review round
+- `python -m pipeline analyse`: 540-registry robustness study, score calibration (band cut-offs, random weights, leave-one-out), agreement with the blind second pass (bootstrap intervals), consistency check of fields against wording
+- New Assurance page (EN/AR); home page now states that the verdict flip depends on adoption level
+- Findings reported as found: maturity threshold drives most of the spread; two score checks are almost never passed; band edges are fragile
+- Definition axes config with rationale, CITATION.cff, tag-driven release workflow, CSV cap test
+
 ## v1.2.0: EDGE review round
 - Self-hosted fonts, strict CSP (meta and headers), zero third-party requests (tested)
 - Single-file offline build with hash-pinned CSP; opens from file://

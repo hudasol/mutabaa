@@ -1,4 +1,4 @@
-"""CLI: validate | rehash | synth | build | diff [REF] | verify-live [--write] [--only S01,S02]"""
+"""CLI: validate | rehash | synth | build | analyse | diff [REF] | verify-live [--write]"""
 
 from __future__ import annotations
 
@@ -6,6 +6,7 @@ import hashlib
 import json
 import sys
 
+from . import agreement, calibration, robustness
 from .diff import diff as payload_diff
 from .diff import load_at, load_current
 from .io import REAL, ROOT, load_real
@@ -77,6 +78,28 @@ def cmd_verify_live(args: list[str]) -> int:
     return 1 if failed else 0
 
 
+ANALYSIS = ROOT / "data" / "analysis"
+
+
+def compute_analysis(d) -> dict:
+    return {
+        "robustness": robustness.run(),
+        "calibration": calibration.run(d.commitments),
+        "agreement": agreement.run(d.commitments),
+    }
+
+
+def cmd_analyse() -> int:
+    """Recompute robustness, calibration and agreement results and store them under data/analysis/."""
+    ANALYSIS.mkdir(parents=True, exist_ok=True)
+    for k, v in compute_analysis(load_real()).items():
+        (ANALYSIS / f"{k}.json").write_text(
+            json.dumps(v, indent=1, sort_keys=True) + "\n", encoding="utf-8"
+        )
+        print(f"wrote data/analysis/{k}.json")
+    return 0
+
+
 def cmd_diff(args: list[str]) -> int:
     """python -m pipeline diff [REF]: commitment, status, band and verification changes since REF."""
     ref = args[0] if args else "HEAD~1"
@@ -133,6 +156,10 @@ def cmd_build() -> int:
         "coverage": coverage(d),
         "searches": [q.model_dump(mode="json") for q in d.searches],
         "verification": d.verification,
+        "analysis": {
+            k: json.loads((ANALYSIS / f"{k}.json").read_text(encoding="utf-8"))
+            for k in ("robustness", "calibration", "agreement")
+        },
         "synthetic": json.loads((SYNTH / "registry.json").read_text(encoding="utf-8")),
         "sweep": json.loads((GOLDEN / "sensitivity.json").read_text(encoding="utf-8")),
     }
@@ -149,7 +176,10 @@ def cmd_build() -> int:
 
 
 def main(argv: list[str]) -> int:
-    cmds = {"validate": cmd_validate, "rehash": cmd_rehash, "synth": cmd_synth, "build": cmd_build}
+    cmds = {
+        "validate": cmd_validate, "rehash": cmd_rehash, "synth": cmd_synth,
+        "build": cmd_build, "analyse": cmd_analyse,
+    }
     if len(argv) >= 2 and argv[1] == "diff":
         return cmd_diff(argv[2:])
     if len(argv) >= 2 and argv[1] == "verify-live":

@@ -9,6 +9,7 @@ import Ledger from "./pages/Ledger";
 import Maturity from "./pages/Maturity";
 import Method from "./pages/Method";
 import Overview from "./pages/Overview";
+import Assurance from "./pages/Assurance";
 import Sources from "./pages/Sources";
 import raw from "./data/real.json";
 import type { Payload } from "./types";
@@ -17,7 +18,7 @@ const data = raw as unknown as Payload;
 const ROUTES = [
   ["overview", "nav_overview", Overview], ["ledger", "nav_ledger", Ledger], ["clocks", "nav_clocks", Clocks],
   ["lab", "nav_lab", Lab], ["maturity", "nav_maturity", Maturity], ["sources", "nav_sources", Sources],
-  ["brief", "nav_brief", Brief], ["method", "nav_method", Method],
+  ["brief", "nav_brief", Brief], ["method", "nav_method", Method], ["assurance", "nav_assurance", Assurance],
 ] as const;
 
 type Theme = "auto" | "light" | "dark";

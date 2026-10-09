@@ -60,7 +60,12 @@ def _maturity(rng: random.Random, adv: float, operation: bool) -> int:
     return max(0, min(4, round(x)))
 
 
-def generate(seed: int = SEED, n_entities: int = 16, items_per_entity: int = 38) -> Registry:
+def generate(
+    seed: int = SEED,
+    n_entities: int = 16,
+    items_per_entity: int = 38,
+    adv: tuple[float, float] = (2.2, 2.0),
+) -> Registry:
     rng = random.Random(seed)
     entities: list[SyntheticEntity] = []
     for i in range(n_entities):
@@ -70,7 +75,7 @@ def generate(seed: int = SEED, n_entities: int = 16, items_per_entity: int = 38)
                 id=f"SE{i + 1:02d}",
                 name=f"Synthetic {sector} Authority {chr(65 + i // len(SECTORS))}",
                 sector=sector,
-                advancement=round(min(1.0, max(0.05, rng.betavariate(2.2, 2.0))), 3),
+                advancement=round(min(1.0, max(0.05, rng.betavariate(*adv))), 3),
             )
         )
     items: list[ServiceItem] = []

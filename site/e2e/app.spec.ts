@@ -3,7 +3,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { pathToFileURL } from "node:url";
 import path from "node:path";
 
-const PAGES = ["overview", "ledger", "clocks", "lab", "maturity", "sources", "brief", "method"];
+const PAGES = ["overview", "ledger", "clocks", "lab", "maturity", "sources", "brief", "method", "assurance"];
 
 async function open(page: Page, hash: string, opts: { lang?: "en" | "ar"; theme?: "light" | "dark" } = {}) {
   await page.addInitScript(([l, t]) => {

@@ -1,0 +1,74 @@
+{
+ "by_profile": {
+  "high": {
+   "flip_rate": 1.0,
+   "median_core_spread": 0.7744,
+   "median_spread": 1.0,
+   "registries": 180
+  },
+  "low": {
+   "flip_rate": 0.4,
+   "median_core_spread": 0.3315,
+   "median_spread": 0.4423,
+   "registries": 180
+  },
+  "mid": {
+   "flip_rate": 1.0,
+   "median_core_spread": 0.6458,
+   "median_spread": 0.8178,
+   "registries": 180
+  }
+ },
+ "core_spread": {
+  "0.05": 0.2188,
+  "0.5": 0.625,
+  "0.95": 0.8709
+ },
+ "effects": {
+  "guardrails": 0.1955,
+  "scope": 0.0048,
+  "threshold": 0.5307,
+  "unit": 0.0593
+ },
+ "flip_rate": 0.8,
+ "max_share": {
+  "0.05": 0.3545,
+  "0.5": 0.8144,
+  "0.95": 1.0
+ },
+ "min_share": {
+  "0.05": 0.0,
+  "0.5": 0.0,
+  "0.95": 0.0
+ },
+ "note": "Synthetic registries only. This tests whether the finding depends on one seed or one set of generator assumptions. It says nothing about any real entity.",
+ "profiles": {
+  "high": [
+   3.5,
+   1.5
+  ],
+  "low": [
+   1.5,
+   3.5
+  ],
+  "mid": [
+   2.2,
+   2.0
+  ]
+ },
+ "registries": 540,
+ "seeds": [
+  1,
+  60
+ ],
+ "sizes": [
+  8,
+  16,
+  32
+ ],
+ "spread": {
+  "0.05": 0.3545,
+  "0.5": 0.7998,
+  "0.95": 1.0
+ }
+}

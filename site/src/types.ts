@@ -69,5 +69,23 @@ export type Payload = {
   sources: Source[]; commitments: Commitment[]; evidence: Evidence[]; claims: Claim[];
   scores: Score[]; statuses: Status[]; synthetic: Registry; sweep: SweepRow[];
   questions: Record<string, Question[]>; coverage: Coverage[]; searches: SearchEntry[];
-  verification: Verification; build: { data_as_of: string; payload_sha256: string; schema: number };
+  analysis: Analysis; verification: Verification; build: { data_as_of: string; payload_sha256: string; schema: number };
+};
+
+export type Ci = [number, number];
+export type Analysis = {
+  robustness: {
+    registries: number; flip_rate: number; effects: Record<string, number>;
+    by_profile: Record<string, { registries: number; flip_rate: number; median_spread: number; median_core_spread: number }>;
+  };
+  calibration: {
+    bands: { max_changed: number; n: number };
+    weights: { spearman_median: number; spearman_p05: number; pass_rate: Record<string, number | null> };
+    consistency: Record<"numeric_target" | "dated_deadline", { n: number; agree: number; kappa: number | null; ci95: Ci }> & { disagreements: string[] };
+  };
+  agreement: {
+    recall: { found: number; n: number; rate: number; ci95: Ci };
+    numeric_recall: { found: number; n: number; rate: number; ci95: Ci };
+    missed: string[];
+  };
 };

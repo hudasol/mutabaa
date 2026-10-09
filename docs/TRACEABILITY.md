@@ -19,3 +19,7 @@ Format: `| claim | test file :: test name |`. `scripts/check_traceability.py` fa
 | No serious accessibility violations, EN/AR, light/dark | site/e2e/app.spec.ts :: no serious or critical axe violations |
 | The offline file opens from file:// | site/e2e/app.spec.ts :: the single-file build opens from file:// |
 | Inline script injection is blocked by the CSP | site/e2e/app.spec.ts :: CSP meta is present |
+| Robustness, calibration and agreement results equal a fresh run | tests/test_analysis.py :: test_robustness_matches_committed_file |
+| Axis definitions in the config match the code | tests/test_analysis.py :: test_axes_config_matches_code |
+| Statistics helpers are correct and deterministic | tests/test_analysis.py :: test_kappa_known_values |
+| The CSV size cap truncates and says so | site/src/engine.test.ts :: flags truncation and keeps only the cap |

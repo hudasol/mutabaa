@@ -1,7 +1,167 @@
 {
+ "analysis": {
+  "agreement": {
+   "blind_items": 46,
+   "ledger_commitments": 25,
+   "missed": [
+    "C06",
+    "C09",
+    "C16"
+   ],
+   "note": "The blind pass read the same extraction notes, so this measures consistency of reading, not faithfulness to the web pages. Precision is not reported: the blind pass counted reported achievements as commitments by design.",
+   "numeric_recall": {
+    "ci95": [
+     0.6429,
+     1.0
+    ],
+    "found": 12,
+    "n": 14,
+    "rate": 0.857
+   },
+   "recall": {
+    "ci95": [
+     0.72,
+     1.0
+    ],
+    "found": 22,
+    "n": 25,
+    "rate": 0.88
+   }
+  },
+  "calibration": {
+   "bands": {
+    "grid": 25,
+    "max_changed": 9,
+    "median_changed": 1.0,
+    "n": 25
+   },
+   "consistency": {
+    "dated_deadline": {
+     "agree": 22,
+     "ci95": [
+      0.4372,
+      1.0
+     ],
+     "kappa": 0.746,
+     "n": 25
+    },
+    "disagreements": [
+     "C01",
+     "C10",
+     "C14",
+     "C24"
+    ],
+    "numeric_target": {
+     "agree": 16,
+     "ci95": [
+      0.0,
+      1.0
+     ],
+     "kappa": 0.609,
+     "n": 18
+    }
+   },
+   "note": "Computed from the curated fields. The consistency check compares two readings that both come from the same curation, so it finds slips, not judgement errors. Human validation is still outstanding.",
+   "weights": {
+    "draws": 1000,
+    "leave_one_out": {
+     "dated_deadline": 0.914,
+     "measurement_source": 0.999,
+     "numeric_target": 0.879,
+     "owner_named": 0.946,
+     "terms_defined": 1.0,
+     "unit_defined": 0.879
+    },
+    "pass_rate": {
+     "dated_deadline": 0.36,
+     "measurement_source": 0.08,
+     "numeric_target": 0.778,
+     "owner_named": 0.72,
+     "terms_defined": 0.04,
+     "unit_defined": 0.778
+    },
+    "spearman_median": 0.936,
+    "spearman_p05": 0.521
+   }
+  },
+  "robustness": {
+   "by_profile": {
+    "high": {
+     "flip_rate": 1.0,
+     "median_core_spread": 0.7744,
+     "median_spread": 1.0,
+     "registries": 180
+    },
+    "low": {
+     "flip_rate": 0.4,
+     "median_core_spread": 0.3315,
+     "median_spread": 0.4423,
+     "registries": 180
+    },
+    "mid": {
+     "flip_rate": 1.0,
+     "median_core_spread": 0.6458,
+     "median_spread": 0.8178,
+     "registries": 180
+    }
+   },
+   "core_spread": {
+    "0.05": 0.2188,
+    "0.5": 0.625,
+    "0.95": 0.8709
+   },
+   "effects": {
+    "guardrails": 0.1955,
+    "scope": 0.0048,
+    "threshold": 0.5307,
+    "unit": 0.0593
+   },
+   "flip_rate": 0.8,
+   "max_share": {
+    "0.05": 0.3545,
+    "0.5": 0.8144,
+    "0.95": 1.0
+   },
+   "min_share": {
+    "0.05": 0.0,
+    "0.5": 0.0,
+    "0.95": 0.0
+   },
+   "note": "Synthetic registries only. This tests whether the finding depends on one seed or one set of generator assumptions. It says nothing about any real entity.",
+   "profiles": {
+    "high": [
+     3.5,
+     1.5
+    ],
+    "low": [
+     1.5,
+     3.5
+    ],
+    "mid": [
+     2.2,
+     2.0
+    ]
+   },
+   "registries": 540,
+   "seeds": [
+    1,
+    60
+   ],
+   "sizes": [
+    8,
+    16,
+    32
+   ],
+   "spread": {
+    "0.05": 0.3545,
+    "0.5": 0.7998,
+    "0.95": 1.0
+   }
+  }
+ },
  "build": {
   "data_as_of": "2026-10-10",
-  "payload_sha256": "892c925f778e72d5f5938f7277fa754892be2a80b01bba4898842ebbca155e18",
+  "payload_sha256": "aebc9057e0fca6b5b4e2815d7b580489b264795cdca67d3bd2bb086c6c8cb695",
   "schema": 2
  },
  "claims": [
