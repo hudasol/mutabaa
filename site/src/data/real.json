@@ -1115,6 +1115,45 @@
     }
    ],
    "notes": "Reported only by secondary media."
+  },
+  {
+   "id": "C25",
+   "title": "Skills training for 60% of the low-digital-skill workforce",
+   "title_ar": "تدريب 60% من القوى العاملة ذات المهارات الرقمية المحدودة",
+   "statement": "UAE National AI Strategy 2031: skills training for 60% of the workforce with low digital skills.",
+   "statement_ar": "الاستراتيجية الوطنية للذكاء الاصطناعي 2031: تدريب 60% من القوى العاملة ذات المهارات الرقمية المحدودة.",
+   "jurisdiction": "national",
+   "kind": "target",
+   "owner": null,
+   "metric": "Share of target workforce trained",
+   "unit": "employees",
+   "baseline": null,
+   "target_value": "60%",
+   "target_number": 60.0,
+   "target_comparator": ">=",
+   "deadline": "2031-12-31",
+   "deadline_text": null,
+   "deadline_precision": "year",
+   "measurement_source": null,
+   "undefined_terms": [
+    "low digital skills (how identified)",
+    "training standard"
+   ],
+   "announced": null,
+   "tags": [
+    "workforce",
+    "national"
+   ],
+   "source_ids": [
+    "S12"
+   ],
+   "anchors": [
+    {
+     "source_id": "S12",
+     "text": "skills training for 60% of the workforce with low digital skills"
+    }
+   ],
+   "notes": "Added after a blind second extraction found it and the first pass had missed it."
   }
  ],
  "evidence": [
@@ -1841,6 +1880,26 @@
     "measurement_source",
     "terms_defined"
    ]
+  },
+  {
+   "commitment_id": "C25",
+   "checks": {
+    "numeric_target": true,
+    "unit_defined": true,
+    "dated_deadline": true,
+    "owner_named": false,
+    "measurement_source": false,
+    "terms_defined": false
+   },
+   "applicable": 6,
+   "passed": 3,
+   "ratio": 0.5,
+   "band": "partly-checkable",
+   "missing": [
+    "owner_named",
+    "measurement_source",
+    "terms_defined"
+   ]
   }
  ],
  "statuses": [
@@ -2179,6 +2238,19 @@
    "excluded_evidence_ids": [
     "E08"
    ],
+   "self_reported_only": false,
+   "unit_mismatch": false,
+   "progress_ratio": null,
+   "progress_as_of": null
+  },
+  {
+   "commitment_id": "C25",
+   "status": "no-public-evidence",
+   "reasons": [
+    "no eligible public evidence"
+   ],
+   "evidence_ids": [],
+   "excluded_evidence_ids": [],
    "self_reported_only": false,
    "unit_mismatch": false,
    "progress_ratio": null,
