@@ -92,12 +92,16 @@ export type ItemsHook = {
   setCsv: (c: (CsvResult & { name: string }) | null) => void; source: "syn" | "csv"; setSource: (s: "syn" | "csv") => void;
 };
 
-export function useItems(): ItemsHook {
-  const { data } = useCtx();
+/** Holds the working data set for the whole app so an uploaded file survives page changes. */
+export function useItemsState(data: { synthetic: { items: Item[] } }): ItemsHook {
   const [csv, setCsv] = useState<(CsvResult & { name: string }) | null>(null);
   const [source, setSource] = useState<"syn" | "csv">("syn");
   const usingCsv = source === "csv" && !!csv && csv.items.length > 0;
   return { items: usingCsv ? csv.items : data.synthetic.items, kind: usingCsv ? "yours" : "synthetic", csv, setCsv, source, setSource };
+}
+
+export function useItems(): ItemsHook {
+  return useCtx().items;
 }
 
 export function CsvLoader({ h }: { h: ItemsHook }) {

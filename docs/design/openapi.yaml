@@ -1,0 +1,27 @@
+openapi: 3.0.3
+info:
+  title: Mutabaa team service (design only)
+  version: 0.0.1
+  description: Draft contract for Profile C. Not implemented.
+paths:
+  /workspaces:
+    get: { summary: List workspaces the caller can read, responses: { "200": { description: OK } } }
+    post: { summary: Create a workspace (admin), responses: { "201": { description: Created } } }
+  /workspaces/{id}/registries:
+    post:
+      summary: Upload a registry export (CSV with the documented columns)
+      parameters: [{ name: id, in: path, required: true, schema: { type: string } }]
+      responses: { "201": { description: Created, content: { application/json: { schema: { $ref: "#/components/schemas/QualityReport" } } } } }
+  /workspaces/{id}/definitions:
+    get: { summary: Saved definitions, parameters: [{ name: id, in: path, required: true, schema: { type: string } }], responses: { "200": { description: OK } } }
+    post: { summary: Save a definition (analyst), parameters: [{ name: id, in: path, required: true, schema: { type: string } }], responses: { "201": { description: Created } } }
+  /workspaces/{id}/audit:
+    get: { summary: Append-only audit log (admin), parameters: [{ name: id, in: path, required: true, schema: { type: string } }], responses: { "200": { description: OK } } }
+components:
+  schemas:
+    QualityReport:
+      type: object
+      properties:
+        rows: { type: integer }
+        accepted: { type: integer }
+        errors: { type: array, items: { type: string } }

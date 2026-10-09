@@ -222,3 +222,31 @@ export function csvCell(v: unknown): string {
   if (/^[=+\-@\t\r]/.test(s)) s = `'${s}`;
   return `"${s.replace(/"/g, '""')}"`;
 }
+
+export type PortfolioCol = { threshold: (typeof THRESHOLDS)[number]; guardrails: Definition["guardrails"] };
+export const PORTFOLIO_COLS: PortfolioCol[] = THRESHOLDS.flatMap((threshold) => GUARDRAILS.map((guardrails) => ({ threshold, guardrails })));
+export type PortfolioRow = {
+  entity: string; sector: string; items: number; shares: (number | null)[]; ranks: (number | null)[];
+  rankMin: number | null; rankMax: number | null;
+};
+
+/** Per-entity share of in-scope items that qualify, under six definitions, with the rank under each. */
+export function portfolio(items: Item[], scope: Definition["scope"]): PortfolioRow[] {
+  const by = new Map<string, Item[]>();
+  for (const it of items) if (inScope(it, scope)) by.set(it.entity_id, [...(by.get(it.entity_id) ?? []), it]);
+  const rows: PortfolioRow[] = [...by.entries()].map(([entity, list]) => ({
+    entity, sector: list[0].sector, items: list.length,
+    shares: PORTFOLIO_COLS.map((c) => list.filter((i) => qualifies(i, c.threshold, c.guardrails)).length / list.length),
+    ranks: [], rankMin: null, rankMax: null,
+  }));
+  PORTFOLIO_COLS.forEach((_, ci) => {
+    const order = [...rows].sort((a, b) => (b.shares[ci] as number) - (a.shares[ci] as number));
+    // ties share the best rank so equal shares are never ordered arbitrarily
+    for (const r of order) r.ranks[ci] = order.findIndex((o) => o.shares[ci] === r.shares[ci]) + 1;
+  });
+  for (const r of rows) {
+    const rk = r.ranks as number[];
+    r.rankMin = Math.min(...rk); r.rankMax = Math.max(...rk);
+  }
+  return rows.sort((a, b) => a.entity.localeCompare(b.entity));
+}

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { C } from "./ctx";
+import { useItemsState } from "./parts";
 import { dict, type Lang } from "./i18n";
 import { buildHash, useRoute } from "./route";
 import Brief from "./pages/Brief";
@@ -10,6 +11,7 @@ import Maturity from "./pages/Maturity";
 import Method from "./pages/Method";
 import Overview from "./pages/Overview";
 import Assurance from "./pages/Assurance";
+import Portfolio from "./pages/Portfolio";
 import Sources from "./pages/Sources";
 import raw from "./data/real.json";
 import type { Payload } from "./types";
@@ -17,7 +19,7 @@ import type { Payload } from "./types";
 const data = raw as unknown as Payload;
 const ROUTES = [
   ["overview", "nav_overview", Overview], ["ledger", "nav_ledger", Ledger], ["clocks", "nav_clocks", Clocks],
-  ["lab", "nav_lab", Lab], ["maturity", "nav_maturity", Maturity], ["sources", "nav_sources", Sources],
+  ["lab", "nav_lab", Lab], ["portfolio", "nav_portfolio", Portfolio], ["maturity", "nav_maturity", Maturity], ["sources", "nav_sources", Sources],
   ["brief", "nav_brief", Brief], ["method", "nav_method", Method], ["assurance", "nav_assurance", Assurance],
 ] as const;
 
@@ -39,7 +41,8 @@ export default function App() {
     try { localStorage.setItem("theme", theme); } catch { /* storage unavailable */ }
   }, [theme]);
   const t = dict[lang];
-  const ctx = useMemo(() => ({ lang, t, data, route, setParams }), [lang, t, route, setParams]);
+  const items = useItemsState(data);
+  const ctx = useMemo(() => ({ lang, t, data, route, setParams, items }), [lang, t, route, setParams, items]);
   const current = ROUTES.find((x) => x[0] === route.page) ?? ROUTES[0];
   const Page = current[2];
   useEffect(() => { document.title = `${t[current[1]]} · ${t.appName}`; }, [t, current]);

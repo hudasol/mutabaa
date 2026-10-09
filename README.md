@@ -40,6 +40,9 @@ Real and synthetic numbers are never combined into one figure. The Definition La
 | Web workbench: ledger, clocks, Definition Lab with CSV upload, maturity and guardrails, brief | done | `v0.5.0` to `v0.7.0` |
 | English / Arabic (RTL) | done, Arabic not yet expert-reviewed | `v0.7.0` |
 | Evaluation (blind second extraction) | done, see [`docs/EVALUATION.md`](docs/EVALUATION.md) | `v1.0.0` |
+| Live verifier, search log, offline build, security and e2e tests | done | `v1.1.0`, `v1.2.0` |
+| Robustness, calibration, agreement, Assurance page | done | `v1.3.0` |
+| Portfolio view, pilot plan, risks, sources policy, corrections, compliance mapping, roadmap | done | `v1.4.0` |
 | Human review of extraction notes | open, see [`docs/REVIEW_CHECKLIST.md`](docs/REVIEW_CHECKLIST.md) | |
 
 Tags are created locally with `scripts/tag-milestones.sh` because the build environment could not push tags.

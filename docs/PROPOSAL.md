@@ -6,10 +6,14 @@
 - A ledger of commitments, each graded for how checkable it is and traced to a source.
 - A status that is neutral by default and never moved by media-only figures.
 - A Definition Lab that shows how far one target moves under different definitions, run on the entity's own service inventory (CSV, processed in the browser).
+- A Portfolio view that compares entities under six definitions and shows how far their rank moves.
+- An Assurance page that reports how robust Mutabaa's own claims are.
 - A governance view: how many autonomous items lack oversight, an audit trail, UAE residency or a human fallback.
 - A printable brief and exports.
 
-**Pilot (suggested, 6 weeks).**
+**Pilot.** The current plan is 12 weeks with measures and stop criteria: [`docs/PILOT.md`](PILOT.md). Stages and decision points: [`docs/ROADMAP.md`](ROADMAP.md). Risks: [`docs/RISKS.md`](RISKS.md). Corrections and right of reply: [`docs/CORRECTIONS.md`](CORRECTIONS.md). The earlier 6-week sketch is kept below.
+
+**Earlier sketch (6 weeks).**
 1. Week 1: agree the definition axes and the maturity ladder with the office. Replace ours with any official classification.
 2. Weeks 2 to 3: load an internal service inventory for two entities. Run the Definition Lab on real data inside the office's environment.
 3. Weeks 4 to 5: add the entity self-assessment form and an approval workflow; connect to internal evidence sources.
