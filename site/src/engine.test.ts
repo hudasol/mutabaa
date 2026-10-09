@@ -62,3 +62,25 @@ describe("csv size cap", () => {
   });
   it("does not flag a small file", () => expect(readCsv("a,b\n1,2").truncated).toBe(false));
 });
+
+import { PORTFOLIO_COLS, portfolio } from "./engine";
+describe("portfolio", () => {
+  const mk = (e: string, m: 0 | 1 | 2 | 3 | 4, n = 4) => Array.from({ length: n }, (_, i) => ({
+    id: `${e}${i}`, entity_id: e, sector: "Health", kind: "service" as const, audience: "citizen" as const, name: "x",
+    annual_transactions: 1, maturity: m, oversight: true, audit_trail: true, uae_residency: true, fallback: i === 0,
+  }));
+  const rows = portfolio([...mk("A", 4), ...mk("B", 2)], "all-services");
+  it("has one row per entity and six columns", () => {
+    expect(rows).toHaveLength(2);
+    expect(rows[0].shares).toHaveLength(PORTFOLIO_COLS.length);
+  });
+  it("ranks the more advanced entity first at threshold 4", () => {
+    const col = PORTFOLIO_COLS.findIndex((c) => c.threshold === 4 && c.guardrails === "none");
+    expect(rows.find((r) => r.entity === "A")!.ranks[col]).toBe(1);
+    expect(rows.find((r) => r.entity === "B")!.ranks[col]).toBe(2);
+  });
+  it("shares ties rather than ordering arbitrarily", () => {
+    const tie = portfolio([...mk("A", 3), ...mk("B", 3)], "all-services");
+    expect(tie.every((r) => r.rankMin === 1 && r.rankMax === 1)).toBe(true);
+  });
+});

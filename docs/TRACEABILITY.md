@@ -23,3 +23,5 @@ Format: `| claim | test file :: test name |`. `scripts/check_traceability.py` fa
 | Axis definitions in the config match the code | tests/test_analysis.py :: test_axes_config_matches_code |
 | Statistics helpers are correct and deterministic | tests/test_analysis.py :: test_kappa_known_values |
 | The CSV size cap truncates and says so | site/src/engine.test.ts :: flags truncation and keeps only the cap |
+| Portfolio ranks entities and shares ties | site/src/engine.test.ts :: shares ties rather than ordering arbitrarily |
+| An uploaded CSV is kept across pages and shown in the portfolio | site/e2e/app.spec.ts :: an uploaded CSV is kept when moving between pages |

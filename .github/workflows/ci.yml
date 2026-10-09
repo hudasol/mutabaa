@@ -21,8 +21,10 @@ jobs:
         run: pytest
       - name: Validate data
         run: python -m pipeline validate
-      - name: Traceability
-        run: python scripts/check_traceability.py
+      - name: Traceability and risk register
+        run: |
+          python scripts/check_traceability.py
+          python scripts/check_risks.py
 
   site:
     runs-on: ubuntu-latest

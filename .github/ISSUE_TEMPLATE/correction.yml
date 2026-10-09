@@ -1,0 +1,21 @@
+name: Correction or right of reply
+description: Something in Mutabaa is wrong, out of date, or should be removed.
+labels: [correction]
+body:
+  - type: input
+    id: ref
+    attributes: { label: "Commitment or source ID (for example C12 or S03)" }
+    validations: { required: true }
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of request is this?
+      options: [Wrong figure or date, Wrong owner or entity, Missing official evidence, Wording or interpretation, Remove a source or note]
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes: { label: "What is wrong, and what should it say?" }
+    validations: { required: true }
+  - type: input
+    id: link
+    attributes: { label: "Public link that shows it" }

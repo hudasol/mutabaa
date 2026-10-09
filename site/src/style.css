@@ -212,3 +212,12 @@ blockquote { margin: 0; padding-inline-start: .8rem; border-inline-start: 3px so
 .clocks { list-style: none; margin: 0; padding: 0; }
 .bar .fill.syn { background: var(--synthetic); }
 .panel h3 { margin-top: .4rem; }
+.heat th, .heat td { white-space: nowrap; }
+.heat td.cell { text-align: center; font-variant-numeric: tabular-nums; }
+.heat tbody th { font-weight: 500; text-align: start; }
+.heat td .muted { color: inherit; }
+.panel > .seg { justify-self: start; }
+.heat { font-size: .86rem; }
+.heat th, .heat td { padding: .5rem .5rem; }
+.heat tbody th { position: sticky; inset-inline-start: 0; background: var(--panel); z-index: 1; }
+@media (max-width: 700px) { .heat .ename { display: none; } }

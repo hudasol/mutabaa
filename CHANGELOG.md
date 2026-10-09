@@ -2,6 +2,11 @@
 
 Milestones are listed with their intended tag. Tag pushes were blocked by the build environment's git policy, so tags are created locally with `scripts/tag-milestones.sh` (it maps each tag to its commit SHA).
 
+## v1.4.0: ATRC review round
+- Portfolio page: per-entity share under six definitions, rank under each and rank range
+- Uploaded CSV now kept across pages
+- Pilot plan, risk register (checked by script), sources policy, corrections process with issue template, compliance mapping, roadmap with decision points, team-service design (not built), CONTRIBUTING and PR template
+
 ## v1.3.0: TII review round
 - `python -m pipeline analyse`: 540-registry robustness study, score calibration (band cut-offs, random weights, leave-one-out), agreement with the blind second pass (bootstrap intervals), consistency check of fields against wording
 - New Assurance page (EN/AR); home page now states that the verdict flip depends on adoption level

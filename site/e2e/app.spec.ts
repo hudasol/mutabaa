@@ -3,7 +3,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { pathToFileURL } from "node:url";
 import path from "node:path";
 
-const PAGES = ["overview", "ledger", "clocks", "lab", "maturity", "sources", "brief", "method", "assurance"];
+const PAGES = ["overview", "ledger", "clocks", "lab", "maturity", "sources", "brief", "method", "assurance", "portfolio"];
 
 async function open(page: Page, hash: string, opts: { lang?: "en" | "ar"; theme?: "light" | "dark" } = {}) {
   await page.addInitScript(([l, t]) => {
@@ -83,4 +83,18 @@ test("[offline] the single-file build opens from file:// and renders the headlin
   await page.getByRole("link", { name: "Ledger" }).first().click();
   await expect(page.locator("table.ledger")).toBeVisible();
   expect(errors).toEqual([]);
+});
+
+test("[workflow] an uploaded CSV is kept when moving between pages and shown in the portfolio", async ({ page }) => {
+  await page.goto("/#/lab");
+  await page.getByRole("button", { name: "My CSV" }).first().click();
+  const csv = "id,entity,sector,kind,audience,annual_transactions,maturity,oversight,audit_trail,uae_residency,fallback\n" +
+    "a1,Alpha,Health,service,citizen,100,4,true,true,true,true\n" +
+    "a2,Alpha,Health,service,citizen,100,2,true,true,true,true\n" +
+    "b1,Beta,Health,service,citizen,100,3,true,true,true,true\n";
+  await page.locator('input[type="file"]').setInputFiles({ name: "mine.csv", mimeType: "text/csv", buffer: Buffer.from(csv) });
+  await expect(page.locator(".banner.yours")).toBeVisible();
+  await page.getByRole("link", { name: "Portfolio" }).first().click();
+  await expect(page.locator(".banner.yours")).toBeVisible();
+  await expect(page.locator("table.heat tbody tr")).toHaveCount(2);
 });

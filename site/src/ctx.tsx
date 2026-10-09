@@ -1,10 +1,11 @@
 import { createContext, useContext } from "react";
 import type { Dict, Lang } from "./i18n";
 import type { Route } from "./route";
+import type { ItemsHook } from "./parts";
 import type { Payload } from "./types";
 
 export type Ctx = {
-  lang: Lang; t: Dict; data: Payload; route: Route;
+  lang: Lang; t: Dict; data: Payload; route: Route; items: ItemsHook;
   setParams: (u: Record<string, string | undefined>) => void;
 };
 export const C = createContext<Ctx>(null as unknown as Ctx);
