@@ -2,6 +2,11 @@
 
 Milestones are listed with their intended tag. Tag pushes were blocked by the build environment's git policy, so tags are created locally with `scripts/tag-milestones.sh` (it maps each tag to its commit SHA).
 
+## v0.7.0: workbench complete
+- Pages: overview, ledger with evidence detail, clocks, Definition Lab (with client-side CSV upload), maturity and guardrails, printable brief, method
+- English and Arabic (right-to-left); synthetic and user-file data carry persistent banners
+- CSV and JSON export of the ledger; vitest parity test against the Python golden file; CI site job
+
 ## v0.4.0: synthetic registry and sensitivity engine
 - Seeded generator for a labelled synthetic registry (16 entities, ~570 items); `is_synthetic` is enforced by the schema
 - 72-definition sensitivity sweep (unit x scope x threshold x guardrails) with a golden file for the TypeScript engine
