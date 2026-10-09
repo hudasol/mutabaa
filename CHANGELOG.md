@@ -2,6 +2,10 @@
 
 Milestones are listed with their intended tag. Tag pushes were blocked by the build environment's git policy, so tags are created locally with `scripts/tag-milestones.sh` (it maps each tag to its commit SHA).
 
+## v1.0.0: evaluation and documentation
+- Blind second extraction (`docs/EVALUATION.md`): found one target the first pass missed (C25), added
+- METHODOLOGY, REVIEW_CHECKLIST, PROPOSAL; README run instructions and status
+
 ## v0.7.0: workbench complete
 - Pages: overview, ledger with evidence detail, clocks, Definition Lab (with client-side CSV upload), maturity and guardrails, printable brief, method
 - English and Arabic (right-to-left); synthetic and user-file data carry persistent banners

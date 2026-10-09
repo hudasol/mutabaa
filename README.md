@@ -16,7 +16,7 @@ Mutabaa makes these targets **checkable**:
 
 Built from the point of view of an analyst in a government supervisory office, such as the Abu Dhabi Executive Office, whose job is to monitor implementation of strategic plans.
 
-> **Status:** in active development. See [`plan.md`](plan.md) for the full plan and milestone tags, and the table below for what exists today.
+> **Status:** working prototype. Read [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md) first. See [`plan.md`](plan.md) for the plan and [`docs/PROPOSAL.md`](docs/PROPOSAL.md) for the pilot path.
 
 ## Data: what is real, what is synthetic
 
@@ -30,26 +30,40 @@ Real and synthetic numbers are never combined into one figure. The Definition La
 
 ## Project status
 
-| Component | Status |
-|---|---|
-| Plan, README, license | ✅ |
-| Schemas, tooling, CI | planned `v0.1.0` |
-| Real ledger + validation | planned `v0.2.0` |
-| Scoring + status engine | planned `v0.3.0` |
-| Synthetic registry + sensitivity engine | planned `v0.4.0` |
-| Site: overview, ledger, clocks | planned `v0.5.0` |
-| Definition Lab, CSV upload, self-assessment | planned `v0.6.0` |
-| Arabic / RTL, governance flags, brief | planned `v0.7.0` |
-| Deploy + evaluation report | planned `v1.0.0` |
+| Component | Status | Tag |
+|---|---|---|
+| Plan, README, license | done | `v0.0.1-plan` |
+| Schemas, tooling, CI | done | `v0.1.0` |
+| Real ledger (12 sources, 25 commitments, evidence, claims) + validation | done | `v0.2.0` |
+| Scoring and status engines | done | `v0.3.0` |
+| Synthetic registry + 72-definition sensitivity engine | done | `v0.4.0` |
+| Web workbench: ledger, clocks, Definition Lab with CSV upload, maturity and guardrails, brief | done | `v0.5.0` to `v0.7.0` |
+| English / Arabic (RTL) | done, Arabic not yet expert-reviewed | `v0.7.0` |
+| Evaluation (blind second extraction) | done, see [`docs/EVALUATION.md`](docs/EVALUATION.md) | `v1.0.0` |
+| Human review of extraction notes | open, see [`docs/REVIEW_CHECKLIST.md`](docs/REVIEW_CHECKLIST.md) | |
 
-## Repository layout (target)
+Tags are created locally with `scripts/tag-milestones.sh` because the build environment could not push tags.
+
+## Run it
+
+```bash
+pip install -e ".[dev]"
+python -m pipeline validate      # integrity checks on the real data
+python -m pipeline build         # regenerate site/src/data/real.json
+pytest && ruff check .
+
+cd site && npm install && npm test && npm run dev
+```
+
+## Repository layout
 
 ```
-data/        real/ · synthetic/ · golden/ · gold/
-pipeline/    Python reference implementation (schemas, validate, score, status, synth, sensitivity)
-site/        Vite + React + TypeScript, English and Arabic (RTL)
-docs/        METHODOLOGY · DATASHEET · RUBRIC · LIMITATIONS · REVIEW_CHECKLIST
-tests/       pytest (Python) and vitest (TypeScript), with Python↔TypeScript parity on a golden file
+data/real/        sources, commitments, evidence, claims, extraction notes (hashed)
+data/synthetic/   labelled synthetic registry + DATASHEET.md
+data/golden/      72-definition results that the Python and TypeScript engines must both match
+pipeline/         Python reference: schemas, validate, score, status, synth, sensitivity
+site/             Vite + React + TypeScript app (English / Arabic)
+docs/             METHODOLOGY, EVALUATION, LIMITATIONS, REVIEW_CHECKLIST, PROPOSAL
 ```
 
 ## Principles

@@ -771,5 +771,39 @@
       "output list published?"
     ],
     "notes": "Reported only by secondary media."
+  },
+  {
+    "id": "C25",
+    "title": "Skills training for 60% of the low-digital-skill workforce",
+    "title_ar": "تدريب 60% من القوى العاملة ذات المهارات الرقمية المحدودة",
+    "statement": "UAE National AI Strategy 2031: skills training for 60% of the workforce with low digital skills.",
+    "statement_ar": "الاستراتيجية الوطنية للذكاء الاصطناعي 2031: تدريب 60% من القوى العاملة ذات المهارات الرقمية المحدودة.",
+    "jurisdiction": "national",
+    "kind": "target",
+    "tags": [
+      "workforce",
+      "national"
+    ],
+    "source_ids": [
+      "S12"
+    ],
+    "anchors": [
+      {
+        "source_id": "S12",
+        "text": "skills training for 60% of the workforce with low digital skills"
+      }
+    ],
+    "metric": "Share of target workforce trained",
+    "unit": "employees",
+    "target_value": "60%",
+    "target_number": 60,
+    "target_comparator": ">=",
+    "deadline": "2031-12-31",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "low digital skills (how identified)",
+      "training standard"
+    ],
+    "notes": "Added after a blind second extraction found it and the first pass had missed it."
   }
 ]
