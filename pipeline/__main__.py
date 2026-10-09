@@ -1,4 +1,4 @@
-"""CLI: python -m pipeline validate | rehash | build"""
+"""CLI: python -m pipeline validate | rehash | synth | build"""
 
 from __future__ import annotations
 
@@ -7,7 +7,9 @@ import sys
 
 from .io import REAL, ROOT, load_real
 from .score import score
+from .sensitivity import summary, sweep
 from .status import status
+from .synth import generate
 from .validate import file_hash, validate
 
 
@@ -28,6 +30,24 @@ def cmd_rehash() -> int:
         r["content_hash"] = file_hash(r["extract_file"])
     p.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"rehashed {len(rows)} sources")
+    return 0
+
+
+SYNTH = ROOT / "data" / "synthetic"
+GOLDEN = ROOT / "data" / "golden"
+
+
+def cmd_synth() -> int:
+    """Regenerate the synthetic registry and the golden sensitivity file."""
+    reg = generate()
+    SYNTH.mkdir(parents=True, exist_ok=True)
+    GOLDEN.mkdir(parents=True, exist_ok=True)
+    (SYNTH / "registry.json").write_text(
+        json.dumps(reg.model_dump(mode="json"), indent=1) + "\n", encoding="utf-8"
+    )
+    rows = sweep(reg)
+    (GOLDEN / "sensitivity.json").write_text(json.dumps(rows, indent=1) + "\n", encoding="utf-8")
+    print(f"registry: {len(reg.entities)} entities, {len(reg.items)} items; {summary(rows)}")
     return 0
 
 
@@ -52,6 +72,8 @@ def cmd_build() -> int:
         "claims": [k.model_dump(mode="json") for k in d.claims],
         "scores": [s.model_dump(mode="json") for s in scores],
         "statuses": [s.model_dump(mode="json") for s in statuses],
+        "synthetic": json.loads((SYNTH / "registry.json").read_text(encoding="utf-8")),
+        "sweep": json.loads((GOLDEN / "sensitivity.json").read_text(encoding="utf-8")),
     }
     (out / "real.json").write_text(
         json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"
@@ -61,7 +83,7 @@ def cmd_build() -> int:
 
 
 def main(argv: list[str]) -> int:
-    cmds = {"validate": cmd_validate, "rehash": cmd_rehash, "build": cmd_build}
+    cmds = {"validate": cmd_validate, "rehash": cmd_rehash, "synth": cmd_synth, "build": cmd_build}
     if len(argv) != 2 or argv[1] not in cmds:
         print(__doc__)
         return 2
