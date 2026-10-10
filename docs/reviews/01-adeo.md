@@ -1,6 +1,6 @@
 # Review 1: an AI engineer at an executive office (ADEO lens)
 
-This is a simulated critique from the point of view of an analyst-engineer whose job is to brief leadership on whether strategic plans are being implemented. It is written from public information about such an office, not from inside knowledge. Reviewed: v1.0.0, https://mutabaa-dusky.vercel.app/
+This is a simulated critique from the point of view of an analyst-engineer whose job is to brief leadership on whether strategic plans are being implemented. It is written from public information about such an office, not from inside knowledge. Reviewed: v1.0.0, https://mutabaa-adeoi.vercel.app/
 
 ## What I would say in the first five minutes
 "Interesting idea, and the neutral default is right. But I cannot put this in front of my supervisor yet. I can't tell if the numbers are correct, I can't tell how fresh anything is, and the first thing the home page shows me is a chart of fake data."
