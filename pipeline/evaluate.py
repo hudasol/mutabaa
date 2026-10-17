@@ -229,6 +229,18 @@ def _resample(groups, rng: random.Random):
     return {e: [g[rng.randrange(len(g))] for _ in g] for e, g in groups.items()}
 
 
+def portfolio_table(reg: Registry) -> list[dict]:
+    """Per entity: share and rank under each portfolio definition, as portfolio() in engine.ts."""
+    groups = _by_entity(reg.items)
+    shares = [_shares(groups, t, g) for t, g in PORTFOLIO_COLS]
+    ranks = [competition_ranks(s) for s in shares]
+    return [
+        {"entity": e, "items": len(groups[e]),
+         "shares": [s[e] for s in shares], "ranks": [r[e] for r in ranks]}
+        for e in sorted(groups)
+    ]
+
+
 def rank_noise(reg: Registry, reps: int = 200, seed: int = 11, base_seed: int = 12) -> dict:
     groups = _by_entity(reg.items)
     ranks_by_def = [competition_ranks(_shares(groups, t, g)) for t, g in PORTFOLIO_COLS]

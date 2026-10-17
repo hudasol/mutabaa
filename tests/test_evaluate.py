@@ -74,3 +74,16 @@ def test_slow_results_are_present_and_complete(name):
     assert stored["predictions"] and all(
         v["result"] in ("HIT", "MISS") for v in stored["predictions"].values()
     )
+
+
+def test_coverage_simulation_runs_small_and_is_deterministic():
+    a = ev.coverage(0.88, seeds=range(1, 3), runs=10)
+    assert a == ev.coverage(0.88, seeds=range(1, 3), runs=10)
+    assert 0 <= a["bootstrap"]["coverage"] <= 1 and 0 <= a["wilson"]["coverage"] <= 1
+
+
+def test_generator_study_runs_small(monkeypatch):
+    monkeypatch.setattr(ev, "SIZES", (8,))
+    out = ev._study(lambda prof, n, seed: ev.generate_b(seed=seed % 3 + 1, n_entities=n, profile=prof))
+    assert out["registries"] == 3 * 60 and set(out["by_profile"]) == {"low", "mid", "high"}
+    assert abs(sum(out["effects"].values())) <= 1.0 + 1e-9

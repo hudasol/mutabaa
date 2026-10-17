@@ -84,3 +84,12 @@ describe("portfolio", () => {
     expect(tie.every((r) => r.rankMin === 1 && r.rankMax === 1)).toBe(true);
   });
 });
+
+import goldenPortfolio from "../../data/golden/portfolio.json";
+
+describe("portfolio parity with pipeline/evaluate.py", () => {
+  it("gives the same shares and ranks as Python on the committed registry", () => {
+    const rows = portfolio(registry.items, "all-services").map((r) => ({ entity: r.entity, items: r.items, shares: r.shares, ranks: r.ranks }));
+    expect(rows).toEqual(goldenPortfolio);
+  });
+});
