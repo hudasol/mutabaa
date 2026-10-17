@@ -8,7 +8,7 @@ const pick = <T,>(v: string | undefined, allowed: readonly T[], fallback: T): T 
   (allowed.find((a) => String(a) === v) as T | undefined) ?? fallback;
 
 export default function Lab() {
-  const { t, lang, route, setParams } = useCtx();
+  const { t, route, setParams } = useCtx();
   const h = useItems();
   const p = route.params;
   const d: Definition = {
@@ -63,7 +63,7 @@ export default function Lab() {
             ...marg("unit", UNITS).map((m) => ({ k: "u" + m.v, label: unitName(m.v as string), avg: m.avg })),
             ...marg("scope", SCOPES).map((m) => ({ k: "s" + m.v, label: scopeName(m.v as Definition["scope"]), avg: m.avg })),
             ...marg("threshold", THRESHOLDS).map((m) => ({ k: "t" + m.v, label: `${t.lb_threshold} L${m.v}`, avg: m.avg })),
-            ...marg("guardrails", GUARDRAILS).map((m) => ({ k: "g" + m.v, label: `${t.lb_guard}: ${m.v === "none" ? t.g_none : lang === "ar" ? "مطلوبة" : "required"}`, avg: m.avg })),
+            ...marg("guardrails", GUARDRAILS).map((m) => ({ k: "g" + m.v, label: `${t.lb_guard}: ${m.v === "none" ? t.g_none : t.g_required}`, avg: m.avg })),
           ].map((b) => (
             <div className="bar" key={b.k}><span>{b.label}</span>
               <span className="track"><span className={`fill${h.kind === "synthetic" ? " syn" : ""}`} style={{ width: `${b.avg * 100}%` }} /></span>
