@@ -57,7 +57,7 @@ def visible_text(markup: str) -> str:
     return " ".join(p.parts)
 
 
-_DASH = str.maketrans({"‐": "-", "‑": "-", "‒": "-", "–": "-", "—": "-", "’": "'", "‘": "'", " ": " "})
+_DASH = str.maketrans({"‐": "-", "‑": "-", "‒": "-", "–": "-", "\u2014": "-", "’": "'", "‘": "'", " ": " "})
 
 
 def norm(s: str) -> str:

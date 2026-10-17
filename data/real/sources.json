@@ -9,7 +9,7 @@
     "published_note": null,
     "retrieved": "2026-10-09",
     "extract_file": "data/real/extracts/S01.md",
-    "content_hash": "f40605422330eaa9c6aa54c90f6be037b2f0219353d0a4cde50113d3bd86d6f3",
+    "content_hash": "0487f04d023423e39f43640eb00604be3f5a20db9337ecb2818d794d41a3b16f",
     "ai_assisted": false,
     "notes": "",
     "expect_present": [
@@ -36,7 +36,7 @@
     "published_note": null,
     "retrieved": "2026-10-09",
     "extract_file": "data/real/extracts/S02.md",
-    "content_hash": "3709c5854a86c60114ca55097fb622bd8467284f883d07873154a5eadae87f4d",
+    "content_hash": "1ef94d164e26b9ee4b102c8c3fdf27aab7aa61e95b4b8d282dd72534bf13103c",
     "ai_assisted": false,
     "notes": "",
     "expect_present": [
@@ -60,7 +60,7 @@
     "published_note": "No publication date on page; milestones stated as of 30 September 2025.",
     "retrieved": "2026-10-09",
     "extract_file": "data/real/extracts/S03.md",
-    "content_hash": "fab34af4aba095dd724d505ed645ddd58e40ccd4fbba5fe802d11e5f5e0bcb8a",
+    "content_hash": "ed440916ac3bf8be625b4e8014fd4f2e223071665b94e9251b05913394b493d7",
     "ai_assisted": false,
     "notes": "",
     "expect_present": [
@@ -85,7 +85,7 @@
     "published_note": null,
     "retrieved": "2026-10-09",
     "extract_file": "data/real/extracts/S04.md",
-    "content_hash": "2ef0196148bc568ef3abe943cb3ff7d1d1d0b2b49005244cf1706233a1ce81fe",
+    "content_hash": "ee49672d0c89a0a4155f5952b77ee217e1531f7998397ded37c8ff317aeba683",
     "ai_assisted": false,
     "notes": "",
     "expect_present": [
@@ -112,7 +112,7 @@
     "published_note": null,
     "retrieved": "2026-10-09",
     "extract_file": "data/real/extracts/S05.md",
-    "content_hash": "3ed8a8cc5eb25f1ceab38bfee30e6f92b3d17e6e1817b0174020fc33ab1fc241",
+    "content_hash": "a5dd5bbedaad8c2b3bc7d4f07ea84483ae944955ab7ccfb744d4a25aad169a51",
     "ai_assisted": false,
     "notes": "",
     "expect_present": [
@@ -138,7 +138,7 @@
     "published_note": "Date is the article's last-updated stamp.",
     "retrieved": "2026-10-09",
     "extract_file": "data/real/extracts/S06.md",
-    "content_hash": "18f5b5f20647388a95f61f7e6914784940b7db713d138c019a12b20640a962fa",
+    "content_hash": "2edbadd93b7476f110b3585c4bf55f5ac0957ded103fccebb59ff5c5b549c9ec",
     "ai_assisted": false,
     "notes": "",
     "expect_present": [
@@ -161,7 +161,7 @@
     "published_note": "Date shown on the page, found in the second verification pass on 2026-10-10.",
     "retrieved": "2026-10-09",
     "extract_file": "data/real/extracts/S07.md",
-    "content_hash": "d4698665eece47c0b5db7a29020685b47d0564da5c8e16b7dcc4dcc7026ce5eb",
+    "content_hash": "14f5cbe785b785678b7f1da657d825f395136788384de76369f50a3f86b3c6e4",
     "ai_assisted": false,
     "notes": "",
     "expect_present": [
@@ -182,7 +182,7 @@
     "published_note": null,
     "retrieved": "2026-10-09",
     "extract_file": "data/real/extracts/S08.md",
-    "content_hash": "c8faa8843c52ca4e3890da1afc41969544ca87785c73378f2df7c8342aeec9de",
+    "content_hash": "1ef8780472a7dc49113a1eb598fe32c5a63d4257967f2e07fc9a0b3be57ab67f",
     "ai_assisted": false,
     "notes": "",
     "expect_present": [
@@ -204,7 +204,7 @@
     "published_note": "Byline date shown on the page, found in the second verification pass. States it was written with AI assistance.",
     "retrieved": "2026-10-09",
     "extract_file": "data/real/extracts/S09.md",
-    "content_hash": "332e30e707a2267033098c845d41b74b94db9faa002cf90fb32a62f6636de2fe",
+    "content_hash": "79aea63c0493dca0c317c82760e270332708570d908041387bc2dc5cc850775f",
     "ai_assisted": true,
     "notes": "",
     "expect_present": [
@@ -226,7 +226,7 @@
     "published_note": null,
     "retrieved": "2026-10-09",
     "extract_file": "data/real/extracts/S10.md",
-    "content_hash": "b6a7be317339077d736b74955e5102ff5e8ba7bf06d84fef0f176470b4c73667",
+    "content_hash": "fb1ca1e50fc8cc1abe2a74b341300c8cf7d47f36782723f1cf4d165cfd39b219",
     "ai_assisted": false,
     "notes": "",
     "expect_present": [
@@ -245,7 +245,7 @@
     "published_note": "Date is the vision's launch date, not a page date.",
     "retrieved": "2026-10-09",
     "extract_file": "data/real/extracts/S11.md",
-    "content_hash": "5df136208a9a44dd4ee145d3c92c5a76c821a477b54440a80c35473f4860f631",
+    "content_hash": "3e4f6f295663e5fd3d40b141ccd82ba3c67c46677f61ce3f9f5793608bb3db98",
     "ai_assisted": false,
     "notes": "",
     "expect_present": [
@@ -266,7 +266,7 @@
     "published_note": "No publication date on page.",
     "retrieved": "2026-10-09",
     "extract_file": "data/real/extracts/S12.md",
-    "content_hash": "513d5121176bfe64c60579fc20644bc40d753e76ee3e23cab6d1b78263467677",
+    "content_hash": "59e73ed6039c7f72417980fa2614a1392c6f0407ed6177346a27da8c19c2b2f8",
     "ai_assisted": false,
     "notes": "",
     "expect_present": [
@@ -286,7 +286,7 @@
     "published_note": null,
     "retrieved": "2026-10-10",
     "extract_file": "data/real/extracts/S13.md",
-    "content_hash": "84bf46334e32fe0de1e35955a141f0621e081f6d85b6d5d193fd5f86e47e4a2b",
+    "content_hash": "87645eb1672ecf32050a7b8409da11bd555763dcdf030ab43b21bbc5dafb8aa0",
     "ai_assisted": false,
     "notes": "",
     "expect_present": [
@@ -309,7 +309,7 @@
     "published_note": null,
     "retrieved": "2026-10-10",
     "extract_file": "data/real/extracts/S14.md",
-    "content_hash": "533b721f29b46a081997d688925de9cb1d285591354b44430efcca949594f025",
+    "content_hash": "bab715a2502a1f4bda222865f6bbb1d39a406f53427318267c2fa4079f7e63e1",
     "ai_assisted": false,
     "notes": "",
     "expect_present": [
