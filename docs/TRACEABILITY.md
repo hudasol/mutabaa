@@ -25,3 +25,7 @@ Format: `| claim | test file :: test name |`. `scripts/check_traceability.py` fa
 | The CSV size cap truncates and says so | site/src/engine.test.ts :: flags truncation and keeps only the cap |
 | Portfolio ranks entities and shares ties | site/src/engine.test.ts :: shares ties rather than ordering arbitrarily |
 | An uploaded CSV is kept across pages and shown in the portfolio | site/e2e/app.spec.ts :: an uploaded CSV is kept when moving between pages |
+| Numbers in documents equal the files the code produces | tests/test_docs_agree.py :: test_marked_numbers_match_facts |
+| The facts file equals a fresh computation | tests/test_docs_agree.py :: test_facts_file_is_up_to_date |
+| Prose follows the public voice rules | tests/test_voice.py :: test_prose_follows_voice_rules |
+| The exploratory analyses are labelled as not preregistered (EN/AR) | site/e2e/app.spec.ts :: the assurance page labels its analyses as exploratory |
