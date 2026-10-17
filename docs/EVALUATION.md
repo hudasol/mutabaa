@@ -36,7 +36,7 @@ Moving the band cut offs by up to 10 points changes the band of at most <!-- fac
 
 ## Part 2. Preregistered experiments
 
-The design, metrics, baselines, seeds and predictions were committed in `PREREGISTRATION.md` before any experiment code existed; git history shows that commit before the one that adds `pipeline/evaluate.py` and `results/`. `python -m pipeline evaluate` reruns everything and writes `results/e1.json` to `results/e4.json`. The method, generator A, the specification of generator B and the real ledger share one author.
+The design, metrics, baselines, seeds and predictions were committed in `PREREGISTRATION.md` before any experiment code was committed; git history shows that commit before the ones that add `pipeline/evaluate.py` and `results/`. The code and the results were committed together, so git cannot show the order of writing and running; amendment 3 in `PREREGISTRATION.md` says what can be shown. `python -m pipeline evaluate` reruns everything and writes `results/e1.json` to `results/e4.json`. The method, generator A, the specification of generator B and the real ledger share one author.
 
 ### Predictions and results
 
@@ -75,11 +75,12 @@ With 25 binary items and 2000 runs per rate, nominal 95% intervals covered the t
 
 ### The misses, explained
 
-- **P4a and P4b.** We expected the percentile bootstrap to fall short of 95% at moderate rates. It did not: at 0.70 and 0.88 it covered at or slightly above the nominal level. Our expectation came from the general result that percentile intervals under cover in small samples; with 25 binary items the bootstrap distribution is lumpy (steps of 1/25) and the interval ends include whole steps, which adds coverage. The failure is concentrated where we also predicted it, near the top of the range, where a run with all successes gives an interval of zero width. The prediction was wrong at moderate rates and is kept as a miss.
+- **P4a and P4b.** We expected the percentile bootstrap to fall short of 95% at moderate rates. It did not: at 0.70 and 0.88 it covered at or slightly above the nominal level. Our expectation came from the general result that percentile intervals under cover in small samples. A likely explanation, which we have not tested, is that with 25 binary items the bootstrap distribution moves in steps of 1/25 and the interval ends include whole steps, which adds coverage. The failure is concentrated where we also predicted it, near the top of the range, where a run with all successes gives an interval of zero width. The prediction was wrong at moderate rates and is kept as a miss.
 
 ### Limitations of Part 2
 
 - E1 has 25 commitments and only a handful of positives. Its interval is wide and the outcome (public official evidence) is itself curated by the author who curated the fields the score reads.
+- E2 and E4 were not blind: generator A's flip rates and the Assurance page bootstrap intervals existed before the predictions were written. E1 is the only experiment whose outcome had not been computed before.
 - E2 and E3 use synthetic registries from generators written by the author of the method. They show that the findings do not depend on one set of generator assumptions; they say nothing about any real entity or real registry.
 - E3 measures noise by resampling items within an entity, which assumes the items are a sample from a larger population of similar items. If an office's registry is complete, a rank change has no sampling noise, but it still has measurement noise in the maturity ratings, which this experiment does not model.
 - E4 simulates independent binary items with a fixed rate. Real agreement items are not exchangeable, so real coverage may differ.
