@@ -14,7 +14,7 @@ Public AI transformation targets in the UAE set percentages and deadlines that l
 - **Status with a neutral default.** Written rules applied to graded public evidence. "No public evidence" never means "not done", and media only evidence never moves a status.
 - **Definition Lab and Portfolio.** Recompute a headline "% agentic" under every definition on a labelled synthetic registry or on your own file, and see how much entity rankings move.
 - **My commitments.** Load an office's own commitments (CSV or JSON). Each is scored with the same checks and gets questions in English and Arabic. The file stays in the browser.
-- **Assurance and evaluation.** Exploratory analyses on the Assurance page, and preregistered experiments in [`docs/EVALUATION.md`](docs/EVALUATION.md): <!-- fact:evaluation.hits -->12<!-- /fact --> of <!-- fact:evaluation.predictions -->14<!-- /fact --> predictions hit, <!-- fact:evaluation.misses -->2<!-- /fact --> missed, and the misses are reported.
+- **Assurance and evaluation.** Exploratory analyses on the Assurance page, and preregistered experiments in [`docs/EVALUATION.md`](docs/EVALUATION.md): <!-- fact:evaluation.hits -->12<!-- /fact --> of <!-- fact:evaluation.predictions -->14<!-- /fact --> predictions hit (one experiment on the real ledger, three on synthetic or simulated data), <!-- fact:evaluation.misses -->2<!-- /fact --> missed, and the misses are reported.
 
 The real ledger holds <!-- fact:commitments.count -->25<!-- /fact --> commitments from <!-- fact:sources.count -->14<!-- /fact --> public sources (<!-- fact:sources.official -->10<!-- /fact --> official, <!-- fact:sources.media -->4<!-- /fact --> secondary media), <!-- fact:evidence.count -->10<!-- /fact --> evidence items and <!-- fact:claims.count -->5<!-- /fact --> media claims held apart from status. <!-- fact:sources.verified -->11<!-- /fact --> sources were verified against the live page; <!-- fact:sources.unreachable -->3<!-- /fact --> could not be reached and are reported as unreachable.
 
@@ -22,12 +22,12 @@ The real ledger holds <!-- fact:commitments.count -->25<!-- /fact --> commitment
 
 - Not a measurement of any real entity. The registry used by the Definition Lab and the Portfolio is **synthetic** and labelled on every screen.
 - Not an assessment of government performance. A status describes public evidence, not delivery.
-- Not endorsed by, produced with, or affiliated with any entity. Real entities are named only in [`docs/CONTEXT.md`](docs/CONTEXT.md).
+- Not endorsed by, produced with, or affiliated with any entity. In prose, real entities are named only in [`docs/CONTEXT.md`](docs/CONTEXT.md); the data files quote their sources as published.
 - Not an official standard. The maturity ladder and the checks are proposals.
 
 ## Run it
 
-Needs Python 3.11 or newer and Node 22 or newer. From a fresh clone:
+Needs Python 3.12 or newer and Node 22 or newer. From a fresh clone:
 
 ```bash
 python -m pip install -e ".[dev]"
@@ -35,7 +35,7 @@ python -m pipeline validate && python -m pytest --cov=pipeline
 cd site && npm ci && npm test && npm run build
 ```
 
-Then `npm run dev` inside `site/` serves the app locally. `make reproduce` runs the full check, including the browser tests and a rerun of the preregistered evaluation.
+Then `npm run dev` inside `site/` serves the app locally. `make reproduce` runs the full check, including a rerun of the preregistered evaluation and the browser tests.
 
 ## How it fits together
 
@@ -55,7 +55,7 @@ flowchart LR
   USER[Your file, in the browser only] --> APP
 ```
 
-Python is the reference implementation. The browser mirrors only the sweep, the portfolio ranking, the score and the questions, and golden files keep both identical. See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+Python is the reference implementation. The browser mirrors only the sweep, the portfolio ranking, the score and the questions, and golden files in `data/golden/` keep each of them identical to Python. See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
 ## Data: what is real, what is synthetic
 

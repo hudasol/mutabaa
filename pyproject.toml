@@ -3,7 +3,7 @@ name = "mutabaa"
 version = "1.5.0"
 description = "Verifiability workbench for UAE AI transformation targets"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 license = { text = "MIT" }
 authors = [{ name = "Huda Mueen" }]
 dependencies = ["pydantic>=2.6"]
@@ -29,7 +29,7 @@ show_missing = true
 
 [tool.ruff]
 line-length = 110
-target-version = "py311"
+target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "SIM"]

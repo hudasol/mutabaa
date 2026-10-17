@@ -107,7 +107,7 @@ mutabaa/
 │  ├─ synthetic/    registry.json  (is_synthetic: true)
 │  ├─ golden/       sensitivity.json  (Python and TypeScript parity)
 │  └─ gold/         hand-checked commitments for evaluation
-├─ pipeline/        Python 3.11+: schemas, validate, score, status, synth, sensitivity, build
+├─ pipeline/        Python 3.12+: schemas, validate, score, status, synth, sensitivity, build
 ├─ tests/           pytest
 ├─ site/            Vite + React + TypeScript; EN/AR (RTL); engine mirrored in TS
 └─ docs/            METHODOLOGY, DATA_STATEMENT, LIMITATIONS, REVIEW_CHECKLIST, adr/
