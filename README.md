@@ -1,84 +1,113 @@
 # Mutabaa · متابعة
 
-**A verifiability workbench for UAE government AI transformation targets.**
+**A verifiability workbench for UAE and Abu Dhabi AI transformation targets.** A student prototype and a proposal seed, not a deployment and not an official tool.
 
-*Mutabaa* (متابعة) is Arabic for "follow-up" or "monitoring".
+*Mutabaa* (متابعة) is Arabic for "follow up" or "monitoring".
 
-The UAE has committed to moving 50% of federal government sectors, services and operations to agentic AI within two years. Abu Dhabi is targeting a fully AI native government by 2027. Leaders will be assessed on progress. But "agentic", "service" and "50%" do not yet have published operational definitions, and public progress claims are not graded by evidence quality.
+## The problem
 
-Mutabaa makes these targets **checkable**:
+Public AI transformation targets in the UAE set percentages and deadlines that leaders will be assessed on. Several key terms ("agentic", "service", "50%") have no published operational definition, and public progress claims are not graded by the quality of their evidence. From outside the owning entity, many targets cannot yet be checked.
 
-- **Ledger** of official commitments with a six-point *verifiability score* that names exactly what each target is missing (metric, baseline, target value, date precise deadline, owner, measurement source).
-- **Evidence timeline** where every progress claim is graded by source type, with a deterministic, neutral by default **status** ("no public evidence" never means "not done").
-- **Definition Lab**: recomputes a headline "% agentic" under every defensible definition (unit of count × maturity threshold × guardrails × scope) so a policy team can see how much the number depends on the definition, before it is locked in.
-- **Maturity ladder + self assessment** (a *proposal*, not an official standard) with governance flags aligned to the National AI Strategy's governance objective.
-- **Brief**: print ready one page summary.
+## What it does
 
-Built from the point of view of an analyst in a government supervisory office whose job is to monitor implementation of strategic plans. Real entities are named only in [`docs/CONTEXT.md`](docs/CONTEXT.md); nothing here is endorsed by any of them.
+- **Ledger.** Public commitments with a six check verifiability score (a number, a unit, a dated deadline, an owner, a way to measure, no undefined terms) and the questions to put to the owning entity.
+- **Status with a neutral default.** Written rules applied to graded public evidence. "No public evidence" never means "not done", and media only evidence never moves a status.
+- **Definition Lab and Portfolio.** Recompute a headline "% agentic" under every definition on a labelled synthetic registry or on your own file, and see how much entity rankings move.
+- **My commitments.** Load an office's own commitments (CSV or JSON). Each is scored with the same checks and gets questions in English and Arabic. The file stays in the browser.
+- **Assurance and evaluation.** Exploratory analyses on the Assurance page, and preregistered experiments in [`docs/EVALUATION.md`](docs/EVALUATION.md): <!-- fact:evaluation.hits -->12<!-- /fact --> of <!-- fact:evaluation.predictions -->14<!-- /fact --> predictions hit, <!-- fact:evaluation.misses -->2<!-- /fact --> missed, and the misses are reported.
 
-> **Status:** working prototype. Read [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md) first. See [`plan.md`](plan.md) for the plan and [`docs/PROPOSAL.md`](docs/PROPOSAL.md) for the pilot path.
+The real ledger holds <!-- fact:commitments.count -->25<!-- /fact --> commitments from <!-- fact:sources.count -->14<!-- /fact --> public sources (<!-- fact:sources.official -->10<!-- /fact --> official, <!-- fact:sources.media -->4<!-- /fact --> secondary media), <!-- fact:evidence.count -->10<!-- /fact --> evidence items and <!-- fact:claims.count -->5<!-- /fact --> media claims held apart from status. <!-- fact:sources.verified -->11<!-- /fact --> sources were verified against the live page; <!-- fact:sources.unreachable -->3<!-- /fact --> could not be reached and are reported as unreachable.
+
+## What this is not
+
+- Not a measurement of any real entity. The registry used by the Definition Lab and the Portfolio is **synthetic** and labelled on every screen.
+- Not an assessment of government performance. A status describes public evidence, not delivery.
+- Not endorsed by, produced with, or affiliated with any entity. Real entities are named only in [`docs/CONTEXT.md`](docs/CONTEXT.md).
+- Not an official standard. The maturity ladder and the checks are proposals.
+
+## Run it
+
+Needs Python 3.11 or newer and Node 22 or newer. From a fresh clone:
+
+```bash
+python -m pip install -e ".[dev]"
+python -m pipeline validate && python -m pytest --cov=pipeline
+cd site && npm ci && npm test && npm run build
+```
+
+Then `npm run dev` inside `site/` serves the app locally. `make reproduce` runs the full check, including the browser tests and a rerun of the preregistered evaluation.
+
+## How it fits together
+
+```mermaid
+flowchart LR
+  SRC[Public sources] --> NOTES[(Extraction notes, hashed)]
+  NOTES --> DATA[(Ledger: commitments, evidence, claims)]
+  DATA --> VAL[validate]
+  VAL --> ENG[score and status engines]
+  GEN[Seeded synthetic generators] --> REG[(Labelled synthetic registry)]
+  REG --> SWEEP[definition sweep]
+  ENG --> BUILD[build: one payload]
+  SWEEP --> BUILD
+  EVAL[preregistered evaluation] --> FACTS[(results and facts)]
+  FACTS --> DOCS[documents, checked by tests]
+  BUILD --> APP[Static web app, English and Arabic]
+  USER[Your file, in the browser only] --> APP
+```
+
+Python is the reference implementation. The browser mirrors only the sweep, the portfolio ranking, the score and the questions, and golden files keep both identical. See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
 ## Data: what is real, what is synthetic
 
 | Data | Type | Notes |
 |---|---|---|
-| Commitments, milestones, evidence | **Real, public** | Official sources first; secondary media graded lower and flagged |
-| Service / operation registry | **Synthetic** | Generic archetypes, never real entity names; every record `is_synthetic: true`; always badged in the UI |
-| Uploaded CSV | **Your data** | Processed in the browser only; never sent anywhere |
+| Commitments, evidence, claims | **Real, public** | Official sources first; secondary media graded lower and flagged |
+| Service and operation registry | **Synthetic** | Generic archetypes, never real entity names; every record `is_synthetic: true`; badged in the UI |
+| Uploaded files | **Your data** | Processed in the browser only; never sent anywhere |
 
-The real ledger holds <!-- fact:commitments.count -->25<!-- /fact --> commitments from <!-- fact:sources.count -->14<!-- /fact --> public sources (<!-- fact:sources.official -->10<!-- /fact --> official, <!-- fact:sources.media -->4<!-- /fact --> secondary media), <!-- fact:evidence.count -->10<!-- /fact --> evidence items and <!-- fact:claims.count -->5<!-- /fact --> media claims held apart from status. <!-- fact:sources.verified -->11<!-- /fact --> sources were verified against the live page; <!-- fact:sources.unreachable -->3<!-- /fact --> could not be reached and are reported as unreachable.
-
-The real ledger holds <!-- fact:commitments.count -->25<!-- /fact --> commitments from <!-- fact:sources.count -->14<!-- /fact --> public sources (<!-- fact:sources.official -->10<!-- /fact --> official, <!-- fact:sources.media -->4<!-- /fact --> secondary media), <!-- fact:evidence.count -->10<!-- /fact --> evidence items and <!-- fact:claims.count -->5<!-- /fact --> media claims held apart from status. <!-- fact:sources.verified -->11<!-- /fact --> sources were verified against the live page; <!-- fact:sources.unreachable -->3<!-- /fact --> could not be reached and are reported as unreachable.
-
-Real and synthetic numbers are never combined into one figure. The Definition Lab's claim is about *structure* (definition choice changes the headline), **not** about where any real entity sits.
+Real and synthetic numbers are never combined into one figure. See [`docs/DATA_STATEMENT.md`](docs/DATA_STATEMENT.md).
 
 ## Project status
 
 | Component | Status | Tag |
 |---|---|---|
-| Plan, README, license | done | `v0.0.1-plan` |
-| Schemas, tooling, CI | done | `v0.1.0` |
+| Plan, schemas, tooling, CI | done | `v0.0.1-plan`, `v0.1.0` |
 | Real ledger, evidence, claims and validation | done | `v0.2.0` |
 | Scoring and status engines | done | `v0.3.0` |
-| Synthetic registry and sensitivity engine over all definitions | done | `v0.4.0` |
-| Web workbench: ledger, clocks, Definition Lab with CSV upload, maturity and guardrails, brief | done | `v0.5.0` to `v0.7.0` |
-| English / Arabic (RTL) | done, Arabic not yet expert-reviewed | `v0.7.0` |
-| Evaluation (blind second extraction) | done, see [`docs/EVALUATION.md`](docs/EVALUATION.md) | `v1.0.0` |
-| Live verifier, search log, offline build, security and e2e tests | done | `v1.1.0`, `v1.2.0` |
-| Robustness, calibration, agreement, Assurance page | done | `v1.3.0` |
-| Portfolio view, pilot plan, risks, sources policy, corrections, compliance mapping, roadmap | done | `v1.4.0` |
-| Human review of extraction notes | open, see [`docs/REVIEW_CHECKLIST.md`](docs/REVIEW_CHECKLIST.md) | |
+| Synthetic registry and sensitivity engine | done | `v0.4.0` |
+| Web workbench in English and Arabic | done, Arabic not yet reviewed by a native speaker | `v0.5.0` to `v0.7.0` |
+| Blind second extraction | done | `v1.0.0` |
+| Live verifier, search log, offline build, security and browser tests | done | `v1.1.0`, `v1.2.0` |
+| Robustness, calibration, agreement, Assurance page | done, labelled exploratory | `v1.3.0` |
+| Portfolio view, pilot plan, risks, sources policy, corrections, compliance mapping | done | `v1.4.0` |
+| Voice and identity rules, facts checked against documents, layer and schema contracts, coverage gate, decision records, preregistered evaluation, My commitments | done | `v1.5.0` |
+| Human review of extraction notes and Arabic; a person labelled gold set; legal reading of the sources policy; a real pilot | open | |
 
-Tags are created locally with `scripts/tag-milestones.sh` because the build environment could not push tags.
+## Documents
 
-## Run it
+[`docs/LIMITATIONS.md`](docs/LIMITATIONS.md) first. Then [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md), [`docs/EVALUATION.md`](docs/EVALUATION.md), [`PREREGISTRATION.md`](PREREGISTRATION.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/adr/`](docs/adr/README.md), [`docs/DATA_STATEMENT.md`](docs/DATA_STATEMENT.md), [`docs/CONTEXT.md`](docs/CONTEXT.md), [`docs/SECURITY.md`](docs/SECURITY.md), [`docs/PILOT.md`](docs/PILOT.md) and [`docs/DECISIONS.md`](docs/DECISIONS.md).
 
-```bash
-pip install -e ".[dev]"
-python -m pipeline validate      # integrity checks on the real data
-python -m pipeline build         # regenerate site/src/data/real.json
-pytest && ruff check .
+## Commands
 
-cd site && npm install && npm test && npm run dev
-```
-
-## Repository layout
-
-```
-data/real/        sources, commitments, evidence, claims, extraction notes (hashed)
-data/synthetic/   labelled synthetic registry (described in docs/DATA_STATEMENT.md)
-data/golden/      sensitivity results that the Python and TypeScript engines must both match
-pipeline/         Python reference: schemas, validate, score, status, synth, sensitivity
-site/             Vite + React + TypeScript app (English / Arabic)
-docs/             METHODOLOGY, EVALUATION, LIMITATIONS, REVIEW_CHECKLIST, PROPOSAL
-```
+| Command | What it does |
+|---|---|
+| `python -m pipeline validate` | Integrity checks on the real data |
+| `python -m pipeline build` | Regenerate `site/src/data/real.json` |
+| `python -m pipeline analyse` | Recompute the exploratory analyses in `data/analysis/` |
+| `python -m pipeline evaluate` | Run the preregistered experiments, write `results/`, render `docs/EVALUATION.md` |
+| `python -m pipeline facts` | Write `results/facts.json`, the numbers documents may cite |
+| `python -m pipeline schema` | Write JSON Schema files to `schema/` |
+| `python -m pipeline golden` | Write the golden score and question files for the TypeScript port |
+| `python -m pipeline verify-live` | Check source pages for the expected figures (needs network) |
+| `python -m pipeline diff HEAD~1` | Show what changed in the payload since a git ref |
+| `cd site && npm run build:offline` | One file that opens from a USB stick |
 
 ## Principles
 
 1. **Neutral by default.** Every commitment starts at "no public evidence".
-2. **Grounded.** Every real field links to a source; numbers are machine checked against the stored extract.
-3. **Deterministic.** No model judgement at runtime; statuses and scores follow written rules.
-4. **Honest about limits.** Synthetic data is labelled; the rubric is labelled a proposal; secondary sources are graded.
+2. **Grounded.** Every real field links to a source; anchors and hashes are checked by machine.
+3. **Deterministic.** No model judgement at runtime; every random step takes a seed.
+4. **Honest about limits.** Synthetic data is labelled; the rubric is labelled a proposal; analyses run after the design are labelled exploratory.
 
 ## Licence
 
@@ -86,12 +115,4 @@ Code: MIT. Dataset (`data/real`, `data/synthetic`): CC BY 4.0. Source material r
 
 ## Author
 
-Huda Mueen. Built as an independent project on UAE government AI transformation targets.
-
-
-## Offline and verification
-- `cd site && npm run build:offline` writes `dist-offline/index.html`, one file that opens from a USB stick.
-- `make reproduce` runs the whole check (needs Python, Node, git).
-- `python -m pipeline verify-live` re-checks source pages (needs network); `python -m pipeline diff HEAD~1` shows what changed.
-- Security notes: `docs/SECURITY.md`. Claim-to-test map: `docs/TRACEABILITY.md`.
-- `python -m pipeline analyse` recomputes the robustness, calibration and agreement results shown on the Assurance page.
+Huda Mueen. An independent student project on UAE government AI transformation targets.

@@ -1,6 +1,15 @@
 # Changelog
 
-Milestones are listed with their intended tag. Tag pushes were blocked by the build environment's git policy, so tags are created locally with `scripts/tag-milestones.sh` (it maps each tag to its commit SHA).
+Milestones are listed with their tag. Tags up to v1.4.0 were first created locally with `scripts/tag-milestones.sh` (it maps each tag to its commit SHA) and later pushed; v1.5.0 was tagged and pushed directly.
+
+## v1.5.0: verifiability of the project itself
+- Voice and identity: review documents renamed to role lenses with a no affiliation note; real entities named only in `docs/CONTEXT.md`; no em dashes; a voice test with its rules in `tests/voice_rules.json`
+- Documents agree with code: `python -m pipeline facts` writes `results/facts.json`; numbers in documents are marked and checked by `tests/test_docs_agree.py`; `docs/EVALUATION.md` is rendered from results
+- Contracts: a Python layer import test, JSON Schema files generated from the models with a staleness test and a TypeScript field check, a 90 percent coverage gate on `pipeline/`
+- Decision records in `docs/adr/`, `docs/DATA_STATEMENT.md`, `docs/DECISIONS.md`
+- Preregistered evaluation (`PREREGISTRATION.md`, `python -m pipeline evaluate`): four experiments, each prediction marked HIT or MISS; a second synthetic generator; Portfolio and Assurance text changed where the results required it
+- My commitments page: an office scores its own commitments in the browser, with questions in English and Arabic; TypeScript score and questions held to Python by golden files
+- Fixes: content hashes no longer depend on checkout line endings; `pipeline diff` now reports target changes and reads Arabic on Windows; the strip chart has a table alternative; synthetic entity names follow the reader's language
 
 ## v1.4.0: programme office lens review round
 - Portfolio page: per-entity share under six definitions, rank under each and rank range

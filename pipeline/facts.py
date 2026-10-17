@@ -121,9 +121,14 @@ def raw_facts() -> dict[str, tuple[object, str]]:
         f[f"agreement.{k}.ci_high"] = (ag[k]["ci95"][1], "pct")
     f["agreement.missed"] = (ag["missed"], "list")
 
-    for name, res in _evaluation().items():
+    ev = _evaluation()
+    for name, res in ev.items():
         for key, val in res.get("facts", {}).items():
             f[f"{name}.{key}"] = (val["value"], val["format"])
+    verdicts = [v["result"] for res in ev.values() for v in res.get("predictions", {}).values()]
+    f["evaluation.predictions"] = (len(verdicts), "int")
+    f["evaluation.hits"] = (verdicts.count("HIT"), "int")
+    f["evaluation.misses"] = (verdicts.count("MISS"), "int")
     return f
 
 
