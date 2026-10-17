@@ -36,7 +36,7 @@ def cmd_rehash() -> int:
     rows = json.loads(p.read_text(encoding="utf-8"))
     for r in rows:
         r["content_hash"] = file_hash(r["extract_file"])
-    p.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    p.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(f"rehashed {len(rows)} sources")
     return 0
 
@@ -51,10 +51,12 @@ def cmd_synth() -> int:
     SYNTH.mkdir(parents=True, exist_ok=True)
     GOLDEN.mkdir(parents=True, exist_ok=True)
     (SYNTH / "registry.json").write_text(
-        json.dumps(reg.model_dump(mode="json"), indent=1) + "\n", encoding="utf-8"
+        json.dumps(reg.model_dump(mode="json"), indent=1) + "\n", encoding="utf-8", newline="\n"
     )
     rows = sweep(reg)
-    (GOLDEN / "sensitivity.json").write_text(json.dumps(rows, indent=1) + "\n", encoding="utf-8")
+    (GOLDEN / "sensitivity.json").write_text(
+        json.dumps(rows, indent=1) + "\n", encoding="utf-8", newline="\n"
+    )
     print(f"registry: {len(reg.entities)} entities, {len(reg.items)} items; {summary(rows)}")
     return 0
 
@@ -72,7 +74,7 @@ def cmd_verify_live(args: list[str]) -> int:
         old = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"results": {}}
         old["results"].update(rep["results"])
         old.update({k: v for k, v in rep.items() if k != "results"})
-        path.write_text(dump_report(old), encoding="utf-8")
+        path.write_text(dump_report(old), encoding="utf-8", newline="\n")
         print(f"wrote {path}")
     failed = [k for k, v in rep["results"].items() if v["result"] == "failed"]
     return 1 if failed else 0
@@ -94,7 +96,7 @@ def cmd_analyse() -> int:
     ANALYSIS.mkdir(parents=True, exist_ok=True)
     for k, v in compute_analysis(load_real()).items():
         (ANALYSIS / f"{k}.json").write_text(
-            json.dumps(v, indent=1, sort_keys=True) + "\n", encoding="utf-8"
+            json.dumps(v, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
         )
         print(f"wrote data/analysis/{k}.json")
     return 0
@@ -170,7 +172,7 @@ def cmd_build() -> int:
         "schema": 2,
     }
     text = json.dumps(payload, ensure_ascii=False, sort_keys=True, indent=1) + "\n"
-    (out / "real.json").write_text(text, encoding="utf-8")
+    (out / "real.json").write_text(text, encoding="utf-8", newline="\n")
     print(f"wrote {out / 'real.json'}")
     return 0
 
