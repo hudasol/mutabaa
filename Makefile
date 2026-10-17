@@ -7,7 +7,8 @@ reproduce:
 	python -m pipeline build
 	python -m pipeline evaluate
 	git diff --exit-code -- site/src/data/real.json results docs/EVALUATION.md
-	cd site && npm ci && npx tsc --noEmit && npx vitest run && npm run build && npm run build:offline
+	cd site && npm ci && npx tsc --noEmit && npx vitest run && npm run build && npm run build:offline \
+		&& npx playwright install chromium && npx playwright test
 
 test:
 	python -m pytest -q && cd site && npx vitest run
