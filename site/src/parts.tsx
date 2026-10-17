@@ -15,7 +15,7 @@ export function StatusPill({ s }: { s: Status["status"] }) {
 export function Ticks({ score }: { score: Score }) {
   const { t } = useCtx();
   const keys = Object.keys(t.checks) as (keyof typeof t.checks)[];
-  const label = keys.map((k) => `${t.checks[k]}: ${score.checks[k] === null ? "n/a" : score.checks[k] ? "yes" : "no"}`).join("; ");
+  const label = keys.map((k) => `${t.checks[k]}: ${score.checks[k] === null ? t.tick_na : score.checks[k] ? t.tick_yes : t.tick_no}`).join("; ");
   return (
     <span className="ticks" role="img" aria-label={`${score.passed} / ${score.applicable}. ${label}`} title={label}>
       {keys.map((k) => <span key={k} className={score.checks[k] === null ? "na" : score.checks[k] ? "y" : "n"} />)}
@@ -145,7 +145,13 @@ export function CsvLoader({ h }: { h: ItemsHook }) {
   };
   const onFile = async (f: File | undefined) => {
     if (!f) return;
-    const { headers, rows, truncated } = readCsv(await f.text());
+    let parsed: ReturnType<typeof readCsv>;
+    try { parsed = readCsv(await f.text()); } catch (e) {
+      h.setCsv({ ...convert([], [], {}, false), errors: [String(e instanceof Error ? e.message : e)], name: f.name });
+      h.setSource("csv");
+      return;
+    }
+    const { headers, rows, truncated } = parsed;
     const m = autoMap(headers);
     setRaw({ name: f.name, headers, rows, truncated }); setMapping(m);
     apply(f.name, headers, rows, m, truncated);

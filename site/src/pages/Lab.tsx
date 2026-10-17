@@ -48,13 +48,13 @@ export default function Lab() {
       </section>
       <section className="panel" aria-live="polite">
         <div className="bigrow">
-          <span className="big-share">{result === null ? "n/a" : pct(result, 1)}</span>
+          <span className="big-share">{pct(result, 1)}</span>
           <span>{t.lb_result} · {t.lb_vs}</span>
           {result !== null && <span className={`verdict ${result >= 0.5 ? "meets" : "misses"}`}>{result >= 0.5 ? t.lb_meets : t.lb_misses}</span>}
         </div>
         {result === null && <p className="small">{t.lb_nodata}</p>}
         <Strip current={d} rows={rows.map((r) => ({ share: r.share, d: r.d }))} label={t.lb_title} />
-        <p className="small">{t.lb_sweep_ok}: {vals.length ? t.lb_range(pct(Math.min(...vals), 1), pct(Math.max(...vals), 1)) : "n/a"}</p>
+        <p className="small">{t.lb_sweep_ok(rows.length)}: {vals.length ? t.lb_range(pct(Math.min(...vals), 1), pct(Math.max(...vals), 1)) : pct(null)}</p>
       </section>
       <section className="panel">
         <h2>{t.lb_marginal_title}</h2><p className="small">{t.lb_marginal_note}</p>

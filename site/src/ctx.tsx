@@ -11,7 +11,7 @@ export type Ctx = {
 export const C = createContext<Ctx>(null as unknown as Ctx);
 export const useCtx = () => useContext(C);
 
-export const pct = (x: number | null, d = 0) => (x === null ? "n/a" : `${(x * 100).toFixed(d)}%`);
+export const pct = (x: number | null, d = 0) => (x === null ? "\u2013" : `${(x * 100).toFixed(d)}%`);
 export const L = (lang: Lang, en: string, ar: string) => (lang === "ar" ? ar : en);
 export function download(name: string, text: string, type: string) {
   const url = URL.createObjectURL(new Blob([text], { type }));
