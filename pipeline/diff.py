@@ -13,7 +13,7 @@ PAYLOAD = "site/src/data/real.json"
 
 def load_at(ref: str) -> dict:
     out = subprocess.run(
-        ["git", "show", f"{ref}:{PAYLOAD}"], capture_output=True, text=True, check=True, cwd=ROOT
+        ["git", "show", f"{ref}:{PAYLOAD}"], capture_output=True, encoding="utf-8", check=True, cwd=ROOT
     )
     return json.loads(out.stdout)
 
@@ -31,7 +31,7 @@ def diff(old: dict, new: dict) -> list[str]:
     for i in sorted(oc.keys() - nc.keys()):
         lines.append(f"- {i} removed: {oc[i]['title']}")
     for i in sorted(oc.keys() & nc.keys()):
-        for k in ("title", "target", "unit", "deadline", "owner", "metric", "kind"):
+        for k in ("title", "target_value", "target_number", "unit", "deadline", "owner", "metric", "kind"):
             if oc[i].get(k) != nc[i].get(k):
                 lines.append(f"~ {i} {k}: {oc[i].get(k)!r} -> {nc[i].get(k)!r}")
     os_ = {s["commitment_id"]: s for s in old["statuses"]}
