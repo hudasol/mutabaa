@@ -42,3 +42,9 @@ Format: `| claim | test file :: test name |`. `scripts/check_traceability.py` fa
 | Generated JSON Schema files are current and match the TypeScript types | tests/test_schema.py :: test_typescript_types_match_schema_fields |
 | The strip chart has a table alternative | site/e2e/app.spec.ts :: has a table alternative with every definition |
 | Synthetic entity names follow the reader's language | site/e2e/app.spec.ts :: synthetic entity names follow the reader's language |
+| Synthetic data is labelled on every page that shows it (EN/AR) | site/e2e/app.spec.ts :: labels its synthetic data |
+| The prototype and no endorsement statement shows on phones and in print | site/e2e/app.spec.ts :: is shown on a phone and in print |
+| Printing under the dark theme gives dark text on white | site/e2e/app.spec.ts :: the brief prints dark text on white |
+| The live verifier honours robots.txt | tests/test_verify_live.py :: test_robots_disallow_is_reported_unreachable_and_the_page_is_not_fetched |
+| The TypeScript portfolio ranking equals Python | site/src/engine.test.ts :: gives the same shares and ranks as Python on the committed registry |
+| Commit messages since the rules carry no trailers or names | tests/test_voice.py :: test_commit_messages_since_the_rules_have_no_trailers_or_names |

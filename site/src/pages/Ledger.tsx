@@ -45,7 +45,7 @@ function Detail({ c, onClose }: { c: Commitment; onClose: () => void }) {
             {(Object.keys(t.checks) as (keyof typeof t.checks)[]).map((k) => (
               <li key={k}>
                 <span className="ticks"><span className={sc.checks[k] === null ? "na" : sc.checks[k] ? "y" : "n"} /></span>
-                <span>{t.checks[k]}{sc.checks[k] === null ? " (n/a)" : ""}</span>
+                <span>{t.checks[k]}{sc.checks[k] === null ? ` (${t.tick_na})` : ""}</span>
               </li>
             ))}
           </ul>

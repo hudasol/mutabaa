@@ -205,3 +205,13 @@ test("[robustness] an unknown stored language or theme falls back instead of cra
   await page.goto("/#/overview");
   await expect(page.locator("h1")).toBeVisible();
 });
+
+test("[print] the brief prints dark text on white even when the dark theme is chosen", async ({ page }) => {
+  await open(page, "brief", { theme: "dark" });
+  await page.emulateMedia({ media: "print" });
+  const colours = await page.evaluate(() => {
+    const cs = getComputedStyle(document.documentElement);
+    return { paper: cs.getPropertyValue("--paper").trim(), ink: cs.getPropertyValue("--ink").trim() };
+  });
+  expect(colours).toEqual({ paper: "#fff", ink: "#000" });
+});
