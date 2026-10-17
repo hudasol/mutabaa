@@ -26,3 +26,8 @@ site/dist/
 site/dist-offline/
 site/test-results/
 site/playwright-report/
+
+# coverage
+.coverage
+coverage.xml
+htmlcov/
