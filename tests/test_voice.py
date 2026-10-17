@@ -119,3 +119,25 @@ def test_context_cites_every_source():
     text = (ROOT / "docs" / "CONTEXT.md").read_text(encoding="utf-8")
     for s in sources:
         assert f"| {s['id']} |" in text and s["url"] in text, s["id"]
+
+
+# Commits before this one were made before the rules existed and are published, so history is not rewritten.
+FIRST_RULED_COMMIT = "8c8ea65"
+
+
+def test_commit_messages_since_the_rules_have_no_trailers_or_names():
+    try:
+        out = subprocess.run(
+            ["git", "log", "--format=%H%n%B%n==END==", f"{FIRST_RULED_COMMIT}^..HEAD"],
+            cwd=ROOT, capture_output=True, encoding="utf-8", check=True,
+        ).stdout
+    except (OSError, subprocess.CalledProcessError):
+        pytest.skip("git history is not available (for example a shallow clone)")
+    bad = []
+    for msg in out.split("==END=="):
+        if "Co-Authored-By" in msg or "Claude-Session" in msg or "Generated with" in msg:
+            bad.append(msg.strip()[:60] + ": attribution trailer")
+        # The generic word is allowed here because commit messages describe the voice rule itself;
+        # named institutions, vendors and organisations are not.
+        bad += [v for v in violations("commit", msg) if "university 'universit" not in v]
+    assert bad == [], "\n".join(bad)
