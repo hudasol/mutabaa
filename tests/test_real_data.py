@@ -88,6 +88,17 @@ def test_hash_tamper_is_caught(d, tmp_path, monkeypatch):
     assert any("stale" in e for e in errors)
 
 
+def test_hash_ignores_line_endings(tmp_path, monkeypatch):
+    import pipeline.validate as v
+
+    monkeypatch.setattr(v, "ROOT", tmp_path)
+    (tmp_path / "lf.md").write_bytes(b"line one\nline two\n")
+    (tmp_path / "crlf.md").write_bytes(b"line one\r\nline two\r\n")
+    (tmp_path / "other.md").write_bytes(b"line one\nline 2\n")
+    assert v.file_hash("lf.md") == v.file_hash("crlf.md")
+    assert v.file_hash("lf.md") != v.file_hash("other.md")
+
+
 def test_anchor_tamper_is_caught(d):
     bad = copy.deepcopy(d)
     bad.commitments[0].anchors[0].text = "a phrase that is nowhere in the notes"

@@ -21,7 +21,8 @@ def norm(text: str) -> str:
 
 
 def file_hash(path: str) -> str:
-    return hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
+    """SHA-256 of the file with line endings normalised to LF, so the hash does not depend on the checkout."""
+    return hashlib.sha256((ROOT / path).read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def validate(data: RealData | None = None) -> tuple[list[str], list[str]]:
