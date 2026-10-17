@@ -164,3 +164,10 @@ def test_unreachable_is_a_warning_not_an_error():
     errors, warnings = validate()
     assert not any("live verification" in e for e in errors)
     assert any("unreachable" in w for w in warnings)
+
+
+def test_golden_score_and_question_files_are_up_to_date():
+    from pipeline.__main__ import GOLDEN, golden_files
+
+    for name, text in golden_files().items():
+        assert (GOLDEN / name).read_text(encoding="utf-8") == text, f"run `python -m pipeline golden` ({name})"
