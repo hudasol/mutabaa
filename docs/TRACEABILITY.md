@@ -29,3 +29,14 @@ Format: `| claim | test file :: test name |`. `scripts/check_traceability.py` fa
 | The facts file equals a fresh computation | tests/test_docs_agree.py :: test_facts_file_is_up_to_date |
 | Prose follows the public voice rules | tests/test_voice.py :: test_prose_follows_voice_rules |
 | The exploratory analyses are labelled as not preregistered (EN/AR) | site/e2e/app.spec.ts :: the assurance page labels its analyses as exploratory |
+| The TypeScript score equals Python on every public commitment | site/src/commitments.test.ts :: scores every public commitment exactly as Python does |
+| The TypeScript questions equal Python on every public commitment | site/src/commitments.test.ts :: asks exactly the same questions as Python |
+| Golden score and question files equal a fresh run | tests/test_real_data.py :: test_golden_score_and_question_files_are_up_to_date |
+| A user's commitments are scored in the browser with questions and a persistent banner, no request leaves the page | site/e2e/app.spec.ts :: a user file is scored in the browser |
+| Exported questions neutralise spreadsheet formulas | site/e2e/app.spec.ts :: a user file is scored in the browser |
+| My commitments works in Arabic, right to left | site/e2e/app.spec.ts :: Arabic questions and right to left layout |
+| A malformed user file shows an error | site/e2e/app.spec.ts :: a malformed file shows an error |
+| My commitments with results has no serious accessibility violations, EN/AR, light/dark | site/e2e/app.spec.ts :: with results: no serious or critical axe violations |
+| Preregistered results equal a fresh run | tests/test_evaluate.py :: test_committed_results_equal_a_fresh_run |
+| The Python layers import only downward | tests/test_layers.py :: test_no_lower_layer_imports_a_higher_one |
+| Generated JSON Schema files are current and match the TypeScript types | tests/test_schema.py :: test_typescript_types_match_schema_fields |
