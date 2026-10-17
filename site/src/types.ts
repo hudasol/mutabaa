@@ -82,11 +82,12 @@ export type Ci = [number, number];
 export type Analysis = {
   robustness: {
     registries: number; flip_rate: number; effects: Record<string, number>;
+    sizes: number[]; profiles: Record<string, number[]>; seeds: [number, number];
     by_profile: Record<string, { registries: number; flip_rate: number; median_spread: number; median_core_spread: number }>;
   };
   calibration: {
     bands: { max_changed: number; n: number };
-    weights: { spearman_median: number; spearman_p05: number; pass_rate: Record<string, number | null> };
+    weights: { draws: number; spearman_median: number; spearman_p05: number; pass_rate: Record<string, number | null> };
     consistency: Record<"numeric_target" | "dated_deadline", { n: number; agree: number; kappa: number | null; ci95: Ci }> & { disagreements: string[] };
   };
   agreement: {

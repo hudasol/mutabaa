@@ -13,7 +13,7 @@ function Bars({ rows, cls = "" }: { rows: { k: string; label: string; v: number 
   );
 }
 
-const f2 = (x: number | null) => (x === null ? "n/a" : x.toFixed(2));
+const f2 = (x: number | null) => (x === null ? "\u2013" : x.toFixed(2));
 
 export default function Assurance() {
   const { t, data } = useCtx();
@@ -25,10 +25,10 @@ export default function Assurance() {
       <p className="banner exploratory" role="note"><b>{t.as_exploratory_tag}.</b> {t.as_exploratory}</p>
       <section className="panel" aria-labelledby="rb-h">
         <div className="row-between"><h2 id="rb-h">{t.as_rob}</h2><span className="badge synthetic">{t.synthetic}</span></div>
-        <p><b>{t.as_rob_text(rb.registries, pct(rb.flip_rate))}</b></p>
+        <p><b>{t.as_rob_text(rb.registries, pct(rb.flip_rate), rb.sizes.length, Object.keys(rb.profiles).length, rb.seeds[1] - rb.seeds[0] + 1)}</b></p>
         <h3>{t.as_rob_profile}</h3>
         <Bars cls="syn" rows={(["low", "mid", "high"] as (keyof typeof t.as_prof)[]).map((k) => ({ k, label: t.as_prof[k], v: rb.by_profile[k].flip_rate }))} />
-        <p className="small">{t.as_rob_profile_note}</p>
+        <p className="small">{t.as_rob_profile_note(pct(rb.by_profile.low.flip_rate), pct(rb.by_profile.mid.flip_rate), pct(rb.by_profile.high.flip_rate))}</p>
         <h3>{t.as_eff}</h3>
         <Bars cls="syn" rows={(["threshold", "guardrails", "unit", "scope"] as (keyof typeof t.as_eff_names)[]).map((k) => ({ k, label: t.as_eff_names[k], v: rb.effects[k] }))} />
       </section>
@@ -38,7 +38,7 @@ export default function Assurance() {
         <Bars rows={checks.map((k) => ({ k, label: t.checks[k], v: cal.weights.pass_rate[k] ?? 0 }))} />
         <p className="small">{t.as_pass_note}</p>
         <p>{t.as_band(cal.bands.max_changed, cal.bands.n)}</p>
-        <p>{t.as_weights(f2(cal.weights.spearman_median), f2(cal.weights.spearman_p05))}</p>
+        <p>{t.as_weights(f2(cal.weights.spearman_median), f2(cal.weights.spearman_p05), cal.weights.draws.toLocaleString("en"))}</p>
         <h3>{t.as_cons}</h3>
         <ul className="plainlist">
           {(["numeric_target", "dated_deadline"] as const).map((k) => {

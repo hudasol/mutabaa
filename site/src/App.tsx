@@ -28,8 +28,8 @@ type Theme = "auto" | "light" | "dark";
 const read = (k: string) => { try { return localStorage.getItem(k); } catch { return null; } };
 
 export default function App() {
-  const [lang, setLang] = useState<Lang>(() => (read("lang") as Lang) || (navigator.language.startsWith("ar") ? "ar" : "en"));
-  const [theme, setTheme] = useState<Theme>(() => (read("theme") as Theme) || "auto");
+  const [lang, setLang] = useState<Lang>(() => (["en", "ar"].includes(read("lang") ?? "") ? (read("lang") as Lang) : navigator.language.startsWith("ar") ? "ar" : "en"));
+  const [theme, setTheme] = useState<Theme>(() => (["auto", "light", "dark"].includes(read("theme") ?? "") ? (read("theme") as Theme) : "auto"));
   const [route, setParams] = useRoute();
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -50,11 +50,11 @@ export default function App() {
   useEffect(() => { window.scrollTo?.(0, 0); }, [route.page]);
   return (
     <C.Provider value={ctx}>
-      <a className="skip" href="#main">Skip to content</a>
+      <a className="skip" href="#main">{t.skip}</a>
       <div className="shell">
         <aside className="rail">
           <div className="brand"><b>{t.appName}</b><small>{t.theme_note}</small></div>
-          <nav aria-label="Main">
+          <nav aria-label={t.nav_label}>
             {ROUTES.map(([id, key]) => <a key={id} href={buildHash(id)} aria-current={current[0] === id ? "page" : undefined}>{t[key]}</a>)}
           </nav>
           <div className="tools">
@@ -65,13 +65,13 @@ export default function App() {
               ))}
             </div>
           </div>
-          <div className="foot">
-            <span>{t.ft_asof} {data.build.data_as_of}</span>
-            <span className="mono">{data.build.payload_sha256.slice(0, 12)}</span>
-            <span>{t.footer}</span>
-          </div>
         </aside>
-        <main id="main"><Page /></main>
+        <main id="main"><Page />
+          <footer className="pagefoot">
+            <span>{t.footer(data.build.data_as_of)}</span>
+            <span>{t.ft_asof} {data.build.data_as_of} · <span className="mono">{data.build.payload_sha256.slice(0, 12)}</span></span>
+          </footer>
+        </main>
       </div>
     </C.Provider>
   );

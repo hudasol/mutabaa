@@ -179,3 +179,29 @@ test("[i18n] synthetic entity names follow the reader's language", async ({ page
   await open(page, "portfolio", { lang: "ar" });
   await expect(page.locator(".ename").first()).toContainText("اصطناعية");
 });
+
+for (const lang of ["en", "ar"] as const) {
+  for (const p of ["overview", "lab", "portfolio", "maturity", "assurance", "brief"]) {
+    test(`[honesty] ${p} labels its synthetic data (${lang})`, async ({ page }) => {
+      await open(page, p, { lang });
+      await expect(page.locator(".badge.synthetic, .banner.synthetic").first()).toBeVisible();
+    });
+  }
+}
+
+test("[honesty] the prototype and no endorsement statement is shown on a phone and in print", async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 800 });
+  await open(page, "brief");
+  const foot = page.locator("footer.pagefoot");
+  await expect(foot).toContainText("Not an official product of any government entity");
+  await foot.scrollIntoViewIfNeeded();
+  await expect(foot).toBeVisible();
+  await page.emulateMedia({ media: "print" });
+  await expect(foot).toBeVisible();
+});
+
+test("[robustness] an unknown stored language or theme falls back instead of crashing", async ({ page }) => {
+  await page.addInitScript(() => { localStorage.setItem("lang", "xx"); localStorage.setItem("theme", "neon"); });
+  await page.goto("/#/overview");
+  await expect(page.locator("h1")).toBeVisible();
+});
