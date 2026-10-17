@@ -51,7 +51,8 @@ export default function Assurance() {
       </section>
       <section className="panel" aria-labelledby="ag-h">
         <h2 id="ag-h">{t.as_agr}</h2>
-        <p>{t.as_agr_line(ag.recall.found, ag.recall.n, pct(ag.recall.rate), pct(ag.recall.ci95[0]), pct(ag.recall.ci95[1]))}</p>
+        <p>{t.as_agr_line(ag.recall.found, ag.recall.n, pct(ag.recall.rate), pct(ag.recall.ci95[0]), pct(ag.recall.ci95[1]))} {t.as_agr_wilson(pct(ag.recall.wilson95[0]), pct(ag.recall.wilson95[1]))}</p>
+        <p className="small">{t.as_boot_note(pct(data.evaluation.e4.bootstrap_coverage_at_095))}</p>
         <p>{t.as_agr_num(ag.numeric_recall.found, ag.numeric_recall.n, pct(ag.numeric_recall.rate))}</p>
         <p className="small">{t.as_agr_missed} <span className="mono">{ag.missed.join(", ")}</span></p>
         <p className="small">{t.as_agr_note} {t.as_small}</p>
