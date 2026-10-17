@@ -36,7 +36,7 @@ export default function Mine() {
   const exportQuestions = () => {
     const head = ["id", "title", "check", "question_en", "question_ar"].map(csvCell).join(",");
     const lines = scored.flatMap(({ c, q }) => q.map((x) => [c.id, c.title, x.check, x.en, x.ar].map(csvCell).join(",")));
-    download("mutabaa-questions.csv", "﻿" + [head, ...lines].join("\r\n") + "\r\n", "text/csv");
+    download("mutabaa-questions.csv", "\uFEFF" + [head, ...lines].join("\r\n") + "\r\n", "text/csv");
   };
   const rep = result?.report;
   return (

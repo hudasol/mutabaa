@@ -156,7 +156,7 @@ export function readMyFile(name: string, text: string): { headers: string[]; row
   const looksJson = name.toLowerCase().endsWith(".json") || /^\s*[[{]/.test(text);
   if (!looksJson) return readCsv(text);
   let parsed: unknown;
-  try { parsed = JSON.parse(text.replace(/^﻿/, "")); } catch { throw new Error("The file is not valid JSON."); }
+  try { parsed = JSON.parse(text.replace(/^\uFEFF/, "")); } catch { throw new Error("The file is not valid JSON."); }
   const list = Array.isArray(parsed) ? parsed : (parsed as { commitments?: unknown }).commitments;
   if (!Array.isArray(list)) throw new Error("JSON must be an array of commitments, or an object with a commitments array.");
   const headers = [...new Set(list.flatMap((o) => (o && typeof o === "object" ? Object.keys(o as object) : [])))];

@@ -135,7 +135,7 @@ export default function Ledger() {
       const s = data.statuses.find((x) => x.commitment_id === c.id)!, k = data.scores.find((x) => x.commitment_id === c.id)!;
       return [c.id, c.title, c.jurisdiction, c.kind, c.owner, c.target_value, c.unit, c.deadline ?? c.deadline_text, s.status, k.ratio, k.band, data.build.data_as_of].map(esc).join(",");
     });
-    download("mutabaa-ledger.csv", "﻿" + [head.join(","), ...lines].join("\n"), "text/csv;charset=utf-8");
+    download("mutabaa-ledger.csv", "\uFEFF" + [head.join(","), ...lines].join("\n"), "text/csv;charset=utf-8");
   };
   const opts = (o: Record<string, string>) => Object.entries(o).map(([k, v]) => <option key={k} value={k}>{v}</option>);
   const toggle = (k: SortKey) => setParams(sortKey === k ? { d: dir === "asc" ? "desc" : "asc" } : { s: k, d: "asc" });
