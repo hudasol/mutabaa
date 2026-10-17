@@ -19,6 +19,10 @@ jobs:
         run: ruff check .
       - name: Tests with coverage gate (90% of pipeline/)
         run: pytest --cov=pipeline --cov-report=term
+      - name: Preregistered evaluation reproduces the committed results
+        run: |
+          python -m pipeline evaluate
+          git diff --exit-code -- results docs/EVALUATION.md
       - name: Validate data
         run: python -m pipeline validate
       - name: Traceability and risk register

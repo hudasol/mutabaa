@@ -1,0 +1,145 @@
+{
+ "facts": {
+  "P4a": {
+   "format": "str",
+   "value": "MISS"
+  },
+  "P4b": {
+   "format": "str",
+   "value": "MISS"
+  },
+  "P4c": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P4d": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "p70.bootstrap": {
+   "format": "pct1",
+   "value": 0.96
+  },
+  "p70.bootstrap.width": {
+   "format": "f2",
+   "value": 0.3496
+  },
+  "p70.wilson": {
+   "format": "pct1",
+   "value": 0.935
+  },
+  "p70.wilson.width": {
+   "format": "f2",
+   "value": 0.3329
+  },
+  "p88.bootstrap": {
+   "format": "pct1",
+   "value": 0.9515
+  },
+  "p88.bootstrap.width": {
+   "format": "f2",
+   "value": 0.2286
+  },
+  "p88.wilson": {
+   "format": "pct1",
+   "value": 0.979
+  },
+  "p88.wilson.width": {
+   "format": "f2",
+   "value": 0.25
+  },
+  "p95.bootstrap": {
+   "format": "pct1",
+   "value": 0.6995
+  },
+  "p95.bootstrap.width": {
+   "format": "f2",
+   "value": 0.1213
+  },
+  "p95.wilson": {
+   "format": "pct1",
+   "value": 0.9635
+  },
+  "p95.wilson.width": {
+   "format": "f2",
+   "value": 0.1909
+  }
+ },
+ "n": 25,
+ "predictions": {
+  "P4a": {
+   "result": "MISS",
+   "text": "bootstrap coverage at 0.70 between 0.90 and 0.95"
+  },
+  "P4b": {
+   "result": "MISS",
+   "text": "bootstrap coverage at 0.88 between 0.85 and 0.93"
+  },
+  "P4c": {
+   "result": "HIT",
+   "text": "bootstrap coverage at 0.95 below 0.85"
+  },
+  "P4d": {
+   "result": "HIT",
+   "text": "Wilson coverage at least 0.92 at all three rates"
+  }
+ },
+ "rates": {
+  "0.70": {
+   "bootstrap": {
+    "ci95": [
+     0.9538,
+     0.9662
+    ],
+    "coverage": 0.96,
+    "mean_width": 0.3496
+   },
+   "wilson": {
+    "ci95": [
+     0.9287,
+     0.9413
+    ],
+    "coverage": 0.935,
+    "mean_width": 0.3329
+   }
+  },
+  "0.88": {
+   "bootstrap": {
+    "ci95": [
+     0.9413,
+     0.9617
+    ],
+    "coverage": 0.9515,
+    "mean_width": 0.2286
+   },
+   "wilson": {
+    "ci95": [
+     0.9732,
+     0.9848
+    ],
+    "coverage": 0.979,
+    "mean_width": 0.25
+   }
+  },
+  "0.95": {
+   "bootstrap": {
+    "ci95": [
+     0.6746,
+     0.7244
+    ],
+    "coverage": 0.6995,
+    "mean_width": 0.1213
+   },
+   "wilson": {
+    "ci95": [
+     0.9565,
+     0.9705
+    ],
+    "coverage": 0.9635,
+    "mean_width": 0.1909
+   }
+  }
+ },
+ "resamples": 2000,
+ "runs_per_rate": 2000
+}

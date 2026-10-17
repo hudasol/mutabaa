@@ -11,7 +11,7 @@ import re
 
 from .io import REAL
 from .schemas import Commitment
-from .stats import bootstrap_ci
+from .stats import bootstrap_ci, wilson
 
 _STOP = {"the", "a", "of", "and", "to", "in", "for", "on", "by", "with", "all", "across", "ai", "uae"}
 
@@ -42,9 +42,11 @@ def run(cs: list[Commitment]) -> dict:
         "ledger_commitments": len(cs),
         "blind_items": len(blind),
         "recall": {"found": sum(hit), "n": len(hit), "rate": round(sum(hit) / len(hit), 3),
-                   "ci95": bootstrap_ci(len(hit), rate(hit))},
+                   "ci95": bootstrap_ci(len(hit), rate(hit)),
+                   "wilson95": [round(x, 4) for x in wilson(sum(hit), len(hit))]},
         "numeric_recall": {"found": sum(nhit), "n": len(nhit), "rate": round(sum(nhit) / len(nhit), 3),
-                           "ci95": bootstrap_ci(len(nhit), rate(nhit))},
+                           "ci95": bootstrap_ci(len(nhit), rate(nhit)),
+                           "wilson95": [round(x, 4) for x in wilson(sum(nhit), len(nhit))]},
         "missed": [c.id for c, h in zip(cs, hit, strict=True) if not h],
         "note": (
             "The blind pass read the same extraction notes, so this measures consistency of reading, not "

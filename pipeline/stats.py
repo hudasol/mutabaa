@@ -52,6 +52,15 @@ def cohen_kappa(a: Sequence[bool], b: Sequence[bool]) -> float | None:
     return (po - pe) / (1 - pe)
 
 
+def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
+    """Wilson score interval for a binomial proportion k / n."""
+    p = k / n
+    den = 1 + z * z / n
+    centre = (p + z * z / (2 * n)) / den
+    half = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / den
+    return centre - half, centre + half
+
+
 def bootstrap_ci(
     n: int, stat: Callable[[list[int]], float | None], reps: int = 2000, seed: int = 7, alpha: float = 0.05
 ) -> tuple[float, float]:
