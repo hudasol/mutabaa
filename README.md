@@ -26,6 +26,10 @@ Built from the point of view of an analyst in a government supervisory office wh
 | Service / operation registry | **Synthetic** | Generic archetypes, never real entity names; every record `is_synthetic: true`; always badged in the UI |
 | Uploaded CSV | **Your data** | Processed in the browser only; never sent anywhere |
 
+The real ledger holds <!-- fact:commitments.count -->25<!-- /fact --> commitments from <!-- fact:sources.count -->14<!-- /fact --> public sources (<!-- fact:sources.official -->10<!-- /fact --> official, <!-- fact:sources.media -->4<!-- /fact --> secondary media), <!-- fact:evidence.count -->10<!-- /fact --> evidence items and <!-- fact:claims.count -->5<!-- /fact --> media claims held apart from status. <!-- fact:sources.verified -->11<!-- /fact --> sources were verified against the live page; <!-- fact:sources.unreachable -->3<!-- /fact --> could not be reached and are reported as unreachable.
+
+The real ledger holds <!-- fact:commitments.count -->25<!-- /fact --> commitments from <!-- fact:sources.count -->14<!-- /fact --> public sources (<!-- fact:sources.official -->10<!-- /fact --> official, <!-- fact:sources.media -->4<!-- /fact --> secondary media), <!-- fact:evidence.count -->10<!-- /fact --> evidence items and <!-- fact:claims.count -->5<!-- /fact --> media claims held apart from status. <!-- fact:sources.verified -->11<!-- /fact --> sources were verified against the live page; <!-- fact:sources.unreachable -->3<!-- /fact --> could not be reached and are reported as unreachable.
+
 Real and synthetic numbers are never combined into one figure. The Definition Lab's claim is about *structure* (definition choice changes the headline), **not** about where any real entity sits.
 
 ## Project status
@@ -34,9 +38,9 @@ Real and synthetic numbers are never combined into one figure. The Definition La
 |---|---|---|
 | Plan, README, license | done | `v0.0.1-plan` |
 | Schemas, tooling, CI | done | `v0.1.0` |
-| Real ledger (12 sources, 25 commitments, evidence, claims) + validation | done | `v0.2.0` |
+| Real ledger, evidence, claims and validation | done | `v0.2.0` |
 | Scoring and status engines | done | `v0.3.0` |
-| Synthetic registry + 72-definition sensitivity engine | done | `v0.4.0` |
+| Synthetic registry and sensitivity engine over all definitions | done | `v0.4.0` |
 | Web workbench: ledger, clocks, Definition Lab with CSV upload, maturity and guardrails, brief | done | `v0.5.0` to `v0.7.0` |
 | English / Arabic (RTL) | done, Arabic not yet expert-reviewed | `v0.7.0` |
 | Evaluation (blind second extraction) | done, see [`docs/EVALUATION.md`](docs/EVALUATION.md) | `v1.0.0` |
@@ -63,7 +67,7 @@ cd site && npm install && npm test && npm run dev
 ```
 data/real/        sources, commitments, evidence, claims, extraction notes (hashed)
 data/synthetic/   labelled synthetic registry + DATASHEET.md
-data/golden/      72-definition results that the Python and TypeScript engines must both match
+data/golden/      sensitivity results that the Python and TypeScript engines must both match
 pipeline/         Python reference: schemas, validate, score, status, synth, sensitivity
 site/             Vite + React + TypeScript app (English / Arabic)
 docs/             METHODOLOGY, EVALUATION, LIMITATIONS, REVIEW_CHECKLIST, PROPOSAL

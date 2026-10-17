@@ -1,4 +1,4 @@
-"""CLI: validate | rehash | synth | build | analyse | diff [REF] | verify-live [--write]"""
+"""CLI: validate | rehash | synth | build | analyse | facts | report | diff [REF] | verify-live [--write]"""
 
 from __future__ import annotations
 
@@ -6,11 +6,12 @@ import hashlib
 import json
 import sys
 
-from . import agreement, calibration, robustness
+from . import agreement, calibration, facts, robustness
 from .diff import diff as payload_diff
 from .diff import load_at, load_current
 from .io import REAL, ROOT, load_real
 from .questions import questions
+from .render import render
 from .score import score
 from .sensitivity import summary, sweep
 from .status import status
@@ -102,6 +103,31 @@ def cmd_analyse() -> int:
     return 0
 
 
+def cmd_facts() -> int:
+    """Write results/facts.json: every number the documents are allowed to cite."""
+    path = facts.write()
+    print(f"wrote {path.relative_to(ROOT).as_posix()}")
+    return 0
+
+
+TEMPLATES = ROOT / "pipeline" / "templates"
+REPORTS = {"EVALUATION.md": ROOT / "docs" / "EVALUATION.md"}
+
+
+def render_reports() -> dict:
+    fx = facts.compute()
+    return {out: render((TEMPLATES / name).read_text(encoding="utf-8"), fx) for name, out in REPORTS.items()}
+
+
+def cmd_report() -> int:
+    """Refresh results/facts.json, then render docs/EVALUATION.md from its template and the facts."""
+    facts.write()
+    for out, text in render_reports().items():
+        out.write_text(text, encoding="utf-8", newline="\n")
+        print(f"wrote {out.relative_to(ROOT).as_posix()}")
+    return 0
+
+
 def cmd_diff(args: list[str]) -> int:
     """python -m pipeline diff [REF]: commitment, status, band and verification changes since REF."""
     ref = args[0] if args else "HEAD~1"
@@ -180,7 +206,7 @@ def cmd_build() -> int:
 def main(argv: list[str]) -> int:
     cmds = {
         "validate": cmd_validate, "rehash": cmd_rehash, "synth": cmd_synth,
-        "build": cmd_build, "analyse": cmd_analyse,
+        "build": cmd_build, "analyse": cmd_analyse, "facts": cmd_facts, "report": cmd_report,
     }
     if len(argv) >= 2 and argv[1] == "diff":
         return cmd_diff(argv[2:])
