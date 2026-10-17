@@ -2,25 +2,25 @@
 
 Milestones are listed with their intended tag. Tag pushes were blocked by the build environment's git policy, so tags are created locally with `scripts/tag-milestones.sh` (it maps each tag to its commit SHA).
 
-## v1.4.0: ATRC review round
+## v1.4.0: programme office lens review round
 - Portfolio page: per-entity share under six definitions, rank under each and rank range
 - Uploaded CSV now kept across pages
 - Pilot plan, risk register (checked by script), sources policy, corrections process with issue template, compliance mapping, roadmap with decision points, team-service design (not built), CONTRIBUTING and PR template
 
-## v1.3.0: TII review round
+## v1.3.0: research institute lens review round
 - `python -m pipeline analyse`: 540-registry robustness study, score calibration (band cut-offs, random weights, leave-one-out), agreement with the blind second pass (bootstrap intervals), consistency check of fields against wording
 - New Assurance page (EN/AR); home page now states that the verdict flip depends on adoption level
 - Findings reported as found: maturity threshold drives most of the spread; two score checks are almost never passed; band edges are fragile
 - Definition axes config with rationale, CITATION.cff, tag-driven release workflow, CSV cap test
 
-## v1.2.0: EDGE review round
+## v1.2.0: defence technology lens review round
 - Self-hosted fonts, strict CSP (meta and headers), zero third-party requests (tested)
 - Single-file offline build with hash-pinned CSP; opens from file://
 - Playwright smoke and axe accessibility tests (EN/AR, light/dark); contrast and table-role fixes
 - docs/SECURITY.md (STRIDE), traceability matrix and checker, SBOMs, lock file, Dockerfile, `make reproduce`
 - `python -m pipeline diff REF`; CSV export neutralises formula injection; dev dependencies upgraded (0 audit findings)
 
-## v1.1.0: ADEO review round
+## v1.1.0: executive office lens review round
 - Live verifier (`verify-live`), search log and coverage, evidence staleness, data-as-of and payload hash
 - Home page leads with a tile map of the 25 real commitments; synthetic illustration moved second
 - Neutral band names; questions for the entity (EN/AR); shareable URL state; CSV column mapper and quality report; sortable and groupable ledger; EN/AR parity test; weekly drift workflow

@@ -1,6 +1,6 @@
 # Proposal sketch: Mutabaa for an executive office
 
-**Problem.** Federal and Abu Dhabi AI-transformation targets are stated as percentages and counts, but the terms that make them countable (what is a service, what is agentic, what is the denominator) are not defined. An office tasked with tracking them cannot tell a hard number from a soft one.
+**Problem.** Federal and Abu Dhabi AI transformation targets are stated as percentages and counts, but the terms that make them countable (what is a service, what is agentic, what is the denominator) are not defined. An office tasked with tracking them cannot tell a hard number from a soft one.
 
 **What it gives an analyst.**
 - A ledger of commitments, each graded for how checkable it is and traced to a source.
@@ -16,7 +16,7 @@
 **Earlier sketch (6 weeks).**
 1. Week 1: agree the definition axes and the maturity ladder with the office. Replace ours with any official classification.
 2. Weeks 2 to 3: load an internal service inventory for two entities. Run the Definition Lab on real data inside the office's environment.
-3. Weeks 4 to 5: add the entity self-assessment form and an approval workflow; connect to internal evidence sources.
+3. Weeks 4 to 5: add the entity self assessment form and an approval workflow; connect to internal evidence sources.
 4. Week 6: review with leadership. Decide what to publish.
 
 **What is needed from the office.** A service inventory with the columns in the template; named reviewers for the extraction notes; a decision on hosting (the app is static and runs without a server).

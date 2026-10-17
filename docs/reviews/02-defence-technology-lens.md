@@ -1,4 +1,6 @@
-# Review 2: an AI engineer at a defence and advanced-technology group (EDGE lens)
+# Review 2: an AI engineer at a defence and advanced technology group (defence technology lens)
+
+This lens is simulated from public information about the kind of organisation described. It was written by the author, implies no affiliation with any organisation, and does not represent the view of any organisation.
 
 Simulated critique, written from public information about how such organisations evaluate software, not from inside knowledge. Reviewed: v1.1.0.
 
@@ -12,10 +14,10 @@ Simulated critique, written from public information about how such organisations
 | B1 | High | The page makes third-party requests (Google Fonts) | `site/index.html` | Blocked on a closed network; leaks that the page was opened; breaks the "no network" claim |
 | B2 | High | No Content-Security-Policy or other headers | No headers file | Cannot pass a basic web review |
 | B3 | High | No threat model | Nothing in `docs/` | I need to see what was considered, including the CSV upload |
-| B4 | High | Cannot run from a file or a USB stick | Module scripts and fonts need a server | The air-gapped profile (B) is claimed in the plan but not delivered |
+| B4 | High | Cannot run from a file or a USB stick | Module scripts and fonts need a server | The air gapped profile (B) is claimed in the plan but not delivered |
 | B5 | Medium | No software bill of materials; no dependency audit | Not generated | Procurement asks for it first |
 | B6 | Medium | Python dependencies are ranges; no lock; no container | `pyproject.toml` | Results should be the same on any machine |
-| B7 | Medium | No browser-level tests, no accessibility audit | Unit tests only | A UI regression or an accessibility failure ships unnoticed |
+| B7 | Medium | No browser level tests, no accessibility audit | Unit tests only | A UI regression or an accessibility failure ships unnoticed |
 | B8 | Medium | No traceability from requirement to test | None | Assurance needs "which test covers this claim" |
 | B9 | Medium | No way to see what changed between two data versions | Single snapshot | A quietly edited target should be visible |
 | B10 | Low | Verifier network behaviour is undocumented | Code only | A reviewer needs to see exactly what leaves the machine, and when |

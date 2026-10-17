@@ -19,7 +19,7 @@ Mutabaa is a method demonstration built on public information. Read this before 
 
 ## Extraction quality
 
-- Extraction was done by a language model. Quality is reported in `docs/EVALUATION.md` as agreement between two independent extraction passes and against a hand-checked set. That is **inter-extractor agreement, not independent human validation.** Treat it as an upper-bound sanity check.
+- Extraction was done by a language model. Quality is reported in `docs/EVALUATION.md` as agreement between two independent extraction passes and against a hand checked set. That is **inter-extractor agreement, not independent human validation.** Treat it as an upper-bound sanity check.
 - Arabic text in the product was written by a language model and has not been reviewed by a native-speaking domain expert. Review before any external use.
 
 ## Definition Lab
@@ -30,5 +30,5 @@ Mutabaa is a method demonstration built on public information. Read this before 
 
 ## Scope
 
-- Focused on AI-transformation targets (federal and Abu Dhabi). Other domains are out of scope for now.
+- Focused on AI transformation targets (federal and Abu Dhabi). Other domains are out of scope for now.
 - Static snapshot. Data updates are reviewed commits; there is no live scraping.

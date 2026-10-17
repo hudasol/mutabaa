@@ -1,6 +1,6 @@
 # Sources policy
 
-Not legal advice. Needs review by counsel before any external use (open item in `docs/reviews/04-atrc.md`).
+Not legal advice. Needs review by counsel before any external use (open item in `docs/reviews/04-programme-office-lens.md`).
 
 ## What is stored
 - A short extraction **note** written by the maintainer in their own words, for each source page.
