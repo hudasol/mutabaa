@@ -9,6 +9,7 @@ Milestones are listed with their tag. Tags up to v1.4.0 were first created local
 - Decision records in `docs/adr/`, `docs/DATA_STATEMENT.md`, `docs/DECISIONS.md`
 - Preregistered evaluation (`PREREGISTRATION.md`, `python -m pipeline evaluate`): four experiments, each prediction marked HIT or MISS; a second synthetic generator; Portfolio and Assurance text changed where the results required it
 - My commitments page: an office scores its own commitments in the browser, with questions in English and Arabic; TypeScript score and questions held to Python by golden files
+- Independent review acted on: disclaimer footer on phones and in print, print colours under the dark theme, the live verifier reads robots.txt, Python 3.12 floor, a portfolio golden file, synthetic label tests on every page, translated interface labels, an error boundary; rejected findings are listed in `docs/DECISIONS.md`
 - Fixes: content hashes no longer depend on checkout line endings; `pipeline diff` now reports target changes and reads Arabic on Windows; the strip chart has a table alternative; synthetic entity names follow the reader's language
 
 ## v1.4.0: programme office lens review round
