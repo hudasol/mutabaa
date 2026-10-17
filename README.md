@@ -66,7 +66,7 @@ cd site && npm install && npm test && npm run dev
 
 ```
 data/real/        sources, commitments, evidence, claims, extraction notes (hashed)
-data/synthetic/   labelled synthetic registry + DATASHEET.md
+data/synthetic/   labelled synthetic registry (described in docs/DATA_STATEMENT.md)
 data/golden/      sensitivity results that the Python and TypeScript engines must both match
 pipeline/         Python reference: schemas, validate, score, status, synth, sensitivity
 site/             Vite + React + TypeScript app (English / Arabic)

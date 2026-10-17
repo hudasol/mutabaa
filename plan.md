@@ -67,7 +67,7 @@ None of this is criticism. These are normal properties of announcements. But a s
 | Data | Type | Rule |
 |---|---|---|
 | Commitments, milestones, evidence | **Real, public** | Official government sources first; secondary sources are graded lower and marked. Short anchors only; no republishing of source text. |
-| Service/operation registry | **Synthetic** | Generic archetype entities (never real entity names), seeded generator, documented in `docs/DATASHEET.md`. Every record carries `is_synthetic: true`; the UI shows a persistent badge; real and synthetic figures are never combined into one number. |
+| Service/operation registry | **Synthetic** | Generic archetype entities (never real entity names), seeded generator, documented in `docs/DATA_STATEMENT.md`. Every record carries `is_synthetic: true`; the UI shows a persistent badge; real and synthetic figures are never combined into one number. |
 | User-uploaded CSV | **User data** | Parsed client side only; validated against the schema; never sent anywhere. |
 
 Synthetic data is labelled unambiguously and documented (purpose, generation process, limits), following published guidance on documenting synthetic collections.
@@ -110,7 +110,7 @@ mutabaa/
 ├─ pipeline/        Python 3.11+: schemas, validate, score, status, synth, sensitivity, build
 ├─ tests/           pytest
 ├─ site/            Vite + React + TypeScript; EN/AR (RTL); engine mirrored in TS
-└─ docs/            METHODOLOGY, DATASHEET, RUBRIC, LIMITATIONS, REVIEW_CHECKLIST
+└─ docs/            METHODOLOGY, DATA_STATEMENT, LIMITATIONS, REVIEW_CHECKLIST, adr/
 ```
 
 **Pipeline:** collect (official sources, stored as notes with a hash), extract (structured JSON), validate (schema; every anchor in a record must appear in its source notes), score, status, synth, sensitivity, build site data.

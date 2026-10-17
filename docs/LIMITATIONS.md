@@ -4,7 +4,7 @@ Mutabaa is a method demonstration built on public information. Read this before 
 
 ## What this is not
 
-- **Not a measurement of any real entity.** Real service inventories at entity level are not public. The registry used by the Definition Lab is **synthetic** (generic archetype entities, a seeded generator, documented in `DATASHEET.md`). Findings from it are about *structure* (how much a headline percentage depends on its definition), not about where any real entity sits.
+- **Not a measurement of any real entity.** Real service inventories at entity level are not public. The registry used by the Definition Lab is **synthetic** (generic archetype entities, a seeded generator, documented in `DATA_STATEMENT.md`). Findings from it are about *structure* (how much a headline percentage depends on its definition), not about where any real entity sits.
 - **Not an assessment of government performance.** A status of `no-public-evidence` means "nothing public was found that maps to this target", not "not done". Internal tracking (for example, by a supervisory office) will know more than public sources do.
 - **Not an official standard.** The L0 to L4 maturity ladder and the verifiability checks are proposals made for this project.
 
