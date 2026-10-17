@@ -19,7 +19,7 @@ export default function Sources() {
                     <div className="small"><span lang="en">{s.publisher}</span>{s.ai_assisted ? ` · ${t.so_ai}` : ""}</div></td>
                   <td><span className={`chip${s.kind === "secondary-media" ? " media" : ""}`}>{t.src_kind[s.kind]}</span></td>
                   <td>{s.published ?? <span className="muted">{t.so_undated}</span>}</td>
-                  <td><VerifyChip sourceId={s.id} />{v?.error && <div className="small muted">{v.error.slice(0, 70)}</div>}</td>
+                  <td><VerifyChip sourceId={s.id} />{v?.error && <div className="small muted" lang="en" dir="ltr">{v.error.slice(0, 70)}</div>}</td>
                   <td className="small">{v ? `${v.checked_present} + ${v.checked_absent}` : `${s.expect_present.length} + ${s.expect_absent.length}`}</td>
                 </tr>
               );
