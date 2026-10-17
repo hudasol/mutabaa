@@ -1,0 +1,279 @@
+{
+ "agreement.blind_items": {
+  "text": "46",
+  "value": 46
+ },
+ "agreement.missed": {
+  "text": "C06, C09, C16",
+  "value": [
+   "C06",
+   "C09",
+   "C16"
+  ]
+ },
+ "agreement.numeric_recall.ci_high": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "agreement.numeric_recall.ci_low": {
+  "text": "64%",
+  "value": 0.6429
+ },
+ "agreement.numeric_recall.found": {
+  "text": "12",
+  "value": 12
+ },
+ "agreement.numeric_recall.n": {
+  "text": "14",
+  "value": 14
+ },
+ "agreement.numeric_recall.rate": {
+  "text": "86%",
+  "value": 0.857
+ },
+ "agreement.recall.ci_high": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "agreement.recall.ci_low": {
+  "text": "72%",
+  "value": 0.72
+ },
+ "agreement.recall.found": {
+  "text": "22",
+  "value": 22
+ },
+ "agreement.recall.n": {
+  "text": "25",
+  "value": 25
+ },
+ "agreement.recall.rate": {
+  "text": "88%",
+  "value": 0.88
+ },
+ "bands.fully": {
+  "text": "2",
+  "value": 2
+ },
+ "bands.partly": {
+  "text": "10",
+  "value": 10
+ },
+ "bands.under": {
+  "text": "13",
+  "value": 13
+ },
+ "calibration.bands.max_changed": {
+  "text": "9",
+  "value": 9
+ },
+ "calibration.bands.n": {
+  "text": "25",
+  "value": 25
+ },
+ "calibration.consistency.dated_deadline.agree": {
+  "text": "22",
+  "value": 22
+ },
+ "calibration.consistency.dated_deadline.ci_high": {
+  "text": "1.00",
+  "value": 1.0
+ },
+ "calibration.consistency.dated_deadline.ci_low": {
+  "text": "0.44",
+  "value": 0.4372
+ },
+ "calibration.consistency.dated_deadline.kappa": {
+  "text": "0.75",
+  "value": 0.746
+ },
+ "calibration.consistency.dated_deadline.n": {
+  "text": "25",
+  "value": 25
+ },
+ "calibration.consistency.disagreements": {
+  "text": "C01, C10, C14, C24",
+  "value": [
+   "C01",
+   "C10",
+   "C14",
+   "C24"
+  ]
+ },
+ "calibration.consistency.numeric_target.agree": {
+  "text": "16",
+  "value": 16
+ },
+ "calibration.consistency.numeric_target.ci_high": {
+  "text": "1.00",
+  "value": 1.0
+ },
+ "calibration.consistency.numeric_target.ci_low": {
+  "text": "0.00",
+  "value": 0.0
+ },
+ "calibration.consistency.numeric_target.kappa": {
+  "text": "0.61",
+  "value": 0.609
+ },
+ "calibration.consistency.numeric_target.n": {
+  "text": "18",
+  "value": 18
+ },
+ "calibration.leave_one_out.measurement_source": {
+  "text": "0.999",
+  "value": 0.999
+ },
+ "calibration.leave_one_out.terms_defined": {
+  "text": "1.000",
+  "value": 1.0
+ },
+ "calibration.pass_rate.measurement_source": {
+  "text": "8%",
+  "value": 0.08
+ },
+ "calibration.pass_rate.terms_defined": {
+  "text": "4%",
+  "value": 0.04
+ },
+ "calibration.weights.draws": {
+  "text": "1,000",
+  "value": 1000
+ },
+ "calibration.weights.spearman_median": {
+  "text": "0.94",
+  "value": 0.936
+ },
+ "calibration.weights.spearman_p05": {
+  "text": "0.52",
+  "value": 0.521
+ },
+ "claims.count": {
+  "text": "5",
+  "value": 5
+ },
+ "commitments.count": {
+  "text": "25",
+  "value": 25
+ },
+ "evidence.count": {
+  "text": "10",
+  "value": 10
+ },
+ "registry.entities": {
+  "text": "16",
+  "value": 16
+ },
+ "registry.items": {
+  "text": "573",
+  "value": 573
+ },
+ "robustness.effect.guardrails": {
+  "text": "19.6%",
+  "value": 0.1955
+ },
+ "robustness.effect.scope": {
+  "text": "0.5%",
+  "value": 0.0048
+ },
+ "robustness.effect.threshold": {
+  "text": "53.1%",
+  "value": 0.5307
+ },
+ "robustness.effect.unit": {
+  "text": "5.9%",
+  "value": 0.0593
+ },
+ "robustness.flip_rate": {
+  "text": "80%",
+  "value": 0.8
+ },
+ "robustness.flip_rate.high": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "robustness.flip_rate.low": {
+  "text": "40%",
+  "value": 0.4
+ },
+ "robustness.flip_rate.mid": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "robustness.registries": {
+  "text": "540",
+  "value": 540
+ },
+ "robustness.spread.median": {
+  "text": "80%",
+  "value": 0.7998
+ },
+ "searches.count": {
+  "text": "12",
+  "value": 12
+ },
+ "sources.count": {
+  "text": "14",
+  "value": 14
+ },
+ "sources.media": {
+  "text": "4",
+  "value": 4
+ },
+ "sources.official": {
+  "text": "10",
+  "value": 10
+ },
+ "sources.official_self_report": {
+  "text": "3",
+  "value": 3
+ },
+ "sources.official_statement": {
+  "text": "7",
+  "value": 7
+ },
+ "sources.unreachable": {
+  "text": "3",
+  "value": 3
+ },
+ "sources.verified": {
+  "text": "11",
+  "value": 11
+ },
+ "status.activity-reported": {
+  "text": "5",
+  "value": 5
+ },
+ "status.milestone-reported": {
+  "text": "0",
+  "value": 0
+ },
+ "status.no-public-evidence": {
+  "text": "15",
+  "value": 15
+ },
+ "status.not-checkable": {
+  "text": "5",
+  "value": 5
+ },
+ "status.target-claimed-met": {
+  "text": "0",
+  "value": 0
+ },
+ "sweep.definitions": {
+  "text": "72",
+  "value": 72
+ },
+ "sweep.max": {
+  "text": "88%",
+  "value": 0.875
+ },
+ "sweep.meet_half": {
+  "text": "17",
+  "value": 17
+ },
+ "sweep.min": {
+  "text": "0%",
+  "value": 0.0
+ }
+}

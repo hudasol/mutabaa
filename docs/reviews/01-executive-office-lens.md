@@ -42,4 +42,4 @@ This is a simulated critique from the point of view of an analyst-engineer whose
 - [x] A11 Sortable ledger columns. Test: e2e later; unit test on sorter.
 
 ## Outcome (v1.1.0)
-All items done. Evidence: 36 Python tests and 17 site tests pass; `verify-live` verified 11 of 14 sources (S10, S11, S12 unreachable, reported as such); screenshots reviewed in light, dark, Arabic and mobile. Not done: end to end browser test for ledger sort (unit-tested only).
+All items done. Evidence: the full Python and site test suites passed at that version; `verify-live` verified 11 of 14 sources at the time (S10, S11, S12 unreachable, reported as such; the current count is in `results/facts.json`); screenshots reviewed in light, dark, Arabic and mobile. Not done: end to end browser test for ledger sort (unit-tested only).
