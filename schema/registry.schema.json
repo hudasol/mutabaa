@@ -1,0 +1,191 @@
+{
+ "$defs": {
+  "RegistryMeta": {
+   "additionalProperties": false,
+   "properties": {
+    "disclaimer": {
+     "title": "Disclaimer",
+     "type": "string"
+    },
+    "generator_version": {
+     "title": "Generator Version",
+     "type": "string"
+    },
+    "is_synthetic": {
+     "const": true,
+     "default": true,
+     "title": "Is Synthetic",
+     "type": "boolean"
+    },
+    "seed": {
+     "title": "Seed",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "seed",
+    "generator_version",
+    "disclaimer"
+   ],
+   "title": "RegistryMeta",
+   "type": "object"
+  },
+  "ServiceItem": {
+   "additionalProperties": false,
+   "properties": {
+    "annual_transactions": {
+     "minimum": 0,
+     "title": "Annual Transactions",
+     "type": "integer"
+    },
+    "audience": {
+     "enum": [
+      "citizen",
+      "business",
+      "internal"
+     ],
+     "title": "Audience",
+     "type": "string"
+    },
+    "audit_trail": {
+     "title": "Audit Trail",
+     "type": "boolean"
+    },
+    "entity_id": {
+     "title": "Entity Id",
+     "type": "string"
+    },
+    "fallback": {
+     "title": "Fallback",
+     "type": "boolean"
+    },
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "is_synthetic": {
+     "const": true,
+     "default": true,
+     "title": "Is Synthetic",
+     "type": "boolean"
+    },
+    "kind": {
+     "enum": [
+      "service",
+      "operation"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "maturity": {
+     "enum": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "title": "Maturity",
+     "type": "integer"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "oversight": {
+     "title": "Oversight",
+     "type": "boolean"
+    },
+    "sector": {
+     "title": "Sector",
+     "type": "string"
+    },
+    "uae_residency": {
+     "title": "Uae Residency",
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "id",
+    "entity_id",
+    "sector",
+    "kind",
+    "audience",
+    "name",
+    "annual_transactions",
+    "maturity",
+    "oversight",
+    "audit_trail",
+    "uae_residency",
+    "fallback"
+   ],
+   "title": "ServiceItem",
+   "type": "object"
+  },
+  "SyntheticEntity": {
+   "additionalProperties": false,
+   "properties": {
+    "advancement": {
+     "maximum": 1.0,
+     "minimum": 0.0,
+     "title": "Advancement",
+     "type": "number"
+    },
+    "id": {
+     "pattern": "^SE\\d{2}$",
+     "title": "Id",
+     "type": "string"
+    },
+    "is_synthetic": {
+     "const": true,
+     "default": true,
+     "title": "Is Synthetic",
+     "type": "boolean"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "sector": {
+     "title": "Sector",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id",
+    "name",
+    "sector",
+    "advancement"
+   ],
+   "title": "SyntheticEntity",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "entities": {
+   "items": {
+    "$ref": "#/$defs/SyntheticEntity"
+   },
+   "title": "Entities",
+   "type": "array"
+  },
+  "items": {
+   "items": {
+    "$ref": "#/$defs/ServiceItem"
+   },
+   "title": "Items",
+   "type": "array"
+  },
+  "meta": {
+   "$ref": "#/$defs/RegistryMeta"
+  }
+ },
+ "required": [
+  "meta",
+  "entities",
+  "items"
+ ],
+ "title": "Registry",
+ "type": "object"
+}

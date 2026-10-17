@@ -1,0 +1,68 @@
+{
+ "additionalProperties": false,
+ "description": "One search we ran. Lets 'no public evidence' mean 'searched here, on this date, found nothing'.",
+ "properties": {
+  "commitment_ids": {
+   "items": {
+    "type": "string"
+   },
+   "minItems": 1,
+   "title": "Commitment Ids",
+   "type": "array"
+  },
+  "found_source_ids": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Found Source Ids",
+   "type": "array"
+  },
+  "id": {
+   "pattern": "^Q\\d{2}$",
+   "title": "Id",
+   "type": "string"
+  },
+  "note": {
+   "default": "",
+   "title": "Note",
+   "type": "string"
+  },
+  "outcome": {
+   "enum": [
+    "progress-found",
+    "target-restatement-only",
+    "nothing-official-found"
+   ],
+   "title": "Outcome",
+   "type": "string"
+  },
+  "query": {
+   "title": "Query",
+   "type": "string"
+  },
+  "searched_on": {
+   "format": "date",
+   "title": "Searched On",
+   "type": "string"
+  },
+  "tool": {
+   "enum": [
+    "WebSearch",
+    "WebFetch",
+    "shell"
+   ],
+   "title": "Tool",
+   "type": "string"
+  }
+ },
+ "required": [
+  "id",
+  "searched_on",
+  "tool",
+  "query",
+  "commitment_ids",
+  "outcome"
+ ],
+ "title": "SearchEntry",
+ "type": "object"
+}

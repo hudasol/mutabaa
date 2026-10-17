@@ -52,6 +52,8 @@ export type Item = {
   id: string; entity_id: string; sector: string; kind: "service" | "operation";
   audience: "citizen" | "business" | "internal"; name: string; annual_transactions: number;
   maturity: 0 | 1 | 2 | 3 | 4; oversight: boolean; audit_trail: boolean; uae_residency: boolean; fallback: boolean;
+  // Present and true on every generated record. Items read from a user's own file carry no flag.
+  is_synthetic?: true;
 };
 export type Registry = {
   meta: { seed: number; generator_version: string; is_synthetic: true; disclaimer: string };

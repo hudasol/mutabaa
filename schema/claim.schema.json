@@ -1,0 +1,68 @@
+{
+ "additionalProperties": false,
+ "description": "A media-reported figure we checked against official statements and did not treat as fact.",
+ "properties": {
+  "anchor": {
+   "title": "Anchor",
+   "type": "string"
+  },
+  "commitment_ids": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Commitment Ids",
+   "type": "array"
+  },
+  "corroboration": {
+   "enum": [
+    "official-confirmed",
+    "single-source",
+    "not-in-official-statement"
+   ],
+   "title": "Corroboration",
+   "type": "string"
+  },
+  "id": {
+   "pattern": "^K\\d{2}$",
+   "title": "Id",
+   "type": "string"
+  },
+  "note": {
+   "default": "",
+   "title": "Note",
+   "type": "string"
+  },
+  "official_sources_checked": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Official Sources Checked",
+   "type": "array"
+  },
+  "source_id": {
+   "pattern": "^S\\d{2}$",
+   "title": "Source Id",
+   "type": "string"
+  },
+  "text": {
+   "maxLength": 300,
+   "title": "Text",
+   "type": "string"
+  },
+  "text_ar": {
+   "maxLength": 400,
+   "title": "Text Ar",
+   "type": "string"
+  }
+ },
+ "required": [
+  "id",
+  "text",
+  "text_ar",
+  "source_id",
+  "anchor",
+  "corroboration"
+ ],
+ "title": "Claim",
+ "type": "object"
+}

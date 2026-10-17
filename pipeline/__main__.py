@@ -1,4 +1,5 @@
-"""CLI: validate | rehash | synth | build | analyse | facts | report | diff [REF] | verify-live [--write]"""
+"""CLI: validate | rehash | synth | build | analyse | facts | report | schema
+     | diff [REF] | verify-live [--write]"""
 
 from __future__ import annotations
 
@@ -6,7 +7,7 @@ import hashlib
 import json
 import sys
 
-from . import agreement, calibration, facts, robustness
+from . import agreement, calibration, facts, robustness, schema_export
 from .diff import diff as payload_diff
 from .diff import load_at, load_current
 from .io import REAL, ROOT, load_real
@@ -106,7 +107,7 @@ def cmd_analyse() -> int:
 def cmd_facts() -> int:
     """Write results/facts.json: every number the documents are allowed to cite."""
     path = facts.write()
-    print(f"wrote {path.relative_to(ROOT).as_posix()}")
+    print(f"wrote {path}")
     return 0
 
 
@@ -124,7 +125,14 @@ def cmd_report() -> int:
     facts.write()
     for out, text in render_reports().items():
         out.write_text(text, encoding="utf-8", newline="\n")
-        print(f"wrote {out.relative_to(ROOT).as_posix()}")
+        print(f"wrote {out}")
+    return 0
+
+
+def cmd_schema() -> int:
+    """Write JSON Schema files for the shared models to schema/."""
+    for p in schema_export.write(ROOT / "schema"):
+        print(f"wrote {p.relative_to(ROOT).as_posix()}")
     return 0
 
 
@@ -207,6 +215,7 @@ def main(argv: list[str]) -> int:
     cmds = {
         "validate": cmd_validate, "rehash": cmd_rehash, "synth": cmd_synth,
         "build": cmd_build, "analyse": cmd_analyse, "facts": cmd_facts, "report": cmd_report,
+        "schema": cmd_schema,
     }
     if len(argv) >= 2 and argv[1] == "diff":
         return cmd_diff(argv[2:])

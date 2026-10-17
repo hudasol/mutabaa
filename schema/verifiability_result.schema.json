@@ -1,0 +1,61 @@
+{
+ "properties": {
+  "applicable": {
+   "title": "Applicable",
+   "type": "integer"
+  },
+  "band": {
+   "enum": [
+    "checkable",
+    "partly-checkable",
+    "not-yet-checkable"
+   ],
+   "title": "Band",
+   "type": "string"
+  },
+  "checks": {
+   "additionalProperties": {
+    "anyOf": [
+     {
+      "type": "boolean"
+     },
+     {
+      "type": "null"
+     }
+    ]
+   },
+   "title": "Checks",
+   "type": "object"
+  },
+  "commitment_id": {
+   "title": "Commitment Id",
+   "type": "string"
+  },
+  "missing": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Missing",
+   "type": "array"
+  },
+  "passed": {
+   "title": "Passed",
+   "type": "integer"
+  },
+  "ratio": {
+   "title": "Ratio",
+   "type": "number"
+  }
+ },
+ "required": [
+  "commitment_id",
+  "checks",
+  "applicable",
+  "passed",
+  "ratio",
+  "band",
+  "missing"
+ ],
+ "title": "VerifiabilityResult",
+ "type": "object"
+}

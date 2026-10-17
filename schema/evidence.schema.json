@@ -1,0 +1,133 @@
+{
+ "additionalProperties": false,
+ "properties": {
+  "anchor": {
+   "title": "Anchor",
+   "type": "string"
+  },
+  "as_of": {
+   "anyOf": [
+    {
+     "format": "date",
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "As Of"
+  },
+  "as_of_note": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "As Of Note"
+  },
+  "commitment_ids": {
+   "items": {
+    "type": "string"
+   },
+   "minItems": 1,
+   "title": "Commitment Ids",
+   "type": "array"
+  },
+  "corroboration": {
+   "default": "official-confirmed",
+   "enum": [
+    "official-confirmed",
+    "single-source",
+    "not-in-official-statement"
+   ],
+   "title": "Corroboration",
+   "type": "string"
+  },
+  "id": {
+   "pattern": "^E\\d{2}$",
+   "title": "Id",
+   "type": "string"
+  },
+  "kind": {
+   "enum": [
+    "activity",
+    "quantified-progress",
+    "target-met-claim"
+   ],
+   "title": "Kind",
+   "type": "string"
+  },
+  "note": {
+   "default": "",
+   "title": "Note",
+   "type": "string"
+  },
+  "source_id": {
+   "pattern": "^S\\d{2}$",
+   "title": "Source Id",
+   "type": "string"
+  },
+  "summary": {
+   "maxLength": 400,
+   "title": "Summary",
+   "type": "string"
+  },
+  "summary_ar": {
+   "maxLength": 500,
+   "title": "Summary Ar",
+   "type": "string"
+  },
+  "unit": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Unit"
+  },
+  "value": {
+   "anyOf": [
+    {
+     "type": "number"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Value"
+  },
+  "value_text": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Value Text"
+  }
+ },
+ "required": [
+  "id",
+  "commitment_ids",
+  "kind",
+  "summary",
+  "summary_ar",
+  "source_id",
+  "anchor"
+ ],
+ "title": "Evidence",
+ "type": "object"
+}
