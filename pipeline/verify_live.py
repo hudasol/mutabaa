@@ -18,10 +18,12 @@ import re
 import time
 import urllib.error
 import urllib.request
+import urllib.robotparser
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from html.parser import HTMLParser
+from urllib.parse import urlsplit
 
 from .schemas import Source
 
@@ -105,7 +107,36 @@ def _fetch_once(url: str, timeout: int) -> Fetched:
         return Fetched(None, "", f"{type(e).__name__}: {e}")
 
 
-def check_source(src: Source, fetch: Fetcher = http_fetch) -> dict:
+def robots_allows(url: str, fetch: Fetcher, cache: dict[str, urllib.robotparser.RobotFileParser]) -> bool:
+    """Read the host's robots.txt with the same fetcher. 401 or 403 forbids; other failures allow."""
+    parts = urlsplit(url)
+    host = f"{parts.scheme}://{parts.netloc}"
+    if host not in cache:
+        rp = urllib.robotparser.RobotFileParser()
+        f = fetch(host + "/robots.txt")
+        if f.status in (401, 403):
+            rp.disallow_all = True
+        elif f.status == 200 and f.body:
+            rp.parse(f.body.splitlines())
+        else:
+            rp.allow_all = True
+        cache[host] = rp
+    return cache[host].can_fetch(USER_AGENT, url)
+
+
+def check_source(src: Source, fetch: Fetcher = http_fetch, robots: dict | None = None) -> dict:
+    if not robots_allows(src.url, fetch, {} if robots is None else robots):
+        return {
+            "checked_at": datetime.now(UTC).strftime("%Y-%m-%d"),
+            "url": src.url,
+            "http_status": None,
+            "checked_present": len(src.expect_present),
+            "checked_absent": len(src.expect_absent),
+            "result": "unreachable",
+            "error": "disallowed by robots.txt",
+            "missing": [],
+            "unexpected": [],
+        }
     f = fetch(src.url)
     base = {
         "checked_at": datetime.now(UTC).strftime("%Y-%m-%d"),
@@ -147,8 +178,16 @@ def check_source(src: Source, fetch: Fetcher = http_fetch) -> dict:
     }
 
 
-def run(sources: list[Source], fetch: Fetcher = http_fetch, only: set[str] | None = None) -> dict:
-    results = {s.id: check_source(s, fetch) for s in sources if not only or s.id in only}
+def run(
+    sources: list[Source], fetch: Fetcher = http_fetch, only: set[str] | None = None, pause: float = 1.0
+) -> dict:
+    """Check each source in turn, honouring robots.txt and pausing between pages to keep the load light."""
+    robots: dict = {}
+    results = {}
+    for i, s in enumerate([s for s in sources if not only or s.id in only]):
+        if i and pause:
+            time.sleep(pause)
+        results[s.id] = check_source(s, fetch, robots)
     return {
         "run_at": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "tool_version": TOOL_VERSION,

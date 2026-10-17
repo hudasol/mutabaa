@@ -60,6 +60,47 @@ def test_run_filters_and_summarises(src):
     assert vl.dumps(rep).endswith("\n")
 
 
+def test_robots_disallow_is_reported_unreachable_and_the_page_is_not_fetched(src):
+    asked = []
+
+    def fetch(url):
+        asked.append(url)
+        if url.endswith("/robots.txt"):
+            return vl.Fetched(200, "User-agent: *\nDisallow: /")
+        return vl.Fetched(200, "<p>AED 13 billion 50%</p>")
+
+    r = vl.check_source(src, fetch)
+    assert r["result"] == "unreachable" and "robots" in r["error"]
+    assert all(u.endswith("/robots.txt") for u in asked)
+
+
+def test_robots_403_forbids_and_missing_robots_allows(src):
+    def forbid(url):
+        return vl.Fetched(403, "", "HTTP 403") if url.endswith("/robots.txt") else vl.Fetched(200, "<p>x</p>")
+
+    def missing(url):
+        if url.endswith("/robots.txt"):
+            return vl.Fetched(404, "", "HTTP 404")
+        return vl.Fetched(200, "<p>AED 13 billion 50%</p>")
+
+    assert vl.check_source(src, forbid)["error"] == "disallowed by robots.txt"
+    assert vl.check_source(src, missing)["result"] == "verified"
+
+
+def test_robots_file_is_read_once_per_host_and_runs_pause(src, monkeypatch):
+    asked, slept = [], []
+    monkeypatch.setattr(vl.time, "sleep", lambda s: slept.append(s))
+
+    def fetch(url):
+        asked.append(url)
+        return vl.Fetched(200, "<p>AED 13 billion 50%</p>")
+
+    two = [src, src.model_copy(update={"id": "S98"})]
+    vl.run(two, fetch=fetch)
+    assert sum(u.endswith("/robots.txt") for u in asked) == 1
+    assert slept == [1.0]
+
+
 def test_norm_treats_dashes_and_per_cent_alike():
     assert vl.norm("Fifty per cent \u2014 2025\u20132027") == vl.norm("fifty% - 2025-2027")
 
@@ -131,4 +172,6 @@ def test_requests_identify_the_tool_and_keep_tls_checks(monkeypatch):
     vl._fetch_once("https://example.org", 5)
     assert seen["ua"].startswith("MutabaaVerifier/")
     src = pathlib.Path(vl.__file__).read_text(encoding="utf-8")
-    assert "CERT_NONE" not in src and "check_hostname = False" not in src
+    unsafe_markers = ("CERT_NONE", "check_hostname = False", "_create_unverified", "verify_mode", "ssl.")
+    for unsafe in unsafe_markers:
+        assert unsafe not in src, unsafe
