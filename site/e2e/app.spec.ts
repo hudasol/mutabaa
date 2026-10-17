@@ -98,3 +98,10 @@ test("[workflow] an uploaded CSV is kept when moving between pages and shown in 
   await expect(page.locator(".banner.yours")).toBeVisible();
   await expect(page.locator("table.heat tbody tr")).toHaveCount(2);
 });
+
+for (const [lang, label] of [["en", "Exploratory, not preregistered"], ["ar", "استكشافية، غير مسجّلة مسبقاً"]] as const) {
+  test(`[honesty] the assurance page labels its analyses as exploratory (${lang})`, async ({ page }) => {
+    await open(page, "assurance", { lang });
+    await expect(page.getByRole("note").filter({ hasText: label })).toBeVisible();
+  });
+}

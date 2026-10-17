@@ -22,6 +22,7 @@ export default function Assurance() {
   return (
     <>
       <Head title={t.as_title} sub={t.as_sub} />
+      <p className="banner exploratory" role="note"><b>{t.as_exploratory_tag}.</b> {t.as_exploratory}</p>
       <section className="panel" aria-labelledby="rb-h">
         <div className="row-between"><h2 id="rb-h">{t.as_rob}</h2><span className="badge synthetic">{t.synthetic}</span></div>
         <p><b>{t.as_rob_text(rb.registries, pct(rb.flip_rate))}</b></p>

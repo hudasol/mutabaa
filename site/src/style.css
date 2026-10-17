@@ -56,6 +56,7 @@ main { padding: 2rem clamp(1rem, 4vw, 3.5rem) 4rem; display: grid; gap: 2rem; al
 .banner { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; padding: .6rem .9rem; border-radius: 8px; font-size: .9rem; }
 .banner.synthetic { background: var(--synthetic-bg); color: var(--synthetic); border: 1px solid var(--synthetic); }
 .banner.yours { background: var(--yours-bg); color: var(--yours); border: 1px solid var(--yours); }
+.banner.exploratory { display: block; background: var(--panel); color: var(--ink); border: 1px dashed var(--flag); max-width: none; margin-block: .5rem 1rem; }
 
 .pill { display: inline-flex; align-items: center; gap: .4rem; font-size: .82rem; font-weight: 600; white-space: nowrap; }
 .pill i { width: .7rem; height: .7rem; border-radius: 50%; background: var(--c); display: inline-block; }
