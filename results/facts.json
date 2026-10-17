@@ -436,6 +436,18 @@
   "text": "0.19",
   "value": 0.1909
  },
+ "evaluation.hits": {
+  "text": "12",
+  "value": 12
+ },
+ "evaluation.misses": {
+  "text": "2",
+  "value": 2
+ },
+ "evaluation.predictions": {
+  "text": "14",
+  "value": 14
+ },
  "evidence.count": {
   "text": "10",
   "value": 10
