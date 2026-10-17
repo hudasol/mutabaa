@@ -11,7 +11,7 @@ Simulated critique, written from public information about how such organisations
 
 | # | Severity | Finding | Evidence in v1.1.0 | Why it matters to me |
 |---|---|---|---|---|
-| B1 | High | The page makes third-party requests (Google Fonts) | `site/index.html` | Blocked on a closed network; leaks that the page was opened; breaks the "no network" claim |
+| B1 | High | The page makes third party requests (Google Fonts) | `site/index.html` | Blocked on a closed network; leaks that the page was opened; breaks the "no network" claim |
 | B2 | High | No Content-Security-Policy or other headers | No headers file | Cannot pass a basic web review |
 | B3 | High | No threat model | Nothing in `docs/` | I need to see what was considered, including the CSV upload |
 | B4 | High | Cannot run from a file or a USB stick | Module scripts and fonts need a server | The air gapped profile (B) is claimed in the plan but not delivered |
@@ -24,7 +24,7 @@ Simulated critique, written from public information about how such organisations
 
 ## Checklist (each item has an acceptance test)
 
-- [x] B1 Self-host fonts; no external URL anywhere in the build. Test: script scans `dist` for http(s) origins; browser test records zero third-party requests.
+- [x] B1 Self-host fonts; no external URL anywhere in the build. Test: script scans `dist` for http(s) origins; browser test records zero third party requests.
 - [x] B2 CSP and security headers shipped as `vercel.json` and a generic `_headers`; meta CSP in the page. Test: browser test loads with the policy and sees no violations.
 - [x] B3 `docs/SECURITY.md`: assets, trust boundaries, STRIDE table, CSV upload, supply chain, residual risks. Test: file exists and every threat has a mitigation or an accepted-risk note (checked by a script).
 - [x] B4 Single-file offline build that opens from `file://`. Test: browser test opens the file and sees the headline.
@@ -36,4 +36,4 @@ Simulated critique, written from public information about how such organisations
 - [x] B10 Document network behaviour of `verify-live` in SECURITY.md. Test: stated in the file.
 
 ## Outcome (v1.2.0)
-All items done. Evidence: the Python, unit and browser test suites passed at that version (0 serious or critical axe findings in EN/AR, light/dark; 0 third-party requests; offline file opens), `npm audit` reports 0 vulnerabilities, traceability check passes. Axe found real issues on the first run (low-contrast muted text, invalid table roles on the clocks page, opacity on excluded evidence); all fixed. Not done: Docker image was written but not built here (no Docker in this environment); `make reproduce` was not run end to end for the same reason, its steps were run individually.
+All items done. Evidence: the Python, unit and browser test suites passed at that version (0 serious or critical axe findings in EN/AR, light/dark; 0 third party requests; offline file opens), `npm audit` reports 0 vulnerabilities, traceability check passes. Axe found real issues on the first run (low-contrast muted text, invalid table roles on the clocks page, opacity on excluded evidence); all fixed. Not done: Docker image was written but not built here (no Docker in this environment); `make reproduce` was not run end to end for the same reason, its steps were run individually.

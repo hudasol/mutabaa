@@ -8,7 +8,7 @@ Can an office that oversees AI programmes use Mutabaa, on a registry it already 
 ## Scope
 - 12 weeks. One overseeing office, 3 to 5 entities that volunteer, one registry export each (service or operation name, entity, sector, audience, annual transactions, maturity level, four guardrail flags).
 - Profile B (static, offline) only. No data leaves the office's machines. No access to production systems.
-- Mutabaa's public-source ledger is shown beside the pilot data but never merged with it.
+- Mutabaa's public source ledger is shown beside the pilot data but never merged with it.
 
 ## Roles
 | Role | Does |

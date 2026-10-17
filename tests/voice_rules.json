@@ -9,16 +9,75 @@
     "docs/**/*.md",
     "data/synthetic/*.md"
   ],
-  "allowed_emoji": ["🌷", "🌸", "🍋", "🌿"],
-  "vendor_words": ["Claude", "Anthropic", "OpenAI", "Gemini", "Copilot", "ChatGPT", "GPT-4", "GPT-5", "Haiku", "Sonnet", "Mistral", "Llama"],
-  "university_patterns": ["universit(y|ies)", "MBZUAI", "\\bcollege\\b", "جامعة"],
-  "org_names": [
-    "ADEO", "EDGE", "TII", "ATRC", "DGE", "TDRA", "WAM", "G42", "Core42", "TAMM",
-    "Microsoft", "Gulf News", "AI News", "Cabinet", "Executive Office", "Media Office",
-    "Department of Government Enablement", "Technology Innovation Institute",
-    "Advanced Technology Research Council", "Higher Committee", "Prime Minister",
-    "Code for Africa", "PromiseTracker", "Mandate Letter Tracker", "bin Rashid", "bin Zayed", "Sheikh"
+  "allowed_emoji": [
+    "\ud83c\udf37",
+    "\ud83c\udf38",
+    "\ud83c\udf4b",
+    "\ud83c\udf3f"
   ],
-  "org_names_allowed_in": ["docs/CONTEXT.md"],
-  "em_dash_exempt_files": ["site/package-lock.json", "sbom/site.cdx.json", "sbom/python.cdx.json"]
+  "vendor_words": [
+    "Claude",
+    "Anthropic",
+    "OpenAI",
+    "Gemini",
+    "Copilot",
+    "ChatGPT",
+    "GPT-4",
+    "GPT-5",
+    "Haiku",
+    "Sonnet",
+    "Mistral",
+    "Llama"
+  ],
+  "university_patterns": [
+    "universit(y|ies)",
+    "MBZUAI",
+    "\\bcollege\\b",
+    "\u062c\u0627\u0645\u0639\u0629"
+  ],
+  "org_names": [
+    "ADEO",
+    "EDGE",
+    "TII",
+    "ATRC",
+    "DGE",
+    "TDRA",
+    "WAM",
+    "G42",
+    "Core42",
+    "TAMM",
+    "Microsoft",
+    "Gulf News",
+    "AI News",
+    "Cabinet",
+    "Executive Office",
+    "Media Office",
+    "Department of Government Enablement",
+    "Technology Innovation Institute",
+    "Advanced Technology Research Council",
+    "Higher Committee",
+    "Prime Minister",
+    "Code for Africa",
+    "PromiseTracker",
+    "Mandate Letter Tracker",
+    "bin Rashid",
+    "bin Zayed",
+    "Sheikh",
+    "Council of Ministers",
+    "Mubadala",
+    "Presight",
+    "ADNOC",
+    "Etisalat",
+    "Masdar",
+    "Aldar",
+    "Abu Dhabi Executive Office"
+  ],
+  "org_names_allowed_in": [
+    "docs/CONTEXT.md"
+  ],
+  "em_dash_exempt_files": [
+    "site/package-lock.json",
+    "sbom/site.cdx.json",
+    "sbom/python.cdx.json"
+  ]
 }

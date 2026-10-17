@@ -13,7 +13,7 @@ Scope: the static site (Profiles A and B in `docs/ARCHITECTURE.md`) and the Pyth
 - The build machine is trusted. The hosting platform is trusted to serve files, nothing more.
 
 ## Network behaviour
-- The site makes **zero** third-party requests: fonts are bundled, there is no analytics, no API call, no service worker. A browser test fails if any request leaves the origin.
+- The site makes **zero** third party requests: fonts are bundled, there is no analytics, no API call, no service worker. A browser test fails if any request leaves the origin.
 - `python -m pipeline verify-live` is the only code that uses the network. It sends plain GET requests to the URLs listed in `data/real/sources.json`, with an honest User-Agent, TLS verification on, retries with back-off, and no attempt to get around a refusal (a 403 is reported as *unreachable*). It sends no credentials and no data from the repository.
 
 ## Controls
@@ -36,7 +36,7 @@ Scope: the static site (Profiles A and B in `docs/ARCHITECTURE.md`) and the Pyth
 | T3 | Tampering: a source page changes after extraction | Weekly `verify-live`; `diff` command shows changes | Mitigated (detects, does not prevent) |
 | T4 | Tampering: a malicious CSV contains markup or formulas | Rendered as text by React; exports quote fields; CSV formula-injection prefixes are neutralised on export | Mitigated |
 | T5 | Repudiation: no record of who changed data | Git history; commit attribution; data-as-of and payload hash shown in the UI | Mitigated for the repository |
-| T6 | Information disclosure: the page tells a third party it was opened | No third-party requests; `no-referrer` | Mitigated |
+| T6 | Information disclosure: the page tells a third party it was opened | No third party requests; `no-referrer` | Mitigated |
 | T7 | Information disclosure: user CSV leaves the browser | No network code path for uploads; CSP `connect-src 'self'` | Mitigated |
 | T8 | Denial of service: a huge CSV freezes the tab | File-size cap and row cap with a visible message | See residual risks |
 | T9 | Elevation of privilege: dependency compromise | Pinned and locked versions, audit, SBOM, no runtime dependencies beyond React | Accepted risk (supply chain cannot be reduced to zero) |
