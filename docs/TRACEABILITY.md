@@ -40,3 +40,5 @@ Format: `| claim | test file :: test name |`. `scripts/check_traceability.py` fa
 | Preregistered results equal a fresh run | tests/test_evaluate.py :: test_committed_results_equal_a_fresh_run |
 | The Python layers import only downward | tests/test_layers.py :: test_no_lower_layer_imports_a_higher_one |
 | Generated JSON Schema files are current and match the TypeScript types | tests/test_schema.py :: test_typescript_types_match_schema_fields |
+| The strip chart has a table alternative | site/e2e/app.spec.ts :: has a table alternative with every definition |
+| Synthetic entity names follow the reader's language | site/e2e/app.spec.ts :: synthetic entity names follow the reader's language |
