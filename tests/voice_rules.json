@@ -1,0 +1,24 @@
+{
+  "_about": "Rules for tests/test_voice.py. Prose files are scanned for the patterns below. Real organisation names are allowed only in the files listed under org_names_allowed_in; data files and the generated UI payload are not prose and are not scanned.",
+  "prose_globs": [
+    "README.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "PREREGISTRATION.md",
+    "plan.md",
+    "docs/**/*.md",
+    "data/synthetic/*.md"
+  ],
+  "allowed_emoji": ["🌷", "🌸", "🍋", "🌿"],
+  "vendor_words": ["Claude", "Anthropic", "OpenAI", "Gemini", "Copilot", "ChatGPT", "GPT-4", "GPT-5", "Haiku", "Sonnet", "Mistral", "Llama"],
+  "university_patterns": ["universit(y|ies)", "MBZUAI", "\\bcollege\\b", "جامعة"],
+  "org_names": [
+    "ADEO", "EDGE", "TII", "ATRC", "DGE", "TDRA", "WAM", "G42", "Core42", "TAMM",
+    "Microsoft", "Gulf News", "AI News", "Cabinet", "Executive Office", "Media Office",
+    "Department of Government Enablement", "Technology Innovation Institute",
+    "Advanced Technology Research Council", "Higher Committee", "Prime Minister",
+    "Code for Africa", "PromiseTracker", "Mandate Letter Tracker", "bin Rashid", "bin Zayed", "Sheikh"
+  ],
+  "org_names_allowed_in": ["docs/CONTEXT.md"],
+  "em_dash_exempt_files": ["site/package-lock.json", "sbom/site.cdx.json", "sbom/python.cdx.json"]
+}
