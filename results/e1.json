@@ -1,0 +1,95 @@
+{
+ "auc": 0.72,
+ "baselines": {
+  "number_and_deadline": 0.45,
+  "numeric_target": 0.4,
+  "owner_named": 0.675
+ },
+ "ci95": [
+  0.4383,
+  0.953
+ ],
+ "facts": {
+  "P1a": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P1b": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P1c": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "auc": {
+   "format": "f2",
+   "value": 0.72
+  },
+  "baseline.number_and_deadline": {
+   "format": "f2",
+   "value": 0.45
+  },
+  "baseline.numeric_target": {
+   "format": "f2",
+   "value": 0.4
+  },
+  "baseline.owner_named": {
+   "format": "f2",
+   "value": 0.675
+  },
+  "ci_high": {
+   "format": "f2",
+   "value": 0.9530357142857142
+  },
+  "ci_low": {
+   "format": "f2",
+   "value": 0.4383223684210526
+  },
+  "n": {
+   "format": "int",
+   "value": 25
+  },
+  "positives": {
+   "format": "int",
+   "value": 5
+  },
+  "random.mean": {
+   "format": "f2",
+   "value": 0.47250000000000003
+  },
+  "random.p025": {
+   "format": "f2",
+   "value": 0.158
+  },
+  "random.p975": {
+   "format": "f2",
+   "value": 0.7434999999999998
+  }
+ },
+ "n": 25,
+ "positives": 5,
+ "predictions": {
+  "P1a": {
+   "result": "HIT",
+   "text": "score AUC between 0.55 and 0.80"
+  },
+  "P1b": {
+   "result": "HIT",
+   "text": "lower end of the 95% interval below 0.50"
+  },
+  "P1c": {
+   "result": "HIT",
+   "text": "score AUC at least the best simple baseline minus 0.05"
+  }
+ },
+ "random": {
+  "mean": 0.4725,
+  "p025": 0.158,
+  "p975": 0.7435,
+  "seeds": [
+   1,
+   20
+  ]
+ }
+}

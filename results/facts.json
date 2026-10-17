@@ -156,6 +156,286 @@
   "text": "25",
   "value": 25
  },
+ "e1.P1a": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e1.P1b": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e1.P1c": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e1.auc": {
+  "text": "0.72",
+  "value": 0.72
+ },
+ "e1.baseline.number_and_deadline": {
+  "text": "0.45",
+  "value": 0.45
+ },
+ "e1.baseline.numeric_target": {
+  "text": "0.40",
+  "value": 0.4
+ },
+ "e1.baseline.owner_named": {
+  "text": "0.68",
+  "value": 0.675
+ },
+ "e1.ci_high": {
+  "text": "0.95",
+  "value": 0.9530357142857142
+ },
+ "e1.ci_low": {
+  "text": "0.44",
+  "value": 0.4383223684210526
+ },
+ "e1.n": {
+  "text": "25",
+  "value": 25
+ },
+ "e1.positives": {
+  "text": "5",
+  "value": 5
+ },
+ "e1.random.mean": {
+  "text": "0.47",
+  "value": 0.47250000000000003
+ },
+ "e1.random.p025": {
+  "text": "0.16",
+  "value": 0.158
+ },
+ "e1.random.p975": {
+  "text": "0.74",
+  "value": 0.7434999999999998
+ },
+ "e2.P2a": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e2.P2b": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e2.P2c": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e2.P2d": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e2.a.effect.guardrails": {
+  "text": "19.6%",
+  "value": 0.1955
+ },
+ "e2.a.effect.scope": {
+  "text": "0.5%",
+  "value": 0.0048
+ },
+ "e2.a.effect.threshold": {
+  "text": "53.1%",
+  "value": 0.5307
+ },
+ "e2.a.effect.unit": {
+  "text": "5.9%",
+  "value": 0.0593
+ },
+ "e2.a.flip_rate": {
+  "text": "80%",
+  "value": 0.8
+ },
+ "e2.a.flip_rate.high": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "e2.a.flip_rate.low": {
+  "text": "40%",
+  "value": 0.4
+ },
+ "e2.a.flip_rate.mid": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "e2.a.registries": {
+  "text": "540",
+  "value": 540
+ },
+ "e2.a.spread.median": {
+  "text": "80%",
+  "value": 0.7998
+ },
+ "e2.a.spread.p05": {
+  "text": "35%",
+  "value": 0.3545
+ },
+ "e2.a.spread.p95": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "e2.b.effect.guardrails": {
+  "text": "24.9%",
+  "value": 0.2487
+ },
+ "e2.b.effect.scope": {
+  "text": "0.5%",
+  "value": 0.0054
+ },
+ "e2.b.effect.threshold": {
+  "text": "43.8%",
+  "value": 0.438
+ },
+ "e2.b.effect.unit": {
+  "text": "3.9%",
+  "value": 0.0392
+ },
+ "e2.b.flip_rate": {
+  "text": "76%",
+  "value": 0.7593
+ },
+ "e2.b.flip_rate.high": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "e2.b.flip_rate.low": {
+  "text": "28%",
+  "value": 0.2833
+ },
+ "e2.b.flip_rate.mid": {
+  "text": "99%",
+  "value": 0.9944
+ },
+ "e2.b.registries": {
+  "text": "540",
+  "value": 540
+ },
+ "e2.b.spread.median": {
+  "text": "88%",
+  "value": 0.875
+ },
+ "e2.b.spread.p05": {
+  "text": "25%",
+  "value": 0.2544
+ },
+ "e2.b.spread.p95": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "e2.top_axis_b": {
+  "text": "threshold",
+  "value": "threshold"
+ },
+ "e3.P3a": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e3.P3b": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e3.P3c": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e3.entities": {
+  "text": "16",
+  "value": 16
+ },
+ "e3.exceed": {
+  "text": "5",
+  "value": 5
+ },
+ "e3.moved3": {
+  "text": "15",
+  "value": 15
+ },
+ "e3.noise_only_mean": {
+  "text": "1.36",
+  "value": 1.365
+ },
+ "e3.seeds.exceed_max": {
+  "text": "11",
+  "value": 11
+ },
+ "e3.seeds.exceed_mean": {
+  "text": "5.25",
+  "value": 5.25
+ },
+ "e3.seeds.exceed_min": {
+  "text": "2",
+  "value": 2
+ },
+ "e3.seeds.moved_mean": {
+  "text": "11.10",
+  "value": 11.1
+ },
+ "e4.P4a": {
+  "text": "MISS",
+  "value": "MISS"
+ },
+ "e4.P4b": {
+  "text": "MISS",
+  "value": "MISS"
+ },
+ "e4.P4c": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e4.P4d": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e4.p70.bootstrap": {
+  "text": "96.0%",
+  "value": 0.96
+ },
+ "e4.p70.bootstrap.width": {
+  "text": "0.35",
+  "value": 0.3496
+ },
+ "e4.p70.wilson": {
+  "text": "93.5%",
+  "value": 0.935
+ },
+ "e4.p70.wilson.width": {
+  "text": "0.33",
+  "value": 0.3329
+ },
+ "e4.p88.bootstrap": {
+  "text": "95.2%",
+  "value": 0.9515
+ },
+ "e4.p88.bootstrap.width": {
+  "text": "0.23",
+  "value": 0.2286
+ },
+ "e4.p88.wilson": {
+  "text": "97.9%",
+  "value": 0.979
+ },
+ "e4.p88.wilson.width": {
+  "text": "0.25",
+  "value": 0.25
+ },
+ "e4.p95.bootstrap": {
+  "text": "70.0%",
+  "value": 0.6995
+ },
+ "e4.p95.bootstrap.width": {
+  "text": "0.12",
+  "value": 0.1213
+ },
+ "e4.p95.wilson": {
+  "text": "96.4%",
+  "value": 0.9635
+ },
+ "e4.p95.wilson.width": {
+  "text": "0.19",
+  "value": 0.1909
+ },
  "evidence.count": {
   "text": "10",
   "value": 10

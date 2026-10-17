@@ -29,6 +29,8 @@ def fmt(value, kind: str) -> str:
         return f"{value:.2f}"
     if kind == "f3":
         return f"{value:.3f}"
+    if kind == "str":
+        return str(value)
     if kind == "list":
         return ", ".join(value)
     raise ValueError(f"unknown format {kind!r}")

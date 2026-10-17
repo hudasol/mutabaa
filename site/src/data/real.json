@@ -16,7 +16,11 @@
     ],
     "found": 12,
     "n": 14,
-    "rate": 0.857
+    "rate": 0.857,
+    "wilson95": [
+     0.6006,
+     0.9599
+    ]
    },
    "recall": {
     "ci95": [
@@ -25,7 +29,11 @@
     ],
     "found": 22,
     "n": 25,
-    "rate": 0.88
+    "rate": 0.88,
+    "wilson95": [
+     0.7004,
+     0.9583
+    ]
    }
   },
   "calibration": {
@@ -161,7 +169,7 @@
  },
  "build": {
   "data_as_of": "2026-10-10",
-  "payload_sha256": "14e1ec5897130a3db1c51c1d16ae55efc760c55e303130479a66ea1967adc794",
+  "payload_sha256": "069b14125fc788caf4e387511e6dac59358bdef6aec719d052d50930f01c8e92",
   "schema": 2
  },
  "claims": [
@@ -1442,6 +1450,18 @@
    "searches": 2
   }
  ],
+ "evaluation": {
+  "e3": {
+   "entities": 16,
+   "exceed_noise": 5,
+   "moved_3_or_more": 15,
+   "noise_only_mean": 1.365
+  },
+  "e4": {
+   "bootstrap_coverage_at_095": 0.6995,
+   "wilson_coverage_at_095": 0.9635
+  }
+ },
  "evidence": [
   {
    "anchor": "Over 100 AI use cases deployed across more than 40",

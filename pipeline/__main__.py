@@ -1,4 +1,4 @@
-"""CLI: validate | rehash | synth | build | analyse | facts | report | schema
+"""CLI: validate | rehash | synth | build | analyse | facts | report | schema | evaluate
      | diff [REF] | verify-live [--write]"""
 
 from __future__ import annotations
@@ -7,7 +7,7 @@ import hashlib
 import json
 import sys
 
-from . import agreement, calibration, facts, robustness, schema_export
+from . import agreement, calibration, evaluate, facts, robustness, schema_export
 from .diff import diff as payload_diff
 from .diff import load_at, load_current
 from .io import REAL, ROOT, load_real
@@ -136,6 +136,21 @@ def cmd_schema() -> int:
     return 0
 
 
+def cmd_evaluate() -> int:
+    """Run the preregistered experiments in PREREGISTRATION.md and write results/*.json, facts and reports."""
+    import time
+
+    facts.RESULTS.mkdir(parents=True, exist_ok=True)
+    for name, run in evaluate.EXPERIMENTS.items():
+        t = time.time()
+        res = run()
+        path = facts.RESULTS / f"{name}.json"
+        path.write_text(json.dumps(res, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
+        marks = ", ".join(f"{k} {v['result']}" for k, v in res["predictions"].items())
+        print(f"wrote {path.name} in {time.time() - t:.0f}s: {marks}")
+    return cmd_report()
+
+
 def cmd_diff(args: list[str]) -> int:
     """python -m pipeline diff [REF]: commitment, status, band and verification changes since REF."""
     ref = args[0] if args else "HEAD~1"
@@ -174,6 +189,18 @@ def coverage(d) -> list[dict]:
     return rows
 
 
+def evaluation_summary() -> dict:
+    """The few preregistered results the site states in its own text (E3 on Portfolio, E4 on Assurance)."""
+    res = facts.RESULTS
+    e3 = json.loads((res / "e3.json").read_text(encoding="utf-8"))["primary"]
+    e4 = json.loads((res / "e4.json").read_text(encoding="utf-8"))["rates"]
+    return {
+        "e3": {k: e3[k] for k in ("entities", "moved_3_or_more", "exceed_noise", "noise_only_mean")},
+        "e4": {"bootstrap_coverage_at_095": e4["0.95"]["bootstrap"]["coverage"],
+               "wilson_coverage_at_095": e4["0.95"]["wilson"]["coverage"]},
+    }
+
+
 def cmd_build() -> int:
     if cmd_validate():
         return 1
@@ -196,6 +223,7 @@ def cmd_build() -> int:
             k: json.loads((ANALYSIS / f"{k}.json").read_text(encoding="utf-8"))
             for k in ("robustness", "calibration", "agreement")
         },
+        "evaluation": evaluation_summary(),
         "synthetic": json.loads((SYNTH / "registry.json").read_text(encoding="utf-8")),
         "sweep": json.loads((GOLDEN / "sensitivity.json").read_text(encoding="utf-8")),
     }
@@ -215,7 +243,7 @@ def main(argv: list[str]) -> int:
     cmds = {
         "validate": cmd_validate, "rehash": cmd_rehash, "synth": cmd_synth,
         "build": cmd_build, "analyse": cmd_analyse, "facts": cmd_facts, "report": cmd_report,
-        "schema": cmd_schema,
+        "schema": cmd_schema, "evaluate": cmd_evaluate,
     }
     if len(argv) >= 2 and argv[1] == "diff":
         return cmd_diff(argv[2:])

@@ -1,0 +1,179 @@
+{
+ "facts": {
+  "P2a": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P2b": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P2c": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P2d": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "a.effect.guardrails": {
+   "format": "pct1",
+   "value": 0.1955
+  },
+  "a.effect.scope": {
+   "format": "pct1",
+   "value": 0.0048
+  },
+  "a.effect.threshold": {
+   "format": "pct1",
+   "value": 0.5307
+  },
+  "a.effect.unit": {
+   "format": "pct1",
+   "value": 0.0593
+  },
+  "a.flip_rate": {
+   "format": "pct",
+   "value": 0.8
+  },
+  "a.flip_rate.high": {
+   "format": "pct",
+   "value": 1.0
+  },
+  "a.flip_rate.low": {
+   "format": "pct",
+   "value": 0.4
+  },
+  "a.flip_rate.mid": {
+   "format": "pct",
+   "value": 1.0
+  },
+  "a.registries": {
+   "format": "int",
+   "value": 540
+  },
+  "a.spread.median": {
+   "format": "pct",
+   "value": 0.7998
+  },
+  "a.spread.p05": {
+   "format": "pct",
+   "value": 0.3545
+  },
+  "a.spread.p95": {
+   "format": "pct",
+   "value": 1.0
+  },
+  "b.effect.guardrails": {
+   "format": "pct1",
+   "value": 0.2487
+  },
+  "b.effect.scope": {
+   "format": "pct1",
+   "value": 0.0054
+  },
+  "b.effect.threshold": {
+   "format": "pct1",
+   "value": 0.438
+  },
+  "b.effect.unit": {
+   "format": "pct1",
+   "value": 0.0392
+  },
+  "b.flip_rate": {
+   "format": "pct",
+   "value": 0.7593
+  },
+  "b.flip_rate.high": {
+   "format": "pct",
+   "value": 1.0
+  },
+  "b.flip_rate.low": {
+   "format": "pct",
+   "value": 0.2833
+  },
+  "b.flip_rate.mid": {
+   "format": "pct",
+   "value": 0.9944
+  },
+  "b.registries": {
+   "format": "int",
+   "value": 540
+  },
+  "b.spread.median": {
+   "format": "pct",
+   "value": 0.875
+  },
+  "b.spread.p05": {
+   "format": "pct",
+   "value": 0.2544
+  },
+  "b.spread.p95": {
+   "format": "pct",
+   "value": 1.0
+  },
+  "top_axis_b": {
+   "format": "str",
+   "value": "threshold"
+  }
+ },
+ "generator_a": {
+  "by_profile": {
+   "high": 1.0,
+   "low": 0.4,
+   "mid": 1.0
+  },
+  "effects": {
+   "guardrails": 0.1955,
+   "scope": 0.0048,
+   "threshold": 0.5307,
+   "unit": 0.0593
+  },
+  "flip_rate": 0.8,
+  "registries": 540,
+  "spread": {
+   "0.05": 0.3545,
+   "0.5": 0.7998,
+   "0.95": 1.0
+  }
+ },
+ "generator_b": {
+  "by_profile": {
+   "high": 1.0,
+   "low": 0.2833,
+   "mid": 0.9944
+  },
+  "effects": {
+   "guardrails": 0.2487,
+   "scope": 0.0054,
+   "threshold": 0.438,
+   "unit": 0.0392
+  },
+  "flip_rate": 0.7593,
+  "registries": 540,
+  "spread": {
+   "0.05": 0.2544,
+   "0.5": 0.875,
+   "0.95": 1.0
+  }
+ },
+ "predictions": {
+  "P2a": {
+   "result": "HIT",
+   "text": "flip rate under B between 0.60 and 0.95"
+  },
+  "P2b": {
+   "result": "HIT",
+   "text": "median spread under B at least 0.50"
+  },
+  "P2c": {
+   "result": "HIT",
+   "text": "maturity threshold has the largest variance share under B"
+  },
+  "P2d": {
+   "result": "HIT",
+   "text": "low profile flips less often than high profile under B"
+  }
+ },
+ "top_axis_b": "threshold"
+}

@@ -67,6 +67,9 @@ def test_analyse_writes_one_file_per_analysis(tmp_path, monkeypatch):
 
 
 def test_facts_report_and_schema_match_committed_files(tmp_path, monkeypatch):
+    (tmp_path / "results").mkdir()
+    for p in (ROOT / "results").glob("e*.json"):
+        shutil.copy(p, tmp_path / "results" / p.name)
     monkeypatch.setattr(facts, "RESULTS", tmp_path / "results")
     monkeypatch.setattr(cli, "REPORTS", {"EVALUATION.md": tmp_path / "EVALUATION.md"})
     assert run("facts") == 0

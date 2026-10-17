@@ -1,0 +1,163 @@
+{
+ "facts": {
+  "P3a": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P3b": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P3c": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "entities": {
+   "format": "int",
+   "value": 16
+  },
+  "exceed": {
+   "format": "int",
+   "value": 5
+  },
+  "moved3": {
+   "format": "int",
+   "value": 15
+  },
+  "noise_only_mean": {
+   "format": "f2",
+   "value": 1.365
+  },
+  "seeds.exceed_max": {
+   "format": "int",
+   "value": 11
+  },
+  "seeds.exceed_mean": {
+   "format": "f2",
+   "value": 5.25
+  },
+  "seeds.exceed_min": {
+   "format": "int",
+   "value": 2
+  },
+  "seeds.moved_mean": {
+   "format": "f2",
+   "value": 11.1
+  }
+ },
+ "predictions": {
+  "P3a": {
+   "result": "HIT",
+   "text": "entities exceeding noise between 3 and 9 on the committed registry"
+  },
+  "P3b": {
+   "result": "HIT",
+   "text": "fewer entities exceed noise than move by three places or more"
+  },
+  "P3c": {
+   "result": "HIT",
+   "text": "noise only baseline mean below 3"
+  }
+ },
+ "primary": {
+  "definition_range": {
+   "SE01": 3,
+   "SE02": 3,
+   "SE03": 2,
+   "SE04": 3,
+   "SE05": 3,
+   "SE06": 4,
+   "SE07": 5,
+   "SE08": 5,
+   "SE09": 5,
+   "SE10": 8,
+   "SE11": 3,
+   "SE12": 4,
+   "SE13": 6,
+   "SE14": 5,
+   "SE15": 3,
+   "SE16": 5
+  },
+  "entities": 16,
+  "exceed_ids": [
+   "SE07",
+   "SE09",
+   "SE10",
+   "SE13",
+   "SE14"
+  ],
+  "exceed_noise": 5,
+  "moved_3_or_more": 15,
+  "noise_only_mean": 1.365,
+  "noise_width": {
+   "SE01": 3.0,
+   "SE02": 3.05,
+   "SE03": 3.0,
+   "SE04": 6.05,
+   "SE05": 3.0,
+   "SE06": 7.0,
+   "SE07": 3.0,
+   "SE08": 7.0,
+   "SE09": 2.0,
+   "SE10": 7.0,
+   "SE11": 3.0,
+   "SE12": 6.0,
+   "SE13": 2.0,
+   "SE14": 4.0,
+   "SE15": 5.0,
+   "SE16": 7.0
+  }
+ },
+ "seeds": {
+  "exceed_mean": 5.25,
+  "exceed_noise": [
+   7,
+   4,
+   6,
+   11,
+   8,
+   5,
+   3,
+   3,
+   5,
+   3,
+   4,
+   3,
+   6,
+   4,
+   7,
+   6,
+   5,
+   6,
+   7,
+   2
+  ],
+  "moved_3_or_more": [
+   12,
+   14,
+   12,
+   13,
+   10,
+   12,
+   12,
+   12,
+   11,
+   10,
+   12,
+   10,
+   10,
+   12,
+   11,
+   12,
+   5,
+   10,
+   12,
+   10
+  ],
+  "moved_mean": 11.1,
+  "range": [
+   1,
+   20
+  ]
+ }
+}
