@@ -17,8 +17,8 @@ jobs:
         run: pip install -e ".[dev]"
       - name: Lint
         run: ruff check .
-      - name: Tests
-        run: pytest
+      - name: Tests with coverage gate (90% of pipeline/)
+        run: pytest --cov=pipeline --cov-report=term
       - name: Validate data
         run: python -m pipeline validate
       - name: Traceability and risk register
