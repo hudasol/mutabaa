@@ -19,7 +19,7 @@ Six yes/no checks: a number to reach, a defined unit, a dated deadline, a named 
 Each source has a SHA-256 of its extraction note. Each commitment, evidence item and claim carries a short anchor that must appear in that note. `python -m pipeline validate` fails on a stale hash, a missing anchor, or media evidence labelled official.
 
 ## Synthetic data
-See `data/synthetic/DATASHEET.md`. Synthetic and real figures are never combined.
+See `docs/DATA_STATEMENT.md`. Synthetic and real figures are never combined.
 
 
 ## Live verification

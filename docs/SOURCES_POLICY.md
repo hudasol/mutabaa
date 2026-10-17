@@ -23,4 +23,4 @@ Media reports are listed with what was checked. They never change a status unles
 Anyone, including the publisher, can ask for a source entry, note or anchor to be changed or removed. Use the correction template (`docs/CORRECTIONS.md`). Removal requests are actioned first and discussed after, within 2 working days.
 
 ## Licence
-Code: MIT. Extraction notes and analysis text: written by the maintainer and released with the repository under the same licence. Source content remains with its publishers.
+Code: MIT. Dataset files in `data/` (including the extraction notes, written by the maintainer): CC BY 4.0, as stated in the README and `docs/DATA_STATEMENT.md`. Source content remains with its publishers.
