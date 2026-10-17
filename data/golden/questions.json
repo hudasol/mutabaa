@@ -1,0 +1,581 @@
+{
+ "C01": [
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «تحويل 50% من القطاعات والخدمات والعمليات الاتحادية إلى الذكاء الاصطناعي الوكيل»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “50% of federal sectors, services and operations on agentic AI”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «تحويل 50% من القطاعات والخدمات والعمليات الاتحادية إلى الذكاء الاصطناعي الوكيل»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “50% of federal sectors, services and operations on agentic AI” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تحويل 50% من القطاعات والخدمات والعمليات الاتحادية إلى الذكاء الاصطناعي الوكيل»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “50% of federal sectors, services and operations on agentic AI”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «تحويل 50% من القطاعات والخدمات والعمليات الاتحادية إلى الذكاء الاصطناعي الوكيل»، كيف يُعرَّف «agentic AI (autonomous)»؟",
+   "check": "terms_defined",
+   "en": "For “50% of federal sectors, services and operations on agentic AI”, how is “agentic AI (autonomous)” defined?"
+  },
+  {
+   "ar": "في «تحويل 50% من القطاعات والخدمات والعمليات الاتحادية إلى الذكاء الاصطناعي الوكيل»، كيف يُعرَّف «transform»؟",
+   "check": "terms_defined",
+   "en": "For “50% of federal sectors, services and operations on agentic AI”, how is “transform” defined?"
+  },
+  {
+   "ar": "في «تحويل 50% من القطاعات والخدمات والعمليات الاتحادية إلى الذكاء الاصطناعي الوكيل»، كيف يُعرَّف «sector»؟",
+   "check": "terms_defined",
+   "en": "For “50% of federal sectors, services and operations on agentic AI”, how is “sector” defined?"
+  }
+ ],
+ "C02": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «تقييم القيادات على التحول بالذكاء الاصطناعي»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Leaders assessed on AI transformation” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تقييم القيادات على التحول بالذكاء الاصطناعي»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Leaders assessed on AI transformation”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «تقييم القيادات على التحول بالذكاء الاصطناعي»، كيف يُعرَّف «assessment scale»؟",
+   "check": "terms_defined",
+   "en": "For “Leaders assessed on AI transformation”, how is “assessment scale” defined?"
+  },
+  {
+   "ar": "في «تقييم القيادات على التحول بالذكاء الاصطناعي»، كيف يُعرَّف «assessment frequency»؟",
+   "check": "terms_defined",
+   "en": "For “Leaders assessed on AI transformation”, how is “assessment frequency” defined?"
+  },
+  {
+   "ar": "في «تقييم القيادات على التحول بالذكاء الاصطناعي»، كيف يُعرَّف «publication of results»؟",
+   "check": "terms_defined",
+   "en": "For “Leaders assessed on AI transformation”, how is “publication of results” defined?"
+  }
+ ],
+ "C03": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «تدريب مستمر للموظفين الاتحاديين على الذكاء الاصطناعي التوليدي»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Continuous generative-AI training for federal employees”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «تدريب مستمر للموظفين الاتحاديين على الذكاء الاصطناعي التوليدي»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Continuous generative-AI training for federal employees”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «تدريب مستمر للموظفين الاتحاديين على الذكاء الاصطناعي التوليدي»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Continuous generative-AI training for federal employees” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تدريب مستمر للموظفين الاتحاديين على الذكاء الاصطناعي التوليدي»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Continuous generative-AI training for federal employees”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «تدريب مستمر للموظفين الاتحاديين على الذكاء الاصطناعي التوليدي»، كيف يُعرَّف «continuous»؟",
+   "check": "terms_defined",
+   "en": "For “Continuous generative-AI training for federal employees”, how is “continuous” defined?"
+  },
+  {
+   "ar": "في «تدريب مستمر للموظفين الاتحاديين على الذكاء الاصطناعي التوليدي»، كيف يُعرَّف «coverage»؟",
+   "check": "terms_defined",
+   "en": "For “Continuous generative-AI training for federal employees”, how is “coverage” defined?"
+  },
+  {
+   "ar": "في «تدريب مستمر للموظفين الاتحاديين على الذكاء الاصطناعي التوليدي»، كيف يُعرَّف «completion criterion»؟",
+   "check": "terms_defined",
+   "en": "For “Continuous generative-AI training for federal employees”, how is “completion criterion” defined?"
+  }
+ ],
+ "C04": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «آلية تقييم ذاتي لتصنيف الأنظمة الوكيلة»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Self-assessment classification of agentic systems” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «آلية تقييم ذاتي لتصنيف الأنظمة الوكيلة»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Self-assessment classification of agentic systems”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «آلية تقييم ذاتي لتصنيف الأنظمة الوكيلة»، كيف يُعرَّف «criteria»؟",
+   "check": "terms_defined",
+   "en": "For “Self-assessment classification of agentic systems”, how is “criteria” defined?"
+  },
+  {
+   "ar": "في «آلية تقييم ذاتي لتصنيف الأنظمة الوكيلة»، كيف يُعرَّف «levels»؟",
+   "check": "terms_defined",
+   "en": "For “Self-assessment classification of agentic systems”, how is “levels” defined?"
+  },
+  {
+   "ar": "في «آلية تقييم ذاتي لتصنيف الأنظمة الوكيلة»، كيف يُعرَّف «who verifies a self-assessment»؟",
+   "check": "terms_defined",
+   "en": "For “Self-assessment classification of agentic systems”, how is “who verifies a self-assessment” defined?"
+  }
+ ],
+ "C05": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «المنصة التقنية الاتحادية للذكاء الاصطناعي الوكيل (FedAI)»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Federal Agentic AI Technology Platform (FedAI)” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «المنصة التقنية الاتحادية للذكاء الاصطناعي الوكيل (FedAI)»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Federal Agentic AI Technology Platform (FedAI)”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «المنصة التقنية الاتحادية للذكاء الاصطناعي الوكيل (FedAI)»، كيف يُعرَّف «go-live date»؟",
+   "check": "terms_defined",
+   "en": "For “Federal Agentic AI Technology Platform (FedAI)”, how is “go-live date” defined?"
+  },
+  {
+   "ar": "في «المنصة التقنية الاتحادية للذكاء الاصطناعي الوكيل (FedAI)»، كيف يُعرَّف «adoption measure»؟",
+   "check": "terms_defined",
+   "en": "For “Federal Agentic AI Technology Platform (FedAI)”, how is “adoption measure” defined?"
+  }
+ ],
+ "C06": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «بوابة الذكاء الاصطناعي الوطنية»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “National AI Gateway” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «بوابة الذكاء الاصطناعي الوطنية»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “National AI Gateway”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «بوابة الذكاء الاصطناعي الوطنية»، كيف يُعرَّف «go-live date»؟",
+   "check": "terms_defined",
+   "en": "For “National AI Gateway”, how is “go-live date” defined?"
+  },
+  {
+   "ar": "في «بوابة الذكاء الاصطناعي الوطنية»، كيف يُعرَّف «adoption measure»؟",
+   "check": "terms_defined",
+   "en": "For “National AI Gateway”, how is “adoption measure” defined?"
+  }
+ ],
+ "C07": [],
+ "C08": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «الذكاء التنظيمي يخفض جهد التشريع بنسبة تصل إلى 70%»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Regulatory intelligence cuts legislative effort by up to 70%” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «الذكاء التنظيمي يخفض جهد التشريع بنسبة تصل إلى 70%»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Regulatory intelligence cuts legislative effort by up to 70%”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «الذكاء التنظيمي يخفض جهد التشريع بنسبة تصل إلى 70%»، كيف يُعرَّف «baseline»؟",
+   "check": "terms_defined",
+   "en": "For “Regulatory intelligence cuts legislative effort by up to 70%”, how is “baseline” defined?"
+  },
+  {
+   "ar": "في «الذكاء التنظيمي يخفض جهد التشريع بنسبة تصل إلى 70%»، كيف يُعرَّف «measurement method»؟",
+   "check": "terms_defined",
+   "en": "For “Regulatory intelligence cuts legislative effort by up to 70%”, how is “measurement method” defined?"
+  }
+ ],
+ "C09": [
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «المركز الأول عالمياً في التشريعات الاستباقية»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “First globally for proactive legislation”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «المركز الأول عالمياً في التشريعات الاستباقية»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “First globally for proactive legislation”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «المركز الأول عالمياً في التشريعات الاستباقية»، كيف يُعرَّف «the index that measures proactive legislation»؟",
+   "check": "terms_defined",
+   "en": "For “First globally for proactive legislation”, how is “the index that measures proactive legislation” defined?"
+  }
+ ],
+ "C10": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «أول حكومة أصلية الذكاء الاصطناعي بالكامل في العالم بحلول 2027»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “World's first fully AI-native government by 2027”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «أول حكومة أصلية الذكاء الاصطناعي بالكامل في العالم بحلول 2027»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “World's first fully AI-native government by 2027”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «أول حكومة أصلية الذكاء الاصطناعي بالكامل في العالم بحلول 2027»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “World's first fully AI-native government by 2027”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «أول حكومة أصلية الذكاء الاصطناعي بالكامل في العالم بحلول 2027»، كيف يُعرَّف «AI-native»؟",
+   "check": "terms_defined",
+   "en": "For “World's first fully AI-native government by 2027”, how is “AI-native” defined?"
+  },
+  {
+   "ar": "في «أول حكومة أصلية الذكاء الاصطناعي بالكامل في العالم بحلول 2027»، كيف يُعرَّف «fully»؟",
+   "check": "terms_defined",
+   "en": "For “World's first fully AI-native government by 2027”, how is “fully” defined?"
+  },
+  {
+   "ar": "في «أول حكومة أصلية الذكاء الاصطناعي بالكامل في العالم بحلول 2027»، كيف يُعرَّف «how 'first' is established»؟",
+   "check": "terms_defined",
+   "en": "For “World's first fully AI-native government by 2027”, how is “how 'first' is established” defined?"
+  }
+ ],
+ "C11": [
+  {
+   "ar": "في «استراتيجية رقمية بقيمة 13 مليار درهم 2025-2027»، كيف يُعرَّف «spend vs allocation»؟",
+   "check": "terms_defined",
+   "en": "For “AED 13 billion Digital Strategy 2025-2027”, how is “spend vs allocation” defined?"
+  },
+  {
+   "ar": "في «استراتيجية رقمية بقيمة 13 مليار درهم 2025-2027»، كيف يُعرَّف «reporting of spend»؟",
+   "check": "terms_defined",
+   "en": "For “AED 13 billion Digital Strategy 2025-2027”, how is “reporting of spend” defined?"
+  }
+ ],
+ "C12": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «اعتماد السحابة السيادية بنسبة 100%»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “100% sovereign-cloud adoption” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «اعتماد السحابة السيادية بنسبة 100%»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “100% sovereign-cloud adoption”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «اعتماد السحابة السيادية بنسبة 100%»، كيف يُعرَّف «adoption»؟",
+   "check": "terms_defined",
+   "en": "For “100% sovereign-cloud adoption”, how is “adoption” defined?"
+  },
+  {
+   "ar": "في «اعتماد السحابة السيادية بنسبة 100%»، كيف يُعرَّف «operations in scope»؟",
+   "check": "terms_defined",
+   "en": "For “100% sovereign-cloud adoption”, how is “operations in scope” defined?"
+  },
+  {
+   "ar": "في «اعتماد السحابة السيادية بنسبة 100%»، كيف يُعرَّف «exceptions»؟",
+   "check": "terms_defined",
+   "en": "For “100% sovereign-cloud adoption”, how is “exceptions” defined?"
+  }
+ ],
+ "C13": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «رقمنة وأتمتة 100% من العمليات الحكومية»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “100% of government processes digitised and automated” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «رقمنة وأتمتة 100% من العمليات الحكومية»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “100% of government processes digitised and automated”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «رقمنة وأتمتة 100% من العمليات الحكومية»، كيف يُعرَّف «process (what counts as one)»؟",
+   "check": "terms_defined",
+   "en": "For “100% of government processes digitised and automated”, how is “process (what counts as one)” defined?"
+  },
+  {
+   "ar": "في «رقمنة وأتمتة 100% من العمليات الحكومية»، كيف يُعرَّف «digitised vs automated»؟",
+   "check": "terms_defined",
+   "en": "For “100% of government processes digitised and automated”, how is “digitised vs automated” defined?"
+  },
+  {
+   "ar": "في «رقمنة وأتمتة 100% من العمليات الحكومية»، كيف يُعرَّف «inventory of processes»؟",
+   "check": "terms_defined",
+   "en": "For “100% of government processes digitised and automated”, how is “inventory of processes” defined?"
+  }
+ ],
+ "C14": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «أكثر من 200 حل ذكاء اصطناعي عبر الخدمات الحكومية»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “200+ AI solutions across government services”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «أكثر من 200 حل ذكاء اصطناعي عبر الخدمات الحكومية»، كيف يُعرَّف «solution vs use case»؟",
+   "check": "terms_defined",
+   "en": "For “200+ AI solutions across government services”, how is “solution vs use case” defined?"
+  }
+ ],
+ "C15": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «أكثر من 1000 وكيل ذكاء اصطناعي في القطاع العام»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “1,000+ AI agents across the public sector” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «أكثر من 1000 وكيل ذكاء اصطناعي في القطاع العام»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “1,000+ AI agents across the public sector”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «أكثر من 1000 وكيل ذكاء اصطناعي في القطاع العام»، كيف يُعرَّف «AI agent»؟",
+   "check": "terms_defined",
+   "en": "For “1,000+ AI agents across the public sector”, how is “AI agent” defined?"
+  },
+  {
+   "ar": "في «أكثر من 1000 وكيل ذكاء اصطناعي في القطاع العام»، كيف يُعرَّف «deadline»؟",
+   "check": "terms_defined",
+   "en": "For “1,000+ AI agents across the public sector”, how is “deadline” defined?"
+  }
+ ],
+ "C16": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «برنامج AiNative: تدريب 20 ألف موظف حكومي بنهاية 2026»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “AiNative: 20,000 government employees trained by end of 2026”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «برنامج AiNative: تدريب 20 ألف موظف حكومي بنهاية 2026»، كيف يُعرَّف «upskill (completion criterion)»؟",
+   "check": "terms_defined",
+   "en": "For “AiNative: 20,000 government employees trained by end of 2026”, how is “upskill (completion criterion)” defined?"
+  },
+  {
+   "ar": "في «برنامج AiNative: تدريب 20 ألف موظف حكومي بنهاية 2026»، كيف يُعرَّف «which year»؟",
+   "check": "terms_defined",
+   "en": "For “AiNative: 20,000 government employees trained by end of 2026”, how is “which year” defined?"
+  }
+ ],
+ "C17": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «أكثر من 5000 وظيفة جديدة من الاستراتيجية الرقمية»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “5,000+ new jobs from the Digital Strategy” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «أكثر من 5000 وظيفة جديدة من الاستراتيجية الرقمية»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “5,000+ new jobs from the Digital Strategy”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «أكثر من 5000 وظيفة جديدة من الاستراتيجية الرقمية»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “5,000+ new jobs from the Digital Strategy”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «أكثر من 5000 وظيفة جديدة من الاستراتيجية الرقمية»، كيف يُعرَّف «direct vs indirect jobs»؟",
+   "check": "terms_defined",
+   "en": "For “5,000+ new jobs from the Digital Strategy”, how is “direct vs indirect jobs” defined?"
+  }
+ ],
+ "C18": [
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «إسهام 24 مليار درهم في الناتج المحلي بحلول 2027»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “AED 24 billion GDP contribution by 2027”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «إسهام 24 مليار درهم في الناتج المحلي بحلول 2027»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “AED 24 billion GDP contribution by 2027”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «إسهام 24 مليار درهم في الناتج المحلي بحلول 2027»، كيف يُعرَّف «attribution method»؟",
+   "check": "terms_defined",
+   "en": "For “AED 24 billion GDP contribution by 2027”, how is “attribution method” defined?"
+  }
+ ],
+ "C19": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «مئات حالات استخدام الذكاء الاصطناعي في القطاع العام»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Hundreds of AI use cases across the public sector”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «مئات حالات استخدام الذكاء الاصطناعي في القطاع العام»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Hundreds of AI use cases across the public sector” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «مئات حالات استخدام الذكاء الاصطناعي في القطاع العام»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Hundreds of AI use cases across the public sector”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «مئات حالات استخدام الذكاء الاصطناعي في القطاع العام»، كيف يُعرَّف «hundreds (no number)»؟",
+   "check": "terms_defined",
+   "en": "For “Hundreds of AI use cases across the public sector”, how is “hundreds (no number)” defined?"
+  },
+  {
+   "ar": "في «مئات حالات استخدام الذكاء الاصطناعي في القطاع العام»، كيف يُعرَّف «use case»؟",
+   "check": "terms_defined",
+   "en": "For “Hundreds of AI use cases across the public sector”, how is “use case” defined?"
+  },
+  {
+   "ar": "في «مئات حالات استخدام الذكاء الاصطناعي في القطاع العام»، كيف يُعرَّف «deadline»؟",
+   "check": "terms_defined",
+   "en": "For “Hundreds of AI use cases across the public sector”, how is “deadline” defined?"
+  }
+ ],
+ "C20": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «منصة موحدة لتخطيط موارد المؤسسات»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Unified digital ERP platform” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «منصة موحدة لتخطيط موارد المؤسسات»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Unified digital ERP platform”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «منصة موحدة لتخطيط موارد المؤسسات»، كيف يُعرَّف «go-live date»؟",
+   "check": "terms_defined",
+   "en": "For “Unified digital ERP platform”, how is “go-live date” defined?"
+  },
+  {
+   "ar": "في «منصة موحدة لتخطيط موارد المؤسسات»، كيف يُعرَّف «entities covered»؟",
+   "check": "terms_defined",
+   "en": "For “Unified digital ERP platform”, how is “entities covered” defined?"
+  }
+ ],
+ "C21": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «برنامج الذكاء الاصطناعي للجميع»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “AI for All citizen programme” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «برنامج الذكاء الاصطناعي للجميع»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “AI for All citizen programme”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «برنامج الذكاء الاصطناعي للجميع»، كيف يُعرَّف «reach»؟",
+   "check": "terms_defined",
+   "en": "For “AI for All citizen programme”, how is “reach” defined?"
+  },
+  {
+   "ar": "في «برنامج الذكاء الاصطناعي للجميع»، كيف يُعرَّف «completion criterion»؟",
+   "check": "terms_defined",
+   "en": "For “AI for All citizen programme”, how is “completion criterion” defined?"
+  }
+ ],
+ "C22": [
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «تدريب 100% من القيادات الحكومية العليا على الذكاء الاصطناعي»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “100% of senior government leadership trained in AI”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تدريب 100% من القيادات الحكومية العليا على الذكاء الاصطناعي»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “100% of senior government leadership trained in AI”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «تدريب 100% من القيادات الحكومية العليا على الذكاء الاصطناعي»، كيف يُعرَّف «training standard»؟",
+   "check": "terms_defined",
+   "en": "For “100% of senior government leadership trained in AI”, how is “training standard” defined?"
+  },
+  {
+   "ar": "في «تدريب 100% من القيادات الحكومية العليا على الذكاء الاصطناعي»، كيف يُعرَّف «baseline headcount»؟",
+   "check": "terms_defined",
+   "en": "For “100% of senior government leadership trained in AI”, how is “baseline headcount” defined?"
+  }
+ ],
+ "C23": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «مكاسب تصل إلى 335 مليار درهم بفضل الذكاء الاصطناعي»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Up to AED 335 billion of AI-driven gains” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «مكاسب تصل إلى 335 مليار درهم بفضل الذكاء الاصطناعي»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “Up to AED 335 billion of AI-driven gains”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «مكاسب تصل إلى 335 مليار درهم بفضل الذكاء الاصطناعي»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Up to AED 335 billion of AI-driven gains”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «مكاسب تصل إلى 335 مليار درهم بفضل الذكاء الاصطناعي»، كيف يُعرَّف «period»؟",
+   "check": "terms_defined",
+   "en": "For “Up to AED 335 billion of AI-driven gains”, how is “period” defined?"
+  },
+  {
+   "ar": "في «مكاسب تصل إلى 335 مليار درهم بفضل الذكاء الاصطناعي»، كيف يُعرَّف «attribution method»؟",
+   "check": "terms_defined",
+   "en": "For “Up to AED 335 billion of AI-driven gains”, how is “attribution method” defined?"
+  }
+ ],
+ "C24": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «تحديد الخدمات المناسبة للذكاء الاصطناعي الوكيل خلال 90 يوماً»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Identify suitable services for agentic AI within 90 days”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «تحديد الخدمات المناسبة للذكاء الاصطناعي الوكيل خلال 90 يوماً»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Identify suitable services for agentic AI within 90 days”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «تحديد الخدمات المناسبة للذكاء الاصطناعي الوكيل خلال 90 يوماً»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Identify suitable services for agentic AI within 90 days” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «تحديد الخدمات المناسبة للذكاء الاصطناعي الوكيل خلال 90 يوماً»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “Identify suitable services for agentic AI within 90 days”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تحديد الخدمات المناسبة للذكاء الاصطناعي الوكيل خلال 90 يوماً»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Identify suitable services for agentic AI within 90 days”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «تحديد الخدمات المناسبة للذكاء الاصطناعي الوكيل خلال 90 يوماً»، كيف يُعرَّف «suitable»؟",
+   "check": "terms_defined",
+   "en": "For “Identify suitable services for agentic AI within 90 days”, how is “suitable” defined?"
+  },
+  {
+   "ar": "في «تحديد الخدمات المناسبة للذكاء الاصطناعي الوكيل خلال 90 يوماً»، كيف يُعرَّف «output list published?»؟",
+   "check": "terms_defined",
+   "en": "For “Identify suitable services for agentic AI within 90 days”, how is “output list published?” defined?"
+  }
+ ],
+ "C25": [
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «تدريب 60% من القوى العاملة ذات المهارات الرقمية المحدودة»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “Skills training for 60% of the low-digital-skill workforce”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تدريب 60% من القوى العاملة ذات المهارات الرقمية المحدودة»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Skills training for 60% of the low-digital-skill workforce”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «تدريب 60% من القوى العاملة ذات المهارات الرقمية المحدودة»، كيف يُعرَّف «low digital skills (how identified)»؟",
+   "check": "terms_defined",
+   "en": "For “Skills training for 60% of the low-digital-skill workforce”, how is “low digital skills (how identified)” defined?"
+  },
+  {
+   "ar": "في «تدريب 60% من القوى العاملة ذات المهارات الرقمية المحدودة»، كيف يُعرَّف «training standard»؟",
+   "check": "terms_defined",
+   "en": "For “Skills training for 60% of the low-digital-skill workforce”, how is “training standard” defined?"
+  }
+ ]
+}

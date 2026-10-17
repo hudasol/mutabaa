@@ -1,4 +1,4 @@
-"""CLI: validate | rehash | synth | build | analyse | facts | report | schema | evaluate
+"""CLI: validate | rehash | synth | build | analyse | facts | report | schema | evaluate | golden
      | diff [REF] | verify-live [--write]"""
 
 from __future__ import annotations
@@ -151,6 +151,24 @@ def cmd_evaluate() -> int:
     return cmd_report()
 
 
+def golden_files() -> dict[str, str]:
+    """Score and questions for every public commitment: the TypeScript port must reproduce both exactly."""
+    d = load_real()
+    scores = [score(c) for c in d.commitments]
+    sc = [s.model_dump(mode="json") for s in scores]
+    qs = {c.id: questions(c, s) for c, s in zip(d.commitments, scores, strict=True)}
+    dump = lambda x: json.dumps(x, ensure_ascii=False, indent=1, sort_keys=True) + "\n"  # noqa: E731
+    return {"score.json": dump(sc), "questions.json": dump(qs)}
+
+
+def cmd_golden() -> int:
+    GOLDEN.mkdir(parents=True, exist_ok=True)
+    for name, text in golden_files().items():
+        (GOLDEN / name).write_text(text, encoding="utf-8", newline="\n")
+        print(f"wrote data/golden/{name}")
+    return 0
+
+
 def cmd_diff(args: list[str]) -> int:
     """python -m pipeline diff [REF]: commitment, status, band and verification changes since REF."""
     ref = args[0] if args else "HEAD~1"
@@ -243,7 +261,7 @@ def main(argv: list[str]) -> int:
     cmds = {
         "validate": cmd_validate, "rehash": cmd_rehash, "synth": cmd_synth,
         "build": cmd_build, "analyse": cmd_analyse, "facts": cmd_facts, "report": cmd_report,
-        "schema": cmd_schema, "evaluate": cmd_evaluate,
+        "schema": cmd_schema, "evaluate": cmd_evaluate, "golden": cmd_golden,
     }
     if len(argv) >= 2 and argv[1] == "diff":
         return cmd_diff(argv[2:])
