@@ -3,7 +3,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { pathToFileURL } from "node:url";
 import path from "node:path";
 
-const PAGES = ["overview", "ledger", "clocks", "lab", "maturity", "sources", "brief", "method", "assurance", "portfolio"];
+const PAGES = ["overview", "ledger", "clocks", "lab", "maturity", "sources", "brief", "method", "assurance", "portfolio", "mine"];
 
 async function open(page: Page, hash: string, opts: { lang?: "en" | "ar"; theme?: "light" | "dark" } = {}) {
   await page.addInitScript(([l, t]) => {
@@ -112,3 +112,57 @@ test("[honesty] the portfolio states how many rank moves exceed sampling noise",
   await open(page, "assurance");
   await expect(page.getByText(/Wilson 95% interval/)).toBeVisible();
 });
+
+const MY_CSV = [
+  "id,title,owner,metric,unit,target_number,deadline,measurement_source,undefined_terms,kind",
+  "X01,Half of services on the new platform,Example Office,services moved,services,50,2027-12-31,Annual report,agentic,target",
+  "X02,A new national gateway,,,,,within two years,,,deliverable",
+  "X03,=HYPERLINK(1),,,,,,,,target",
+].join("\n");
+
+async function loadMine(page: Page, lang: "en" | "ar", theme: "light" | "dark") {
+  await open(page, "mine", { lang, theme });
+  await page.locator('input[type="file"]').setInputFiles({ name: "mine.csv", mimeType: "text/csv", buffer: Buffer.from(MY_CSV) });
+}
+
+test("[mine] a user file is scored in the browser, with questions and a persistent banner", async ({ page }) => {
+  const external: string[] = [];
+  page.on("request", (r) => { if (!r.url().startsWith("http://localhost:4181") && !r.url().startsWith("data:") && !r.url().startsWith("blob:")) external.push(r.url()); });
+  await loadMine(page, "en", "light");
+  await expect(page.getByRole("note").filter({ hasText: "Your file. Processed in this browser. Nothing is uploaded." })).toBeVisible();
+  await expect(page.getByText("3 commitments scored.")).toBeVisible();
+  await expect(page.getByRole("cell", { name: "X02" })).toBeVisible();
+  await page.locator("details.qblock", { hasText: "X02" }).locator("summary").click();
+  await expect(page.getByText(/By what calendar date must “A new national gateway” be met/)).toBeVisible();
+  const dl = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Export questions (CSV)" }).click();
+  const text = await (await dl).createReadStream().then(async (s) => { let b = ""; for await (const c of s) b += c; return b; });
+  expect(text).toContain(`"'=HYPERLINK(1)"`);
+  expect(external).toEqual([]);
+});
+
+test("[mine] Arabic questions and right to left layout", async ({ page }) => {
+  await loadMine(page, "ar", "light");
+  await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
+  const block = page.locator("details.qblock", { hasText: "X02" });
+  await block.locator("summary").click();
+  await expect(block.getByText(/في أي تاريخ ميلادي يجب تحقيق/)).toBeVisible();
+});
+
+test("[mine] a malformed file shows an error, not a crash", async ({ page }) => {
+  await open(page, "mine");
+  await page.locator('input[type="file"]').setInputFiles({ name: "bad.json", mimeType: "application/json", buffer: Buffer.from("[{oops") });
+  await expect(page.getByRole("alert")).toContainText("not valid JSON");
+});
+
+for (const theme of ["light", "dark"] as const) {
+  for (const lang of ["en", "ar"] as const) {
+    test(`[mine] ${lang} ${theme} with results: no serious or critical axe violations`, async ({ page }) => {
+      await loadMine(page, lang, theme);
+      await page.locator("details.qblock").first().locator("summary").click();
+      const r = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze();
+      const bad = r.violations.filter((v) => v.impact === "serious" || v.impact === "critical");
+      expect(bad.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(" ")).slice(0, 3).join(" | ")}`)).toEqual([]);
+    });
+  }
+}

@@ -12,6 +12,7 @@ import Method from "./pages/Method";
 import Overview from "./pages/Overview";
 import Assurance from "./pages/Assurance";
 import Portfolio from "./pages/Portfolio";
+import Mine from "./pages/Mine";
 import Sources from "./pages/Sources";
 import raw from "./data/real.json";
 import type { Payload } from "./types";
@@ -19,7 +20,7 @@ import type { Payload } from "./types";
 const data = raw as unknown as Payload;
 const ROUTES = [
   ["overview", "nav_overview", Overview], ["ledger", "nav_ledger", Ledger], ["clocks", "nav_clocks", Clocks],
-  ["lab", "nav_lab", Lab], ["portfolio", "nav_portfolio", Portfolio], ["maturity", "nav_maturity", Maturity], ["sources", "nav_sources", Sources],
+  ["lab", "nav_lab", Lab], ["portfolio", "nav_portfolio", Portfolio], ["mine", "nav_mine", Mine], ["maturity", "nav_maturity", Maturity], ["sources", "nav_sources", Sources],
   ["brief", "nav_brief", Brief], ["method", "nav_method", Method], ["assurance", "nav_assurance", Assurance],
 ] as const;
 
