@@ -7,7 +7,7 @@ function Bars({ rows, cls = "" }: { rows: { k: string; label: string; v: number 
       {rows.map((r) => (
         <div className="bar" key={r.k}><span>{r.label}</span>
           <span className="track"><span className={`fill ${cls}`} style={{ width: `${Math.max(0, Math.min(1, r.v)) * 100}%` }} /></span>
-          <b>{pct(r.v)}</b></div>
+          <b>{r.v > 0 && r.v < 0.005 ? "<1%" : pct(r.v)}</b></div>
       ))}
     </div>
   );

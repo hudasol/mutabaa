@@ -30,7 +30,7 @@ export default function Clocks() {
         <h2>{t.ck_undated}</h2>
         <ul className="checklist">
           {undated.map((c) => (
-            <li key={c.id}><b className="mono">{c.id}</b> {L(lang, c.title, c.title_ar)} <span className="small muted">{c.deadline_text ?? t.lg_not_stated}</span></li>
+            <li key={c.id}><b className="mono">{c.id}</b> {L(lang, c.title, c.title_ar)} <span className="small muted" lang={c.deadline_text ? "en" : undefined}>{c.deadline_text ?? t.lg_not_stated}</span></li>
           ))}
         </ul>
       </section>

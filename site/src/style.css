@@ -225,3 +225,6 @@ blockquote { margin: 0; padding-inline-start: .8rem; border-inline-start: 3px so
 .qblock { border-top: 1px solid var(--line-2); padding: .5rem 0; }
 .qblock summary { cursor: pointer; }
 .qblock ol { margin: .5rem 0 0; padding-inline-start: 1.5rem; max-width: var(--measure); }
+.strip-table { margin-top: .5rem; }
+.strip-table summary { cursor: pointer; font-size: .9rem; }
+.strip-table tr[aria-current] td { font-weight: 600; }

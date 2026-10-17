@@ -70,6 +70,7 @@ export function Strip({ current, rows, label }: { current?: Definition; rows: Ro
   });
   const same = (d: Definition, c?: Definition) => !!c && d.unit === c.unit && d.scope === c.scope && d.threshold === c.threshold && d.guardrails === c.guardrails;
   return (
+    <>
     <svg className="strip" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={label}>
       <line className="axis" x1={pad} x2={W - pad} y1={162} y2={162} />
       {[0, 0.25, 0.5, 0.75, 1].map((v) => (
@@ -82,6 +83,37 @@ export function Strip({ current, rows, label }: { current?: Definition; rows: Ro
           cx={p.cx} cy={p.cy} r={same(p.r.d, current) ? 9 : 5}><title>{pct(p.r.share, 1)}</title></circle>
       ))}
     </svg>
+    <StripTable rows={rows} current={current} same={same} />
+    </>
+  );
+}
+
+/** The same numbers as the strip chart, as a table, for screen readers and for checking values. */
+function StripTable({ rows, current, same }: { rows: Row[]; current?: Definition; same: (d: Definition, c?: Definition) => boolean }) {
+  const { t } = useCtx();
+  const unit = (u: string) => (t as unknown as Record<string, string>)[`u_${u}`];
+  const scope = (s: Definition["scope"]) => ({ "citizen-services": t.s_citizen, "all-services": t.s_all, "services-and-operations": t.s_ops })[s];
+  const sorted = [...rows].sort((a, b) => (a.share ?? -1) - (b.share ?? -1));
+  return (
+    <details className="strip-table">
+      <summary>{t.strip_table}</summary>
+      <div className="table-wrap" tabIndex={0} role="region" aria-label={t.strip_table}>
+        <table className="ledger">
+          <thead><tr>
+            <th scope="col">{t.lb_unit}</th><th scope="col">{t.lb_scope}</th><th scope="col">{t.lb_threshold}</th>
+            <th scope="col">{t.lb_guard}</th><th scope="col">{t.strip_share}</th>
+          </tr></thead>
+          <tbody>
+            {sorted.map((r, i) => (
+              <tr key={i} aria-current={same(r.d, current) ? "true" : undefined}>
+                <td>{unit(r.d.unit)}</td><td>{scope(r.d.scope)}</td><td>L{r.d.threshold}</td>
+                <td>{r.d.guardrails === "none" ? t.g_none : t.g_required}</td><td className="num">{pct(r.share, 1)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </details>
   );
 }
 

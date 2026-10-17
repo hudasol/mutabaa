@@ -16,7 +16,7 @@ export default function Sources() {
                 <tr key={s.id}>
                   <td className="id">{s.id}</td>
                   <td><a href={s.url} target="_blank" rel="noreferrer noopener">{s.title}</a>
-                    <div className="small">{s.publisher}{s.ai_assisted ? ` · ${t.so_ai}` : ""}</div></td>
+                    <div className="small"><span lang="en">{s.publisher}</span>{s.ai_assisted ? ` · ${t.so_ai}` : ""}</div></td>
                   <td><span className={`chip${s.kind === "secondary-media" ? " media" : ""}`}>{t.src_kind[s.kind]}</span></td>
                   <td>{s.published ?? <span className="muted">{t.so_undated}</span>}</td>
                   <td><VerifyChip sourceId={s.id} />{v?.error && <div className="small muted">{v.error.slice(0, 70)}</div>}</td>

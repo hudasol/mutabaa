@@ -166,3 +166,16 @@ for (const theme of ["light", "dark"] as const) {
     });
   }
 }
+
+for (const p of ["overview", "lab"]) {
+  test(`[a11y] the strip chart on ${p} has a table alternative with every definition`, async ({ page }) => {
+    await open(page, p);
+    await page.locator("details.strip-table summary").click();
+    await expect(page.locator("details.strip-table tbody tr")).toHaveCount(72);
+  });
+}
+
+test("[i18n] synthetic entity names follow the reader's language", async ({ page }) => {
+  await open(page, "portfolio", { lang: "ar" });
+  await expect(page.locator(".ename").first()).toContainText("اصطناعية");
+});

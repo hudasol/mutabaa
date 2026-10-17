@@ -13,7 +13,10 @@ export default function Portfolio() {
   const p = route.params;
   const scope = (SCOPES.find((s) => s === p.s) ?? "all-services") as Definition["scope"];
   const sort = (SORTS.find((s) => s === p.o) ?? "name") as Sort;
-  const names = useMemo(() => new Map(data.synthetic.entities.map((e) => [e.id, e.name])), [data]);
+  const names = useMemo(() => new Map(data.synthetic.entities.map((e) => {
+    const letter = e.name.split(" ").pop() ?? "";
+    return [e.id, t.synth_entity(t.sector_names[e.sector] ?? e.sector, letter)];
+  })), [data, t]);
   const rows = useMemo(() => {
     const r = portfolio(h.items, scope);
     const c3 = PORTFOLIO_COLS.findIndex((c) => c.threshold === 3 && c.guardrails === "none");
