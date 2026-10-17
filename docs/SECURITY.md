@@ -43,7 +43,7 @@ Scope: the static site (Profiles A and B in `docs/ARCHITECTURE.md`) and the Pyth
 | T10 | Misleading output: a reader treats "no public evidence" as a failure | Neutral wording, search log, explicit "how to read this" text | Mitigated by design, reviewed by people in later rounds |
 
 ## Residual risks
-- T8: confirm the CSV caps in the UI and add a test (tracked in `docs/reviews/03-tii.md` if not done in this round).
+- T8: confirm the CSV caps in the UI and add a test (tracked in `docs/reviews/03-research-institute-lens.md` if not done in this round).
 - Human review of the extraction notes and the Arabic text has not happened.
 - The page relies on the host to send the headers; the meta CSP is the fallback and cannot set `frame-ancestors`.
 

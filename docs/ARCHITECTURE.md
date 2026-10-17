@@ -66,6 +66,6 @@ Profile C keeps the same schemas, the same engines and the same payload format. 
 
 ## 5. Trust boundaries and threats (summary; full table in `docs/THREAT_MODEL.md` after round 2)
 - User CSV: parsed in the browser, never transmitted. Threat: malformed or hostile files. Mitigation: strict parser, size cap, no formula evaluation, no HTML injection (React escapes).
-- Source pages: treated as untrusted data. Threat: a page changes or is replaced. Mitigation: figure-token checks, drift workflow, hashes of notes.
+- Source pages: treated as untrusted data. Threat: a page changes or is replaced. Mitigation: figure token checks, drift workflow, hashes of notes.
 - Supply chain: pinned and locked dependencies, SBOM, audit in CI.
 - Hosting: strict CSP, no third-party requests, no cookies.

@@ -1,4 +1,6 @@
-# Review 1: an AI engineer at an executive office (ADEO lens)
+# Review 1: an AI engineer at an executive office (executive office lens)
+
+This lens is simulated from public information about the kind of organisation described. It was written by the author, implies no affiliation with any organisation, and does not represent the view of any organisation.
 
 This is a simulated critique from the point of view of an analyst-engineer whose job is to brief leadership on whether strategic plans are being implemented. It is written from public information about such an office, not from inside knowledge. Reviewed: v1.0.0, https://mutabaa-adeoi.vercel.app/
 
@@ -33,11 +35,11 @@ This is a simulated critique from the point of view of an analyst-engineer whose
 - [x] A4 Home page leads with the real finding; synthetic strip is second and labelled as an illustration. Test: screenshot review.
 - [x] A5 Lab state, ledger filters and the open commitment are in the URL. Test: parse and serialise round trip.
 - [x] A6 "Questions for the entity" generated per commitment, in English and Arabic, exportable. Test: every failed check yields a question; golden file.
-- [x] A7 CSV column mapper and a data-quality report. Test: renamed headers can be mapped; report counts duplicates and blanks.
+- [x] A7 CSV column mapper and a data quality report. Test: renamed headers can be mapped; report counts duplicates and blanks.
 - [x] A8 Rename bands to describe wording ("Fully specified", "Partly specified", "Under-specified") and add a one-line "how to read this". Test: no old label left in the UI; docs updated.
 - [x] A9 Payload hash and data-as-of shown in the footer and the brief. Test: hash is stable for the same data and changes when data changes.
 - [x] A10 Key parity test for English and Arabic. Test: fails if a key is missing.
 - [x] A11 Sortable ledger columns. Test: e2e later; unit test on sorter.
 
 ## Outcome (v1.1.0)
-All items done. Evidence: 36 Python tests and 17 site tests pass; `verify-live` verified 11 of 14 sources (S10, S11, S12 unreachable, reported as such); screenshots reviewed in light, dark, Arabic and mobile. Not done: end-to-end browser test for ledger sort (unit-tested only).
+All items done. Evidence: 36 Python tests and 17 site tests pass; `verify-live` verified 11 of 14 sources (S10, S11, S12 unreachable, reported as such); screenshots reviewed in light, dark, Arabic and mobile. Not done: end to end browser test for ledger sort (unit-tested only).

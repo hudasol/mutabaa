@@ -23,7 +23,7 @@ Can an office that oversees AI programmes use Mutabaa, on a registry it already 
 | Weeks | Work | Output |
 |---|---|---|
 | 1-2 | Agree columns and definitions; dry run on synthetic data | Column mapping per entity |
-| 3-4 | Load real exports; data-quality report; fix at source | Clean registries |
+| 3-4 | Load real exports; data quality report; fix at source | Clean registries |
 | 5-8 | Portfolio and Definition Lab reviews with the sponsor; send questions to entities | Decision note on the definition |
 | 9-10 | Reviewer samples outputs; defects fixed | Review log |
 | 11-12 | Measure, write up, decide | Pilot report |

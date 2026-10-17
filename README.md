@@ -1,20 +1,20 @@
 # Mutabaa · متابعة
 
-**A verifiability workbench for UAE government AI-transformation targets.**
+**A verifiability workbench for UAE government AI transformation targets.**
 
 *Mutabaa* (متابعة) is Arabic for "follow-up" or "monitoring".
 
-The UAE has committed to moving 50% of federal government sectors, services and operations to agentic AI within two years. Abu Dhabi is targeting a fully AI-native government by 2027. Leaders will be assessed on progress. But "agentic", "service" and "50%" do not yet have published operational definitions, and public progress claims are not graded by evidence quality.
+The UAE has committed to moving 50% of federal government sectors, services and operations to agentic AI within two years. Abu Dhabi is targeting a fully AI native government by 2027. Leaders will be assessed on progress. But "agentic", "service" and "50%" do not yet have published operational definitions, and public progress claims are not graded by evidence quality.
 
 Mutabaa makes these targets **checkable**:
 
-- **Ledger** of official commitments with a six-point *verifiability score* that names exactly what each target is missing (metric, baseline, target value, date-precise deadline, owner, measurement source).
-- **Evidence timeline** where every progress claim is graded by source type, with a deterministic, neutral-by-default **status** ("no public evidence" never means "not done").
+- **Ledger** of official commitments with a six-point *verifiability score* that names exactly what each target is missing (metric, baseline, target value, date precise deadline, owner, measurement source).
+- **Evidence timeline** where every progress claim is graded by source type, with a deterministic, neutral by default **status** ("no public evidence" never means "not done").
 - **Definition Lab**: recomputes a headline "% agentic" under every defensible definition (unit of count × maturity threshold × guardrails × scope) so a policy team can see how much the number depends on the definition, before it is locked in.
-- **Maturity ladder + self-assessment** (a *proposal*, not an official standard) with governance flags aligned to the National AI Strategy's governance objective.
-- **Brief**: print-ready one-page summary.
+- **Maturity ladder + self assessment** (a *proposal*, not an official standard) with governance flags aligned to the National AI Strategy's governance objective.
+- **Brief**: print ready one page summary.
 
-Built from the point of view of an analyst in a government supervisory office, such as the Abu Dhabi Executive Office, whose job is to monitor implementation of strategic plans.
+Built from the point of view of an analyst in a government supervisory office whose job is to monitor implementation of strategic plans. Real entities are named only in [`docs/CONTEXT.md`](docs/CONTEXT.md); nothing here is endorsed by any of them.
 
 > **Status:** working prototype. Read [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md) first. See [`plan.md`](plan.md) for the plan and [`docs/PROPOSAL.md`](docs/PROPOSAL.md) for the pilot path.
 
@@ -72,7 +72,7 @@ docs/             METHODOLOGY, EVALUATION, LIMITATIONS, REVIEW_CHECKLIST, PROPOS
 ## Principles
 
 1. **Neutral by default.** Every commitment starts at "no public evidence".
-2. **Grounded.** Every real field links to a source; numbers are machine-checked against the stored extract.
+2. **Grounded.** Every real field links to a source; numbers are machine checked against the stored extract.
 3. **Deterministic.** No model judgement at runtime; statuses and scores follow written rules.
 4. **Honest about limits.** Synthetic data is labelled; the rubric is labelled a proposal; secondary sources are graded.
 
@@ -82,7 +82,7 @@ Code: MIT. Dataset (`data/real`, `data/synthetic`): CC BY 4.0. Source material r
 
 ## Author
 
-Huda Mueen. Built as an independent project on UAE government AI-transformation targets.
+Huda Mueen. Built as an independent project on UAE government AI transformation targets.
 
 
 ## Offline and verification
