@@ -62,16 +62,16 @@ flowchart LR
 | Profile | Shape | Network | Who |
 |---|---|---|---|
 | A. Public demo | Static site on a CDN | Public | Anyone; synthetic and public data only |
-| B. Office intranet | The same static build served inside the network, fonts and assets self-hosted | None outbound | An analyst team with its own service inventory (CSV stays in the browser) |
+| B. Office intranet | The same static build served inside the network, fonts and assets self hosted | None outbound | An analyst team with its own service inventory (CSV stays in the browser) |
 | C. Team service (design only) | API plus database in a sovereign cloud region, single sign-on, review workflow, audit log; the static app is its client | Internal | An office with several reviewers and many entities |
 
-Profile C keeps the same schemas, the same engines and the same payload format. What it adds: identity, persistence, review states for each evidence item, an append-only audit log, scheduled live verification, and entity-level access control.
+Profile C keeps the same schemas, the same engines and the same payload format. What it adds: identity, persistence, review states for each evidence item, an append only audit log, scheduled live verification, and entity level access control.
 
 ## 5. Trust boundaries and threats (summary; full table in `docs/SECURITY.md`)
 - User CSV: parsed in the browser, never transmitted. Threat: malformed or hostile files. Mitigation: strict parser, size cap, no formula evaluation, no HTML injection (React escapes).
 - Source pages: treated as untrusted data. Threat: a page changes or is replaced. Mitigation: figure token checks, drift workflow, hashes of notes.
 - Supply chain: pinned and locked dependencies, SBOM, audit in CI.
-- Hosting: strict CSP, no third-party requests, no cookies.
+- Hosting: strict CSP, no third party requests, no cookies.
 
 ## 6. Python layers and the import contract
 
@@ -80,9 +80,9 @@ The reference implementation is split into five layers. A module may import modu
 | Layer | Modules | May import |
 |---|---|---|
 | 0. Contracts and pure helpers | `schemas`, `stats`, `render` | nothing from the package |
-| 1. Repository input | `io` | layer 0 |
-| 2. Engines | `score`, `status`, `questions`, `sensitivity`, `synth`, `synth_b`, `validate`, `verify_live`, `diff` | layers 0 and 1 |
-| 3. Analysis and reporting | `robustness`, `calibration`, `agreement`, `facts`, `evaluate`, `schema_export` | layers 0 to 2 |
+| 1. Repository input | `io` | layer 0 and its own layer |
+| 2. Engines | `score`, `status`, `questions`, `sensitivity`, `synth`, `synth_b`, `validate`, `verify_live`, `diff` | layers 0 and 1 and its own layer |
+| 3. Analysis and reporting | `robustness`, `calibration`, `agreement`, `facts`, `evaluate`, `schema_export` | layers 0 to 2 and its own layer |
 | 4. Command line | `__main__` | everything |
 
 Engines hold the rules. Analysis code measures the rules and never changes them. The command line only wires layers together and writes files.

@@ -67,7 +67,7 @@ The dataset is released under CC BY 4.0. Source material remains the property of
 To exercise the Definition Lab and the maturity and governance views on a population whose properties are known, so the effect of a definition can be shown without touching sensitive operational data.
 
 ### Composition
-- Synthetic entities across sectors. By default the generator creates 16 entities spread over 8 sectors, each with an `advancement` value in [0, 1].
+- Synthetic entities across sectors. The committed registry has <!-- fact:registry.entities -->16<!-- /fact --> entities (the generator default) spread over the eight sectors listed in `pipeline/synth.py`, each with an `advancement` value in [0, 1].
 - Synthetic items, each a `service` (citizen or business facing) or an `operation` (internal). The number of items per entity is drawn around a generator parameter of 38. The exact counts are in `data/synthetic/registry.json` and in the `registry.entities` and `registry.items` entries of `results/facts.json`.
 - Per item: annual transactions, an automation maturity level 0 to 4 (our proposed ladder, not an official one), and four governance flags: human oversight, audit trail, UAE data residency, fallback to a person.
 

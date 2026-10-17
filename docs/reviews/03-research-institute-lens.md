@@ -5,14 +5,14 @@ This lens is simulated from public information about the kind of organisation de
 Simulated critique, written from public information about how such groups judge claims, not from inside knowledge. Reviewed: v1.2.0.
 
 ## What I would say in the first five minutes
-"Engineering is solid. I want to know which of your claims are measured and which are asserted. 'From 0% to 88%' is one synthetic registry, one seed. Your score has six equal-weight checks nobody has tested. Your second extraction is 24 items by hand. Show me the spread, the ablation and the intervals, and tell me what you still have not validated."
+"Engineering is solid. I want to know which of your claims are measured and which are asserted. 'From 0% to 88%' is one synthetic registry, one seed. Your score has six equal weight checks nobody has tested. Your second extraction is 24 items by hand. Show me the spread, the ablation and the intervals, and tell me what you still have not validated."
 
 ## Findings
 
 | # | Severity | Finding | Evidence in v1.2.0 | Why it matters |
 |---|---|---|---|---|
 | C1 | High | The headline "0% to 88%" comes from one seed and one set of generator assumptions | `data/synthetic/registry.json` seed 20260423 | A reader may take a number from a generator as a result |
-| C2 | High | The score has equal weights and fixed cut offs and was never stress-tested | `pipeline/score.py` | Looks arbitrary; floor effects hide in the pass rates |
+| C2 | High | The score has equal weights and fixed cut offs and was never stress tested | `pipeline/score.py` | Looks arbitrary; floor effects hide in the pass rates |
 | C3 | High | Agreement with the second extraction has no interval | `docs/EVALUATION.md` (counts by hand) | n is small; point estimates mislead |
 | C4 | Medium | Which definition choice drives the spread is asserted, not measured | Lab marginals only | The mechanism is the contribution; it should be decomposed |
 | C5 | Medium | Definition axes have no stated rationale or mapping | Literals in code | A practitioner cannot argue with an unwritten choice |
@@ -22,7 +22,7 @@ Simulated critique, written from public information about how such groups judge 
 
 ## Checklist (each item has an acceptance test)
 
-- [x] C1 Robustness over many registries: <!-- fact:robustness.registries -->540<!-- /fact --> registries (3 sizes, 3 adoption profiles, 60 seeds); report flip rate, spread quantiles and by-profile results; show on the home page. Test: committed results equal a fresh run.
+- [x] C1 Robustness over many registries: <!-- fact:robustness.registries -->540<!-- /fact --> registries (3 sizes, 3 adoption profiles, 60 seeds); report flip rate, spread quantiles and by profile results; show on the home page. Test: committed results equal a fresh run.
 - [x] C2 Calibration: band cut off grid, 1,000 random weightings, leave one check out, per check pass rates. Test: committed results equal a fresh run; bounds hold.
 - [x] C3 Agreement tool with a fixed matching rule and bootstrap intervals. Test: committed results equal a fresh run; statistics helpers have known-value tests.
 - [x] C4 Variance decomposition by definition axis. Test: shares are in [0,1] and sum to at most 1.

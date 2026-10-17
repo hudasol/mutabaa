@@ -12,18 +12,18 @@ Milestones are listed with their tag. Tags up to v1.4.0 were first created local
 - Fixes: content hashes no longer depend on checkout line endings; `pipeline diff` now reports target changes and reads Arabic on Windows; the strip chart has a table alternative; synthetic entity names follow the reader's language
 
 ## v1.4.0: programme office lens review round
-- Portfolio page: per-entity share under six definitions, rank under each and rank range
+- Portfolio page: per entity share under six definitions, rank under each and rank range
 - Uploaded CSV now kept across pages
 - Pilot plan, risk register (checked by script), sources policy, corrections process with issue template, compliance mapping, roadmap with decision points, team-service design (not built), CONTRIBUTING and PR template
 
 ## v1.3.0: research institute lens review round
-- `python -m pipeline analyse`: 540-registry robustness study, score calibration (band cut-offs, random weights, leave-one-out), agreement with the blind second pass (bootstrap intervals), consistency check of fields against wording
+- `python -m pipeline analyse`: 540-registry robustness study, score calibration (band cut offs, random weights, leave one out), agreement with the blind second pass (bootstrap intervals), consistency check of fields against wording
 - New Assurance page (EN/AR); home page now states that the verdict flip depends on adoption level
 - Findings reported as found: maturity threshold drives most of the spread; two score checks are almost never passed; band edges are fragile
-- Definition axes config with rationale, CITATION.cff, tag-driven release workflow, CSV cap test
+- Definition axes config with rationale, CITATION.cff, tag driven release workflow, CSV cap test
 
 ## v1.2.0: defence technology lens review round
-- Self-hosted fonts, strict CSP (meta and headers), zero third-party requests (tested)
+- Self-hosted fonts, strict CSP (meta and headers), zero third party requests (tested)
 - Single-file offline build with hash-pinned CSP; opens from file://
 - Playwright smoke and axe accessibility tests (EN/AR, light/dark); contrast and table-role fixes
 - docs/SECURITY.md (STRIDE), traceability matrix and checker, SBOMs, lock file, Dockerfile, `make reproduce`
@@ -39,8 +39,8 @@ Milestones are listed with their tag. Tags up to v1.4.0 were first created local
 - METHODOLOGY, REVIEW_CHECKLIST, PROPOSAL; README run instructions and status
 
 ## v0.7.0: workbench complete
-- Pages: overview, ledger with evidence detail, clocks, Definition Lab (with client-side CSV upload), maturity and guardrails, printable brief, method
-- English and Arabic (right-to-left); synthetic and user-file data carry persistent banners
+- Pages: overview, ledger with evidence detail, clocks, Definition Lab (with client side CSV upload), maturity and guardrails, printable brief, method
+- English and Arabic (right to left); synthetic and user-file data carry persistent banners
 - CSV and JSON export of the ledger; vitest parity test against the Python golden file; CI site job
 
 ## v0.4.0: synthetic registry and sensitivity engine
@@ -49,13 +49,13 @@ Milestones are listed with their tag. Tags up to v1.4.0 were first created local
 - `data/synthetic/DATASHEET.md`
 
 ## v0.3.0: scoring and status engines
-- `pipeline/score.py`: six-check verifiability score; checks that do not apply are excluded, not failed
+- `pipeline/score.py`: six check verifiability score; checks that do not apply are excluded, not failed
 - `pipeline/status.py`: deterministic status; neutral default; media-only evidence never moves a status; unit mismatches flagged, never converted
-- 14 tests on real-data behaviour, including tamper tests (stale hash, bad anchor, media marked official)
+- 14 tests on real data behaviour, including tamper tests (stale hash, bad anchor, media marked official)
 
 ## v0.2.0: real ledger and validation
 - 12 sources (5 official statements, 3 official self-reports, 4 media) with extraction notes and SHA-256 hashes
-- 24 commitments (federal, Abu Dhabi, national), 9 evidence items, 5 media-reported claims held apart from status
+- 24 commitments (federal, Abu Dhabi, national), 9 evidence items, 5 media reported claims held apart from status
 - `python -m pipeline validate | rehash | build`; anchors must appear in the stored notes
 
 ## v0.1.0: scaffold

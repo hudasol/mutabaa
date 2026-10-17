@@ -25,7 +25,7 @@ These targets are hard to verify from the outside, and likely hard to compare ac
 3. **Vocabulary drift within one programme.** Abu Dhabi reports progress in "AI use cases" (100+ across 40+ entities, Sept 2025) against a target worded in "AI solutions" (200+), with "AI agents" (1,000+) as a third unit in 2026.
 4. **Assessment criteria for leaders are qualitative.** The official federal statement lists abilities and understanding, not measurable thresholds.
 5. **Deadlines without dates.** "By 2027" does not say whether that is 1 January or 31 December.
-6. **Progress claims mix grades of evidence.** Official self-reports, secondary media and third-party sources appear side by side. Some figures circulate in media but were not found in the official statement (for example "up to 70% faster lawmaking" is a projection, not a result).
+6. **Progress claims mix grades of evidence.** Official self-reports, secondary media and third party sources appear side by side. Some figures circulate in media but were not found in the official statement (for example "up to 70% faster lawmaking" is a projection, not a result).
 7. **Training figures don't reconcile at a glance.** "95% of 30,000+ employees trained" (Sept 2025), "20,000 by end of 2026" and "~23,000 by early 2027" are different programmes or definitions; nothing public maps one to the other.
 
 None of this is criticism. These are normal properties of announcements. But a supervisory body whose mandate is to monitor implementation needs targets that are *measurable*, and needs to know *which* are not yet, and *why*.
@@ -57,10 +57,10 @@ None of this is criticism. These are normal properties of announcements. But a s
 
 ### 3.2 Non-goals
 
-- No claim about the real state of any real entity's AI maturity. Real entity-level data is not public; the registry is synthetic and labelled everywhere.
+- No claim about the real state of any real entity's AI maturity. Real entity level data is not public; the registry is synthetic and labelled everywhere.
 - No scoring of individuals or of named real entities.
 - No live scraping at runtime. Data updates are reviewed commits.
-- Not a replacement for any existing government performance system or internal tooling. Mutabaa audits whether *targets* are measurable and lets a definition be stress-tested before it is locked in.
+- Not a replacement for any existing government performance system or internal tooling. Mutabaa audits whether *targets* are measurable and lets a definition be stress tested before it is locked in.
 
 ## 4. Data policy
 

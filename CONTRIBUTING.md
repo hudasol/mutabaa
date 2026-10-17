@@ -13,7 +13,7 @@
 3. A commitment's `anchors` must appear in the stored note. The validator enforces this.
 4. "No public evidence" needs a search-log entry (where, when, what was found).
 5. Media-only evidence never moves a status.
-6. Synthetic data stays labelled and is never mixed with public-source numbers.
+6. Synthetic data stays labelled and is never mixed with public source numbers.
 
 ## Workflow
 ```
