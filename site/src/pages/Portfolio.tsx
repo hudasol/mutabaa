@@ -42,6 +42,9 @@ export default function Portfolio() {
             </div></div>
         </div>
         <p><b>{t.pf_note(rows.length, moved)}</b></p>
+        <p className="small">{h.kind === "synthetic" && scope === "all-services"
+          ? t.pf_noise(data.evaluation.e3.exceed_noise, data.evaluation.e3.entities)
+          : t.pf_noise_other}</p>
         <div className="table-wrap" tabIndex={0} role="region" aria-label={t.pf_title}>
           <table className="ledger heat">
             <thead>

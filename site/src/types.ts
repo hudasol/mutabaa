@@ -71,7 +71,11 @@ export type Payload = {
   sources: Source[]; commitments: Commitment[]; evidence: Evidence[]; claims: Claim[];
   scores: Score[]; statuses: Status[]; synthetic: Registry; sweep: SweepRow[];
   questions: Record<string, Question[]>; coverage: Coverage[]; searches: SearchEntry[];
-  analysis: Analysis; verification: Verification; build: { data_as_of: string; payload_sha256: string; schema: number };
+  analysis: Analysis; verification: Verification;
+  evaluation: {
+    e3: { entities: number; moved_3_or_more: number; exceed_noise: number; noise_only_mean: number };
+    e4: { bootstrap_coverage_at_095: number; wilson_coverage_at_095: number };
+  }; build: { data_as_of: string; payload_sha256: string; schema: number };
 };
 
 export type Ci = [number, number];
@@ -86,8 +90,8 @@ export type Analysis = {
     consistency: Record<"numeric_target" | "dated_deadline", { n: number; agree: number; kappa: number | null; ci95: Ci }> & { disagreements: string[] };
   };
   agreement: {
-    recall: { found: number; n: number; rate: number; ci95: Ci };
-    numeric_recall: { found: number; n: number; rate: number; ci95: Ci };
+    recall: { found: number; n: number; rate: number; ci95: Ci; wilson95: Ci };
+    numeric_recall: { found: number; n: number; rate: number; ci95: Ci; wilson95: Ci };
     missed: string[];
   };
 };

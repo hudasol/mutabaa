@@ -105,3 +105,10 @@ for (const [lang, label] of [["en", "Exploratory, not preregistered"], ["ar", "Ø
     await expect(page.getByRole("note").filter({ hasText: label })).toBeVisible();
   });
 }
+
+test("[honesty] the portfolio states how many rank moves exceed sampling noise", async ({ page }) => {
+  await open(page, "portfolio");
+  await expect(page.getByText(/Sampling noise check \(preregistered experiment E3\)/)).toBeVisible();
+  await open(page, "assurance");
+  await expect(page.getByText(/Wilson 95% interval/)).toBeVisible();
+});

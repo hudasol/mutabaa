@@ -110,4 +110,8 @@ The method (score, status rules, definition sweep, portfolio ranking), synthetic
 
 ## Amendments
 
-None yet.
+Predictions above were not changed. The entries below record what was done after the results existed, and clarifications of details that the specification left open.
+
+**Amendment 1, 2026-10-18 (after results).** P3b held, so the Portfolio page now states, in English and Arabic, how many entities move by more than sampling noise on the built in registry, and says that the check covers only that registry and scope. P4c held, so the Assurance page now reports a Wilson interval beside the percentile bootstrap interval for agreement, and states the coverage problem near the top of the range; `pipeline/agreement.py` gains a `wilson95` field and `data/analysis/agreement.json` was recomputed. The site payload carries the few E3 and E4 numbers that the page text uses.
+
+**Amendment 2, 2026-10-18 (written with the code, before any experiment was run).** Details the specification did not fix: generator B gives items names by position (no random draw, so the draw order above is unchanged), and sets the entity `advancement` field to u / 4 clipped to 0 to 1 because the schema requires it; the sweep does not read it. For E2, generator A's numbers are read from `data/analysis/robustness.json`, as stated above, rather than recomputed.
