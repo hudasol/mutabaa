@@ -12,10 +12,10 @@ def test_detects_status_target_and_verification_changes():
     old = load_current()
     new = copy.deepcopy(old)
     cid = new["commitments"][0]["id"]
-    new["commitments"][0]["target"] = 99
+    new["commitments"][0]["target_number"] = 99.0
     st = next(s for s in new["statuses"] if s["commitment_id"] == cid)
     st["status"] = "milestone-reported"
     sid = next(iter(new["verification"]["results"]))
     new["verification"]["results"][sid]["result"] = "failed"
     out = "\n".join(diff(old, new))
-    assert f"{cid} target" in out and f"{cid} status" in out and f"source {sid} verification" in out
+    assert f"{cid} target_number" in out and f"{cid} status" in out and f"source {sid} verification" in out
