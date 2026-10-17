@@ -13,6 +13,7 @@ from .diff import load_at, load_current
 from .io import REAL, ROOT, load_real
 from .questions import questions
 from .render import render
+from .schemas import Registry
 from .score import score
 from .sensitivity import summary, sweep
 from .status import status
@@ -158,7 +159,9 @@ def golden_files() -> dict[str, str]:
     sc = [s.model_dump(mode="json") for s in scores]
     qs = {c.id: questions(c, s) for c, s in zip(d.commitments, scores, strict=True)}
     dump = lambda x: json.dumps(x, ensure_ascii=False, indent=1, sort_keys=True) + "\n"  # noqa: E731
-    return {"score.json": dump(sc), "questions.json": dump(qs)}
+    reg = Registry.model_validate(json.loads((SYNTH / "registry.json").read_text(encoding="utf-8")))
+    pf = evaluate.portfolio_table(reg)
+    return {"score.json": dump(sc), "questions.json": dump(qs), "portfolio.json": dump(pf)}
 
 
 def cmd_golden() -> int:
