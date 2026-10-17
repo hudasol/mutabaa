@@ -1,0 +1,114 @@
+{
+ "properties": {
+  "commitment_id": {
+   "title": "Commitment Id",
+   "type": "string"
+  },
+  "evidence_age_days": {
+   "anyOf": [
+    {
+     "type": "integer"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Evidence Age Days"
+  },
+  "evidence_ids": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Evidence Ids",
+   "type": "array"
+  },
+  "excluded_evidence_ids": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Excluded Evidence Ids",
+   "type": "array"
+  },
+  "latest_evidence_date": {
+   "anyOf": [
+    {
+     "format": "date",
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Latest Evidence Date"
+  },
+  "progress_as_of": {
+   "anyOf": [
+    {
+     "format": "date",
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Progress As Of"
+  },
+  "progress_ratio": {
+   "anyOf": [
+    {
+     "type": "number"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Progress Ratio"
+  },
+  "reasons": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Reasons",
+   "type": "array"
+  },
+  "self_reported_only": {
+   "title": "Self Reported Only",
+   "type": "boolean"
+  },
+  "stale": {
+   "default": false,
+   "title": "Stale",
+   "type": "boolean"
+  },
+  "status": {
+   "enum": [
+    "not-checkable",
+    "no-public-evidence",
+    "activity-reported",
+    "milestone-reported",
+    "target-claimed-met"
+   ],
+   "title": "Status",
+   "type": "string"
+  },
+  "unit_mismatch": {
+   "title": "Unit Mismatch",
+   "type": "boolean"
+  }
+ },
+ "required": [
+  "commitment_id",
+  "status",
+  "reasons",
+  "evidence_ids",
+  "excluded_evidence_ids",
+  "self_reported_only",
+  "unit_mismatch"
+ ],
+ "title": "StatusResult",
+ "type": "object"
+}

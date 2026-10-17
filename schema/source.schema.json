@@ -1,0 +1,109 @@
+{
+ "additionalProperties": false,
+ "description": "A public source. The repository stores metadata and a hash of the extraction notes only.",
+ "properties": {
+  "ai_assisted": {
+   "default": false,
+   "title": "Ai Assisted",
+   "type": "boolean"
+  },
+  "content_hash": {
+   "pattern": "^[0-9a-f]{64}$",
+   "title": "Content Hash",
+   "type": "string"
+  },
+  "expect_absent": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Expect Absent",
+   "type": "array"
+  },
+  "expect_present": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Expect Present",
+   "type": "array"
+  },
+  "extract_file": {
+   "title": "Extract File",
+   "type": "string"
+  },
+  "id": {
+   "pattern": "^S\\d{2}$",
+   "title": "Id",
+   "type": "string"
+  },
+  "kind": {
+   "enum": [
+    "official-statement",
+    "official-self-report",
+    "secondary-media",
+    "third-party"
+   ],
+   "title": "Kind",
+   "type": "string"
+  },
+  "notes": {
+   "default": "",
+   "title": "Notes",
+   "type": "string"
+  },
+  "published": {
+   "anyOf": [
+    {
+     "format": "date",
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Published"
+  },
+  "published_note": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Published Note"
+  },
+  "publisher": {
+   "title": "Publisher",
+   "type": "string"
+  },
+  "retrieved": {
+   "format": "date",
+   "title": "Retrieved",
+   "type": "string"
+  },
+  "title": {
+   "title": "Title",
+   "type": "string"
+  },
+  "url": {
+   "pattern": "^https://",
+   "title": "Url",
+   "type": "string"
+  }
+ },
+ "required": [
+  "id",
+  "title",
+  "publisher",
+  "url",
+  "kind",
+  "retrieved",
+  "extract_file",
+  "content_hash"
+ ],
+ "title": "Source",
+ "type": "object"
+}

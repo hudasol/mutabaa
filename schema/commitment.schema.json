@@ -1,0 +1,272 @@
+{
+ "$defs": {
+  "Anchor": {
+   "additionalProperties": false,
+   "description": "A short phrase (under 15 words) that must appear in the source's extraction notes.",
+   "properties": {
+    "source_id": {
+     "pattern": "^S\\d{2}$",
+     "title": "Source Id",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "source_id",
+    "text"
+   ],
+   "title": "Anchor",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "properties": {
+  "anchors": {
+   "items": {
+    "$ref": "#/$defs/Anchor"
+   },
+   "minItems": 1,
+   "title": "Anchors",
+   "type": "array"
+  },
+  "announced": {
+   "anyOf": [
+    {
+     "format": "date",
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Announced"
+  },
+  "baseline": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Baseline"
+  },
+  "deadline": {
+   "anyOf": [
+    {
+     "format": "date",
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Deadline"
+  },
+  "deadline_precision": {
+   "default": "none",
+   "enum": [
+    "day",
+    "month",
+    "year",
+    "relative",
+    "none"
+   ],
+   "title": "Deadline Precision",
+   "type": "string"
+  },
+  "deadline_text": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Deadline Text"
+  },
+  "id": {
+   "pattern": "^C\\d{2}$",
+   "title": "Id",
+   "type": "string"
+  },
+  "jurisdiction": {
+   "enum": [
+    "federal",
+    "abu-dhabi",
+    "national"
+   ],
+   "title": "Jurisdiction",
+   "type": "string"
+  },
+  "kind": {
+   "enum": [
+    "target",
+    "milestone",
+    "deliverable",
+    "input",
+    "projection",
+    "assessment",
+    "vision"
+   ],
+   "title": "Kind",
+   "type": "string"
+  },
+  "measurement_source": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Measurement Source"
+  },
+  "metric": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Metric"
+  },
+  "notes": {
+   "default": "",
+   "title": "Notes",
+   "type": "string"
+  },
+  "owner": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Owner"
+  },
+  "source_ids": {
+   "items": {
+    "type": "string"
+   },
+   "minItems": 1,
+   "title": "Source Ids",
+   "type": "array"
+  },
+  "statement": {
+   "maxLength": 400,
+   "title": "Statement",
+   "type": "string"
+  },
+  "statement_ar": {
+   "maxLength": 500,
+   "title": "Statement Ar",
+   "type": "string"
+  },
+  "tags": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Tags",
+   "type": "array"
+  },
+  "target_comparator": {
+   "anyOf": [
+    {
+     "enum": [
+      "=",
+      ">=",
+      "up-to"
+     ],
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Target Comparator"
+  },
+  "target_number": {
+   "anyOf": [
+    {
+     "type": "number"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Target Number"
+  },
+  "target_value": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Target Value"
+  },
+  "title": {
+   "title": "Title",
+   "type": "string"
+  },
+  "title_ar": {
+   "title": "Title Ar",
+   "type": "string"
+  },
+  "undefined_terms": {
+   "items": {
+    "type": "string"
+   },
+   "title": "Undefined Terms",
+   "type": "array"
+  },
+  "unit": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Unit"
+  }
+ },
+ "required": [
+  "id",
+  "title",
+  "title_ar",
+  "statement",
+  "statement_ar",
+  "jurisdiction",
+  "kind",
+  "source_ids",
+  "anchors"
+ ],
+ "title": "Commitment",
+ "type": "object"
+}

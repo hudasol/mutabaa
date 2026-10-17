@@ -1,0 +1,48 @@
+{
+ "properties": {
+  "guardrails": {
+   "enum": [
+    "none",
+    "required"
+   ],
+   "title": "Guardrails",
+   "type": "string"
+  },
+  "scope": {
+   "enum": [
+    "citizen-services",
+    "all-services",
+    "services-and-operations"
+   ],
+   "title": "Scope",
+   "type": "string"
+  },
+  "threshold": {
+   "enum": [
+    2,
+    3,
+    4
+   ],
+   "title": "Threshold",
+   "type": "integer"
+  },
+  "unit": {
+   "enum": [
+    "services",
+    "transactions",
+    "entities",
+    "sectors"
+   ],
+   "title": "Unit",
+   "type": "string"
+  }
+ },
+ "required": [
+  "unit",
+  "scope",
+  "threshold",
+  "guardrails"
+ ],
+ "title": "Definition",
+ "type": "object"
+}
