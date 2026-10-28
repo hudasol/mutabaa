@@ -5,7 +5,6 @@
     "CHANGELOG.md",
     "CONTRIBUTING.md",
     "PREREGISTRATION.md",
-    "plan.md",
     "docs/**/*.md",
     "data/synthetic/*.md"
   ],

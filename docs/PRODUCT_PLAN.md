@@ -4,7 +4,7 @@
 
 Mutabaa is a **verifiability workbench for government AI transformation targets**. It turns headline commitments ("50% agentic", "100% digitised", "200+ AI solutions") into checkable records linked to evidence, and shows how much the headline number depends on how its terms are defined.
 
-It is designed from the point of view of an analyst inside a government supervisory office (the reference user): someone whose job is to monitor the implementation of strategic plans and assess entity performance. Real entities are named only in [`docs/CONTEXT.md`](docs/CONTEXT.md).
+It is designed from the point of view of an analyst inside a government supervisory office (the reference user): someone whose job is to monitor the implementation of strategic plans and assess entity performance. Real entities are named only in [`docs/CONTEXT.md`](CONTEXT.md).
 
 ---
 
@@ -119,7 +119,7 @@ mutabaa/
 
 ## 7. Source base (collected 2026-10-09)
 
-Official sources are preferred; secondary sources are graded lower and flagged. The list of sources, with publishers and links, is in `data/real/sources.json` and is described in [`docs/CONTEXT.md`](docs/CONTEXT.md). Trade articles that may have been written with automated help are used only as secondary evidence and are marked `secondary-media`; figures that the official statement does not contain are flagged *unverified against official source*.
+Official sources are preferred; secondary sources are graded lower and flagged. The list of sources, with publishers and links, is in `data/real/sources.json` and is described in [`docs/CONTEXT.md`](CONTEXT.md). Trade articles that may have been written with automated help are used only as secondary evidence and are marked `secondary-media`; figures that the official statement does not contain are flagged *unverified against official source*.
 
 ## 8. Quality bar
 
