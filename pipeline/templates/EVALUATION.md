@@ -95,7 +95,7 @@ The extraction notes hold {e5.units} bullets. {e5.positives} of them contain an 
 
 Reference: the blind second reading found {e5.blind.recall} of the ledger from the same notes. The preregistered random baseline flags bullets at X2's rate and recovers {e5.random.mean} of the commitments (mean of 20 seeds).
 
-Exploratory, added after the results existed (amendment 5 in `PREREGISTRATION.md`): random flagging at each rule's own flag rate recovers {e5.x1.random_matched} (X1), {e5.x2.random_matched} (X2), {e5.x3.random_matched} (X3) and {e5.x4.random_matched} (X4). At equal effort a digit rule is about as good as flagging bullets at random, and only the verb rule does clearly better than chance. Numeric rules find numeric targets and miss deliverables, and no rule comes near the curated ledger or the blind second reading. Precision is a lower bound, because the ledger is not exhaustive.
+Exploratory, added after the results existed (amendment 5 in `PREREGISTRATION.md`): random flagging at each rule's own flag rate recovers {e5.x1.random_matched} (X1), {e5.x2.random_matched} (X2), {e5.x3.random_matched} (X3) and {e5.x4.random_matched} (X4). At equal effort a digit rule is about as good as flagging bullets at random, and only the verb rule does clearly better than chance. The digit rule finds most numeric targets and few of the others, the stricter numeric rules find fewer of both, and no rule comes near the curated ledger or the blind second reading. Precision is a lower bound, because the ledger is not exhaustive.
 
 ### E6. The status engine against its invariants (real ledger)
 
