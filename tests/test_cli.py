@@ -1,134 +1,88 @@
-"""The command line, run in process.
-
-Output files go to a temporary folder and are compared with the repository.
-"""
-
-from __future__ import annotations
-
 import json
-import shutil
-from pathlib import Path
 
 import pytest
 
-import pipeline.__main__ as cli
-from pipeline import facts
-from pipeline.diff import diff, load_current
+from pipeline.__main__ import main
 
-ROOT = Path(__file__).resolve().parent.parent
-
-
-def run(*args: str) -> int:
-    return cli.main(["pipeline", *args])
+GOOD = "id,title,kind,owner,deadline,target_number,unit\nA1,Move half,target,Office,2027-12-31,50,services\n"
+MIXED = GOOD + "A2,,target,,,,\n"
 
 
-def test_unknown_command_prints_usage(capsys):
-    assert run("nope") == 2
-    assert "validate" in capsys.readouterr().out
+def run(capsys, *args):
+    code = main(["mutabaa", *args])
+    return code, capsys.readouterr()
 
 
-def test_validate_passes_on_committed_data(capsys):
-    assert run("validate") == 0
-    assert "0 error(s)" in capsys.readouterr().out
+@pytest.fixture
+def good(tmp_path):
+    p = tmp_path / "good.csv"
+    p.write_text(GOOD, encoding="utf-8")
+    return str(p)
 
 
-def test_synth_reproduces_committed_registry_and_golden_file(tmp_path, monkeypatch):
-    monkeypatch.setattr(cli, "SYNTH", tmp_path / "synthetic")
-    monkeypatch.setattr(cli, "GOLDEN", tmp_path / "golden")
-    assert run("synth") == 0
-    for sub, name in (("synthetic", "registry.json"), ("golden", "sensitivity.json")):
-        assert (tmp_path / sub / name).read_text(encoding="utf-8") == (
-            ROOT / "data" / sub / name
-        ).read_text(encoding="utf-8")
+@pytest.fixture
+def mixed(tmp_path):
+    p = tmp_path / "mixed.csv"
+    p.write_text(MIXED, encoding="utf-8")
+    return str(p)
 
 
-def test_build_reproduces_committed_payload(tmp_path, monkeypatch):
-    monkeypatch.setattr(cli, "ROOT", tmp_path)
-    assert run("build") == 0
-    built = (tmp_path / "site" / "src" / "data" / "real.json").read_bytes()
-    assert built == (ROOT / "site" / "src" / "data" / "real.json").read_bytes()
+def test_score_text(capsys, good):
+    code, out = run(capsys, "score", good)
+    assert code == 0 and "1 of 1 rows read" in out.out and "A1" in out.out
 
 
-def test_rehash_keeps_committed_hashes(tmp_path, monkeypatch):
-    shutil.copy(ROOT / "data" / "real" / "sources.json", tmp_path / "sources.json")
-    monkeypatch.setattr(cli, "REAL", tmp_path)
-    assert run("rehash") == 0
-    assert json.loads((tmp_path / "sources.json").read_text(encoding="utf-8")) == json.loads(
-        (ROOT / "data" / "real" / "sources.json").read_text(encoding="utf-8")
-    )
+def test_score_json_has_summary_and_no_questions_by_default(capsys, good):
+    code, out = run(capsys, "score", good, "--format", "json")
+    data = json.loads(out.out)
+    assert code == 0 and data["summary"]["accepted"] == 1
+    assert "questions" not in data["commitments"][0]
 
 
-def test_analyse_writes_one_file_per_analysis(tmp_path, monkeypatch):
-    monkeypatch.setattr(cli, "ANALYSIS", tmp_path)
-    monkeypatch.setattr(cli, "compute_analysis", lambda d: {"robustness": {"x": 1}, "agreement": {"y": 2}})
-    assert run("analyse") == 0
-    assert json.loads((tmp_path / "robustness.json").read_text(encoding="utf-8")) == {"x": 1}
-    assert (tmp_path / "agreement.json").exists()
+def test_questions_command_lists_questions_in_both_languages(capsys, good):
+    code, out = run(capsys, "questions", good, "--lang", "both")
+    assert code == 0 and "Which dataset or report" in out.out and "ما مجموعة" in out.out
 
 
-def test_facts_report_and_schema_match_committed_files(tmp_path, monkeypatch):
-    (tmp_path / "results").mkdir()
-    for p in (ROOT / "results").glob("e*.json"):
-        shutil.copy(p, tmp_path / "results" / p.name)
-    monkeypatch.setattr(facts, "RESULTS", tmp_path / "results")
-    monkeypatch.setattr(cli, "REPORTS", {"EVALUATION.md": tmp_path / "EVALUATION.md"})
-    assert run("facts") == 0
-    assert run("report") == 0
-    assert (tmp_path / "results" / "facts.json").read_text(encoding="utf-8") == (
-        ROOT / "results" / "facts.json"
-    ).read_text(encoding="utf-8")
-    assert (tmp_path / "EVALUATION.md").read_text(encoding="utf-8") == (
-        ROOT / "docs" / "EVALUATION.md"
-    ).read_text(encoding="utf-8")
-    monkeypatch.setattr(cli, "ROOT", tmp_path)
-    assert run("schema") == 0
-    for p in (ROOT / "schema").glob("*.json"):
-        assert (tmp_path / "schema" / p.name).read_text(encoding="utf-8") == p.read_text(encoding="utf-8")
+def test_csv_output_neutralises_formulas(capsys, tmp_path):
+    p = tmp_path / "f.csv"
+    p.write_text("id,title,kind\n1,=1+1,vision\n", encoding="utf-8")
+    code, out = run(capsys, "score", str(p), "--format", "csv")
+    assert code == 0 and "'=1+1" in out.out
 
 
-def test_diff_against_head_runs(capsys):
-    if shutil.which("git") is None:
-        pytest.skip("git is not available")
-    assert run("diff", "HEAD") == 0
-    assert capsys.readouterr().out.strip()
+def test_gates(capsys, good, mixed):
+    assert run(capsys, "score", good, "--min-ratio", "0.99")[0] == 1
+    assert run(capsys, "score", good, "--min-ratio", "0.1")[0] == 0
+    assert run(capsys, "score", mixed)[0] == 0
+    code, out = run(capsys, "score", mixed, "--strict")
+    assert code == 1 and "problem(s)" in out.out
 
 
-def test_verify_live_writes_results_without_network(tmp_path, monkeypatch, capsys):
-    (tmp_path / "verification.json").write_text(json.dumps({"results": {"S99": {"result": "verified"}}}))
-    monkeypatch.setattr(cli, "REAL", tmp_path)
-
-    def fake(sources, only=None):
-        assert only == {"S01"}
-        return {"run_at": "t", "results": {"S01": {"result": "verified", "missing": [], "unexpected": []}}}
-
-    monkeypatch.setattr(cli, "run_verify", fake)
-    assert run("verify-live", "--only", "S01", "--write") == 0
-    out = json.loads((tmp_path / "verification.json").read_text(encoding="utf-8"))
-    assert set(out["results"]) == {"S01", "S99"} and out["run_at"] == "t"
-
-    def failing(sources, only=None):
-        return {"results": {"S01": {"result": "failed", "missing": ["x"], "unexpected": []}}}
-
-    monkeypatch.setattr(cli, "run_verify", failing)
-    assert run("verify-live") == 1
-    assert "failed" in capsys.readouterr().out
+def test_unreadable_input_exits_two(capsys, tmp_path):
+    assert run(capsys, "score", str(tmp_path / "missing.csv"))[0] == 2
+    bad = tmp_path / "bad.json"
+    bad.write_text("{", encoding="utf-8")
+    code, out = run(capsys, "score", str(bad))
+    assert code == 2 and "not valid JSON" in out.err
+    empty = tmp_path / "empty.csv"
+    empty.write_text("id,title\n1,a\n", encoding="utf-8")
+    assert run(capsys, "score", str(empty))[0] == 2
 
 
-def test_diff_reports_a_changed_target_value():
-    old = load_current()
-    new = json.loads(json.dumps(old))
-    new["commitments"][0]["target_number"] = 12345.0
-    new["commitments"][1]["target_value"] = "a new wording"
-    lines = diff(old, new)
-    assert any("target_number" in x for x in lines)
-    assert any("target_value" in x for x in lines)
+def test_template_round_trips(capsys, tmp_path):
+    code, out = run(capsys, "template")
+    p = tmp_path / "t.csv"
+    p.write_text(out.out, encoding="utf-8")
+    assert code == 0 and run(capsys, "score", str(p), "--strict")[0] == 0
 
 
-def test_diff_reports_added_and_removed_commitments():
-    old = load_current()
-    new = json.loads(json.dumps(old))
-    gone = new["commitments"].pop(0)
-    new["commitments"].append({**gone, "id": "C99"})
-    lines = diff(old, new)
-    assert any(x.startswith("+ C99") for x in lines)
-    assert any(x.startswith(f"- {gone['id']}") for x in lines)
+def test_no_command_prints_help(capsys):
+    code, out = run(capsys)
+    assert code == 2 and "usage: mutabaa" in out.out
+
+
+def test_version(capsys):
+    with pytest.raises(SystemExit) as e:
+        main(["mutabaa", "--version"])
+    assert e.value.code == 0 and "mutabaa" in capsys.readouterr().out

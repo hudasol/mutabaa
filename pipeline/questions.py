@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from .schemas import Commitment, VerifiabilityResult
+from .schemas import Scorable, VerifiabilityResult
 
 MAX_TERM_QUESTIONS = 3
 
@@ -34,7 +34,7 @@ _TERM = (
 )
 
 
-def questions(c: Commitment, s: VerifiabilityResult) -> list[dict]:
+def questions(c: Scorable, s: VerifiabilityResult) -> list[dict]:
     out: list[dict] = []
     for check in s.missing:
         if check in _T:

@@ -7,7 +7,7 @@ Synthetic records (registry) always carry ``is_synthetic: true``; the schema ref
 from __future__ import annotations
 
 from datetime import date
-from typing import Literal
+from typing import Literal, Protocol
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
@@ -109,6 +109,40 @@ class Anchor(BaseModel):
         if not v.strip():
             raise ValueError("anchor must not be empty")
         return v
+
+
+class Scorable(Protocol):
+    """The fields the score and the questions read. A public Commitment and an own file row have them."""
+
+    @property
+    def id(self) -> str: ...
+
+    @property
+    def title(self) -> str: ...
+
+    @property
+    def kind(self) -> str: ...
+
+    @property
+    def owner(self) -> str | None: ...
+
+    @property
+    def unit(self) -> str | None: ...
+
+    @property
+    def target_number(self) -> float | None: ...
+
+    @property
+    def deadline_precision(self) -> str: ...
+
+    @property
+    def measurement_source(self) -> str | None: ...
+
+    @property
+    def undefined_terms(self) -> list[str]: ...
+
+    @property
+    def title_ar(self) -> str: ...
 
 
 class Commitment(BaseModel):

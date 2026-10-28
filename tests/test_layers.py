@@ -22,8 +22,8 @@ LAYERS: dict[str, int] = {
     "score": 2, "status": 2, "own": 2, "questions": 2, "sensitivity": 2, "synth": 2, "synth_b": 2,
     "validate": 2, "verify_live": 2, "diff": 2,
     # 3. analysis and reporting over engine output
-    "robustness": 3, "calibration": 3, "agreement": 3, "facts": 3, "evaluate": 3, "evaluate_real": 3,
-    "schema_export": 3,
+    "robustness": 3, "own_report": 3, "calibration": 3, "agreement": 3, "facts": 3, "evaluate": 3,
+    "evaluate_real": 3, "schema_export": 3,
     # 4. command line
     "__main__": 4, "__init__": 4,
 }
