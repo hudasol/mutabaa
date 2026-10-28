@@ -38,7 +38,7 @@ same files with the same rules.
 | `--format text`, `json` or `csv` | Output format. `json` includes a summary block; `csv` is one row per commitment |
 | `--questions` | With `score`, also list the questions (`questions` always does) |
 | `--lang en`, `ar` or `both` | Language of the questions in text output |
-| `--strict` | Exit 1 if any row was rejected |
+| `--strict` | Exit 1 if any row was rejected or the file was cut at the row limit |
 | `--min-ratio R` | Exit 1 if any commitment scores below `R`, between 0 and 1 |
 
 ### Exit codes
@@ -49,11 +49,14 @@ same files with the same rules.
 | 1 | A gate was not met (`--strict` or `--min-ratio`), or a check failed in `verify-live` |
 | 2 | The input could not be read, or no row was usable |
 
+`--min-ratio` looks only at rows that were read. A rejected row is not scored, so use `--strict` as well if a malformed
+row should fail the run. Output is always UTF-8, so Arabic text survives a redirect on any platform.
+
 These make the command usable in a pipeline: `mutabaa score plan.csv --strict --min-ratio 0.5` fails the build
 when a row is malformed or a commitment is mostly unverifiable.
 
 The score says whether a third party could check a commitment from public information. It says nothing about
-whether the commitment is being met. See [METHOD.md](METHOD.md).
+whether the commitment is being met. See [METHODOLOGY.md](METHODOLOGY.md).
 
 ## Repository commands
 
