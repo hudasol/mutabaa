@@ -1,4 +1,4 @@
-# Preregistration: four experiments for Mutabaa v1.5.0
+# Preregistration: experiments for Mutabaa (E1 to E4 for v1.5.0, E5 and E6 added for v1.6.0)
 
 Written and committed on 2026-10-18, before any code for these experiments existed and before any of them was run. The commit that adds this file precedes the commit that adds `pipeline/evaluate.py` and `results/`. Predictions below are not edited after results exist. Any change of design is recorded as a dated amendment at the end, and the original text stays.
 
@@ -107,6 +107,71 @@ The method (score, status rules, definition sweep, portfolio ranking), synthetic
 - P4d. Wilson coverage is at least 0.92 at all three rates.
 
 **Consequence fixed in advance.** If P4b or P4c holds, the Assurance page text is changed (English and Arabic) to say that the percentile intervals are too narrow near the top of the range, and the agreement interval is also reported as a Wilson interval, with a dated amendment here.
+
+## Part two: experiments E5 and E6 on the real ledger
+
+Registered on 2026-10-28, after the v1.5.0 release and before any code for E5 or E6 exists and before either was run. The commit that adds this section precedes the commits that add the code and the results. The author has read the ledger, the evidence file and the extraction notes while designing these experiments, so the predictions are informed guesses and not blind ones. Both experiments use the real ledger only, no synthetic data and no language model. Part one (E1 to E4) is unchanged. Common rules above apply, and `python -m pipeline evaluate` runs all six experiments.
+
+## E5. What does a plain rule based extractor find, compared with the curated ledger?
+
+**Question.** Curating the ledger by reading takes effort. A rule based extractor is the obvious cheaper alternative. How much of the ledger would rules recover, and how many of the lines it flags are not commitments in the ledger?
+
+**Units.** For each file `data/real/extracts/S*.md`, a unit is one bullet: a line that starts with `- `, joined with the following lines that start with whitespace, up to the next bullet or a blank line. Headers and the introduction are not units. Units shorter than four words are dropped. Text is lower cased and whitespace is collapsed before matching.
+
+**Reference labels.** For a commitment and each of its anchors (`source_id`, `text`), the evidence units are the units of that source's note that contain the normalised anchor text. A unit is positive when it is an evidence unit of at least one commitment. A commitment with no evidence unit is reported as unlocated and left out of recall. Unit precision is a lower bound, because a flagged unit that is not in the ledger may still be a real commitment that was not curated.
+
+**Extractors.** Each sees one unit of text and nothing else.
+1. X0, every unit.
+2. X1, the unit contains a digit.
+3. X2, the unit contains a digit and one of `%`, `percent`, `aed`, `billion`, `million`, `trillion`.
+4. X3, X2 and a year from 2024 to 2035, or the words `within` or `by end of`.
+5. X4, the unit contains one of the whole words `will`, `target`, `aim`, `plan`, `launch`, `transform`, `establish`, `commit`.
+
+**Metrics.** Commitment recall (located commitments with at least one positive unit flagged, over located commitments), reported overall, for commitments with a numeric target (`target_number` not null) and for the others. Unit recall, unit precision and unit F1 over positive units. The share of units flagged.
+
+**Baselines.** X0 is the trivial upper bound on recall. Random: each unit flagged with the same probability as X2 flags units, seeds 1 to 20, mean commitment recall. Reference only, not rerun: the blind second reading in `data/real/blind_extraction.json`, whose recall is already in `data/analysis/agreement.json`.
+
+**Predictions.**
+- P5a. X2 recovers at least 0.70 of the commitments with a numeric target and at most 0.50 of the others.
+- P5b. No extractor from X1 to X4 has a unit F1 above 0.45.
+- P5c. X1 has unit precision below 0.50.
+- P5d. The blind second reading has a higher commitment recall than X3, and X3 has a higher commitment recall than the random baseline mean. Both parts must hold.
+- P5e. There are no unlocated commitments.
+
+**Consequence fixed in advance.** If P5a holds, `docs/METHODOLOGY.md` says in one sentence that numeric rules find numeric targets and miss deliverables, citing this experiment. Nothing in the product changes, because the product does not extract.
+
+## E6. Does the status engine keep its stated invariants, and would the checks notice a broken engine?
+
+**Question.** The status rules promise a neutral default, that media only evidence never moves a status, and that nothing depends on the order of the evidence. The ledger has too few evidence items to learn anything about accuracy, but it can test whether the rules do what they promise.
+
+**Data.** All 25 commitments, the evidence file and the source file in `data/real`, and the data as of date used by the build. Perturbations add evidence objects in memory only. They are never written to disk. Every added object has an id that starts with `X` and is never shown anywhere.
+
+**Order of statuses.** `no-public-evidence` below `activity-reported` below `milestone-reported` below `target-claimed-met`. `not-checkable` is outside the order.
+
+**Invariants**, each checked for every commitment.
+- I1. With all its evidence removed, a commitment is `not-checkable` if its kind is vision, projection or assessment, and `no-public-evidence` otherwise.
+- I2. Adding an evidence item from a media source whose corroboration is not `official-confirmed` leaves the status, the evidence ids and the progress ratio unchanged.
+- I3. Shuffling the evidence list (seeds 1 to 20) never changes the result.
+- I4. Adding an eligible official evidence item of kind activity, quantified progress (value half the target, same unit) or target met claim (value equal to the target, same unit) never lowers the status within the order, and never changes `not-checkable`.
+- I5. Changing the data as of date by any number of days changes only the stale flag, never the status, and the flag is true exactly when the latest eligible evidence is more than 180 days old.
+
+**Mutants.** Five altered copies of the engine, each checked against the same invariants. A mutant is killed when at least one invariant is violated for at least one commitment.
+- M1. Media evidence counts as eligible.
+- M2. Eligible evidence older than 180 days is dropped.
+- M3. Only the first evidence item for a commitment is used.
+- M4. With no eligible evidence the status is `not-checkable` for every kind.
+- M5. The vision, projection and assessment rule is checked after the evidence rules.
+
+**Metrics.** Violations per invariant on the real engine. Mutants killed out of five. The number of commitments with two or more eligible evidence items.
+
+**Baseline.** The mutants are the baseline: a check that kills none of them would be worthless.
+
+**Predictions.**
+- P6a. The real engine has zero violations of every invariant.
+- P6b. At least four of the five mutants are killed.
+- P6c. At most three of the 25 commitments have two or more eligible evidence items.
+
+**Consequence fixed in advance.** A violation on the real engine is fixed as a bug with a dated amendment. A surviving mutant leads to a new perturbation that kills it, added as a unit test, with a dated amendment.
 
 ## Amendments
 
