@@ -60,3 +60,10 @@ def test_row_cap(monkeypatch):
     monkeypatch.setattr(own, "MAX_ROWS", 2)
     _, rows, cut = own.read_file("x.csv", "id,title,kind\n1,a,target\n2,b,target\n3,c,target\n")
     assert len(rows) == 2 and cut
+
+
+def test_decode_utf16_with_bom():
+    text = "id,title,kind\n1,عنوان,target\n"
+    assert own.decode(text.encode("utf-16")) == text
+    assert own.decode(b"\xef\xbb\xbf" + text.encode()).removeprefix("﻿") == text
+    assert own.load("x.csv", own.decode(text.encode("utf-16"))).items[0].title == "عنوان"

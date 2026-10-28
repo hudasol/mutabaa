@@ -59,6 +59,7 @@ test("[state] language toggle flips direction and persists", async ({ page }) =>
 
 test("[keyboard] skip link is first tab stop and moves focus to main", async ({ page }) => {
   await open(page, "overview");
+  await page.bringToFront(); // pages run in parallel; make sure this one owns keyboard focus
   await page.keyboard.press("Tab");
   await expect(page.locator("a.skip")).toBeFocused();
   await page.keyboard.press("Enter");
@@ -147,6 +148,38 @@ test("[mine] Arabic questions and right to left layout", async ({ page }) => {
   const block = page.locator("details.qblock", { hasText: "X02" });
   await block.locator("summary").click();
   await expect(block.getByText(/في أي تاريخ ميلادي يجب تحقيق/)).toBeVisible();
+});
+
+const MESSY = "\uFEFFid;title;kind;owner;deadline\r\n" +
+  'M1;"Move half of services,\nacross two sites";target;Office;31 Dec 2027\r\n' +
+  "M2;Publish a guide;deliverable;Office;Q4 2026\r\n";
+
+test("[mine] a semicolon file with a quoted line break, a byte order mark and CRLF is read in full", async ({ page }) => {
+  await open(page, "mine");
+  await page.locator('input[type="file"]').setInputFiles({ name: "messy.csv", mimeType: "text/csv", buffer: Buffer.from(MESSY) });
+  await expect(page.getByText("2 commitments scored.")).toBeVisible();
+  await expect(page.getByRole("cell", { name: "M1" })).toBeVisible();
+  await expect(page.getByRole("cell", { name: "M2" })).toBeVisible();
+});
+
+test("[mine] a UTF-16 file saved by Excel as Unicode text is read", async ({ page }) => {
+  await open(page, "mine");
+  const text = "id\ttitle\tkind\n" + "U1\tعنوان بالعربية\ttarget\n";
+  const buffer = Buffer.concat([Buffer.from([0xff, 0xfe]), Buffer.from(text, "utf16le")]);
+  await page.locator('input[type="file"]').setInputFiles({ name: "excel.txt", mimeType: "text/plain", buffer });
+  await expect(page.getByText("1 commitment scored.")).toBeVisible();
+  await expect(page.getByText("عنوان بالعربية").first()).toBeVisible();
+});
+
+test("[lab] a services file with semicolons and a quoted line break is read", async ({ page }) => {
+  await page.goto("/#/lab");
+  await page.getByRole("button", { name: "My CSV" }).first().click();
+  const csv = "id;entity;sector;kind;audience;annual_transactions;maturity;oversight;audit_trail;uae_residency;fallback\r\n" +
+    'a1;"Alpha\nUnit";Health;service;citizen;100;4;true;true;true;true\r\n' +
+    "a2;Beta;Health;service;citizen;100;2;true;true;true;true\r\n";
+  await page.locator('input[type="file"]').setInputFiles({ name: "services.csv", mimeType: "text/csv", buffer: Buffer.from(csv) });
+  await expect(page.locator(".banner.yours")).toBeVisible();
+  await expect(page.getByText("services.csv:")).toContainText("2");
 });
 
 test("[mine] a malformed file shows an error, not a crash", async ({ page }) => {

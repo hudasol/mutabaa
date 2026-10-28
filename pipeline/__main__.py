@@ -320,8 +320,7 @@ def cmd_own(args: argparse.Namespace) -> int:
     """Score the commitments in the file given on the command line. Exit 1 when a gate is not met."""
     path = Path(args.file)
     try:
-        text = path.read_text(encoding="utf-8")
-        res = own.load(path.name, text)
+        res = own.load(path.name, own.decode(path.read_bytes()))
     except (OSError, UnicodeDecodeError, ValueError) as exc:
         print(f"mutabaa: {path}: {exc}", file=sys.stderr)
         return 2

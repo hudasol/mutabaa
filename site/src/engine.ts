@@ -143,6 +143,14 @@ export function parseRecords(input: string): string[][] {
   return records.filter((r) => r.some((c) => c !== ""));
 }
 
+/** Decode a chosen file. UTF-8 is the norm; Excel's "Unicode text" is UTF-16 with a byte order mark, which is detected. */
+export async function readFileText(f: Blob): Promise<string> {
+  const buf = new Uint8Array(await f.arrayBuffer());
+  if (buf[0] === 0xff && buf[1] === 0xfe) return new TextDecoder("utf-16le").decode(buf);
+  if (buf[0] === 0xfe && buf[1] === 0xff) return new TextDecoder("utf-16be").decode(buf);
+  return new TextDecoder("utf-8").decode(buf);
+}
+
 export function readCsv(text: string): { headers: string[]; rows: string[][]; truncated: boolean } {
   const records = parseRecords(text);
   if (records.length === 0) return { headers: [], rows: [], truncated: false };

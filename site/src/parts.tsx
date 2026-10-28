@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { copyText, download, pct, useCtx } from "./ctx";
-import { CSV_COLUMNS, CSV_TEMPLATE, autoMap, convert, readCsv, type CsvColumn, type CsvResult, type Mapping } from "./engine";
+import { CSV_COLUMNS, CSV_TEMPLATE, autoMap, convert, readCsv, readFileText, type CsvColumn, type CsvResult, type Mapping } from "./engine";
 import type { Definition, Item, Score, Status } from "./types";
 
 export function Head({ title, sub }: { title: string; sub?: string }) {
@@ -146,7 +146,7 @@ export function CsvLoader({ h }: { h: ItemsHook }) {
   const onFile = async (f: File | undefined) => {
     if (!f) return;
     let parsed: ReturnType<typeof readCsv>;
-    try { parsed = readCsv(await f.text()); } catch (e) {
+    try { parsed = readCsv(await readFileText(f)); } catch (e) {
       h.setCsv({ ...convert([], [], {}, false), errors: [String(e instanceof Error ? e.message : e)], name: f.name });
       h.setSource("csv");
       return;
@@ -168,7 +168,7 @@ export function CsvLoader({ h }: { h: ItemsHook }) {
       </div>
       {h.source === "csv" && (
         <>
-          <label className="field">{t.lb_upload}<input type="file" accept=".csv,text/csv" onChange={(e) => onFile(e.target.files?.[0])} /></label>
+          <label className="field">{t.lb_upload}<input type="file" accept=".csv,.tsv,.txt,text/csv,text/plain" onChange={(e) => onFile(e.target.files?.[0])} /></label>
           <p className="small">{t.lb_csv_help} <span className="mono">{CSV_COLUMNS.join(", ")}</span></p>
           <button className="btn ghost" style={{ justifySelf: "start" }} onClick={() => download("mutabaa-template.csv", CSV_TEMPLATE, "text/csv")}>{t.lb_template}</button>
           {raw && (

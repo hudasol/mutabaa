@@ -333,6 +333,13 @@ def convert_rows(
     return res
 
 
+def decode(data: bytes) -> str:
+    """UTF-8, or UTF-16 when the file starts with a byte order mark (Excel's "Unicode text")."""
+    if data[:2] in (b"\xff\xfe", b"\xfe\xff"):
+        return data.decode("utf-16")
+    return data.decode("utf-8")
+
+
 def load(name: str, text: str) -> OwnResult:
     """Read, map and convert in one step."""
     headers, rows, truncated = read_file(name, text)

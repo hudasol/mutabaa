@@ -4,7 +4,7 @@ import {
   MY_COLUMNS, MY_TEMPLATE, REQUIRED, convertRows, mapColumns, questionsFor, readMyFile, scoreCommitment,
   type MyColumn, type MyMapping, type MyResult,
 } from "../commitments";
-import { csvCell } from "../engine";
+import { csvCell, readFileText } from "../engine";
 import { Head, SourceBanner, Ticks } from "../parts";
 
 type Loaded = { name: string; headers: string[]; rows: string[][]; truncated: boolean };
@@ -20,7 +20,7 @@ export default function Mine() {
     if (!f) return;
     setReadError(null);
     try {
-      const parsed = readMyFile(f.name, await f.text());
+      const parsed = readMyFile(f.name, await readFileText(f));
       const m = mapColumns(parsed.headers);
       setFile({ name: f.name, ...parsed }); setMapping(m);
       setResult(convertRows(parsed.headers, parsed.rows, m, parsed.truncated));
@@ -46,7 +46,7 @@ export default function Mine() {
       <section className="panel" aria-labelledby="my-load">
         <h2 id="my-load">{t.my_load}</h2>
         <label className="field">{t.my_upload}
-          <input type="file" accept=".csv,.json,text/csv,application/json" onChange={(e) => onFile(e.target.files?.[0])} />
+          <input type="file" accept=".csv,.tsv,.txt,.json,text/csv,text/plain,application/json" onChange={(e) => onFile(e.target.files?.[0])} />
         </label>
         <p className="small">{t.my_help} <span className="mono">{MY_COLUMNS.join(", ")}</span></p>
         <p className="small">{t.my_terms_help}</p>
