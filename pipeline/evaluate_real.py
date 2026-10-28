@@ -12,12 +12,12 @@ import random
 import re
 import statistics
 from collections.abc import Callable
-from contextlib import contextmanager
+from contextlib import AbstractContextManager, contextmanager
 from datetime import date, timedelta
 
 from . import status as status_module
 from .io import ROOT, load_real
-from .schemas import Commitment, Evidence, Source, StatusResult
+from .schemas import Commitment, Evidence, EvidenceKind, Source, StatusResult
 
 ANALYSIS = ROOT / "data" / "analysis"
 
@@ -111,9 +111,7 @@ def e5() -> dict:
     numeric = [c for c in located if c.target_number is not None]
     other = [c for c in located if c.target_number is None]
 
-    def recall(flagged: set, group: list[Commitment]) -> float | None:
-        if not group:
-            return None
+    def recall(flagged: set, group: list[Commitment]) -> float:
         return sum(bool(evidence_units[c.id] & flagged) for c in group) / len(group)
 
     rows: dict[str, dict] = {}
@@ -126,8 +124,8 @@ def e5() -> dict:
             "flagged": len(flagged),
             "flagged_share": round(len(flagged) / len(units), 4),
             "recall": recall(flagged, located),
-            "recall_numeric": recall(flagged, numeric),
-            "recall_other": recall(flagged, other),
+            "recall_numeric": recall(flagged, numeric) if numeric else None,
+            "recall_other": recall(flagged, other) if other else None,
             "unit_recall": round(urec, 4),
             "precision": None if prec is None else round(prec, 4),
             "f1": round(_f1(prec, urec), 4),
@@ -219,7 +217,7 @@ ORDER = {"no-public-evidence": 0, "activity-reported": 1, "milestone-reported": 
 StatusFn = Callable[[Commitment, list[Evidence], dict[str, Source], date], StatusResult]
 
 
-def _ev(i: int, c: Commitment, source: Source, kind: str, as_of: date, **kw) -> Evidence:
+def _ev(i: int, c: Commitment, source: Source, kind: EvidenceKind, as_of: date, **kw) -> Evidence:
     return Evidence(
         id=f"E{90 + i}",
         commitment_ids=[c.id],
@@ -319,7 +317,7 @@ def _patched(**attrs):
             setattr(status_module, k, v)
 
 
-def mutant_fns() -> dict[str, tuple[str, Callable[[], object]]]:
+def mutant_fns() -> dict[str, tuple[str, Callable[[], AbstractContextManager[None]]]]:
     """Name -> (description, context manager factory) for five altered copies of the engine."""
     real = status_module.status
 

@@ -82,13 +82,13 @@ def validate(data: RealData | None = None) -> tuple[list[str], list[str]]:
             if cid not in cids:
                 errors.append(f"{e.id}: unknown commitment {cid}")
         anchor_ok(e.source_id, e.anchor, e.id)
-        s = src.get(e.source_id)
-        if s:
-            if s.kind == "secondary-media" and e.corroboration == "official-confirmed":
+        e_src = src.get(e.source_id)
+        if e_src:
+            if e_src.kind == "secondary-media" and e.corroboration == "official-confirmed":
                 errors.append(f"{e.id}: media source cannot be 'official-confirmed'")
-            if s.kind != "secondary-media" and e.corroboration != "official-confirmed":
+            if e_src.kind != "secondary-media" and e.corroboration != "official-confirmed":
                 errors.append(f"{e.id}: official source marked {e.corroboration}")
-            if e.as_of and e.as_of > s.retrieved:
+            if e.as_of and e.as_of > e_src.retrieved:
                 errors.append(f"{e.id}: as_of after retrieval")
         if e.kind == "quantified-progress" and (e.value is None or e.unit is None):
             errors.append(f"{e.id}: quantified-progress needs value and unit")

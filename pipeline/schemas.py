@@ -59,6 +59,8 @@ UNITS = (
 )
 
 MaturityLevel = Literal[0, 1, 2, 3, 4]
+Audience = Literal["citizen", "business", "internal"]
+Band = Literal["checkable", "partly-checkable", "not-yet-checkable"]
 
 _STRICT = ConfigDict(extra="forbid", frozen=False)
 
@@ -240,7 +242,7 @@ class VerifiabilityResult(BaseModel):
     applicable: int
     passed: int
     ratio: float
-    band: Literal["checkable", "partly-checkable", "not-yet-checkable"]
+    band: Band
     missing: list[str]
 
 
@@ -288,7 +290,7 @@ class ServiceItem(BaseModel):
     entity_id: str
     sector: str
     kind: Literal["service", "operation"]
-    audience: Literal["citizen", "business", "internal"]
+    audience: Audience
     name: str
     annual_transactions: int = Field(ge=0)
     maturity: MaturityLevel

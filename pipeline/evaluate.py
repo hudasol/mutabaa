@@ -48,6 +48,14 @@ def auc(scores: Sequence[float], labels: Sequence[bool]) -> float | None:
     return wins / (len(pos) * len(neg))
 
 
+def auc_required(scores: Sequence[float], labels: Sequence[bool]) -> float:
+    """Like auc, for data known to hold both classes."""
+    v = auc(scores, labels)
+    if v is None:
+        raise ValueError("both classes are needed")
+    return v
+
+
 def auc_ci(scores, labels, reps: int = 2000, seed: int = 7) -> tuple[float, float]:
     rng = random.Random(seed)
     n = len(scores)
@@ -73,23 +81,23 @@ def e1() -> dict:
     cs = d.commitments
     y = [outcome(c, d) for c in cs]
     s = [score(c).ratio for c in cs]
-    point = auc(s, y)
+    point = auc_required(s, y)
     lo, hi = auc_ci(s, y)
     baselines: dict[str, float] = {
-        "numeric_target": auc([float(c.target_number is not None) for c in cs], y),
-        "number_and_deadline": auc(
+        "numeric_target": auc_required([float(c.target_number is not None) for c in cs], y),
+        "number_and_deadline": auc_required(
             [
                 float(c.target_number is not None and c.deadline_precision in ("day", "month", "year"))
                 for c in cs
             ],
             y,
         ),
-        "owner_named": auc([float(c.owner is not None) for c in cs], y),
+        "owner_named": auc_required([float(c.owner is not None) for c in cs], y),
     }
-    rnd = []
+    rnd: list[float] = []
     for seed in range(1, 21):
         rng = random.Random(seed)
-        rnd.append(auc([rng.random() for _ in cs], y))
+        rnd.append(auc_required([rng.random() for _ in cs], y))
     best = max(baselines.values())
     preds = {
         "P1a": {"text": "score AUC between 0.55 and 0.80", "result": _verdict(0.55 <= point <= 0.80)},
@@ -333,8 +341,8 @@ def percentile_boot(k: int, n: int, rng: random.Random, reps: int = 2000) -> tup
 
 
 def coverage(rate: float, n: int = 25, seeds: range = range(1, 21), runs: int = 100) -> dict:
-    per_seed = {"bootstrap": [], "wilson": []}
-    widths = {"bootstrap": [], "wilson": []}
+    per_seed: dict[str, list[float]] = {"bootstrap": [], "wilson": []}
+    widths: dict[str, list[float]] = {"bootstrap": [], "wilson": []}
     for seed in seeds:
         rng = random.Random(seed)
         hits = {"bootstrap": 0, "wilson": 0}

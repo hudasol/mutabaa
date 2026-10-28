@@ -71,7 +71,9 @@ def status(
     mismatch = any(e.kind == "quantified-progress" and e.unit != c.unit for e in ok)
     if comparable:
         best = max(comparable, key=lambda e: (e.as_of is not None, e.as_of or date.min))
-        ratio = best.value / c.target_number
+        value, target = best.value, c.target_number
+        assert value is not None and target  # guaranteed by the filter that built `comparable`
+        ratio = value / target
         claimed = any(e.kind == "target-met-claim" for e in ok)
         st = "target-claimed-met" if claimed else "milestone-reported"
         return result(

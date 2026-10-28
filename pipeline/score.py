@@ -6,7 +6,7 @@ The score says nothing about whether the commitment is being met.
 
 from __future__ import annotations
 
-from .schemas import Commitment, VerifiabilityResult
+from .schemas import Band, Commitment, VerifiabilityResult
 
 CHECKS = (
     "numeric_target",
@@ -42,7 +42,7 @@ def score(c: Commitment) -> VerifiabilityResult:
     applicable = [v for v in checks.values() if v is not None]
     passed = sum(1 for v in applicable if v)
     ratio = passed / len(applicable)
-    band = "checkable" if ratio >= 0.8 else "partly-checkable" if ratio >= 0.5 else "not-yet-checkable"
+    band: Band = "checkable" if ratio >= 0.8 else "partly-checkable" if ratio >= 0.5 else "not-yet-checkable"
     missing = [k for k, v in checks.items() if v is False]
     return VerifiabilityResult(
         commitment_id=c.id,
