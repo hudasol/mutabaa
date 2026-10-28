@@ -30,6 +30,7 @@ def mixed(tmp_path):
 def test_score_text(capsys, good):
     code, out = run(capsys, "score", good)
     assert code == 0 and "1 of 1 rows read" in out.out and "A1" in out.out
+    assert "partly specified" in out.out or "fully specified" in out.out
 
 
 def test_score_json_has_summary_and_no_questions_by_default(capsys, good):

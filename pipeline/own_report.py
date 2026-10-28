@@ -18,6 +18,12 @@ def _safe(v: str) -> str:
     return "'" + v if v[:1] in ("=", "+", "-", "@", "\t", "\r") else v
 
 
+# The wording the site shows. The identifiers stay in JSON because code depends on them (docs/adr/0007).
+WORDING = {
+    "checkable": "fully specified",
+    "partly-checkable": "partly specified",
+    "not-yet-checkable": "under-specified",
+}
 BANDS = ("checkable", "partly-checkable", "not-yet-checkable")
 
 
@@ -75,14 +81,15 @@ def as_text(res: OwnResult, rows: list[dict[str, Any]], lang: str, with_question
     if rows:
         b = s["bands"]
         lines.append(
-            f"checkable {b['checkable']}, partly checkable {b['partly-checkable']}, "
-            f"not yet checkable {b['not-yet-checkable']}; mean score {s['mean_ratio']:.2f}"
+            f"fully specified {b['checkable']}, partly specified {b['partly-checkable']}, "
+            f"under-specified {b['not-yet-checkable']}; mean score {s['mean_ratio']:.2f}"
         )
         lines.append("")
         wid = max(len(r["id"]) for r in rows)
         for r in rows:
             miss = ", ".join(LABELS[m].lower() for m in r["missing"]) or "nothing missing"
-            lines.append(f"{r['id']:<{wid}}  {r['passed']}/{r['applicable']}  {r['band']:<17}  {miss}")
+            band = WORDING[r["band"]]
+            lines.append(f"{r['id']:<{wid}}  {r['passed']}/{r['applicable']}  {band:<16}  {miss}")
             if with_questions:
                 for q in r["questions"]:
                     for lg in (("en", "ar") if lang == "both" else (lang,)):
