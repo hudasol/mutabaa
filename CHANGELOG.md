@@ -1,6 +1,15 @@
 # Changelog
 
-Milestones are listed with their tag. Tags up to v1.4.0 were first created locally with `scripts/tag-milestones.sh` (it maps each tag to its commit SHA) and later pushed; v1.5.0 was tagged and pushed directly.
+Milestones are listed with their tag. Tags up to v1.4.0 were first created locally with `scripts/tag-milestones.sh` (it maps each tag to its commit SHA) and later pushed; v1.5.0 and v1.6.0 were tagged directly.
+
+## v1.6.0: a command line, baselines and engineering gates
+- Command line: `mutabaa score`, `questions` and `template` read a CSV or JSON commitments file (comma, semicolon or tab, quoted line breaks, UTF-8 or UTF-16), print text, JSON or CSV and set an exit code with `--strict` and `--min-ratio`; the repository commands moved to argparse; `docs/CLI.md`, `docs/USER_GUIDE.md`
+- One reader in two languages: `pipeline/own.py` and the browser reader follow the same rules, held together by `data/golden/own_inputs.json` and `own_outputs.json` (awkward cases found by an independent review); deadlines accept dates, months, quarters and years and must be real dates
+- Baselines: preregistered E5 (rule based extractors against the ledger and the blind second reading, with an exploratory random comparison) and E6 (status invariants and five mutants the checks must catch); 18 of 22 predictions hit, 4 missed and reported; shown on the Assurance page
+- Engineering gates: mypy, ESLint, a bundle budget (`npm run check:bundle`), a 200,000 row speed guard, `scripts/benchmark.py`, dependabot, editorconfig, `docs/PERFORMANCE.md`
+- Site: pages load on demand (first script 96 kB gzip), the offline file keeps a single script, My commitments draws at most 500 rows, UTF-16 and tab files are read, singular counts are correct
+- Documents: product plan moved into `docs/`, README with screenshots, `python -m pipeline sync-docs` rewrites stale fact markers
+- Open: native speaker review of Arabic and notes, legal read of the sources policy, a real pilot, a built Docker image, Arabic reader error messages
 
 ## v1.5.0: verifiability of the project itself
 - Voice and identity: review documents renamed to role lenses with a no affiliation note; real entities named only in `docs/CONTEXT.md`; no em dashes; a voice test with its rules in `tests/voice_rules.json`
