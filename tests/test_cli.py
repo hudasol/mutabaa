@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 import pytest
 
@@ -87,3 +88,39 @@ def test_version(capsys):
     with pytest.raises(SystemExit) as e:
         main(["mutabaa", "--version"])
     assert e.value.code == 0 and "mutabaa" in capsys.readouterr().out
+
+
+def test_min_ratio_must_be_a_number_from_zero_to_one(capsys, good):
+    for bad in ("nan", "2", "-0.1", "x"):
+        with pytest.raises(SystemExit) as e:
+            main(["mutabaa", "score", good, "--min-ratio", bad])
+        assert e.value.code == 2
+    capsys.readouterr()
+
+
+def test_strict_fails_when_the_file_was_cut(capsys, good, monkeypatch):
+    from pipeline import own
+
+    monkeypatch.setattr(own, "MAX_ROWS", 0)
+    assert run(capsys, "score", good, "--strict")[0] == 2  # nothing usable left
+    p = good + ".more.csv"
+    Path(p).write_text(GOOD + "A2,Second,vision\n", encoding="utf-8")
+    monkeypatch.setattr(own, "MAX_ROWS", 1)
+    code, out = run(capsys, "score", p, "--strict")
+    assert code == 1 and "cut at the row limit" in out.out
+
+
+def test_output_survives_a_narrow_console_encoding(tmp_path):
+    import os
+    import subprocess
+    import sys
+
+    p = tmp_path / "ar.csv"
+    p.write_text("id,title,kind\n1,عنوان,target\n", encoding="utf-8")
+    env = {**os.environ, "PYTHONIOENCODING": "cp1252"}
+    r = subprocess.run(
+        [sys.executable, "-m", "pipeline", "questions", str(p), "--lang", "ar"],
+        capture_output=True, env=env, check=False,
+    )
+    assert r.returncode == 0, r.stderr
+    assert "ما".encode() in r.stdout

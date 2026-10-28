@@ -335,7 +335,7 @@ def cmd_own(args: argparse.Namespace) -> int:
     sys.stdout.write(out)
     if res.errors and not rows:
         return 2
-    if args.strict and res.errors:
+    if args.strict and (res.errors or res.truncated):
         return 1
     if args.min_ratio is not None and any(r["ratio"] < args.min_ratio for r in rows):
         return 1
@@ -345,6 +345,16 @@ def cmd_own(args: argparse.Namespace) -> int:
 def cmd_template() -> int:
     sys.stdout.write(own.TEMPLATE)
     return 0
+
+
+def _ratio(text: str) -> float:
+    try:
+        value = float(text)
+    except ValueError:
+        value = float("nan")
+    if not 0.0 <= value <= 1.0:  # false for nan as well
+        raise argparse.ArgumentTypeError("must be a number from 0 to 1")
+    return value
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -368,7 +378,7 @@ def build_parser() -> argparse.ArgumentParser:
         else:
             q.set_defaults(questions=True)
         q.add_argument("--strict", action="store_true", help="exit 1 if any row is rejected")
-        q.add_argument("--min-ratio", type=float, metavar="R", help="exit 1 if any score is below R (0 to 1)")
+        q.add_argument("--min-ratio", type=_ratio, metavar="R", help="exit 1 if any score is below R")
     sub.add_parser("template", help="print a CSV template with the expected columns")
     for name, help_ in (
         ("validate", "integrity checks on the real data"),
@@ -399,6 +409,9 @@ def main(argv: list[str] | None = None) -> int:
         "sync-docs": cmd_sync_docs, "schema": cmd_schema, "evaluate": cmd_evaluate, "golden": cmd_golden,
         "template": cmd_template,
     }
+    for stream in (sys.stdout, sys.stderr):  # Arabic text must not crash a redirected or Windows console
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
     parser = build_parser()
     args = parser.parse_args(sys.argv[1:] if argv is None else argv[1:])
     if args.command is None:
