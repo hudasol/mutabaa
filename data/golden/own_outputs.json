@@ -1,0 +1,410 @@
+[
+ {
+  "duplicates": 0,
+  "errors": [],
+  "items": [
+   {
+    "deadline": "2027-12-31",
+    "deadline_precision": "day",
+    "id": "A1",
+    "kind": "target",
+    "measurement_source": null,
+    "metric": null,
+    "owner": "Office",
+    "row": 2,
+    "target_number": 50.0,
+    "title": "Move half of services",
+    "undefined_terms": [],
+    "unit": null
+   },
+   {
+    "deadline": "Q4 2026",
+    "deadline_precision": "month",
+    "id": "A2",
+    "kind": "deliverable",
+    "measurement_source": null,
+    "metric": null,
+    "owner": "Office",
+    "row": 3,
+    "target_number": null,
+    "title": "Publish a guide",
+    "undefined_terms": [],
+    "unit": null
+   }
+  ],
+  "name": "plain.csv",
+  "rejected": 0,
+  "rows": 2,
+  "truncated": false,
+  "unmapped": [
+   "metric",
+   "unit",
+   "measurement_source",
+   "undefined_terms"
+  ]
+ },
+ {
+  "duplicates": 0,
+  "errors": [],
+  "items": [
+   {
+    "deadline": "31 Dec 2027",
+    "deadline_precision": "day",
+    "id": "1",
+    "kind": "target",
+    "measurement_source": null,
+    "metric": null,
+    "owner": null,
+    "row": 2,
+    "target_number": null,
+    "title": "First",
+    "undefined_terms": [],
+    "unit": null
+   },
+   {
+    "deadline": "by 2030",
+    "deadline_precision": "year",
+    "id": "2",
+    "kind": "vision",
+    "measurement_source": null,
+    "metric": null,
+    "owner": null,
+    "row": 3,
+    "target_number": null,
+    "title": "Second",
+    "undefined_terms": [],
+    "unit": null
+   }
+  ],
+  "name": "semicolon.csv",
+  "rejected": 0,
+  "rows": 2,
+  "truncated": false,
+  "unmapped": [
+   "owner",
+   "metric",
+   "unit",
+   "target_number",
+   "measurement_source",
+   "undefined_terms"
+  ]
+ },
+ {
+  "duplicates": 0,
+  "errors": [],
+  "items": [
+   {
+    "deadline": null,
+    "deadline_precision": "none",
+    "id": "1",
+    "kind": "target",
+    "measurement_source": null,
+    "metric": null,
+    "owner": null,
+    "row": 2,
+    "target_number": null,
+    "title": "One",
+    "undefined_terms": [],
+    "unit": null
+   }
+  ],
+  "name": "tab.tsv",
+  "rejected": 0,
+  "rows": 1,
+  "truncated": false,
+  "unmapped": [
+   "owner",
+   "metric",
+   "unit",
+   "target_number",
+   "deadline",
+   "measurement_source",
+   "undefined_terms"
+  ]
+ },
+ {
+  "duplicates": 0,
+  "errors": [],
+  "items": [
+   {
+    "deadline": null,
+    "deadline_precision": "none",
+    "id": "1",
+    "kind": "milestone",
+    "measurement_source": null,
+    "metric": null,
+    "owner": null,
+    "row": 2,
+    "target_number": null,
+    "title": "Line one\nline two, with comma",
+    "undefined_terms": [
+     "agentic",
+     "service"
+    ],
+    "unit": null
+   },
+   {
+    "deadline": null,
+    "deadline_precision": "none",
+    "id": "2",
+    "kind": "input",
+    "measurement_source": null,
+    "metric": null,
+    "owner": null,
+    "row": 3,
+    "target_number": null,
+    "title": "Say \"hi\"",
+    "undefined_terms": [
+     "a",
+     "b"
+    ],
+    "unit": null
+   }
+  ],
+  "name": "quoted.csv",
+  "rejected": 0,
+  "rows": 2,
+  "truncated": false,
+  "unmapped": [
+   "owner",
+   "metric",
+   "unit",
+   "target_number",
+   "deadline",
+   "measurement_source"
+  ]
+ },
+ {
+  "duplicates": 0,
+  "errors": [],
+  "items": [
+   {
+    "deadline": "12/2027",
+    "deadline_precision": "month",
+    "id": "X1",
+    "kind": "target",
+    "measurement_source": null,
+    "metric": null,
+    "owner": null,
+    "row": 2,
+    "target_number": 1200.0,
+    "title": "Thing",
+    "undefined_terms": [],
+    "unit": null
+   },
+   {
+    "deadline": "soon",
+    "deadline_precision": "relative",
+    "id": "X2",
+    "kind": "target",
+    "measurement_source": null,
+    "metric": null,
+    "owner": null,
+    "row": 3,
+    "target_number": 5.0,
+    "title": "Other",
+    "undefined_terms": [],
+    "unit": null
+   }
+  ],
+  "name": "synonyms.csv",
+  "rejected": 0,
+  "rows": 2,
+  "truncated": false,
+  "unmapped": [
+   "owner",
+   "metric",
+   "unit",
+   "measurement_source",
+   "undefined_terms"
+  ]
+ },
+ {
+  "duplicates": 0,
+  "errors": [],
+  "items": [
+   {
+    "deadline": null,
+    "deadline_precision": "none",
+    "id": "1",
+    "kind": "target",
+    "measurement_source": null,
+    "metric": null,
+    "owner": null,
+    "row": 2,
+    "target_number": 50.0,
+    "title": "x",
+    "undefined_terms": [],
+    "unit": null
+   }
+  ],
+  "name": "arabic_digits.csv",
+  "rejected": 0,
+  "rows": 1,
+  "truncated": false,
+  "unmapped": [
+   "owner",
+   "metric",
+   "unit",
+   "deadline",
+   "measurement_source",
+   "undefined_terms"
+  ]
+ },
+ {
+  "duplicates": 1,
+  "errors": [
+   "Row 3: duplicate id.",
+   "Row 4: title is empty.",
+   "Row 5: kind must be one of target, milestone, deliverable, input, projection, assessment, vision.",
+   "Row 6: target_number must be a number or empty."
+  ],
+  "items": [
+   {
+    "deadline": null,
+    "deadline_precision": "none",
+    "id": "1",
+    "kind": "target",
+    "measurement_source": null,
+    "metric": null,
+    "owner": null,
+    "row": 2,
+    "target_number": 5.0,
+    "title": "a",
+    "undefined_terms": [],
+    "unit": null
+   }
+  ],
+  "name": "errors.csv",
+  "rejected": 4,
+  "rows": 5,
+  "truncated": false,
+  "unmapped": [
+   "owner",
+   "metric",
+   "unit",
+   "deadline",
+   "measurement_source",
+   "undefined_terms"
+  ]
+ },
+ {
+  "duplicates": 0,
+  "errors": [
+   "Missing columns: kind."
+  ],
+  "items": [],
+  "name": "missing.csv",
+  "rejected": 0,
+  "rows": 1,
+  "truncated": false,
+  "unmapped": [
+   "owner",
+   "metric",
+   "unit",
+   "target_number",
+   "deadline",
+   "measurement_source",
+   "undefined_terms",
+   "kind"
+  ]
+ },
+ {
+  "duplicates": 0,
+  "errors": [
+   "The file needs at least one commitment."
+  ],
+  "items": [],
+  "name": "empty.csv",
+  "rejected": 0,
+  "rows": 0,
+  "truncated": false,
+  "unmapped": [
+   "id",
+   "title",
+   "owner",
+   "metric",
+   "unit",
+   "target_number",
+   "deadline",
+   "measurement_source",
+   "undefined_terms",
+   "kind"
+  ]
+ },
+ {
+  "duplicates": 0,
+  "errors": [],
+  "items": [
+   {
+    "deadline": null,
+    "deadline_precision": "none",
+    "id": "1",
+    "kind": "target",
+    "measurement_source": null,
+    "metric": null,
+    "owner": null,
+    "row": 2,
+    "target_number": 3.0,
+    "title": "t",
+    "undefined_terms": [
+     "a",
+     "b"
+    ],
+    "unit": null
+   }
+  ],
+  "name": "list.json",
+  "rejected": 0,
+  "rows": 1,
+  "truncated": false,
+  "unmapped": [
+   "owner",
+   "metric",
+   "unit",
+   "deadline",
+   "measurement_source"
+  ]
+ },
+ {
+  "duplicates": 0,
+  "errors": [],
+  "items": [
+   {
+    "deadline": null,
+    "deadline_precision": "none",
+    "id": "1",
+    "kind": "vision",
+    "measurement_source": null,
+    "metric": null,
+    "owner": null,
+    "row": 2,
+    "target_number": null,
+    "title": "t",
+    "undefined_terms": [],
+    "unit": null
+   }
+  ],
+  "name": "wrapped.json",
+  "rejected": 0,
+  "rows": 1,
+  "truncated": false,
+  "unmapped": [
+   "owner",
+   "metric",
+   "unit",
+   "target_number",
+   "deadline",
+   "measurement_source",
+   "undefined_terms"
+  ]
+ },
+ {
+  "fatal": "The file is not valid JSON.",
+  "name": "bad.json"
+ },
+ {
+  "fatal": "JSON must be an array of commitments, or an object with a commitments array.",
+  "name": "shape.json"
+ }
+]

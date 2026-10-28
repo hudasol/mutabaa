@@ -1,0 +1,54 @@
+[
+ {
+  "name": "plain.csv",
+  "text": "id,title,kind,owner,deadline,target_number\nA1,Move half of services,target,Office,2027-12-31,50\nA2,Publish a guide,deliverable,Office,Q4 2026,\n"
+ },
+ {
+  "name": "semicolon.csv",
+  "text": "id;title;kind;deadline\n1;First;target;31 Dec 2027\n2;Second;vision;by 2030\n"
+ },
+ {
+  "name": "tab.tsv",
+  "text": "id\ttitle\tkind\n1\tOne\ttarget\n"
+ },
+ {
+  "name": "quoted.csv",
+  "text": "﻿id,title,kind,undefined_terms\r\n1,\"Line one\nline two, with comma\",milestone,\"agentic; service\"\r\n2,\"Say \"\"hi\"\"\",input,a|b\r\n"
+ },
+ {
+  "name": "synonyms.csv",
+  "text": "Code,Name,Type,Due,Value\nX1,Thing,target,12/2027,\"1,200\"\nX2,Other,target,soon,5%\n"
+ },
+ {
+  "name": "arabic_digits.csv",
+  "text": "id,title,kind,target_number\n1,x,target,٥٠\n"
+ },
+ {
+  "name": "errors.csv",
+  "text": "id,title,kind,target_number\n1,a,target,5\n1,b,target,6\n2,,target,\n3,c,bogus,\n4,d,target,abc\n"
+ },
+ {
+  "name": "missing.csv",
+  "text": "id,title\n1,a\n"
+ },
+ {
+  "name": "empty.csv",
+  "text": ""
+ },
+ {
+  "name": "list.json",
+  "text": "[{\"id\":\"1\",\"title\":\"t\",\"kind\":\"target\",\"undefined_terms\":[\"a\",\"b\"],\"target_number\":3}]"
+ },
+ {
+  "name": "wrapped.json",
+  "text": "{\"commitments\":[{\"id\":\"1\",\"title\":\"t\",\"kind\":\"vision\"}]}"
+ },
+ {
+  "name": "bad.json",
+  "text": "{oops"
+ },
+ {
+  "name": "shape.json",
+  "text": "{\"a\":1}"
+ }
+]
