@@ -1,10 +1,11 @@
 import { useMemo } from "react";
 import { L, pct, useCtx } from "../ctx";
-import { Head, Strip, Ticks } from "../parts";
+import { Head, StatusPill, Strip } from "../parts";
 import { buildHash } from "../route";
 import type { Definition, Status } from "../types";
 
-const ORDER = ["federal", "abu-dhabi", "national"] as const;
+/** Commitments shown on the overview: those with the most checks missing. The ledger has all of them. */
+const START_ROWS = 8;
 
 export default function Overview() {
   const { t, lang, data } = useCtx();
@@ -29,41 +30,47 @@ export default function Overview() {
   const ver = Object.values(data.verification.results);
   const verified = ver.filter((r) => r.result === "verified").length;
 
+  const withEvidence = data.statuses.length - nopub;
+  const start = useMemo(() => data.commitments
+    .map((c) => ({ c, s: score.get(c.id)!, st: stat.get(c.id) as { status: Status["status"] } }))
+    .sort((x, y) => y.s.missing.length - x.s.missing.length || x.c.id.localeCompare(y.c.id))
+    .slice(0, START_ROWS), [data, score, stat]);
+
   return (
     <>
       <Head title={t.ov_title(nopub, under, data.commitments.length)} sub={t.ov_sub2} />
 
-      <section aria-labelledby="glance-h" className="glance">
-        <div className="glance-head">
-          <h2 id="glance-h">{t.ov_glance}</h2>
-          <p className="small">{t.ov_glance_note}</p>
+      <dl className="figures">
+        <div><dt>{t.ov_fig_commitments}</dt><dd>{data.commitments.length}</dd></div>
+        <div><dt>{t.ov_fig_evidence}</dt><dd>{withEvidence}<small>/{data.commitments.length}</small></dd></div>
+        <div><dt>{t.ov_fig_loose}</dt><dd>{under}<small>/{data.commitments.length}</small></dd></div>
+        <div><dt>{t.ov_fig_sources}</dt><dd>{verified}<small>/{data.sources.length}</small></dd></div>
+      </dl>
+
+      <section aria-labelledby="start-h" className="start">
+        <div className="row-between">
+          <h2 id="start-h">{t.ov_start}</h2>
+          <a className="textlink" href={buildHash("ledger")}>{t.ov_all(data.commitments.length)}</a>
         </div>
-        {ORDER.map((j) => {
-          const list = data.commitments.filter((c) => c.jurisdiction === j);
-          return (
-            <div key={j} className="tile-group">
-              <h3>{t.jur[j]} <span className="muted">{list.length}</span></h3>
-              <div className="tiles">
-                {list.map((c, i) => {
-                  const s = stat.get(c.id) as { status: Status["status"] };
-                  const sc = score.get(c.id)!;
-                  return (
-                    <a key={c.id} className={`tile s-${s.status}`} style={{ ["--i" as string]: i }}
-                      href={buildHash("ledger", { open: c.id })}
-                      aria-label={`${c.id}. ${L(lang, c.title, c.title_ar)}. ${t.st[s.status]}. ${t.band[sc.band]}`}>
-                      <span className="tile-top"><b className="mono">{c.id}</b><Ticks score={sc} /></span>
-                      <span className="tile-title">{L(lang, c.title, c.title_ar)}</span>
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
-        <div className="legend" aria-hidden>
-          {(Object.keys(t.st) as (keyof typeof t.st)[]).map((k) => <span key={k} className={`pill is-${k}${k === "not-checkable" ? " hatch" : ""}`}><i />{t.st[k]}</span>)}
+        <p className="small">{t.ov_start_note}</p>
+        <div className="table-wrap" tabIndex={0} role="region" aria-label={t.ov_start}>
+          <table className="ledger">
+            <thead><tr>
+              <th scope="col">ID</th><th scope="col">{t.lg_col_commitment}</th>
+              <th scope="col">{t.ov_col_missing}</th><th scope="col">{t.lg_status}</th>
+            </tr></thead>
+            <tbody>
+              {start.map(({ c, s, st }) => (
+                <tr key={c.id}>
+                  <td className="mono"><a href={buildHash("ledger", { open: c.id })}>{c.id}</a></td>
+                  <td>{L(lang, c.title, c.title_ar)}</td>
+                  <td className="small">{s.missing.map((k) => t.checks[k as keyof typeof t.checks]).join("; ")}</td>
+                  <td><StatusPill s={st.status} /></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-        <p className="small">{t.ov_marks} {t.band_help}</p>
       </section>
 
       <div className="cols two">
@@ -79,9 +86,7 @@ export default function Overview() {
             <li><i className="sw seg-self" />{t.ev_self}: <b>{evKinds.self}</b></li>
             <li><i className="sw seg-media" />{t.ev_media}: <b>{evKinds.media}</b></li>
           </ul>
-          <p className="small">{t.ev_items(totalEv)}</p>
-          <p><b>{t.ov_verified(verified, data.sources.length)}</b></p>
-          <p className="small">{t.ov_unreach}</p>
+          <p className="small">{t.ev_items(totalEv)} {t.ov_verified(verified, data.sources.length)}</p>
           <a className="textlink" href={buildHash("sources")}>{t.nav_sources}</a>
         </section>
 
@@ -98,10 +103,6 @@ export default function Overview() {
         </section>
       </div>
 
-      <section className="panel">
-        <h2>{t.ov_howto}</h2>
-        <ul className="plainlist">{t.ov_why.map((w) => <li key={w}>{w}</li>)}</ul>
-      </section>
     </>
   );
 }

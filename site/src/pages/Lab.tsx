@@ -58,18 +58,23 @@ export default function Lab() {
       </section>
       <section className="panel">
         <h2>{t.lb_marginal_title}</h2><p className="small">{t.lb_marginal_note}</p>
-        <div className="bars">
-          {[
-            ...marg("unit", UNITS).map((m) => ({ k: "u" + m.v, label: unitName(m.v as string), avg: m.avg })),
-            ...marg("scope", SCOPES).map((m) => ({ k: "s" + m.v, label: scopeName(m.v as Definition["scope"]), avg: m.avg })),
-            ...marg("threshold", THRESHOLDS).map((m) => ({ k: "t" + m.v, label: `${t.lb_threshold} L${m.v}`, avg: m.avg })),
-            ...marg("guardrails", GUARDRAILS).map((m) => ({ k: "g" + m.v, label: `${t.lb_guard}: ${m.v === "none" ? t.g_none : t.g_required}`, avg: m.avg })),
-          ].map((b) => (
-            <div className="bar" key={b.k}><span>{b.label}</span>
-              <span className="track"><span className={`fill${h.kind === "synthetic" ? " syn" : ""}`} style={{ width: `${b.avg * 100}%` }} /></span>
-              <b>{pct(b.avg)}</b></div>
-          ))}
-        </div>
+        {[
+          { h: t.lb_unit, rows: marg("unit", UNITS).map((m) => ({ k: "u" + m.v, label: unitName(m.v as string), avg: m.avg })) },
+          { h: t.lb_scope, rows: marg("scope", SCOPES).map((m) => ({ k: "s" + m.v, label: scopeName(m.v as Definition["scope"]), avg: m.avg })) },
+          { h: t.lb_threshold, rows: marg("threshold", THRESHOLDS).map((m) => ({ k: "t" + m.v, label: `L${m.v}`, avg: m.avg })) },
+          { h: t.lb_guard, rows: marg("guardrails", GUARDRAILS).map((m) => ({ k: "g" + m.v, label: m.v === "none" ? t.g_none : t.g_required, avg: m.avg })) },
+        ].map((g) => (
+          <div key={g.h} className="bargroup">
+            <h3>{g.h}</h3>
+            <div className="bars">
+              {g.rows.map((b) => (
+                <div className="bar" key={b.k}><span>{b.label}</span>
+                  <span className="track"><span className={`fill${h.kind === "synthetic" ? " syn" : ""}`} style={{ width: `${b.avg * 100}%` }} /></span>
+                  <b>{pct(b.avg)}</b></div>
+              ))}
+            </div>
+          </div>
+        ))}
       </section>
     </>
   );

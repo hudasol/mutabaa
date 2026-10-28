@@ -235,7 +235,7 @@ test("[honesty] the prototype and no endorsement statement is shown on a phone a
   await page.setViewportSize({ width: 375, height: 800 });
   await open(page, "brief");
   const foot = page.locator("footer.pagefoot");
-  await expect(foot).toContainText("Not an official product of any government entity");
+  await expect(foot).toContainText("not endorsed by any entity");
   await foot.scrollIntoViewIfNeeded();
   await expect(foot).toBeVisible();
   await page.emulateMedia({ media: "print" });
