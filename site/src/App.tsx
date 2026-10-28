@@ -1,23 +1,15 @@
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { C } from "./ctx";
 import { useItemsState } from "./parts";
 import { dict, type Lang } from "./i18n";
 import { buildHash, useRoute } from "./route";
-import Brief from "./pages/Brief";
-import Clocks from "./pages/Clocks";
-import Lab from "./pages/Lab";
-import Ledger from "./pages/Ledger";
-import Maturity from "./pages/Maturity";
-import Method from "./pages/Method";
-import Overview from "./pages/Overview";
-import Assurance from "./pages/Assurance";
-import Portfolio from "./pages/Portfolio";
-import Mine from "./pages/Mine";
-import Sources from "./pages/Sources";
+import { Brief, Clocks, Lab, Ledger, Maturity, Method, Overview, Assurance, Portfolio, Mine, Sources } from "./pagesEntry";
 import raw from "./data/real.json";
+
 import type { Payload } from "./types";
 
 const data = raw as unknown as Payload;
+
 const ROUTES = [
   ["overview", "nav_overview", Overview], ["ledger", "nav_ledger", Ledger], ["clocks", "nav_clocks", Clocks],
   ["lab", "nav_lab", Lab], ["portfolio", "nav_portfolio", Portfolio], ["mine", "nav_mine", Mine], ["maturity", "nav_maturity", Maturity], ["sources", "nav_sources", Sources],
@@ -66,7 +58,7 @@ export default function App() {
             </div>
           </div>
         </aside>
-        <main id="main"><Page />
+        <main id="main"><Suspense fallback={<p className="small" role="status">{t.loading}</p>}><Page /></Suspense>
           <footer className="pagefoot">
             <span>{t.footer(data.build.data_as_of)}</span>
             <span>{t.ft_asof} {data.build.data_as_of} · <span className="mono">{data.build.payload_sha256.slice(0, 12)}</span></span>

@@ -118,6 +118,9 @@ export function detectDelimiter(text: string): string {
 export function parseRecords(input: string): string[][] {
   const text = input.replace(/^\uFEFF/, "");
   const delim = detectDelimiter(text);
+  if (!text.includes('"')) { // no quoting to track: splitting is equivalent and faster
+    return text.split(/\r\n|\r|\n/).map((line) => line.split(delim).map((c) => c.trim())).filter((r) => r.some((c) => c !== ""));
+  }
   const records: string[][] = [];
   let row: string[] = [];
   let cur = "";
