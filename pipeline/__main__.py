@@ -226,7 +226,7 @@ def coverage(d) -> list[dict]:
 
 
 def evaluation_summary() -> dict:
-    """The preregistered results the site states in its own text (E3 on Portfolio, E4 and E5 and E6 on Assurance)."""
+    """The preregistered results that the site text states: E3 on Portfolio, E4 to E6 on Assurance."""
     res = facts.RESULTS
 
     def load(name: str) -> dict:
