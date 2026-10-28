@@ -25,6 +25,22 @@ The real ledger holds <!-- fact:commitments.count -->25<!-- /fact --> commitment
 - Not endorsed by, produced with, or affiliated with any entity. In prose, real entities are named only in [`docs/CONTEXT.md`](docs/CONTEXT.md); the data files quote their sources as published.
 - Not an official standard. The maturity ladder and the checks are proposals.
 
+![The ledger of public commitments](docs/img/ledger.png)
+
+## Score your own commitments
+
+In the browser, open **My commitments** and choose a CSV or JSON file. Nothing is uploaded. From a terminal:
+
+```bash
+mutabaa template > commitments.csv
+mutabaa questions commitments.csv --lang both
+mutabaa score commitments.csv --strict --min-ratio 0.5    # exit code 1 when a gate is not met
+```
+
+![Scoring a commitments file in the browser](docs/img/mine.png)
+
+See the [user guide](docs/USER_GUIDE.md) and the [command line reference](docs/CLI.md).
+
 ## Run it
 
 Needs Python 3.12 or newer and Node 22 or newer. From a fresh clone:
@@ -85,22 +101,13 @@ Real and synthetic numbers are never combined into one figure. See [`docs/DATA_S
 
 ## Documents
 
-[`docs/LIMITATIONS.md`](docs/LIMITATIONS.md) first. Then [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md), [`docs/EVALUATION.md`](docs/EVALUATION.md), [`PREREGISTRATION.md`](PREREGISTRATION.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/adr/`](docs/adr/README.md), [`docs/DATA_STATEMENT.md`](docs/DATA_STATEMENT.md), [`docs/CONTEXT.md`](docs/CONTEXT.md), [`docs/SECURITY.md`](docs/SECURITY.md), [`docs/PILOT.md`](docs/PILOT.md) and [`docs/DECISIONS.md`](docs/DECISIONS.md).
+[`docs/USER_GUIDE.md`](docs/USER_GUIDE.md), [`docs/CLI.md`](docs/CLI.md) and [`docs/PERFORMANCE.md`](docs/PERFORMANCE.md) for use. For the method, [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md) first. Then [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md), [`docs/EVALUATION.md`](docs/EVALUATION.md), [`PREREGISTRATION.md`](PREREGISTRATION.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/adr/`](docs/adr/README.md), [`docs/DATA_STATEMENT.md`](docs/DATA_STATEMENT.md), [`docs/CONTEXT.md`](docs/CONTEXT.md), [`docs/SECURITY.md`](docs/SECURITY.md), [`docs/PILOT.md`](docs/PILOT.md) and [`docs/DECISIONS.md`](docs/DECISIONS.md).
 
 ## Commands
 
-| Command | What it does |
-|---|---|
-| `python -m pipeline validate` | Integrity checks on the real data |
-| `python -m pipeline build` | Regenerate `site/src/data/real.json` |
-| `python -m pipeline analyse` | Recompute the exploratory analyses in `data/analysis/` |
-| `python -m pipeline evaluate` | Run the preregistered experiments, write `results/`, render `docs/EVALUATION.md` |
-| `python -m pipeline facts` | Write `results/facts.json`, the numbers documents may cite |
-| `python -m pipeline schema` | Write JSON Schema files to `schema/` |
-| `python -m pipeline golden` | Write the golden score and question files for the TypeScript port |
-| `python -m pipeline verify-live` | Check source pages for the expected figures (needs network) |
-| `python -m pipeline diff HEAD~1` | Show what changed in the payload since a git ref |
-| `cd site && npm run build:offline` | One file that opens from a USB stick |
+`mutabaa --help` lists them all; [`docs/CLI.md`](docs/CLI.md) describes each. The repository commands are
+`validate`, `build`, `analyse`, `evaluate`, `facts`, `sync-docs`, `schema`, `golden`, `verify-live` and `diff`.
+`cd site && npm run build:offline` writes one HTML file that opens from a USB stick.
 
 ## Principles
 
