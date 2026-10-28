@@ -6,8 +6,9 @@ from __future__ import annotations
 import hashlib
 import json
 import sys
+from dataclasses import asdict
 
-from . import agreement, calibration, evaluate, facts, robustness, schema_export
+from . import agreement, calibration, evaluate, facts, own, robustness, schema_export
 from .diff import diff as payload_diff
 from .diff import load_at, load_current
 from .io import REAL, ROOT, load_real
@@ -176,7 +177,32 @@ def golden_files() -> dict[str, str]:
     dump = lambda x: json.dumps(x, ensure_ascii=False, indent=1, sort_keys=True) + "\n"  # noqa: E731
     reg = Registry.model_validate(json.loads((SYNTH / "registry.json").read_text(encoding="utf-8")))
     pf = evaluate.portfolio_table(reg)
-    return {"score.json": dump(sc), "questions.json": dump(qs), "portfolio.json": dump(pf)}
+    return {
+        "score.json": dump(sc),
+        "questions.json": dump(qs),
+        "portfolio.json": dump(pf),
+        "own_outputs.json": dump(own_outputs()),
+    }
+
+
+def own_outputs() -> list[dict]:
+    """The file reader's result for every case in data/golden/own_inputs.json (the browser must match)."""
+    cases = json.loads((GOLDEN / "own_inputs.json").read_text(encoding="utf-8"))
+    out = []
+    for c in cases:
+        try:
+            r = own.load(c["name"], c["text"])
+        except ValueError as exc:
+            out.append({"name": c["name"], "fatal": str(exc)})
+            continue
+        items = [
+            asdict(i) for i in r.items
+        ]
+        out.append({
+            "name": c["name"], "items": items, "errors": r.errors, "rows": r.rows, "rejected": r.rejected,
+            "duplicates": r.duplicates, "unmapped": r.unmapped, "truncated": r.truncated,
+        })
+    return out
 
 
 def cmd_golden() -> int:

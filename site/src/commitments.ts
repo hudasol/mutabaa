@@ -95,14 +95,34 @@ export function mapColumns(headers: string[]): MyMapping {
   return m;
 }
 
-/** How precisely a deadline is dated: 2027-12-31 is a day, 2027-12 a month, 2027 a year; other text is relative. */
+const MONTHS = "jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?";
+const validDay = (a: number, b: number) => (a >= 1 && a <= 31 && b >= 1 && b <= 12) || (a >= 1 && a <= 12 && b >= 1 && b <= 31);
+
+/** How precisely a deadline is dated: a calendar date is a day, a month or quarter a month, a year a year. Else relative. */
 export function deadlinePrecision(v: string): Commitment["deadline_precision"] {
-  const s = v.trim();
+  const s = v.trim().replace(/\s+/g, " ");
   if (!s) return "none";
-  if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return "day";
-  if (/^\d{4}-\d{2}$/.test(s)) return "month";
-  if (/^\d{4}$/.test(s)) return "year";
+  let m: RegExpMatchArray | null;
+  if ((m = s.match(/^(\d{4})-(\d{2})-(\d{2})$/))) return +m[2] >= 1 && +m[2] <= 12 && +m[3] >= 1 && +m[3] <= 31 ? "day" : "relative";
+  if ((m = s.match(/^(\d{1,2})[/.-](\d{1,2})[/.-](\d{4})$/))) return validDay(+m[1], +m[2]) ? "day" : "relative";
+  if ((m = s.match(/^(\d{4})[/.](\d{1,2})[/.](\d{1,2})$/))) return validDay(+m[2], +m[3]) && +m[2] <= 12 ? "day" : "relative";
+  if (new RegExp(`^\\d{1,2}\\s+(?:${MONTHS})\\.?,?\\s+\\d{4}$`, "i").test(s)) return "day";
+  if (new RegExp(`^(?:${MONTHS})\\.?\\s+\\d{1,2},?\\s+\\d{4}$`, "i").test(s)) return "day";
+  if ((m = s.match(/^(\d{4})-(\d{2})$/))) return +m[2] >= 1 && +m[2] <= 12 ? "month" : "relative";
+  if ((m = s.match(/^(\d{1,2})[/-](\d{4})$/))) return +m[1] >= 1 && +m[1] <= 12 ? "month" : "relative";
+  if (new RegExp(`^(?:${MONTHS})\\.?\\s+\\d{4}$`, "i").test(s)) return "month";
+  if (/^(?:q[1-4]\s*[-/ ]?\s*\d{4}|\d{4}\s*[-/ ]?\s*q[1-4])$/i.test(s)) return "month";
+  if (/^(?:(?:by|before|until)\s+)?(?:(?:the\s+)?end\s+of\s+)?\d{4}$/i.test(s)) return "year";
   return "relative";
+}
+
+const ARABIC_DIGITS = "٠١٢٣٤٥٦٧٨٩";
+/** A plain number. Thousands commas, spaces and a trailing percent sign are ignored. Null when empty, NaN when invalid. */
+export function parseNumber(raw: string): number | null {
+  let s = raw.replace(/[٠-٩]/g, (d) => String(ARABIC_DIGITS.indexOf(d))).trim().replace(/[, ]/g, "");
+  if (s.endsWith("%")) s = s.slice(0, -1);
+  if (s === "") return null;
+  return /^[+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?$/.test(s) ? Number(s) : Number.NaN;
 }
 
 export type MyCommitment = ScoreInput & { metric: string | null; deadline: string | null; row: number };
@@ -128,22 +148,22 @@ export function convertRows(headers: string[], rows: string[][], mapping: MyMapp
     const bad: string[] = [];
     const id = get("id").trim();
     const kind = get("kind").trim().toLowerCase();
-    const num = get("target_number").trim().replace(/,/g, "");
+    const num = parseNumber(get("target_number"));
     if (!id) bad.push("id is empty");
     if (seen.has(id)) { bad.push("duplicate id"); report.duplicates++; }
     if (!get("title").trim()) bad.push("title is empty");
     if (!(KINDS as readonly string[]).includes(kind)) bad.push(`kind must be one of ${KINDS.join(", ")}`);
-    if (num !== "" && !Number.isFinite(Number(num))) bad.push("target_number must be a number or empty");
+    if (Number.isNaN(num)) bad.push("target_number must be a number or empty");
     if (bad.length) { errors.push(`Row ${row}: ${bad.join("; ")}.`); return; }
     seen.add(id);
     const title = get("title").trim();
     items.push({
       id, title, title_ar: title, kind: kind as Commitment["kind"], row,
       owner: orNull(get("owner")), metric: orNull(get("metric")), unit: orNull(get("unit")),
-      target_number: num === "" ? null : Number(num),
+      target_number: num,
       deadline: orNull(get("deadline")), deadline_precision: deadlinePrecision(get("deadline")),
       measurement_source: orNull(get("measurement_source")),
-      undefined_terms: get("undefined_terms").split(";").map((s) => s.trim()).filter(Boolean),
+      undefined_terms: get("undefined_terms").split(/[;|]/).map((s) => s.trim()).filter(Boolean),
     });
   });
   report.accepted = items.length;

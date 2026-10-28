@@ -74,24 +74,6 @@ export const CSV_TEMPLATE =
 
 export const MAX_CSV_ROWS = 200_000;
 
-function splitLine(line: string): string[] {
-  const out: string[] = [];
-  let cur = "";
-  let q = false;
-  for (let i = 0; i < line.length; i++) {
-    const c = line[i];
-    if (q) {
-      if (c === '"' && line[i + 1] === '"') { cur += '"'; i++; }
-      else if (c === '"') q = false;
-      else cur += c;
-    } else if (c === '"') q = true;
-    else if (c === ",") { out.push(cur); cur = ""; }
-    else cur += c;
-  }
-  out.push(cur);
-  return out.map((s) => s.trim());
-}
-
 const BOOL = (v: string): boolean | null => {
   const s = v.toLowerCase();
   if (["true", "yes", "1", "y"].includes(s)) return true;
@@ -118,15 +100,50 @@ const squash = (h: string) => h.toLowerCase().replace(/[^a-z]/g, "");
 
 export type Mapping = Partial<Record<CsvColumn, number>>;
 
+/** The delimiter used most in the header line outside quotes: comma, semicolon or tab. */
+export function detectDelimiter(text: string): string {
+  const counts: Record<string, number> = { ",": 0, ";": 0, "\t": 0 };
+  let quoted = false;
+  for (const ch of text) {
+    if (ch === "\n" || ch === "\r") { if (!quoted) break; continue; }
+    if (ch === '"') quoted = !quoted;
+    else if (!quoted && ch in counts) counts[ch]++;
+  }
+  let best = ",";
+  for (const d of [";", "\t"]) if (counts[d] > counts[best]) best = d;
+  return counts[best] > 0 ? best : ",";
+}
+
+/** Records of trimmed cells. Quoted cells may hold delimiters and line breaks. Empty records are dropped. */
+export function parseRecords(input: string): string[][] {
+  const text = input.replace(/^\uFEFF/, "");
+  const delim = detectDelimiter(text);
+  const records: string[][] = [];
+  let row: string[] = [];
+  let cur = "";
+  let quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (quoted) {
+      if (ch === '"' && text[i + 1] === '"') { cur += '"'; i++; }
+      else if (ch === '"') quoted = false;
+      else cur += ch;
+    } else if (ch === '"' && cur.trim() === "") { quoted = true; cur = ""; }
+    else if (ch === delim) { row.push(cur.trim()); cur = ""; }
+    else if (ch === "\n" || ch === "\r") {
+      if (ch === "\r" && text[i + 1] === "\n") i++;
+      row.push(cur.trim()); cur = ""; records.push(row); row = [];
+    } else cur += ch;
+  }
+  row.push(cur.trim());
+  records.push(row);
+  return records.filter((r) => r.some((c) => c !== ""));
+}
+
 export function readCsv(text: string): { headers: string[]; rows: string[][]; truncated: boolean } {
-  const lines = text.replace(/^\uFEFF/, "").split(/\r?\n/).filter((l) => l.trim() !== "");
-  if (lines.length === 0) return { headers: [], rows: [], truncated: false };
-  const truncated = lines.length - 1 > MAX_CSV_ROWS;
-  return {
-    headers: splitLine(lines[0]),
-    rows: lines.slice(1, MAX_CSV_ROWS + 1).map(splitLine),
-    truncated,
-  };
+  const records = parseRecords(text);
+  if (records.length === 0) return { headers: [], rows: [], truncated: false };
+  return { headers: records[0], rows: records.slice(1, MAX_CSV_ROWS + 1), truncated: records.length - 1 > MAX_CSV_ROWS };
 }
 
 export function autoMap(headers: string[]): Mapping {
