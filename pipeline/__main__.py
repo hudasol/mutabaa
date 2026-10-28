@@ -12,7 +12,7 @@ from .diff import diff as payload_diff
 from .diff import load_at, load_current
 from .io import REAL, ROOT, load_real
 from .questions import questions
-from .render import render
+from .render import refresh, render
 from .schemas import Registry
 from .score import score
 from .sensitivity import summary, sweep
@@ -127,6 +127,21 @@ def cmd_report() -> int:
     for out, text in render_reports().items():
         out.write_text(text, encoding="utf-8", newline="\n")
         print(f"wrote {out}")
+    return 0
+
+
+def cmd_sync_docs() -> int:
+    """Rewrite the marked numbers in README.md and docs/*.md so that they match results/facts.json."""
+    fx = facts.compute()
+    changed = 0
+    for path in [ROOT / "README.md", *sorted((ROOT / "docs").rglob("*.md"))]:
+        old = path.read_text(encoding="utf-8")
+        new = refresh(old, fx)
+        if new != old:
+            path.write_text(new, encoding="utf-8", newline="\n")
+            print(f"updated {path.relative_to(ROOT).as_posix()}")
+            changed += 1
+    print(f"{changed} document(s) updated")
     return 0
 
 
@@ -264,6 +279,7 @@ def main(argv: list[str]) -> int:
     cmds = {
         "validate": cmd_validate, "rehash": cmd_rehash, "synth": cmd_synth,
         "build": cmd_build, "analyse": cmd_analyse, "facts": cmd_facts, "report": cmd_report,
+        "sync-docs": cmd_sync_docs,
         "schema": cmd_schema, "evaluate": cmd_evaluate, "golden": cmd_golden,
     }
     if len(argv) >= 2 and argv[1] == "diff":

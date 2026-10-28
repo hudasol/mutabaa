@@ -19,3 +19,18 @@ def render(template: str, facts: dict[str, dict]) -> str:
         return f"<!-- fact:{key} -->{facts[key]['text']}<!-- /fact -->"
 
     return _PLACEHOLDER.sub(sub, template)
+
+
+_MARKED = re.compile(r"(<!-- fact:([\w.\-]+) -->)(.*?)(<!-- /fact -->)")
+
+
+def refresh(text: str, facts: dict[str, dict]) -> str:
+    """Rewrite the value inside every marked number so that it matches the facts."""
+
+    def sub(m: re.Match) -> str:
+        key = m.group(2)
+        if key not in facts:
+            raise KeyError(f"document cites unknown fact {key!r}")
+        return f"{m.group(1)}{facts[key]['text']}{m.group(4)}"
+
+    return _MARKED.sub(sub, text)

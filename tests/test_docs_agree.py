@@ -97,3 +97,22 @@ def test_formats():
     assert facts.fmt(["C01", "C02"], "list") == "C01, C02"
     with pytest.raises(ValueError):
         facts.fmt(1, "nope")
+
+
+def test_refresh_rewrites_stale_values_and_is_idempotent():
+    from pipeline.render import refresh
+
+    fx = {"a.b": {"text": "80%"}}
+    stale = "x <!-- fact:a.b -->12%<!-- /fact --> y <!-- fact:a.b -->80%<!-- /fact -->"
+    fixed = refresh(stale, fx)
+    assert fixed == "x <!-- fact:a.b -->80%<!-- /fact --> y <!-- fact:a.b -->80%<!-- /fact -->"
+    assert refresh(fixed, fx) == fixed
+    with pytest.raises(KeyError):
+        refresh("<!-- fact:zz -->1<!-- /fact -->", fx)
+
+
+def test_sync_docs_leaves_committed_documents_unchanged(capsys):
+    from pipeline.__main__ import cmd_sync_docs
+
+    assert cmd_sync_docs() == 0
+    assert "0 document(s) updated" in capsys.readouterr().out
