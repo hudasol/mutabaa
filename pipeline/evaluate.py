@@ -1,4 +1,6 @@
-"""Preregistered experiments E1 to E4 (see PREREGISTRATION.md). Run with `python -m pipeline evaluate`.
+"""Preregistered experiments E1 to E6 (see PREREGISTRATION.md). Run with `python -m pipeline evaluate`.
+
+E5 and E6 live in evaluate_real.py.
 
 Each experiment returns a dict with its results, its predictions marked HIT or MISS, and `facts`: the
 numbers that docs/EVALUATION.md cites (picked up by pipeline/facts.py).
@@ -11,6 +13,7 @@ import random
 import statistics
 from collections.abc import Callable, Sequence
 
+from .evaluate_real import e5, e6
 from .io import load_real
 from .robustness import AXES, PROFILES, SIZES, first_order_effects
 from .schemas import Commitment, Registry, ServiceItem
@@ -393,4 +396,4 @@ def e4() -> dict:
     }
 
 
-EXPERIMENTS = {"e1": e1, "e2": e2, "e3": e3, "e4": e4}
+EXPERIMENTS = {"e1": e1, "e2": e2, "e3": e3, "e4": e4, "e5": e5, "e6": e6}

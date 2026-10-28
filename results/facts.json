@@ -436,17 +436,281 @@
   "text": "0.19",
   "value": 0.1909
  },
- "evaluation.hits": {
-  "text": "12",
-  "value": 12
+ "e5.P5a": {
+  "text": "MISS",
+  "value": "MISS"
  },
- "evaluation.misses": {
+ "e5.P5b": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e5.P5c": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e5.P5d": {
+  "text": "MISS",
+  "value": "MISS"
+ },
+ "e5.P5e": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e5.best_f1": {
+  "text": "0.41",
+  "value": 0.4103
+ },
+ "e5.blind.recall": {
+  "text": "88%",
+  "value": 0.88
+ },
+ "e5.located": {
+  "text": "25",
+  "value": 25
+ },
+ "e5.numeric": {
+  "text": "14",
+  "value": 14
+ },
+ "e5.other": {
+  "text": "11",
+  "value": 11
+ },
+ "e5.positives": {
+  "text": "23",
+  "value": 23
+ },
+ "e5.random.mean": {
+  "text": "28%",
+  "value": 0.28400000000000003
+ },
+ "e5.units": {
+  "text": "105",
+  "value": 105
+ },
+ "e5.unlocated": {
+  "text": "0",
+  "value": 0
+ },
+ "e5.x0.f1": {
+  "text": "0.36",
+  "value": 0.3594
+ },
+ "e5.x0.flagged_share": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "e5.x0.precision": {
+  "text": "22%",
+  "value": 0.219
+ },
+ "e5.x0.recall": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "e5.x0.recall_numeric": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "e5.x0.recall_other": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "e5.x1.f1": {
+  "text": "0.34",
+  "value": 0.3373
+ },
+ "e5.x1.flagged_share": {
+  "text": "57%",
+  "value": 0.5714
+ },
+ "e5.x1.precision": {
+  "text": "23%",
+  "value": 0.2333
+ },
+ "e5.x1.random_matched": {
+  "text": "60%",
+  "value": 0.596
+ },
+ "e5.x1.recall": {
+  "text": "64%",
+  "value": 0.64
+ },
+ "e5.x1.recall_numeric": {
+  "text": "93%",
+  "value": 0.9285714285714286
+ },
+ "e5.x1.recall_other": {
+  "text": "27%",
+  "value": 0.2727272727272727
+ },
+ "e5.x2.f1": {
+  "text": "0.27",
+  "value": 0.2745
+ },
+ "e5.x2.flagged_share": {
+  "text": "27%",
+  "value": 0.2667
+ },
+ "e5.x2.precision": {
+  "text": "25%",
+  "value": 0.25
+ },
+ "e5.x2.random_matched": {
+  "text": "28%",
+  "value": 0.28400000000000003
+ },
+ "e5.x2.recall": {
+  "text": "32%",
+  "value": 0.32
+ },
+ "e5.x2.recall_numeric": {
+  "text": "57%",
+  "value": 0.5714285714285714
+ },
+ "e5.x2.recall_other": {
+  "text": "0%",
+  "value": 0.0
+ },
+ "e5.x3.f1": {
+  "text": "0.11",
+  "value": 0.1111
+ },
+ "e5.x3.flagged_share": {
+  "text": "12%",
+  "value": 0.1238
+ },
+ "e5.x3.precision": {
+  "text": "15%",
+  "value": 0.1538
+ },
+ "e5.x3.random_matched": {
+  "text": "15%",
+  "value": 0.154
+ },
+ "e5.x3.recall": {
+  "text": "8%",
+  "value": 0.08
+ },
+ "e5.x3.recall_numeric": {
+  "text": "14%",
+  "value": 0.14285714285714285
+ },
+ "e5.x3.recall_other": {
+  "text": "0%",
+  "value": 0.0
+ },
+ "e5.x4.f1": {
+  "text": "0.41",
+  "value": 0.4103
+ },
+ "e5.x4.flagged_share": {
+  "text": "15%",
+  "value": 0.1524
+ },
+ "e5.x4.precision": {
+  "text": "50%",
+  "value": 0.5
+ },
+ "e5.x4.random_matched": {
+  "text": "18%",
+  "value": 0.18
+ },
+ "e5.x4.recall": {
+  "text": "32%",
+  "value": 0.32
+ },
+ "e5.x4.recall_numeric": {
+  "text": "36%",
+  "value": 0.35714285714285715
+ },
+ "e5.x4.recall_other": {
+  "text": "27%",
+  "value": 0.2727272727272727
+ },
+ "e6.P6a": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e6.P6b": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e6.P6c": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e6.commitments": {
+  "text": "25",
+  "value": 25
+ },
+ "e6.killed": {
+  "text": "5",
+  "value": 5
+ },
+ "e6.multi_evidence": {
   "text": "2",
   "value": 2
  },
+ "e6.mutant.M1": {
+  "text": "I2, I5",
+  "value": "I2, I5"
+ },
+ "e6.mutant.M2": {
+  "text": "I5",
+  "value": "I5"
+ },
+ "e6.mutant.M3": {
+  "text": "I3, I5",
+  "value": "I3, I5"
+ },
+ "e6.mutant.M4": {
+  "text": "I1, I4",
+  "value": "I1, I4"
+ },
+ "e6.mutant.M5": {
+  "text": "I1",
+  "value": "I1"
+ },
+ "e6.mutants": {
+  "text": "5",
+  "value": 5
+ },
+ "e6.violations": {
+  "text": "0",
+  "value": 0
+ },
+ "e6.violations.I1": {
+  "text": "0",
+  "value": 0
+ },
+ "e6.violations.I2": {
+  "text": "0",
+  "value": 0
+ },
+ "e6.violations.I3": {
+  "text": "0",
+  "value": 0
+ },
+ "e6.violations.I4": {
+  "text": "0",
+  "value": 0
+ },
+ "e6.violations.I5": {
+  "text": "0",
+  "value": 0
+ },
+ "evaluation.hits": {
+  "text": "18",
+  "value": 18
+ },
+ "evaluation.misses": {
+  "text": "4",
+  "value": 4
+ },
  "evaluation.predictions": {
-  "text": "14",
-  "value": 14
+  "text": "22",
+  "value": 22
  },
  "evidence.count": {
   "text": "10",

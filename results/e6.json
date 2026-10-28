@@ -1,0 +1,132 @@
+{
+ "facts": {
+  "P6a": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P6b": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P6c": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "commitments": {
+   "format": "int",
+   "value": 25
+  },
+  "killed": {
+   "format": "int",
+   "value": 5
+  },
+  "multi_evidence": {
+   "format": "int",
+   "value": 2
+  },
+  "mutant.M1": {
+   "format": "str",
+   "value": "I2, I5"
+  },
+  "mutant.M2": {
+   "format": "str",
+   "value": "I5"
+  },
+  "mutant.M3": {
+   "format": "str",
+   "value": "I3, I5"
+  },
+  "mutant.M4": {
+   "format": "str",
+   "value": "I1, I4"
+  },
+  "mutant.M5": {
+   "format": "str",
+   "value": "I1"
+  },
+  "mutants": {
+   "format": "int",
+   "value": 5
+  },
+  "violations": {
+   "format": "int",
+   "value": 0
+  },
+  "violations.I1": {
+   "format": "int",
+   "value": 0
+  },
+  "violations.I2": {
+   "format": "int",
+   "value": 0
+  },
+  "violations.I3": {
+   "format": "int",
+   "value": 0
+  },
+  "violations.I4": {
+   "format": "int",
+   "value": 0
+  },
+  "violations.I5": {
+   "format": "int",
+   "value": 0
+  }
+ },
+ "mutants": {
+  "M1": {
+   "describe": "media evidence counts as eligible",
+   "violated": [
+    "I2",
+    "I5"
+   ]
+  },
+  "M2": {
+   "describe": "evidence older than 180 days is dropped",
+   "violated": [
+    "I5"
+   ]
+  },
+  "M3": {
+   "describe": "only the first evidence item is used",
+   "violated": [
+    "I3",
+    "I5"
+   ]
+  },
+  "M4": {
+   "describe": "no evidence gives not-checkable for every kind",
+   "violated": [
+    "I1",
+    "I4"
+   ]
+  },
+  "M5": {
+   "describe": "the non outcome rule runs after the evidence rules",
+   "violated": [
+    "I1"
+   ]
+  }
+ },
+ "predictions": {
+  "P6a": {
+   "result": "HIT",
+   "text": "zero violations of every invariant on the real engine"
+  },
+  "P6b": {
+   "result": "HIT",
+   "text": "at least four of the five mutants are killed"
+  },
+  "P6c": {
+   "result": "HIT",
+   "text": "at most three commitments have two or more eligible evidence items"
+  }
+ },
+ "violations": {
+  "I1": [],
+  "I2": [],
+  "I3": [],
+  "I4": [],
+  "I5": []
+ }
+}

@@ -36,7 +36,7 @@ Moving the band cut offs by up to 10 points changes the band of at most <!-- fac
 
 ## Part 2. Preregistered experiments
 
-The design, metrics, baselines, seeds and predictions were committed in `PREREGISTRATION.md` before any experiment code was committed; git history shows that commit before the ones that add `pipeline/evaluate.py` and `results/`. The code and the results were committed together, so git cannot show the order of writing and running; amendment 3 in `PREREGISTRATION.md` says what can be shown. `python -m pipeline evaluate` reruns everything and writes `results/e1.json` to `results/e4.json`. The method, generator A, the specification of generator B and the real ledger share one author.
+The design, metrics, baselines, seeds and predictions were committed in `PREREGISTRATION.md` before any experiment code was committed; git history shows that commit before the ones that add `pipeline/evaluate.py` and `results/`. The code and the results were committed together, so git cannot show the order of writing and running; amendment 3 in `PREREGISTRATION.md` says what can be shown. `python -m pipeline evaluate` reruns everything and writes `results/e1.json` to `results/e6.json`. The method, generator A, the specification of generator B and the real ledger share one author.
 
 ### Predictions and results
 
@@ -56,6 +56,14 @@ The design, metrics, baselines, seeds and predictions were committed in `PREREGI
 | P4b | Bootstrap coverage at rate 0.88 between 0.85 and 0.93 | <!-- fact:e4.p88.bootstrap -->95.2%<!-- /fact --> | <!-- fact:e4.P4b -->MISS<!-- /fact --> |
 | P4c | Bootstrap coverage at rate 0.95 below 0.85 | <!-- fact:e4.p95.bootstrap -->70.0%<!-- /fact --> | <!-- fact:e4.P4c -->HIT<!-- /fact --> |
 | P4d | Wilson coverage at least 0.92 at all three rates | <!-- fact:e4.p70.wilson -->93.5%<!-- /fact -->, <!-- fact:e4.p88.wilson -->97.9%<!-- /fact -->, <!-- fact:e4.p95.wilson -->96.4%<!-- /fact --> | <!-- fact:e4.P4d -->HIT<!-- /fact --> |
+| P5a | X2 recovers at least 0.70 of numeric target commitments and at most 0.50 of the others | <!-- fact:e5.x2.recall_numeric -->57%<!-- /fact --> and <!-- fact:e5.x2.recall_other -->0%<!-- /fact --> | <!-- fact:e5.P5a -->MISS<!-- /fact --> |
+| P5b | No extractor from X1 to X4 has unit F1 above 0.45 | best <!-- fact:e5.best_f1 -->0.41<!-- /fact --> | <!-- fact:e5.P5b -->HIT<!-- /fact --> |
+| P5c | X1 unit precision below 0.50 | <!-- fact:e5.x1.precision -->23%<!-- /fact --> | <!-- fact:e5.P5c -->HIT<!-- /fact --> |
+| P5d | Blind second reading above X3, and X3 above the random baseline mean | <!-- fact:e5.blind.recall -->88%<!-- /fact -->, <!-- fact:e5.x3.recall -->8%<!-- /fact -->, <!-- fact:e5.random.mean -->28%<!-- /fact --> | <!-- fact:e5.P5d -->MISS<!-- /fact --> |
+| P5e | No unlocated commitments | <!-- fact:e5.unlocated -->0<!-- /fact --> | <!-- fact:e5.P5e -->HIT<!-- /fact --> |
+| P6a | Zero violations of every invariant on the real engine | <!-- fact:e6.violations -->0<!-- /fact --> violations | <!-- fact:e6.P6a -->HIT<!-- /fact --> |
+| P6b | At least four of five mutants killed | <!-- fact:e6.killed -->5<!-- /fact --> of <!-- fact:e6.mutants -->5<!-- /fact --> | <!-- fact:e6.P6b -->HIT<!-- /fact --> |
+| P6c | At most three commitments with two or more eligible evidence items | <!-- fact:e6.multi_evidence -->2<!-- /fact --> | <!-- fact:e6.P6c -->HIT<!-- /fact --> |
 
 ### E1. Score against an observable outcome (real ledger)
 
@@ -73,9 +81,31 @@ On the committed registry, <!-- fact:e3.moved3 -->15<!-- /fact --> of <!-- fact:
 
 With 25 binary items and 2000 runs per rate, nominal 95% intervals covered the true rate as follows. Percentile bootstrap: <!-- fact:e4.p70.bootstrap -->96.0%<!-- /fact --> at 0.70, <!-- fact:e4.p88.bootstrap -->95.2%<!-- /fact --> at 0.88, <!-- fact:e4.p95.bootstrap -->70.0%<!-- /fact --> at 0.95. Wilson: <!-- fact:e4.p70.wilson -->93.5%<!-- /fact -->, <!-- fact:e4.p88.wilson -->97.9%<!-- /fact -->, <!-- fact:e4.p95.wilson -->96.4%<!-- /fact -->. Mean widths at 0.95: bootstrap <!-- fact:e4.p95.bootstrap.width -->0.12<!-- /fact -->, Wilson <!-- fact:e4.p95.wilson.width -->0.19<!-- /fact -->. As fixed in advance, the Assurance page now reports a Wilson interval beside the bootstrap one and states the problem (amendment 1).
 
+### E5. Rule based extractors against the ledger (real ledger)
+
+The extraction notes hold <!-- fact:e5.units -->105<!-- /fact --> bullets. <!-- fact:e5.positives -->23<!-- /fact --> of them contain an anchor of one of the <!-- fact:e5.located -->25<!-- /fact --> commitments, and <!-- fact:e5.unlocated -->0<!-- /fact --> commitments could not be located. Five rules each saw one bullet and nothing else: X0 flags every bullet, X1 a digit, X2 a digit with a percent or money word, X3 X2 plus a year or a deadline phrase, X4 a verb of intent (the exact rules are in `PREREGISTRATION.md`).
+
+| Rule | Bullets flagged | Commitments recovered | With a numeric target | Others | Unit precision | Unit F1 |
+|---|---|---|---|---|---|---|
+| X0 every bullet | <!-- fact:e5.x0.flagged_share -->100%<!-- /fact --> | <!-- fact:e5.x0.recall -->100%<!-- /fact --> | <!-- fact:e5.x0.recall_numeric -->100%<!-- /fact --> | <!-- fact:e5.x0.recall_other -->100%<!-- /fact --> | <!-- fact:e5.x0.precision -->22%<!-- /fact --> | <!-- fact:e5.x0.f1 -->0.36<!-- /fact --> |
+| X1 digit | <!-- fact:e5.x1.flagged_share -->57%<!-- /fact --> | <!-- fact:e5.x1.recall -->64%<!-- /fact --> | <!-- fact:e5.x1.recall_numeric -->93%<!-- /fact --> | <!-- fact:e5.x1.recall_other -->27%<!-- /fact --> | <!-- fact:e5.x1.precision -->23%<!-- /fact --> | <!-- fact:e5.x1.f1 -->0.34<!-- /fact --> |
+| X2 digit and unit word | <!-- fact:e5.x2.flagged_share -->27%<!-- /fact --> | <!-- fact:e5.x2.recall -->32%<!-- /fact --> | <!-- fact:e5.x2.recall_numeric -->57%<!-- /fact --> | <!-- fact:e5.x2.recall_other -->0%<!-- /fact --> | <!-- fact:e5.x2.precision -->25%<!-- /fact --> | <!-- fact:e5.x2.f1 -->0.27<!-- /fact --> |
+| X3 X2 and a date | <!-- fact:e5.x3.flagged_share -->12%<!-- /fact --> | <!-- fact:e5.x3.recall -->8%<!-- /fact --> | <!-- fact:e5.x3.recall_numeric -->14%<!-- /fact --> | <!-- fact:e5.x3.recall_other -->0%<!-- /fact --> | <!-- fact:e5.x3.precision -->15%<!-- /fact --> | <!-- fact:e5.x3.f1 -->0.11<!-- /fact --> |
+| X4 verb of intent | <!-- fact:e5.x4.flagged_share -->15%<!-- /fact --> | <!-- fact:e5.x4.recall -->32%<!-- /fact --> | <!-- fact:e5.x4.recall_numeric -->36%<!-- /fact --> | <!-- fact:e5.x4.recall_other -->27%<!-- /fact --> | <!-- fact:e5.x4.precision -->50%<!-- /fact --> | <!-- fact:e5.x4.f1 -->0.41<!-- /fact --> |
+
+Reference: the blind second reading found <!-- fact:e5.blind.recall -->88%<!-- /fact --> of the ledger from the same notes. The preregistered random baseline flags bullets at X2's rate and recovers <!-- fact:e5.random.mean -->28%<!-- /fact --> of the commitments (mean of 20 seeds).
+
+Exploratory, added after the results existed (amendment 5 in `PREREGISTRATION.md`): random flagging at each rule's own flag rate recovers <!-- fact:e5.x1.random_matched -->60%<!-- /fact --> (X1), <!-- fact:e5.x2.random_matched -->28%<!-- /fact --> (X2), <!-- fact:e5.x3.random_matched -->15%<!-- /fact --> (X3) and <!-- fact:e5.x4.random_matched -->18%<!-- /fact --> (X4). At equal effort a digit rule is about as good as flagging bullets at random, and only the verb rule does clearly better than chance. Numeric rules find numeric targets and miss deliverables, and no rule comes near the curated ledger or the blind second reading. Precision is a lower bound, because the ledger is not exhaustive.
+
+### E6. The status engine against its invariants (real ledger)
+
+On the <!-- fact:e6.commitments -->25<!-- /fact --> real commitments, with evidence added in memory only, the engine had <!-- fact:e6.violations -->0<!-- /fact --> violations of the five invariants: the neutral default (I1), media evidence never moves a status (I2), no dependence on evidence order (I3), more official evidence never lowers a status (I4), and the date only changes the stale flag (I5). The same checks were run against five altered copies of the engine. Killed: <!-- fact:e6.killed -->5<!-- /fact --> of <!-- fact:e6.mutants -->5<!-- /fact -->. Which invariant caught each: M1 (media counts) <!-- fact:e6.mutant.M1 -->I2, I5<!-- /fact -->; M2 (old evidence dropped) <!-- fact:e6.mutant.M2 -->I5<!-- /fact -->; M3 (first evidence only) <!-- fact:e6.mutant.M3 -->I3, I5<!-- /fact -->; M4 (neutral default replaced) <!-- fact:e6.mutant.M4 -->I1, I4<!-- /fact -->; M5 (rule order swapped) <!-- fact:e6.mutant.M5 -->I1<!-- /fact -->. Only <!-- fact:e6.multi_evidence -->2<!-- /fact --> commitments have two or more eligible evidence items, so order and tie rules are tested mostly through the in memory perturbations and not through the data.
+
 ### The misses, explained
 
 - **P4a and P4b.** We expected the percentile bootstrap to fall short of 95% at moderate rates. It did not: at 0.70 and 0.88 it covered at or slightly above the nominal level. Our expectation came from the general result that percentile intervals under cover in small samples. A likely explanation, which we have not tested, is that with 25 binary items the bootstrap distribution moves in steps of 1/25 and the interval ends include whole steps, which adds coverage. The failure is concentrated where we also predicted it, near the top of the range, where a run with all successes gives an interval of zero width. The prediction was wrong at moderate rates and is kept as a miss.
+- **P5a.** X2 recovered <!-- fact:e5.x2.recall_numeric -->57%<!-- /fact --> of the commitments with a numeric target, below the 0.70 we expected, and none of the others as predicted. We expected a rule that asks for a digit and a percent or money word to find most numeric targets. It misses targets stated as counts (solutions, agents, employees, jobs), a rank, and a target written in words (full adoption). The prediction was too optimistic about the rule and is kept as a miss.
+- **P5d.** The blind second reading (<!-- fact:e5.blind.recall -->88%<!-- /fact -->) is above X3 (<!-- fact:e5.x3.recall -->8%<!-- /fact -->) as expected, but X3 is below the random baseline mean (<!-- fact:e5.random.mean -->28%<!-- /fact -->), so the two part prediction fails. The registered baseline flags bullets at X2's rate, about twice X3's rate, so the comparison favours chance. The exploratory matched rate comparison above shows the same direction at equal effort: X3 asks for a digit, a unit word and a date in one bullet, and the notes often state a target and its date in separate bullets (a likely reason that we have not tested).
 
 ### Limitations of Part 2
 
@@ -84,3 +114,5 @@ With 25 binary items and 2000 runs per rate, nominal 95% intervals covered the t
 - E2 and E3 use synthetic registries from generators written by the author of the method. They show that the findings do not depend on one set of generator assumptions; they say nothing about any real entity or real registry.
 - E3 measures noise by resampling items within an entity, which assumes the items are a sample from a larger population of similar items. If an office's registry is complete, a rank change has no sampling noise, but it still has measurement noise in the maturity ratings, which this experiment does not model.
 - E4 simulates independent binary items with a fixed rate. Real agreement items are not exchangeable, so real coverage may differ.
+- E5 uses the extraction notes as its text, not the source pages, and the notes were written by the same process that made the ledger. The rules are the simplest a developer would write; a better extractor is possible and was not tried. Unit precision is a lower bound.
+- E6 tests that the rules do what they promise on 25 commitments and perturbations that we wrote. It says nothing about whether the rules are the right ones, and nothing about accuracy, because no gold labels exist for status.
