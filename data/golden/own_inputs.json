@@ -50,5 +50,37 @@
  {
   "name": "shape.json",
   "text": "{\"a\":1}"
+ },
+ {
+  "name": "impossible_dates.csv",
+  "text": "id,title,kind,deadline\n1,a,vision,31/02/2027\n2,b,vision,2027-02-30\n3,c,vision,29 Feb 2028\n4,d,vision,29 Feb 2027\n5,e,vision,12/31/2027\n6,f,vision,Q5 2027\n7,g,vision,Feb 30, 2027\n"
+ },
+ {
+  "name": "digits.csv",
+  "text": "id,title,kind,deadline,target_number\n1,a,target,٢٠٢٧-١٢-٣١,١٢٣\n2,b,target,2027,१२३\n3,c,target,2027,１２３\n4,d,target,2027,1e400\n5,e,target,2027,\"1,200\"\n"
+ },
+ {
+  "name": "unclosed.csv",
+  "text": "id,title,kind\n1,\"abc,target\n2,x,target\n"
+ },
+ {
+  "name": "null_entries.json",
+  "text": "[1,\"a\",null,{\"id\":\"1\",\"title\":\"t\",\"kind\":\"target\"}]"
+ },
+ {
+  "name": "null.json",
+  "text": "null"
+ },
+ {
+  "name": "nan.json",
+  "text": "[{\"id\":\"1\",\"title\":\"t\",\"kind\":\"target\",\"target_number\":NaN}]"
+ },
+ {
+  "name": "nested.json",
+  "text": "[{\"id\":\"1\",\"title\":\"t\",\"kind\":\"target\",\"undefined_terms\":[true,null,1.5,\"x\"],\"owner\":{\"a\":1}}]"
+ },
+ {
+  "name": "bom_json.txt",
+  "text": "﻿[{\"id\":\"1\",\"title\":\"t\",\"kind\":\"vision\"}]"
  }
 ]
