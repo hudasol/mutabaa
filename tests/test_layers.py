@@ -19,7 +19,7 @@ LAYERS: dict[str, int] = {
     # 1. reading the repository
     "io": 1,
     # 2. engines: deterministic rules over typed records
-    "score": 2, "status": 2, "questions": 2, "sensitivity": 2, "synth": 2, "synth_b": 2,
+    "score": 2, "status": 2, "own": 2, "questions": 2, "sensitivity": 2, "synth": 2, "synth_b": 2,
     "validate": 2, "verify_live": 2, "diff": 2,
     # 3. analysis and reporting over engine output
     "robustness": 3, "calibration": 3, "agreement": 3, "facts": 3, "evaluate": 3, "evaluate_real": 3,

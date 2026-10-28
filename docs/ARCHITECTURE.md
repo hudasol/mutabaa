@@ -47,6 +47,7 @@ flowchart LR
 | Live verifier | `pipeline/verify_live.py` | Fetch each URL and check expected figures and dates on the raw page | network, stdlib only |
 | Scoring | `pipeline/score.py` | Six checks per commitment, bands | schemas |
 | Status | `pipeline/status.py` | Neutral-by-default status, evidence eligibility | schemas |
+| Own file reader | `pipeline/own.py` | Reads a CSV or JSON commitments file, same rules as the site | none |
 | Synthetic generator | `pipeline/synth.py` | Seeded labelled registry, scenario presets | none |
 | Sensitivity | `pipeline/sensitivity.py` | Sweep over every definition | synthetic |
 | Analysis | `pipeline/agreement.py`, `pipeline/calibration.py`, `pipeline/robustness.py` | Exploratory analyses: agreement, score calibration, robustness | engines |
@@ -81,7 +82,7 @@ The reference implementation is split into five layers. A module may import modu
 |---|---|---|
 | 0. Contracts and pure helpers | `schemas`, `stats`, `render` | nothing from the package |
 | 1. Repository input | `io` | layer 0 and its own layer |
-| 2. Engines | `score`, `status`, `questions`, `sensitivity`, `synth`, `synth_b`, `validate`, `verify_live`, `diff` | layers 0 and 1 and its own layer |
+| 2. Engines | `score`, `status`, `questions`, `sensitivity`, `synth`, `synth_b`, `own`, `validate`, `verify_live`, `diff` | layers 0 and 1 and its own layer |
 | 3. Analysis and reporting | `robustness`, `calibration`, `agreement`, `facts`, `evaluate`, `evaluate_real`, `schema_export` | layers 0 to 2 and its own layer |
 | 4. Command line | `__main__` | everything |
 
