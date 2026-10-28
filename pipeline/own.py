@@ -93,6 +93,9 @@ def deadline_precision(value: str) -> str:
 # ------------------------------------------------------------------ reading CSV
 
 
+_LINE_BREAK = re.compile(r"\r\n|\r|\n")
+
+
 def _first_line(text: str) -> str:
     out, quoted = [], False
     for ch in text:
@@ -121,6 +124,10 @@ def parse_csv(text: str) -> list[list[str]]:
     """Records of trimmed cells. Quotes may hold delimiters and line breaks; empty records are dropped."""
     text = text.removeprefix("﻿")
     delim = detect_delimiter(text)
+    if '"' not in text:  # no quoting to track: splitting is equivalent and several times faster
+        lines = _LINE_BREAK.split(text)
+        plain = [[c.strip() for c in line.split(delim)] for line in lines]
+        return [r for r in plain if any(c != "" for c in r)]
     records: list[list[str]] = []
     row: list[str] = []
     cur: list[str] = []

@@ -1,6 +1,7 @@
 // Offline build: one HTML file with script, styles and fonts inlined. Opens from file:// or a USB stick.
 // The page CSP is rewritten to allow exactly the inline blocks present (by SHA-256), nothing else.
 import { createHash } from "node:crypto";
+import { fileURLToPath } from "node:url";
 import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 
@@ -38,6 +39,9 @@ function inlineEverything(): Plugin {
 
 export default defineConfig({
   plugins: [react(), inlineEverything()],
+  resolve: { alias: { "./pagesEntry": fileURLToPath(new URL("./src/pagesEager.ts", import.meta.url)) } },
   base: "./",
-  build: { outDir: "dist-offline", assetsInlineLimit: 100_000_000, cssCodeSplit: false, modulePreload: false },
+  build: {
+    outDir: "dist-offline", assetsInlineLimit: 100_000_000, cssCodeSplit: false, modulePreload: false,
+  },
 });

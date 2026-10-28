@@ -211,7 +211,7 @@ const en = {
     owner_named: "A named owner", measurement_source: "A named way to measure it", terms_defined: "No undefined terms" },
   rel: "relative", year: "year", day: "day", month: "month", none: "none",
   footer: (d: string) => `Prototype and proposal seed, not a deployment. Public sources retrieved up to ${d}. Not an official product of any government entity, and not endorsed by any entity.`,
-  skip: "Skip to content", nav_label: "Main", tick_yes: "yes", tick_no: "no", tick_na: "not applicable",
+  skip: "Skip to content", loading: "Loading", nav_label: "Main", tick_yes: "yes", tick_no: "no", tick_na: "not applicable",
 };
 
 type Dict = typeof en;
@@ -419,7 +419,7 @@ const ar: Dict = {
     owner_named: "جهة مسؤولة مسماة", measurement_source: "طريقة قياس مسماة", terms_defined: "بلا مصطلحات غير معرَّفة" },
   rel: "نسبي", year: "سنة", day: "يوم", month: "شهر", none: "لا يوجد",
   footer: (d: string) => `نموذج أولي وبذرة مقترح، لا نظام منشور. مصادر عامة مسترجعة حتى ${d}. ليس منتجاً رسمياً لأي جهة حكومية، ولا تتبناه أي جهة.`,
-  skip: "انتقل إلى المحتوى", nav_label: "القائمة الرئيسية", tick_yes: "نعم", tick_no: "لا", tick_na: "لا ينطبق",
+  skip: "انتقل إلى المحتوى", loading: "جارٍ التحميل", nav_label: "القائمة الرئيسية", tick_yes: "نعم", tick_no: "لا", tick_na: "لا ينطبق",
 };
 
 export const dict: Record<Lang, Dict> = { en, ar };

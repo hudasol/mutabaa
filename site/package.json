@@ -11,7 +11,8 @@
     "build:offline": "vite build --config vite.single.config.ts",
     "test:e2e": "playwright test",
     "sbom": "npx --yes @cyclonedx/cyclonedx-npm@6.0.1 --omit dev --output-file ../sbom/site.cdx.json --spec-version 1.5",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "check:bundle": "node scripts/check-bundle.mjs"
   },
   "dependencies": {
     "@fontsource/ibm-plex-mono": "5.2.7",
