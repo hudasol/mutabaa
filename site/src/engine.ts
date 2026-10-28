@@ -138,6 +138,7 @@ export function parseRecords(input: string): string[][] {
       row.push(cur.trim()); cur = ""; records.push(row); row = [];
     } else cur += ch;
   }
+  if (quoted) throw new Error("A quoted cell is not closed.");
   row.push(cur.trim());
   records.push(row);
   return records.filter((r) => r.some((c) => c !== ""));

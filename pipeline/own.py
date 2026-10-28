@@ -13,7 +13,9 @@ data/golden/own_inputs.json and data/golden/own_outputs.json keep both identical
 
 from __future__ import annotations
 
+import calendar
 import json
+import math
 import re
 from dataclasses import dataclass, field
 
@@ -49,36 +51,55 @@ _MONTHS = (
     "jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|"
     "sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?"
 )
-_I = re.IGNORECASE
-_ISO_DAY = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
-_NUM_DAY = re.compile(r"^(\d{1,2})[/.-](\d{1,2})[/.-](\d{4})$")
-_YMD_SLASH = re.compile(r"^(\d{4})[/.](\d{1,2})[/.](\d{1,2})$")
+_I = re.IGNORECASE | re.ASCII
+_A = re.ASCII
+_DIGITS = str.maketrans("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹", "01234567890123456789")
+_ISO_DAY = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$", _A)
+_NUM_DAY = re.compile(r"^(\d{1,2})[/.-](\d{1,2})[/.-](\d{4})$", _A)
+_YMD_SLASH = re.compile(r"^(\d{4})[/.](\d{1,2})[/.](\d{1,2})$", _A)
 _DAY_MONTH_NAME = re.compile(rf"^\d{{1,2}}\s+(?:{_MONTHS})\.?,?\s+\d{{4}}$", _I)
 _MONTH_NAME_DAY = re.compile(rf"^(?:{_MONTHS})\.?\s+\d{{1,2}},?\s+\d{{4}}$", _I)
-_ISO_MONTH = re.compile(r"^(\d{4})-(\d{2})$")
-_NUM_MONTH = re.compile(r"^(\d{1,2})[/-](\d{4})$")
+_ISO_MONTH = re.compile(r"^(\d{4})-(\d{2})$", _A)
+_NUM_MONTH = re.compile(r"^(\d{1,2})[/-](\d{4})$", _A)
 _MONTH_NAME_YEAR = re.compile(rf"^(?:{_MONTHS})\.?\s+\d{{4}}$", _I)
 _QUARTER = re.compile(r"^(?:q[1-4]\s*[-/ ]?\s*\d{4}|\d{4}\s*[-/ ]?\s*q[1-4])$", _I)
 _YEAR = re.compile(r"^(?:(?:by|before|until)\s+)?(?:(?:the\s+)?end\s+of\s+)?\d{4}$", _I)
 
 
-def _valid_day(a: int, b: int) -> bool:
-    return (1 <= a <= 31 and 1 <= b <= 12) or (1 <= a <= 12 and 1 <= b <= 31)
+def _real_date(y: int, m: int, d: int) -> bool:
+    return 1 <= m <= 12 and 1 <= d <= calendar.monthrange(y, m)[1] if 1 <= y <= 9999 else False
+
+
+def _valid_day(a: int, b: int, y: int) -> bool:
+    """Day first or month first, whichever is a real date in year y."""
+    return _real_date(y, b, a) or _real_date(y, a, b)
+
+
+_MONTH_ABBR = ("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec")
+_MONTH_NUMBER = {m: i + 1 for i, m in enumerate(_MONTH_ABBR)}
+
+
+def _named_day(s: str) -> bool:
+    if (a := re.match(rf"^(\d{{1,2}})\s+({_MONTHS})\.?,?\s+(\d{{4}})$", s, _I)) is not None:
+        return _real_date(int(a[3]), _MONTH_NUMBER[a[2][:3].lower()], int(a[1]))
+    if (b := re.match(rf"^({_MONTHS})\.?\s+(\d{{1,2}}),?\s+(\d{{4}})$", s, _I)) is not None:
+        return _real_date(int(b[3]), _MONTH_NUMBER[b[1][:3].lower()], int(b[2]))
+    return False
 
 
 def deadline_precision(value: str) -> str:
-    """day, month, year, relative or none. Dates are read as written; no calendar arithmetic."""
-    s = " ".join(value.split())
+    """day, month, year, relative or none. A day must be a real date; 31/02/2027 is not."""
+    s = " ".join(value.translate(_DIGITS).split())
     if not s:
         return "none"
     if (m := _ISO_DAY.match(s)) is not None:
-        return "day" if 1 <= int(m[2]) <= 12 and 1 <= int(m[3]) <= 31 else "relative"
+        return "day" if _real_date(int(m[1]), int(m[2]), int(m[3])) else "relative"
     if (m := _NUM_DAY.match(s)) is not None:
-        return "day" if _valid_day(int(m[1]), int(m[2])) else "relative"
+        return "day" if _valid_day(int(m[1]), int(m[2]), int(m[3])) else "relative"
     if (m := _YMD_SLASH.match(s)) is not None:
-        return "day" if _valid_day(int(m[2]), int(m[3])) and int(m[2]) <= 12 else "relative"
+        return "day" if _real_date(int(m[1]), int(m[2]), int(m[3])) else "relative"
     if _DAY_MONTH_NAME.match(s) or _MONTH_NAME_DAY.match(s):
-        return "day"
+        return "day" if _named_day(s) else "relative"
     if (m := _ISO_MONTH.match(s)) is not None:
         return "month" if 1 <= int(m[2]) <= 12 else "relative"
     if (m := _NUM_MONTH.match(s)) is not None:
@@ -93,7 +114,7 @@ def deadline_precision(value: str) -> str:
 # ------------------------------------------------------------------ reading CSV
 
 
-_LINE_BREAK = re.compile(r"\r\n|\r|\n")
+_LINE_BREAK = re.compile(r"\r\n|\r|\n", _A)
 
 
 def _first_line(text: str) -> str:
@@ -159,22 +180,29 @@ def parse_csv(text: str) -> list[list[str]]:
         else:
             cur.append(ch)
         i += 1
+    if quoted:
+        raise ValueError("A quoted cell is not closed.")
     row.append("".join(cur).strip())
     records.append(row)
     return [r for r in records if any(c != "" for c in r)]
 
 
+def _no_constant(name: str) -> float:
+    raise ValueError(f"{name} is not valid JSON")
+
+
 def read_file(name: str, text: str) -> tuple[list[str], list[list[str]], bool]:
     """Headers, rows and whether the row cap cut the file. Raises ValueError with a readable message."""
-    looks_json = name.lower().endswith(".json") or re.match(r"^\s*[\[{]", text) is not None
+    body = text.removeprefix("\ufeff")
+    looks_json = name.lower().endswith(".json") or re.match(r"^\s*[\[{]", body) is not None
     if not looks_json:
         records = parse_csv(text)
         if not records:
             return [], [], False
         return records[0], records[1 : MAX_ROWS + 1], len(records) - 1 > MAX_ROWS
     try:
-        parsed = json.loads(text.removeprefix("﻿"))
-    except json.JSONDecodeError as exc:
+        parsed = json.loads(body, parse_constant=_no_constant)
+    except ValueError as exc:
         raise ValueError("The file is not valid JSON.") from exc
     items = parsed.get("commitments") if isinstance(parsed, dict) else parsed
     if not isinstance(items, list):
@@ -185,10 +213,10 @@ def read_file(name: str, text: str) -> tuple[list[str], list[list[str]], bool]:
             headers += [k for k in o if k not in headers]
 
     def cell(v: object) -> str:
-        if v is None:
+        if v is None or isinstance(v, dict):
             return ""
         if isinstance(v, list):
-            return "; ".join(str(x) for x in v)
+            return "; ".join(cell(x) for x in v)
         if isinstance(v, bool):
             return "true" if v else "false"
         return str(v)
@@ -254,19 +282,21 @@ class OwnResult:
         return len(self.items)
 
 
-_ARABIC_DIGITS = str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789")
-_NUMBER = re.compile(r"^[+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?$")
+_NUMBER = re.compile(r"^[+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?$", _A)
 
 
 def parse_number(raw: str) -> float | None:
     """A plain number. Thousands commas, spaces and a trailing percent sign are ignored."""
-    s = raw.translate(_ARABIC_DIGITS).strip().replace(",", "").replace(" ", "")
+    s = raw.translate(_DIGITS).strip().replace(",", "").replace(" ", "")
     s = s.removesuffix("%")
     if s == "":
         return None
     if not _NUMBER.match(s):
         raise ValueError(raw)
-    return float(s)
+    value = float(s)
+    if math.isinf(value):
+        raise ValueError(raw)
+    return value
 
 
 def _or_none(s: str) -> str | None:
