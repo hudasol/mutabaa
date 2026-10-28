@@ -36,7 +36,9 @@ def generate_b(seed: int, n_entities: int = 16, profile: str = "mid") -> Registr
         entities.append(e)
         for j in range(k):
             operation = rng.random() < o
-            audience: Audience = "internal" if operation else ("citizen" if rng.random() < 0.6 else "business")
+            audience: Audience = (
+                "internal" if operation else ("citizen" if rng.random() < 0.6 else "business")
+            )
             z = u + rng.gauss(0, 0.6) - (0.5 if operation else 0.0)
             maturity = cast(MaturityLevel, max(0, min(4, round(z))))
             g = 0.5 * (z - 2) + rng.gauss(0, 1)
