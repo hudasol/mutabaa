@@ -64,7 +64,7 @@ def weight_stability(cs: list[Commitment], draws: int = 1000, seed: int = 11) ->
         drops[k] = spearman(base, [weighted(c, eq, drop=k) for c in cs])
     pass_rate = {}
     for k in CHECKS:
-        vals = [score(c).checks[k] for c in cs if score(c).checks[k] is not None]
+        vals = [v for c in cs if (v := score(c).checks[k]) is not None]
         pass_rate[k] = round(sum(vals) / len(vals), 3) if vals else None
     return {
         "draws": len(rhos),

@@ -17,6 +17,8 @@ jobs:
         run: pip install -e ".[dev]"
       - name: Lint
         run: ruff check .
+      - name: Type check
+        run: mypy
       - name: Tests with coverage gate (90% of pipeline/)
         run: pytest --cov=pipeline --cov-report=term
       - name: Preregistered evaluation reproduces the committed results

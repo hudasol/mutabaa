@@ -3,6 +3,7 @@
 reproduce:
 	python -m pipeline validate
 	ruff check .
+	python -m mypy
 	python -m pytest -q --cov=pipeline
 	python -m pipeline build
 	python -m pipeline evaluate

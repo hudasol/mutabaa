@@ -115,11 +115,11 @@ def robots_allows(url: str, fetch: Fetcher, cache: dict[str, urllib.robotparser.
         rp = urllib.robotparser.RobotFileParser()
         f = fetch(host + "/robots.txt")
         if f.status in (401, 403):
-            rp.disallow_all = True
+            rp.disallow_all = True  # type: ignore[attr-defined]  # public in CPython, absent from typeshed
         elif f.status == 200 and f.body:
             rp.parse(f.body.splitlines())
         else:
-            rp.allow_all = True
+            rp.allow_all = True  # type: ignore[attr-defined]
         cache[host] = rp
     return cache[host].can_fetch(USER_AGENT, url)
 
@@ -155,7 +155,8 @@ def check_source(src: Source, fetch: Fetcher = http_fetch, robots: dict | None =
         }
     text_n = norm(visible_text(f.body))
     markup_n = norm(f.body)
-    missing, in_markup_only = [], []
+    missing: list[str] = []
+    in_markup_only: list[str] = []
     for e in src.expect_present:
         if contains(text_n, e):
             continue

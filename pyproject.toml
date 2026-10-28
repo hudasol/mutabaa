@@ -9,7 +9,7 @@ authors = [{ name = "Huda Mueen" }]
 dependencies = ["pydantic>=2.6"]
 
 [project.optional-dependencies]
-dev = ["pytest>=8", "pytest-cov>=6", "ruff>=0.5"]
+dev = ["pytest>=8", "pytest-cov>=6", "ruff>=0.5", "mypy>=1.10"]
 
 [tool.setuptools]
 packages = ["pipeline"]
@@ -26,6 +26,15 @@ source = ["pipeline"]
 # The gate: `pytest --cov` fails below this share of covered lines in pipeline/.
 fail_under = 90
 show_missing = true
+
+[tool.mypy]
+files = ["pipeline"]
+python_version = "3.12"
+warn_unused_ignores = true
+warn_redundant_casts = true
+check_untyped_defs = true
+no_implicit_optional = true
+plugins = ["pydantic.mypy"]
 
 [tool.ruff]
 line-length = 110

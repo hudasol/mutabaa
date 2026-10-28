@@ -7,8 +7,9 @@ are correlated with maturity, heavy tailed entity sizes and volumes. Nothing her
 from __future__ import annotations
 
 import random
+from typing import cast
 
-from .schemas import Registry, RegistryMeta, ServiceItem, SyntheticEntity
+from .schemas import Audience, MaturityLevel, Registry, RegistryMeta, ServiceItem, SyntheticEntity
 from .synth import _OPERATION_NAMES, _SERVICE_NAMES, DISCLAIMER, SECTORS
 
 GENERATOR_VERSION = "B-1.0"
@@ -35,9 +36,9 @@ def generate_b(seed: int, n_entities: int = 16, profile: str = "mid") -> Registr
         entities.append(e)
         for j in range(k):
             operation = rng.random() < o
-            audience = "internal" if operation else ("citizen" if rng.random() < 0.6 else "business")
+            audience: Audience = "internal" if operation else ("citizen" if rng.random() < 0.6 else "business")
             z = u + rng.gauss(0, 0.6) - (0.5 if operation else 0.0)
-            maturity = max(0, min(4, round(z)))
+            maturity = cast(MaturityLevel, max(0, min(4, round(z))))
             g = 0.5 * (z - 2) + rng.gauss(0, 1)
             flags = {name: g + rng.gauss(0, 0.8) > cut for name, cut in FLAG_CUTS}
             if operation:
@@ -54,7 +55,10 @@ def generate_b(seed: int, n_entities: int = 16, profile: str = "mid") -> Registr
                     name=(_OPERATION_NAMES if operation else _SERVICE_NAMES)[j % 8],
                     annual_transactions=tx,
                     maturity=maturity,
-                    **flags,
+                    oversight=flags["oversight"],
+                    audit_trail=flags["audit_trail"],
+                    uae_residency=flags["uae_residency"],
+                    fallback=flags["fallback"],
                 )
             )
     return Registry(

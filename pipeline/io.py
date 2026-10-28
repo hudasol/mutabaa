@@ -26,7 +26,7 @@ class RealData:
 
 def _load(name: str, model: type):
     raw = json.loads((REAL / name).read_text(encoding="utf-8"))
-    return TypeAdapter(list[model]).validate_python(raw)
+    return TypeAdapter(list[model]).validate_python(raw)  # type: ignore[valid-type]
 
 
 def load_real() -> RealData:

@@ -8,8 +8,9 @@ from __future__ import annotations
 
 import math
 import random
+from typing import cast
 
-from .schemas import Registry, RegistryMeta, ServiceItem, SyntheticEntity
+from .schemas import Audience, MaturityLevel, Registry, RegistryMeta, ServiceItem, SyntheticEntity
 
 GENERATOR_VERSION = "1.0"
 SEED = 20260423
@@ -55,9 +56,9 @@ _OPERATION_NAMES = [
 ]
 
 
-def _maturity(rng: random.Random, adv: float, operation: bool) -> int:
+def _maturity(rng: random.Random, adv: float, operation: bool) -> MaturityLevel:
     x = rng.gauss(adv * 4.0 - (0.4 if operation else 0.0), 0.9)
-    return max(0, min(4, round(x)))
+    return cast(MaturityLevel, max(0, min(4, round(x))))
 
 
 def generate(
@@ -83,9 +84,8 @@ def generate(
         k = max(10, int(rng.gauss(items_per_entity, 6)))
         for j in range(k):
             operation = rng.random() < 0.28
-            audience = (
-                "internal" if operation else rng.choices(["citizen", "business"], weights=[0.65, 0.35])[0]
-            )
+            choices: list[Audience] = ["citizen", "business"]
+            audience: Audience = "internal" if operation else rng.choices(choices, weights=[0.65, 0.35])[0]
             m = _maturity(rng, e.advancement, operation)
             # Guardrails are more often present on high-maturity items, but not reliably.
             p = 0.45 + 0.1 * m
