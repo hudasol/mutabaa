@@ -226,14 +226,27 @@ def coverage(d) -> list[dict]:
 
 
 def evaluation_summary() -> dict:
-    """The few preregistered results the site states in its own text (E3 on Portfolio, E4 on Assurance)."""
+    """The preregistered results the site states in its own text (E3 on Portfolio, E4 and E5 and E6 on Assurance)."""
     res = facts.RESULTS
-    e3 = json.loads((res / "e3.json").read_text(encoding="utf-8"))["primary"]
-    e4 = json.loads((res / "e4.json").read_text(encoding="utf-8"))["rates"]
+
+    def load(name: str) -> dict:
+        return json.loads((res / f"{name}.json").read_text(encoding="utf-8"))
+
+    e3, e4, e5, e6 = load("e3")["primary"], load("e4")["rates"], load("e5"), load("e6")
+    f5 = e5["facts"]
+    keep = ("flagged_share", "recall", "recall_numeric", "recall_other", "precision")
     return {
         "e3": {k: e3[k] for k in ("entities", "moved_3_or_more", "exceed_noise", "noise_only_mean")},
         "e4": {"bootstrap_coverage_at_095": e4["0.95"]["bootstrap"]["coverage"],
                "wilson_coverage_at_095": e4["0.95"]["wilson"]["coverage"]},
+        "e5": {
+            "units": f5["units"]["value"],
+            "located": f5["located"]["value"],
+            "blind_recall": f5["blind.recall"]["value"],
+            "rules": {k: {m: e5["extractors"][k][m] for m in keep} for k in ("x1", "x2", "x3", "x4")},
+        },
+        "e6": {"violations": e6["facts"]["violations"]["value"], "killed": e6["facts"]["killed"]["value"],
+               "mutants": e6["facts"]["mutants"]["value"]},
     }
 
 

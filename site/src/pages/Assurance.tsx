@@ -57,6 +57,34 @@ export default function Assurance() {
         <p className="small">{t.as_agr_missed} <span className="mono">{ag.missed.join(", ")}</span></p>
         <p className="small">{t.as_agr_note} {t.as_small}</p>
       </section>
+      <section className="panel" aria-labelledby="cmp-h">
+        <h2 id="cmp-h">{t.as_cmp}</h2>
+        <p>{t.as_cmp_intro(data.evaluation.e5.units, data.evaluation.e5.located)}</p>
+        <div className="table-wrap" tabIndex={0} role="region" aria-label={t.as_cmp}>
+          <table className="ledger">
+            <thead><tr>
+              <th scope="col">{t.as_cmp_cols.rule}</th><th scope="col">{t.as_cmp_cols.flagged}</th>
+              <th scope="col">{t.as_cmp_cols.found}</th><th scope="col">{t.as_cmp_cols.numeric}</th>
+              <th scope="col">{t.as_cmp_cols.other}</th><th scope="col">{t.as_cmp_cols.precision}</th>
+            </tr></thead>
+            <tbody>
+              {(["x1", "x2", "x3", "x4"] as const).map((k) => {
+                const r = data.evaluation.e5.rules[k];
+                return (
+                  <tr key={k}>
+                    <th scope="row">{t.as_cmp_rules[k]}</th>
+                    <td>{pct(r.flagged_share)}</td><td>{pct(r.recall)}</td>
+                    <td>{pct(r.recall_numeric)}</td><td>{pct(r.recall_other)}</td><td>{pct(r.precision)}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p>{t.as_cmp_blind(pct(data.evaluation.e5.blind_recall))}</p>
+        <p className="small">{t.as_cmp_note}</p>
+        <p>{t.as_inv(data.evaluation.e6.violations, data.evaluation.e6.killed, data.evaluation.e6.mutants)}</p>
+      </section>
     </>
   );
 }

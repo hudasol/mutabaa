@@ -169,7 +169,7 @@
  },
  "build": {
   "data_as_of": "2026-10-10",
-  "payload_sha256": "069b14125fc788caf4e387511e6dac59358bdef6aec719d052d50930f01c8e92",
+  "payload_sha256": "1136ebbb1fa57296d536b7adce8040ae32391b86255edaeff14ae1da45f1343a",
   "schema": 2
  },
  "claims": [
@@ -1460,6 +1460,46 @@
   "e4": {
    "bootstrap_coverage_at_095": 0.6995,
    "wilson_coverage_at_095": 0.9635
+  },
+  "e5": {
+   "blind_recall": 0.88,
+   "located": 25,
+   "rules": {
+    "x1": {
+     "flagged_share": 0.5714,
+     "precision": 0.2333,
+     "recall": 0.64,
+     "recall_numeric": 0.9285714285714286,
+     "recall_other": 0.2727272727272727
+    },
+    "x2": {
+     "flagged_share": 0.2667,
+     "precision": 0.25,
+     "recall": 0.32,
+     "recall_numeric": 0.5714285714285714,
+     "recall_other": 0.0
+    },
+    "x3": {
+     "flagged_share": 0.1238,
+     "precision": 0.1538,
+     "recall": 0.08,
+     "recall_numeric": 0.14285714285714285,
+     "recall_other": 0.0
+    },
+    "x4": {
+     "flagged_share": 0.1524,
+     "precision": 0.5,
+     "recall": 0.32,
+     "recall_numeric": 0.35714285714285715,
+     "recall_other": 0.2727272727272727
+    }
+   },
+   "units": 105
+  },
+  "e6": {
+   "killed": 5,
+   "mutants": 5,
+   "violations": 0
   }
  },
  "evidence": [
