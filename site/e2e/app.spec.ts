@@ -182,6 +182,15 @@ test("[lab] a services file with semicolons and a quoted line break is read", as
   await expect(page.getByText("services.csv:")).toContainText("2");
 });
 
+test("[mine] a long file is scored in full but only the first rows are drawn", async ({ page }) => {
+  await open(page, "mine");
+  const rows = Array.from({ length: 1200 }, (_, i) => `R${i},Commitment ${i},vision`).join("\n");
+  await page.locator('input[type="file"]').setInputFiles({ name: "long.csv", mimeType: "text/csv", buffer: Buffer.from("id,title,kind\n" + rows + "\n") });
+  await expect(page.getByText("1200 commitments scored.")).toBeVisible();
+  await expect(page.getByText("Showing the first 500 of 1200.")).toBeVisible();
+  await expect(page.locator("table.ledger tbody tr")).toHaveCount(500);
+});
+
 test("[mine] a malformed file shows an error, not a crash", async ({ page }) => {
   await open(page, "mine");
   await page.locator('input[type="file"]').setInputFiles({ name: "bad.json", mimeType: "application/json", buffer: Buffer.from("[{oops") });

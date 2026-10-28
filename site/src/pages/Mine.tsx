@@ -9,6 +9,9 @@ import { Head, SourceBanner, Ticks } from "../parts";
 
 type Loaded = { name: string; headers: string[]; rows: string[][]; truncated: boolean };
 
+/** Rows drawn on the page. The export and the score cover every row; drawing 200,000 would freeze the tab. */
+const SHOW_ROWS = 500;
+
 export default function Mine() {
   const { t, lang } = useCtx();
   const [file, setFile] = useState<Loaded | null>(null);
@@ -39,6 +42,7 @@ export default function Mine() {
     download("mutabaa-questions.csv", "\uFEFF" + [head, ...lines].join("\r\n") + "\r\n", "text/csv");
   };
   const rep = result?.report;
+  const shown = scored.slice(0, SHOW_ROWS);
   return (
     <>
       <Head title={t.my_title} sub={t.my_sub} />
@@ -81,7 +85,7 @@ export default function Mine() {
             </dl>
             {result!.errors.length > 0 && (
               <div role="alert"><b>{t.lb_errors(result!.errors.length)}</b>
-                <ul className="errlist">{result!.errors.slice(0, 8).map((e) => <li key={e}>{e}</li>)}</ul></div>
+                <ul className="errlist">{result!.errors.slice(0, 8).map((e) => <li key={e}>{e}</li>)}{result!.errors.length > 8 && <li>{t.my_more_errors(result!.errors.length - 8)}</li>}</ul></div>
             )}
           </div>
         )}
@@ -93,6 +97,7 @@ export default function Mine() {
         {scored.length === 0 ? <p>{t.my_empty}</p> : (
           <>
             <p>{t.my_count(scored.length)}</p>
+            {scored.length > shown.length && <p className="small">{t.my_shown(shown.length, scored.length)}</p>}
             <div className="table-wrap" tabIndex={0} role="region" aria-label={t.my_results}>
               <table className="ledger">
                 <thead><tr>
@@ -100,7 +105,7 @@ export default function Mine() {
                   <th scope="col">{t.my_col_score}</th><th scope="col">{t.lg_band}</th><th scope="col">{t.my_col_missing}</th>
                 </tr></thead>
                 <tbody>
-                  {scored.map(({ c, s }) => (
+                  {shown.map(({ c, s }) => (
                     <tr key={c.id}>
                       <td className="mono">{c.id}</td>
                       <td>{c.title}</td>
@@ -113,7 +118,7 @@ export default function Mine() {
               </table>
             </div>
             <h3>{t.my_questions}</h3>
-            {scored.filter((x) => x.q.length > 0).map(({ c, q }) => (
+            {shown.filter((x) => x.q.length > 0).map(({ c, q }) => (
               <details key={c.id} className="qblock">
                 <summary><span className="mono">{c.id}</span> {c.title} <span className="small">({q.length})</span></summary>
                 <ol>{q.map((x, i) => <li key={i}>{lang === "ar" ? x.ar : x.en}</li>)}</ol>
