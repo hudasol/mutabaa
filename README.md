@@ -97,6 +97,7 @@ Real and synthetic numbers are never combined into one figure. See [`docs/DATA_S
 | Robustness, calibration, agreement, Assurance page | done, labelled exploratory | `v1.3.0` |
 | Portfolio view, pilot plan, risks, sources policy, corrections, compliance mapping | done | `v1.4.0` |
 | Voice and identity rules, facts checked against documents, layer and schema contracts, coverage gate, decision records, preregistered evaluation, My commitments | done | `v1.5.0` |
+| Command line, preregistered baselines E5 and E6, type and lint gates, size and speed guards, user guide | done | `v1.6.0` |
 | Human review of extraction notes and Arabic; a person labelled gold set; legal reading of the sources policy; a real pilot | open | |
 
 ## Documents

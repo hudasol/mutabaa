@@ -1,3 +1,3 @@
 """Mutabaa reference pipeline: schemas, validation, scoring, status, synthetic data, sensitivity."""
 
-__version__ = "1.5.0"
+__version__ = "1.6.0"

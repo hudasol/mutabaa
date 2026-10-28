@@ -7,8 +7,8 @@ authors:
     given-names: Huda
 repository-code: "https://github.com/hudasol/mutabaa"
 license: MIT
-version: 1.5.0
-date-released: "2026-10-18"
+version: 1.6.0
+date-released: "2026-10-28"
 abstract: >-
   Reads the public record on UAE and Abu Dhabi AI targets, grades how checkable each commitment is,
   traces every status to a source, and shows how much a headline percentage depends on its definition.
