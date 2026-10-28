@@ -50,7 +50,7 @@ flowchart LR
 | Synthetic generator | `pipeline/synth.py` | Seeded labelled registry, scenario presets | none |
 | Sensitivity | `pipeline/sensitivity.py` | Sweep over every definition | synthetic |
 | Analysis | `pipeline/agreement.py`, `pipeline/calibration.py`, `pipeline/robustness.py` | Exploratory analyses: agreement, score calibration, robustness | engines |
-| Preregistered evaluation | `pipeline/evaluate.py`, `pipeline/synth_b.py` | Experiments fixed in `PREREGISTRATION.md` | engines |
+| Preregistered evaluation | `pipeline/evaluate.py`, `pipeline/evaluate_real.py`, `pipeline/synth_b.py` | Experiments fixed in `PREREGISTRATION.md` | engines |
 | Facts and reports | `pipeline/facts.py`, `pipeline/render.py` | Numbers that documents may cite; rendered reports | analysis |
 | Schema export | `pipeline/schema_export.py` | JSON Schema files generated from the pydantic models | schemas |
 | Builder | `pipeline/__main__.py` | One payload for the site | all above |
@@ -82,7 +82,7 @@ The reference implementation is split into five layers. A module may import modu
 | 0. Contracts and pure helpers | `schemas`, `stats`, `render` | nothing from the package |
 | 1. Repository input | `io` | layer 0 and its own layer |
 | 2. Engines | `score`, `status`, `questions`, `sensitivity`, `synth`, `synth_b`, `validate`, `verify_live`, `diff` | layers 0 and 1 and its own layer |
-| 3. Analysis and reporting | `robustness`, `calibration`, `agreement`, `facts`, `evaluate`, `schema_export` | layers 0 to 2 and its own layer |
+| 3. Analysis and reporting | `robustness`, `calibration`, `agreement`, `facts`, `evaluate`, `evaluate_real`, `schema_export` | layers 0 to 2 and its own layer |
 | 4. Command line | `__main__` | everything |
 
 Engines hold the rules. Analysis code measures the rules and never changes them. The command line only wires layers together and writes files.

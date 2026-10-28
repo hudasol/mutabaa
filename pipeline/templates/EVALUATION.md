@@ -36,7 +36,7 @@ Moving the band cut offs by up to 10 points changes the band of at most {calibra
 
 ## Part 2. Preregistered experiments
 
-The design, metrics, baselines, seeds and predictions were committed in `PREREGISTRATION.md` before any experiment code was committed; git history shows that commit before the ones that add `pipeline/evaluate.py` and `results/`. The code and the results were committed together, so git cannot show the order of writing and running; amendment 3 in `PREREGISTRATION.md` says what can be shown. `python -m pipeline evaluate` reruns everything and writes `results/e1.json` to `results/e4.json`. The method, generator A, the specification of generator B and the real ledger share one author.
+The design, metrics, baselines, seeds and predictions were committed in `PREREGISTRATION.md` before any experiment code was committed; git history shows that commit before the ones that add `pipeline/evaluate.py` and `results/`. The code and the results were committed together, so git cannot show the order of writing and running; amendment 3 in `PREREGISTRATION.md` says what can be shown. `python -m pipeline evaluate` reruns everything and writes `results/e1.json` to `results/e6.json`. The method, generator A, the specification of generator B and the real ledger share one author.
 
 ### Predictions and results
 
@@ -56,6 +56,14 @@ The design, metrics, baselines, seeds and predictions were committed in `PREREGI
 | P4b | Bootstrap coverage at rate 0.88 between 0.85 and 0.93 | {e4.p88.bootstrap} | {e4.P4b} |
 | P4c | Bootstrap coverage at rate 0.95 below 0.85 | {e4.p95.bootstrap} | {e4.P4c} |
 | P4d | Wilson coverage at least 0.92 at all three rates | {e4.p70.wilson}, {e4.p88.wilson}, {e4.p95.wilson} | {e4.P4d} |
+| P5a | X2 recovers at least 0.70 of numeric target commitments and at most 0.50 of the others | {e5.x2.recall_numeric} and {e5.x2.recall_other} | {e5.P5a} |
+| P5b | No extractor from X1 to X4 has unit F1 above 0.45 | best {e5.best_f1} | {e5.P5b} |
+| P5c | X1 unit precision below 0.50 | {e5.x1.precision} | {e5.P5c} |
+| P5d | Blind second reading above X3, and X3 above the random baseline mean | {e5.blind.recall}, {e5.x3.recall}, {e5.random.mean} | {e5.P5d} |
+| P5e | No unlocated commitments | {e5.unlocated} | {e5.P5e} |
+| P6a | Zero violations of every invariant on the real engine | {e6.violations} violations | {e6.P6a} |
+| P6b | At least four of five mutants killed | {e6.killed} of {e6.mutants} | {e6.P6b} |
+| P6c | At most three commitments with two or more eligible evidence items | {e6.multi_evidence} | {e6.P6c} |
 
 ### E1. Score against an observable outcome (real ledger)
 
@@ -73,9 +81,31 @@ On the committed registry, {e3.moved3} of {e3.entities} entities move by three p
 
 With 25 binary items and 2000 runs per rate, nominal 95% intervals covered the true rate as follows. Percentile bootstrap: {e4.p70.bootstrap} at 0.70, {e4.p88.bootstrap} at 0.88, {e4.p95.bootstrap} at 0.95. Wilson: {e4.p70.wilson}, {e4.p88.wilson}, {e4.p95.wilson}. Mean widths at 0.95: bootstrap {e4.p95.bootstrap.width}, Wilson {e4.p95.wilson.width}. As fixed in advance, the Assurance page now reports a Wilson interval beside the bootstrap one and states the problem (amendment 1).
 
+### E5. Rule based extractors against the ledger (real ledger)
+
+The extraction notes hold {e5.units} bullets. {e5.positives} of them contain an anchor of one of the {e5.located} commitments, and {e5.unlocated} commitments could not be located. Five rules each saw one bullet and nothing else: X0 flags every bullet, X1 a digit, X2 a digit with a percent or money word, X3 X2 plus a year or a deadline phrase, X4 a verb of intent (the exact rules are in `PREREGISTRATION.md`).
+
+| Rule | Bullets flagged | Commitments recovered | With a numeric target | Others | Unit precision | Unit F1 |
+|---|---|---|---|---|---|---|
+| X0 every bullet | {e5.x0.flagged_share} | {e5.x0.recall} | {e5.x0.recall_numeric} | {e5.x0.recall_other} | {e5.x0.precision} | {e5.x0.f1} |
+| X1 digit | {e5.x1.flagged_share} | {e5.x1.recall} | {e5.x1.recall_numeric} | {e5.x1.recall_other} | {e5.x1.precision} | {e5.x1.f1} |
+| X2 digit and unit word | {e5.x2.flagged_share} | {e5.x2.recall} | {e5.x2.recall_numeric} | {e5.x2.recall_other} | {e5.x2.precision} | {e5.x2.f1} |
+| X3 X2 and a date | {e5.x3.flagged_share} | {e5.x3.recall} | {e5.x3.recall_numeric} | {e5.x3.recall_other} | {e5.x3.precision} | {e5.x3.f1} |
+| X4 verb of intent | {e5.x4.flagged_share} | {e5.x4.recall} | {e5.x4.recall_numeric} | {e5.x4.recall_other} | {e5.x4.precision} | {e5.x4.f1} |
+
+Reference: the blind second reading found {e5.blind.recall} of the ledger from the same notes. The preregistered random baseline flags bullets at X2's rate and recovers {e5.random.mean} of the commitments (mean of 20 seeds).
+
+Exploratory, added after the results existed (amendment 5 in `PREREGISTRATION.md`): random flagging at each rule's own flag rate recovers {e5.x1.random_matched} (X1), {e5.x2.random_matched} (X2), {e5.x3.random_matched} (X3) and {e5.x4.random_matched} (X4). At equal effort a digit rule is about as good as flagging bullets at random, and only the verb rule does clearly better than chance. Numeric rules find numeric targets and miss deliverables, and no rule comes near the curated ledger or the blind second reading. Precision is a lower bound, because the ledger is not exhaustive.
+
+### E6. The status engine against its invariants (real ledger)
+
+On the {e6.commitments} real commitments, with evidence added in memory only, the engine had {e6.violations} violations of the five invariants: the neutral default (I1), media evidence never moves a status (I2), no dependence on evidence order (I3), more official evidence never lowers a status (I4), and the date only changes the stale flag (I5). The same checks were run against five altered copies of the engine. Killed: {e6.killed} of {e6.mutants}. Which invariant caught each: M1 (media counts) {e6.mutant.M1}; M2 (old evidence dropped) {e6.mutant.M2}; M3 (first evidence only) {e6.mutant.M3}; M4 (neutral default replaced) {e6.mutant.M4}; M5 (rule order swapped) {e6.mutant.M5}. Only {e6.multi_evidence} commitments have two or more eligible evidence items, so order and tie rules are tested mostly through the in memory perturbations and not through the data.
+
 ### The misses, explained
 
 - **P4a and P4b.** We expected the percentile bootstrap to fall short of 95% at moderate rates. It did not: at 0.70 and 0.88 it covered at or slightly above the nominal level. Our expectation came from the general result that percentile intervals under cover in small samples. A likely explanation, which we have not tested, is that with 25 binary items the bootstrap distribution moves in steps of 1/25 and the interval ends include whole steps, which adds coverage. The failure is concentrated where we also predicted it, near the top of the range, where a run with all successes gives an interval of zero width. The prediction was wrong at moderate rates and is kept as a miss.
+- **P5a.** X2 recovered {e5.x2.recall_numeric} of the commitments with a numeric target, below the 0.70 we expected, and none of the others as predicted. We expected a rule that asks for a digit and a percent or money word to find most numeric targets. It misses targets stated as counts (solutions, agents, employees, jobs), a rank, and a target written in words (full adoption). The prediction was too optimistic about the rule and is kept as a miss.
+- **P5d.** The blind second reading ({e5.blind.recall}) is above X3 ({e5.x3.recall}) as expected, but X3 is below the random baseline mean ({e5.random.mean}), so the two part prediction fails. The registered baseline flags bullets at X2's rate, about twice X3's rate, so the comparison favours chance. The exploratory matched rate comparison above shows the same direction at equal effort: X3 asks for a digit, a unit word and a date in one bullet, and the notes often state a target and its date in separate bullets (a likely reason that we have not tested).
 
 ### Limitations of Part 2
 
@@ -84,3 +114,5 @@ With 25 binary items and 2000 runs per rate, nominal 95% intervals covered the t
 - E2 and E3 use synthetic registries from generators written by the author of the method. They show that the findings do not depend on one set of generator assumptions; they say nothing about any real entity or real registry.
 - E3 measures noise by resampling items within an entity, which assumes the items are a sample from a larger population of similar items. If an office's registry is complete, a rank change has no sampling noise, but it still has measurement noise in the maturity ratings, which this experiment does not model.
 - E4 simulates independent binary items with a fixed rate. Real agreement items are not exchangeable, so real coverage may differ.
+- E5 uses the extraction notes as its text, not the source pages, and the notes were written by the same process that made the ledger. The rules are the simplest a developer would write; a better extractor is possible and was not tried. Unit precision is a lower bound.
+- E6 tests that the rules do what they promise on 25 commitments and perturbations that we wrote. It says nothing about whether the rules are the right ones, and nothing about accuracy, because no gold labels exist for status.

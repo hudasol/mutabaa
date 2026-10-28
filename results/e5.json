@@ -1,0 +1,299 @@
+{
+ "extractors": {
+  "x0": {
+   "f1": 0.3594,
+   "flagged": 105,
+   "flagged_share": 1.0,
+   "precision": 0.219,
+   "recall": 1.0,
+   "recall_numeric": 1.0,
+   "recall_other": 1.0,
+   "unit_recall": 1.0
+  },
+  "x1": {
+   "f1": 0.3373,
+   "flagged": 60,
+   "flagged_share": 0.5714,
+   "precision": 0.2333,
+   "recall": 0.64,
+   "recall_numeric": 0.9285714285714286,
+   "recall_other": 0.2727272727272727,
+   "unit_recall": 0.6087
+  },
+  "x2": {
+   "f1": 0.2745,
+   "flagged": 28,
+   "flagged_share": 0.2667,
+   "precision": 0.25,
+   "recall": 0.32,
+   "recall_numeric": 0.5714285714285714,
+   "recall_other": 0.0,
+   "unit_recall": 0.3043
+  },
+  "x3": {
+   "f1": 0.1111,
+   "flagged": 13,
+   "flagged_share": 0.1238,
+   "precision": 0.1538,
+   "recall": 0.08,
+   "recall_numeric": 0.14285714285714285,
+   "recall_other": 0.0,
+   "unit_recall": 0.087
+  },
+  "x4": {
+   "f1": 0.4103,
+   "flagged": 16,
+   "flagged_share": 0.1524,
+   "precision": 0.5,
+   "recall": 0.32,
+   "recall_numeric": 0.35714285714285715,
+   "recall_other": 0.2727272727272727,
+   "unit_recall": 0.3478
+  }
+ },
+ "facts": {
+  "P5a": {
+   "format": "str",
+   "value": "MISS"
+  },
+  "P5b": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P5c": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P5d": {
+   "format": "str",
+   "value": "MISS"
+  },
+  "P5e": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "best_f1": {
+   "format": "f2",
+   "value": 0.4103
+  },
+  "blind.recall": {
+   "format": "pct",
+   "value": 0.88
+  },
+  "located": {
+   "format": "int",
+   "value": 25
+  },
+  "numeric": {
+   "format": "int",
+   "value": 14
+  },
+  "other": {
+   "format": "int",
+   "value": 11
+  },
+  "positives": {
+   "format": "int",
+   "value": 23
+  },
+  "random.mean": {
+   "format": "pct",
+   "value": 0.28400000000000003
+  },
+  "units": {
+   "format": "int",
+   "value": 105
+  },
+  "unlocated": {
+   "format": "int",
+   "value": 0
+  },
+  "x0.f1": {
+   "format": "f2",
+   "value": 0.3594
+  },
+  "x0.flagged_share": {
+   "format": "pct",
+   "value": 1.0
+  },
+  "x0.precision": {
+   "format": "pct",
+   "value": 0.219
+  },
+  "x0.recall": {
+   "format": "pct",
+   "value": 1.0
+  },
+  "x0.recall_numeric": {
+   "format": "pct",
+   "value": 1.0
+  },
+  "x0.recall_other": {
+   "format": "pct",
+   "value": 1.0
+  },
+  "x1.f1": {
+   "format": "f2",
+   "value": 0.3373
+  },
+  "x1.flagged_share": {
+   "format": "pct",
+   "value": 0.5714
+  },
+  "x1.precision": {
+   "format": "pct",
+   "value": 0.2333
+  },
+  "x1.random_matched": {
+   "format": "pct",
+   "value": 0.596
+  },
+  "x1.recall": {
+   "format": "pct",
+   "value": 0.64
+  },
+  "x1.recall_numeric": {
+   "format": "pct",
+   "value": 0.9285714285714286
+  },
+  "x1.recall_other": {
+   "format": "pct",
+   "value": 0.2727272727272727
+  },
+  "x2.f1": {
+   "format": "f2",
+   "value": 0.2745
+  },
+  "x2.flagged_share": {
+   "format": "pct",
+   "value": 0.2667
+  },
+  "x2.precision": {
+   "format": "pct",
+   "value": 0.25
+  },
+  "x2.random_matched": {
+   "format": "pct",
+   "value": 0.28400000000000003
+  },
+  "x2.recall": {
+   "format": "pct",
+   "value": 0.32
+  },
+  "x2.recall_numeric": {
+   "format": "pct",
+   "value": 0.5714285714285714
+  },
+  "x2.recall_other": {
+   "format": "pct",
+   "value": 0.0
+  },
+  "x3.f1": {
+   "format": "f2",
+   "value": 0.1111
+  },
+  "x3.flagged_share": {
+   "format": "pct",
+   "value": 0.1238
+  },
+  "x3.precision": {
+   "format": "pct",
+   "value": 0.1538
+  },
+  "x3.random_matched": {
+   "format": "pct",
+   "value": 0.154
+  },
+  "x3.recall": {
+   "format": "pct",
+   "value": 0.08
+  },
+  "x3.recall_numeric": {
+   "format": "pct",
+   "value": 0.14285714285714285
+  },
+  "x3.recall_other": {
+   "format": "pct",
+   "value": 0.0
+  },
+  "x4.f1": {
+   "format": "f2",
+   "value": 0.4103
+  },
+  "x4.flagged_share": {
+   "format": "pct",
+   "value": 0.1524
+  },
+  "x4.precision": {
+   "format": "pct",
+   "value": 0.5
+  },
+  "x4.random_matched": {
+   "format": "pct",
+   "value": 0.18
+  },
+  "x4.recall": {
+   "format": "pct",
+   "value": 0.32
+  },
+  "x4.recall_numeric": {
+   "format": "pct",
+   "value": 0.35714285714285715
+  },
+  "x4.recall_other": {
+   "format": "pct",
+   "value": 0.2727272727272727
+  }
+ },
+ "predictions": {
+  "P5a": {
+   "result": "MISS",
+   "text": "X2 recovers at least 0.70 of numeric target commitments and at most 0.50 of the others"
+  },
+  "P5b": {
+   "result": "HIT",
+   "text": "no extractor from X1 to X4 has unit F1 above 0.45"
+  },
+  "P5c": {
+   "result": "HIT",
+   "text": "X1 unit precision below 0.50"
+  },
+  "P5d": {
+   "result": "MISS",
+   "text": "blind second reading recall above X3, and X3 above the random baseline mean"
+  },
+  "P5e": {
+   "result": "HIT",
+   "text": "no unlocated commitments"
+  }
+ },
+ "random_matched_exploratory": {
+  "x1": 0.596,
+  "x2": 0.28400000000000003,
+  "x3": 0.154,
+  "x4": 0.18
+ },
+ "random_recalls": [
+  0.28,
+  0.2,
+  0.2,
+  0.32,
+  0.24,
+  0.28,
+  0.32,
+  0.28,
+  0.48,
+  0.32,
+  0.36,
+  0.2,
+  0.32,
+  0.2,
+  0.36,
+  0.24,
+  0.24,
+  0.24,
+  0.32,
+  0.28
+ ],
+ "unlocated_ids": []
+}
