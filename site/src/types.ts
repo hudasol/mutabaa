@@ -75,6 +75,13 @@ export type Payload = {
   evaluation: {
     e3: { entities: number; moved_3_or_more: number; exceed_noise: number; noise_only_mean: number };
     e4: { bootstrap_coverage_at_095: number; wilson_coverage_at_095: number };
+    e5: {
+      units: number; located: number; blind_recall: number;
+      rules: Record<"x1" | "x2" | "x3" | "x4", {
+        flagged_share: number; recall: number; recall_numeric: number; recall_other: number; precision: number;
+      }>;
+    };
+    e6: { violations: number; killed: number; mutants: number };
   }; build: { data_as_of: string; payload_sha256: string; schema: number };
 };
 

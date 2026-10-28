@@ -92,7 +92,8 @@ main { padding: 2rem clamp(1rem, 4vw, 3.5rem) 4rem; display: grid; gap: 2rem; al
 
 table.ledger { width: 100%; border-collapse: collapse; font-size: .92rem; }
 .ledger th { text-align: start; font-weight: 600; font-size: .82rem; color: var(--ink-2); padding: .5rem .6rem; border-bottom: 2px solid var(--ink); }
-.ledger td { padding: .6rem; border-bottom: 1px solid var(--line-2); vertical-align: top; }
+.ledger td, .ledger tbody th[scope=row] { padding: .6rem; border-bottom: 1px solid var(--line-2); vertical-align: top; }
+.ledger tbody th[scope=row] { font-size: inherit; font-weight: 600; color: var(--ink); }
 .ledger tr.row { cursor: pointer; } .ledger tr.row:hover td { background: var(--panel); }
 .ledger tr.open td { background: var(--panel); }
 .ledger .id { font-family: var(--mono); font-size: .8rem; color: var(--muted); white-space: nowrap; }
