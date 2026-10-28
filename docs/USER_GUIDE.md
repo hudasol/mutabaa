@@ -59,6 +59,15 @@ mutabaa score commitments.csv --strict --min-ratio 0.5     # exit code 1 if a ro
 
 See [CLI.md](CLI.md) for every option and exit code.
 
+## How values are read
+
+- A deadline counts as a calendar date only if the date exists. `31/02/2027` and `2027-02-30` are relative. Where a
+  slash date could be day first or month first, either reading that gives a real date is accepted.
+- A number may contain thousands commas, spaces and a trailing `%`, and Arabic digits are read. A decimal comma is
+  not supported: `1,5` is read as 15. Write a decimal point.
+- A quoted cell that is never closed makes the file unreadable, and the message says so.
+- Row numbers in messages count the header as row 1.
+
 ## What the tool will not tell you
 
 - Whether a commitment was met. A status needs public evidence, and the My commitments page assigns none.
