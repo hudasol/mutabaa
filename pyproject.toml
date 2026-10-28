@@ -8,6 +8,9 @@ license = { text = "MIT" }
 authors = [{ name = "Huda Mueen" }]
 dependencies = ["pydantic>=2.6"]
 
+[project.scripts]
+mutabaa = "pipeline.__main__:run"
+
 [project.optional-dependencies]
 dev = ["pytest>=8", "pytest-cov>=6", "ruff>=0.5", "mypy>=1.10"]
 

@@ -1,17 +1,19 @@
-"""CLI: validate | rehash | synth | build | analyse | facts | report | schema | evaluate | golden
-     | diff [REF] | verify-live [--write]"""
+"""Command line: `mutabaa --help` (or `python -m pipeline --help`) lists every command."""
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import sys
 from dataclasses import asdict
+from pathlib import Path
 
-from . import agreement, calibration, evaluate, facts, own, robustness, schema_export
+from . import __version__, agreement, calibration, evaluate, facts, own, robustness, schema_export
 from .diff import diff as payload_diff
 from .diff import load_at, load_current
 from .io import REAL, ROOT, load_real
+from .own_report import as_csv, as_json, as_text, assess
 from .questions import questions
 from .render import refresh, render
 from .schemas import Registry
@@ -314,22 +316,109 @@ def cmd_build() -> int:
     return 0
 
 
-def main(argv: list[str]) -> int:
+def cmd_own(args: argparse.Namespace) -> int:
+    """Score the commitments in the file given on the command line. Exit 1 when a gate is not met."""
+    path = Path(args.file)
+    try:
+        text = path.read_text(encoding="utf-8")
+        res = own.load(path.name, text)
+    except (OSError, UnicodeDecodeError, ValueError) as exc:
+        print(f"mutabaa: {path}: {exc}", file=sys.stderr)
+        return 2
+    rows = assess(res)
+    with_q = args.command == "questions" or args.questions
+    if args.format == "json":
+        out = as_json(res, rows, with_q)
+    elif args.format == "csv":
+        out = as_csv(rows)
+    else:
+        out = as_text(res, rows, args.lang, with_q)
+    sys.stdout.write(out)
+    if res.errors and not rows:
+        return 2
+    if args.strict and res.errors:
+        return 1
+    if args.min_ratio is not None and any(r["ratio"] < args.min_ratio for r in rows):
+        return 1
+    return 0
+
+
+def cmd_template() -> int:
+    sys.stdout.write(own.TEMPLATE)
+    return 0
+
+
+def build_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(
+        prog="mutabaa",
+        description="Mutabaa checks whether public commitments can be verified from public information.",
+        epilog="Exit codes: 0 success, 1 a gate was not met, 2 the input could not be read.",
+    )
+    p.add_argument("--version", action="version", version=f"mutabaa {__version__}")
+    sub = p.add_subparsers(dest="command", metavar="COMMAND")
+    for name, help_ in (
+        ("score", "score the commitments in a CSV or JSON file"),
+        ("questions", "score a file and list the questions that would close each gap"),
+    ):
+        q = sub.add_parser(name, help=help_)
+        q.add_argument("file", help="a CSV or JSON file; run `mutabaa template` for the columns")
+        q.add_argument("--format", choices=("text", "json", "csv"), default="text")
+        q.add_argument("--lang", choices=("en", "ar", "both"), default="en", help="question language")
+        if name == "score":
+            q.add_argument("--questions", action="store_true", help="also list the questions")
+        else:
+            q.set_defaults(questions=True)
+        q.add_argument("--strict", action="store_true", help="exit 1 if any row is rejected")
+        q.add_argument("--min-ratio", type=float, metavar="R", help="exit 1 if any score is below R (0 to 1)")
+    sub.add_parser("template", help="print a CSV template with the expected columns")
+    for name, help_ in (
+        ("validate", "integrity checks on the real data"),
+        ("rehash", "refresh the source note hashes"),
+        ("synth", "regenerate the synthetic registry"),
+        ("build", "regenerate site/src/data/real.json"),
+        ("analyse", "recompute the exploratory analyses"),
+        ("facts", "write results/facts.json"),
+        ("report", "render the generated reports"),
+        ("sync-docs", "rewrite stale fact markers in the documents"),
+        ("schema", "write the JSON Schema files"),
+        ("evaluate", "run the preregistered experiments"),
+        ("golden", "write the golden files for the TypeScript port"),
+    ):
+        sub.add_parser(name, help=help_)
+    d = sub.add_parser("diff", help="payload changes since a git ref")
+    d.add_argument("ref", nargs="?", default="HEAD~1")
+    v = sub.add_parser("verify-live", help="check source pages for the expected figures (needs network)")
+    v.add_argument("--write", action="store_true")
+    v.add_argument("--only", metavar="IDS", help="comma separated source ids")
+    return p
+
+
+def main(argv: list[str] | None = None) -> int:
     cmds = {
         "validate": cmd_validate, "rehash": cmd_rehash, "synth": cmd_synth,
         "build": cmd_build, "analyse": cmd_analyse, "facts": cmd_facts, "report": cmd_report,
-        "sync-docs": cmd_sync_docs,
-        "schema": cmd_schema, "evaluate": cmd_evaluate, "golden": cmd_golden,
+        "sync-docs": cmd_sync_docs, "schema": cmd_schema, "evaluate": cmd_evaluate, "golden": cmd_golden,
+        "template": cmd_template,
     }
-    if len(argv) >= 2 and argv[1] == "diff":
-        return cmd_diff(argv[2:])
-    if len(argv) >= 2 and argv[1] == "verify-live":
-        return cmd_verify_live(argv[2:])
-    if len(argv) != 2 or argv[1] not in cmds:
-        print(__doc__)
+    parser = build_parser()
+    args = parser.parse_args(sys.argv[1:] if argv is None else argv[1:])
+    if args.command is None:
+        parser.print_help()
         return 2
-    return cmds[argv[1]]()
+    if args.command in ("score", "questions"):
+        return cmd_own(args)
+    if args.command == "diff":
+        return cmd_diff([args.ref])
+    if args.command == "verify-live":
+        flags = (["--write"] if args.write else []) + (["--only", args.only] if args.only else [])
+        return cmd_verify_live(flags)
+    return cmds[args.command]()
+
+
+def run() -> None:
+    """Console script entry point."""
+    sys.exit(main())
 
 
 if __name__ == "__main__":
-    sys.exit(main(sys.argv))
+    sys.exit(main())

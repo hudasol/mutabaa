@@ -6,7 +6,7 @@ The score says nothing about whether the commitment is being met.
 
 from __future__ import annotations
 
-from .schemas import Band, Commitment, VerifiabilityResult
+from .schemas import Band, Scorable, VerifiabilityResult
 
 CHECKS = (
     "numeric_target",
@@ -29,7 +29,7 @@ LABELS = {
 _NO_NUMBER_NEEDED = ("deliverable", "assessment")
 
 
-def score(c: Commitment) -> VerifiabilityResult:
+def score(c: Scorable) -> VerifiabilityResult:
     numeric_applies = c.kind not in _NO_NUMBER_NEEDED
     checks: dict[str, bool | None] = {
         "numeric_target": (c.target_number is not None) if numeric_applies else None,
