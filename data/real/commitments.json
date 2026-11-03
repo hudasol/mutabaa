@@ -812,5 +812,2375 @@
       "training standard"
     ],
     "notes": "Added after a blind second extraction found it and the first pass had missed it."
+  },
+  {
+    "id": "C26",
+    "title": "90% citizen satisfaction with digital government services",
+    "title_ar": "رضا المتعاملين بنسبة 90% عن الخدمات الحكومية الرقمية",
+    "statement": "The Digital Government Strategy sets a 2025 KPI of 90% of citizens very satisfied with digital government services.",
+    "statement_ar": "تحدد استراتيجية الحكومة الرقمية مؤشرا لعام 2025 يتمثل في أن تبلغ نسبة المتعاملين المواطنين الراضين جدا عن الخدمات الحكومية الرقمية 90%.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "metric": "share of citizens very satisfied with digital government services",
+    "target_value": "90%",
+    "target_number": 90.0,
+    "target_comparator": "=",
+    "deadline": "2025-12-31",
+    "deadline_text": "by 2025",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "very satisfied"
+    ],
+    "tags": [
+      "digital-government",
+      "satisfaction"
+    ],
+    "source_ids": [
+      "S15"
+    ],
+    "anchors": [
+      {
+        "source_id": "S15",
+        "text": "Citizen satisfaction with digital government services: 90% very satisfied"
+      }
+    ],
+    "notes": "No baseline or survey named. Business satisfaction listed without a target."
+  },
+  {
+    "id": "C27",
+    "title": "90% of services on the unified digital platform by 2025",
+    "title_ar": "90% من الخدمات على المنصة الرقمية الموحدة بحلول 2025",
+    "statement": "The strategy KPI is 90% of services listed on the unified digital platform by 2025.",
+    "statement_ar": "مؤشر الاستراتيجية أن تدرج 90% من الخدمات على المنصة الرقمية الموحدة بحلول عام 2025.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "metric": "share of services listed on unified digital platform",
+    "unit": "services",
+    "target_value": "90%",
+    "target_number": 90.0,
+    "target_comparator": "=",
+    "deadline": "2025-12-31",
+    "deadline_text": "by 2025",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "unified digital platform"
+    ],
+    "tags": [
+      "digital-government",
+      "platform"
+    ],
+    "source_ids": [
+      "S15"
+    ],
+    "anchors": [
+      {
+        "source_id": "S15",
+        "text": "Share of services listed on the unified digital platform: 90%"
+      }
+    ]
+  },
+  {
+    "id": "C28",
+    "title": "100% of services digitised end to end by 2025",
+    "title_ar": "رقمنة 100% من الخدمات بالكامل بحلول 2025",
+    "statement": "The strategy KPI is that 100% of services are digitised end to end by 2025.",
+    "statement_ar": "مؤشر الاستراتيجية أن تتم رقمنة 100% من الخدمات من البداية إلى النهاية بحلول عام 2025.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "metric": "share of services digitised end to end",
+    "unit": "services",
+    "target_value": "100%",
+    "target_number": 100.0,
+    "target_comparator": "=",
+    "deadline": "2025-12-31",
+    "deadline_text": "by 2025",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "digitised end to end"
+    ],
+    "tags": [
+      "digital-government",
+      "end-to-end"
+    ],
+    "source_ids": [
+      "S15"
+    ],
+    "anchors": [
+      {
+        "source_id": "S15",
+        "text": "Share of services digitised end to end: 100%"
+      }
+    ]
+  },
+  {
+    "id": "C29",
+    "title": "Digital option for all personal verification and signature services",
+    "title_ar": "خيار رقمي لجميع الخدمات التي تتطلب التحقق الشخصي أو التوقيع",
+    "statement": "Services needing personal verification, and services needing a manual signature, are each to have a digital option in 100% of cases by 2025.",
+    "statement_ar": "تستهدف الاستراتيجية توفير خيار رقمي بنسبة 100% للخدمات التي تتطلب التحقق الشخصي وللخدمات التي تتطلب توقيعا يدويا بحلول عام 2025.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "metric": "share of verification and signature services with a digital option",
+    "unit": "services",
+    "target_value": "100%",
+    "target_number": 100.0,
+    "target_comparator": "=",
+    "deadline": "2025-12-31",
+    "deadline_text": "by 2025",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "digital option"
+    ],
+    "tags": [
+      "digital-identity",
+      "paperless"
+    ],
+    "source_ids": [
+      "S15"
+    ],
+    "anchors": [
+      {
+        "source_id": "S15",
+        "text": "each to have a digital option in 100% of cases"
+      }
+    ]
+  },
+  {
+    "id": "C30",
+    "title": "85% of transactions completed digitally end to end",
+    "title_ar": "إنجاز 85% من المعاملات رقميا بالكامل",
+    "statement": "The strategy sets a 2025 KPI of 85% of transactions completed digitally end to end.",
+    "statement_ar": "تضع الاستراتيجية مؤشرا لعام 2025 يتمثل في إنجاز 85% من المعاملات رقميا من البداية إلى النهاية.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "metric": "share of transactions completed digitally end to end",
+    "unit": "operations",
+    "target_value": "85%",
+    "target_number": 85.0,
+    "target_comparator": "=",
+    "deadline": "2025-12-31",
+    "deadline_text": "by 2025",
+    "deadline_precision": "year",
+    "tags": [
+      "digital-government",
+      "transactions"
+    ],
+    "source_ids": [
+      "S15"
+    ],
+    "anchors": [
+      {
+        "source_id": "S15",
+        "text": "Transactions completed digitally end to end: 85%"
+      }
+    ]
+  },
+  {
+    "id": "C31",
+    "title": "100% of federal workforce trained on digital government standards",
+    "title_ar": "تدريب 100% من القوى العاملة الاتحادية على معايير الحكومة الرقمية",
+    "statement": "The strategy aims for 100% of the federal workforce trained on digital government capabilities and standards, and 100% with basic digital knowledge, by 2025.",
+    "statement_ar": "تستهدف الاستراتيجية تدريب 100% من القوى العاملة الاتحادية على قدرات ومعايير الحكومة الرقمية وامتلاكها معرفة رقمية أساسية بحلول عام 2025.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "metric": "share of federal workforce trained",
+    "unit": "employees",
+    "target_value": "100%",
+    "target_number": 100.0,
+    "target_comparator": "=",
+    "deadline": "2025-12-31",
+    "deadline_text": "by 2025",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "basic digital knowledge"
+    ],
+    "tags": [
+      "skills",
+      "workforce"
+    ],
+    "source_ids": [
+      "S15"
+    ],
+    "anchors": [
+      {
+        "source_id": "S15",
+        "text": "Federal workforce trained on digital government capabilities and standards: 100%"
+      }
+    ]
+  },
+  {
+    "id": "C32",
+    "title": "10% of federal workforce trained in modern technologies",
+    "title_ar": "تدريب 10% من القوى العاملة الاتحادية على التقنيات الحديثة",
+    "statement": "The strategy sets a 2025 target of 10% of the federal workforce trained in modern technologies such as blockchain and AI.",
+    "statement_ar": "تحدد الاستراتيجية هدفا لعام 2025 بتدريب 10% من القوى العاملة الاتحادية على التقنيات الحديثة مثل البلوك تشين والذكاء الاصطناعي.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "metric": "share of federal workforce trained in modern technologies",
+    "unit": "employees",
+    "target_value": "10%",
+    "target_number": 10.0,
+    "target_comparator": "=",
+    "deadline": "2025-12-31",
+    "deadline_text": "by 2025",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "modern technologies"
+    ],
+    "tags": [
+      "ai",
+      "skills"
+    ],
+    "source_ids": [
+      "S15"
+    ],
+    "anchors": [
+      {
+        "source_id": "S15",
+        "text": "Federal workforce trained in modern technologies such as blockchain and AI: 10%"
+      }
+    ]
+  },
+  {
+    "id": "C33",
+    "title": "All federal and local entities at very high digital maturity",
+    "title_ar": "بلوغ جميع الجهات الاتحادية والمحلية مستوى نضج رقمي مرتفع جدا",
+    "statement": "The maturity model targets 100% of federal and local entities at very high maturity by 2025, on a five level scale across eight dimensions.",
+    "statement_ar": "يستهدف نموذج النضج أن تبلغ 100% من الجهات الاتحادية والمحلية مستوى النضج المرتفع جدا بحلول عام 2025 وفق خمسة مستويات وثماني أبعاد.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "metric": "share of entities at maturity level 5",
+    "unit": "entities",
+    "target_value": "100%",
+    "target_number": 100.0,
+    "target_comparator": "=",
+    "deadline": "2025-12-31",
+    "deadline_text": "by 2025",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "very high maturity"
+    ],
+    "tags": [
+      "maturity",
+      "digital-government"
+    ],
+    "source_ids": [
+      "S15"
+    ],
+    "anchors": [
+      {
+        "source_id": "S15",
+        "text": "100% of federal and local entities at very high maturity by 2025"
+      }
+    ],
+    "notes": "Assessment body for maturity not named."
+  },
+  {
+    "id": "C34",
+    "title": "Cancel at least 2,000 government measures",
+    "title_ar": "إلغاء ما لا يقل عن 2000 إجراء حكومي",
+    "statement": "The Zero Government Bureaucracy Programme aims at cancelling a minimum of 2,000 government measures, with unnecessary bureaucracy removed by end of 2024.",
+    "statement_ar": "يهدف برنامج صفر بيروقراطية حكومية إلى إلغاء ما لا يقل عن 2000 إجراء حكومي وإزالة البيروقراطية غير الضرورية بنهاية عام 2024.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "owner": "Ministries and government entities",
+    "metric": "government measures cancelled",
+    "unit": "processes",
+    "target_value": "at least 2,000",
+    "target_number": 2000.0,
+    "target_comparator": ">=",
+    "deadline": "2024-12-31",
+    "deadline_text": "by end of 2024",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "government measures"
+    ],
+    "tags": [
+      "zero-bureaucracy",
+      "procedures"
+    ],
+    "source_ids": [
+      "S16",
+      "S25"
+    ],
+    "anchors": [
+      {
+        "source_id": "S16",
+        "text": "The programme aims at cancelling a minimum of 2,000 government measures."
+      },
+      {
+        "source_id": "S25",
+        "text": "eliminate at least 2,000 government measures"
+      }
+    ],
+    "notes": "No baseline count of measures stated."
+  },
+  {
+    "id": "C35",
+    "title": "Halve the time required for government procedures",
+    "title_ar": "خفض زمن الإجراءات الحكومية إلى النصف",
+    "statement": "The programme aims at halving procedure time (at least 50%), with removal of unnecessary requirements by end of 2024.",
+    "statement_ar": "يستهدف البرنامج خفض زمن الإجراءات الحكومية بنسبة 50% على الأقل مع إزالة المتطلبات غير الضرورية بنهاية عام 2024.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "owner": "Ministries and government entities",
+    "metric": "procedure time reduction",
+    "unit": "percent-time",
+    "target_value": "50%",
+    "target_number": 50.0,
+    "target_comparator": ">=",
+    "deadline": "2024-12-31",
+    "deadline_text": "by end of 2024",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "procedures"
+    ],
+    "tags": [
+      "zero-bureaucracy",
+      "time"
+    ],
+    "source_ids": [
+      "S16",
+      "S25"
+    ],
+    "anchors": [
+      {
+        "source_id": "S16",
+        "text": "It also aims at halving the time required for procedures"
+      },
+      {
+        "source_id": "S25",
+        "text": "cut procedural times by at least 50%"
+      }
+    ],
+    "notes": "No baseline time stated. F02 attaches the end of 2024 date to removing bureaucracy generally."
+  },
+  {
+    "id": "C36",
+    "title": "Double the digital economy share of GDP to 19.4%",
+    "title_ar": "مضاعفة مساهمة الاقتصاد الرقمي في الناتج المحلي إلى 19.4%",
+    "statement": "The Digital Economy Strategy aims to raise the digital economy share of GDP from 9.7% to 19.4%, doubling its contribution within ten years (2031 named in the Cabinet statement).",
+    "statement_ar": "تهدف استراتيجية الاقتصاد الرقمي إلى رفع مساهمة الاقتصاد الرقمي في الناتج المحلي من 9.7% إلى 19.4% أي مضاعفتها خلال عشر سنوات (2031 وفق بيان مجلس الوزراء).",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "owner": "UAE Council for Digital Economy",
+    "metric": "digital economy share of GDP",
+    "baseline": "9.7% of GDP (2022)",
+    "target_value": "19.4% of GDP",
+    "target_number": 19.4,
+    "target_comparator": "=",
+    "deadline": "2031-12-31",
+    "deadline_text": "within ten years; double the contribution in the year 2031",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "digital economy"
+    ],
+    "announced": "2022-04-11",
+    "tags": [
+      "digital-economy",
+      "gdp"
+    ],
+    "source_ids": [
+      "S17",
+      "S20"
+    ],
+    "anchors": [
+      {
+        "source_id": "S17",
+        "text": "digital economy share of GDP to rise from 9.7% to 19.4% within ten years"
+      },
+      {
+        "source_id": "S20",
+        "text": "raise the digital economy share of GDP from 9.7% in 2022 to 19.4%"
+      }
+    ],
+    "notes": "The quoted statement in F03 gives 20 percent while the text gives 19.4%. F06 gives no end year. No measuring report named beyond a unified mechanism."
+  },
+  {
+    "id": "C37",
+    "title": "Establish the UAE Council for Digital Economy",
+    "title_ar": "إنشاء مجلس الإمارات للاقتصاد الرقمي",
+    "statement": "The Cabinet approved establishing the UAE Council for Digital Economy, chaired by the Minister of State for AI, Digital Economy and Teleworking Applications, to support the strategy across all sectors.",
+    "statement_ar": "اعتمد مجلس الوزراء إنشاء مجلس الإمارات للاقتصاد الرقمي برئاسة وزير الدولة للذكاء الاصطناعي والاقتصاد الرقمي وتطبيقات العمل عن بعد لدعم الاستراتيجية في جميع القطاعات.",
+    "jurisdiction": "federal",
+    "kind": "milestone",
+    "owner": "Omar bin Sultan Al Olama (chair)",
+    "deadline_text": "Not stated",
+    "announced": "2022-04-11",
+    "tags": [
+      "digital-economy",
+      "governance"
+    ],
+    "source_ids": [
+      "S17"
+    ],
+    "anchors": [
+      {
+        "source_id": "S17",
+        "text": "chaired by Omar bin Sultan Al Olama"
+      }
+    ]
+  },
+  {
+    "id": "C38",
+    "title": "Achieve 52 National Key Performance Indicators by 2021",
+    "title_ar": "تحقيق 52 مؤشرا وطنيا للأداء الرئيسي بحلول 2021",
+    "statement": "The National Agenda has 52 national key performance indicators across nine sectors, set to be achieved by 2021 in support of UAE Vision 2021.",
+    "statement_ar": "تضم الأجندة الوطنية 52 مؤشرا وطنيا للأداء الرئيسي في تسعة قطاعات يستهدف تحقيقها بحلول عام 2021 دعما لرؤية الإمارات 2021.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "owner": "UAE Government (monitored by government leadership)",
+    "metric": "national key performance indicators",
+    "unit": "indicators",
+    "target_value": "52 indicators",
+    "target_number": 52.0,
+    "target_comparator": "=",
+    "deadline": "2021-12-31",
+    "deadline_text": "by 2021",
+    "deadline_precision": "year",
+    "measurement_source": "National Key Performance Indicators, periodically monitored by government leadership",
+    "tags": [
+      "national-agenda",
+      "vision-2021"
+    ],
+    "source_ids": [
+      "S18"
+    ],
+    "anchors": [
+      {
+        "source_id": "S18",
+        "text": "It has 52 national key performance indicators across nine sectors"
+      }
+    ],
+    "notes": "Individual indicator values and baselines not on the page; no digital specific figures."
+  },
+  {
+    "id": "C39",
+    "title": "90% of public services on one digital platform by 2022",
+    "title_ar": "90% من الخدمات العامة عبر منصة رقمية واحدة بحلول 2022",
+    "statement": "The UAE Strategy for Government Services aims for 90 per cent of public services delivered through one digital platform, established by 2022, with customer satisfaction expected above 90 per cent.",
+    "statement_ar": "تستهدف استراتيجية الإمارات للخدمات الحكومية تقديم 90% من الخدمات العامة عبر منصة رقمية واحدة تنشأ بحلول 2022 مع توقع رضا يتجاوز 90%.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "owner": "UAE Government",
+    "metric": "share of public services on one digital platform",
+    "unit": "services",
+    "target_value": "90 per cent",
+    "target_number": 90.0,
+    "target_comparator": "=",
+    "deadline": "2022-12-31",
+    "deadline_text": "established by 2022",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "public services"
+    ],
+    "announced": "2021-03-01",
+    "tags": [
+      "government-services",
+      "platform"
+    ],
+    "source_ids": [
+      "S19",
+      "S21"
+    ],
+    "anchors": [
+      {
+        "source_id": "S19",
+        "text": "delivered through one digital platform, established by 2022"
+      },
+      {
+        "source_id": "S21",
+        "text": "90 percent of services on one platform by 2022"
+      }
+    ],
+    "notes": "No owner named in F05; no baseline."
+  },
+  {
+    "id": "C40",
+    "title": "Customer satisfaction above 90 per cent with government services",
+    "title_ar": "رضا المتعاملين بأكثر من 90% عن الخدمات الحكومية",
+    "statement": "The platform is expected to bring customer satisfaction above 90 per cent. No date is attached to this expectation.",
+    "statement_ar": "يتوقع أن تحقق المنصة رضا للمتعاملين يتجاوز 90%. ولا يرتبط هذا التوقع بتاريخ محدد.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "owner": "UAE Government",
+    "metric": "customer satisfaction",
+    "target_value": "more than 90 per cent",
+    "target_number": 90.0,
+    "target_comparator": ">=",
+    "deadline_text": "Not stated",
+    "undefined_terms": [
+      "customer satisfaction"
+    ],
+    "announced": "2021-03-01",
+    "tags": [
+      "satisfaction",
+      "government-services"
+    ],
+    "source_ids": [
+      "S19"
+    ],
+    "anchors": [
+      {
+        "source_id": "S19",
+        "text": "bring customer satisfaction above 90 per cent"
+      }
+    ],
+    "notes": "Comparator is approximate: source says more than 90."
+  },
+  {
+    "id": "C41",
+    "title": "100% of government services accessible anywhere, any time by 2023",
+    "title_ar": "إتاحة 100% من الخدمات الحكومية في أي مكان وزمان بحلول 2023",
+    "statement": "By 2023, 100 per cent of government services are to be accessible from anywhere and round the clock.",
+    "statement_ar": "بحلول عام 2023 يفترض أن تتاح 100% من الخدمات الحكومية من أي مكان وعلى مدار الساعة.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "owner": "UAE Government",
+    "metric": "share of services accessible anywhere, any time",
+    "unit": "services",
+    "target_value": "100 per cent",
+    "target_number": 100.0,
+    "target_comparator": "=",
+    "deadline": "2023-12-31",
+    "deadline_text": "By 2023",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "accessible"
+    ],
+    "announced": "2021-03-01",
+    "tags": [
+      "government-services",
+      "access"
+    ],
+    "source_ids": [
+      "S19"
+    ],
+    "anchors": [
+      {
+        "source_id": "S19",
+        "text": "By 2023, 100 per cent of government services accessible from anywhere"
+      }
+    ]
+  },
+  {
+    "id": "C42",
+    "title": "More than 28 government services initiatives by 2023",
+    "title_ar": "أكثر من 28 مبادرة للخدمات الحكومية بحلول 2023",
+    "statement": "The Strategy for Government Services includes more than 28 initiatives by 2023.",
+    "statement_ar": "تتضمن استراتيجية الخدمات الحكومية أكثر من 28 مبادرة بحلول عام 2023.",
+    "jurisdiction": "federal",
+    "kind": "deliverable",
+    "owner": "UAE Government",
+    "metric": "number of initiatives",
+    "unit": "initiatives",
+    "target_value": "more than 28",
+    "target_number": 28.0,
+    "target_comparator": ">=",
+    "deadline": "2023-12-31",
+    "deadline_text": "by 2023",
+    "deadline_precision": "year",
+    "announced": "2021-03-01",
+    "tags": [
+      "government-services",
+      "initiatives"
+    ],
+    "source_ids": [
+      "S19",
+      "S21"
+    ],
+    "anchors": [
+      {
+        "source_id": "S19",
+        "text": "More than 28 initiatives by 2023."
+      }
+    ]
+  },
+  {
+    "id": "C43",
+    "title": "Announce five best and worst government entities on 4 September 2021",
+    "title_ar": "إعلان أفضل وأسوأ خمس جهات حكومية في 4 سبتمبر 2021",
+    "statement": "A public ranking of the five best and worst government entities was to be announced on 4th September, 2021, based on listed customer experience criteria.",
+    "statement_ar": "كان من المقرر إعلان تصنيف علني لأفضل وأسوأ خمس جهات حكومية في 4 سبتمبر 2021 استنادا إلى معايير تجربة المتعامل المعلنة.",
+    "jurisdiction": "federal",
+    "kind": "milestone",
+    "owner": "Sheikh Mohammed bin Rashid Al Maktoum (announcement)",
+    "deadline": "2021-09-04",
+    "deadline_text": "4th September, 2021",
+    "deadline_precision": "day",
+    "announced": "2021-06-02",
+    "tags": [
+      "ranking",
+      "evaluation"
+    ],
+    "source_ids": [
+      "S21"
+    ],
+    "anchors": [
+      {
+        "source_id": "S21",
+        "text": "A public ranking of the five best and worst government entities"
+      }
+    ],
+    "notes": "Scoring method not given; wording 'five best and worst' ambiguous."
+  },
+  {
+    "id": "C44",
+    "title": "Train 80,000 federal employees in Agentic AI",
+    "title_ar": "تدريب 80 ألف موظف اتحادي على الذكاء الاصطناعي الوكيل",
+    "statement": "The Cabinet statement says 80,000 federal employees are to be trained in Agentic AI across 5 occupational categories. No deadline is given.",
+    "statement_ar": "يذكر بيان مجلس الوزراء تدريب 80 ألف موظف اتحادي على الذكاء الاصطناعي الوكيل في 5 فئات مهنية دون تحديد موعد.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "owner": "Federal ministries and entities",
+    "metric": "federal employees trained in Agentic AI",
+    "unit": "employees",
+    "target_value": "80,000",
+    "target_number": 80000.0,
+    "target_comparator": "=",
+    "deadline_text": "Not stated",
+    "undefined_terms": [
+      "trained"
+    ],
+    "announced": "2026-05-18",
+    "tags": [
+      "agentic-ai",
+      "skills"
+    ],
+    "source_ids": [
+      "S22"
+    ],
+    "anchors": [
+      {
+        "source_id": "S22",
+        "text": "80,000 federal employees are to be trained in Agentic AI across 5 occupational categories"
+      }
+    ],
+    "notes": "Possible overlap with the April 2026 statement already in the ledger; check at merge."
+  },
+  {
+    "id": "C45",
+    "title": "Train 22,000 teachers and educators to use AI",
+    "title_ar": "تدريب 22 ألف معلم وتربوي على استخدام الذكاء الاصطناعي",
+    "statement": "The Cabinet statement gives a target to train 22,000 teachers and educators to use AI in teaching and assessment. Owner and deadline are not named.",
+    "statement_ar": "يذكر بيان مجلس الوزراء هدف تدريب 22 ألف معلم وتربوي على استخدام الذكاء الاصطناعي في التدريس والتقييم دون تحديد جهة أو موعد.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "metric": "teachers and educators trained",
+    "unit": "employees",
+    "target_value": "22,000",
+    "target_number": 22000.0,
+    "target_comparator": "=",
+    "deadline_text": "Not stated",
+    "announced": "2026-09-02",
+    "tags": [
+      "ai",
+      "education",
+      "skills"
+    ],
+    "source_ids": [
+      "S23"
+    ],
+    "anchors": [
+      {
+        "source_id": "S23",
+        "text": "Target to train 22,000 teachers and educators to use AI"
+      }
+    ]
+  },
+  {
+    "id": "C46",
+    "title": "Federal Government affairs budget AED 23.9 billion for 2023 to 2026",
+    "title_ar": "ميزانية قطاع الشؤون الحكومية 23.9 مليار درهم للفترة 2023 إلى 2026",
+    "statement": "The Federal General Budget 2023 to 2026 allocates AED 23.9 billion to the government affairs sector, covering smart government infrastructure, digital services and cybersecurity.",
+    "statement_ar": "تخصص الميزانية العامة الاتحادية للفترة 2023 إلى 2026 مبلغ 23.9 مليار درهم لقطاع الشؤون الحكومية الذي يشمل البنية التحتية للحكومة الذكية والخدمات الرقمية والأمن السيبراني.",
+    "jurisdiction": "federal",
+    "kind": "input",
+    "owner": "UAE Government",
+    "metric": "budget allocation",
+    "unit": "aed",
+    "target_value": "AED 23.9 billion",
+    "target_number": 23900000000.0,
+    "target_comparator": "=",
+    "deadline": "2026-12-31",
+    "deadline_text": "2023-2026",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "smart government"
+    ],
+    "tags": [
+      "budget",
+      "smart-government"
+    ],
+    "source_ids": [
+      "S24"
+    ],
+    "anchors": [
+      {
+        "source_id": "S24",
+        "text": "Government affairs sector allocation for 2023 to 2026: AED 23.9 billion"
+      }
+    ],
+    "notes": "Page states this is 38 per cent of the total, which does not match AED 252.3 billion total."
+  },
+  {
+    "id": "C47",
+    "title": "Autonomous modes to reach 25% of Abu Dhabi trips",
+    "title_ar": "25% من الرحلات في أبوظبي بمركبات ذاتية القيادة",
+    "statement": "Under the Abu Dhabi Smart and Autonomous Mobility Strategy, autonomous vehicles are to account for 25% of total trips in the emirate by 2040.",
+    "statement_ar": "وفق استراتيجية أبوظبي للتنقل الذكي والذاتي ستشكل المركبات ذاتية القيادة 25% من إجمالي الرحلات في الإمارة بحلول عام 2040.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "target",
+    "owner": "Integrated Transport Centre (Abu Dhabi Mobility)",
+    "metric": "Autonomous (or smart) share of total trips",
+    "unit": "trips",
+    "target_value": "25%",
+    "target_number": 25.0,
+    "target_comparator": "=",
+    "deadline": "2040-12-31",
+    "deadline_text": "by 2040",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "autonomous",
+      "smart transport",
+      "smart and autonomous mobility modes"
+    ],
+    "announced": "2025-03-25",
+    "tags": [
+      "mobility",
+      "autonomous",
+      "2040"
+    ],
+    "source_ids": [
+      "S26",
+      "S27",
+      "S28"
+    ],
+    "anchors": [
+      {
+        "source_id": "S26",
+        "text": "raise the autonomous share of total trips to 25%"
+      },
+      {
+        "source_id": "S28",
+        "text": "25% of total trips by 2040"
+      }
+    ],
+    "notes": "A02 words it as smart transport; A01 as autonomous vehicles. No baseline."
+  },
+  {
+    "id": "C48",
+    "title": "Cut transport carbon emissions by 15% by 2040",
+    "title_ar": "خفض الانبعاثات الكربونية 15% بحلول 2040",
+    "statement": "The Integrated Transport Centre states a target to cut carbon emissions by 15% by 2040 through autonomous vehicle adoption.",
+    "statement_ar": "يحدد مركز التكامل للنقل هدفا بخفض الانبعاثات الكربونية بنسبة 15% بحلول عام 2040 عبر اعتماد المركبات ذاتية القيادة.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "target",
+    "owner": "Integrated Transport Centre (Abu Dhabi Mobility)",
+    "metric": "Carbon emissions reduction",
+    "target_value": "15%",
+    "target_number": 15.0,
+    "target_comparator": "=",
+    "deadline": "2040-12-31",
+    "deadline_text": "by 2040",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "carbon emissions scope"
+    ],
+    "announced": "2025-03-25",
+    "tags": [
+      "mobility",
+      "emissions",
+      "2040"
+    ],
+    "source_ids": [
+      "S26"
+    ],
+    "anchors": [
+      {
+        "source_id": "S26",
+        "text": "cut carbon emissions by 15%"
+      }
+    ],
+    "notes": "No baseline year or scope stated."
+  },
+  {
+    "id": "C49",
+    "title": "Cut road accidents by 18% by 2040",
+    "title_ar": "خفض حوادث الطرق 18% بحلول 2040",
+    "statement": "The Integrated Transport Centre states a target to reduce road accidents by 18% by 2040.",
+    "statement_ar": "يحدد مركز التكامل للنقل هدفا بتقليل حوادث الطرق بنسبة 18% بحلول عام 2040.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "target",
+    "owner": "Integrated Transport Centre (Abu Dhabi Mobility)",
+    "metric": "Road accidents reduction",
+    "target_value": "18%",
+    "target_number": 18.0,
+    "target_comparator": "=",
+    "deadline": "2040-12-31",
+    "deadline_text": "by 2040",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "road accidents scope"
+    ],
+    "announced": "2025-03-25",
+    "tags": [
+      "mobility",
+      "safety",
+      "2040"
+    ],
+    "source_ids": [
+      "S26"
+    ],
+    "anchors": [
+      {
+        "source_id": "S26",
+        "text": "reduce road accidents by 18%"
+      }
+    ],
+    "notes": "No baseline stated."
+  },
+  {
+    "id": "C50",
+    "title": "Advance AV legislation, insurance and cyber security",
+    "title_ar": "تطوير تشريعات وتأمين وأمن سيبراني للمركبات الذاتية",
+    "statement": "Plans include legislation for licensing and regulating autonomous vehicles, specialised insurance models, and secure communication networks against cyber threats.",
+    "statement_ar": "تشمل الخطط تشريعات لترخيص المركبات ذاتية القيادة وتنظيمها ونماذج تأمين متخصصة وشبكات اتصال آمنة ضد التهديدات السيبرانية.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "deliverable",
+    "owner": "Integrated Transport Centre (Abu Dhabi Mobility)",
+    "deadline_text": "no date stated",
+    "undefined_terms": [
+      "specialised insurance models"
+    ],
+    "announced": "2025-03-25",
+    "tags": [
+      "mobility",
+      "regulation",
+      "cyber"
+    ],
+    "source_ids": [
+      "S26"
+    ],
+    "anchors": [
+      {
+        "source_id": "S26",
+        "text": "develop specialised insurance models"
+      }
+    ]
+  },
+  {
+    "id": "C51",
+    "title": "Autonomous taxis extended to Al Reem and Al Maryah",
+    "title_ar": "توسيع سيارات الأجرة الذاتية إلى الريم والماريه",
+    "statement": "Autonomous taxi service is expanded to Al Reem and Al Maryah Islands, with further areas of Abu Dhabi Island and commercial operation to follow without dates.",
+    "statement_ar": "توسيع خدمة سيارات الأجرة ذاتية القيادة إلى جزيرتي الريم والماريه مع مناطق أخرى وتشغيل تجاري لاحقا دون تحديد مواعيد.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "milestone",
+    "owner": "Integrated Transport Centre (Abu Dhabi Mobility) with WeRide, Uber, Tawasul Transport",
+    "metric": "Areas served",
+    "deadline_text": "no date stated",
+    "undefined_terms": [
+      "commercial operation"
+    ],
+    "announced": "2025-07-29",
+    "tags": [
+      "mobility",
+      "autonomous taxi"
+    ],
+    "source_ids": [
+      "S27"
+    ],
+    "anchors": [
+      {
+        "source_id": "S27",
+        "text": "Al Reem and Al Maryah Islands"
+      }
+    ],
+    "notes": "Wording in A02 is the expansion announcement; later areas have no dates."
+  },
+  {
+    "id": "C52",
+    "title": "First autonomous public transport bus trial in MENA",
+    "title_ar": "أول تجربة حافلة نقل عام ذاتية في المنطقة",
+    "statement": "Abu Dhabi Mobility and Lumo, supported by SASC, are to implement the first autonomous public transport bus trial in the MENA region.",
+    "statement_ar": "سينفذ مركز التنقل في أبوظبي وشركة لومو بدعم من المجلس أول تجربة لحافلة نقل عام ذاتية في منطقة الشرق الأوسط وشمال أفريقيا.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "deliverable",
+    "owner": "Integrated Transport Centre (Abu Dhabi Mobility) and Lumo",
+    "metric": "Bus trial",
+    "deadline_text": "no date stated",
+    "undefined_terms": [
+      "first"
+    ],
+    "announced": "2026-06-19",
+    "tags": [
+      "mobility",
+      "bus",
+      "trial"
+    ],
+    "source_ids": [
+      "S28"
+    ],
+    "anchors": [
+      {
+        "source_id": "S28",
+        "text": "first autonomous public transport bus trial"
+      }
+    ]
+  },
+  {
+    "id": "C53",
+    "title": "SAVI cluster projected GDP contribution",
+    "title_ar": "مساهمة متوقعة لقطاع المركبات الذكية في الناتج",
+    "statement": "The SAVI cluster is described with a projected contribution to GDP of AED 90 billion to AED 120 billion.",
+    "statement_ar": "يوصف قطاع المركبات الذكية والذاتية بمساهمة متوقعة في الناتج المحلي تتراوح بين 90 و120 مليار درهم.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "projection",
+    "owner": "Smart and Autonomous Systems Council",
+    "metric": "GDP contribution",
+    "unit": "aed",
+    "target_value": "AED 90 billion to AED 120 billion",
+    "deadline_text": "no date stated",
+    "undefined_terms": [
+      "projected contribution"
+    ],
+    "announced": "2024-07-25",
+    "tags": [
+      "savi",
+      "gdp"
+    ],
+    "source_ids": [
+      "S30"
+    ],
+    "anchors": [
+      {
+        "source_id": "S30",
+        "text": "AED 90 billion"
+      }
+    ],
+    "notes": "Range with no year; number left null because it is a range."
+  },
+  {
+    "id": "C54",
+    "title": "Migrate all Abu Dhabi government services to TAMM",
+    "title_ar": "نقل جميع الخدمات الحكومية في أبوظبي إلى تمم",
+    "statement": "The goal is to migrate all Abu Dhabi government services to the TAMM ecosystem as a one-stop shop through four channels, with 33 entities cooperating.",
+    "statement_ar": "الهدف نقل جميع الخدمات الحكومية في أبوظبي إلى منظومة تمم كمنصة موحدة عبر أربع قنوات بمشاركة 33 جهة.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "target",
+    "owner": "Department of Government Enablement",
+    "metric": "Government services on TAMM",
+    "unit": "services",
+    "target_value": "all services",
+    "deadline_text": "no date stated",
+    "undefined_terms": [
+      "all services",
+      "one-stop shop"
+    ],
+    "announced": "2022-08-16",
+    "tags": [
+      "tamm",
+      "digital government"
+    ],
+    "source_ids": [
+      "S29"
+    ],
+    "anchors": [
+      {
+        "source_id": "S29",
+        "text": "33 government entities"
+      }
+    ],
+    "notes": "No count of services or baseline."
+  },
+  {
+    "id": "C55",
+    "title": "Over 800 services on TAMM 3.0 platform",
+    "title_ar": "أكثر من 800 خدمة على منصة تمم 3.0",
+    "statement": "TAMM 3.0 is described as bringing more than 800 government services onto one platform with a 24/7 AI assistant offering Arabic and English voice.",
+    "statement_ar": "توصف منصة تمم 3.0 بأنها تضم أكثر من 800 خدمة حكومية على منصة واحدة مع مساعد ذكي على مدار الساعة بصوت عربي وإنجليزي.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "deliverable",
+    "owner": "Department of Government Enablement",
+    "metric": "Services on platform",
+    "unit": "services",
+    "target_value": "more than 800",
+    "target_number": 800.0,
+    "target_comparator": ">=",
+    "deadline_text": "no date stated",
+    "undefined_terms": [
+      "AI-native"
+    ],
+    "announced": "2024-10-15",
+    "tags": [
+      "tamm",
+      "ai assistant"
+    ],
+    "source_ids": [
+      "S31",
+      "S33"
+    ],
+    "anchors": [
+      {
+        "source_id": "S31",
+        "text": "more than 800 government services"
+      }
+    ],
+    "notes": "Phrased as description of the platform at launch; treated as a stated deliverable."
+  },
+  {
+    "id": "C56",
+    "title": "AutoGov AI system for recurring government tasks",
+    "title_ar": "نظام أوتو غوف للمهام الحكومية المتكررة",
+    "statement": "DGE announced AutoGov, an AI system to handle recurring tasks such as licence renewals, bill payments and healthcare appointments.",
+    "statement_ar": "أعلنت دائرة تمكين الحكومة عن أوتو غوف وهو نظام ذكاء اصطناعي لتنفيذ المهام المتكررة مثل تجديد التراخيص وسداد الفواتير ومواعيد الرعاية.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "deliverable",
+    "owner": "Department of Government Enablement",
+    "metric": "Feature",
+    "deadline_text": "no date stated",
+    "undefined_terms": [
+      "AI system"
+    ],
+    "announced": "2025-10-15",
+    "tags": [
+      "tamm",
+      "agentic"
+    ],
+    "source_ids": [
+      "S32"
+    ],
+    "anchors": [
+      {
+        "source_id": "S32",
+        "text": "AutoGov"
+      }
+    ]
+  },
+  {
+    "id": "C57",
+    "title": "Transform 30% of manufacturing SMEs to smart manufacturing",
+    "title_ar": "تحويل 30% من الشركات الصناعية الصغيرة إلى التصنيع الذكي",
+    "statement": "A five year smart manufacturing programme is listed with the aim of transforming 30% of Abu Dhabi manufacturing SMEs into smart manufacturing operations.",
+    "statement_ar": "يذكر برنامج للتصنيع الذكي لمدة خمس سنوات بهدف تحويل 30% من الشركات الصناعية الصغيرة والمتوسطة في أبوظبي إلى عمليات تصنيع ذكية.",
+    "jurisdiction": "abu-dhabi",
+    "kind": "target",
+    "owner": "Abu Dhabi Department of Economic Development (page owner; programme owner not stated)",
+    "metric": "Share of manufacturing SMEs",
+    "unit": "entities",
+    "target_value": "30%",
+    "target_number": 30.0,
+    "target_comparator": "=",
+    "deadline_text": "5-year programme",
+    "deadline_precision": "relative",
+    "undefined_terms": [
+      "smart manufacturing"
+    ],
+    "tags": [
+      "manufacturing",
+      "smart"
+    ],
+    "source_ids": [
+      "S34"
+    ],
+    "anchors": [
+      {
+        "source_id": "S34",
+        "text": "30%"
+      }
+    ],
+    "notes": "Owner of programme not stated; start date not stated."
+  },
+  {
+    "id": "C58",
+    "title": "Industry 4.0 to add AED 25 billion by 2031",
+    "title_ar": "الثورة الصناعية الرابعة تضيف 25 مليار درهم بحلول 2031",
+    "statement": "The page lists the UAE Industry 4.0 strategy as projected to add AED 25 billion to the economy by 2031.",
+    "statement_ar": "تذكر الصفحة أن استراتيجية الثورة الصناعية الرابعة ستضيف نحو 25 مليار درهم للاقتصاد بحلول 2031.",
+    "jurisdiction": "national",
+    "kind": "projection",
+    "owner": "UAE Strategy for the Fourth Industrial Revolution (owner as listed)",
+    "metric": "Economic contribution",
+    "unit": "aed",
+    "target_value": "AED 25 billion",
+    "target_number": 25000000000.0,
+    "target_comparator": "=",
+    "deadline": "2031-12-31",
+    "deadline_text": "by 2031",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "add to the economy"
+    ],
+    "tags": [
+      "industry 4.0",
+      "2031"
+    ],
+    "source_ids": [
+      "S34"
+    ],
+    "anchors": [
+      {
+        "source_id": "S34",
+        "text": "AED 25 billion"
+      }
+    ]
+  },
+  {
+    "id": "C59",
+    "title": "Dubai government transactions 100% paperless by December 2021",
+    "title_ar": "جميع معاملات حكومة دبي بلا ورق 100% بحلول ديسمبر 2021",
+    "statement": "Digital Dubai reported a target of a fully digital government by December 2021, with all transactions 100% paperless across Dubai Government entities.",
+    "statement_ar": "ذكرت دبي الرقمية هدف حكومة رقمية بالكامل بحلول ديسمبر 2021 تكون فيه جميع المعاملات بلا ورق بنسبة 100% في جميع الجهات الحكومية.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "owner": "Digital Dubai",
+    "metric": "share of government transactions that are paperless",
+    "unit": "transactions",
+    "target_value": "100%",
+    "target_number": 100.0,
+    "target_comparator": "=",
+    "deadline": "2021-12-31",
+    "deadline_text": "by December 2021",
+    "deadline_precision": "month",
+    "undefined_terms": [
+      "paperless",
+      "fully digital"
+    ],
+    "tags": [
+      "paperless",
+      "government"
+    ],
+    "source_ids": [
+      "S35",
+      "S42"
+    ],
+    "anchors": [
+      {
+        "source_id": "S35",
+        "text": "a fully digital government by December 2021, where all transactions will be 100% paperless"
+      },
+      {
+        "source_id": "S42",
+        "text": "Entities continue toward 100% digitization by the end of 2021"
+      }
+    ],
+    "notes": "Baseline and measuring report not stated."
+  },
+  {
+    "id": "C60",
+    "title": "No paper documents issued after 12 December 2021",
+    "title_ar": "عدم إصدار مستندات ورقية بعد 12 ديسمبر 2021",
+    "statement": "Smart Dubai stated that after 12/12/2021 no Dubai Government entity will issue internal or external paper documents.",
+    "statement_ar": "ذكرت دبي الذكية أنه بعد 12/12/2021 لن تصدر أي جهة حكومية في دبي مستندات ورقية داخلية أو خارجية.",
+    "jurisdiction": "dubai",
+    "kind": "milestone",
+    "owner": "Smart Dubai",
+    "metric": "entities issuing paper documents",
+    "unit": "entities",
+    "deadline": "2021-12-12",
+    "deadline_text": "after 12/12/2021",
+    "deadline_precision": "day",
+    "announced": "2021-03-01",
+    "tags": [
+      "paperless"
+    ],
+    "source_ids": [
+      "S42"
+    ],
+    "anchors": [
+      {
+        "source_id": "S42",
+        "text": "After 12/12/2021 no Dubai Government entity will issue internal or external paper documents"
+      }
+    ]
+  },
+  {
+    "id": "C61",
+    "title": "World's first paperless government",
+    "title_ar": "أول حكومة بلا ورق في العالم",
+    "statement": "Smart Dubai stated the ultimate goal of making the Dubai Government the world's first paperless government by applying the strategy across all entities.",
+    "statement_ar": "ذكرت دبي الذكية أن الهدف النهائي هو جعل حكومة دبي أول حكومة بلا ورق في العالم بتطبيق الاستراتيجية في جميع الجهات.",
+    "jurisdiction": "dubai",
+    "kind": "vision",
+    "owner": "Smart Dubai",
+    "deadline_text": "Not stated",
+    "undefined_terms": [
+      "first paperless government"
+    ],
+    "announced": "2021-03-01",
+    "tags": [
+      "paperless",
+      "vision"
+    ],
+    "source_ids": [
+      "S42"
+    ],
+    "anchors": [
+      {
+        "source_id": "S42",
+        "text": "make the Dubai Government the world's first paperless government"
+      }
+    ]
+  },
+  {
+    "id": "C62",
+    "title": "Group three entities cut paper use 50% by April 2020",
+    "title_ar": "خفض استهلاك الورق 50% للمجموعة الثالثة بنهاية أبريل 2020",
+    "statement": "Smart Dubai set group three, nine entities, to cut paper consumption by 50% by the end of April 2020.",
+    "statement_ar": "حددت دبي الذكية للمجموعة الثالثة المكونة من تسع جهات خفض استهلاك الورق بنسبة 50% بنهاية أبريل 2020.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "owner": "Smart Dubai",
+    "metric": "paper consumption",
+    "unit": "paper-use",
+    "target_value": "50%",
+    "target_number": 50.0,
+    "target_comparator": "=",
+    "deadline": "2020-04-30",
+    "deadline_text": "by the end of April 2020",
+    "deadline_precision": "month",
+    "announced": "2020-04-21",
+    "tags": [
+      "paperless"
+    ],
+    "source_ids": [
+      "S40"
+    ],
+    "anchors": [
+      {
+        "source_id": "S40",
+        "text": "group three cuts paper consumption by 50% by the end of April 2020"
+      }
+    ],
+    "notes": "Baseline not stated."
+  },
+  {
+    "id": "C63",
+    "title": "Group four entities cut paper use 50% by November 2020",
+    "title_ar": "خفض استهلاك الورق 50% للمجموعة الرابعة بحلول نوفمبر 2020",
+    "statement": "Smart Dubai set group four entities to cut paper consumption by 50% by November 2020.",
+    "statement_ar": "حددت دبي الذكية للمجموعة الرابعة خفض استهلاك الورق بنسبة 50% بحلول نوفمبر 2020.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "owner": "Smart Dubai",
+    "metric": "paper consumption",
+    "unit": "paper-use",
+    "target_value": "50%",
+    "target_number": 50.0,
+    "target_comparator": "=",
+    "deadline": "2020-11-30",
+    "deadline_text": "by November 2020",
+    "deadline_precision": "month",
+    "announced": "2020-04-21",
+    "tags": [
+      "paperless"
+    ],
+    "source_ids": [
+      "S40"
+    ],
+    "anchors": [
+      {
+        "source_id": "S40",
+        "text": "group four by November 2020"
+      }
+    ],
+    "notes": "Group four membership not listed on the page."
+  },
+  {
+    "id": "C64",
+    "title": "Group five entities cut paper use 50% by January 2021",
+    "title_ar": "خفض استهلاك الورق 50% للمجموعة الخامسة بحلول يناير 2021",
+    "statement": "Smart Dubai set group five entities to cut paper consumption by 50% by January 2021.",
+    "statement_ar": "حددت دبي الذكية للمجموعة الخامسة خفض استهلاك الورق بنسبة 50% بحلول يناير 2021.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "owner": "Smart Dubai",
+    "metric": "paper consumption",
+    "unit": "paper-use",
+    "target_value": "50%",
+    "target_number": 50.0,
+    "target_comparator": "=",
+    "deadline": "2021-01-31",
+    "deadline_text": "by January 2021",
+    "deadline_precision": "month",
+    "announced": "2020-04-21",
+    "tags": [
+      "paperless"
+    ],
+    "source_ids": [
+      "S40"
+    ],
+    "anchors": [
+      {
+        "source_id": "S40",
+        "text": "group five by January 2021"
+      }
+    ],
+    "notes": "Group five membership not listed on the page."
+  },
+  {
+    "id": "C65",
+    "title": "Eliminate paper from internal operations and customer services",
+    "title_ar": "إلغاء الورق من العمليات الداخلية وخدمات المتعاملين",
+    "statement": "The Dubai Paperless Strategy goal is to eliminate paper from all internal operations and customer facing services, with paper use stopping after 2021.",
+    "statement_ar": "هدف استراتيجية دبي بلا ورق إلغاء استخدام الورق من جميع العمليات الداخلية والخدمات المقدمة للمتعاملين، مع توقف استخدامه بعد 2021.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "owner": "Smart Dubai",
+    "metric": "paper use in internal and customer facing processes",
+    "unit": "processes",
+    "deadline": "2021-12-31",
+    "deadline_text": "after 2021",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "eliminate"
+    ],
+    "announced": "2020-04-21",
+    "tags": [
+      "paperless"
+    ],
+    "source_ids": [
+      "S40"
+    ],
+    "anchors": [
+      {
+        "source_id": "S40",
+        "text": "eliminate the use of paper from all internal operations and customer facing services"
+      }
+    ],
+    "notes": "The deadline is inferred from 'after 2021' in the note; the page states no exact day."
+  },
+  {
+    "id": "C66",
+    "title": "100% of eligible public services via digital channels by 2021",
+    "title_ar": "100% من الخدمات العامة المؤهلة عبر القنوات الرقمية بحلول 2021",
+    "statement": "Smart Dubai 2021 Strategy aims to provide 100% of eligible public services through digital channels, a Zero visits government.",
+    "statement_ar": "تهدف استراتيجية دبي الذكية 2021 إلى تقديم 100% من الخدمات العامة المؤهلة عبر القنوات الرقمية لحكومة بلا زيارات.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "owner": "Smart Dubai",
+    "metric": "share of eligible services delivered digitally",
+    "unit": "services",
+    "target_value": "100%",
+    "target_number": 100.0,
+    "target_comparator": "=",
+    "deadline": "2021-12-31",
+    "deadline_text": "2021",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "eligible",
+      "Zero visits"
+    ],
+    "tags": [
+      "services",
+      "digital government"
+    ],
+    "source_ids": [
+      "S44"
+    ],
+    "anchors": [
+      {
+        "source_id": "S44",
+        "text": "provide 100% of eligible public services through digital channels"
+      }
+    ]
+  },
+  {
+    "id": "C67",
+    "title": "Paperless and cashless government by 2021",
+    "title_ar": "حكومة بلا ورق وبلا نقد بحلول 2021",
+    "statement": "Smart Dubai 2021 Strategy states a goal to operate a paperless, cashless government.",
+    "statement_ar": "تنص استراتيجية دبي الذكية 2021 على هدف تشغيل حكومة بلا ورق وبلا نقد.",
+    "jurisdiction": "dubai",
+    "kind": "vision",
+    "owner": "Smart Dubai",
+    "deadline": "2021-12-31",
+    "deadline_text": "2021 (strategy target year)",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "cashless"
+    ],
+    "tags": [
+      "paperless",
+      "cashless"
+    ],
+    "source_ids": [
+      "S44"
+    ],
+    "anchors": [
+      {
+        "source_id": "S44",
+        "text": "operate a paperless, cashless government"
+      }
+    ]
+  },
+  {
+    "id": "C68",
+    "title": "First city fully powered by blockchain by 2020",
+    "title_ar": "أول مدينة تعمل بالكامل بتقنية البلوك تشين بحلول 2020",
+    "statement": "The Dubai Blockchain Strategy aims to make Dubai the first city fully powered by blockchain by 2020.",
+    "statement_ar": "تهدف استراتيجية دبي للبلوك تشين إلى جعل دبي أول مدينة تعمل بالكامل بتقنية البلوك تشين بحلول 2020.",
+    "jurisdiction": "dubai",
+    "kind": "vision",
+    "owner": "Smart Dubai Office and Dubai Future Foundation",
+    "deadline": "2020-12-31",
+    "deadline_text": "by 2020",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "fully powered by blockchain"
+    ],
+    "announced": "2016-10-05",
+    "tags": [
+      "blockchain"
+    ],
+    "source_ids": [
+      "S41",
+      "S49"
+    ],
+    "anchors": [
+      {
+        "source_id": "S41",
+        "text": "first city fully powered by blockchain"
+      },
+      {
+        "source_id": "S49",
+        "text": "Dubai as the world capital of blockchain development"
+      }
+    ],
+    "notes": "No quantified measure or definition of fully powered is given."
+  },
+  {
+    "id": "C69",
+    "title": "25% of Dubai trips smart and driverless by 2030",
+    "title_ar": "25% من رحلات دبي ذكية وبلا سائق بحلول 2030",
+    "statement": "The Dubai Self-Driving Transport Strategy targets 25 per cent of all transportation trips in Dubai being smart and driverless by 2030.",
+    "statement_ar": "تستهدف استراتيجية دبي للتنقل الذاتي أن تكون 25% من جميع رحلات النقل في دبي ذكية وبلا سائق بحلول 2030.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "owner": "Roads and Transport Authority and Dubai Future Foundation",
+    "metric": "share of transport trips that are autonomous",
+    "unit": "trips",
+    "target_value": "25%",
+    "target_number": 25.0,
+    "target_comparator": "=",
+    "deadline": "2030-12-31",
+    "deadline_text": "by 2030",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "smart",
+      "driverless",
+      "autonomous"
+    ],
+    "tags": [
+      "autonomous",
+      "mobility"
+    ],
+    "source_ids": [
+      "S38",
+      "S54",
+      "S50"
+    ],
+    "anchors": [
+      {
+        "source_id": "S38",
+        "text": "25 per cent of all transportation trips in Dubai"
+      },
+      {
+        "source_id": "S54",
+        "text": "25% of all mobility journeys"
+      }
+    ],
+    "notes": "No baseline or measuring report stated."
+  },
+  {
+    "id": "C70",
+    "title": "Self-driving strategy returns of up to Dh22 billion a year",
+    "title_ar": "عوائد استراتيجية التنقل الذاتي حتى 22 مليار درهم سنويا",
+    "statement": "The self-driving strategy announcement projects up to Dh22 billion a year in revenues and savings, from cost, pollution, efficiency and accident reductions.",
+    "statement_ar": "يتوقع إعلان استراتيجية التنقل الذاتي عوائد ووفورات تصل إلى 22 مليار درهم سنويا من خفض التكاليف والتلوث وزيادة الكفاءة وتقليل الحوادث.",
+    "jurisdiction": "dubai",
+    "kind": "projection",
+    "owner": "Roads and Transport Authority and Dubai Future Foundation",
+    "metric": "annual revenues and savings",
+    "unit": "aed",
+    "target_value": "up to Dh22 billion a year",
+    "target_number": 22000000000.0,
+    "target_comparator": "up-to",
+    "deadline_text": "Not stated",
+    "tags": [
+      "autonomous",
+      "economic return"
+    ],
+    "source_ids": [
+      "S38"
+    ],
+    "anchors": [
+      {
+        "source_id": "S38",
+        "text": "up to Dh22 billion a year in revenues and savings"
+      }
+    ],
+    "notes": "The page ties no year to the Dh22 billion figure in the extract."
+  },
+  {
+    "id": "C71",
+    "title": "Commercial driverless service rollout in 2026",
+    "title_ar": "إطلاق الخدمة التجارية بلا سائق في 2026",
+    "statement": "The RTA MoU release with Uber and WeRide states full scale commercial rollout of driverless services is planned for 2026, after pilot operations in 2025.",
+    "statement_ar": "يذكر بيان مذكرة التفاهم بين هيئة الطرق وأوبر وويرايد أن الإطلاق التجاري الكامل لخدمات القيادة الذاتية مخطط له في 2026 بعد تجارب في 2025.",
+    "jurisdiction": "dubai",
+    "kind": "milestone",
+    "owner": "Roads and Transport Authority",
+    "deadline": "2026-12-31",
+    "deadline_text": "2026",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "full scale commercial rollout"
+    ],
+    "announced": "2025-06-15",
+    "tags": [
+      "autonomous",
+      "robotaxi"
+    ],
+    "source_ids": [
+      "S54"
+    ],
+    "anchors": [
+      {
+        "source_id": "S54",
+        "text": "Full scale commercial rollout of driverless services"
+      }
+    ]
+  },
+  {
+    "id": "C72",
+    "title": "Pilot of autonomous vehicles via Uber app in 2025",
+    "title_ar": "تجربة مركبات ذاتية القيادة عبر تطبيق أوبر في 2025",
+    "statement": "RTA, Uber and WeRide stated that pilot operations via the Uber app will commence later in 2025, initially with a safety driver.",
+    "statement_ar": "ذكرت هيئة الطرق وأوبر وويرايد أن العمليات التجريبية عبر تطبيق أوبر ستبدأ في وقت لاحق من 2025 بوجود سائق أمان.",
+    "jurisdiction": "dubai",
+    "kind": "milestone",
+    "owner": "Roads and Transport Authority",
+    "deadline": "2025-12-31",
+    "deadline_text": "later this year (2025)",
+    "deadline_precision": "year",
+    "announced": "2025-06-15",
+    "tags": [
+      "autonomous",
+      "pilot"
+    ],
+    "source_ids": [
+      "S54"
+    ],
+    "anchors": [
+      {
+        "source_id": "S54",
+        "text": "Pilot operations via the Uber app will commence later this year"
+      }
+    ]
+  },
+  {
+    "id": "C73",
+    "title": "Dubai among top 10 metaverse economies",
+    "title_ar": "دبي ضمن أفضل 10 اقتصادات للميتافيرس",
+    "statement": "The Dubai Metaverse Strategy aims to turn Dubai into one of the world's top 10 metaverse economies; no target year is given.",
+    "statement_ar": "تهدف استراتيجية دبي للميتافيرس إلى جعل دبي من أفضل 10 اقتصادات ميتافيرس في العالم دون تحديد سنة.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "owner": "Government of Dubai (Sheikh Hamdan bin Mohammed launched)",
+    "metric": "Dubai's rank among metaverse economies",
+    "unit": "rank",
+    "target_value": "top 10",
+    "target_number": 10.0,
+    "target_comparator": "up-to",
+    "deadline_text": "Not stated",
+    "undefined_terms": [
+      "metaverse economy"
+    ],
+    "announced": "2022-07-18",
+    "tags": [
+      "metaverse"
+    ],
+    "source_ids": [
+      "S36",
+      "S48"
+    ],
+    "anchors": [
+      {
+        "source_id": "S36",
+        "text": "top 10 metaverse economies"
+      }
+    ],
+    "notes": "Ranking source not named."
+  },
+  {
+    "id": "C74",
+    "title": "More than 40,000 virtual jobs by 2030",
+    "title_ar": "أكثر من 40,000 وظيفة افتراضية بحلول 2030",
+    "statement": "The Dubai Metaverse Strategy supports more than 40,000 virtual jobs by 2030.",
+    "statement_ar": "تدعم استراتيجية دبي للميتافيرس أكثر من 40,000 وظيفة افتراضية بحلول 2030.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "metric": "virtual jobs supported",
+    "unit": "jobs",
+    "target_value": "more than 40,000",
+    "target_number": 40000.0,
+    "target_comparator": ">=",
+    "deadline": "2030-12-31",
+    "deadline_text": "by 2030",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "virtual jobs"
+    ],
+    "announced": "2022-07-18",
+    "tags": [
+      "metaverse",
+      "jobs"
+    ],
+    "source_ids": [
+      "S36",
+      "S48"
+    ],
+    "anchors": [
+      {
+        "source_id": "S36",
+        "text": "more than 40,000 virtual jobs by 2030"
+      }
+    ],
+    "notes": "Baseline not stated."
+  },
+  {
+    "id": "C75",
+    "title": "Dubai economy gains AED 100 billion a year from digital transformation",
+    "title_ar": "اقتصاد دبي يكسب 100 مليار درهم سنويا من التحول الرقمي",
+    "statement": "D33 and the AI Blueprint state an annual contribution of AED 100 billion to Dubai's economy from digital transformation projects.",
+    "statement_ar": "تنص أجندة دبي الاقتصادية D33 والمخطط الشامل للذكاء الاصطناعي على مساهمة سنوية بقيمة 100 مليار درهم في اقتصاد دبي من مشاريع التحول الرقمي.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "owner": "Government of Dubai (D33)",
+    "metric": "annual economic contribution of digital transformation",
+    "unit": "aed",
+    "target_value": "AED 100 billion annually",
+    "target_number": 100000000000.0,
+    "target_comparator": ">=",
+    "deadline_text": "No separate year; D33 horizon is 2033",
+    "undefined_terms": [
+      "digital transformation contribution"
+    ],
+    "announced": "2023-01-04",
+    "tags": [
+      "d33",
+      "digital economy"
+    ],
+    "source_ids": [
+      "S39",
+      "S45",
+      "S51",
+      "S37",
+      "S43"
+    ],
+    "anchors": [
+      {
+        "source_id": "S39",
+        "text": "an annual AED 100 billion contribution from digital transformation"
+      },
+      {
+        "source_id": "S45",
+        "text": "annual contribution of AED 100 billion from digital transformation projects"
+      }
+    ],
+    "notes": "D05 notes the overall agenda horizon is 2033 but the digital figure carries no separate year."
+  },
+  {
+    "id": "C76",
+    "title": "Raise Dubai economy productivity 50% through digital solutions",
+    "title_ar": "رفع إنتاجية اقتصاد دبي 50% عبر الحلول الرقمية",
+    "statement": "D33 and the AI Blueprint state a 50% rise in productivity of Dubai's economy through innovation and digital solutions.",
+    "statement_ar": "تنص أجندة D33 والمخطط الشامل للذكاء الاصطناعي على رفع إنتاجية اقتصاد دبي بنسبة 50% عبر الابتكار والحلول الرقمية.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "owner": "Government of Dubai (D33)",
+    "metric": "economic productivity",
+    "unit": "productivity",
+    "target_value": "50%",
+    "target_number": 50.0,
+    "target_comparator": ">=",
+    "deadline_text": "Not stated",
+    "undefined_terms": [
+      "productivity"
+    ],
+    "announced": "2023-01-04",
+    "tags": [
+      "d33",
+      "productivity"
+    ],
+    "source_ids": [
+      "S39",
+      "S51",
+      "S37"
+    ],
+    "anchors": [
+      {
+        "source_id": "S39",
+        "text": "productivity"
+      },
+      {
+        "source_id": "S51",
+        "text": "raising productivity by 50 percent through digital solutions"
+      }
+    ],
+    "notes": "No baseline, year or measure stated."
+  },
+  {
+    "id": "C77",
+    "title": "First Dubai AI Week held 21 to 25 April 2025",
+    "title_ar": "أسبوع دبي للذكاء الاصطناعي من 21 إلى 25 أبريل 2025",
+    "statement": "Directives were issued for the first Dubai AI Week to run 21 to 25 April 2025, including an AI Retreat to launch ten strategic AI initiatives.",
+    "statement_ar": "صدرت توجيهات بتنظيم النسخة الأولى من أسبوع دبي للذكاء الاصطناعي من 21 إلى 25 أبريل 2025 مع إطلاق عشر مبادرات استراتيجية.",
+    "jurisdiction": "dubai",
+    "kind": "milestone",
+    "owner": "Dubai Future Foundation",
+    "deadline": "2025-04-25",
+    "deadline_text": "21 to 25 April 2025",
+    "deadline_precision": "day",
+    "announced": "2024-12-19",
+    "tags": [
+      "ai",
+      "event"
+    ],
+    "source_ids": [
+      "S53"
+    ],
+    "anchors": [
+      {
+        "source_id": "S53",
+        "text": "21 to 25 April 2025"
+      },
+      {
+        "source_id": "S53",
+        "text": "ten strategic AI initiatives"
+      }
+    ]
+  },
+  {
+    "id": "C78",
+    "title": "Dubai AI Academy to train 10,000 leaders",
+    "title_ar": "أكاديمية دبي للذكاء الاصطناعي لتدريب 10,000 قائد",
+    "statement": "Dubai AI Academy, launched in April 2025, targets training 10,000 emerging and experienced leaders; no deadline is stated.",
+    "statement_ar": "تستهدف أكاديمية دبي للذكاء الاصطناعي، التي أُطلقت في أبريل 2025، تدريب 10,000 قائد ناشئ وذي خبرة دون تحديد موعد.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "owner": "Dubai AI Campus (launched by Sheikh Hamdan bin Mohammed)",
+    "metric": "leaders trained",
+    "unit": "leaders",
+    "target_value": "10,000",
+    "target_number": 10000.0,
+    "target_comparator": "=",
+    "deadline_text": "Not stated",
+    "undefined_terms": [
+      "emerging and experienced leaders"
+    ],
+    "announced": "2025-04-25",
+    "tags": [
+      "ai",
+      "training"
+    ],
+    "source_ids": [
+      "S52"
+    ],
+    "anchors": [
+      {
+        "source_id": "S52",
+        "text": "train 10,000 emerging"
+      }
+    ]
+  },
+  {
+    "id": "C79",
+    "title": "Launch 50 digital city experiences",
+    "title_ar": "إطلاق 50 تجربة مدينة رقمية",
+    "statement": "The Dubai Digital Strategy aims to launch 50 digital city experiences described as seamless, interconnected, proactive, predictable and high impact.",
+    "statement_ar": "تهدف استراتيجية دبي الرقمية إلى إطلاق 50 تجربة مدينة رقمية توصف بأنها سلسة ومترابطة واستباقية ومؤثرة.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "owner": "Digital Dubai",
+    "metric": "digital city experiences launched",
+    "unit": "experiences",
+    "target_value": "50",
+    "target_number": 50.0,
+    "target_comparator": "=",
+    "deadline_text": "Not stated",
+    "undefined_terms": [
+      "digital city experience"
+    ],
+    "announced": "2023-06-21",
+    "tags": [
+      "digital strategy"
+    ],
+    "source_ids": [
+      "S47",
+      "S46"
+    ],
+    "anchors": [
+      {
+        "source_id": "S47",
+        "text": "launch 50 digital city experiences"
+      }
+    ]
+  },
+  {
+    "id": "C80",
+    "title": "Equip over 50,000 professionals with advanced digital qualifications",
+    "title_ar": "تأهيل أكثر من 50,000 متخصص بمؤهلات رقمية متقدمة",
+    "statement": "The Dubai Digital Strategy aims to equip over 50,000 professionals with advanced digital qualifications; no deadline is stated.",
+    "statement_ar": "تهدف استراتيجية دبي الرقمية إلى تأهيل أكثر من 50,000 متخصص بمؤهلات رقمية متقدمة دون تحديد موعد.",
+    "jurisdiction": "dubai",
+    "kind": "target",
+    "owner": "Digital Dubai",
+    "metric": "professionals equipped",
+    "unit": "professionals",
+    "target_value": "over 50,000",
+    "target_number": 50000.0,
+    "target_comparator": ">=",
+    "deadline_text": "Not stated",
+    "undefined_terms": [
+      "advanced digital qualifications"
+    ],
+    "announced": "2023-06-21",
+    "tags": [
+      "digital strategy",
+      "talent"
+    ],
+    "source_ids": [
+      "S47",
+      "S46"
+    ],
+    "anchors": [
+      {
+        "source_id": "S47",
+        "text": "over 50,000 professionals with advanced digital qualifications"
+      }
+    ]
+  },
+  {
+    "id": "C81",
+    "title": "Sharjah digital strategy 2026-2028 with 50+ initiatives",
+    "title_ar": "استراتيجية الشارقة للتحول الرقمي 2026-2028 بأكثر من 50 مبادرة",
+    "statement": "The Sharjah Executive Council approved a digital transformation strategy for 2026 to 2028 that is said to include more than 50 initiatives, which are not listed.",
+    "statement_ar": "اعتمد المجلس التنفيذي لإمارة الشارقة استراتيجية للتحول الرقمي للفترة 2026 إلى 2028 تتضمن أكثر من 50 مبادرة، ولم تُذكر المبادرات تفصيلاً.",
+    "jurisdiction": "other-emirate",
+    "kind": "target",
+    "owner": "Sharjah Executive Council",
+    "metric": "initiatives in the strategy",
+    "unit": "initiatives",
+    "target_value": "More than 50 initiatives",
+    "target_number": 50.0,
+    "target_comparator": ">=",
+    "deadline": "2028-12-31",
+    "deadline_text": "2026 to 2028",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "digital transformation",
+      "initiatives"
+    ],
+    "announced": "2025-11-25",
+    "tags": [
+      "sharjah",
+      "strategy",
+      "digital"
+    ],
+    "source_ids": [
+      "S55"
+    ],
+    "anchors": [
+      {
+        "source_id": "S55",
+        "text": "more than 50 initiatives"
+      }
+    ],
+    "notes": "Only the period is dated; the initiatives, measures and owners are not listed."
+  },
+  {
+    "id": "C82",
+    "title": "Sharjah Higher Committee for Digital Integration and Cooperation Charter",
+    "title_ar": "اللجنة العليا للتكامل الرقمي وميثاق التعاون الرقمي في الشارقة",
+    "statement": "The strategy creates a Higher Committee for Digital Integration for unified oversight and decision making and a Digital Cooperation Charter that clarifies roles of government entities.",
+    "statement_ar": "تُنشئ الاستراتيجية لجنة عليا للتكامل الرقمي للإشراف والتنسيق واتخاذ القرار الموحد، وميثاقاً للتعاون الرقمي يوضح أدوار الجهات الحكومية.",
+    "jurisdiction": "other-emirate",
+    "kind": "deliverable",
+    "owner": "Sharjah Executive Council",
+    "deadline_text": "No date stated",
+    "undefined_terms": [
+      "unified oversight"
+    ],
+    "announced": "2025-11-25",
+    "tags": [
+      "sharjah",
+      "governance"
+    ],
+    "source_ids": [
+      "S55"
+    ],
+    "anchors": [
+      {
+        "source_id": "S55",
+        "text": "Higher Committee for Digital Integration"
+      },
+      {
+        "source_id": "S55",
+        "text": "Digital Cooperation Charter"
+      }
+    ],
+    "notes": "Gulf News in the search results used a different committee name; this record follows the Executive Council page."
+  },
+  {
+    "id": "C83",
+    "title": "Ajman: 100% of government services digital by end 2018",
+    "title_ar": "عجمان: تحويل 100% من الخدمات الحكومية رقمياً بنهاية 2018",
+    "statement": "The Ajman masterplan targets digital transformation of 100 percent of government services by the end of 2018.",
+    "statement_ar": "تستهدف الخطة الرئيسية لعجمان التحول الرقمي لـ 100% من الخدمات الحكومية بنهاية عام 2018.",
+    "jurisdiction": "other-emirate",
+    "kind": "target",
+    "owner": "e-Government of Ajman",
+    "metric": "100 percent of government services",
+    "unit": "services",
+    "target_value": "100%",
+    "target_number": 100.0,
+    "target_comparator": "=",
+    "deadline": "2018-12-31",
+    "deadline_text": "end of 2018",
+    "deadline_precision": "day",
+    "undefined_terms": [
+      "digital",
+      "services"
+    ],
+    "tags": [
+      "ajman",
+      "masterplan"
+    ],
+    "source_ids": [
+      "S57"
+    ],
+    "anchors": [
+      {
+        "source_id": "S57",
+        "text": "100 percent of government services by end of 2018"
+      }
+    ],
+    "notes": "Owner inferred from the page text naming the e-Government of Ajman as leading initiatives; no baseline or measure stated."
+  },
+  {
+    "id": "C84",
+    "title": "Ajman: all shared government services digital by end 2018",
+    "title_ar": "عجمان: رقمنة جميع الخدمات الحكومية المشتركة بنهاية 2018",
+    "statement": "The masterplan targets digital transformation of all joint government services by the end of 2018.",
+    "statement_ar": "تستهدف الخطة التحول الرقمي لجميع الخدمات الحكومية المشتركة بنهاية عام 2018.",
+    "jurisdiction": "other-emirate",
+    "kind": "target",
+    "owner": "e-Government of Ajman",
+    "metric": "all shared government services",
+    "unit": "services",
+    "target_value": "All shared services",
+    "deadline": "2018-12-31",
+    "deadline_text": "end of 2018",
+    "deadline_precision": "day",
+    "undefined_terms": [
+      "digital",
+      "services"
+    ],
+    "tags": [
+      "ajman",
+      "masterplan"
+    ],
+    "source_ids": [
+      "S57"
+    ],
+    "anchors": [
+      {
+        "source_id": "S57",
+        "text": "all shared government services by end of 2018"
+      }
+    ],
+    "notes": "Owner inferred from the page text naming the e-Government of Ajman as leading initiatives; no baseline or measure stated."
+  },
+  {
+    "id": "C85",
+    "title": "Ajman: 80% adoption of digital services by end 2021",
+    "title_ar": "عجمان: تبني 80% من الخدمات الرقمية بنهاية 2021",
+    "statement": "The masterplan targets full adoption of 80 percent of digital services by the end of 2021.",
+    "statement_ar": "تستهدف الخطة التبني الكلي لـ 80% من الخدمات الرقمية بنهاية عام 2021.",
+    "jurisdiction": "other-emirate",
+    "kind": "target",
+    "owner": "e-Government of Ajman",
+    "metric": "80 percent of digital services",
+    "unit": "services",
+    "target_value": "80%",
+    "target_number": 80.0,
+    "target_comparator": "=",
+    "deadline": "2021-12-31",
+    "deadline_text": "end of 2021",
+    "deadline_precision": "day",
+    "undefined_terms": [
+      "digital",
+      "adoption"
+    ],
+    "tags": [
+      "ajman",
+      "masterplan"
+    ],
+    "source_ids": [
+      "S57"
+    ],
+    "anchors": [
+      {
+        "source_id": "S57",
+        "text": "80 percent of digital services by end of 2021"
+      }
+    ],
+    "notes": "Owner inferred from the page text naming the e-Government of Ajman as leading initiatives; no baseline or measure stated."
+  },
+  {
+    "id": "C86",
+    "title": "Ajman: 30 priority services digital every 100 days",
+    "title_ar": "عجمان: رقمنة 30 خدمة ذات أولوية كل 100 يوم",
+    "statement": "The masterplan targets full digital transformation of 30 priority government services every 100 days.",
+    "statement_ar": "تستهدف الخطة التحول الرقمي الكلي لـ 30 خدمة حكومية ذات أولوية كل 100 يوم.",
+    "jurisdiction": "other-emirate",
+    "kind": "target",
+    "owner": "e-Government of Ajman",
+    "metric": "priority services per 100 days",
+    "unit": "services",
+    "target_value": "30 services every 100 days",
+    "target_number": 30.0,
+    "target_comparator": "=",
+    "deadline_text": "every 100 days (no end date)",
+    "undefined_terms": [
+      "digital",
+      "services"
+    ],
+    "tags": [
+      "ajman",
+      "masterplan"
+    ],
+    "source_ids": [
+      "S57"
+    ],
+    "anchors": [
+      {
+        "source_id": "S57",
+        "text": "30 priority government services every 100 days"
+      }
+    ],
+    "notes": "Owner inferred from the page text naming the e-Government of Ajman as leading initiatives; no baseline or measure stated."
+  },
+  {
+    "id": "C87",
+    "title": "Ajman: 20% higher financial efficiency by end 2021",
+    "title_ar": "عجمان: رفع الكفاءة المالية 20% بنهاية 2021",
+    "statement": "The masterplan targets at least a 20 percent increase in financial efficiency of government services by the end of 2021.",
+    "statement_ar": "تستهدف الخطة رفع الكفاءة المالية للخدمات الحكومية بما لا يقل عن 20% بنهاية عام 2021.",
+    "jurisdiction": "other-emirate",
+    "kind": "target",
+    "owner": "e-Government of Ajman",
+    "metric": "financial efficiency of government services",
+    "unit": "efficiency",
+    "target_value": "At least 20%",
+    "target_number": 20.0,
+    "target_comparator": ">=",
+    "deadline": "2021-12-31",
+    "deadline_text": "end of 2021",
+    "deadline_precision": "day",
+    "undefined_terms": [
+      "digital",
+      "services"
+    ],
+    "tags": [
+      "ajman",
+      "masterplan"
+    ],
+    "source_ids": [
+      "S57"
+    ],
+    "anchors": [
+      {
+        "source_id": "S57",
+        "text": "at least 20 percent by end of 2021"
+      }
+    ],
+    "notes": "Owner inferred from the page text naming the e-Government of Ajman as leading initiatives; no baseline or measure stated."
+  },
+  {
+    "id": "C88",
+    "title": "RAK: accelerate service delivery and digitise partner services 2019-2021",
+    "title_ar": "رأس الخيمة: تسريع الخدمات ورقمنة خدمات الشركاء 2019-2021",
+    "statement": "The RAK Electronic Government Authority strategy for 2019 to 2021 aims to accelerate service delivery and digitise partners' service portfolios.",
+    "statement_ar": "تهدف استراتيجية هيئة الحكومة الإلكترونية في رأس الخيمة للفترة 2019 إلى 2021 إلى تسريع تقديم الخدمات ورقمنة محفظة خدمات الشركاء.",
+    "jurisdiction": "other-emirate",
+    "kind": "target",
+    "deadline": "2021-12-31",
+    "deadline_text": "2019-2021 strategy period",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "accelerate",
+      "digitization"
+    ],
+    "tags": [
+      "rak",
+      "egov",
+      "strategy"
+    ],
+    "source_ids": [
+      "S56"
+    ],
+    "anchors": [
+      {
+        "source_id": "S56",
+        "text": "Accelerate service delivery and digitization of partners service portfolio"
+      }
+    ],
+    "notes": "Page says KPIs exist but lists none; owner not named (EGA is publisher)."
+  },
+  {
+    "id": "C89",
+    "title": "RAK: 360 degree citizen engagement 2019-2021",
+    "title_ar": "رأس الخيمة: مشاركة المجتمع بزاوية 360 درجة 2019-2021",
+    "statement": "The RAK 2019 to 2021 strategy aims to enable 360 degree citizen engagement and an immersive experience.",
+    "statement_ar": "تهدف استراتيجية رأس الخيمة 2019 إلى 2021 إلى تمكين مشاركة المتعاملين بزاوية 360 درجة وتجربة غامرة.",
+    "jurisdiction": "other-emirate",
+    "kind": "vision",
+    "deadline": "2021-12-31",
+    "deadline_text": "2019-2021 strategy period",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "360 degrees engagement",
+      "immersive"
+    ],
+    "tags": [
+      "rak",
+      "engagement"
+    ],
+    "source_ids": [
+      "S56"
+    ],
+    "anchors": [
+      {
+        "source_id": "S56",
+        "text": "Enable 360 degrees citizen engagement and immersive experience"
+      }
+    ]
+  },
+  {
+    "id": "C90",
+    "title": "Ajman Vision 2030: a pioneering, agile government",
+    "title_ar": "رؤية عجمان 2030: حكومة رائدة ومرنة",
+    "statement": "Ajman Vision 2030 sets a directive area for a pioneering, agile government, including effective and efficient management of physical and digital assets.",
+    "statement_ar": "تضع رؤية عجمان 2030 محوراً لحكومة رائدة ومرنة يتضمن إدارة فعالة وكفؤة للأصول المادية والرقمية.",
+    "jurisdiction": "other-emirate",
+    "kind": "vision",
+    "deadline": "2030-12-31",
+    "deadline_text": "Ajman Vision 2030 (page says the next decade)",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "pioneering",
+      "agile"
+    ],
+    "tags": [
+      "ajman",
+      "vision"
+    ],
+    "source_ids": [
+      "S58"
+    ],
+    "anchors": [
+      {
+        "source_id": "S58",
+        "text": "pioneering, agile government"
+      }
+    ],
+    "notes": "No numeric target or owner."
+  },
+  {
+    "id": "C91",
+    "title": "Umm Al Quwain Vision 2033: proactive interconnected digital services",
+    "title_ar": "رؤية أم القيوين 2033: خدمات رقمية استباقية ومترابطة",
+    "statement": "Umm Al Quwain Vision 2033 lists, under digital government, ensuring proactive, interconnected digital operations and services and enhancing digital infrastructure and shared capabilities.",
+    "statement_ar": "تتضمن رؤية أم القيوين 2033 ضمن الحكومة الرقمية ضمان عمليات وخدمات رقمية استباقية ومترابطة وتعزيز البنية التحتية الرقمية والقدرات المشتركة.",
+    "jurisdiction": "other-emirate",
+    "kind": "vision",
+    "deadline": "2033-12-31",
+    "deadline_text": "Vision 2033 (title only)",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "proactive",
+      "interconnected"
+    ],
+    "tags": [
+      "uaq",
+      "vision",
+      "digital government"
+    ],
+    "source_ids": [
+      "S59"
+    ],
+    "anchors": [
+      {
+        "source_id": "S59",
+        "text": "proactive, interconnected digital operations"
+      }
+    ]
+  },
+  {
+    "id": "C92",
+    "title": "UAE among most innovative nations within seven years",
+    "title_ar": "الإمارات من أكثر الدول ابتكاراً خلال سبع سنوات",
+    "statement": "The National Innovation Strategy aims to make the UAE one of the most innovative nations in the world within seven years of its October 2014 launch.",
+    "statement_ar": "تهدف الاستراتيجية الوطنية للابتكار إلى جعل الإمارات من أكثر دول العالم ابتكاراً خلال سبع سنوات من إطلاقها في أكتوبر 2014.",
+    "jurisdiction": "national",
+    "kind": "vision",
+    "deadline": "2021-10-31",
+    "deadline_text": "within seven years of October 2014 launch",
+    "deadline_precision": "relative",
+    "undefined_terms": [
+      "most innovative"
+    ],
+    "tags": [
+      "innovation"
+    ],
+    "source_ids": [
+      "S60"
+    ],
+    "anchors": [
+      {
+        "source_id": "S60",
+        "text": "within seven years"
+      }
+    ],
+    "notes": "No index or rank is named."
+  },
+  {
+    "id": "C93",
+    "title": "30 national innovation initiatives within three years",
+    "title_ar": "30 مبادرة وطنية للابتكار خلال ثلاث سنوات",
+    "statement": "The National Innovation Strategy plans a first phase of 30 national initiatives within three years.",
+    "statement_ar": "تخطط الاستراتيجية الوطنية للابتكار لمرحلة أولى من 30 مبادرة وطنية خلال ثلاث سنوات.",
+    "jurisdiction": "national",
+    "kind": "deliverable",
+    "unit": "initiatives",
+    "target_value": "30 initiatives",
+    "target_number": 30.0,
+    "target_comparator": "=",
+    "deadline": "2017-10-31",
+    "deadline_text": "within three years of October 2014 launch",
+    "deadline_precision": "relative",
+    "tags": [
+      "innovation",
+      "initiatives"
+    ],
+    "source_ids": [
+      "S60"
+    ],
+    "anchors": [
+      {
+        "source_id": "S60",
+        "text": "within three years"
+      }
+    ]
+  },
+  {
+    "id": "C94",
+    "title": "Government entities cut spending 1% for research and innovation",
+    "title_ar": "خفض الجهات الحكومية إنفاقها 1% لصالح البحث والابتكار",
+    "statement": "Government entities are to reduce spending by 1 percent and redirect the savings to research and innovation; no date is stated.",
+    "statement_ar": "على الجهات الحكومية خفض إنفاقها بنسبة 1% وتوجيه الوفورات إلى البحث والابتكار، دون تحديد موعد.",
+    "jurisdiction": "national",
+    "kind": "input",
+    "owner": "all government entities",
+    "unit": "spending",
+    "target_value": "1%",
+    "target_number": 1.0,
+    "target_comparator": "=",
+    "deadline_text": "No date stated",
+    "tags": [
+      "innovation",
+      "spending"
+    ],
+    "source_ids": [
+      "S60"
+    ],
+    "anchors": [
+      {
+        "source_id": "S60",
+        "text": "cut spending by 1 percent"
+      }
+    ],
+    "notes": "Measurement method not given."
+  },
+  {
+    "id": "C95",
+    "title": "50% of government transactions on blockchain by 2021",
+    "title_ar": "50% من المعاملات الحكومية على البلوك تشين بحلول 2021",
+    "statement": "The Emirates Blockchain Strategy 2021 aims to move 50 percent of government transactions onto a blockchain platform by 2021.",
+    "statement_ar": "تهدف استراتيجية الإمارات للبلوك تشين 2021 إلى نقل 50% من المعاملات الحكومية إلى منصة بلوك تشين بحلول 2021.",
+    "jurisdiction": "federal",
+    "kind": "target",
+    "metric": "share of government transactions on blockchain",
+    "unit": "operations",
+    "target_value": "50%",
+    "target_number": 50.0,
+    "target_comparator": "=",
+    "deadline": "2021-12-31",
+    "deadline_text": "by 2021",
+    "deadline_precision": "year",
+    "undefined_terms": [
+      "government transactions"
+    ],
+    "announced": "2018-04-11",
+    "tags": [
+      "blockchain",
+      "2021"
+    ],
+    "source_ids": [
+      "S61",
+      "S62"
+    ],
+    "anchors": [
+      {
+        "source_id": "S61",
+        "text": "50 per cent of government transactions"
+      }
+    ],
+    "notes": "MEED describes it as federal transactions; u.ae says government transactions. No baseline."
+  },
+  {
+    "id": "C96",
+    "title": "Blockchain strategy projected AED 11 billion annual savings",
+    "title_ar": "توقع وفورات سنوية 11 مليار درهم من استراتيجية البلوك تشين",
+    "statement": "The strategy states expected annual savings of AED 11 billion, 398 million printed documents and 77 million work hours.",
+    "statement_ar": "تذكر الاستراتيجية وفورات سنوية متوقعة قدرها 11 مليار درهم و398 مليون وثيقة مطبوعة و77 مليون ساعة عمل.",
+    "jurisdiction": "federal",
+    "kind": "projection",
+    "metric": "annual savings",
+    "unit": "aed",
+    "target_value": "AED 11 billion per year",
+    "target_number": 11000000000.0,
+    "target_comparator": "=",
+    "deadline_text": "annually, no date",
+    "announced": "2018-04-11",
+    "tags": [
+      "blockchain",
+      "savings"
+    ],
+    "source_ids": [
+      "S61",
+      "S62"
+    ],
+    "anchors": [
+      {
+        "source_id": "S61",
+        "text": "AED 11 billion"
+      }
+    ],
+    "notes": "MEED gives 389 million documents; u.ae gives 398 million. Method not stated."
   }
 ]
