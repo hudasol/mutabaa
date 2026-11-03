@@ -1,36 +1,98 @@
 {
- "blind_items": 46,
- "ledger_commitments": 25,
+ "blind_items": 255,
+ "first_cohort": {
+  "missed": [
+   "C06",
+   "C09",
+   "C16"
+  ],
+  "numeric_recall": {
+   "ci95": [
+    0.6429,
+    1.0
+   ],
+   "found": 12,
+   "n": 14,
+   "rate": 0.857,
+   "wilson95": [
+    0.6006,
+    0.9599
+   ]
+  },
+  "recall": {
+   "ci95": [
+    0.72,
+    1.0
+   ],
+   "found": 22,
+   "n": 25,
+   "rate": 0.88,
+   "wilson95": [
+    0.7004,
+    0.9583
+   ]
+  }
+ },
+ "ledger_commitments": 96,
  "missed": [
   "C06",
   "C09",
   "C16"
  ],
- "note": "The blind pass read the same extraction notes, so this measures consistency of reading, not faithfulness to the web pages. Precision is not reported: the blind pass counted reported achievements as commitments by design.",
+ "new_cohort": {
+  "missed": [],
+  "numeric_recall": {
+   "ci95": [
+    1.0,
+    1.0
+   ],
+   "found": 48,
+   "n": 48,
+   "rate": 1.0,
+   "wilson95": [
+    0.9259,
+    1.0
+   ]
+  },
+  "recall": {
+   "ci95": [
+    1.0,
+    1.0
+   ],
+   "found": 71,
+   "n": 71,
+   "rate": 1.0,
+   "wilson95": [
+    0.9487,
+    1.0
+   ]
+  }
+ },
+ "note": "The blind pass read the same extraction notes, so this measures consistency of reading, not faithfulness to the web pages. Precision is not reported: the blind pass counted reported achievements as commitments by design. The first cohort is C01 to C25 (v1.5.0); the new cohort is C26 onward (v1.7.0).",
  "numeric_recall": {
   "ci95": [
-   0.6429,
+   0.9194,
    1.0
   ],
-  "found": 12,
-  "n": 14,
-  "rate": 0.857,
+  "found": 60,
+  "n": 62,
+  "rate": 0.968,
   "wilson95": [
-   0.6006,
-   0.9599
+   0.8898,
+   0.9911
   ]
  },
  "recall": {
   "ci95": [
-   0.72,
+   0.9271,
    1.0
   ],
-  "found": 22,
-  "n": 25,
-  "rate": 0.88,
+  "found": 93,
+  "n": 96,
+  "rate": 0.969,
   "wilson95": [
-   0.7004,
-   0.9583
+   0.9121,
+   0.9893
   ]
  }
 }

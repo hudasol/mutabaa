@@ -16,7 +16,7 @@ from contextlib import AbstractContextManager, contextmanager
 from datetime import date, timedelta
 
 from . import status as status_module
-from .io import ROOT, load_real
+from .io import ROOT, RealData, load_real
 from .schemas import Commitment, Evidence, EvidenceKind, Source, StatusResult
 
 ANALYSIS = ROOT / "data" / "analysis"
@@ -90,8 +90,26 @@ def _f1(p: float | None, r: float) -> float:
     return 0.0 if not p or not r else 2 * p * r / (p + r)
 
 
-def e5() -> dict:
+def registered() -> RealData:
+    """The ledger as it stood when E5 and E6 were registered (v1.6.0): C01 to C25 and S01 to S14.
+
+    The ledger grew in v1.7.0. The two experiments keep their registered scope so that their results do not
+    change when records are added.
+    """
     d = load_real()
+    ids = {c.id for c in d.commitments if int(c.id[1:]) <= 25}
+    return RealData(
+        sources=[s for s in d.sources if int(s.id[1:]) <= 14],
+        commitments=[c for c in d.commitments if c.id in ids],
+        evidence=[e for e in d.evidence if set(e.commitment_ids) <= ids],
+        claims=[k for k in d.claims if set(k.commitment_ids) <= ids],
+        searches=[q for q in d.searches if set(q.commitment_ids) <= ids],
+        verification=d.verification,
+    )
+
+
+def e5() -> dict:
+    d = registered()
     units: dict[tuple[str, int], str] = {}
     for s in d.sources:
         text = (ROOT / s.extract_file).read_text(encoding="utf-8")
@@ -151,7 +169,7 @@ def e5() -> dict:
             vals.append(recall({k for k in keys if rng.random() < share}, located))
         matched[name] = statistics.mean(vals)
 
-    blind = json.loads((ANALYSIS / "agreement.json").read_text(encoding="utf-8"))["recall"]
+    blind = json.loads((ANALYSIS / "agreement.json").read_text(encoding="utf-8"))["first_cohort"]["recall"]
     blind_rate = blind["found"] / blind["n"]
 
     best_f1 = max(rows[k]["f1"] for k in ("x1", "x2", "x3", "x4"))
@@ -351,7 +369,7 @@ def mutant_fns() -> dict[str, tuple[str, Callable[[], AbstractContextManager[Non
 
 
 def e6() -> dict:
-    d = load_real()
+    d = registered()
     as_of = max(s.retrieved for s in d.sources)
     src = {s.id: s for s in d.sources}
 

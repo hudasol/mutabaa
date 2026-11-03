@@ -1,56 +1,75 @@
 {
  "bands": {
   "grid": 25,
-  "max_changed": 9,
-  "median_changed": 1.0,
-  "n": 25
+  "max_changed": 39,
+  "median_changed": 4.0,
+  "n": 96
  },
  "consistency": {
   "dated_deadline": {
-   "agree": 22,
+   "agree": 89,
    "ci95": [
-    0.4372,
-    1.0
+    0.7352,
+    0.9374
    ],
-   "kappa": 0.746,
-   "n": 25
+   "kappa": 0.851,
+   "n": 96
   },
   "disagreements": [
    "C01",
    "C10",
    "C14",
-   "C24"
+   "C24",
+   "C43",
+   "C53",
+   "C54",
+   "C60",
+   "C65",
+   "C67",
+   "C68",
+   "C71",
+   "C72",
+   "C75",
+   "C77",
+   "C78",
+   "C83",
+   "C84",
+   "C88",
+   "C89",
+   "C90",
+   "C91",
+   "C92"
   ],
   "numeric_target": {
-   "agree": 16,
+   "agree": 64,
    "ci95": [
-    0.0,
-    1.0
+    0.079,
+    0.5177
    ],
-   "kappa": 0.609,
-   "n": 18
+   "kappa": 0.286,
+   "n": 82
   }
  },
  "note": "Computed from the curated fields. The consistency check compares two readings that both come from the same curation, so it finds slips, not judgement errors. Human validation is still outstanding.",
  "weights": {
   "draws": 1000,
   "leave_one_out": {
-   "dated_deadline": 0.914,
+   "dated_deadline": 0.907,
    "measurement_source": 0.999,
-   "numeric_target": 0.879,
-   "owner_named": 0.946,
-   "terms_defined": 1.0,
-   "unit_defined": 0.879
+   "numeric_target": 0.932,
+   "owner_named": 0.918,
+   "terms_defined": 0.953,
+   "unit_defined": 0.929
   },
   "pass_rate": {
-   "dated_deadline": 0.36,
-   "measurement_source": 0.08,
-   "numeric_target": 0.778,
-   "owner_named": 0.72,
-   "terms_defined": 0.04,
-   "unit_defined": 0.778
+   "dated_deadline": 0.562,
+   "measurement_source": 0.031,
+   "numeric_target": 0.72,
+   "owner_named": 0.74,
+   "terms_defined": 0.177,
+   "unit_defined": 0.72
   },
-  "spearman_median": 0.936,
-  "spearman_p05": 0.521
+  "spearman_median": 0.889,
+  "spearman_p05": 0.736
  }
 }

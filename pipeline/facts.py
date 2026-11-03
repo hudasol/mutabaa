@@ -120,6 +120,15 @@ def raw_facts() -> dict[str, tuple[object, str]]:
         f[f"agreement.{k}.ci_low"] = (ag[k]["ci95"][0], "pct")
         f[f"agreement.{k}.ci_high"] = (ag[k]["ci95"][1], "pct")
     f["agreement.missed"] = (ag["missed"], "list")
+    for cohort in ("first_cohort", "new_cohort"):
+        short = cohort.split("_")[0]
+        for k in ("recall", "numeric_recall"):
+            f[f"agreement.{short}.{k}.found"] = (ag[cohort][k]["found"], "int")
+            f[f"agreement.{short}.{k}.n"] = (ag[cohort][k]["n"], "int")
+            f[f"agreement.{short}.{k}.rate"] = (ag[cohort][k]["rate"], "pct")
+            f[f"agreement.{short}.{k}.wilson_low"] = (ag[cohort][k]["wilson95"][0], "pct")
+            f[f"agreement.{short}.{k}.wilson_high"] = (ag[cohort][k]["wilson95"][1], "pct")
+        f[f"agreement.{short}.missed"] = (ag[cohort]["missed"], "list")
 
     ev = _evaluation()
     for name, res in ev.items():

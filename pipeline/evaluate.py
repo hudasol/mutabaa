@@ -13,8 +13,7 @@ import random
 import statistics
 from collections.abc import Callable, Sequence
 
-from .evaluate_real import e5, e6
-from .io import load_real
+from .evaluate_real import e5, e6, registered
 from .robustness import AXES, PROFILES, SIZES, first_order_effects
 from .schemas import Commitment, Registry, ServiceItem
 from .score import score
@@ -77,7 +76,7 @@ def outcome(c: Commitment, d) -> bool:
 
 
 def e1() -> dict:
-    d = load_real()
+    d = registered()
     cs = d.commitments
     y = [outcome(c, d) for c in cs]
     s = [score(c).ratio for c in cs]
