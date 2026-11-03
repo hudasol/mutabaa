@@ -1,0 +1,332 @@
+{
+  "version": 1,
+  "note": "Word lists and patterns for the commitment linter. The Python module and the browser module read this file. Patterns use only constructs that Python re and JavaScript share, and are applied to text with ASCII digits.",
+  "units": {
+    "services": [
+      "services?",
+      "خدمة",
+      "خدمات"
+    ],
+    "sectors": [
+      "sectors?",
+      "قطاع",
+      "قطاعات"
+    ],
+    "operations": [
+      "operations?",
+      "عملية",
+      "عمليات"
+    ],
+    "solutions": [
+      "solutions?",
+      "حلول",
+      "حل"
+    ],
+    "use-cases": [
+      "use cases?",
+      "حالة استخدام",
+      "حالات استخدام"
+    ],
+    "agents": [
+      "agents?",
+      "وكيل",
+      "وكلاء"
+    ],
+    "employees": [
+      "employees?",
+      "staff",
+      "civil servants",
+      "public servants",
+      "موظف",
+      "موظفين",
+      "موظفي"
+    ],
+    "processes": [
+      "processes",
+      "process",
+      "procedures?",
+      "إجراءات",
+      "إجراء"
+    ],
+    "entities": [
+      "entities",
+      "entity",
+      "agencies",
+      "departments",
+      "ministries",
+      "جهة",
+      "جهات"
+    ],
+    "aed": [
+      "aed",
+      "dirhams?",
+      "درهم"
+    ],
+    "jobs": [
+      "jobs?",
+      "وظيفة",
+      "وظائف"
+    ],
+    "trips": [
+      "trips?",
+      "journeys?",
+      "رحلة",
+      "رحلات"
+    ],
+    "vehicles": [
+      "vehicles?",
+      "مركبة",
+      "مركبات"
+    ],
+    "transactions": [
+      "transactions?",
+      "معاملة",
+      "معاملات"
+    ],
+    "users": [
+      "users?",
+      "residents?",
+      "citizens?",
+      "مستخدم",
+      "مستخدمين",
+      "متعامل",
+      "متعاملين"
+    ],
+    "datasets": [
+      "datasets?",
+      "data sets?",
+      "مجموعة بيانات",
+      "مجموعات بيانات"
+    ],
+    "projects": [
+      "projects?",
+      "initiatives?",
+      "مشروع",
+      "مشاريع",
+      "مبادرة",
+      "مبادرات"
+    ],
+    "companies": [
+      "companies",
+      "company",
+      "start-?ups?",
+      "firms?",
+      "شركة",
+      "شركات"
+    ],
+    "identities": [
+      "identit(?:y|ies)",
+      "هوية",
+      "هويات"
+    ]
+  },
+  "currency_before": [
+    "aed",
+    "usd",
+    "\\$",
+    "dh",
+    "درهم"
+  ],
+  "magnitudes": {
+    "billion": 1000000000,
+    "bn": 1000000000,
+    "million": 1000000,
+    "thousand": 1000,
+    "k": 1000,
+    "مليار": 1000000000,
+    "مليون": 1000000,
+    "ألف": 1000
+  },
+  "percent_words": [
+    "%",
+    "percent",
+    "per cent",
+    "بالمئة",
+    "بالمائة",
+    "في المئة"
+  ],
+  "half_words": [
+    "half",
+    "نصف"
+  ],
+  "month_names": "jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?",
+  "relative_cues": [
+    "within (?:the next )?(?:\\d+|one|two|three|four|five|six|seven|eight|nine|ten|a|an) (?:years?|months?|weeks?|days?)",
+    "in the next (?:\\d+ |one |two |three |four |five |six |seven |eight |nine |ten )?(?:years?|months?|weeks?|days?)",
+    "by the end of the (?:year|decade|period|plan)",
+    "(?:^|\\s)soon(?:$|\\s|[.,;])",
+    "خلال (?:عامين|عام|سنتين|سنة|\\d+ (?:سنوات|أشهر|شهور|سنة|عام))"
+  ],
+  "owner_patterns": [
+    "(?:(?:(?!The |A |An |All |Each )[A-Z][A-Za-z&-]* ){1,3}(?:Ministry|Department|Authority|Council|Office|Committee|Taskforce|Task Force|Agency|Commission|Bureau|Centre|Center|Institute|Corporation|Foundation)(?:(?: (?:of|for|on)(?: the)?(?: [A-Z][A-Za-z&-]*){1,5}))?|(?:Ministry|Department|Authority|Council|Office|Committee|Taskforce|Task Force|Agency|Commission|Bureau|Centre|Center|Institute|Corporation|Foundation)(?: (?:of|for|on)(?: the)?(?: [A-Z][A-Za-z&-]*){1,5}))(?![A-Za-z])",
+    "(?:^|\\s)(?:وزارة|هيئة|دائرة|مجلس|مكتب|لجنة|مؤسسة|مركز|جهاز|المجلس|الهيئة|الدائرة|الوزارة)(?: [^\\s,.;:]+){1,2}"
+  ],
+  "measure_cues": [
+    "measured (?:by|through|against|using|with)",
+    "as measured",
+    "tracked (?:by|through|in|using)",
+    "reported (?:in|by|through|annually|quarterly|monthly)",
+    "published (?:in|by|annually|quarterly)",
+    "according to",
+    "audited by",
+    "verified by",
+    "assessed (?:by|through|against)",
+    "annual report",
+    "(?:^|\\s)index(?:$|\\s|[.,;])",
+    "dashboard",
+    "survey",
+    "benchmark",
+    "(?:^|\\s)(?:يقاس|يُقاس|تقاس|تُقاس|وفق|وفقا|وفقاً|حسب|تقرير سنوي|مؤشر|لوحة متابعة|استبيان|مسح)(?:$|\\s)"
+  ],
+  "definition_cues": [
+    "defined as",
+    "(?:^|\\s)means(?:$|\\s)",
+    "i\\.e\\.",
+    "that is,",
+    "refers to",
+    "is counted as",
+    "are counted as",
+    "(?:^|\\s)(?:يُعرَّف|يعرف|المقصود|أي أن|تعني|يعني)(?:$|\\s)"
+  ],
+  "vague_terms": [
+    {
+      "term": "agentic AI",
+      "patterns": [
+        "agentic(?: ai| artificial intelligence)?",
+        "الذكاء الاصطناعي الوكيل"
+      ]
+    },
+    {
+      "term": "AI native",
+      "patterns": [
+        "ai[- ]native",
+        "ai[- ]first",
+        "أصيل في الذكاء الاصطناعي"
+      ]
+    },
+    {
+      "term": "transform",
+      "patterns": [
+        "transform(?:ed|ing|ation|s)?",
+        "تحويل",
+        "تحول"
+      ]
+    },
+    {
+      "term": "smart",
+      "patterns": [
+        "smart",
+        "ذكي",
+        "ذكية"
+      ]
+    },
+    {
+      "term": "digital",
+      "patterns": [
+        "digital(?:ly|ise|ised|ize|ized|isation|ization)?",
+        "رقمي",
+        "رقمية",
+        "رقمنة"
+      ]
+    },
+    {
+      "term": "world class",
+      "patterns": [
+        "world[- ]class",
+        "world[- ]leading",
+        "global leader",
+        "leading",
+        "رائد",
+        "رائدة",
+        "عالمي المستوى"
+      ]
+    },
+    {
+      "term": "innovative",
+      "patterns": [
+        "innovative",
+        "innovation",
+        "cutting[- ]edge",
+        "state[- ]of[- ]the[- ]art",
+        "مبتكر",
+        "ابتكار"
+      ]
+    },
+    {
+      "term": "seamless",
+      "patterns": [
+        "seamless",
+        "frictionless",
+        "integrated",
+        "سلس",
+        "متكامل"
+      ]
+    },
+    {
+      "term": "proactive",
+      "patterns": [
+        "proactive",
+        "predictive",
+        "استباقي",
+        "استباقية"
+      ]
+    },
+    {
+      "term": "ecosystem",
+      "patterns": [
+        "ecosystem",
+        "منظومة"
+      ]
+    },
+    {
+      "term": "sustainable",
+      "patterns": [
+        "sustainable",
+        "sustainability",
+        "مستدام",
+        "استدامة"
+      ]
+    },
+    {
+      "term": "inclusive",
+      "patterns": [
+        "inclusive",
+        "for all",
+        "شامل",
+        "للجميع"
+      ]
+    },
+    {
+      "term": "future ready",
+      "patterns": [
+        "future[- ]ready",
+        "future[- ]proof",
+        "of the future",
+        "جاهز للمستقبل"
+      ]
+    },
+    {
+      "term": "enhance",
+      "patterns": [
+        "enhance(?:d|s|ment)?",
+        "improve(?:d|s|ment)?",
+        "strengthen(?:ed|s)?",
+        "boost",
+        "accelerate",
+        "تعزيز",
+        "تحسين",
+        "تسريع"
+      ]
+    },
+    {
+      "term": "leverage",
+      "patterns": [
+        "leverag(?:e|ed|ing)",
+        "harness(?:ed|ing)?",
+        "empower(?:ed|ing)?",
+        "تمكين",
+        "تسخير"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4152 @@
+[
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 1,
+   "ratio": 0.1667
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "empty",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": ""
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 1,
+   "ratio": 0.1667
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "spaces only",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": ""
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2028",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 40.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "kind": "target",
+  "name": "plain number percent",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Reach 40% of services online by 2028.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Reach 40% of services online by 2028.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Reach 40% of services online by 2028.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Reach 40% of services online by 2028.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Reach 40% of services online by 2028."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": true,
+    "numeric_target": true,
+    "owner_named": true,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [],
+   "passed": 6,
+   "ratio": 1.0
+  },
+  "found": {
+   "deadline_precision": "day",
+   "deadline_text": "31 December 2027",
+   "measurement_source": "measured by",
+   "owner": "Ministry of Example Affairs",
+   "target_number": 60.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "kind": "target",
+  "name": "percent with owner",
+  "questions": [],
+  "text": "The Ministry of Example Affairs will move 60% of services online by 31 December 2027, measured by the annual service report."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 2,
+   "ratio": 0.3333
+  },
+  "found": {
+   "deadline_precision": "relative",
+   "deadline_text": "within two years",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 50.0,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "word half",
+  "questions": [
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Move half of all permits to the new platform within two years.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Move half of all permits to the new platform within two years.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Move half of all permits to the new platform within two years.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Move half of all permits to the new platform within two years.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Move half of all permits to the new platform within two years.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Move half of all permits to the new platform within two years.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Move half of all permits to the new platform within two years.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Move half of all permits to the new platform within two years.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Move half of all permits to the new platform within two years."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": true,
+    "terms_defined": false,
+    "unit_defined": true
+   },
+   "missing": [
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2026",
+   "measurement_source": null,
+   "owner": "Example Digital Authority",
+   "target_number": 3000000000.0,
+   "undefined_terms": [
+    "digital"
+   ],
+   "unit": "aed"
+  },
+  "kind": "target",
+  "name": "amount billion",
+  "questions": [
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «The Example Digital Authority will commit AED 3 billion through 2024-2026.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “The Example Digital Authority will commit AED 3 billion through 2024-2026.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «The Example Digital Authority will commit AED 3 billion through 2024-2026.»، كيف يُعرَّف «digital»؟",
+    "check": "terms_defined",
+    "en": "For “The Example Digital Authority will commit AED 3 billion through 2024-2026.”, how is “digital” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "The Example Digital Authority will commit AED 3 billion through 2024-2026."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": true,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "measurement_source"
+   ],
+   "passed": 5,
+   "ratio": 0.8333
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2029",
+   "measurement_source": null,
+   "owner": "Office for Example Technology",
+   "target_number": 25000000.0,
+   "undefined_terms": [],
+   "unit": "usd"
+  },
+  "kind": "target",
+  "name": "amount million usd",
+  "questions": [
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «The Office for Example Technology will invest USD 25 million by 2029.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “The Office for Example Technology will invest USD 25 million by 2029.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "The Office for Example Technology will invest USD 25 million by 2029."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 80000.0,
+   "undefined_terms": [],
+   "unit": "employees"
+  },
+  "kind": "target",
+  "name": "thousand k",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Train 80k employees in data skills by 2027.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Train 80k employees in data skills by 2027.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Train 80k employees in data skills by 2027.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Train 80k employees in data skills by 2027.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Train 80k employees in data skills by 2027."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2026",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 1200000.0,
+   "undefined_terms": [
+    "digital"
+   ],
+   "unit": "identities"
+  },
+  "kind": "target",
+  "name": "comma thousands",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Issue 1,200,000 digital identities by the end of 2026.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Issue 1,200,000 digital identities by the end of 2026.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Issue 1,200,000 digital identities by the end of 2026.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Issue 1,200,000 digital identities by the end of 2026.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «Issue 1,200,000 digital identities by the end of 2026.»، كيف يُعرَّف «digital»؟",
+    "check": "terms_defined",
+    "en": "For “Issue 1,200,000 digital identities by the end of 2026.”, how is “digital” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "Issue 1,200,000 digital identities by the end of 2026."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "unit_defined",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "month",
+   "deadline_text": "March 2027",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 12.5,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "decimal",
+  "questions": [
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Cut processing time by 12.5% by March 2027.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Cut processing time by 12.5% by March 2027.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Cut processing time by 12.5% by March 2027.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Cut processing time by 12.5% by March 2027.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Cut processing time by 12.5% by March 2027.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Cut processing time by 12.5% by March 2027.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Cut processing time by 12.5% by March 2027."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 200.0,
+   "undefined_terms": [],
+   "unit": "solutions"
+  },
+  "kind": "target",
+  "name": "range years",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Deliver 200+ solutions during 2025-2027.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Deliver 200+ solutions during 2025-2027.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Deliver 200+ solutions during 2025-2027.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Deliver 200+ solutions during 2025-2027.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Deliver 200+ solutions during 2025-2027."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 4,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": null,
+    "owner_named": true,
+    "terms_defined": true,
+    "unit_defined": null
+   },
+   "missing": [
+    "measurement_source"
+   ],
+   "passed": 3,
+   "ratio": 0.75
+  },
+  "found": {
+   "deadline_precision": "month",
+   "deadline_text": "Q3 2026",
+   "measurement_source": null,
+   "owner": "Department of Example Services",
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "deliverable",
+  "name": "quarter",
+  "questions": [
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «The Department of Example Services will launch the portal in Q3 2026.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “The Department of Example Services will launch the portal in Q3 2026.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "The Department of Example Services will launch the portal in Q3 2026."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 2,
+   "ratio": 0.3333
+  },
+  "found": {
+   "deadline_precision": "day",
+   "deadline_text": "2027-06-30",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "milestone",
+  "name": "iso date",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Complete the migration by 2027-06-30.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Complete the migration by 2027-06-30.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Complete the migration by 2027-06-30.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Complete the migration by 2027-06-30.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Complete the migration by 2027-06-30.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Complete the migration by 2027-06-30.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Complete the migration by 2027-06-30.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Complete the migration by 2027-06-30.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Complete the migration by 2027-06-30."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "unit_defined",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "day",
+   "deadline_text": "15 March 2028",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 50.0,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "day month year",
+  "questions": [
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Reduce service centres by 50% by 15 March 2028.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Reduce service centres by 50% by 15 March 2028.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Reduce service centres by 50% by 15 March 2028.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Reduce service centres by 50% by 15 March 2028.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Reduce service centres by 50% by 15 March 2028.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Reduce service centres by 50% by 15 March 2028.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Reduce service centres by 50% by 15 March 2028."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 4,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": null,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": null
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 2,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "month",
+   "deadline_text": "June 2027",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "deliverable",
+  "name": "month year",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Open the data platform in June 2027.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Open the data platform in June 2027.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Open the data platform in June 2027.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Open the data platform in June 2027.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Open the data platform in June 2027."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 2,
+   "ratio": 0.3333
+  },
+  "found": {
+   "deadline_precision": "day",
+   "deadline_text": "December 31, 2026",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "milestone",
+  "name": "month day year",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Finish pilots by December 31, 2026.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Finish pilots by December 31, 2026.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Finish pilots by December 31, 2026.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Finish pilots by December 31, 2026.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Finish pilots by December 31, 2026.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Finish pilots by December 31, 2026.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Finish pilots by December 31, 2026.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Finish pilots by December 31, 2026.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Finish pilots by December 31, 2026."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 0,
+   "ratio": 0.0
+  },
+  "found": {
+   "deadline_precision": "relative",
+   "deadline_text": "within two years",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [
+    "transform"
+   ],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "start date skipped",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Transform services within two years of the 23 April 2026 announcement.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Transform services within two years of the 23 April 2026 announcement.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Transform services within two years of the 23 April 2026 announcement.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Transform services within two years of the 23 April 2026 announcement.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Transform services within two years of the 23 April 2026 announcement.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Transform services within two years of the 23 April 2026 announcement.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Transform services within two years of the 23 April 2026 announcement.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Transform services within two years of the 23 April 2026 announcement.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Transform services within two years of the 23 April 2026 announcement.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Transform services within two years of the 23 April 2026 announcement.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «Transform services within two years of the 23 April 2026 announcement.»، كيف يُعرَّف «transform»؟",
+    "check": "terms_defined",
+    "en": "For “Transform services within two years of the 23 April 2026 announcement.”, how is “transform” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "Transform services within two years of the 23 April 2026 announcement."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 30.0,
+   "undefined_terms": [],
+   "unit": "trips"
+  },
+  "kind": "target",
+  "name": "since date",
+  "questions": [
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Since 2021 the target has been 30% of trips autonomous.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Since 2021 the target has been 30% of trips autonomous.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Since 2021 the target has been 30% of trips autonomous.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Since 2021 the target has been 30% of trips autonomous.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Since 2021 the target has been 30% of trips autonomous.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Since 2021 the target has been 30% of trips autonomous.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Since 2021 the target has been 30% of trips autonomous."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 1,
+   "ratio": 0.1667
+  },
+  "found": {
+   "deadline_precision": "relative",
+   "deadline_text": "within six months",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "milestone",
+  "name": "relative months",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Complete the review within six months.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Complete the review within six months.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Complete the review within six months.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Complete the review within six months.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Complete the review within six months.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Complete the review within six months.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Complete the review within six months.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Complete the review within six months.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Complete the review within six months.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Complete the review within six months.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Complete the review within six months."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 1,
+   "ratio": 0.1667
+  },
+  "found": {
+   "deadline_precision": "relative",
+   "deadline_text": "in the next three years",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "relative next",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Double the number of agents in the next three years.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Double the number of agents in the next three years.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Double the number of agents in the next three years.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Double the number of agents in the next three years.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Double the number of agents in the next three years.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Double the number of agents in the next three years.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Double the number of agents in the next three years.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Double the number of agents in the next three years.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Double the number of agents in the next three years.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Double the number of agents in the next three years.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Double the number of agents in the next three years."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 0,
+   "ratio": 0.0
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [
+    "digital"
+   ],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "no deadline",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Make every service digital first.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Make every service digital first.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Make every service digital first.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Make every service digital first.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Make every service digital first.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Make every service digital first.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Make every service digital first.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Make every service digital first.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Make every service digital first.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Make every service digital first.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «Make every service digital first.»، كيف يُعرَّف «digital»؟",
+    "check": "terms_defined",
+    "en": "For “Make every service digital first.”, how is “digital” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "Make every service digital first."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 0,
+   "ratio": 0.0
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [
+    "digital",
+    "world class"
+   ],
+   "unit": null
+  },
+  "kind": "vision",
+  "name": "vision text",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «A world class digital government that serves everyone.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “A world class digital government that serves everyone.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «A world class digital government that serves everyone.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “A world class digital government that serves everyone.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «A world class digital government that serves everyone.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “A world class digital government that serves everyone.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «A world class digital government that serves everyone.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “A world class digital government that serves everyone.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «A world class digital government that serves everyone.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “A world class digital government that serves everyone.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «A world class digital government that serves everyone.»، كيف يُعرَّف «digital»؟",
+    "check": "terms_defined",
+    "en": "For “A world class digital government that serves everyone.”, how is “digital” defined?",
+    "slot": "defined_terms"
+   },
+   {
+    "ar": "في «A world class digital government that serves everyone.»، كيف يُعرَّف «world class»؟",
+    "check": "terms_defined",
+    "en": "For “A world class digital government that serves everyone.”, how is “world class” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "A world class digital government that serves everyone."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 0,
+   "ratio": 0.0
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [
+    "AI native",
+    "smart",
+    "innovative",
+    "seamless",
+    "ecosystem"
+   ],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "vague terms",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Create a smart, seamless, innovative ecosystem for AI native government.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Create a smart, seamless, innovative ecosystem for AI native government.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Create a smart, seamless, innovative ecosystem for AI native government.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Create a smart, seamless, innovative ecosystem for AI native government.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Create a smart, seamless, innovative ecosystem for AI native government.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Create a smart, seamless, innovative ecosystem for AI native government.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Create a smart, seamless, innovative ecosystem for AI native government.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Create a smart, seamless, innovative ecosystem for AI native government.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Create a smart, seamless, innovative ecosystem for AI native government.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Create a smart, seamless, innovative ecosystem for AI native government.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «Create a smart, seamless, innovative ecosystem for AI native government.»، كيف يُعرَّف «AI native»؟",
+    "check": "terms_defined",
+    "en": "For “Create a smart, seamless, innovative ecosystem for AI native government.”, how is “AI native” defined?",
+    "slot": "defined_terms"
+   },
+   {
+    "ar": "في «Create a smart, seamless, innovative ecosystem for AI native government.»، كيف يُعرَّف «smart»؟",
+    "check": "terms_defined",
+    "en": "For “Create a smart, seamless, innovative ecosystem for AI native government.”, how is “smart” defined?",
+    "slot": "defined_terms"
+   },
+   {
+    "ar": "في «Create a smart, seamless, innovative ecosystem for AI native government.»، كيف يُعرَّف «innovative»؟",
+    "check": "terms_defined",
+    "en": "For “Create a smart, seamless, innovative ecosystem for AI native government.”, how is “innovative” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "Create a smart, seamless, innovative ecosystem for AI native government."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 100.0,
+   "undefined_terms": [],
+   "unit": "agents"
+  },
+  "kind": "target",
+  "name": "defined terms",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «An AI agent is defined as software that completes a task without a person;…»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “An AI agent is defined as software that completes a task without a person;…”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «An AI agent is defined as software that completes a task without a person;…»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “An AI agent is defined as software that completes a task without a person;…”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "An AI agent is defined as software that completes a task without a person; deploy 100 agents by 2027."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": true,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": false
+   },
+   "missing": [
+    "unit_defined",
+    "owner_named",
+    "terms_defined"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2030",
+   "measurement_source": "index",
+   "owner": null,
+   "target_number": 5.0,
+   "undefined_terms": [
+    "digital"
+   ],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "measure index",
+  "questions": [
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Rank in the top 5 of the Example Digital Index by 2030, tracked through the…»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Rank in the top 5 of the Example Digital Index by 2030, tracked through the…”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Rank in the top 5 of the Example Digital Index by 2030, tracked through the…»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Rank in the top 5 of the Example Digital Index by 2030, tracked through the…”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "في «Rank in the top 5 of the Example Digital Index by 2030, tracked through the…»، كيف يُعرَّف «digital»؟",
+    "check": "terms_defined",
+    "en": "For “Rank in the top 5 of the Example Digital Index by 2030, tracked through the…”, how is “digital” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "Rank in the top 5 of the Example Digital Index by 2030, tracked through the annual index."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 4,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": true,
+    "numeric_target": null,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": null
+   },
+   "missing": [
+    "owner_named"
+   ],
+   "passed": 3,
+   "ratio": 0.75
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2026",
+   "measurement_source": "dashboard",
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "deliverable",
+  "name": "measure dashboard",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Publish a public dashboard of service volumes by 2026.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Publish a public dashboard of service volumes by 2026.”?",
+    "slot": "owner"
+   }
+  ],
+  "text": "Publish a public dashboard of service volumes by 2026."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": true,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "unit_defined",
+    "owner_named"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": "according to",
+   "owner": null,
+   "target_number": 90.0,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "measure survey",
+  "questions": [
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Reach 90% satisfaction by 2027 according to the national customer survey.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Reach 90% satisfaction by 2027 according to the national customer survey.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Reach 90% satisfaction by 2027 according to the national customer survey.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Reach 90% satisfaction by 2027 according to the national customer survey.”?",
+    "slot": "owner"
+   }
+  ],
+  "text": "Reach 90% satisfaction by 2027 according to the national customer survey."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": true,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "measurement_source"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2026",
+   "measurement_source": null,
+   "owner": "Higher Committee for Example Review",
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "milestone",
+  "name": "owner committee",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «The Higher Committee for Example Review will approve all standards by 2026.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “The Higher Committee for Example Review will approve all standards by 2026.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «The Higher Committee for Example Review will approve all standards by 2026.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “The Higher Committee for Example Review will approve all standards by 2026.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «The Higher Committee for Example Review will approve all standards by 2026.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “The Higher Committee for Example Review will approve all standards by 2026.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "The Higher Committee for Example Review will approve all standards by 2026."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 2,
+   "ratio": 0.3333
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2026",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "milestone",
+  "name": "owner the",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «The Department approves the plan by 2026.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “The Department approves the plan by 2026.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «The Department approves the plan by 2026.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “The Department approves the plan by 2026.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «The Department approves the plan by 2026.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “The Department approves the plan by 2026.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «The Department approves the plan by 2026.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “The Department approves the plan by 2026.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "The Department approves the plan by 2026."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": true,
+    "terms_defined": false,
+    "unit_defined": true
+   },
+   "missing": [
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2029",
+   "measurement_source": null,
+   "owner": "Dubai Digital Authority",
+   "target_number": 15.0,
+   "undefined_terms": [
+    "digital"
+   ],
+   "unit": "projects"
+  },
+  "kind": "target",
+  "name": "owner suffix",
+  "questions": [
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «The Dubai Digital Authority will complete 15 projects by 2029.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “The Dubai Digital Authority will complete 15 projects by 2029.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «The Dubai Digital Authority will complete 15 projects by 2029.»، كيف يُعرَّف «digital»؟",
+    "check": "terms_defined",
+    "en": "For “The Dubai Digital Authority will complete 15 projects by 2029.”, how is “digital” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "The Dubai Digital Authority will complete 15 projects by 2029."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 4,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": null,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": null
+   },
+   "missing": [
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 1,
+   "ratio": 0.25
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "deliverable",
+  "name": "owner taskforce",
+  "questions": [
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «A taskforce chaired by the Minister will report each year.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “A taskforce chaired by the Minister will report each year.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «A taskforce chaired by the Minister will report each year.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “A taskforce chaired by the Minister will report each year.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «A taskforce chaired by the Minister will report each year.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “A taskforce chaired by the Minister will report each year.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "A taskforce chaired by the Minister will report each year."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2030",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 25.0,
+   "undefined_terms": [],
+   "unit": "trips"
+  },
+  "kind": "target",
+  "name": "units trips",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Reach 25% of trips autonomous by 2030.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Reach 25% of trips autonomous by 2030.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Reach 25% of trips autonomous by 2030.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Reach 25% of trips autonomous by 2030.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Reach 25% of trips autonomous by 2030."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2026",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 5000.0,
+   "undefined_terms": [],
+   "unit": "employees"
+  },
+  "kind": "target",
+  "name": "units employees",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Train 5,000 employees by 2026.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Train 5,000 employees by 2026.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Train 5,000 employees by 2026.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Train 5,000 employees by 2026.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Train 5,000 employees by 2026."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 100.0,
+   "undefined_terms": [],
+   "unit": "use-cases"
+  },
+  "kind": "target",
+  "name": "units use cases",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Deploy 100 use cases across entities by 2027.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Deploy 100 use cases across entities by 2027.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Deploy 100 use cases across entities by 2027.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Deploy 100 use cases across entities by 2027.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Deploy 100 use cases across entities by 2027."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2025",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 500.0,
+   "undefined_terms": [],
+   "unit": "datasets"
+  },
+  "kind": "target",
+  "name": "units datasets",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Publish 500 datasets by the end of 2025.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Publish 500 datasets by the end of 2025.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Publish 500 datasets by the end of 2025.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Publish 500 datasets by the end of 2025.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Publish 500 datasets by the end of 2025."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "unit_defined",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2030",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 70.0,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "percent no unit",
+  "questions": [
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Achieve 70% by 2030.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Achieve 70% by 2030.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Achieve 70% by 2030.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Achieve 70% by 2030.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Achieve 70% by 2030.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Achieve 70% by 2030.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Achieve 70% by 2030."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 4,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": null,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": null
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 2,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2030",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "deliverable",
+  "name": "number is year only",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Launch the strategy in 2030.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Launch the strategy in 2030.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Launch the strategy in 2030.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Launch the strategy in 2030.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Launch the strategy in 2030."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2028",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 300.0,
+   "undefined_terms": [],
+   "unit": "employees"
+  },
+  "kind": "target",
+  "name": "two numbers",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Hire 300 engineers and train 1,000 staff by 2028.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Hire 300 engineers and train 1,000 staff by 2028.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Hire 300 engineers and train 1,000 staff by 2028.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Hire 300 engineers and train 1,000 staff by 2028.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Hire 300 engineers and train 1,000 staff by 2028."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 2,
+   "ratio": 0.3333
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2030",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "big text lowercase",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «the ministry of example will do this by 2030»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “the ministry of example will do this by 2030”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «the ministry of example will do this by 2030»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “the ministry of example will do this by 2030”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «the ministry of example will do this by 2030»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “the ministry of example will do this by 2030”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «the ministry of example will do this by 2030»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “the ministry of example will do this by 2030”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "the ministry of example will do this by 2030"
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 4,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": null,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": null
+   },
+   "missing": [
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 1,
+   "ratio": 0.25
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "deliverable",
+  "name": "kind deliverable",
+  "questions": [
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Establish an office for service quality.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Establish an office for service quality.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Establish an office for service quality.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Establish an office for service quality.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Establish an office for service quality.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Establish an office for service quality.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Establish an office for service quality."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 4,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": null,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": null
+   },
+   "missing": [
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 1,
+   "ratio": 0.25
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "assessment",
+  "name": "kind assessment",
+  "questions": [
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Assess entity heads on adoption, speed and tool mastery.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Assess entity heads on adoption, speed and tool mastery.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Assess entity heads on adoption, speed and tool mastery.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Assess entity heads on adoption, speed and tool mastery.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Assess entity heads on adoption, speed and tool mastery.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Assess entity heads on adoption, speed and tool mastery.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Assess entity heads on adoption, speed and tool mastery."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2031",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 335000000000.0,
+   "undefined_terms": [],
+   "unit": "aed"
+  },
+  "kind": "projection",
+  "name": "kind projection",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «AI could add AED 335 billion to the economy by 2031.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “AI could add AED 335 billion to the economy by 2031.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «AI could add AED 335 billion to the economy by 2031.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “AI could add AED 335 billion to the economy by 2031.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "AI could add AED 335 billion to the economy by 2031."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 13000000000.0,
+   "undefined_terms": [],
+   "unit": "aed"
+  },
+  "kind": "input",
+  "name": "kind input",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «The government commits AED 13 billion for 2025-2027.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “The government commits AED 13 billion for 2025-2027.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «The government commits AED 13 billion for 2025-2027.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “The government commits AED 13 billion for 2025-2027.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "The government commits AED 13 billion for 2025-2027."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 2,
+   "ratio": 0.3333
+  },
+  "found": {
+   "deadline_precision": "day",
+   "deadline_text": "2026-03-01",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "milestone",
+  "name": "kind milestone",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Approve the policy by 2026-03-01.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Approve the policy by 2026-03-01.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Approve the policy by 2026-03-01.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Approve the policy by 2026-03-01.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Approve the policy by 2026-03-01.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Approve the policy by 2026-03-01.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Approve the policy by 2026-03-01.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Approve the policy by 2026-03-01.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Approve the policy by 2026-03-01."
+ },
+ {
+  "after": {
+   "applicable": 6,
+   "band": "checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": true,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "measurement_source"
+   ],
+   "passed": 5,
+   "ratio": 0.8333
+  },
+  "after_found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": null,
+   "owner": "Example Authority",
+   "target_number": 50.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 50.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "kind": "target",
+  "name": "with fields owner",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Move 50% of services to the platform by 2027.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Move 50% of services to the platform by 2027.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Move 50% of services to the platform by 2027.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Move 50% of services to the platform by 2027.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Move 50% of services to the platform by 2027."
+ },
+ {
+  "after": {
+   "applicable": 6,
+   "band": "checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": true,
+    "numeric_target": true,
+    "owner_named": true,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [],
+   "passed": 6,
+   "ratio": 1.0
+  },
+  "after_found": {
+   "deadline_precision": "year",
+   "deadline_text": "2030",
+   "measurement_source": "Annual report",
+   "owner": "Example Authority",
+   "target_number": 50.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 0,
+   "ratio": 0.0
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [
+    "smart"
+   ],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "with fields all",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Make services smart.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Make services smart.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Make services smart.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Make services smart.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Make services smart.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Make services smart.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Make services smart.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Make services smart.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Make services smart.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Make services smart.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «Make services smart.»، كيف يُعرَّف «smart»؟",
+    "check": "terms_defined",
+    "en": "For “Make services smart.”, how is “smart” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "Make services smart."
+ },
+ {
+  "after": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "after_found": {
+   "deadline_precision": "relative",
+   "deadline_text": "within two years",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 20.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 20.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "kind": "target",
+  "name": "with fields deadline relative",
+  "questions": [
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Reach 20% of services.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Reach 20% of services.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Reach 20% of services.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Reach 20% of services.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Reach 20% of services.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Reach 20% of services.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Reach 20% of services."
+ },
+ {
+  "after": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "after_found": {
+   "deadline_precision": "relative",
+   "deadline_text": "2029-02-30",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 20.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 20.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "kind": "target",
+  "name": "with fields deadline day",
+  "questions": [
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Reach 20% of services.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Reach 20% of services.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Reach 20% of services.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Reach 20% of services.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Reach 20% of services.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Reach 20% of services.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Reach 20% of services."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2029",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 20.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "kind": "target",
+  "name": "with fields blanks",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Reach 20% of services by 2029.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Reach 20% of services by 2029.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Reach 20% of services by 2029.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Reach 20% of services by 2029.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Reach 20% of services by 2029."
+ },
+ {
+  "after": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 2,
+   "ratio": 0.3333
+  },
+  "after_found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 0.0,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 1,
+   "ratio": 0.1667
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "with fields zero",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Reach services.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Reach services.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Reach services.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Reach services.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Reach services.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Reach services.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Reach services.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Reach services.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Reach services.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Reach services.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Reach services."
+ },
+ {
+  "after": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 0,
+   "ratio": 0.0
+  },
+  "after_found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [
+    "digital"
+   ],
+   "unit": null
+  },
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 0,
+   "ratio": 0.0
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [
+    "smart",
+    "digital",
+    "ecosystem"
+   ],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "with fields partial terms",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Create a smart digital ecosystem.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Create a smart digital ecosystem.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Create a smart digital ecosystem.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Create a smart digital ecosystem.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Create a smart digital ecosystem.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Create a smart digital ecosystem.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Create a smart digital ecosystem.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Create a smart digital ecosystem.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Create a smart digital ecosystem.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Create a smart digital ecosystem.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «Create a smart digital ecosystem.»، كيف يُعرَّف «smart»؟",
+    "check": "terms_defined",
+    "en": "For “Create a smart digital ecosystem.”, how is “smart” defined?",
+    "slot": "defined_terms"
+   },
+   {
+    "ar": "في «Create a smart digital ecosystem.»، كيف يُعرَّف «digital»؟",
+    "check": "terms_defined",
+    "en": "For “Create a smart digital ecosystem.”, how is “digital” defined?",
+    "slot": "defined_terms"
+   },
+   {
+    "ar": "في «Create a smart digital ecosystem.»، كيف يُعرَّف «ecosystem»؟",
+    "check": "terms_defined",
+    "en": "For “Create a smart digital ecosystem.”, how is “ecosystem” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "Create a smart digital ecosystem."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2031",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 50.0,
+   "undefined_terms": [
+    "transform"
+   ],
+   "unit": "services"
+  },
+  "kind": "target",
+  "name": "arabic percent",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «تحويل 50% من الخدمات الحكومية إلى الذكاء الاصطناعي بحلول 2031»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “تحويل 50% من الخدمات الحكومية إلى الذكاء الاصطناعي بحلول 2031”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تحويل 50% من الخدمات الحكومية إلى الذكاء الاصطناعي بحلول 2031»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “تحويل 50% من الخدمات الحكومية إلى الذكاء الاصطناعي بحلول 2031”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «تحويل 50% من الخدمات الحكومية إلى الذكاء الاصطناعي بحلول 2031»، كيف يُعرَّف «transform»؟",
+    "check": "terms_defined",
+    "en": "For “تحويل 50% من الخدمات الحكومية إلى الذكاء الاصطناعي بحلول 2031”, how is “transform” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "تحويل 50% من الخدمات الحكومية إلى الذكاء الاصطناعي بحلول 2031"
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": true,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "terms_defined"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2028",
+   "measurement_source": "وفق",
+   "owner": null,
+   "target_number": 75.0,
+   "undefined_terms": [
+    "digital"
+   ],
+   "unit": "solutions"
+  },
+  "kind": "target",
+  "name": "arabic indic digits",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «رفع نسبة الخدمات الرقمية إلى 75% بحلول 2028 وفق مؤشر سنوي»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “رفع نسبة الخدمات الرقمية إلى 75% بحلول 2028 وفق مؤشر سنوي”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "في «رفع نسبة الخدمات الرقمية إلى 75% بحلول 2028 وفق مؤشر سنوي»، كيف يُعرَّف «digital»؟",
+    "check": "terms_defined",
+    "en": "For “رفع نسبة الخدمات الرقمية إلى 75% بحلول 2028 وفق مؤشر سنوي”, how is “digital” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "رفع نسبة الخدمات الرقمية إلى 75% بحلول 2028 وفق مؤشر سنوي"
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": true,
+    "terms_defined": false,
+    "unit_defined": true
+   },
+   "missing": [
+    "dated_deadline",
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "relative",
+   "deadline_text": "خلال عامين",
+   "measurement_source": null,
+   "owner": "وزارة الشؤون الرقمية",
+   "target_number": 5000.0,
+   "undefined_terms": [
+    "digital"
+   ],
+   "unit": "employees"
+  },
+  "kind": "target",
+  "name": "arabic owner",
+  "questions": [
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «ستقوم وزارة الشؤون الرقمية بتدريب 5000 موظف خلال عامين»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “ستقوم وزارة الشؤون الرقمية بتدريب 5000 موظف خلال عامين” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «ستقوم وزارة الشؤون الرقمية بتدريب 5000 موظف خلال عامين»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “ستقوم وزارة الشؤون الرقمية بتدريب 5000 موظف خلال عامين”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «ستقوم وزارة الشؤون الرقمية بتدريب 5000 موظف خلال عامين»، كيف يُعرَّف «digital»؟",
+    "check": "terms_defined",
+    "en": "For “ستقوم وزارة الشؤون الرقمية بتدريب 5000 موظف خلال عامين”, how is “digital” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "ستقوم وزارة الشؤون الرقمية بتدريب 5000 موظف خلال عامين"
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "relative",
+   "deadline_text": "خلال عامين",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 20.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "kind": "target",
+  "name": "arabic relative",
+  "questions": [
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «إطلاق 20 خدمة جديدة خلال عامين»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “إطلاق 20 خدمة جديدة خلال عامين” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «إطلاق 20 خدمة جديدة خلال عامين»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “إطلاق 20 خدمة جديدة خلال عامين”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «إطلاق 20 خدمة جديدة خلال عامين»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “إطلاق 20 خدمة جديدة خلال عامين”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "إطلاق 20 خدمة جديدة خلال عامين"
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 40.0,
+   "undefined_terms": [],
+   "unit": "agents"
+  },
+  "kind": "target",
+  "name": "arabic definition",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «يعني الذكاء الاصطناعي الوكيل هنا برنامجاً ينفذ مهمة وحده؛ نشر 40 وكيل بحلول 2027»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “يعني الذكاء الاصطناعي الوكيل هنا برنامجاً ينفذ مهمة وحده؛ نشر 40 وكيل بحلول 2027”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «يعني الذكاء الاصطناعي الوكيل هنا برنامجاً ينفذ مهمة وحده؛ نشر 40 وكيل بحلول 2027»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “يعني الذكاء الاصطناعي الوكيل هنا برنامجاً ينفذ مهمة وحده؛ نشر 40 وكيل بحلول 2027”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "يعني الذكاء الاصطناعي الوكيل هنا برنامجاً ينفذ مهمة وحده؛ نشر 40 وكيل بحلول 2027"
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2029",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 30.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "kind": "target",
+  "name": "arabic mixed",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Launch 30 خدمة by 2029»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Launch 30 خدمة by 2029”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Launch 30 خدمة by 2029»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Launch 30 خدمة by 2029”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Launch 30 خدمة by 2029"
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 0,
+   "ratio": 0.0
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [
+    "digital",
+    "world class"
+   ],
+   "unit": null
+  },
+  "kind": "vision",
+  "name": "arabic no number",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «نريد حكومة رقمية رائدة»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “نريد حكومة رقمية رائدة”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «نريد حكومة رقمية رائدة»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “نريد حكومة رقمية رائدة”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «نريد حكومة رقمية رائدة»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “نريد حكومة رقمية رائدة” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «نريد حكومة رقمية رائدة»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “نريد حكومة رقمية رائدة”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «نريد حكومة رقمية رائدة»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “نريد حكومة رقمية رائدة”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «نريد حكومة رقمية رائدة»، كيف يُعرَّف «digital»؟",
+    "check": "terms_defined",
+    "en": "For “نريد حكومة رقمية رائدة”, how is “digital” defined?",
+    "slot": "defined_terms"
+   },
+   {
+    "ar": "في «نريد حكومة رقمية رائدة»، كيف يُعرَّف «world class»؟",
+    "check": "terms_defined",
+    "en": "For “نريد حكومة رقمية رائدة”, how is “world class” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "نريد حكومة رقمية رائدة"
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 30.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "kind": "target",
+  "name": "nbsp-free tabs",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Reach 30% of services by 2027.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Reach 30% of services by 2027.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Reach 30% of services by 2027.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Reach 30% of services by 2027.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Reach 30% of services by 2027."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2029",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 85.0,
+   "undefined_terms": [],
+   "unit": "services"
+  },
+  "kind": "target",
+  "name": "long text",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Increase the share of government services that are fully available online to…»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Increase the share of government services that are fully available online to…”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Increase the share of government services that are fully available online to…»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Increase the share of government services that are fully available online to…”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Increase the share of government services that are fully available online to 85% of all services by the end of 2029. Increase the share of government services that are fully available online to 85% of all services by the end of 2029. Increase the share of government services that are fully available online to 85% of all services by the end of 2029. Increase the share of government services that are fully available online to 85% of all services by the end of 2029. Increase the share of government services that are fully available online to 85% of all services by the end of 2029. Increase the share of government services that are fully available online to 85% of all services by the end of 2029."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 30.0,
+   "undefined_terms": [],
+   "unit": "operations"
+  },
+  "kind": "target",
+  "name": "percent word",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Reach 30 percent of operations by 2027.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Reach 30 percent of operations by 2027.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Reach 30 percent of operations by 2027.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Reach 30 percent of operations by 2027.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Reach 30 percent of operations by 2027."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 30.0,
+   "undefined_terms": [],
+   "unit": "operations"
+  },
+  "kind": "target",
+  "name": "per cent",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Reach 30 per cent of operations by 2027.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Reach 30 per cent of operations by 2027.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Reach 30 per cent of operations by 2027.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Reach 30 per cent of operations by 2027.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Reach 30 per cent of operations by 2027."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 200.0,
+   "undefined_terms": [],
+   "unit": "solutions"
+  },
+  "kind": "target",
+  "name": "plus sign",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Deploy 200+ solutions by 2027.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Deploy 200+ solutions by 2027.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Deploy 200+ solutions by 2027.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Deploy 200+ solutions by 2027.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Deploy 200+ solutions by 2027."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 4,
+   "ratio": 0.6667
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2028",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 2000000000.0,
+   "undefined_terms": [],
+   "unit": "usd"
+  },
+  "kind": "target",
+  "name": "dollar",
+  "questions": [
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Raise $2 billion for the fund by 2028.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Raise $2 billion for the fund by 2028.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Raise $2 billion for the fund by 2028.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Raise $2 billion for the fund by 2028.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Raise $2 billion for the fund by 2028."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "partly-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 3,
+   "ratio": 0.5
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": 202025.0,
+   "undefined_terms": [],
+   "unit": "users"
+  },
+  "kind": "target",
+  "name": "year inside number",
+  "questions": [
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Serve 20,2025 users.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Serve 20,2025 users.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Serve 20,2025 users.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Serve 20,2025 users.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Serve 20,2025 users.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Serve 20,2025 users.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Serve 20,2025 users."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 1,
+   "ratio": 0.1667
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "february 30",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Complete by 30 February 2027.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Complete by 30 February 2027.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Complete by 30 February 2027.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Complete by 30 February 2027.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Complete by 30 February 2027.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Complete by 30 February 2027.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Complete by 30 February 2027.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Complete by 30 February 2027.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Complete by 30 February 2027.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Complete by 30 February 2027.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Complete by 30 February 2027."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 0,
+   "ratio": 0.0
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [
+    "digital",
+    "world class"
+   ],
+   "unit": null
+  },
+  "kind": "vision",
+  "name": "leading",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Be a leading digital government.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Be a leading digital government.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Be a leading digital government.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Be a leading digital government.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Be a leading digital government.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Be a leading digital government.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Be a leading digital government.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Be a leading digital government.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Be a leading digital government.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Be a leading digital government.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «Be a leading digital government.»، كيف يُعرَّف «digital»؟",
+    "check": "terms_defined",
+    "en": "For “Be a leading digital government.”, how is “digital” defined?",
+    "slot": "defined_terms"
+   },
+   {
+    "ar": "في «Be a leading digital government.»، كيف يُعرَّف «world class»؟",
+    "check": "terms_defined",
+    "en": "For “Be a leading digital government.”, how is “world class” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "Be a leading digital government."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": false,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source",
+    "terms_defined"
+   ],
+   "passed": 0,
+   "ratio": 0.0
+  },
+  "found": {
+   "deadline_precision": "none",
+   "deadline_text": null,
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [
+    "enhance"
+   ],
+   "unit": null
+  },
+  "kind": "target",
+  "name": "improve",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Improve services and enhance outcomes.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Improve services and enhance outcomes.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Improve services and enhance outcomes.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Improve services and enhance outcomes.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Improve services and enhance outcomes.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Improve services and enhance outcomes.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Improve services and enhance outcomes.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Improve services and enhance outcomes.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Improve services and enhance outcomes.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Improve services and enhance outcomes.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   },
+   {
+    "ar": "في «Improve services and enhance outcomes.»، كيف يُعرَّف «enhance»؟",
+    "check": "terms_defined",
+    "en": "For “Improve services and enhance outcomes.”, how is “enhance” defined?",
+    "slot": "defined_terms"
+   }
+  ],
+  "text": "Improve services and enhance outcomes."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "not-yet-checkable",
+   "checks": {
+    "dated_deadline": false,
+    "measurement_source": false,
+    "numeric_target": false,
+    "owner_named": false,
+    "terms_defined": true,
+    "unit_defined": false
+   },
+   "missing": [
+    "numeric_target",
+    "unit_defined",
+    "dated_deadline",
+    "owner_named",
+    "measurement_source"
+   ],
+   "passed": 1,
+   "ratio": 0.1667
+  },
+  "found": {
+   "deadline_precision": "relative",
+   "deadline_text": "by the end of the year",
+   "measurement_source": null,
+   "owner": null,
+   "target_number": null,
+   "undefined_terms": [],
+   "unit": null
+  },
+  "kind": "milestone",
+  "name": "end of year",
+  "questions": [
+   {
+    "ar": "ما الرقم الذي يُعرّف النجاح في «Finish the work by the end of the year.»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+    "check": "numeric_target",
+    "en": "What number defines success for “Finish the work by the end of the year.”, and is it a minimum, an exact value or a ceiling?",
+    "slot": "target_number"
+   },
+   {
+    "ar": "ما الذي يُعدّ تحديداً في «Finish the work by the end of the year.»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+    "check": "unit_defined",
+    "en": "What exactly is counted for “Finish the work by the end of the year.”? Name the unit and the denominator it is measured against.",
+    "slot": "unit"
+   },
+   {
+    "ar": "في أي تاريخ ميلادي يجب تحقيق «Finish the work by the end of the year.»، ومن أي تاريخ بدء يُحتسب؟",
+    "check": "dated_deadline",
+    "en": "By what calendar date must “Finish the work by the end of the year.” be met, and from what start date is it counted?",
+    "slot": "deadline"
+   },
+   {
+    "ar": "ما الجهة المسؤولة عن تنفيذ «Finish the work by the end of the year.»؟",
+    "check": "owner_named",
+    "en": "Which entity is accountable for delivering “Finish the work by the end of the year.”?",
+    "slot": "owner"
+   },
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «Finish the work by the end of the year.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “Finish the work by the end of the year.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "Finish the work by the end of the year."
+ },
+ {
+  "after": null,
+  "after_found": null,
+  "before": {
+   "applicable": 6,
+   "band": "checkable",
+   "checks": {
+    "dated_deadline": true,
+    "measurement_source": false,
+    "numeric_target": true,
+    "owner_named": true,
+    "terms_defined": true,
+    "unit_defined": true
+   },
+   "missing": [
+    "measurement_source"
+   ],
+   "passed": 5,
+   "ratio": 0.8333
+  },
+  "found": {
+   "deadline_precision": "year",
+   "deadline_text": "2027",
+   "measurement_source": null,
+   "owner": "Authority for Example Registration",
+   "target_number": 10000.0,
+   "undefined_terms": [],
+   "unit": "vehicles"
+  },
+  "kind": "target",
+  "name": "owner in arabic with english",
+  "questions": [
+   {
+    "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «The Authority for Example Registration will register 10,000 vehicles by 2027.»، ومن ينشره وبأي دورية؟",
+    "check": "measurement_source",
+    "en": "Which dataset or report will be used to measure “The Authority for Example Registration will register 10,000 vehicles by 2027.”, and who publishes it, how often?",
+    "slot": "measurement_source"
+   }
+  ],
+  "text": "The Authority for Example Registration will register 10,000 vehicles by 2027."
+ }
+]

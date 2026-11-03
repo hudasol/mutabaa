@@ -236,7 +236,16 @@ def golden_files() -> dict[str, str]:
         "questions.json": dump(qs),
         "portfolio.json": dump(pf),
         "own_outputs.json": dump(own_outputs()),
+        "lint_outputs.json": dump(lint_outputs()),
     }
+
+
+def lint_outputs() -> list[dict]:
+    """The linter's result for every case in data/golden/lint_inputs.json (the browser must match)."""
+    from .lint import lint
+
+    cases = json.loads((GOLDEN / "lint_inputs.json").read_text(encoding="utf-8"))
+    return [{"name": c["name"], **lint(c["text"], c.get("kind", "target"), c.get("fields"))} for c in cases]
 
 
 def own_outputs() -> list[dict]:
@@ -368,6 +377,59 @@ def cmd_build() -> int:
     return 0
 
 
+def _checks(s: dict) -> str:
+    return f"{s['passed']} of {s['applicable']} checks ({s['ratio']:.2f}, {s['band']})"
+
+
+def cmd_lint(args: argparse.Namespace) -> int:
+    """mutabaa lint TEXT: read one commitment sentence and say what it states and what it lacks."""
+    from .lint import lint
+
+    text = args.text
+    if args.file:
+        try:
+            text = Path(args.file).read_text(encoding="utf-8")
+        except (OSError, UnicodeDecodeError) as exc:
+            print(f"mutabaa: {args.file}: {exc}", file=sys.stderr)
+            return 2
+    if not text or not text.strip():
+        print("mutabaa: give the commitment text, or --file", file=sys.stderr)
+        return 2
+    fields: dict = {}
+    if args.number is not None:
+        fields["target_number"] = args.number
+    for key, val in (("unit", args.unit), ("deadline", args.deadline), ("owner", args.owner),
+                     ("measurement_source", args.source)):
+        if val:
+            fields[key] = val
+    res = lint(text, args.kind, fields or None)
+    if args.format == "json":
+        print(json.dumps(res, ensure_ascii=False, indent=1, sort_keys=True))
+    else:
+        f = res["found"]
+        print(f"Text: {res['text']}")
+        labels = (("Target number", "target_number"), ("Unit", "unit"), ("Deadline", "deadline_text"),
+                  ("Owner", "owner"), ("Measured by", "measurement_source"))
+        for label, key in labels:
+            print(f"{label}: {f[key] if f[key] is not None else '(not stated)'}")
+        print("Terms without a definition: " + (", ".join(f["undefined_terms"]) or "(none)"))
+        b = res["before"]
+        print(f"Score of the wording: {_checks(b)}")
+        if res["after"]:
+            a = res["after"]
+            print(f"Score with your answers: {_checks(a)}")
+        if res["questions"]:
+            print("Questions to answer:")
+            for q in res["questions"]:
+                if args.lang in ("en", "both"):
+                    print(f"  - {q['en']}")
+                if args.lang in ("ar", "both"):
+                    print(f"  - {q['ar']}")
+    if args.min_ratio is not None and res["before"]["ratio"] < args.min_ratio:
+        return 1
+    return 0
+
+
 def cmd_own(args: argparse.Namespace) -> int:
     """Score the commitments in the file given on the command line. Exit 1 when a gate is not met."""
     path = Path(args.file)
@@ -432,6 +494,19 @@ def build_parser() -> argparse.ArgumentParser:
         q.add_argument("--strict", action="store_true", help="exit 1 if any row is rejected")
         q.add_argument("--min-ratio", type=_ratio, metavar="R", help="exit 1 if any score is below R")
     sub.add_parser("template", help="print a CSV template with the expected columns")
+    li = sub.add_parser("lint", help="read one commitment sentence: what it states and what it lacks")
+    li.add_argument("text", nargs="?", default="", help="the commitment wording (or use --file)")
+    li.add_argument("--file", help="read the wording from a UTF-8 text file")
+    kinds = ("target", "milestone", "deliverable", "assessment", "vision")
+    li.add_argument("--kind", choices=kinds, default="target")
+    li.add_argument("--format", choices=("text", "json"), default="text")
+    li.add_argument("--lang", choices=("en", "ar", "both"), default="en", help="question language")
+    li.add_argument("--number", type=float, help="your answer: the target number")
+    li.add_argument("--unit", help="your answer: what is counted")
+    li.add_argument("--deadline", help="your answer: the date")
+    li.add_argument("--owner", help="your answer: who is responsible")
+    li.add_argument("--source", help="your answer: how it is measured")
+    li.add_argument("--min-ratio", type=_ratio, metavar="R", help="exit 1 if the wording scores below R")
     for name, help_ in (
         ("validate", "integrity checks on the real data"),
         ("rehash", "refresh the source note hashes"),
@@ -473,6 +548,8 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     if args.command in ("score", "questions"):
         return cmd_own(args)
+    if args.command == "lint":
+        return cmd_lint(args)
     if args.command == "diff":
         return cmd_diff([args.ref])
     if args.command == "verify-live":
