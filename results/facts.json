@@ -891,17 +891,209 @@
   "text": "43",
   "value": 43
  },
+ "e8.P8a": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e8.P8b": {
+  "text": "MISS",
+  "value": "MISS"
+ },
+ "e8.P8c": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e8.P8d": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e8.P8e": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e8.auc": {
+  "text": "0.69",
+  "value": 0.6944444444444444
+ },
+ "e8.baseline.digit": {
+  "text": "0.50",
+  "value": 0.5
+ },
+ "e8.baseline.length": {
+  "text": "0.60",
+  "value": 0.5954861111111112
+ },
+ "e8.ci_high": {
+  "text": "0.85",
+  "value": 0.85
+ },
+ "e8.ci_low": {
+  "text": "0.52",
+  "value": 0.5242784120227039
+ },
+ "e8.full.auc": {
+  "text": "0.52",
+  "value": 0.5208
+ },
+ "e8.full.n": {
+  "text": "18",
+  "value": 18
+ },
+ "e8.full.negatives": {
+  "text": "6",
+  "value": 6
+ },
+ "e8.full.p": {
+  "text": "0.470",
+  "value": 0.4705
+ },
+ "e8.full.positives": {
+  "text": "12",
+  "value": 12
+ },
+ "e8.n": {
+  "text": "36",
+  "value": 36
+ },
+ "e8.negatives": {
+  "text": "24",
+  "value": 24
+ },
+ "e8.p": {
+  "text": "0.026",
+  "value": 0.026297370262973702
+ },
+ "e8.positives": {
+  "text": "12",
+  "value": 12
+ },
+ "e8.searches.not_run": {
+  "text": "53",
+  "value": 53
+ },
+ "e8.share": {
+  "text": "33%",
+  "value": 0.3333333333333333
+ },
+ "e8.strict.auc": {
+  "text": "0.80",
+  "value": 0.8008
+ },
+ "e8.strict.n": {
+  "text": "36",
+  "value": 36
+ },
+ "e8.strict.p": {
+  "text": "0.023",
+  "value": 0.0226
+ },
+ "e8.strict.positives": {
+  "text": "4",
+  "value": 4
+ },
+ "e9.P9a": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e9.P9b": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e9.P9c": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e9.P9d": {
+  "text": "MISS",
+  "value": "MISS"
+ },
+ "e9.P9e": {
+  "text": "MISS",
+  "value": "MISS"
+ },
+ "e9.P9f": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e9.P9g": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e9.band": {
+  "text": "0.61",
+  "value": 0.6145833333333334
+ },
+ "e9.n": {
+  "text": "96",
+  "value": 96
+ },
+ "e9.number.both": {
+  "text": "58",
+  "value": 58
+ },
+ "e9.number.digit_f1": {
+  "text": "0.86",
+  "value": 0.8591549295774648
+ },
+ "e9.number.f1": {
+  "text": "0.91",
+  "value": 0.9133858267716536
+ },
+ "e9.number.precision": {
+  "text": "0.89",
+  "value": 0.8923076923076924
+ },
+ "e9.number.recall": {
+  "text": "0.94",
+  "value": 0.9354838709677419
+ },
+ "e9.number.value": {
+  "text": "0.95",
+  "value": 0.9482758620689655
+ },
+ "e9.owner": {
+  "text": "0.30",
+  "value": 0.3020833333333333
+ },
+ "e9.owner.baseline": {
+  "text": "0.74",
+  "value": 0.7395833333333334
+ },
+ "e9.rho": {
+  "text": "0.48",
+  "value": 0.4839262384716173
+ },
+ "e9.source.fn": {
+  "text": "3",
+  "value": 3
+ },
+ "e9.source.fp": {
+  "text": "1",
+  "value": 1
+ },
+ "e9.source.tp": {
+  "text": "0",
+  "value": 0
+ },
+ "e9.year": {
+  "text": "0.94",
+  "value": 0.9444444444444444
+ },
+ "e9.year.n": {
+  "text": "54",
+  "value": 54
+ },
  "evaluation.hits": {
-  "text": "22",
-  "value": 22
+  "text": "31",
+  "value": 31
  },
  "evaluation.misses": {
-  "text": "5",
-  "value": 5
+  "text": "8",
+  "value": 8
  },
  "evaluation.predictions": {
-  "text": "27",
-  "value": 27
+  "text": "39",
+  "value": 39
  },
  "evidence.count": {
   "text": "10",

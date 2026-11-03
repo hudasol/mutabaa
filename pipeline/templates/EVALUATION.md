@@ -69,6 +69,18 @@ The design, metrics, baselines, seeds and predictions were committed in `PREREGI
 | P7c | Recall on the new commitments lower than 88% | {e7.new.recall} against {e7.first.recall} on the first cohort | {e7.P7c} |
 | P7d | At least 60% of the new sources verified on the first run | {e7.verified.first} of {e7.new.sources} ({e7.verified.first.share}) | {e7.P7d} |
 | P7e | At most 15% of the new commitments in the band checkable | {e7.checkable} of {e7.new.commitments} ({e7.checkable.share}) | {e7.P7e} |
+| P8a | Score AUC at least 0.55 against a later public report | AUC {e8.auc} | {e8.P8a} |
+| P8b | One sided permutation p at least 0.05 | p {e8.p} | {e8.P8b} |
+| P8c | Score AUC at least the better baseline minus 0.05 | baselines {e8.baseline.length} (length), {e8.baseline.digit} (a digit) | {e8.P8c} |
+| P8d | Between 10% and 40% of the population has a later public report | {e8.positives} of {e8.n} ({e8.share}) | {e8.P8d} |
+| P8e | Score AUC above the statement length AUC | {e8.auc} against {e8.baseline.length} | {e8.P8e} |
+| P9a | Linter number presence F1 at least 0.85 | {e9.number.f1} | {e9.P9a} |
+| P9b | Linter number value agreement at least 0.80 | {e9.number.value} on {e9.number.both} commitments | {e9.P9b} |
+| P9c | Deadline year agreement at least 0.80 | {e9.year} on {e9.year.n} commitments | {e9.P9c} |
+| P9d | Owner presence accuracy at least 0.70 | {e9.owner} (always predicting the common class gives {e9.owner.baseline}) | {e9.P9d} |
+| P9e | Spearman correlation of the two ratios at least 0.60 | {e9.rho} | {e9.P9e} |
+| P9f | Exact band agreement at least 0.60 | {e9.band} | {e9.P9f} |
+| P9g | Linter number presence F1 above the digit baseline | {e9.number.f1} against {e9.number.digit_f1} | {e9.P9g} |
 
 ### E1. Score against an observable outcome (real ledger)
 
@@ -110,6 +122,16 @@ On the {e6.commitments} real commitments, with evidence added in memory only, th
 
 The ledger grew from 25 commitments and 14 sources to {e7.new.commitments} more commitments from {e7.new.sources} more sources. The blind second reading found {e7.new.recall.found} of the new commitments (95% Wilson interval {e7.new.recall.ci_low} to {e7.new.recall.ci_high}), above the {e7.first.recall} it reached on the first cohort, so P7c is a miss. Two things limit how far that figure can be read. The blind reader read the same extraction notes as the first reader, so it measures consistency of reading, not faithfulness to the pages. The notes for the new cohort were also written to a more regular template than the first cohort, which probably makes them easier to read twice. We did not test that explanation. Of the new sources, {e7.verified.first} of {e7.new.sources} were verified on the first run of `verify-live`; the rest were unreachable pages or expectations that paraphrased the page, and were corrected afterwards as recorded in `docs/DECISIONS_OVERNIGHT.md`. After the corrections {e7.verified.now} of {e7.new.sources} are verified; that figure is not a prediction result. {e7.checkable} of the new commitments reach the band checkable, which supports the finding that most public commitments are not yet checkable as written.
 
+### E8. Does the score predict a later public report? (validity study)
+
+Population: the {e8.n} commitments with a deadline before 30 June 2026. The scores were frozen and committed before any outcome was searched (`data/e8/frozen_scores.json`). The outcome is a dated official document on the same measure, found with a fixed search protocol; {e8.positives} commitments have one and {e8.negatives} do not. The score has AUC {e8.auc} (95% bootstrap interval {e8.ci_low} to {e8.ci_high}), the statement length baseline has {e8.baseline.length} and the digit baseline {e8.baseline.digit}. The one sided permutation p is {e8.p}. We had predicted that the sample was too small to separate the score from chance (P8b); that prediction was a miss, because the p value is below 0.05.
+
+This is not strong evidence, for four reasons. First, the interval runs from {e8.ci_low} to {e8.ci_high}, so the lower end is barely above chance. Second, the search tool's shared budget ran out during the completion pass, so {e8.searches.not_run} of the registered searches were never run and only {e8.full.negatives} of the {e8.negatives} commitments with no report had all eight; outcome 0 means that no qualifying document was found with the searches that ran, not that none exists. Third, two exploratory analyses, not predicted, point different ways. Counting every positive that carries a recorded doubt as 0 leaves {e8.strict.positives} positives and gives AUC {e8.strict.auc} (p {e8.strict.p}). Keeping only the commitments that are positive or fully searched leaves {e8.full.n} commitments and gives AUC {e8.full.auc} (p {e8.full.p}). The first raises the estimate, the second removes the signal, which is what a fragile result looks like. Fourth, ten of the twelve positives come from the press office of one government, so the result may describe how that office reports and not commitments in general.
+
+### E9. Does the linter recover what the ledger records?
+
+The linter reads only the English statement of each of the {e9.n} commitments, with the rules frozen at the hash in `PREREGISTRATION.md`. Number presence: F1 {e9.number.f1} (precision {e9.number.precision}, recall {e9.number.recall}) against {e9.number.digit_f1} for a plain digit test. Where both find a number, the value is the same in {e9.number.value} of {e9.number.both} commitments. The deadline year agrees in {e9.year} of {e9.year.n} dated commitments. The linter finds an owner where the ledger has one with accuracy {e9.owner}, below the {e9.owner.baseline} of a constant guess, and the two scores correlate at {e9.rho}, so P9d and P9e are misses. The owner patterns are probably too narrow for the way the ledger names owners (we did not test this); the rules stay frozen and a fix would be a new, labelled version. The measurement source field is rare in the ledger, so it is reported without a prediction: the linter and the ledger agree on {e9.source.tp} commitments, the linter flags {e9.source.fp} the ledger does not, and misses {e9.source.fn}.
+
 ### The misses, explained
 
 - **P4a and P4b.** We expected the percentile bootstrap to fall short of 95% at moderate rates. It did not: at 0.70 and 0.88 it covered at or slightly above the nominal level. Our expectation came from the general result that percentile intervals under cover in small samples. A likely explanation, which we have not tested, is that with 25 binary items the bootstrap distribution moves in steps of 1/25 and the interval ends include whole steps, which adds coverage. The failure is concentrated where we also predicted it, near the top of the range, where a run with all successes gives an interval of zero width. The prediction was wrong at moderate rates and is kept as a miss.
@@ -124,5 +146,7 @@ The ledger grew from 25 commitments and 14 sources to {e7.new.commitments} more 
 - E3 measures noise by resampling items within an entity, which assumes the items are a sample from a larger population of similar items. If an office's registry is complete, a rank change has no sampling noise, but it still has measurement noise in the maturity ratings, which this experiment does not model.
 - E4 simulates independent binary items with a fixed rate. Real agreement items are not exchangeable, so real coverage may differ.
 - E5 uses the extraction notes as its text, not the source pages, and the notes were written by the same process that made the ledger. The rules are the simplest a developer would write; a better extractor is possible and was not tried. Unit precision is a lower bound.
+- E8 has {e8.n} commitments and {e8.positives} positives, outcomes searched by language model readers with a web search tool whose shared budget ran out, one office supplying most positives, and a score whose fields were extracted by the same process that made the ledger. It does not show that verifiable wording causes reporting.
+- E9 compares the linter with fields that the same author curated from the same pages, so the two are not independent. It measures agreement, not accuracy.
 - E7 uses one blind reader that is a language model, a single run, and notes written by the same author as the ledger. A human reader may find fewer commitments. Commitments were chosen from official pages that state targets, which favours the numeric ones.
 - E6 tests that the rules do what they promise on 25 commitments and perturbations that we wrote. It says nothing about whether the rules are the right ones, and nothing about accuracy, because no gold labels exist for status.

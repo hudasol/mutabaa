@@ -17,8 +17,10 @@ from datetime import date, timedelta
 
 from . import status as status_module
 from .io import ROOT, RealData, load_real
+from .lint import lint
 from .schemas import Commitment, Evidence, EvidenceKind, Source, StatusResult
 from .score import score
+from .stats import spearman
 
 ANALYSIS = ROOT / "data" / "analysis"
 FIRST_COHORT_LAST = 25
@@ -487,3 +489,96 @@ def e7() -> dict:
         "predictions": preds,
         "facts": facts,
     }
+
+
+def _f1_counts(tp: int, fp: int, fn: int) -> float:
+    p = tp / (tp + fp) if tp + fp else 0.0
+    r = tp / (tp + fn) if tp + fn else 0.0
+    return 0.0 if not p or not r else 2 * p * r / (p + r)
+
+
+def e9() -> dict:
+    """E9: the linter, reading only the English statement, against the curated fields (all commitments)."""
+    d = load_real()
+    rows = []
+    for c in d.commitments:
+        r = lint(c.statement)
+        f = r["found"]
+        s = score(c)
+        year_c = c.deadline.year if c.deadline and c.deadline_precision in ("day", "month", "year") else None
+        m = re.search(r"(?:19|20)\d{2}", f["deadline_text"] or "")
+        rows.append(
+            {
+                "id": c.id,
+                "num_c": c.target_number is not None,
+                "num_l": f["target_number"] is not None,
+                "num_equal": c.target_number is not None
+                and f["target_number"] is not None
+                and abs(c.target_number - f["target_number"]) < 1e-9,
+                "digit": bool(re.search(r"\d", c.statement)),
+                "year_c": year_c,
+                "year_l": int(m.group(0)) if m else None,
+                "own_c": c.owner is not None,
+                "own_l": f["owner"] is not None,
+                "src_c": c.measurement_source is not None,
+                "src_l": f["measurement_source"] is not None,
+                "ratio_c": s.ratio,
+                "ratio_l": r["before"]["ratio"],
+                "band_c": s.band,
+                "band_l": r["before"]["band"],
+            }
+        )
+    n = len(rows)
+    tp = sum(x["num_c"] and x["num_l"] for x in rows)
+    fp = sum(not x["num_c"] and x["num_l"] for x in rows)
+    fn = sum(x["num_c"] and not x["num_l"] for x in rows)
+    f1 = _f1_counts(tp, fp, fn)
+    dtp = sum(x["num_c"] and x["digit"] for x in rows)
+    dfp = sum(not x["num_c"] and x["digit"] for x in rows)
+    dfn = sum(x["num_c"] and not x["digit"] for x in rows)
+    f1_digit = _f1_counts(dtp, dfp, dfn)
+    both = [x for x in rows if x["num_c"] and x["num_l"]]
+    value_agree = sum(x["num_equal"] for x in both) / len(both) if both else 0.0
+    dated = [x for x in rows if x["year_c"] is not None]
+    year_agree = sum(x["year_l"] == x["year_c"] for x in dated) / len(dated) if dated else 0.0
+    own_acc = sum(x["own_c"] == x["own_l"] for x in rows) / n
+    own_base = max(sum(x["own_c"] for x in rows), n - sum(x["own_c"] for x in rows)) / n
+    rho = spearman([x["ratio_l"] for x in rows], [x["ratio_c"] for x in rows])
+    band_agree = sum(x["band_c"] == x["band_l"] for x in rows) / n
+    src_tp = sum(x["src_c"] and x["src_l"] for x in rows)
+    src_fp = sum(not x["src_c"] and x["src_l"] for x in rows)
+    src_fn = sum(x["src_c"] and not x["src_l"] for x in rows)
+    preds = {
+        "P9a": {"text": "number presence F1 at least 0.85", "result": _verdict(f1 >= 0.85)},
+        "P9b": {"text": "number value agreement at least 0.80", "result": _verdict(value_agree >= 0.80)},
+        "P9c": {"text": "deadline year agreement at least 0.80", "result": _verdict(year_agree >= 0.80)},
+        "P9d": {"text": "owner presence accuracy at least 0.70", "result": _verdict(own_acc >= 0.70)},
+        "P9e": {"text": "Spearman of the two ratios at least 0.60", "result": _verdict((rho or 0.0) >= 0.60)},
+        "P9f": {"text": "exact band agreement at least 0.60", "result": _verdict(band_agree >= 0.60)},
+        "P9g": {"text": "number presence F1 above the digit baseline", "result": _verdict(f1 > f1_digit)},
+    }
+    facts = {
+        "n": _fact(n, "int"),
+        "number.f1": _fact(f1, "f2"),
+        "number.precision": _fact(tp / (tp + fp) if tp + fp else 0.0, "f2"),
+        "number.recall": _fact(tp / (tp + fn) if tp + fn else 0.0, "f2"),
+        "number.digit_f1": _fact(f1_digit, "f2"),
+        "number.value": _fact(value_agree, "f2"),
+        "number.both": _fact(len(both), "int"),
+        "year": _fact(year_agree, "f2"),
+        "year.n": _fact(len(dated), "int"),
+        "owner": _fact(own_acc, "f2"),
+        "owner.baseline": _fact(own_base, "f2"),
+        "rho": _fact(rho, "f2"),
+        "band": _fact(band_agree, "f2"),
+        "source.tp": _fact(src_tp, "int"),
+        "source.fp": _fact(src_fp, "int"),
+        "source.fn": _fact(src_fn, "int"),
+    }
+    facts.update({k: _fact(v["result"], "str") for k, v in preds.items()})
+    disagree = {k: [x["id"] for x in rows if not v(x)] for k, v in {
+        "number_presence": lambda x: x["num_c"] == x["num_l"],
+        "owner_presence": lambda x: x["own_c"] == x["own_l"],
+        "band": lambda x: x["band_c"] == x["band_l"],
+    }.items()}
+    return {"disagreements": disagree, "predictions": preds, "facts": facts}

@@ -1,0 +1,155 @@
+{
+ "auc": 0.6944,
+ "baselines": {
+  "has_digit": 0.5,
+  "statement_length": 0.5955
+ },
+ "ci95": [
+  0.5243,
+  0.85
+ ],
+ "enough_per_class": true,
+ "exploratory": {
+  "doubts_counted_as_zero": {
+   "auc": 0.8008,
+   "n": 36,
+   "permutation_p": 0.0226,
+   "positives": 4
+  },
+  "full_protocol_only": {
+   "auc": 0.5208,
+   "n": 18,
+   "permutation_p": 0.4705,
+   "positives": 12
+  }
+ },
+ "facts": {
+  "P8a": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P8b": {
+   "format": "str",
+   "value": "MISS"
+  },
+  "P8c": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P8d": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P8e": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "auc": {
+   "format": "f2",
+   "value": 0.6944444444444444
+  },
+  "baseline.digit": {
+   "format": "f2",
+   "value": 0.5
+  },
+  "baseline.length": {
+   "format": "f2",
+   "value": 0.5954861111111112
+  },
+  "ci_high": {
+   "format": "f2",
+   "value": 0.85
+  },
+  "ci_low": {
+   "format": "f2",
+   "value": 0.5242784120227039
+  },
+  "full.auc": {
+   "format": "f2",
+   "value": 0.5208
+  },
+  "full.n": {
+   "format": "int",
+   "value": 18
+  },
+  "full.negatives": {
+   "format": "int",
+   "value": 6
+  },
+  "full.p": {
+   "format": "f3",
+   "value": 0.4705
+  },
+  "full.positives": {
+   "format": "int",
+   "value": 12
+  },
+  "n": {
+   "format": "int",
+   "value": 36
+  },
+  "negatives": {
+   "format": "int",
+   "value": 24
+  },
+  "p": {
+   "format": "f3",
+   "value": 0.026297370262973702
+  },
+  "positives": {
+   "format": "int",
+   "value": 12
+  },
+  "searches.not_run": {
+   "format": "int",
+   "value": 53
+  },
+  "share": {
+   "format": "pct",
+   "value": 0.3333333333333333
+  },
+  "strict.auc": {
+   "format": "f2",
+   "value": 0.8008
+  },
+  "strict.n": {
+   "format": "int",
+   "value": 36
+  },
+  "strict.p": {
+   "format": "f3",
+   "value": 0.0226
+  },
+  "strict.positives": {
+   "format": "int",
+   "value": 4
+  }
+ },
+ "n": 36,
+ "negatives": 24,
+ "permutation_p": 0.0263,
+ "positives": 12,
+ "predictions": {
+  "P8a": {
+   "result": "HIT",
+   "text": "score AUC at least 0.55"
+  },
+  "P8b": {
+   "result": "MISS",
+   "text": "one sided permutation p at least 0.05"
+  },
+  "P8c": {
+   "result": "HIT",
+   "text": "score AUC at least the better baseline minus 0.05"
+  },
+  "P8d": {
+   "result": "HIT",
+   "text": "between 10% and 40% of the population has outcome 1"
+  },
+  "P8e": {
+   "result": "HIT",
+   "text": "score AUC above statement length AUC"
+  }
+ },
+ "searches_not_run": 53
+}

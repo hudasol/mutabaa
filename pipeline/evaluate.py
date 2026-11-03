@@ -13,7 +13,7 @@ import random
 import statistics
 from collections.abc import Callable, Sequence
 
-from .evaluate_real import e5, e6, e7, registered
+from .evaluate_real import e5, e6, e7, e9, registered
 from .robustness import AXES, PROFILES, SIZES, first_order_effects
 from .schemas import Commitment, Registry, ServiceItem
 from .score import score
@@ -22,6 +22,7 @@ from .stats import quantile, wilson
 from .status import eligible
 from .synth import generate
 from .synth_b import generate_b
+from .validity import e8
 
 OFFICIAL = ("official-statement", "official-self-report")
 
@@ -403,4 +404,4 @@ def e4() -> dict:
     }
 
 
-EXPERIMENTS = {"e1": e1, "e2": e2, "e3": e3, "e4": e4, "e5": e5, "e6": e6, "e7": e7}
+EXPERIMENTS = {"e1": e1, "e2": e2, "e3": e3, "e4": e4, "e5": e5, "e6": e6, "e7": e7, "e8": e8, "e9": e9}

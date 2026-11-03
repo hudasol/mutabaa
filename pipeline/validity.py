@@ -77,6 +77,7 @@ def e8() -> dict:
     auc, auc_ci, auc_required = _auc_tools()
     frozen = json.loads((E8_DIR / "frozen_scores.json").read_text(encoding="utf-8"))
     outcomes = json.loads((E8_DIR / "outcomes.json").read_text(encoding="utf-8"))["outcomes"]
+    searchlog = json.loads((E8_DIR / "searchlog.json").read_text(encoding="utf-8"))["entries"]
     ids = sorted(frozen["commitments"])
     if sorted(outcomes) != ids:
         raise ValueError("outcomes must cover exactly the frozen population")
@@ -89,10 +90,15 @@ def e8() -> dict:
     n_neg = len(y) - n_pos
     point = auc(s, y)
     result: dict = {"n": len(ids), "positives": n_pos, "negatives": n_neg}
+    not_run = sum(len(searchlog[i].get("not_performed", [])) for i in ids)
+    full = [i for i in ids if outcomes[i]["found"] or not searchlog[i].get("not_performed")]
     facts = {
         "n": _fact(len(ids), "int"),
         "positives": _fact(n_pos, "int"),
         "negatives": _fact(n_neg, "int"),
+        "searches.not_run": _fact(not_run, "int"),
+        "full.n": _fact(len(full), "int"),
+        "full.negatives": _fact(len(full) - sum(outcomes[i]["found"] for i in full), "int"),
     }
     if point is None:
         result.update({"auc": None, "predictions": {}, "facts": facts})
@@ -130,8 +136,30 @@ def e8() -> dict:
         }
     )
     facts.update({k: _fact(v["result"], "str") for k, v in preds.items()})
+    exploratory: dict = {}
+    strict = [bool(outcomes[i]["found"] and not outcomes[i]["doubt"]) for i in ids]
+    for name, keep, lab in (
+        ("doubts_counted_as_zero", list(range(len(ids))), strict),
+        ("full_protocol_only", [k for k, i in enumerate(ids) if i in set(full)], None),
+    ):
+        ss = [s[k] for k in keep]
+        yy = [(lab[k] if lab is not None else y[k]) for k in keep]
+        a = auc(ss, yy)
+        exploratory[name] = {
+            "n": len(keep),
+            "positives": sum(yy),
+            "auc": None if a is None else round(a, 4),
+            "permutation_p": None if a is None else round(permutation_p(ss, yy, a), 4),
+        }
+    for key, name in (("strict", "doubts_counted_as_zero"), ("full", "full_protocol_only")):
+        facts[f"{key}.auc"] = _fact(exploratory[name]["auc"], "f2")
+        facts[f"{key}.p"] = _fact(exploratory[name]["permutation_p"], "f3")
+        facts[f"{key}.positives"] = _fact(exploratory[name]["positives"], "int")
+        facts[f"{key}.n"] = _fact(exploratory[name]["n"], "int")
     result.update(
         {
+            "exploratory": exploratory,
+            "searches_not_run": not_run,
             "auc": round(point, 4),
             "ci95": [round(lo, 4), round(hi, 4)],
             "permutation_p": round(p, 4),

@@ -1,0 +1,15 @@
+{
+ "node": "v22.22.0",
+ "note": "No wall clock time is recorded. Retrieval dates are in data/real/sources.json.",
+ "packages": {
+  "mypy": "2.4.0",
+  "pydantic": "2.13.5",
+  "pytest": "9.1.1",
+  "ruff": "0.17.3"
+ },
+ "pipeline_version": "1.7.0",
+ "platform": "Linux-6.18.44-fc-v230-x86_64-with-glibc2.39",
+ "python": "3.13.16",
+ "seeds": "fixed inside each experiment; see PREREGISTRATION.md",
+ "threads": 2
+}

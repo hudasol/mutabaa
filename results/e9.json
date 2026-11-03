@@ -1,0 +1,249 @@
+{
+ "disagreements": {
+  "band": [
+   "C07",
+   "C08",
+   "C09",
+   "C11",
+   "C12",
+   "C14",
+   "C17",
+   "C22",
+   "C23",
+   "C24",
+   "C25",
+   "C26",
+   "C29",
+   "C31",
+   "C36",
+   "C38",
+   "C43",
+   "C44",
+   "C45",
+   "C53",
+   "C55",
+   "C57",
+   "C62",
+   "C63",
+   "C64",
+   "C65",
+   "C70",
+   "C72",
+   "C73",
+   "C75",
+   "C76",
+   "C79",
+   "C80",
+   "C84",
+   "C86",
+   "C89",
+   "C94"
+  ],
+  "number_presence": [
+   "C09",
+   "C12",
+   "C22",
+   "C24",
+   "C43",
+   "C53",
+   "C54",
+   "C60",
+   "C70",
+   "C77",
+   "C89"
+  ],
+  "owner_presence": [
+   "C01",
+   "C02",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C07",
+   "C08",
+   "C10",
+   "C11",
+   "C12",
+   "C13",
+   "C14",
+   "C15",
+   "C16",
+   "C19",
+   "C20",
+   "C21",
+   "C34",
+   "C35",
+   "C36",
+   "C38",
+   "C39",
+   "C40",
+   "C41",
+   "C42",
+   "C43",
+   "C44",
+   "C46",
+   "C47",
+   "C50",
+   "C51",
+   "C52",
+   "C53",
+   "C54",
+   "C55",
+   "C56",
+   "C57",
+   "C58",
+   "C59",
+   "C60",
+   "C61",
+   "C62",
+   "C63",
+   "C64",
+   "C65",
+   "C66",
+   "C67",
+   "C68",
+   "C69",
+   "C70",
+   "C71",
+   "C72",
+   "C73",
+   "C75",
+   "C76",
+   "C77",
+   "C78",
+   "C79",
+   "C80",
+   "C83",
+   "C84",
+   "C85",
+   "C86",
+   "C87",
+   "C88",
+   "C94"
+  ]
+ },
+ "facts": {
+  "P9a": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P9b": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P9c": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P9d": {
+   "format": "str",
+   "value": "MISS"
+  },
+  "P9e": {
+   "format": "str",
+   "value": "MISS"
+  },
+  "P9f": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P9g": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "band": {
+   "format": "f2",
+   "value": 0.6145833333333334
+  },
+  "n": {
+   "format": "int",
+   "value": 96
+  },
+  "number.both": {
+   "format": "int",
+   "value": 58
+  },
+  "number.digit_f1": {
+   "format": "f2",
+   "value": 0.8591549295774648
+  },
+  "number.f1": {
+   "format": "f2",
+   "value": 0.9133858267716536
+  },
+  "number.precision": {
+   "format": "f2",
+   "value": 0.8923076923076924
+  },
+  "number.recall": {
+   "format": "f2",
+   "value": 0.9354838709677419
+  },
+  "number.value": {
+   "format": "f2",
+   "value": 0.9482758620689655
+  },
+  "owner": {
+   "format": "f2",
+   "value": 0.3020833333333333
+  },
+  "owner.baseline": {
+   "format": "f2",
+   "value": 0.7395833333333334
+  },
+  "rho": {
+   "format": "f2",
+   "value": 0.4839262384716173
+  },
+  "source.fn": {
+   "format": "int",
+   "value": 3
+  },
+  "source.fp": {
+   "format": "int",
+   "value": 1
+  },
+  "source.tp": {
+   "format": "int",
+   "value": 0
+  },
+  "year": {
+   "format": "f2",
+   "value": 0.9444444444444444
+  },
+  "year.n": {
+   "format": "int",
+   "value": 54
+  }
+ },
+ "predictions": {
+  "P9a": {
+   "result": "HIT",
+   "text": "number presence F1 at least 0.85"
+  },
+  "P9b": {
+   "result": "HIT",
+   "text": "number value agreement at least 0.80"
+  },
+  "P9c": {
+   "result": "HIT",
+   "text": "deadline year agreement at least 0.80"
+  },
+  "P9d": {
+   "result": "MISS",
+   "text": "owner presence accuracy at least 0.70"
+  },
+  "P9e": {
+   "result": "MISS",
+   "text": "Spearman of the two ratios at least 0.60"
+  },
+  "P9f": {
+   "result": "HIT",
+   "text": "exact band agreement at least 0.60"
+  },
+  "P9g": {
+   "result": "HIT",
+   "text": "number presence F1 above the digit baseline"
+  }
+ }
+}

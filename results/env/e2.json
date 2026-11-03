@@ -7,7 +7,7 @@
   "pytest": "9.1.1",
   "ruff": "0.17.3"
  },
- "pipeline_version": "1.6.0",
+ "pipeline_version": "1.7.0",
  "platform": "Linux-6.18.44-fc-v230-x86_64-with-glibc2.39",
  "python": "3.13.16",
  "seeds": "fixed inside each experiment; see PREREGISTRATION.md",
