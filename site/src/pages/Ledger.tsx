@@ -160,7 +160,7 @@ export default function Ledger() {
     );
   };
 
-  const groups = group ? (["federal", "abu-dhabi", "national"] as const).map((j) => [j, rows.filter((r) => r.jurisdiction === j)] as const) : null;
+  const groups = group ? (["federal", "abu-dhabi", "dubai", "other-emirate", "national"] as const).map((j) => [j, rows.filter((r) => r.jurisdiction === j)] as const) : null;
 
   return (
     <>

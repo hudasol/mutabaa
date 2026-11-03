@@ -103,6 +103,8 @@
    "enum": [
     "federal",
     "abu-dhabi",
+    "dubai",
+    "other-emirate",
     "national"
    ],
    "title": "Jurisdiction",

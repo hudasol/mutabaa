@@ -1,7 +1,7 @@
 export type Anchor = { source_id: string; text: string };
 export type Commitment = {
   id: string; title: string; title_ar: string; statement: string; statement_ar: string;
-  jurisdiction: "federal" | "abu-dhabi" | "national";
+  jurisdiction: "federal" | "abu-dhabi" | "dubai" | "other-emirate" | "national";
   kind: "target" | "milestone" | "deliverable" | "input" | "projection" | "assessment" | "vision";
   owner: string | null; metric: string | null; unit: string | null; baseline: string | null;
   target_value: string | null; target_number: number | null; target_comparator: string | null;

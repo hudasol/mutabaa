@@ -13,7 +13,7 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator, model_valida
 
 # --------------------------------------------------------------------------- vocab
 
-Jurisdiction = Literal["federal", "abu-dhabi", "national"]
+Jurisdiction = Literal["federal", "abu-dhabi", "dubai", "other-emirate", "national"]
 
 SourceKind = Literal[
     "official-statement",  # a government announcement of a policy, target or decision
