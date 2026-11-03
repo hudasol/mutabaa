@@ -96,3 +96,11 @@ def test_cli_json_includes_the_after_score(capsys):
     main(["mutabaa", "lint", "We will improve things.", "--owner", "The Example Office", "--format", "json"])
     res = json.loads(capsys.readouterr().out)
     assert res["after"]["ratio"] > res["before"]["ratio"]
+
+
+def test_lint_rules_are_frozen_for_e9():
+    import hashlib
+
+    digest = hashlib.sha256((ROOT / "data" / "config" / "lint_rules.json").read_bytes()).hexdigest()
+    frozen = (ROOT / "tests" / "frozen" / "lint_rules_v1_8_0.sha256").read_text(encoding="utf-8").strip()
+    assert digest == frozen, "rules changed after E9 was registered; label any new version exploratory"

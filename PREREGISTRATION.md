@@ -226,6 +226,27 @@ It is not required that the target was met. A figure that shows a miss counts as
 
 **Consequence fixed in advance.** Misses are reported in the same table as hits. If fewer than five commitments have outcome 1, or fewer than five have outcome 0, the AUC is still computed and reported, with the statement that the study cannot support a conclusion. No threshold, weight, band or search rule is changed after outcomes are seen; any later change is labelled exploratory. The outcome finder and the author of the score share an author, which is a limit stated with the result. The search is limited to what a free web search tool returns on the retrieval date.
 
+## E9. Does the commitment linter, reading only the wording, recover what the curated ledger records?
+
+Registered 2026-11-03, after the linter and its rules were written and before the linter was run on any ledger statement.
+
+**Question.** `pipeline/lint.py` reads one sentence with word lists and patterns and no model. For the English statement of each of the 96 commitments, how closely do its findings agree with the fields a person curated from the source page?
+
+**Frozen rules.** The rules are `data/config/lint_rules.json` at sha256 `e2e2bdfff126bbe01ba9ebf25806373160e93b5b33d1661be368c24f5f74f2ea`. A test fails if the file changes. Any later change is a new, labelled exploratory version and is not part of E9.
+
+**Method.** For each commitment, `lint(statement)` is compared with the curated record. Number: the linter's number is present if and only if `target_number` is present (precision, recall, F1 of presence), and equal to it within 1e-9 (value agreement among commitments where both are present). Deadline: for commitments whose curated deadline precision is day, month or year, the linter's deadline year equals the curated deadline year (agreement among those commitments). Owner: the linter reports an owner if and only if the curated `owner` is present (accuracy of presence). Score: Spearman correlation between the ratio of the linter and the ratio of the curated score, and exact agreement of the band. Baseline for number presence: whether the statement contains a digit. Baseline for owner presence: always predict the more common class. All 96 commitments are used; none is excluded.
+
+**Predictions.**
+- P9a. Number presence F1 is at least 0.85.
+- P9b. Number value agreement is at least 0.80.
+- P9c. Deadline year agreement is at least 0.80.
+- P9d. Owner presence accuracy is at least 0.70.
+- P9e. Spearman correlation of the two ratios is at least 0.60.
+- P9f. Exact band agreement is at least 0.60.
+- P9g. The linter's number presence F1 is above the digit baseline's.
+
+**Limits stated in advance.** The statements were written by the curator from the same pages, so wording and fields are not independent. The rules were written by the same author who curated the ledger and who therefore knows its wording; the rules were not changed after the ledger statements were first linted. Agreement with the ledger is not accuracy: both can be wrong in the same way. The measurement source field is present for very few commitments, so it is reported and not predicted. The linter says what a sentence states, not whether the commitment is good.
+
 ## Amendments
 
 Predictions above were not changed. The entries below record what was done after the results existed, and clarifications of details that the specification left open.
@@ -239,3 +260,5 @@ Predictions above were not changed. The entries below record what was done after
 **Amendment 4, 2026-10-28 (decided while writing the E6 code, before it was first run; as with amendment 3, the order is the author's statement, because the specification, code and results of part two arrive in one commit and history cannot confirm it).** The text of I3 says a shuffle never changes the result. The code compares the status, the progress ratio and date, the stale flag, the unit mismatch flag, the self reported flag and the evidence ids as a set, because the engine lists evidence ids in input order. The oracle in the E6 code restates the eligibility rule, the non outcome kinds and the 180 day limit on its own, so a patched engine cannot change what the checks expect. For the target met variant of I4, a quantified progress item with the target value is added together with the claim when the commitment has a unit and a number, because the engine only reports a met target when a comparable figure exists.
 
 **Amendment 5, 2026-10-28 (after the E5 results).** P5a and P5d were MISS and are kept. The registered random baseline flags bullets at X2's rate, which is more than twice X3's rate, so P5d compares unequal effort. After seeing this, an exploratory comparison was added to `pipeline/evaluate_real.py`: random flagging at each rule's own flag rate, seeds 1 to 20. It is reported in `docs/EVALUATION.md` as exploratory and is not part of any prediction. E5 and E6 ran for the first time with the code as committed; no extractor rule and no invariant was changed after seeing results.
+
+**Amendment 6, 2026-11-03 (E8, after the first pass of the outcome search and before any AUC, interval or permutation p was computed).** The first pass stopped early: of 24 commitments with outcome 0, 23 had fewer than the eight searches the protocol allows, which biases the outcome towards 0. A completion pass ran the remaining searches of the protocol for those 23, in the registered order, with the same outcome definition and the same instructions, and without the scores. Positives from the first pass were not re-searched. Two analyses are added and labelled exploratory, not predicted: the AUC when every positive that carries a recorded doubt is counted as 0 (a mechanical rule, so that no case is chosen by hand), and the AUC for the commitments from the first cohort alone. The finder's decision is kept as recorded; the author re-read the page of every positive on 2026-11-03 and confirmed the date, the publisher and the figure.
