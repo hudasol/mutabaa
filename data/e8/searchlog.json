@@ -1,0 +1,1301 @@
+{
+ "entries": {
+  "C07": {
+   "doubt": "A uaecabinet.ae page on the same 23 April 2026 meeting appeared in results but could not be fetched; it would likely be the same announcement, not a later report.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Only press release and unrelated results",
+     "opened": [],
+     "query": "Digital records, data-sharing and federal digital-government policies UAE Cabinet"
+    },
+    {
+     "n": 2,
+     "note": "No UAE official follow-up document found",
+     "opened": [],
+     "query": "سياسات السجلات الرقمية ومشاركة البيانات ودليل الحكومة الرقمية"
+    },
+    {
+     "n": 3,
+     "note": "Surfaced uaecabinet.ae announcement of same meeting",
+     "opened": [],
+     "query": "UAE Cabinet 23 April 2026 approves digital records policy government services data sharing policy federal guide digital government projects"
+    },
+    {
+     "n": 4,
+     "note": "No u.ae page for the three policies",
+     "opened": [],
+     "query": "u.ae digital records policy government data sharing policy federal digital government projects guide"
+    },
+    {
+     "n": 5,
+     "note": "Nothing relevant",
+     "opened": [],
+     "query": "مجلس الوزراء الإماراتي يعتمد سياسة السجلات الرقمية وسياسة مشاركة بيانات الخدمات الحكومية الدليل الاتحادي لمشاريع الحكومة الرقمية"
+    },
+    {
+     "n": 6,
+     "note": "u.ae index does not list the policies",
+     "opened": [
+      "https://u.ae/en/about-the-uae/digital-uae/digital-transformation/strategies-policies-and-initiatives"
+     ],
+     "query": "UAE Cabinet digital records policy data sharing policy digital government projects guide approved April 2026 uaecabinet.ae"
+    },
+    {
+     "n": 7,
+     "note": "Nothing new",
+     "opened": [],
+     "query": "UAE Cabinet digital records policy data sharing guide digital government projects 2026 achieved"
+    }
+   ],
+   "unreachable": [
+    "https://uaecabinet.ae/en/news/under-directives-of-uae-president-and-in-world-first-mohammed-bin-rashid-reveals-new-uae-government-framework-to-deploy-agentic-ai-across-50-of-government-sectors-operations-within-two-years",
+    "https://www.uaecabinet.ae/en/news/under-directives-of-uae-president-and-in-world-first-mohammed-bin-rashid-reveals-new-uae-government-framework-to-deploy-agentic-ai-across-50-of-government-sectors-operations-within-two-years"
+   ]
+  },
+  "C26": {
+   "doubt": "Official u.ae page dated 19 Nov 2025 (last updated) says program raised customer satisfaction to 90%. Doubt: it is satisfaction in general, not 'very satisfied citizens'; no measurement date or method; it describes the 2014 national transformation program, not clearly the strategy KPI.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Only the strategy page (own source) and news",
+     "opened": [],
+     "query": "UAE Digital Government Strategy 2025 90% satisfaction digital services KPI results"
+    },
+    {
+     "n": 2,
+     "note": "u.ae page is 2020 survey scores; Al Bayan is WAM news on BCG 89%",
+     "opened": [
+      "https://u.ae/ar/about-the-uae/digital-uae/digital-inclusion/user-satisfaction-with-digital-services",
+      "https://www.albayan.ae/news/uae/1556758"
+     ],
+     "query": "رضا المتعاملين بنسبة 90% عن الخدمات الحكومية الرقمية"
+    },
+    {
+     "n": 3,
+     "note": "Nothing relevant",
+     "opened": [],
+     "query": "TDRA digital government strategy 2025 achieved services digitised end to end percentage annual report"
+    },
+    {
+     "n": 4,
+     "note": "Impact page states 90% satisfaction as past contribution, no survey date or method",
+     "opened": [
+      "https://u.ae/ar/about-the-uae/digital-uae/National-Digital-Transformation-Program-impact",
+      "https://u.ae/en/about-the-uae/digital-uae/digital-transformation/cooperation-and-collaboration/overseeing-digital-transformation-in-the-uae"
+     ],
+     "query": "UAE federal government 2025 percentage of services digital end to end achieved 2026 TDRA"
+    }
+   ],
+   "unreachable": []
+  },
+  "C27": {
+   "doubt": "2023 u.ae factsheet (publisher unnamed) lists 2,630 digital services on the portal; this is a count not a share and predates the deadline, so not counted.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Strategy page lists only 2025 targets, no achieved figures",
+     "opened": [
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/uae-national-digital-government-strategy"
+     ],
+     "query": "UAE Digital Government Strategy 2025 90% satisfaction digital services KPI results"
+    },
+    {
+     "n": 4,
+     "note": "No official TDRA report with the figure surfaced",
+     "opened": [],
+     "query": "TDRA digital government strategy 2025 achieved services digitised end to end percentage annual report"
+    },
+    {
+     "n": 5,
+     "note": "Policy page and strategy page give no achieved figures",
+     "opened": [
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/government-services-and-digital-transformation/unified-digital-platform-policy",
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/uae-national-digital-government-strategy"
+     ],
+     "query": "site:u.ae digital government strategy 2025 achieved percent services unified platform digitised"
+    },
+    {
+     "n": 6,
+     "note": "Impact page has no services or transactions share",
+     "opened": [
+      "https://u.ae/ar/about-the-uae/digital-uae/National-Digital-Transformation-Program-impact"
+     ],
+     "query": "UAE federal government 2025 percentage of services digital end to end achieved 2026 TDRA"
+    },
+    {
+     "n": 7,
+     "note": "2023 factsheet gives service count not share; Gulf News is media",
+     "opened": [
+      "https://assets.u.ae/api/public/content/2fd5b78d54c4479aad93ecee909b3428",
+      "https://gulfnews.com/uae/government/uae-launches-unified-platform-with-121-digital-services-under-zero-bureaucracy-drive-1.500495421"
+     ],
+     "query": "share of services listed on unified digital platform UAE 2025 achieved"
+    }
+   ],
+   "unreachable": []
+  },
+  "C28": {
+   "doubt": "No official document with an achieved figure on this exact measure found.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Strategy page lists only 2025 targets, no achieved figures",
+     "opened": [
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/uae-national-digital-government-strategy"
+     ],
+     "query": "UAE Digital Government Strategy 2025 90% satisfaction digital services KPI results"
+    },
+    {
+     "n": 4,
+     "note": "No official TDRA report with the figure surfaced",
+     "opened": [],
+     "query": "TDRA digital government strategy 2025 achieved services digitised end to end percentage annual report"
+    },
+    {
+     "n": 5,
+     "note": "Policy page and strategy page give no achieved figures",
+     "opened": [
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/government-services-and-digital-transformation/unified-digital-platform-policy",
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/uae-national-digital-government-strategy"
+     ],
+     "query": "site:u.ae digital government strategy 2025 achieved percent services unified platform digitised"
+    },
+    {
+     "n": 6,
+     "note": "Impact page has no services or transactions share",
+     "opened": [
+      "https://u.ae/ar/about-the-uae/digital-uae/National-Digital-Transformation-Program-impact"
+     ],
+     "query": "UAE federal government 2025 percentage of services digital end to end achieved 2026 TDRA"
+    },
+    {
+     "n": 7,
+     "note": "Only strategy page and news",
+     "opened": [],
+     "query": "share of services digitised end to end UAE federal government 2025 achieved"
+    }
+   ],
+   "unreachable": []
+  },
+  "C29": {
+   "doubt": "No official document with an achieved figure on this exact measure found.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Strategy page lists only 2025 targets, no achieved figures",
+     "opened": [
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/uae-national-digital-government-strategy"
+     ],
+     "query": "UAE Digital Government Strategy 2025 90% satisfaction digital services KPI results"
+    },
+    {
+     "n": 4,
+     "note": "No official TDRA report with the figure surfaced",
+     "opened": [],
+     "query": "TDRA digital government strategy 2025 achieved services digitised end to end percentage annual report"
+    },
+    {
+     "n": 5,
+     "note": "Policy page and strategy page give no achieved figures",
+     "opened": [
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/government-services-and-digital-transformation/unified-digital-platform-policy",
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/uae-national-digital-government-strategy"
+     ],
+     "query": "site:u.ae digital government strategy 2025 achieved percent services unified platform digitised"
+    },
+    {
+     "n": 6,
+     "note": "Impact page has no services or transactions share",
+     "opened": [
+      "https://u.ae/ar/about-the-uae/digital-uae/National-Digital-Transformation-Program-impact"
+     ],
+     "query": "UAE federal government 2025 percentage of services digital end to end achieved 2026 TDRA"
+    },
+    {
+     "n": 7,
+     "note": "Only banking and UAE Pass news; no official share",
+     "opened": [],
+     "query": "UAE services with digital option personal verification manual signature 100% 2025 achieved"
+    }
+   ],
+   "unreachable": []
+  },
+  "C30": {
+   "doubt": "No official document with an achieved figure on this exact measure found.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Strategy page lists only 2025 targets, no achieved figures",
+     "opened": [
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/uae-national-digital-government-strategy"
+     ],
+     "query": "UAE Digital Government Strategy 2025 90% satisfaction digital services KPI results"
+    },
+    {
+     "n": 4,
+     "note": "No official TDRA report with the figure surfaced",
+     "opened": [],
+     "query": "TDRA digital government strategy 2025 achieved services digitised end to end percentage annual report"
+    },
+    {
+     "n": 5,
+     "note": "Policy page and strategy page give no achieved figures",
+     "opened": [
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/government-services-and-digital-transformation/unified-digital-platform-policy",
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/uae-national-digital-government-strategy"
+     ],
+     "query": "site:u.ae digital government strategy 2025 achieved percent services unified platform digitised"
+    },
+    {
+     "n": 6,
+     "note": "Impact page has no services or transactions share",
+     "opened": [
+      "https://u.ae/ar/about-the-uae/digital-uae/National-Digital-Transformation-Program-impact"
+     ],
+     "query": "UAE federal government 2025 percentage of services digital end to end achieved 2026 TDRA"
+    },
+    {
+     "n": 7,
+     "note": "Only news and entity transaction counts",
+     "opened": [],
+     "query": "UAE share of transactions completed digitally end to end 2026 federal government"
+    }
+   ],
+   "unreachable": []
+  },
+  "C31": {
+   "doubt": "Government Digital Transformation Report 2024 lists Jaahiz user counts but no share of workforce trained; no figure on the commitment measure.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Page lists no share of workforce trained.",
+     "opened": [
+      "https://u.ae/en/information-and-services/jobs/training-and-development/strategies-for-improving-digital-skills-and-egovernment-literacy"
+     ],
+     "query": "UAE Government federal workforce trained digital government standards 100% national digital government strategy"
+    },
+    {
+     "n": 2,
+     "note": "Only older FAHR Al Mawrid counts and news; none on this measure.",
+     "opened": [],
+     "query": "share of federal workforce trained digital government annual report results UAE employees trained percentage"
+    },
+    {
+     "n": 3,
+     "note": "Only u.ae skills strategy page and news; no figure.",
+     "opened": [],
+     "query": "تدريب 100% من القوى العاملة الاتحادية على معايير الحكومة الرقمية"
+    },
+    {
+     "n": 4,
+     "note": "Reports Jahiz intended reach 54,000, not a trained share.",
+     "opened": [
+      "https://www.fahr.gov.ae/?p=37115"
+     ],
+     "query": "FAHR federal employees trained digital skills 2025 percentage of federal workforce Jahiz achieved"
+    },
+    {
+     "n": 5,
+     "note": "No workforce or maturity share on page.",
+     "opened": [
+      "https://u.ae/ar/about-the-uae/digital-uae/national-digital-transformation-program-impact"
+     ],
+     "query": "UAE Digital Government Strategy 2025 achieved results workforce trained entities maturity TDRA 2025 annual report"
+    },
+    {
+     "n": 6,
+     "note": "No 2025 report found.",
+     "opened": [],
+     "query": "Federal Authority for Government Human Resources annual report 2025 employees trained percentage"
+    },
+    {
+     "n": 7,
+     "note": "Government Digital Transformation Report 2024 gives no trained share.",
+     "opened": [
+      "https://assets.u.ae/api/public/content/d9d3a3bf75f843a6b1abf999bc224022"
+     ],
+     "query": "تقرير التحول الرقمي الحكومي 2024 الإمارات نسبة الموظفين المدربين النضج الرقمي الجهات"
+    }
+   ],
+   "unreachable": []
+  },
+  "C32": {
+   "doubt": "",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Only news on Jahiz and 80,000 AI training plan.",
+     "opened": [],
+     "query": "UAE Government 10% federal workforce trained modern technologies blockchain AI"
+    },
+    {
+     "n": 2,
+     "note": "Older FAHR news; no share in modern technologies.",
+     "opened": [],
+     "query": "federal workforce trained modern technologies percentage annual report results UAE"
+    },
+    {
+     "n": 3,
+     "note": "No relevant official figure.",
+     "opened": [],
+     "query": "تدريب 10% من القوى العاملة الاتحادية على التقنيات الحديثة"
+    },
+    {
+     "n": 4,
+     "note": "No share trained.",
+     "opened": [
+      "https://www.fahr.gov.ae/?p=37115"
+     ],
+     "query": "FAHR federal employees trained digital skills 2025 percentage of federal workforce Jahiz achieved"
+    },
+    {
+     "n": 5,
+     "note": "No training share.",
+     "opened": [
+      "https://u.ae/ar/about-the-uae/digital-uae/national-digital-transformation-program-impact"
+     ],
+     "query": "UAE Digital Government Strategy 2025 achieved results workforce trained entities maturity TDRA 2025 annual report"
+    },
+    {
+     "n": 6,
+     "note": "None found.",
+     "opened": [],
+     "query": "Federal Authority for Government Human Resources annual report 2025 employees trained percentage"
+    },
+    {
+     "n": 7,
+     "note": "No share of workforce trained in modern technologies.",
+     "opened": [
+      "https://assets.u.ae/api/public/content/d9d3a3bf75f843a6b1abf999bc224022"
+     ],
+     "query": "تقرير التحول الرقمي الحكومي 2024 الإمارات نسبة الموظفين المدربين النضج الرقمي الجهات"
+    }
+   ],
+   "unreachable": []
+  },
+  "C33": {
+   "doubt": "Maturity model pages and Digital Transformation Report 2024 describe levels but give no share of entities at the top level.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Defines scale only, no entity distribution.",
+     "opened": [
+      "https://u.ae/en/about-the-uae/uae-competitiveness/steps-to-enhance-government-performance/uae-digital-government-maturity-model"
+     ],
+     "query": "UAE Government federal and local entities very high digital maturity level 5 share of entities"
+    },
+    {
+     "n": 2,
+     "note": "2021 index results, no level 5 share.",
+     "opened": [
+      "https://government.ae/-/media/Documents-2nd-half-2023/Measuring-the-digital-government-indices--Eng.pdf"
+     ],
+     "query": "share of entities at maturity level 5 digital government maturity results annual report UAE"
+    },
+    {
+     "n": 3,
+     "note": "Only model pages and Saudi results.",
+     "opened": [],
+     "query": "بلوغ جميع الجهات الاتحادية والمحلية مستوى نضج رقمي مرتفع جدا"
+    },
+    {
+     "n": 4,
+     "note": "No official share found.",
+     "opened": [],
+     "query": "UAE digital government maturity entities achieved level 5 very high maturity 2025 TDRA results percentage of federal entities"
+    },
+    {
+     "n": 5,
+     "note": "No maturity share.",
+     "opened": [
+      "https://u.ae/ar/about-the-uae/digital-uae/national-digital-transformation-program-impact"
+     ],
+     "query": "UAE Digital Government Strategy 2025 achieved results workforce trained entities maturity TDRA 2025 annual report"
+    },
+    {
+     "n": 6,
+     "note": "Describes 4 levels, no entity distribution.",
+     "opened": [
+      "https://assets.u.ae/api/public/content/d9d3a3bf75f843a6b1abf999bc224022"
+     ],
+     "query": "تقرير التحول الرقمي الحكومي 2024 الإمارات نسبة الموظفين المدربين النضج الرقمي الجهات"
+    }
+   ],
+   "unreachable": []
+  },
+  "C34": {
+   "doubt": "Publisher is the Dubai government media office, publishing a UAE VP and Minister statement; phase 1 total may cover a period beyond end 2024.",
+   "found": true,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Only targets on these pages; MOCE page shows a single ministry removing 36 procedures (partial).",
+     "opened": [
+      "https://u.ae/en/participate/blogs/blog?id=1159",
+      "https://mediaoffice.ae/en/news/2024/february/01-02/hh-sheikh-mohammed-launched",
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/zero-government-bureaucracy-programme"
+     ],
+     "query": "Ministries and government entities Zero Government Bureaucracy Programme 2,000 government measures cancelled"
+    },
+    {
+     "n": 2,
+     "note": "Single ministry result only.",
+     "opened": [
+      "https://www.moce.gov.ae/en/w/to-enhance-customer-experience-and-improve-service-quality-the-ministry-of-community-empowerment-records-positive-results-in-phase-2-of-zero-government-bureaucracy-program"
+     ],
+     "query": "government measures cancelled Zero Government Bureaucracy results announced procedures cancelled total 2025"
+    },
+    {
+     "n": 3,
+     "note": "No official programme total in results.",
+     "opened": [],
+     "query": "إلغاء ما لا يقل عن 2000 إجراء حكومي صفر بيروقراطية حصيلة"
+    },
+    {
+     "n": 4,
+     "note": "Pointed to entity news.",
+     "opened": [],
+     "query": "Zero Government Bureaucracy Programme achieved 2024 government procedures cancelled mediaoffice.ae OR uaecabinet.ae OR u.ae results"
+    },
+    {
+     "n": 5,
+     "note": "Phase 2 launch page reports phase 1 programme result.",
+     "opened": [
+      "https://mediaoffice.ae/en/news/2025/june/16-06/mohammed-bin-rashid-launches-phase-2-of-zero-bureaucracy-programme"
+     ],
+     "query": "UAE government 2025 \"Zero Government Bureaucracy\" first phase results \"procedures\" cancelled saved time cabinet announces"
+    }
+   ],
+   "unreachable": []
+  },
+  "C35": {
+   "doubt": "Page says service delivery time reduced, commitment says procedure time; judged the same programme goal but wording differs slightly.",
+   "found": true,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Targets only.",
+     "opened": [
+      "https://mediaoffice.ae/en/news/2024/february/01-02/hh-sheikh-mohammed-launched"
+     ],
+     "query": "Ministries and government entities Zero Government Bureaucracy Programme 2,000 government measures cancelled"
+    },
+    {
+     "n": 2,
+     "note": "Targets and a different Services 2.0 initiative only.",
+     "opened": [
+      "https://www.protocol.dubai.ae/en/media-listing/news-events/mohammed-bin-rashid-the-uae-aims-to-lead-the-world-in-government-service-excellence/"
+     ],
+     "query": "procedure time reduction Zero Government Bureaucracy results percent time reduced annual report"
+    },
+    {
+     "n": 3,
+     "note": "No official result page opened.",
+     "opened": [],
+     "query": "خفض زمن الإجراءات الحكومية إلى النصف نتائج برنامج صفر بيروقراطية حكومية"
+    },
+    {
+     "n": 4,
+     "note": "Entity news.",
+     "opened": [],
+     "query": "Zero Government Bureaucracy Programme achieved 2024 government procedures cancelled mediaoffice.ae OR uaecabinet.ae OR u.ae results"
+    },
+    {
+     "n": 5,
+     "note": "Phase 1 time reduction figure found.",
+     "opened": [
+      "https://mediaoffice.ae/en/news/2025/june/16-06/mohammed-bin-rashid-launches-phase-2-of-zero-bureaucracy-programme"
+     ],
+     "query": "UAE government 2025 \"Zero Government Bureaucracy\" first phase results \"procedures\" cancelled saved time cabinet announces"
+    }
+   ],
+   "unreachable": []
+  },
+  "C38": {
+   "doubt": "UAE Cabinet page dated 2019-11-26 reports 79% progress on National Agenda indicators; it is an aggregate percentage, not a count of the 52 indicators achieved, so not judged the same measure.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Cabinet page (2019) gives 79% aggregate progress, not indicators count.",
+     "opened": [
+      "https://uaecabinet.ae/en/news/annual-meetings-of-uae-government-progress-in-achieving-government-targets-and-indicatorsannual-meetings-of-uae-government-progress-in-achieving-government-targets-and-indicators"
+     ],
+     "query": "UAE Government National Agenda 52 national key performance indicators achieved 2021"
+    },
+    {
+     "n": 2,
+     "note": "Irrelevant foreign results.",
+     "opened": [],
+     "query": "National Key Performance Indicators national agenda results annual report indicators achieved target number"
+    },
+    {
+     "n": 3,
+     "note": "Only news from 2017.",
+     "opened": [],
+     "query": "تحقيق 52 مؤشرا وطنيا للأداء الرئيسي الأجندة الوطنية 2021 نتائج"
+    },
+    {
+     "n": 4,
+     "note": "No status of the 52 indicators.",
+     "opened": [
+      "https://uaecabinet.ae/en/national-agenda"
+     ],
+     "query": "UAE Vision 2021 National Agenda indicators achieved 2021 final results uaecabinet.ae OR u.ae OR government.ae"
+    },
+    {
+     "n": 5,
+     "note": "Dated 2015, no indicator count.",
+     "opened": [
+      "https://www.protocol.dubai.ae/en/media-listing/news-events/mohammed-bin-rashid-reviews-progress-report-on-the-implementation-of-national-agenda-indexes/"
+     ],
+     "query": "UAE national agenda \"national key performance indicators\" 2020 progress indicators reached targets Mohammed bin Rashid annual government meetings"
+    },
+    {
+     "n": 6,
+     "note": "No indicator count.",
+     "opened": [
+      "https://beta.government.ae/en/about-the-uae/the-uae-government/the-uae-annual-meetings"
+     ],
+     "query": "UAE National Agenda 2021 indicators achieved 2022 report Vision 2021 completed indicators"
+    },
+    {
+     "n": 7,
+     "note": "No new official document.",
+     "opened": [],
+     "query": "UAE national agenda 52 national indicators 2021 \"indicators\" achieved percentage cabinet 2021 annual government meetings progress national agenda concluded"
+    }
+   ],
+   "unreachable": []
+  },
+  "C39": {
+   "doubt": "Government.ae 2023 indices PDF reports 98.59% percentage of digital transformation of government services (2021); not clearly the same measure as share on one platform, so not counted.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "u.ae UDP page restates a 2023 target only, no result figure",
+     "opened": [
+      "https://u.ae/en/about-the-uae/digital-uae/digital-transformation/platforms-and-apps/unified-digital-platform"
+     ],
+     "query": "UAE Government 90% of public services on one digital platform by 2022"
+    },
+    {
+     "n": 2,
+     "note": "index report gives 98.59% digital transformation of services, different measure",
+     "opened": [
+      "https://government.ae/-/media/Documents-2nd-half-2023/Measuring-the-digital-government-indices--Eng.pdf"
+     ],
+     "query": "percentage of federal government services digital annual report results UAE Strategy for Government Services achieved"
+    },
+    {
+     "n": 3,
+     "note": "no UAE official results",
+     "opened": [],
+     "query": "90% من الخدمات العامة عبر منصة رقمية واحدة بحلول 2022"
+    },
+    {
+     "n": 5,
+     "note": "no qualifying page",
+     "opened": [],
+     "query": "u.ae percent of federal government services digital 2022 achieved"
+    }
+   ],
+   "unreachable": []
+  },
+  "C41": {
+   "doubt": "",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "only the commitment source and news",
+     "opened": [],
+     "query": "UAE Government 100% of government services accessible anywhere any time by 2023"
+    },
+    {
+     "n": 3,
+     "note": "no UAE official results",
+     "opened": [],
+     "query": "إتاحة 100% من الخدمات الحكومية في أي مكان وزمان بحلول 2023"
+    },
+    {
+     "n": 5,
+     "note": "results limited to u.ae, government.ae, uaecabinet.ae; nothing opened with a figure",
+     "opened": [],
+     "query": "share of federal government services available 24/7 digital channels 2023 percent UAE Government"
+    }
+   ],
+   "unreachable": []
+  },
+  "C42": {
+   "doubt": "",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "only commitment source and news",
+     "opened": [],
+     "query": "UAE Government More than 28 government services initiatives by 2023"
+    },
+    {
+     "n": 3,
+     "note": "no qualifying official page",
+     "opened": [],
+     "query": "أكثر من 28 مبادرة للخدمات الحكومية بحلول 2023"
+    },
+    {
+     "n": 5,
+     "note": "restricted to official domains; no initiative count found",
+     "opened": [],
+     "query": "UAE government services strategy 2023 results initiatives completed \"Strategy for Government Services\" achieved"
+    }
+   ],
+   "unreachable": []
+  },
+  "C43": {
+   "doubt": "Page dated 3 September 2021, one day before the committed 4 September; event (announcement) judged to be the same. Page did not name publisher in text; domain is uaecabinet.ae.",
+   "found": true,
+   "searches": [
+    {
+     "n": 1,
+     "note": "official Cabinet page dated 03.09.2021 reports the announcement",
+     "opened": [
+      "https://uaecabinet.ae/en/news/mohammed-bin-rashid-announces-five-best-and-five-underperforming-government-entities-in-terms-of-digital-services"
+     ],
+     "query": "Sheikh Mohammed bin Rashid Al Maktoum announce five best and worst government entities 4 September 2021"
+    }
+   ],
+   "unreachable": []
+  },
+  "C59": {
+   "doubt": "Anchor phrase taken from a page summary and may not be verbatim; wording on page may differ slightly.",
+   "found": true,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Oct 2021 page is an excluded own source",
+     "opened": [
+      "https://www.mediaoffice.ae/en/news/2021/October/18-10/Dubai-Completes-98-percent-of-its-paperless-strategy-obiectives"
+     ],
+     "query": "Digital Dubai Dubai government transactions 100% paperless by December 2021"
+    },
+    {
+     "n": 2,
+     "note": "Dec 2021 official release reports 100% digital",
+     "opened": [
+      "https://www.mediaoffice.ae/en/news/2021/december/11-12/hamdan-bin-mohammed-dubai-has-become-the-worlds-first-paperless-government"
+     ],
+     "query": "Dubai paperless strategy 100% paperless government December 2021 Digital Dubai announces completion"
+    }
+   ],
+   "unreachable": [
+    "https://www.digitaldubai.ae/newsroom/news/dubai-paperless-strategy-completes-phase-one"
+   ]
+  },
+  "C60": {
+   "doubt": "Dubai Media Office 2021-12-11 reports all 45 entities completed the paperless strategy and paper printing is only on request, but does not state a count of entities still issuing paper documents; not clearly the same measure, so found=false.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "only news and own source",
+     "opened": [],
+     "query": "Smart Dubai No paper documents issued after 12 December 2021"
+    },
+    {
+     "n": 3,
+     "note": "no relevant UAE result",
+     "opened": [],
+     "query": "عدم إصدار مستندات ورقية بعد 12 ديسمبر 2021"
+    },
+    {
+     "n": 4,
+     "note": "Dec 11 2021 release says all 45 entities completed the strategy; paper printing optional",
+     "opened": [
+      "https://www.mediaoffice.ae/en/news/2021/december/11-12/hamdan-bin-mohammed-dubai-has-become-the-worlds-first-paperless-government"
+     ],
+     "query": "Dubai government entities no longer issue paper documents 12 December 2021 Digital Dubai entities paperless"
+    }
+   ],
+   "unreachable": []
+  },
+  "C62": {
+   "doubt": "",
+   "found": true,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Dubai Media Office 2021 page reports group three result",
+     "opened": [
+      "https://www.mediaoffice.ae/en/news/2021/March/01-03/Smart-Dubai"
+     ],
+     "query": "Smart Dubai paperless strategy group three entities paper consumption 50% April 2020"
+    }
+   ],
+   "unreachable": []
+  },
+  "C63": {
+   "doubt": "",
+   "found": true,
+   "searches": [
+    {
+     "n": 1,
+     "note": "same document as C62 search covers group four",
+     "opened": [
+      "https://www.mediaoffice.ae/en/news/2021/March/01-03/Smart-Dubai"
+     ],
+     "query": "Smart Dubai paperless strategy group three entities paper consumption 50% April 2020"
+    }
+   ],
+   "unreachable": []
+  },
+  "C64": {
+   "doubt": "",
+   "found": true,
+   "searches": [
+    {
+     "n": 1,
+     "note": "same document covers group five",
+     "opened": [
+      "https://www.mediaoffice.ae/en/news/2021/March/01-03/Smart-Dubai"
+     ],
+     "query": "Smart Dubai paperless strategy group three entities paper consumption 50% April 2020"
+    }
+   ],
+   "unreachable": []
+  },
+  "C65": {
+   "doubt": "Page does not separate internal operations from customer services; it reports paperless completion and total paper cut.",
+   "found": true,
+   "searches": [
+    {
+     "n": 1,
+     "note": "March 2021 page gives overall 82.82% cut, not completion",
+     "opened": [
+      "https://www.mediaoffice.ae/en/news/2021/March/01-03/Smart-Dubai"
+     ],
+     "query": "Dubai Paperless Strategy results paper consumption reduced annual report"
+    },
+    {
+     "n": 2,
+     "note": "Dec 2021 official announcement of paperless completion",
+     "opened": [
+      "https://mediaoffice.ae/en/news/2021/December/11-12/Hamdan-bin-Mohammed-Dubai-has-become-the-worlds-first-paperless-government"
+     ],
+     "query": "Dubai cashless government achieved Digital Dubai paperless government 100% December 2021"
+    }
+   ],
+   "unreachable": []
+  },
+  "C66": {
+   "doubt": "Rate is dated 2023, after the 2021 deadline; it is the same measure (services digitised).",
+   "found": true,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Dubai Media Office 2023 reports 99.5% digitisation rate",
+     "opened": [
+      "https://u.ae/en/about-the-uae/digital-uae/digital-cities/digital-dubai",
+      "https://mediaoffice.ae/en/news/2023/September/06-09/Dubai-digital-transformation"
+     ],
+     "query": "Smart Dubai 100% eligible services digital channels 2021 achieved Dubai Digital Authority"
+    }
+   ],
+   "unreachable": []
+  },
+  "C67": {
+   "doubt": "Commitment is paperless and cashless; official Dec 2021 page (mediaoffice.ae) confirms paperless only, cashless not reported, so event not matched.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "reports paperless completion; no mention of cashless",
+     "opened": [
+      "https://mediaoffice.ae/en/news/2021/December/11-12/Hamdan-bin-Mohammed-Dubai-has-become-the-worlds-first-paperless-government"
+     ],
+     "query": "Dubai cashless government achieved Digital Dubai paperless government 100% December 2021"
+    },
+    {
+     "n": 2,
+     "note": "results were news and entity pages; none opened as official cashless report",
+     "opened": [],
+     "query": "حكومة دبي بلا ورق 100% دبي الرقمية الإعلام"
+    }
+   ],
+   "unreachable": []
+  },
+  "C68": {
+   "doubt": "Smart Dubai Dubai Blockchain Strategy 2020 Achievements Report (hosted on mbrsg.ae, undated) gives implementation status of 24 use cases, not whether the city became fully powered by blockchain; it restates the goal as applicable government transactions. Measure not the same, so found=false.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Only the excluded own sources and news items surfaced.",
+     "opened": [],
+     "query": "Dubai Blockchain Strategy first city fully powered by blockchain Smart Dubai Dubai Future Foundation"
+    },
+    {
+     "n": 2,
+     "note": "Redirected to digitaldubai.ae, which is not fetchable here.",
+     "opened": [
+      "https://www.smartdubai.ae/blockchain-achievements"
+     ],
+     "query": "Dubai blockchain 2020 annual report results government transactions on blockchain Smart Dubai"
+    },
+    {
+     "n": 3,
+     "note": "Only news items and u.ae strategy page (excluded).",
+     "opened": [],
+     "query": "أول مدينة تعمل بالكامل بتقنية البلوك تشين بحلول 2020 دبي"
+    },
+    {
+     "n": 4,
+     "note": "Smart Dubai achievements report hosted by MBRSG, reports 24 use cases, 15 fully implemented; no statement on city fully powered by blockchain.",
+     "opened": [
+      "https://mbrsg.ae/documents/d/MBRSG/EN_DUBAI-BLOCKCHAIN-STRATEGY-2020-ACHIEVMENT-REPORT"
+     ],
+     "query": "Dubai Blockchain Strategy 2020 achievements report digitaldubai.ae"
+    }
+   ],
+   "unreachable": [
+    "https://www.digitaldubai.ae/knowledge-hub/publications/dubai-blockchain-strategy-2020-achievements-report"
+   ]
+  },
+  "C72": {
+   "doubt": "",
+   "found": true,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Dubai Media Office release dated 11 Dec 2025 confirms launch on the Uber app.",
+     "opened": [
+      "https://www.mediaoffice.ae/en/news/2025/december/11-12/rta-launches-pilot-autonomous-robotaxi-service"
+     ],
+     "query": "RTA Uber WeRide autonomous vehicles pilot Dubai Roads and Transport Authority"
+    }
+   ],
+   "unreachable": []
+  },
+  "C77": {
+   "doubt": "Media Office release gives 21-25 April only for the AI Week in Schools side programme; it confirms the week closed on 25 Apr 2025 and the AI Retreat was held, but does not state the ten initiatives.",
+   "found": true,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Release dated 25 Apr 2025 reports closing of the week and AI Retreat held.",
+     "opened": [
+      "https://www.mediaoffice.ae/en/news/2025/april/25-04/hamdan-bin-mohammed-dubai-ai-week"
+     ],
+     "query": "Dubai AI Week 21-25 April 2025 Dubai Future Foundation"
+    },
+    {
+     "n": 2,
+     "note": "Outcomes PDF titled week 21-25 April 2025; does not name event or count ten initiatives.",
+     "opened": [
+      "https://week.dub.ai/wp-content/uploads/2025/04/Outcomes-of-Dubai-AI-Week-2025.pdf"
+     ],
+     "query": "Dubai AI Week concludes results AI Retreat ten strategic initiatives Dubai Future Foundation"
+    },
+    {
+     "n": 3,
+     "note": "Only WAM and press results.",
+     "opened": [],
+     "query": "أسبوع دبي للذكاء الاصطناعي من 21 إلى 25 أبريل 2025 مؤسسة دبي للمستقبل"
+    }
+   ],
+   "unreachable": []
+  },
+  "C83": {
+   "doubt": "No official document found stating percent of all Ajman government services made digital.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Ajman pages give 42 services in first 100 days (2024 stamp) and qualitative 2019 statement; no percent of all services.",
+     "opened": [
+      "https://www.ajman.ae/en/node/179",
+      "https://ajman.ae/en/node/569"
+     ],
+     "query": "e-Government of Ajman 100% government services digital 2018"
+    },
+    {
+     "n": 2,
+     "note": "Adoption rate page and a DED-only 91% ratio; neither is percent of all government services.",
+     "opened": [
+      "https://ajman.ae/en/node/669",
+      "https://u.ae/en/participate/blogs/blog?id=551"
+     ],
+     "query": "Ajman government services digital transformation percent 2018 annual report results e-Government"
+    },
+    {
+     "n": 3,
+     "note": "Only the excluded masterplan and news.",
+     "opened": [],
+     "query": "عجمان تحويل 100% من الخدمات الحكومية رقمياً بنهاية 2018"
+    },
+    {
+     "n": 4,
+     "note": "Nothing new from official sources.",
+     "opened": [],
+     "query": "u.ae Ajman digital government 100 percent services transformed digital achieved 2019"
+    }
+   ],
+   "unreachable": []
+  },
+  "C84": {
+   "doubt": "No official document found on shared or joint government services being digitised.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "No mention of shared or joint services figures.",
+     "opened": [
+      "https://www.ajman.ae/en/node/179",
+      "https://ajman.ae/en/node/569"
+     ],
+     "query": "e-Government of Ajman 100% government services digital 2018"
+    },
+    {
+     "n": 2,
+     "note": "Only news and already opened pages.",
+     "opened": [],
+     "query": "ajman.ae Ajman Digital Government joint services shared services digital transformation achieved 2018"
+    },
+    {
+     "n": 3,
+     "note": "Only the excluded masterplan and news.",
+     "opened": [],
+     "query": "عجمان تحويل 100% من الخدمات الحكومية رقمياً بنهاية 2018"
+    }
+   ],
+   "unreachable": []
+  },
+  "C85": {
+   "doubt": "Page measures digital transactions as share of completed transactions, and is dated before the end 2021 deadline; commitment wording is 80 percent of digital services adopted, so metric match is close but not certain.",
+   "found": true,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Context pages, no adoption figure.",
+     "opened": [
+      "https://www.ajman.ae/en/node/179",
+      "https://ajman.ae/en/node/569"
+     ],
+     "query": "e-Government of Ajman 100% government services digital 2018"
+    },
+    {
+     "n": 2,
+     "note": "Official Ajman page on percentage of digital service adoption, 89% H1 2020.",
+     "opened": [
+      "https://ajman.ae/en/node/669"
+     ],
+     "query": "Ajman government services digital transformation percent 2018 annual report results e-Government"
+    }
+   ],
+   "unreachable": []
+  },
+  "C87": {
+   "doubt": "",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Only media and unrelated Ajman pages.",
+     "opened": [],
+     "query": "Ajman e-Government 20% financial efficiency government services 2021"
+    },
+    {
+     "n": 2,
+     "note": "No official result document.",
+     "opened": [],
+     "query": "Ajman financial efficiency of government services annual report results 2021 Ajman Digital Government"
+    },
+    {
+     "n": 3,
+     "note": "Opened page is about blockchain land records, no efficiency figure.",
+     "opened": [
+      "https://u.ae/ar-AE/resources/-/media/C25E998CBA3D4D598919315C174B28C8.ashx"
+     ],
+     "query": "عجمان رفع الكفاءة المالية 20% بنهاية 2021 الخدمات الحكومية"
+    },
+    {
+     "n": 4,
+     "note": "2024 work efficiency report, no percentage.",
+     "opened": [
+      "https://www.ajman.ae/en/content/ammar-al-nuaimi-reviews-final-report-project-measuring-work-efficiency-and-improving"
+     ],
+     "query": "ajman.ae e-Government financial efficiency government services increase percent"
+    },
+    {
+     "n": 5,
+     "note": "u.ae Ajman 2021 page could not be fetched.",
+     "opened": [
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/local-governments-strategies-and-plans/ajman-2021"
+     ],
+     "query": "Ajman financial efficiency government services achieved 2021"
+    },
+    {
+     "n": 6,
+     "note": "Media and budget news only.",
+     "opened": [],
+     "query": "Ajman financial efficiency of government services achieved 2021"
+    },
+    {
+     "n": 7,
+     "note": "Budget news only.",
+     "opened": [],
+     "query": "Ajman government financial efficiency 2022 results"
+    },
+    {
+     "n": 8,
+     "note": "No annual report with the measure.",
+     "opened": [],
+     "query": "Ajman Department of Digital Ajman annual report 2021"
+    }
+   ],
+   "unreachable": [
+    "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/local-governments-strategies-and-plans/ajman-2021"
+   ]
+  },
+  "C88": {
+   "doubt": "Commitment has no metric or unit. Official RAK news of 2020-02-07 (https://rak.ae/wps/portal/rak/media-center/news/More+than+300+E-Services+and+100+Smart+Services+in+RAK/More+than+300+E-Services+and+100+Smart+Services+in+RAK) reports 330 e-services and 19 linking systems at end 2019, but it is not clear this is the same measure as accelerating delivery and digitising partner portfolios, and it predates the period end.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Official RAK news 2020-02-07 gives end 2019 service counts and 19 linking systems.",
+     "opened": [
+      "https://rak.ae/wps/portal/rak/media-center/news/More+than+300+E-Services+and+100+Smart+Services+in+RAK/More+than+300+E-Services+and+100+Smart+Services+in+RAK"
+     ],
+     "query": "RAK Electronic Government Authority strategy 2019-2021 accelerate service delivery digitise partner services"
+    },
+    {
+     "n": 2,
+     "note": "Same RAK pages surfaced.",
+     "opened": [],
+     "query": "RAK Electronic Government Authority annual report 2021 results services digitised"
+    },
+    {
+     "n": 3,
+     "note": "Media article (755 services in 2020), does not count.",
+     "opened": [
+      "https://www.emaratalyoum.com/local-section/other/2021-01-30-1.1448891"
+     ],
+     "query": "رأس الخيمة تسريع الخدمات ورقمنة خدمات الشركاء 2019-2021"
+    },
+    {
+     "n": 4,
+     "note": "No dated figures; p=7888 gives 450 e-services, dated 2024, not tied to the strategy measure.",
+     "opened": [
+      "https://ega.rak.ae/home/achievements/projects/",
+      "https://ega.rak.ae/?p=7888"
+     ],
+     "query": "ega.rak.ae services digitised partners accelerate service delivery number"
+    },
+    {
+     "n": 5,
+     "note": "No RAK figure.",
+     "opened": [
+      "https://u.ae/en/about-the-uae/digital-uae/digital-inclusion/eServices-for-Rural-and-Remote-Areas-in-the-UAE"
+     ],
+     "query": "Ras Al Khaimah Electronic Government Authority services digitised achieved 2021"
+    },
+    {
+     "n": 6,
+     "note": "Nothing new.",
+     "opened": [],
+     "query": "Ras Al Khaimah Electronic Government Authority 2022 services digitised results"
+    }
+   ],
+   "unreachable": []
+  },
+  "C89": {
+   "doubt": "Commitment has no metric. The RAK news of 2020-02-07 reports 86% customer satisfaction with the portal, but that is not clearly the same measure as 360 degree engagement.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Only the strategy page and unrelated items.",
+     "opened": [],
+     "query": "RAK Electronic Government Authority 360 degree citizen engagement immersive experience"
+    },
+    {
+     "n": 2,
+     "note": "Results unrelated (Canada, UK).",
+     "opened": [],
+     "query": "RAK EGA citizen engagement results 2021 annual report satisfaction"
+    },
+    {
+     "n": 3,
+     "note": "No official document.",
+     "opened": [],
+     "query": "رأس الخيمة مشاركة المجتمع بزاوية 360 درجة 2019-2021"
+    },
+    {
+     "n": 4,
+     "note": "No new page with a figure.",
+     "opened": [],
+     "query": "ega.rak.ae citizen engagement 360 immersive experience results"
+    },
+    {
+     "n": 5,
+     "note": "u.ae results without relevant figure.",
+     "opened": [],
+     "query": "Ras Al Khaimah citizen engagement 360 achieved 2021"
+    },
+    {
+     "n": 6,
+     "note": "Nothing new.",
+     "opened": [],
+     "query": "Ras Al Khaimah government 2022 citizen engagement results electronic government"
+    }
+   ],
+   "unreachable": []
+  },
+  "C92": {
+   "doubt": "MOFA news (2020-09-04) gives GII rank 34th, but commitment has no metric and a rank is not clearly the same as being one of the most innovative nations; dated before the deadline.",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Restates the goal only.",
+     "opened": [
+      "https://uaecabinet.ae/en/the-national-strategy-for-innovation"
+     ],
+     "query": "UAE government National Innovation Strategy most innovative nations"
+    },
+    {
+     "n": 2,
+     "note": "MOFA 2020-09-04 reports GII rank 34, before deadline, rank not the stated goal.",
+     "opened": [
+      "https://www.mofa.gov.ae/en/mediahub/news/2020/9/4/04-9-2020-uae-global"
+     ],
+     "query": "UAE Global Innovation Index rank 2021 results innovation ranking government"
+    },
+    {
+     "n": 3,
+     "note": "Media and strategy PDF only.",
+     "opened": [],
+     "query": "الإمارات من أكثر الدول ابتكاراً خلال سبع سنوات استراتيجية الابتكار الوطنية"
+    },
+    {
+     "n": 4,
+     "note": "Cites GII 2022 first in Arab world, page dated 2026-10-21, no rank figure.",
+     "opened": [
+      "https://u.ae/en/about-the-uae/science-and-technology/innovation-in-the-uae"
+     ],
+     "query": "UAE innovation ranking achieved national innovation strategy 2021 most innovative"
+    },
+    {
+     "n": 7,
+     "note": "Nothing new.",
+     "opened": [],
+     "query": "UAE National Innovation Strategy 2022 report achievements initiatives results"
+    }
+   ],
+   "unreachable": []
+  },
+  "C93": {
+   "doubt": "",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "States plan of 30 initiatives, no completion count.",
+     "opened": [
+      "https://uaecabinet.ae/en/the-national-strategy-for-innovation"
+     ],
+     "query": "UAE government National Innovation Strategy 30 national initiatives"
+    },
+    {
+     "n": 2,
+     "note": "Page mentions 100 initiatives of a different policy, no count for this strategy.",
+     "opened": [
+      "https://u.ae/en/about-the-uae/science-and-technology/innovation-in-the-uae/steps-and-initiatives-to-encourage-innovation-in-the-uae-"
+     ],
+     "query": "National Innovation Strategy initiatives completed annual report results UAE Cabinet innovation"
+    },
+    {
+     "n": 3,
+     "note": "No official result document.",
+     "opened": [],
+     "query": "30 مبادرة وطنية للابتكار خلال ثلاث سنوات الاستراتيجية الوطنية للابتكار"
+    },
+    {
+     "n": 4,
+     "note": "Strategy pages only.",
+     "opened": [],
+     "query": "national innovation initiatives launched number National Innovation Strategy first phase"
+    },
+    {
+     "n": 6,
+     "note": "Media only.",
+     "opened": [],
+     "query": "UAE national innovation initiatives 30 achieved 2017 innovation strategy first phase completed"
+    }
+   ],
+   "unreachable": []
+  },
+  "C95": {
+   "doubt": "",
+   "found": false,
+   "searches": [
+    {
+     "n": 1,
+     "note": "Restates target, updated 2026-10-08, no achieved figure.",
+     "opened": [
+      "https://u.ae/about-the-uae/digital-uae/digital-technology/blockchain-in-the-uae-government"
+     ],
+     "query": "UAE government Emirates Blockchain Strategy 2021 50% government transactions blockchain"
+    },
+    {
+     "n": 2,
+     "note": "Media and strategy page only.",
+     "opened": [],
+     "query": "Emirates Blockchain Strategy 2021 government transactions blockchain percentage achieved results"
+    },
+    {
+     "n": 3,
+     "note": "Media and strategy page only.",
+     "opened": [],
+     "query": "50% من المعاملات الحكومية على البلوك تشين بحلول 2021 نسبة المعاملات"
+    },
+    {
+     "n": 5,
+     "note": "u.ae pages and DFF whitepaper, no achieved share.",
+     "opened": [],
+     "query": "blockchain government transactions percent achieved Emirates Blockchain Strategy results"
+    },
+    {
+     "n": 6,
+     "note": "Media only.",
+     "opened": [],
+     "query": "government transactions on blockchain achieved 2021 UAE percent federal"
+    },
+    {
+     "n": 7,
+     "note": "Media only.",
+     "opened": [],
+     "query": "UAE blockchain government transactions 2022 percent Emirates Blockchain Strategy achieved"
+    }
+   ],
+   "unreachable": [
+    "https://government.ae/en/about-the-uae/digital-uae/blockchain-in-the-uae-government"
+   ]
+  }
+ },
+ "protocol": "at most eight searches per commitment, in the registered order; entries list every search run",
+ "retrieval_date": "2026-11-03",
+ "tools": "web search (standard mode) and page fetch"
+}
