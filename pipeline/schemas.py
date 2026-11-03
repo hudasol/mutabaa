@@ -56,6 +56,18 @@ UNITS = (
     "jobs",
     "percent-time",
     "rank",
+    # added in v1.7.0 for the wider ledger
+    "trips",
+    "initiatives",
+    "indicators",
+    "transactions",
+    "paper-use",
+    "productivity",
+    "leaders",
+    "experiences",
+    "professionals",
+    "efficiency",
+    "spending",
 )
 
 MaturityLevel = Literal[0, 1, 2, 3, 4]
