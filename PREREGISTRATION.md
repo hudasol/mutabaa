@@ -173,6 +173,29 @@ Registered on 2026-10-28, after the v1.5.0 release and before any code for E5 or
 
 **Consequence fixed in advance.** A violation on the real engine is fixed as a bug with a dated amendment. A surviving mutant leads to a new perturbation that kills it, added as a unit test, with a dated amendment.
 
+## Part three: experiments for v1.7.0 to v1.8.1 (registered 2026-11-03)
+
+Written by Huda Mueen before any of the experiments below was run. The commit that adds this section precedes the commits that add the blind second extraction of the new sources, the validity outcome search and the linter evaluation. As with the earlier parts, the order is established by the order of the commits and by the author's statement, not by an independent timestamp.
+
+**Common rules for part three.** The score, its thresholds, the status engine, the extraction matching rule of `pipeline/agreement.py` and the six checks are frozen as they stand at v1.6.0 (`tests/frozen/v1_6_0.json`). Python version, package versions, Node version, thread count, operating system, seeds and dates are written into each results file. Nothing is tuned after an outcome is seen. A change after that point is an exploratory amendment and is labelled as such.
+
+## E7. Does a blind second extraction agree with the extended ledger as well as it agreed with the first 25 commitments?
+
+**Question.** When the ledger grows from 25 commitments to 80 or more, from sources of several publishers and two more kinds of jurisdiction, does the blind second extraction still find the commitments?
+
+**Method.** The new extraction notes are given to a second reader that sees only the note text, not the ledger records, and is asked for the same list shape as the existing blind file. The matching rule is the one in `pipeline/agreement.py`. Recall is reported for the new commitments alone and for the whole ledger, with Wilson intervals. Precision is not reported, as before.
+
+**Baseline.** The first cohort: 22 of 25 found (88%), numeric recall 12 of 14 (86%).
+
+**Predictions.**
+- P7a. Recall on the new commitments is at least 75%.
+- P7b. Numeric recall on the new commitments is at least 75%.
+- P7c. Recall on the new commitments is lower than 88% (the extension is harder than the first cohort, which was built by the same author for a narrow topic).
+- P7d. At least 60% of the new sources are marked verified by `verify-live` run from the build container. Sources the verifier cannot reach are counted as not verified, not as failed.
+- P7e. At most 15% of the new commitments reach the band checkable.
+
+**Consequence fixed in advance.** A result below a threshold is reported as a miss. Missed commitments are listed by identifier. No commitment is removed because the blind reader missed it.
+
 ## Amendments
 
 Predictions above were not changed. The entries below record what was done after the results existed, and clarifications of details that the specification left open.
