@@ -1,0 +1,120 @@
+{
+ "band_counts": {
+  "checkable": 4,
+  "not-yet-checkable": 21,
+  "partly-checkable": 46
+ },
+ "facts": {
+  "P7a": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P7b": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P7c": {
+   "format": "str",
+   "value": "MISS"
+  },
+  "P7d": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "P7e": {
+   "format": "str",
+   "value": "HIT"
+  },
+  "checkable": {
+   "format": "int",
+   "value": 4
+  },
+  "checkable.share": {
+   "format": "pct",
+   "value": 0.056338028169014086
+  },
+  "first.recall": {
+   "format": "pct",
+   "value": 0.88
+  },
+  "new.commitments": {
+   "format": "int",
+   "value": 71
+  },
+  "new.numeric": {
+   "format": "pct",
+   "value": 1.0
+  },
+  "new.numeric.found": {
+   "format": "int",
+   "value": 48
+  },
+  "new.numeric.n": {
+   "format": "int",
+   "value": 48
+  },
+  "new.recall": {
+   "format": "pct",
+   "value": 1.0
+  },
+  "new.recall.ci_high": {
+   "format": "pct",
+   "value": 1.0
+  },
+  "new.recall.ci_low": {
+   "format": "pct",
+   "value": 0.9487
+  },
+  "new.recall.found": {
+   "format": "int",
+   "value": 71
+  },
+  "new.sources": {
+   "format": "int",
+   "value": 48
+  },
+  "verified.first": {
+   "format": "int",
+   "value": 41
+  },
+  "verified.first.share": {
+   "format": "pct",
+   "value": 0.8541666666666666
+  },
+  "verified.now": {
+   "format": "int",
+   "value": 43
+  }
+ },
+ "first_run_unverified": {
+  "S24": "unreachable",
+  "S25": "unreachable",
+  "S41": "unreachable",
+  "S43": "failed",
+  "S48": "unreachable",
+  "S57": "failed",
+  "S59": "failed"
+ },
+ "predictions": {
+  "P7a": {
+   "result": "HIT",
+   "text": "recall on the new commitments is at least 75%"
+  },
+  "P7b": {
+   "result": "HIT",
+   "text": "numeric recall on the new commitments is at least 75%"
+  },
+  "P7c": {
+   "result": "MISS",
+   "text": "recall on the new commitments is lower than 88%"
+  },
+  "P7d": {
+   "result": "HIT",
+   "text": "at least 60% of the new sources are verified on the first run of verify-live"
+  },
+  "P7e": {
+   "result": "HIT",
+   "text": "at most 15% of the new commitments reach the band checkable"
+  }
+ }
+}

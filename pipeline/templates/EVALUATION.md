@@ -64,6 +64,11 @@ The design, metrics, baselines, seeds and predictions were committed in `PREREGI
 | P6a | Zero violations of every invariant on the real engine | {e6.violations} violations | {e6.P6a} |
 | P6b | At least four of five mutants killed | {e6.killed} of {e6.mutants} | {e6.P6b} |
 | P6c | At most three commitments with two or more eligible evidence items | {e6.multi_evidence} | {e6.P6c} |
+| P7a | Recall of the blind second reading on the new commitments at least 75% | {e7.new.recall.found} of {e7.new.commitments} ({e7.new.recall}) | {e7.P7a} |
+| P7b | Numeric recall on the new commitments at least 75% | {e7.new.numeric.found} of {e7.new.numeric.n} ({e7.new.numeric}) | {e7.P7b} |
+| P7c | Recall on the new commitments lower than 88% | {e7.new.recall} against {e7.first.recall} on the first cohort | {e7.P7c} |
+| P7d | At least 60% of the new sources verified on the first run | {e7.verified.first} of {e7.new.sources} ({e7.verified.first.share}) | {e7.P7d} |
+| P7e | At most 15% of the new commitments in the band checkable | {e7.checkable} of {e7.new.commitments} ({e7.checkable.share}) | {e7.P7e} |
 
 ### E1. Score against an observable outcome (real ledger)
 
@@ -101,6 +106,10 @@ Exploratory, added after the results existed (amendment 5 in `PREREGISTRATION.md
 
 On the {e6.commitments} real commitments, with evidence added in memory only, the engine had {e6.violations} violations of the five invariants: the neutral default (I1), media evidence never moves a status (I2), no dependence on evidence order (I3), more official evidence never lowers a status (I4), and the date only changes the stale flag (I5). The same checks were run against five altered copies of the engine. Killed: {e6.killed} of {e6.mutants}. Which invariant caught each: M1 (media counts) {e6.mutant.M1}; M2 (old evidence dropped) {e6.mutant.M2}; M3 (first evidence only) {e6.mutant.M3}; M4 (neutral default replaced) {e6.mutant.M4}; M5 (rule order swapped) {e6.mutant.M5}. Only {e6.multi_evidence} commitments have two or more eligible evidence items, so order and tie rules are tested mostly through the in memory perturbations and not through the data.
 
+### E7. The extended ledger (v1.7.0)
+
+The ledger grew from 25 commitments and 14 sources to {e7.new.commitments} more commitments from {e7.new.sources} more sources. The blind second reading found {e7.new.recall.found} of the new commitments (95% Wilson interval {e7.new.recall.ci_low} to {e7.new.recall.ci_high}), above the {e7.first.recall} it reached on the first cohort, so P7c is a miss. Two things limit how far that figure can be read. The blind reader read the same extraction notes as the first reader, so it measures consistency of reading, not faithfulness to the pages. The notes for the new cohort were also written to a more regular template than the first cohort, which probably makes them easier to read twice. We did not test that explanation. Of the new sources, {e7.verified.first} of {e7.new.sources} were verified on the first run of `verify-live`; the rest were unreachable pages or expectations that paraphrased the page, and were corrected afterwards as recorded in `docs/DECISIONS_OVERNIGHT.md`. After the corrections {e7.verified.now} of {e7.new.sources} are verified; that figure is not a prediction result. {e7.checkable} of the new commitments reach the band checkable, which supports the finding that most public commitments are not yet checkable as written.
+
 ### The misses, explained
 
 - **P4a and P4b.** We expected the percentile bootstrap to fall short of 95% at moderate rates. It did not: at 0.70 and 0.88 it covered at or slightly above the nominal level. Our expectation came from the general result that percentile intervals under cover in small samples. A likely explanation, which we have not tested, is that with 25 binary items the bootstrap distribution moves in steps of 1/25 and the interval ends include whole steps, which adds coverage. The failure is concentrated where we also predicted it, near the top of the range, where a run with all successes gives an interval of zero width. The prediction was wrong at moderate rates and is kept as a miss.
@@ -115,4 +124,5 @@ On the {e6.commitments} real commitments, with evidence added in memory only, th
 - E3 measures noise by resampling items within an entity, which assumes the items are a sample from a larger population of similar items. If an office's registry is complete, a rank change has no sampling noise, but it still has measurement noise in the maturity ratings, which this experiment does not model.
 - E4 simulates independent binary items with a fixed rate. Real agreement items are not exchangeable, so real coverage may differ.
 - E5 uses the extraction notes as its text, not the source pages, and the notes were written by the same process that made the ledger. The rules are the simplest a developer would write; a better extractor is possible and was not tried. Unit precision is a lower bound.
+- E7 uses one blind reader that is a language model, a single run, and notes written by the same author as the ledger. A human reader may find fewer commitments. Commitments were chosen from official pages that state targets, which favours the numeric ones.
 - E6 tests that the rules do what they promise on 25 commitments and perturbations that we wrote. It says nothing about whether the rules are the right ones, and nothing about accuracy, because no gold labels exist for status.

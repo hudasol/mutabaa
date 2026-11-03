@@ -13,7 +13,7 @@ import random
 import statistics
 from collections.abc import Callable, Sequence
 
-from .evaluate_real import e5, e6, registered
+from .evaluate_real import e5, e6, e7, registered
 from .robustness import AXES, PROFILES, SIZES, first_order_effects
 from .schemas import Commitment, Registry, ServiceItem
 from .score import score
@@ -403,4 +403,4 @@ def e4() -> dict:
     }
 
 
-EXPERIMENTS = {"e1": e1, "e2": e2, "e3": e3, "e4": e4, "e5": e5, "e6": e6}
+EXPERIMENTS = {"e1": e1, "e2": e2, "e3": e3, "e4": e4, "e5": e5, "e6": e6, "e7": e7}

@@ -1,0 +1,194 @@
+{
+ "S15": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S16": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S17": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S18": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S19": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S20": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S21": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S22": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S23": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S24": {
+  "result": "unreachable",
+  "detail": "(HTTP 404)"
+ },
+ "S25": {
+  "result": "unreachable",
+  "detail": "(HTTP 404)"
+ },
+ "S26": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S27": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S28": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S29": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S30": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S31": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S32": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S33": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S34": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S35": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S36": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S37": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S38": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S39": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S40": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S41": {
+  "result": "unreachable",
+  "detail": "(HTTP 404)"
+ },
+ "S42": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S43": {
+  "result": "failed",
+  "detail": "missing=['AI in sewerage'] unexpected=[]"
+ },
+ "S44": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S45": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S46": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S47": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S48": {
+  "result": "unreachable",
+  "detail": "(URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'beta.government.ae'. (_ssl.c:1032)>)"
+ },
+ "S49": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S50": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S51": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S52": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S53": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S54": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S55": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S56": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S57": {
+  "result": "failed",
+  "detail": "missing=['بنهاية عام 2018', 'بنهاية عام 2021'] unexpected=[]"
+ },
+ "S58": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S59": {
+  "result": "failed",
+  "detail": "missing=['proactive, interconnected digital operations'] unexpected=[]"
+ },
+ "S60": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S61": {
+  "result": "verified",
+  "detail": ""
+ },
+ "S62": {
+  "result": "verified",
+  "detail": ""
+ }
+}

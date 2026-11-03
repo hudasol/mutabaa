@@ -24,7 +24,7 @@ jobs:
       - name: Preregistered evaluation reproduces the committed results
         run: |
           python -m pipeline evaluate
-          git diff --exit-code -- results docs/EVALUATION.md
+          git diff --exit-code -- results ':!results/env' docs/EVALUATION.md
       - name: Validate data
         run: python -m pipeline validate
       - name: Traceability and risk register

@@ -811,17 +811,97 @@
   "text": "0",
   "value": 0
  },
- "evaluation.hits": {
-  "text": "18",
-  "value": 18
+ "e7.P7a": {
+  "text": "HIT",
+  "value": "HIT"
  },
- "evaluation.misses": {
+ "e7.P7b": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e7.P7c": {
+  "text": "MISS",
+  "value": "MISS"
+ },
+ "e7.P7d": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e7.P7e": {
+  "text": "HIT",
+  "value": "HIT"
+ },
+ "e7.checkable": {
   "text": "4",
   "value": 4
  },
- "evaluation.predictions": {
+ "e7.checkable.share": {
+  "text": "6%",
+  "value": 0.056338028169014086
+ },
+ "e7.first.recall": {
+  "text": "88%",
+  "value": 0.88
+ },
+ "e7.new.commitments": {
+  "text": "71",
+  "value": 71
+ },
+ "e7.new.numeric": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "e7.new.numeric.found": {
+  "text": "48",
+  "value": 48
+ },
+ "e7.new.numeric.n": {
+  "text": "48",
+  "value": 48
+ },
+ "e7.new.recall": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "e7.new.recall.ci_high": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "e7.new.recall.ci_low": {
+  "text": "95%",
+  "value": 0.9487
+ },
+ "e7.new.recall.found": {
+  "text": "71",
+  "value": 71
+ },
+ "e7.new.sources": {
+  "text": "48",
+  "value": 48
+ },
+ "e7.verified.first": {
+  "text": "41",
+  "value": 41
+ },
+ "e7.verified.first.share": {
+  "text": "85%",
+  "value": 0.8541666666666666
+ },
+ "e7.verified.now": {
+  "text": "43",
+  "value": 43
+ },
+ "evaluation.hits": {
   "text": "22",
   "value": 22
+ },
+ "evaluation.misses": {
+  "text": "5",
+  "value": 5
+ },
+ "evaluation.predictions": {
+  "text": "27",
+  "value": 27
  },
  "evidence.count": {
   "text": "10",

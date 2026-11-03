@@ -155,6 +155,35 @@ def cmd_schema() -> int:
     return 0
 
 
+def environment() -> dict:
+    """Where a result was computed. Written beside each results file; CI does not diff these files."""
+    import importlib.metadata as md
+    import os
+    import platform
+    import subprocess
+
+    def version(pkg: str) -> str:
+        try:
+            return md.version(pkg)
+        except md.PackageNotFoundError:
+            return "not installed"
+
+    try:
+        node = subprocess.run(["node", "--version"], capture_output=True, text=True, check=False).stdout.strip()
+    except OSError:
+        node = "not installed"
+    return {
+        "python": platform.python_version(),
+        "platform": platform.platform(),
+        "packages": {p: version(p) for p in ("pydantic", "pytest", "ruff", "mypy")},
+        "node": node or "not installed",
+        "threads": os.cpu_count(),
+        "seeds": "fixed inside each experiment; see PREREGISTRATION.md",
+        "pipeline_version": __version__,
+        "note": "No wall clock time is recorded. Retrieval dates are in data/real/sources.json.",
+    }
+
+
 def cmd_evaluate() -> int:
     """Run the preregistered experiments in PREREGISTRATION.md and write results/*.json, facts and reports."""
     import time
@@ -165,6 +194,9 @@ def cmd_evaluate() -> int:
         res = run()
         path = facts.RESULTS / f"{name}.json"
         path.write_text(json.dumps(res, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
+        env_path = facts.RESULTS / "env" / f"{name}.json"
+        env_path.parent.mkdir(exist_ok=True)
+        env_path.write_text(json.dumps(environment(), indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
         marks = ", ".join(f"{k} {v['result']}" for k, v in res["predictions"].items())
         print(f"wrote {path.name} in {time.time() - t:.0f}s: {marks}")
     return cmd_report()

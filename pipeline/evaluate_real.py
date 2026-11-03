@@ -18,8 +18,11 @@ from datetime import date, timedelta
 from . import status as status_module
 from .io import ROOT, RealData, load_real
 from .schemas import Commitment, Evidence, EvidenceKind, Source, StatusResult
+from .score import score
 
 ANALYSIS = ROOT / "data" / "analysis"
+FIRST_COHORT_LAST = 25
+FIRST_SOURCE_LAST = 14
 
 
 def _fact(value, fmt: str) -> dict:
@@ -414,6 +417,73 @@ def e6() -> dict:
     return {
         "violations": real,
         "mutants": {k: {"describe": mutant_fns()[k][0], "violated": v} for k, v in killed.items()},
+        "predictions": preds,
+        "facts": facts,
+    }
+
+
+def e7() -> dict:
+    """E7: the blind second reading and the live verifier on the commitments and sources added in v1.7.0.
+
+    Reads `data/analysis/agreement.json`, `data/analysis/verify_first_run.json` (the first run of the live
+    verifier over the new sources, kept as recorded) and the score of each new commitment.
+    """
+    ag = json.loads((ANALYSIS / "agreement.json").read_text(encoding="utf-8"))
+    first_run = json.loads((ANALYSIS / "verify_first_run.json").read_text(encoding="utf-8"))
+    d = load_real()
+    new = [c for c in d.commitments if int(c.id[1:]) > FIRST_COHORT_LAST]
+    bands = [score(c).band for c in new]
+    checkable = sum(b == "checkable" for b in bands)
+    now = d.verification["results"]
+    new_ids = {s.id for s in d.sources if int(s.id[1:]) > FIRST_SOURCE_LAST}
+    verified_first = sum(first_run[i]["result"] == "verified" for i in new_ids)
+    verified_now = sum(now[i]["result"] == "verified" for i in new_ids)
+    nc, fc = ag["new_cohort"], ag["first_cohort"]
+    preds = {
+        "P7a": {
+            "text": "recall on the new commitments is at least 75%",
+            "result": _verdict(nc["recall"]["rate"] >= 0.75),
+        },
+        "P7b": {
+            "text": "numeric recall on the new commitments is at least 75%",
+            "result": _verdict(nc["numeric_recall"]["rate"] >= 0.75),
+        },
+        "P7c": {
+            "text": "recall on the new commitments is lower than 88%",
+            "result": _verdict(nc["recall"]["rate"] < 0.88),
+        },
+        "P7d": {
+            "text": "at least 60% of the new sources are verified on the first run of verify-live",
+            "result": _verdict(verified_first / len(new_ids) >= 0.60),
+        },
+        "P7e": {
+            "text": "at most 15% of the new commitments reach the band checkable",
+            "result": _verdict(checkable / len(new) <= 0.15),
+        },
+    }
+    facts = {
+        "new.commitments": _fact(len(new), "int"),
+        "new.sources": _fact(len(new_ids), "int"),
+        "new.recall": _fact(nc["recall"]["rate"], "pct"),
+        "new.recall.found": _fact(nc["recall"]["found"], "int"),
+        "new.recall.ci_low": _fact(nc["recall"]["wilson95"][0], "pct"),
+        "new.recall.ci_high": _fact(nc["recall"]["wilson95"][1], "pct"),
+        "new.numeric": _fact(nc["numeric_recall"]["rate"], "pct"),
+        "new.numeric.found": _fact(nc["numeric_recall"]["found"], "int"),
+        "new.numeric.n": _fact(nc["numeric_recall"]["n"], "int"),
+        "first.recall": _fact(fc["recall"]["rate"], "pct"),
+        "verified.first": _fact(verified_first, "int"),
+        "verified.first.share": _fact(verified_first / len(new_ids), "pct"),
+        "verified.now": _fact(verified_now, "int"),
+        "checkable": _fact(checkable, "int"),
+        "checkable.share": _fact(checkable / len(new), "pct"),
+    }
+    facts.update({k: _fact(v["result"], "str") for k, v in preds.items()})
+    return {
+        "first_run_unverified": {
+            i: first_run[i]["result"] for i in sorted(new_ids) if first_run[i]["result"] != "verified"
+        },
+        "band_counts": {b: bands.count(b) for b in ("checkable", "partly-checkable", "not-yet-checkable")},
         "predictions": preds,
         "facts": facts,
     }
