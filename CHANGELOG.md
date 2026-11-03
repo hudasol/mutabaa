@@ -2,6 +2,14 @@
 
 Milestones are listed with their tag. Tags up to v1.4.0 were first created locally with `scripts/tag-milestones.sh` (it maps each tag to its commit SHA) and later pushed; v1.5.0 and v1.6.0 were tagged directly.
 
+## v1.7.0: a larger ledger
+- Ledger: 96 commitments from 62 public sources (56 official, 6 secondary media), covering federal, Abu Dhabi, Dubai, other emirate and national commitments; extraction notes, hashes and anchors for every source; 11 new units
+- Checks: a blind second reading of the new notes, `verify-live` over all new sources (first run figures kept in `data/analysis/verify_first_run.json`), agreement reported by cohort
+- Preregistered E7 (five predictions, one miss, P7c) in `docs/EVALUATION.md`; E1, E5 and E6 keep their registered scope so their results are unchanged, held by `tests/test_regression_frozen.py`
+- Each result file has a record of its environment in `results/env/`
+- Decisions taken during the unattended upgrade are logged in `docs/DECISIONS_OVERNIGHT.md`; related work in `docs/RELATED_WORK.md`
+- Open: native Arabic review, a person labelled gold set, a legal reading of the sources policy, a real pilot
+
 ## v1.6.0: a command line, baselines and engineering gates
 - Command line: `mutabaa score`, `questions` and `template` read a CSV or JSON commitments file (comma, semicolon or tab, quoted line breaks, UTF-8 or UTF-16), print text, JSON or CSV and set an exit code with `--strict` and `--min-ratio`; the repository commands moved to argparse; `docs/CLI.md`, `docs/USER_GUIDE.md`
 - One reader in two languages: `pipeline/own.py` and the browser reader follow the same rules, held together by `data/golden/own_inputs.json` and `own_outputs.json` (awkward cases found by an independent review); deadlines accept dates, months, quarters and years and must be real dates

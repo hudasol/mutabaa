@@ -169,7 +169,8 @@ def environment() -> dict:
             return "not installed"
 
     try:
-        node = subprocess.run(["node", "--version"], capture_output=True, text=True, check=False).stdout.strip()
+        done = subprocess.run(["node", "--version"], capture_output=True, text=True, check=False)
+        node = done.stdout.strip()
     except OSError:
         node = "not installed"
     return {
@@ -196,7 +197,8 @@ def cmd_evaluate() -> int:
         path.write_text(json.dumps(res, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
         env_path = facts.RESULTS / "env" / f"{name}.json"
         env_path.parent.mkdir(exist_ok=True)
-        env_path.write_text(json.dumps(environment(), indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
+        env_text = json.dumps(environment(), indent=1, sort_keys=True) + "\n"
+        env_path.write_text(env_text, encoding="utf-8", newline="\n")
         marks = ", ".join(f"{k} {v['result']}" for k, v in res["predictions"].items())
         print(f"wrote {path.name} in {time.time() - t:.0f}s: {marks}")
     return cmd_report()
