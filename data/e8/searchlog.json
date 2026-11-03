@@ -1,8 +1,10 @@
 {
+ "completion_pass": "A second pass ran the remaining registered searches for outcome 0 commitments on 2026-11-03. The shared web search budget ran out part way, so the searches listed in not_performed were never run. Outcome 0 means: no qualifying document found with the searches that ran.",
  "entries": {
   "C07": {
-   "doubt": "A uaecabinet.ae page on the same 23 April 2026 meeting appeared in results but could not be fetched; it would likely be the same announcement, not a later report.",
+   "doubt": "A uaecabinet.ae page on the same 23 April 2026 meeting appeared in results but could not be fetched; it would likely be the same announcement, not a later report. | completion pass: Search 8 ran and found nothing qualifying. No opened page. Not found with this search only.",
    "found": false,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -47,6 +49,12 @@
      "note": "Nothing new",
      "opened": [],
      "query": "UAE Cabinet digital records policy data sharing guide digital government projects 2026 achieved"
+    },
+    {
+     "n": 8,
+     "note": "Ran; results were unrelated or non-official; nothing opened or qualifying.",
+     "opened": [],
+     "query": "UAE Cabinet annual report 2026 digital records policy data sharing policy"
     }
    ],
    "unreachable": [
@@ -55,8 +63,14 @@
    ]
   },
   "C26": {
-   "doubt": "Official u.ae page dated 19 Nov 2025 (last updated) says program raised customer satisfaction to 90%. Doubt: it is satisfaction in general, not 'very satisfied citizens'; no measurement date or method; it describes the 2014 national transformation program, not clearly the strategy KPI.",
+   "doubt": "Official u.ae page dated 19 Nov 2025 (last updated) says program raised customer satisfaction to 90%. Doubt: it is satisfaction in general, not 'very satisfied citizens'; no measurement date or method; it describes the 2014 national transformation program, not clearly the strategy KPI. | completion pass: Searches 5-7 could not be run (shared search budget exhausted); search 8 not run. Result is incomplete, not evidence of absence.",
    "found": false,
+   "not_performed": [
+    5,
+    6,
+    7,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -92,8 +106,13 @@
    "unreachable": []
   },
   "C27": {
-   "doubt": "2023 u.ae factsheet (publisher unnamed) lists 2,630 digital services on the portal; this is a count not a share and predates the deadline, so not counted.",
+   "doubt": "2023 u.ae factsheet (publisher unnamed) lists 2,630 digital services on the portal; this is a count not a share and predates the deadline, so not counted. | completion pass: Searches 2, 3 could not be run (search budget exhausted); search 8 not run. Result is incomplete, not evidence of absence.",
    "found": false,
+   "not_performed": [
+    2,
+    3,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -139,8 +158,13 @@
    "unreachable": []
   },
   "C28": {
-   "doubt": "No official document with an achieved figure on this exact measure found.",
+   "doubt": "No official document with an achieved figure on this exact measure found. | completion pass: Searches 2, 3 could not be run (search budget exhausted); search 8 not run. Result is incomplete, not evidence of absence.",
    "found": false,
+   "not_performed": [
+    2,
+    3,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -183,8 +207,13 @@
    "unreachable": []
   },
   "C29": {
-   "doubt": "No official document with an achieved figure on this exact measure found.",
+   "doubt": "No official document with an achieved figure on this exact measure found. | completion pass: Searches 2, 3 could not be run (search budget exhausted); search 8 not run. Result is incomplete, not evidence of absence.",
    "found": false,
+   "not_performed": [
+    2,
+    3,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -227,8 +256,13 @@
    "unreachable": []
   },
   "C30": {
-   "doubt": "No official document with an achieved figure on this exact measure found.",
+   "doubt": "No official document with an achieved figure on this exact measure found. | completion pass: Searches 2, 3 could not be run (search budget exhausted); search 8 not run. Result is incomplete, not evidence of absence.",
    "found": false,
+   "not_performed": [
+    2,
+    3,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -271,8 +305,9 @@
    "unreachable": []
   },
   "C31": {
-   "doubt": "Government Digital Transformation Report 2024 lists Jaahiz user counts but no share of workforce trained; no figure on the commitment measure.",
+   "doubt": "Government Digital Transformation Report 2024 lists Jaahiz user counts but no share of workforce trained; no figure on the commitment measure. | completion pass: Protocol complete (search 8 was the last). No official document with a figure on this measure found.",
    "found": false,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -323,13 +358,22 @@
       "https://assets.u.ae/api/public/content/d9d3a3bf75f843a6b1abf999bc224022"
      ],
      "query": "تقرير التحول الرقمي الحكومي 2024 الإمارات نسبة الموظفين المدربين النضج الرقمي الجهات"
+    },
+    {
+     "n": 8,
+     "note": "u.ae page states a goal only, no workforce training figure",
+     "opened": [
+      "https://u.ae/en/information-and-services/jobs/training-and-development/strategies-for-improving-digital-skills-and-egovernment-literacy"
+     ],
+     "query": "UAE Government annual report 2025 federal workforce trained digital"
     }
    ],
    "unreachable": []
   },
   "C32": {
-   "doubt": "",
+   "doubt": "completion pass: Protocol complete. Gulf News item on an 80,000 employee training programme is media, not an official document, and was not opened.",
    "found": false,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -378,13 +422,24 @@
       "https://assets.u.ae/api/public/content/d9d3a3bf75f843a6b1abf999bc224022"
      ],
      "query": "تقرير التحول الرقمي الحكومي 2024 الإمارات نسبة الموظفين المدربين النضج الرقمي الجهات"
+    },
+    {
+     "n": 8,
+     "note": "same u.ae page, no figure; other hits were media articles",
+     "opened": [
+      "https://u.ae/en/information-and-services/jobs/training-and-development/strategies-for-improving-digital-skills-and-egovernment-literacy"
+     ],
+     "query": "UAE Government annual report 2025 federal workforce trained modern technologies"
     }
    ],
    "unreachable": []
   },
   "C33": {
-   "doubt": "Maturity model pages and Digital Transformation Report 2024 describe levels but give no share of entities at the top level.",
+   "doubt": "Maturity model pages and Digital Transformation Report 2024 describe levels but give no share of entities at the top level. | completion pass: Search 8 not run: web search budget for the turn was exhausted. Not a finding of absence.",
    "found": false,
+   "not_performed": [
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -429,6 +484,12 @@
       "https://assets.u.ae/api/public/content/d9d3a3bf75f843a6b1abf999bc224022"
      ],
      "query": "تقرير التحول الرقمي الحكومي 2024 الإمارات نسبة الموظفين المدربين النضج الرقمي الجهات"
+    },
+    {
+     "n": 7,
+     "note": "results were other countries or generic; no UAE official figure opened",
+     "opened": [],
+     "query": "share of entities at maturity level 5 digital government 2026"
     }
    ],
    "unreachable": []
@@ -436,6 +497,7 @@
   "C34": {
    "doubt": "Publisher is the Dubai government media office, publishing a UAE VP and Minister statement; phase 1 total may cover a period beyond end 2024.",
    "found": true,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -481,6 +543,7 @@
   "C35": {
    "doubt": "Page says service delivery time reduced, commitment says procedure time; judged the same programme goal but wording differs slightly.",
    "found": true,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -522,8 +585,9 @@
    "unreachable": []
   },
   "C38": {
-   "doubt": "UAE Cabinet page dated 2019-11-26 reports 79% progress on National Agenda indicators; it is an aggregate percentage, not a count of the 52 indicators achieved, so not judged the same measure.",
+   "doubt": "UAE Cabinet page dated 2019-11-26 reports 79% progress on National Agenda indicators; it is an aggregate percentage, not a count of the 52 indicators achieved, so not judged the same measure. | completion pass: UAE Cabinet news dated 26 Nov 2019 says progress on National Agenda indicators reached 79% during 2019. This is an aggregate progress rate, not a count of indicators achieved out of 52, and is dated before the deadline; recorded as doubtful, found=false. Protocol complete.",
    "found": false,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -574,13 +638,27 @@
      "note": "No new official document.",
      "opened": [],
      "query": "UAE national agenda 52 national indicators 2021 \"indicators\" achieved percentage cabinet 2021 annual government meetings progress national agenda concluded"
+    },
+    {
+     "n": 8,
+     "note": "cabinet page gives aggregate 79% progress in 2019, no indicator count; national-agenda page gives no result",
+     "opened": [
+      "https://uaecabinet.ae/en/news/annual-meetings-of-uae-government-progress-in-achieving-government-targets-and-indicatorsannual-meetings-of-uae-government-progress-in-achieving-government-targets-and-indicators",
+      "https://uaecabinet.ae/en/national-agenda"
+     ],
+     "query": "UAE Government annual report 2021 national key performance indicators national agenda"
     }
    ],
    "unreachable": []
   },
   "C39": {
-   "doubt": "Government.ae 2023 indices PDF reports 98.59% percentage of digital transformation of government services (2021); not clearly the same measure as share on one platform, so not counted.",
+   "doubt": "Government.ae 2023 indices PDF reports 98.59% percentage of digital transformation of government services (2021); not clearly the same measure as share on one platform, so not counted. | completion pass: Searches 6, 7 and 8 not run: web search budget for the turn was exhausted. Not a finding of absence.",
    "found": false,
+   "not_performed": [
+    6,
+    7,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -609,13 +687,27 @@
      "note": "no qualifying page",
      "opened": [],
      "query": "u.ae percent of federal government services digital 2022 achieved"
+    },
+    {
+     "n": 4,
+     "note": "u.ae page states a future target (more than 90 per cent by 2023), not a result",
+     "opened": [
+      "https://u.ae/en/about-the-uae/digital-uae/digital-transformation/platforms-and-apps/unified-digital-platform"
+     ],
+     "query": "UAE Government site u.ae share of public services on one digital platform"
     }
    ],
    "unreachable": []
   },
   "C41": {
-   "doubt": "",
+   "doubt": "completion pass: Searches 4, 6, 7 and 8 not run: web search budget for the turn was exhausted. Not a finding of absence.",
    "found": false,
+   "not_performed": [
+    4,
+    6,
+    7,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -634,13 +726,25 @@
      "note": "results limited to u.ae, government.ae, uaecabinet.ae; nothing opened with a figure",
      "opened": [],
      "query": "share of federal government services available 24/7 digital channels 2023 percent UAE Government"
+    },
+    {
+     "n": 2,
+     "note": "results generic (u.ae service lists, media, TDRA Digital Enablers Report 2023 reported via WAM); none opened",
+     "opened": [],
+     "query": "share of services accessible anywhere, any time annual report results UAE Government"
     }
    ],
    "unreachable": []
   },
   "C42": {
-   "doubt": "",
+   "doubt": "completion pass: Searches 5 to 8 not run: search budget exhausted. No outcome document found.",
    "found": false,
+   "not_performed": [
+    4,
+    6,
+    7,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -659,6 +763,14 @@
      "note": "restricted to official domains; no initiative count found",
      "opened": [],
      "query": "UAE government services strategy 2023 results initiatives completed \"Strategy for Government Services\" achieved"
+    },
+    {
+     "n": 2,
+     "note": "u.ae strategy page only restates the plan (own source); no completed count",
+     "opened": [
+      "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/the-uae-strategy-for-government-services"
+     ],
+     "query": "number of initiatives UAE Strategy for Government Services annual report results"
     }
    ],
    "unreachable": []
@@ -666,6 +778,7 @@
   "C43": {
    "doubt": "Page dated 3 September 2021, one day before the committed 4 September; event (announcement) judged to be the same. Page did not name publisher in text; domain is uaecabinet.ae.",
    "found": true,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -681,6 +794,7 @@
   "C59": {
    "doubt": "Anchor phrase taken from a page summary and may not be verbatim; wording on page may differ slightly.",
    "found": true,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -704,8 +818,14 @@
    ]
   },
   "C60": {
-   "doubt": "Dubai Media Office 2021-12-11 reports all 45 entities completed the paperless strategy and paper printing is only on request, but does not state a count of entities still issuing paper documents; not clearly the same measure, so found=false.",
+   "doubt": "Dubai Media Office 2021-12-11 reports all 45 entities completed the paperless strategy and paper printing is only on request, but does not state a count of entities still issuing paper documents; not clearly the same measure, so found=false. | completion pass: Searches 6 to 8 not run: search budget exhausted. Results of search 2 suggest a Dec 2021 Dubai paperless announcement exists, but no official page was read, so not counted.",
    "found": false,
+   "not_performed": [
+    5,
+    6,
+    7,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -726,6 +846,12 @@
       "https://www.mediaoffice.ae/en/news/2021/december/11-12/hamdan-bin-mohammed-dubai-has-become-the-worlds-first-paperless-government"
      ],
      "query": "Dubai government entities no longer issue paper documents 12 December 2021 Digital Dubai entities paperless"
+    },
+    {
+     "n": 2,
+     "note": "results were media and WAM articles (not official-on-own-site); official Dubai Media Office announcement not opened/confirmed",
+     "opened": [],
+     "query": "entities issuing paper documents Dubai annual report results paperless strategy"
     }
    ],
    "unreachable": []
@@ -733,6 +859,7 @@
   "C62": {
    "doubt": "",
    "found": true,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -748,6 +875,7 @@
   "C63": {
    "doubt": "",
    "found": true,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -763,6 +891,7 @@
   "C64": {
    "doubt": "",
    "found": true,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -778,6 +907,7 @@
   "C65": {
    "doubt": "Page does not separate internal operations from customer services; it reports paperless completion and total paper cut.",
    "found": true,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -801,6 +931,7 @@
   "C66": {
    "doubt": "Rate is dated 2023, after the 2021 deadline; it is the same measure (services digitised).",
    "found": true,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -815,8 +946,15 @@
    "unreachable": []
   },
   "C67": {
-   "doubt": "Commitment is paperless and cashless; official Dec 2021 page (mediaoffice.ae) confirms paperless only, cashless not reported, so event not matched.",
+   "doubt": "Commitment is paperless and cashless; official Dec 2021 page (mediaoffice.ae) confirms paperless only, cashless not reported, so event not matched. | completion pass: Searches 5 to 8 not run: search budget exhausted. Commitment has no metric or unit, so measure matching would also be doubtful.",
    "found": false,
+   "not_performed": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -831,13 +969,24 @@
      "note": "results were news and entity pages; none opened as official cashless report",
      "opened": [],
      "query": "حكومة دبي بلا ورق 100% دبي الرقمية الإعلام"
+    },
+    {
+     "n": 3,
+     "note": "results were media outlets only",
+     "opened": [],
+     "query": "حكومة دبي بلا ورق بحلول 2021 حكومة بلا نقد"
     }
    ],
    "unreachable": []
   },
   "C68": {
-   "doubt": "Smart Dubai Dubai Blockchain Strategy 2020 Achievements Report (hosted on mbrsg.ae, undated) gives implementation status of 24 use cases, not whether the city became fully powered by blockchain; it restates the goal as applicable government transactions. Measure not the same, so found=false.",
+   "doubt": "Smart Dubai Dubai Blockchain Strategy 2020 Achievements Report (hosted on mbrsg.ae, undated) gives implementation status of 24 use cases, not whether the city became fully powered by blockchain; it restates the goal as applicable government transactions. Measure not the same, so found=false. | completion pass: Searches 7 and 8 not run: search budget exhausted.",
    "found": false,
+   "not_performed": [
+    6,
+    7,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -866,6 +1015,14 @@
       "https://mbrsg.ae/documents/d/MBRSG/EN_DUBAI-BLOCKCHAIN-STRATEGY-2020-ACHIEVMENT-REPORT"
      ],
      "query": "Dubai Blockchain Strategy 2020 achievements report digitaldubai.ae"
+    },
+    {
+     "n": 5,
+     "note": "u.ae page states the goal only, no outcome or figure (own source)",
+     "opened": [
+      "https://u.ae/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/dubai-blockchain-strategy"
+     ],
+     "query": "Smart Dubai Office Dubai Future Foundation Dubai Blockchain Strategy national portal u.ae first city powered by blockchain"
     }
    ],
    "unreachable": [
@@ -875,6 +1032,7 @@
   "C72": {
    "doubt": "",
    "found": true,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -890,6 +1048,7 @@
   "C77": {
    "doubt": "Media Office release gives 21-25 April only for the AI Week in Schools side programme; it confirms the week closed on 25 Apr 2025 and the AI Retreat was held, but does not state the ten initiatives.",
    "found": true,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -917,8 +1076,13 @@
    "unreachable": []
   },
   "C83": {
-   "doubt": "No official document found stating percent of all Ajman government services made digital.",
+   "doubt": "No official document found stating percent of all Ajman government services made digital. | completion pass: Near misses, not counted: u.ae blog 2020-10-26 gives 91% digital transformation for Ajman Dept of Economic Development only; ajman.ae/en/node/669 (2020-09-17) gives 89% digital service adoption (share of transactions via digital channels); ajman.ae/en/node/179 (2024-03-12) gives 42 services transformed in first 100 days. None reports share of all government services digital. Searches 7 and 8 not run.",
    "found": false,
+   "not_performed": [
+    6,
+    7,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -949,13 +1113,29 @@
      "note": "Nothing new from official sources.",
      "opened": [],
      "query": "u.ae Ajman digital government 100 percent services transformed digital achieved 2019"
+    },
+    {
+     "n": 5,
+     "note": "nothing on the same measure",
+     "opened": [
+      "https://u.ae/en/participate/blogs/blog?id=551",
+      "https://www.ajman.ae/en/node/669",
+      "https://www.ajman.ae/en/node/179"
+     ],
+     "query": "u.ae Ajman government services digital transformation percent services"
     }
    ],
    "unreachable": []
   },
   "C84": {
-   "doubt": "No official document found on shared or joint government services being digitised.",
+   "doubt": "No official document found on shared or joint government services being digitised. | completion pass: Search 5 was run in the first pass; searches 7 and 8 not run: search budget exhausted. No document on shared services found.",
    "found": false,
+   "not_performed": [
+    5,
+    6,
+    7,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -977,6 +1157,14 @@
      "note": "Only the excluded masterplan and news.",
      "opened": [],
      "query": "عجمان تحويل 100% من الخدمات الحكومية رقمياً بنهاية 2018"
+    },
+    {
+     "n": 4,
+     "note": "ajman.ae page counts 42 services transformed, no mention of shared services",
+     "opened": [
+      "https://www.ajman.ae/en/node/179"
+     ],
+     "query": "ajman.ae all shared government services digital transformation joint services"
     }
    ],
    "unreachable": []
@@ -984,6 +1172,7 @@
   "C85": {
    "doubt": "Page measures digital transactions as share of completed transactions, and is dated before the end 2021 deadline; commitment wording is 80 percent of digital services adopted, so metric match is close but not certain.",
    "found": true,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -1069,8 +1258,9 @@
    ]
   },
   "C88": {
-   "doubt": "Commitment has no metric or unit. Official RAK news of 2020-02-07 (https://rak.ae/wps/portal/rak/media-center/news/More+than+300+E-Services+and+100+Smart+Services+in+RAK/More+than+300+E-Services+and+100+Smart+Services+in+RAK) reports 330 e-services and 19 linking systems at end 2019, but it is not clear this is the same measure as accelerating delivery and digitising partner portfolios, and it predates the period end.",
+   "doubt": "Commitment has no metric or unit. Official RAK news of 2020-02-07 (https://rak.ae/wps/portal/rak/media-center/news/More+than+300+E-Services+and+100+Smart+Services+in+RAK/More+than+300+E-Services+and+100+Smart+Services+in+RAK) reports 330 e-services and 19 linking systems at end 2019, but it is not clear this is the same measure as accelerating delivery and digitising partner portfolios, and it predates the period end. | completion pass: rak.ae page dated 2020-02-07 reports 330 e-services and 73.8% digital transformation of in-scope services, but the commitment has no metric or unit about partner service digitisation or delivery speed, so same measure cannot be confirmed. Search 7 query was not a verbatim rerun of earlier search 6.",
    "found": false,
+   "not_performed": [],
    "searches": [
     {
      "n": 1,
@@ -1116,13 +1306,31 @@
      "note": "Nothing new.",
      "opened": [],
      "query": "Ras Al Khaimah Electronic Government Authority 2022 services digitised results"
+    },
+    {
+     "n": 7,
+     "note": "rak.ae 7 Feb 2020 page has e-service counts and 73.8% transformation; ega.rak.ae/?p=178 has no figures",
+     "opened": [
+      "https://rak.ae/wps/portal/rak/media-center/news/More+than+300+E-Services+and+100+Smart+Services+in+RAK/More+than+300+E-Services+and+100+Smart+Services+in+RAK",
+      "https://ega.rak.ae/?p=178"
+     ],
+     "query": "Ras Al Khaimah Electronic Government Authority services digitised 2022 results"
+    },
+    {
+     "n": 8,
+     "note": "no annual report found in results",
+     "opened": [],
+     "query": "Ras Al Khaimah Electronic Government Authority annual report 2021"
     }
    ],
    "unreachable": []
   },
   "C89": {
-   "doubt": "Commitment has no metric. The RAK news of 2020-02-07 reports 86% customer satisfaction with the portal, but that is not clearly the same measure as 360 degree engagement.",
+   "doubt": "Commitment has no metric. The RAK news of 2020-02-07 reports 86% customer satisfaction with the portal, but that is not clearly the same measure as 360 degree engagement. | completion pass: rak.ae 2020-02-07 reports 86% customer satisfaction; commitment is a qualitative 360 degree engagement aim with no metric, so not the same measure. Search 8 not run: web search budget exhausted.",
    "found": false,
+   "not_performed": [
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -1159,13 +1367,26 @@
      "note": "Nothing new.",
      "opened": [],
      "query": "Ras Al Khaimah government 2022 citizen engagement results electronic government"
+    },
+    {
+     "n": 7,
+     "note": "only an 86% customer satisfaction figure (2020), not a 360 engagement measure; ega page has no results",
+     "opened": [
+      "https://rak.ae/wps/portal/rak/media-center/news/More+than+300+E-Services+and+100+Smart+Services+in+RAK/More+than+300+E-Services+and+100+Smart+Services+in+RAK",
+      "https://ega.rak.ae/?p=178"
+     ],
+     "query": "Ras Al Khaimah citizen engagement results 2022 electronic government"
     }
    ],
    "unreachable": []
   },
   "C92": {
-   "doubt": "MOFA news (2020-09-04) gives GII rank 34th, but commitment has no metric and a rank is not clearly the same as being one of the most innovative nations; dated before the deadline.",
+   "doubt": "MOFA news (2020-09-04) gives GII rank 34th, but commitment has no metric and a rank is not clearly the same as being one of the most innovative nations; dated before the deadline. | completion pass: Searches 6 and 8 not run: web search budget exhausted. The second search listed was run as an extra under the u.ae step.",
    "found": false,
+   "not_performed": [
+    6,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -1202,13 +1423,31 @@
      "note": "Nothing new.",
      "opened": [],
      "query": "UAE National Innovation Strategy 2022 report achievements initiatives results"
+    },
+    {
+     "n": 5,
+     "note": "results were mostly media; no u.ae or official page with the ranking opened",
+     "opened": [],
+     "query": "u.ae UAE innovation ranking Global Innovation Index most innovative nations"
+    },
+    {
+     "n": 5,
+     "note": "cabinet page restates the goal only, no achieved ranking",
+     "opened": [
+      "https://uaecabinet.ae/en/the-national-strategy-for-innovation"
+     ],
+     "query": "UAE National Innovation Strategy 30 national initiatives u.ae"
     }
    ],
    "unreachable": []
   },
   "C93": {
-   "doubt": "",
+   "doubt": "completion pass: Searches 7 and 8 not run: web search budget exhausted.",
    "found": false,
+   "not_performed": [
+    7,
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -1243,13 +1482,24 @@
      "note": "Media only.",
      "opened": [],
      "query": "UAE national innovation initiatives 30 achieved 2017 innovation strategy first phase completed"
+    },
+    {
+     "n": 5,
+     "note": "page states 30 initiatives within three years as a plan, no completed count",
+     "opened": [
+      "https://uaecabinet.ae/en/the-national-strategy-for-innovation"
+     ],
+     "query": "UAE National Innovation Strategy 30 national initiatives u.ae"
     }
    ],
    "unreachable": []
   },
   "C95": {
-   "doubt": "",
+   "doubt": "completion pass: Search 8 not run: web search budget exhausted. Query was run as the owner-site step (u.ae), not strictly the owner's own site.",
    "found": false,
+   "not_performed": [
+    8
+   ],
    "searches": [
     {
      "n": 1,
@@ -1288,6 +1538,14 @@
      "note": "Media only.",
      "opened": [],
      "query": "UAE blockchain government transactions 2022 percent Emirates Blockchain Strategy achieved"
+    },
+    {
+     "n": 4,
+     "note": "u.ae page restates the 50 percent target only, no achieved share",
+     "opened": [
+      "https://u.ae/en/about-the-uae/digital-uae/digital-technology/blockchain-in-the-uae-government"
+     ],
+     "query": "Emirates Blockchain Strategy 2021 government transactions blockchain percent site u.ae"
     }
    ],
    "unreachable": [

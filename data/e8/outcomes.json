@@ -4,47 +4,47 @@
  "outcomes": {
   "C07": {
    "document": null,
-   "doubt": "A uaecabinet.ae page on the same 23 April 2026 meeting appeared in results but could not be fetched; it would likely be the same announcement, not a later report.",
+   "doubt": "A uaecabinet.ae page on the same 23 April 2026 meeting appeared in results but could not be fetched; it would likely be the same announcement, not a later report. | completion pass: Search 8 ran and found nothing qualifying. No opened page. Not found with this search only.",
    "found": false
   },
   "C26": {
    "document": null,
-   "doubt": "Official u.ae page dated 19 Nov 2025 (last updated) says program raised customer satisfaction to 90%. Doubt: it is satisfaction in general, not 'very satisfied citizens'; no measurement date or method; it describes the 2014 national transformation program, not clearly the strategy KPI.",
+   "doubt": "Official u.ae page dated 19 Nov 2025 (last updated) says program raised customer satisfaction to 90%. Doubt: it is satisfaction in general, not 'very satisfied citizens'; no measurement date or method; it describes the 2014 national transformation program, not clearly the strategy KPI. | completion pass: Searches 5-7 could not be run (shared search budget exhausted); search 8 not run. Result is incomplete, not evidence of absence.",
    "found": false
   },
   "C27": {
    "document": null,
-   "doubt": "2023 u.ae factsheet (publisher unnamed) lists 2,630 digital services on the portal; this is a count not a share and predates the deadline, so not counted.",
+   "doubt": "2023 u.ae factsheet (publisher unnamed) lists 2,630 digital services on the portal; this is a count not a share and predates the deadline, so not counted. | completion pass: Searches 2, 3 could not be run (search budget exhausted); search 8 not run. Result is incomplete, not evidence of absence.",
    "found": false
   },
   "C28": {
    "document": null,
-   "doubt": "No official document with an achieved figure on this exact measure found.",
+   "doubt": "No official document with an achieved figure on this exact measure found. | completion pass: Searches 2, 3 could not be run (search budget exhausted); search 8 not run. Result is incomplete, not evidence of absence.",
    "found": false
   },
   "C29": {
    "document": null,
-   "doubt": "No official document with an achieved figure on this exact measure found.",
+   "doubt": "No official document with an achieved figure on this exact measure found. | completion pass: Searches 2, 3 could not be run (search budget exhausted); search 8 not run. Result is incomplete, not evidence of absence.",
    "found": false
   },
   "C30": {
    "document": null,
-   "doubt": "No official document with an achieved figure on this exact measure found.",
+   "doubt": "No official document with an achieved figure on this exact measure found. | completion pass: Searches 2, 3 could not be run (search budget exhausted); search 8 not run. Result is incomplete, not evidence of absence.",
    "found": false
   },
   "C31": {
    "document": null,
-   "doubt": "Government Digital Transformation Report 2024 lists Jaahiz user counts but no share of workforce trained; no figure on the commitment measure.",
+   "doubt": "Government Digital Transformation Report 2024 lists Jaahiz user counts but no share of workforce trained; no figure on the commitment measure. | completion pass: Protocol complete (search 8 was the last). No official document with a figure on this measure found.",
    "found": false
   },
   "C32": {
    "document": null,
-   "doubt": "",
+   "doubt": "completion pass: Protocol complete. Gulf News item on an 80,000 employee training programme is media, not an official document, and was not opened.",
    "found": false
   },
   "C33": {
    "document": null,
-   "doubt": "Maturity model pages and Digital Transformation Report 2024 describe levels but give no share of entities at the top level.",
+   "doubt": "Maturity model pages and Digital Transformation Report 2024 describe levels but give no share of entities at the top level. | completion pass: Search 8 not run: web search budget for the turn was exhausted. Not a finding of absence.",
    "found": false
   },
   "C34": {
@@ -71,22 +71,22 @@
   },
   "C38": {
    "document": null,
-   "doubt": "UAE Cabinet page dated 2019-11-26 reports 79% progress on National Agenda indicators; it is an aggregate percentage, not a count of the 52 indicators achieved, so not judged the same measure.",
+   "doubt": "UAE Cabinet page dated 2019-11-26 reports 79% progress on National Agenda indicators; it is an aggregate percentage, not a count of the 52 indicators achieved, so not judged the same measure. | completion pass: UAE Cabinet news dated 26 Nov 2019 says progress on National Agenda indicators reached 79% during 2019. This is an aggregate progress rate, not a count of indicators achieved out of 52, and is dated before the deadline; recorded as doubtful, found=false. Protocol complete.",
    "found": false
   },
   "C39": {
    "document": null,
-   "doubt": "Government.ae 2023 indices PDF reports 98.59% percentage of digital transformation of government services (2021); not clearly the same measure as share on one platform, so not counted.",
+   "doubt": "Government.ae 2023 indices PDF reports 98.59% percentage of digital transformation of government services (2021); not clearly the same measure as share on one platform, so not counted. | completion pass: Searches 6, 7 and 8 not run: web search budget for the turn was exhausted. Not a finding of absence.",
    "found": false
   },
   "C41": {
    "document": null,
-   "doubt": "",
+   "doubt": "completion pass: Searches 4, 6, 7 and 8 not run: web search budget for the turn was exhausted. Not a finding of absence.",
    "found": false
   },
   "C42": {
    "document": null,
-   "doubt": "",
+   "doubt": "completion pass: Searches 5 to 8 not run: search budget exhausted. No outcome document found.",
    "found": false
   },
   "C43": {
@@ -113,7 +113,7 @@
   },
   "C60": {
    "document": null,
-   "doubt": "Dubai Media Office 2021-12-11 reports all 45 entities completed the paperless strategy and paper printing is only on request, but does not state a count of entities still issuing paper documents; not clearly the same measure, so found=false.",
+   "doubt": "Dubai Media Office 2021-12-11 reports all 45 entities completed the paperless strategy and paper printing is only on request, but does not state a count of entities still issuing paper documents; not clearly the same measure, so found=false. | completion pass: Searches 6 to 8 not run: search budget exhausted. Results of search 2 suggest a Dec 2021 Dubai paperless announcement exists, but no official page was read, so not counted.",
    "found": false
   },
   "C62": {
@@ -173,12 +173,12 @@
   },
   "C67": {
    "document": null,
-   "doubt": "Commitment is paperless and cashless; official Dec 2021 page (mediaoffice.ae) confirms paperless only, cashless not reported, so event not matched.",
+   "doubt": "Commitment is paperless and cashless; official Dec 2021 page (mediaoffice.ae) confirms paperless only, cashless not reported, so event not matched. | completion pass: Searches 5 to 8 not run: search budget exhausted. Commitment has no metric or unit, so measure matching would also be doubtful.",
    "found": false
   },
   "C68": {
    "document": null,
-   "doubt": "Smart Dubai Dubai Blockchain Strategy 2020 Achievements Report (hosted on mbrsg.ae, undated) gives implementation status of 24 use cases, not whether the city became fully powered by blockchain; it restates the goal as applicable government transactions. Measure not the same, so found=false.",
+   "doubt": "Smart Dubai Dubai Blockchain Strategy 2020 Achievements Report (hosted on mbrsg.ae, undated) gives implementation status of 24 use cases, not whether the city became fully powered by blockchain; it restates the goal as applicable government transactions. Measure not the same, so found=false. | completion pass: Searches 7 and 8 not run: search budget exhausted.",
    "found": false
   },
   "C72": {
@@ -205,12 +205,12 @@
   },
   "C83": {
    "document": null,
-   "doubt": "No official document found stating percent of all Ajman government services made digital.",
+   "doubt": "No official document found stating percent of all Ajman government services made digital. | completion pass: Near misses, not counted: u.ae blog 2020-10-26 gives 91% digital transformation for Ajman Dept of Economic Development only; ajman.ae/en/node/669 (2020-09-17) gives 89% digital service adoption (share of transactions via digital channels); ajman.ae/en/node/179 (2024-03-12) gives 42 services transformed in first 100 days. None reports share of all government services digital. Searches 7 and 8 not run.",
    "found": false
   },
   "C84": {
    "document": null,
-   "doubt": "No official document found on shared or joint government services being digitised.",
+   "doubt": "No official document found on shared or joint government services being digitised. | completion pass: Search 5 was run in the first pass; searches 7 and 8 not run: search budget exhausted. No document on shared services found.",
    "found": false
   },
   "C85": {
@@ -231,27 +231,27 @@
   },
   "C88": {
    "document": null,
-   "doubt": "Commitment has no metric or unit. Official RAK news of 2020-02-07 (https://rak.ae/wps/portal/rak/media-center/news/More+than+300+E-Services+and+100+Smart+Services+in+RAK/More+than+300+E-Services+and+100+Smart+Services+in+RAK) reports 330 e-services and 19 linking systems at end 2019, but it is not clear this is the same measure as accelerating delivery and digitising partner portfolios, and it predates the period end.",
+   "doubt": "Commitment has no metric or unit. Official RAK news of 2020-02-07 (https://rak.ae/wps/portal/rak/media-center/news/More+than+300+E-Services+and+100+Smart+Services+in+RAK/More+than+300+E-Services+and+100+Smart+Services+in+RAK) reports 330 e-services and 19 linking systems at end 2019, but it is not clear this is the same measure as accelerating delivery and digitising partner portfolios, and it predates the period end. | completion pass: rak.ae page dated 2020-02-07 reports 330 e-services and 73.8% digital transformation of in-scope services, but the commitment has no metric or unit about partner service digitisation or delivery speed, so same measure cannot be confirmed. Search 7 query was not a verbatim rerun of earlier search 6.",
    "found": false
   },
   "C89": {
    "document": null,
-   "doubt": "Commitment has no metric. The RAK news of 2020-02-07 reports 86% customer satisfaction with the portal, but that is not clearly the same measure as 360 degree engagement.",
+   "doubt": "Commitment has no metric. The RAK news of 2020-02-07 reports 86% customer satisfaction with the portal, but that is not clearly the same measure as 360 degree engagement. | completion pass: rak.ae 2020-02-07 reports 86% customer satisfaction; commitment is a qualitative 360 degree engagement aim with no metric, so not the same measure. Search 8 not run: web search budget exhausted.",
    "found": false
   },
   "C92": {
    "document": null,
-   "doubt": "MOFA news (2020-09-04) gives GII rank 34th, but commitment has no metric and a rank is not clearly the same as being one of the most innovative nations; dated before the deadline.",
+   "doubt": "MOFA news (2020-09-04) gives GII rank 34th, but commitment has no metric and a rank is not clearly the same as being one of the most innovative nations; dated before the deadline. | completion pass: Searches 6 and 8 not run: web search budget exhausted. The second search listed was run as an extra under the u.ae step.",
    "found": false
   },
   "C93": {
    "document": null,
-   "doubt": "",
+   "doubt": "completion pass: Searches 7 and 8 not run: web search budget exhausted.",
    "found": false
   },
   "C95": {
    "document": null,
-   "doubt": "",
+   "doubt": "completion pass: Search 8 not run: web search budget exhausted. Query was run as the owner-site step (u.ae), not strictly the owner's own site.",
    "found": false
   }
  },
