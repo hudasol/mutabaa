@@ -82,8 +82,8 @@ The reference implementation is split into five layers. A module may import modu
 |---|---|---|
 | 0. Contracts and pure helpers | `schemas`, `stats`, `render` | nothing from the package |
 | 1. Repository input | `io` | layer 0 and its own layer |
-| 2. Engines | `score`, `status`, `questions`, `sensitivity`, `synth`, `synth_b`, `own`, `validate`, `verify_live`, `diff` | layers 0 and 1 and its own layer |
-| 3. Analysis and reporting | `robustness`, `own_report`, `calibration`, `agreement`, `facts`, `evaluate`, `evaluate_real`, `schema_export` | layers 0 to 2 and its own layer |
+| 2. Engines | `score`, `status`, `questions`, `lint`, `sensitivity`, `synth`, `synth_b`, `own`, `validate`, `verify_live`, `diff` | layers 0 and 1 and its own layer |
+| 3. Analysis and reporting | `robustness`, `own_report`, `calibration`, `agreement`, `facts`, `evaluate`, `evaluate_real`, `validity`, `schema_export` | layers 0 to 2 and its own layer |
 | 4. Command line | `__main__` | everything |
 
 Engines hold the rules. Analysis code measures the rules and never changes them. The command line only wires layers together and writes files.

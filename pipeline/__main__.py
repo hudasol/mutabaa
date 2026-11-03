@@ -185,6 +185,24 @@ def environment() -> dict:
     }
 
 
+def cmd_e8_freeze() -> int:
+    """E8 step A: write the scores of the commitments with a past deadline, before any outcome is searched."""
+    from . import validity
+
+    out = validity.E8_DIR / "frozen_scores.json"
+    if out.exists():
+        print(f"{out.name} exists: the scores are frozen and are not rewritten", file=sys.stderr)
+        return 1
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(
+        json.dumps(validity.freeze(), indent=1, sort_keys=True, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    print(f"wrote {out} for {len(validity.population())} commitments")
+    return 0
+
+
 def cmd_evaluate() -> int:
     """Run the preregistered experiments in PREREGISTRATION.md and write results/*.json, facts and reports."""
     import time
@@ -426,6 +444,7 @@ def build_parser() -> argparse.ArgumentParser:
         ("schema", "write the JSON Schema files"),
         ("evaluate", "run the preregistered experiments"),
         ("golden", "write the golden files for the TypeScript port"),
+        ("e8-freeze", "write the frozen scores for the validity study (step A)"),
     ):
         sub.add_parser(name, help=help_)
     d = sub.add_parser("diff", help="payload changes since a git ref")
@@ -441,6 +460,7 @@ def main(argv: list[str] | None = None) -> int:
         "validate": cmd_validate, "rehash": cmd_rehash, "synth": cmd_synth,
         "build": cmd_build, "analyse": cmd_analyse, "facts": cmd_facts, "report": cmd_report,
         "sync-docs": cmd_sync_docs, "schema": cmd_schema, "evaluate": cmd_evaluate, "golden": cmd_golden,
+        "e8-freeze": cmd_e8_freeze,
         "template": cmd_template,
     }
     for stream in (sys.stdout, sys.stderr):  # Arabic text must not crash a redirected or Windows console

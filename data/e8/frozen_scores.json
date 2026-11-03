@@ -1,0 +1,259 @@
+{
+ "commitments": {
+  "C07": {
+   "band": "checkable",
+   "deadline": "2026-04-23",
+   "has_digit": true,
+   "score": 1.0,
+   "statement_length": 155
+  },
+  "C26": {
+   "band": "not-yet-checkable",
+   "deadline": "2025-12-31",
+   "has_digit": true,
+   "score": 0.3333,
+   "statement_length": 115
+  },
+  "C27": {
+   "band": "partly-checkable",
+   "deadline": "2025-12-31",
+   "has_digit": true,
+   "score": 0.5,
+   "statement_length": 83
+  },
+  "C28": {
+   "band": "partly-checkable",
+   "deadline": "2025-12-31",
+   "has_digit": true,
+   "score": 0.5,
+   "statement_length": 75
+  },
+  "C29": {
+   "band": "partly-checkable",
+   "deadline": "2025-12-31",
+   "has_digit": true,
+   "score": 0.5,
+   "statement_length": 140
+  },
+  "C30": {
+   "band": "partly-checkable",
+   "deadline": "2025-12-31",
+   "has_digit": true,
+   "score": 0.6667,
+   "statement_length": 83
+  },
+  "C31": {
+   "band": "partly-checkable",
+   "deadline": "2025-12-31",
+   "has_digit": true,
+   "score": 0.5,
+   "statement_length": 157
+  },
+  "C32": {
+   "band": "partly-checkable",
+   "deadline": "2025-12-31",
+   "has_digit": true,
+   "score": 0.5,
+   "statement_length": 121
+  },
+  "C33": {
+   "band": "partly-checkable",
+   "deadline": "2025-12-31",
+   "has_digit": true,
+   "score": 0.5,
+   "statement_length": 139
+  },
+  "C34": {
+   "band": "partly-checkable",
+   "deadline": "2024-12-31",
+   "has_digit": true,
+   "score": 0.6667,
+   "statement_length": 153
+  },
+  "C35": {
+   "band": "partly-checkable",
+   "deadline": "2024-12-31",
+   "has_digit": true,
+   "score": 0.6667,
+   "statement_length": 117
+  },
+  "C38": {
+   "band": "checkable",
+   "deadline": "2021-12-31",
+   "has_digit": true,
+   "score": 1.0,
+   "statement_length": 141
+  },
+  "C39": {
+   "band": "partly-checkable",
+   "deadline": "2022-12-31",
+   "has_digit": true,
+   "score": 0.6667,
+   "statement_length": 196
+  },
+  "C41": {
+   "band": "partly-checkable",
+   "deadline": "2023-12-31",
+   "has_digit": true,
+   "score": 0.6667,
+   "statement_length": 100
+  },
+  "C42": {
+   "band": "partly-checkable",
+   "deadline": "2023-12-31",
+   "has_digit": true,
+   "score": 0.75,
+   "statement_length": 79
+  },
+  "C43": {
+   "band": "partly-checkable",
+   "deadline": "2021-09-04",
+   "has_digit": true,
+   "score": 0.5,
+   "statement_length": 153
+  },
+  "C59": {
+   "band": "partly-checkable",
+   "deadline": "2021-12-31",
+   "has_digit": true,
+   "score": 0.6667,
+   "statement_length": 150
+  },
+  "C60": {
+   "band": "partly-checkable",
+   "deadline": "2021-12-12",
+   "has_digit": true,
+   "score": 0.6667,
+   "statement_length": 116
+  },
+  "C62": {
+   "band": "checkable",
+   "deadline": "2020-04-30",
+   "has_digit": true,
+   "score": 0.8333,
+   "statement_length": 101
+  },
+  "C63": {
+   "band": "checkable",
+   "deadline": "2020-11-30",
+   "has_digit": true,
+   "score": 0.8333,
+   "statement_length": 85
+  },
+  "C64": {
+   "band": "checkable",
+   "deadline": "2021-01-31",
+   "has_digit": true,
+   "score": 0.8333,
+   "statement_length": 84
+  },
+  "C65": {
+   "band": "partly-checkable",
+   "deadline": "2021-12-31",
+   "has_digit": true,
+   "score": 0.5,
+   "statement_length": 150
+  },
+  "C66": {
+   "band": "partly-checkable",
+   "deadline": "2021-12-31",
+   "has_digit": true,
+   "score": 0.6667,
+   "statement_length": 126
+  },
+  "C67": {
+   "band": "not-yet-checkable",
+   "deadline": "2021-12-31",
+   "has_digit": true,
+   "score": 0.3333,
+   "statement_length": 84
+  },
+  "C68": {
+   "band": "not-yet-checkable",
+   "deadline": "2020-12-31",
+   "has_digit": true,
+   "score": 0.3333,
+   "statement_length": 100
+  },
+  "C72": {
+   "band": "partly-checkable",
+   "deadline": "2025-12-31",
+   "has_digit": true,
+   "score": 0.5,
+   "statement_length": 127
+  },
+  "C77": {
+   "band": "partly-checkable",
+   "deadline": "2025-04-25",
+   "has_digit": true,
+   "score": 0.5,
+   "statement_length": 142
+  },
+  "C83": {
+   "band": "partly-checkable",
+   "deadline": "2018-12-31",
+   "has_digit": true,
+   "score": 0.6667,
+   "statement_length": 109
+  },
+  "C84": {
+   "band": "partly-checkable",
+   "deadline": "2018-12-31",
+   "has_digit": true,
+   "score": 0.5,
+   "statement_length": 98
+  },
+  "C85": {
+   "band": "partly-checkable",
+   "deadline": "2021-12-31",
+   "has_digit": true,
+   "score": 0.6667,
+   "statement_length": 90
+  },
+  "C87": {
+   "band": "partly-checkable",
+   "deadline": "2021-12-31",
+   "has_digit": true,
+   "score": 0.6667,
+   "statement_length": 120
+  },
+  "C88": {
+   "band": "not-yet-checkable",
+   "deadline": "2021-12-31",
+   "has_digit": true,
+   "score": 0.1667,
+   "statement_length": 144
+  },
+  "C89": {
+   "band": "not-yet-checkable",
+   "deadline": "2021-12-31",
+   "has_digit": true,
+   "score": 0.1667,
+   "statement_length": 103
+  },
+  "C92": {
+   "band": "not-yet-checkable",
+   "deadline": "2021-10-31",
+   "has_digit": true,
+   "score": 0.0,
+   "statement_length": 148
+  },
+  "C93": {
+   "band": "not-yet-checkable",
+   "deadline": "2017-10-31",
+   "has_digit": true,
+   "score": 0.25,
+   "statement_length": 99
+  },
+  "C95": {
+   "band": "partly-checkable",
+   "deadline": "2021-12-31",
+   "has_digit": true,
+   "score": 0.5,
+   "statement_length": 124
+  }
+ },
+ "cutoff": "2026-06-30",
+ "design": "PREREGISTRATION.md, section E8, step A",
+ "n": 36
+}
