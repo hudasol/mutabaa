@@ -25,6 +25,22 @@ from pipeline.schemas import UNITS, Commitment, Source  # noqa: E402
 REAL = ROOT / "data" / "real"
 
 
+# What a staging file may say in `unit_other`, mapped to the unit vocabulary in pipeline/schemas.py.
+UNIT_OTHER = {
+    "initiatives": "initiatives",
+    "indicators": "indicators",
+    "percent of transactions": "transactions",
+    "percent of trips": "trips",
+    "percent reduction in paper use": "paper-use",
+    "percent productivity increase": "productivity",
+    "leaders trained": "leaders",
+    "digital city experiences": "experiences",
+    "professionals": "professionals",
+    "percent efficiency gain": "efficiency",
+    "percent of spending": "spending",
+}
+
+
 def _norm(text: str) -> str:
     return " ".join(text.split()).lower()
 
@@ -42,7 +58,7 @@ def main(paths: list[str]) -> int:
         keymap: dict[str, str] = {}
         for s in stage["sources"]:
             if s["url"].rstrip("/") in have_urls:
-                problems.append(f"{path}: duplicate url skipped {s['url']}")
+                problems.append(f"{path}: skipped, duplicate url {s['url']}")
                 continue
             sid = f"S{next_s:02d}"
             next_s += 1
@@ -57,7 +73,7 @@ def main(paths: list[str]) -> int:
                 "published": s.get("published"), "published_note": s.get("published_note"),
                 "retrieved": s["retrieved"], "extract_file": rel,
                 "content_hash": hashlib.sha256(text.encode("utf-8")).hexdigest(),
-                "ai_assisted": True, "notes": s.get("notes", ""),
+                "ai_assisted": False, "notes": s.get("notes") or "",
                 "expect_present": s.get("expect_present", []), "expect_absent": s.get("expect_absent", []),
             }
             try:
@@ -68,11 +84,11 @@ def main(paths: list[str]) -> int:
         for c in stage["commitments"]:
             ids = [keymap[k] for k in c["source_keys"] if k in keymap]
             if not ids:
-                problems.append(f"{path}: commitment without a kept source: {c['title']}")
+                problems.append(f"{path}: skipped, its source was a duplicate url: {c['title']}")
                 continue
             cid = f"C{next_c:02d}"
             next_c += 1
-            unit = c.get("unit")
+            unit = c.get("unit") or UNIT_OTHER.get(str(c.get("unit_other") or "").lower())
             if unit not in UNITS:
                 unit = None
             tags = list(c.get("tags", []))
@@ -97,7 +113,7 @@ def main(paths: list[str]) -> int:
                     {"source_id": keymap[a["source_key"]], "text": a["text"]}
                     for a in c["anchors"] if a["source_key"] in keymap
                 ],
-                "notes": c.get("notes", ""),
+                "notes": c.get("notes") or "",
             }
             try:
                 m = Commitment.model_validate(row)
@@ -112,7 +128,7 @@ def main(paths: list[str]) -> int:
 
     for p in problems:
         print("problem:", p)
-    if [p for p in problems if "duplicate url" not in p]:
+    if [p for p in problems if "skipped" not in p]:
         print("not written: fix the problems above")
         return 1
     for rel, text in notes.items():
