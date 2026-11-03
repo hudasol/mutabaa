@@ -1,7 +1,55 @@
 {
  "agreement.blind_items": {
-  "text": "46",
-  "value": 46
+  "text": "255",
+  "value": 255
+ },
+ "agreement.first.missed": {
+  "text": "C06, C09, C16",
+  "value": [
+   "C06",
+   "C09",
+   "C16"
+  ]
+ },
+ "agreement.first.numeric_recall.found": {
+  "text": "12",
+  "value": 12
+ },
+ "agreement.first.numeric_recall.n": {
+  "text": "14",
+  "value": 14
+ },
+ "agreement.first.numeric_recall.rate": {
+  "text": "86%",
+  "value": 0.857
+ },
+ "agreement.first.numeric_recall.wilson_high": {
+  "text": "96%",
+  "value": 0.9599
+ },
+ "agreement.first.numeric_recall.wilson_low": {
+  "text": "60%",
+  "value": 0.6006
+ },
+ "agreement.first.recall.found": {
+  "text": "22",
+  "value": 22
+ },
+ "agreement.first.recall.n": {
+  "text": "25",
+  "value": 25
+ },
+ "agreement.first.recall.rate": {
+  "text": "88%",
+  "value": 0.88
+ },
+ "agreement.first.recall.wilson_high": {
+  "text": "96%",
+  "value": 0.9583
+ },
+ "agreement.first.recall.wilson_low": {
+  "text": "70%",
+  "value": 0.7004
  },
  "agreement.missed": {
   "text": "C06, C09, C16",
@@ -11,150 +59,213 @@
    "C16"
   ]
  },
+ "agreement.new.missed": {
+  "text": "",
+  "value": []
+ },
+ "agreement.new.numeric_recall.found": {
+  "text": "48",
+  "value": 48
+ },
+ "agreement.new.numeric_recall.n": {
+  "text": "48",
+  "value": 48
+ },
+ "agreement.new.numeric_recall.rate": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "agreement.new.numeric_recall.wilson_high": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "agreement.new.numeric_recall.wilson_low": {
+  "text": "93%",
+  "value": 0.9259
+ },
+ "agreement.new.recall.found": {
+  "text": "71",
+  "value": 71
+ },
+ "agreement.new.recall.n": {
+  "text": "71",
+  "value": 71
+ },
+ "agreement.new.recall.rate": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "agreement.new.recall.wilson_high": {
+  "text": "100%",
+  "value": 1.0
+ },
+ "agreement.new.recall.wilson_low": {
+  "text": "95%",
+  "value": 0.9487
+ },
  "agreement.numeric_recall.ci_high": {
   "text": "100%",
   "value": 1.0
  },
  "agreement.numeric_recall.ci_low": {
-  "text": "64%",
-  "value": 0.6429
+  "text": "92%",
+  "value": 0.9194
  },
  "agreement.numeric_recall.found": {
-  "text": "12",
-  "value": 12
+  "text": "60",
+  "value": 60
  },
  "agreement.numeric_recall.n": {
-  "text": "14",
-  "value": 14
+  "text": "62",
+  "value": 62
  },
  "agreement.numeric_recall.rate": {
-  "text": "86%",
-  "value": 0.857
+  "text": "97%",
+  "value": 0.968
  },
  "agreement.recall.ci_high": {
   "text": "100%",
   "value": 1.0
  },
  "agreement.recall.ci_low": {
-  "text": "72%",
-  "value": 0.72
+  "text": "93%",
+  "value": 0.9271
  },
  "agreement.recall.found": {
-  "text": "22",
-  "value": 22
+  "text": "93",
+  "value": 93
  },
  "agreement.recall.n": {
-  "text": "25",
-  "value": 25
+  "text": "96",
+  "value": 96
  },
  "agreement.recall.rate": {
-  "text": "88%",
-  "value": 0.88
+  "text": "97%",
+  "value": 0.969
  },
  "bands.fully": {
-  "text": "2",
-  "value": 2
+  "text": "6",
+  "value": 6
  },
  "bands.partly": {
-  "text": "10",
-  "value": 10
+  "text": "56",
+  "value": 56
  },
  "bands.under": {
-  "text": "13",
-  "value": 13
+  "text": "34",
+  "value": 34
  },
  "calibration.bands.max_changed": {
-  "text": "9",
-  "value": 9
+  "text": "39",
+  "value": 39
  },
  "calibration.bands.n": {
-  "text": "25",
-  "value": 25
+  "text": "96",
+  "value": 96
  },
  "calibration.consistency.dated_deadline.agree": {
-  "text": "22",
-  "value": 22
+  "text": "89",
+  "value": 89
  },
  "calibration.consistency.dated_deadline.ci_high": {
-  "text": "1.00",
-  "value": 1.0
+  "text": "0.94",
+  "value": 0.9374
  },
  "calibration.consistency.dated_deadline.ci_low": {
-  "text": "0.44",
-  "value": 0.4372
+  "text": "0.74",
+  "value": 0.7352
  },
  "calibration.consistency.dated_deadline.kappa": {
-  "text": "0.75",
-  "value": 0.746
+  "text": "0.85",
+  "value": 0.851
  },
  "calibration.consistency.dated_deadline.n": {
-  "text": "25",
-  "value": 25
+  "text": "96",
+  "value": 96
  },
  "calibration.consistency.disagreements": {
-  "text": "C01, C10, C14, C24",
+  "text": "C01, C10, C14, C24, C43, C53, C54, C60, C65, C67, C68, C71, C72, C75, C77, C78, C83, C84, C88, C89, C90, C91, C92",
   "value": [
    "C01",
    "C10",
    "C14",
-   "C24"
+   "C24",
+   "C43",
+   "C53",
+   "C54",
+   "C60",
+   "C65",
+   "C67",
+   "C68",
+   "C71",
+   "C72",
+   "C75",
+   "C77",
+   "C78",
+   "C83",
+   "C84",
+   "C88",
+   "C89",
+   "C90",
+   "C91",
+   "C92"
   ]
  },
  "calibration.consistency.numeric_target.agree": {
-  "text": "16",
-  "value": 16
+  "text": "64",
+  "value": 64
  },
  "calibration.consistency.numeric_target.ci_high": {
-  "text": "1.00",
-  "value": 1.0
+  "text": "0.52",
+  "value": 0.5177
  },
  "calibration.consistency.numeric_target.ci_low": {
-  "text": "0.00",
-  "value": 0.0
+  "text": "0.08",
+  "value": 0.079
  },
  "calibration.consistency.numeric_target.kappa": {
-  "text": "0.61",
-  "value": 0.609
+  "text": "0.29",
+  "value": 0.286
  },
  "calibration.consistency.numeric_target.n": {
-  "text": "18",
-  "value": 18
+  "text": "82",
+  "value": 82
  },
  "calibration.leave_one_out.measurement_source": {
   "text": "0.999",
   "value": 0.999
  },
  "calibration.leave_one_out.terms_defined": {
-  "text": "1.000",
-  "value": 1.0
+  "text": "0.953",
+  "value": 0.953
  },
  "calibration.pass_rate.measurement_source": {
-  "text": "8%",
-  "value": 0.08
+  "text": "3%",
+  "value": 0.031
  },
  "calibration.pass_rate.terms_defined": {
-  "text": "4%",
-  "value": 0.04
+  "text": "18%",
+  "value": 0.177
  },
  "calibration.weights.draws": {
   "text": "1,000",
   "value": 1000
  },
  "calibration.weights.spearman_median": {
-  "text": "0.94",
-  "value": 0.936
+  "text": "0.89",
+  "value": 0.889
  },
  "calibration.weights.spearman_p05": {
-  "text": "0.52",
-  "value": 0.521
+  "text": "0.74",
+  "value": 0.736
  },
  "claims.count": {
   "text": "5",
   "value": 5
  },
  "commitments.count": {
-  "text": "25",
-  "value": 25
+  "text": "96",
+  "value": 96
  },
  "e1.P1a": {
   "text": "HIT",
@@ -769,32 +880,32 @@
   "value": 12
  },
  "sources.count": {
-  "text": "14",
-  "value": 14
+  "text": "62",
+  "value": 62
  },
  "sources.media": {
-  "text": "4",
-  "value": 4
+  "text": "6",
+  "value": 6
  },
  "sources.official": {
-  "text": "10",
-  "value": 10
+  "text": "56",
+  "value": 56
  },
  "sources.official_self_report": {
   "text": "3",
   "value": 3
  },
  "sources.official_statement": {
+  "text": "53",
+  "value": 53
+ },
+ "sources.unreachable": {
   "text": "7",
   "value": 7
  },
- "sources.unreachable": {
-  "text": "3",
-  "value": 3
- },
  "sources.verified": {
-  "text": "11",
-  "value": 11
+  "text": "54",
+  "value": 54
  },
  "status.activity-reported": {
   "text": "5",
@@ -805,12 +916,12 @@
   "value": 0
  },
  "status.no-public-evidence": {
-  "text": "15",
-  "value": 15
+  "text": "75",
+  "value": 75
  },
  "status.not-checkable": {
-  "text": "5",
-  "value": 5
+  "text": "16",
+  "value": 16
  },
  "status.target-claimed-met": {
   "text": "0",

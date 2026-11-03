@@ -12,9 +12,9 @@ A second extractor (a smaller language model used as an independent reader) was 
 
 | Check | Result |
 | --- | --- |
-| Items listed by the blind pass | <!-- fact:agreement.blind_items -->46<!-- /fact --> |
-| Ledger commitments the blind pass also found | <!-- fact:agreement.recall.found -->22<!-- /fact --> of <!-- fact:agreement.recall.n -->25<!-- /fact --> (<!-- fact:agreement.recall.rate -->88%<!-- /fact -->, 95% bootstrap interval <!-- fact:agreement.recall.ci_low -->72%<!-- /fact --> to <!-- fact:agreement.recall.ci_high -->100%<!-- /fact -->) |
-| Commitments with a number that it found | <!-- fact:agreement.numeric_recall.found -->12<!-- /fact --> of <!-- fact:agreement.numeric_recall.n -->14<!-- /fact --> (<!-- fact:agreement.numeric_recall.rate -->86%<!-- /fact -->) |
+| Items listed by the blind pass | <!-- fact:agreement.blind_items -->255<!-- /fact --> |
+| Ledger commitments the blind pass also found | <!-- fact:agreement.recall.found -->93<!-- /fact --> of <!-- fact:agreement.recall.n -->96<!-- /fact --> (<!-- fact:agreement.recall.rate -->97%<!-- /fact -->, 95% bootstrap interval <!-- fact:agreement.recall.ci_low -->93%<!-- /fact --> to <!-- fact:agreement.recall.ci_high -->100%<!-- /fact -->) |
+| Commitments with a number that it found | <!-- fact:agreement.numeric_recall.found -->60<!-- /fact --> of <!-- fact:agreement.numeric_recall.n -->62<!-- /fact --> (<!-- fact:agreement.numeric_recall.rate -->97%<!-- /fact -->) |
 | Not found by the blind pass | <!-- fact:agreement.missed -->C06, C09, C16<!-- /fact --> |
 
 The blind pass listed more items than the ledger has because it counted reported achievements as commitments. The ledger treats achievements as evidence. For that reason precision is not reported. The first comparison at v1.0.0 was made by hand and found one measurable target the ledger lacked (the low digital skill workforce target in S12), which was added as C25.
@@ -25,7 +25,7 @@ Synthetic registries only. Over <!-- fact:robustness.registries -->540<!-- /fact
 
 ### 1c. Calibration of the verifiability score (real ledger)
 
-Moving the band cut offs by up to 10 points changes the band of at most <!-- fact:calibration.bands.max_changed -->9<!-- /fact --> of <!-- fact:calibration.bands.n -->25<!-- /fact --> commitments. Under <!-- fact:calibration.weights.draws -->1,000<!-- /fact --> random weightings of the six checks the ranking keeps a median rank correlation of <!-- fact:calibration.weights.spearman_median -->0.94<!-- /fact --> with the equal weight ranking (<!-- fact:calibration.weights.spearman_p05 -->0.52<!-- /fact --> at the 5th percentile). Two checks are rarely passed: a named way to measure (<!-- fact:calibration.pass_rate.measurement_source -->8%<!-- /fact -->) and no undefined terms (<!-- fact:calibration.pass_rate.terms_defined -->4%<!-- /fact -->).
+Moving the band cut offs by up to 10 points changes the band of at most <!-- fact:calibration.bands.max_changed -->39<!-- /fact --> of <!-- fact:calibration.bands.n -->96<!-- /fact --> commitments. Under <!-- fact:calibration.weights.draws -->1,000<!-- /fact --> random weightings of the six checks the ranking keeps a median rank correlation of <!-- fact:calibration.weights.spearman_median -->0.89<!-- /fact --> with the equal weight ranking (<!-- fact:calibration.weights.spearman_p05 -->0.74<!-- /fact --> at the 5th percentile). Two checks are rarely passed: a named way to measure (<!-- fact:calibration.pass_rate.measurement_source -->3%<!-- /fact -->) and no undefined terms (<!-- fact:calibration.pass_rate.terms_defined -->18%<!-- /fact -->).
 
 ### What Part 1 does and does not show
 

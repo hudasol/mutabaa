@@ -577,5 +577,1266 @@
    "check": "terms_defined",
    "en": "For “Skills training for 60% of the low-digital-skill workforce”, how is “training standard” defined?"
   }
+ ],
+ "C26": [
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «رضا المتعاملين بنسبة 90% عن الخدمات الحكومية الرقمية»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “90% citizen satisfaction with digital government services”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «رضا المتعاملين بنسبة 90% عن الخدمات الحكومية الرقمية»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “90% citizen satisfaction with digital government services”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «رضا المتعاملين بنسبة 90% عن الخدمات الحكومية الرقمية»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “90% citizen satisfaction with digital government services”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «رضا المتعاملين بنسبة 90% عن الخدمات الحكومية الرقمية»، كيف يُعرَّف «very satisfied»؟",
+   "check": "terms_defined",
+   "en": "For “90% citizen satisfaction with digital government services”, how is “very satisfied” defined?"
+  }
+ ],
+ "C27": [
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «90% من الخدمات على المنصة الرقمية الموحدة بحلول 2025»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “90% of services on the unified digital platform by 2025”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «90% من الخدمات على المنصة الرقمية الموحدة بحلول 2025»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “90% of services on the unified digital platform by 2025”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «90% من الخدمات على المنصة الرقمية الموحدة بحلول 2025»، كيف يُعرَّف «unified digital platform»؟",
+   "check": "terms_defined",
+   "en": "For “90% of services on the unified digital platform by 2025”, how is “unified digital platform” defined?"
+  }
+ ],
+ "C28": [
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «رقمنة 100% من الخدمات بالكامل بحلول 2025»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “100% of services digitised end to end by 2025”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «رقمنة 100% من الخدمات بالكامل بحلول 2025»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “100% of services digitised end to end by 2025”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «رقمنة 100% من الخدمات بالكامل بحلول 2025»، كيف يُعرَّف «digitised end to end»؟",
+   "check": "terms_defined",
+   "en": "For “100% of services digitised end to end by 2025”, how is “digitised end to end” defined?"
+  }
+ ],
+ "C29": [
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «خيار رقمي لجميع الخدمات التي تتطلب التحقق الشخصي أو التوقيع»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “Digital option for all personal verification and signature services”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «خيار رقمي لجميع الخدمات التي تتطلب التحقق الشخصي أو التوقيع»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Digital option for all personal verification and signature services”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «خيار رقمي لجميع الخدمات التي تتطلب التحقق الشخصي أو التوقيع»، كيف يُعرَّف «digital option»؟",
+   "check": "terms_defined",
+   "en": "For “Digital option for all personal verification and signature services”, how is “digital option” defined?"
+  }
+ ],
+ "C30": [
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «إنجاز 85% من المعاملات رقميا بالكامل»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “85% of transactions completed digitally end to end”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «إنجاز 85% من المعاملات رقميا بالكامل»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “85% of transactions completed digitally end to end”, and who publishes it, how often?"
+  }
+ ],
+ "C31": [
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «تدريب 100% من القوى العاملة الاتحادية على معايير الحكومة الرقمية»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “100% of federal workforce trained on digital government standards”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تدريب 100% من القوى العاملة الاتحادية على معايير الحكومة الرقمية»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “100% of federal workforce trained on digital government standards”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «تدريب 100% من القوى العاملة الاتحادية على معايير الحكومة الرقمية»، كيف يُعرَّف «basic digital knowledge»؟",
+   "check": "terms_defined",
+   "en": "For “100% of federal workforce trained on digital government standards”, how is “basic digital knowledge” defined?"
+  }
+ ],
+ "C32": [
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «تدريب 10% من القوى العاملة الاتحادية على التقنيات الحديثة»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “10% of federal workforce trained in modern technologies”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تدريب 10% من القوى العاملة الاتحادية على التقنيات الحديثة»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “10% of federal workforce trained in modern technologies”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «تدريب 10% من القوى العاملة الاتحادية على التقنيات الحديثة»، كيف يُعرَّف «modern technologies»؟",
+   "check": "terms_defined",
+   "en": "For “10% of federal workforce trained in modern technologies”, how is “modern technologies” defined?"
+  }
+ ],
+ "C33": [
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «بلوغ جميع الجهات الاتحادية والمحلية مستوى نضج رقمي مرتفع جدا»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “All federal and local entities at very high digital maturity”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «بلوغ جميع الجهات الاتحادية والمحلية مستوى نضج رقمي مرتفع جدا»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “All federal and local entities at very high digital maturity”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «بلوغ جميع الجهات الاتحادية والمحلية مستوى نضج رقمي مرتفع جدا»، كيف يُعرَّف «very high maturity»؟",
+   "check": "terms_defined",
+   "en": "For “All federal and local entities at very high digital maturity”, how is “very high maturity” defined?"
+  }
+ ],
+ "C34": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «إلغاء ما لا يقل عن 2000 إجراء حكومي»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Cancel at least 2,000 government measures”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «إلغاء ما لا يقل عن 2000 إجراء حكومي»، كيف يُعرَّف «government measures»؟",
+   "check": "terms_defined",
+   "en": "For “Cancel at least 2,000 government measures”, how is “government measures” defined?"
+  }
+ ],
+ "C35": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «خفض زمن الإجراءات الحكومية إلى النصف»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Halve the time required for government procedures”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «خفض زمن الإجراءات الحكومية إلى النصف»، كيف يُعرَّف «procedures»؟",
+   "check": "terms_defined",
+   "en": "For “Halve the time required for government procedures”, how is “procedures” defined?"
+  }
+ ],
+ "C36": [
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «مضاعفة مساهمة الاقتصاد الرقمي في الناتج المحلي إلى 19.4%»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Double the digital economy share of GDP to 19.4%”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «مضاعفة مساهمة الاقتصاد الرقمي في الناتج المحلي إلى 19.4%»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Double the digital economy share of GDP to 19.4%”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «مضاعفة مساهمة الاقتصاد الرقمي في الناتج المحلي إلى 19.4%»، كيف يُعرَّف «digital economy»؟",
+   "check": "terms_defined",
+   "en": "For “Double the digital economy share of GDP to 19.4%”, how is “digital economy” defined?"
+  }
+ ],
+ "C37": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «إنشاء مجلس الإمارات للاقتصاد الرقمي»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Establish the UAE Council for Digital Economy”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «إنشاء مجلس الإمارات للاقتصاد الرقمي»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Establish the UAE Council for Digital Economy”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «إنشاء مجلس الإمارات للاقتصاد الرقمي»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Establish the UAE Council for Digital Economy” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «إنشاء مجلس الإمارات للاقتصاد الرقمي»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Establish the UAE Council for Digital Economy”, and who publishes it, how often?"
+  }
+ ],
+ "C38": [],
+ "C39": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «90% من الخدمات العامة عبر منصة رقمية واحدة بحلول 2022»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “90% of public services on one digital platform by 2022”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «90% من الخدمات العامة عبر منصة رقمية واحدة بحلول 2022»، كيف يُعرَّف «public services»؟",
+   "check": "terms_defined",
+   "en": "For “90% of public services on one digital platform by 2022”, how is “public services” defined?"
+  }
+ ],
+ "C40": [
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «رضا المتعاملين بأكثر من 90% عن الخدمات الحكومية»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Customer satisfaction above 90 per cent with government services”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «رضا المتعاملين بأكثر من 90% عن الخدمات الحكومية»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Customer satisfaction above 90 per cent with government services” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «رضا المتعاملين بأكثر من 90% عن الخدمات الحكومية»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Customer satisfaction above 90 per cent with government services”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «رضا المتعاملين بأكثر من 90% عن الخدمات الحكومية»، كيف يُعرَّف «customer satisfaction»؟",
+   "check": "terms_defined",
+   "en": "For “Customer satisfaction above 90 per cent with government services”, how is “customer satisfaction” defined?"
+  }
+ ],
+ "C41": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «إتاحة 100% من الخدمات الحكومية في أي مكان وزمان بحلول 2023»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “100% of government services accessible anywhere, any time by 2023”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «إتاحة 100% من الخدمات الحكومية في أي مكان وزمان بحلول 2023»، كيف يُعرَّف «accessible»؟",
+   "check": "terms_defined",
+   "en": "For “100% of government services accessible anywhere, any time by 2023”, how is “accessible” defined?"
+  }
+ ],
+ "C42": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «أكثر من 28 مبادرة للخدمات الحكومية بحلول 2023»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “More than 28 government services initiatives by 2023”, and who publishes it, how often?"
+  }
+ ],
+ "C43": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «إعلان أفضل وأسوأ خمس جهات حكومية في 4 سبتمبر 2021»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Announce five best and worst government entities on 4 September 2021”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «إعلان أفضل وأسوأ خمس جهات حكومية في 4 سبتمبر 2021»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Announce five best and worst government entities on 4 September 2021”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «إعلان أفضل وأسوأ خمس جهات حكومية في 4 سبتمبر 2021»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Announce five best and worst government entities on 4 September 2021”, and who publishes it, how often?"
+  }
+ ],
+ "C44": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «تدريب 80 ألف موظف اتحادي على الذكاء الاصطناعي الوكيل»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Train 80,000 federal employees in Agentic AI” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تدريب 80 ألف موظف اتحادي على الذكاء الاصطناعي الوكيل»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Train 80,000 federal employees in Agentic AI”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «تدريب 80 ألف موظف اتحادي على الذكاء الاصطناعي الوكيل»، كيف يُعرَّف «trained»؟",
+   "check": "terms_defined",
+   "en": "For “Train 80,000 federal employees in Agentic AI”, how is “trained” defined?"
+  }
+ ],
+ "C45": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «تدريب 22 ألف معلم وتربوي على استخدام الذكاء الاصطناعي»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Train 22,000 teachers and educators to use AI” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «تدريب 22 ألف معلم وتربوي على استخدام الذكاء الاصطناعي»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “Train 22,000 teachers and educators to use AI”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تدريب 22 ألف معلم وتربوي على استخدام الذكاء الاصطناعي»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Train 22,000 teachers and educators to use AI”, and who publishes it, how often?"
+  }
+ ],
+ "C46": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «ميزانية قطاع الشؤون الحكومية 23.9 مليار درهم للفترة 2023 إلى 2026»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Federal Government affairs budget AED 23.9 billion for 2023 to 2026”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «ميزانية قطاع الشؤون الحكومية 23.9 مليار درهم للفترة 2023 إلى 2026»، كيف يُعرَّف «smart government»؟",
+   "check": "terms_defined",
+   "en": "For “Federal Government affairs budget AED 23.9 billion for 2023 to 2026”, how is “smart government” defined?"
+  }
+ ],
+ "C47": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «25% من الرحلات في أبوظبي بمركبات ذاتية القيادة»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Autonomous modes to reach 25% of Abu Dhabi trips”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «25% من الرحلات في أبوظبي بمركبات ذاتية القيادة»، كيف يُعرَّف «autonomous»؟",
+   "check": "terms_defined",
+   "en": "For “Autonomous modes to reach 25% of Abu Dhabi trips”, how is “autonomous” defined?"
+  },
+  {
+   "ar": "في «25% من الرحلات في أبوظبي بمركبات ذاتية القيادة»، كيف يُعرَّف «smart transport»؟",
+   "check": "terms_defined",
+   "en": "For “Autonomous modes to reach 25% of Abu Dhabi trips”, how is “smart transport” defined?"
+  },
+  {
+   "ar": "في «25% من الرحلات في أبوظبي بمركبات ذاتية القيادة»، كيف يُعرَّف «smart and autonomous mobility modes»؟",
+   "check": "terms_defined",
+   "en": "For “Autonomous modes to reach 25% of Abu Dhabi trips”, how is “smart and autonomous mobility modes” defined?"
+  }
+ ],
+ "C48": [
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «خفض الانبعاثات الكربونية 15% بحلول 2040»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Cut transport carbon emissions by 15% by 2040”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «خفض الانبعاثات الكربونية 15% بحلول 2040»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Cut transport carbon emissions by 15% by 2040”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «خفض الانبعاثات الكربونية 15% بحلول 2040»، كيف يُعرَّف «carbon emissions scope»؟",
+   "check": "terms_defined",
+   "en": "For “Cut transport carbon emissions by 15% by 2040”, how is “carbon emissions scope” defined?"
+  }
+ ],
+ "C49": [
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «خفض حوادث الطرق 18% بحلول 2040»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Cut road accidents by 18% by 2040”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «خفض حوادث الطرق 18% بحلول 2040»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Cut road accidents by 18% by 2040”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «خفض حوادث الطرق 18% بحلول 2040»، كيف يُعرَّف «road accidents scope»؟",
+   "check": "terms_defined",
+   "en": "For “Cut road accidents by 18% by 2040”, how is “road accidents scope” defined?"
+  }
+ ],
+ "C50": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «تطوير تشريعات وتأمين وأمن سيبراني للمركبات الذاتية»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Advance AV legislation, insurance and cyber security” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تطوير تشريعات وتأمين وأمن سيبراني للمركبات الذاتية»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Advance AV legislation, insurance and cyber security”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «تطوير تشريعات وتأمين وأمن سيبراني للمركبات الذاتية»، كيف يُعرَّف «specialised insurance models»؟",
+   "check": "terms_defined",
+   "en": "For “Advance AV legislation, insurance and cyber security”, how is “specialised insurance models” defined?"
+  }
+ ],
+ "C51": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «توسيع سيارات الأجرة الذاتية إلى الريم والماريه»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Autonomous taxis extended to Al Reem and Al Maryah”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «توسيع سيارات الأجرة الذاتية إلى الريم والماريه»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Autonomous taxis extended to Al Reem and Al Maryah”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «توسيع سيارات الأجرة الذاتية إلى الريم والماريه»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Autonomous taxis extended to Al Reem and Al Maryah” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «توسيع سيارات الأجرة الذاتية إلى الريم والماريه»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Autonomous taxis extended to Al Reem and Al Maryah”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «توسيع سيارات الأجرة الذاتية إلى الريم والماريه»، كيف يُعرَّف «commercial operation»؟",
+   "check": "terms_defined",
+   "en": "For “Autonomous taxis extended to Al Reem and Al Maryah”, how is “commercial operation” defined?"
+  }
+ ],
+ "C52": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «أول تجربة حافلة نقل عام ذاتية في المنطقة»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “First autonomous public transport bus trial in MENA” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «أول تجربة حافلة نقل عام ذاتية في المنطقة»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “First autonomous public transport bus trial in MENA”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «أول تجربة حافلة نقل عام ذاتية في المنطقة»، كيف يُعرَّف «first»؟",
+   "check": "terms_defined",
+   "en": "For “First autonomous public transport bus trial in MENA”, how is “first” defined?"
+  }
+ ],
+ "C53": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «مساهمة متوقعة لقطاع المركبات الذكية في الناتج»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “SAVI cluster projected GDP contribution”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «مساهمة متوقعة لقطاع المركبات الذكية في الناتج»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “SAVI cluster projected GDP contribution” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «مساهمة متوقعة لقطاع المركبات الذكية في الناتج»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “SAVI cluster projected GDP contribution”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «مساهمة متوقعة لقطاع المركبات الذكية في الناتج»، كيف يُعرَّف «projected contribution»؟",
+   "check": "terms_defined",
+   "en": "For “SAVI cluster projected GDP contribution”, how is “projected contribution” defined?"
+  }
+ ],
+ "C54": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «نقل جميع الخدمات الحكومية في أبوظبي إلى تمم»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Migrate all Abu Dhabi government services to TAMM”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «نقل جميع الخدمات الحكومية في أبوظبي إلى تمم»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Migrate all Abu Dhabi government services to TAMM” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «نقل جميع الخدمات الحكومية في أبوظبي إلى تمم»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Migrate all Abu Dhabi government services to TAMM”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «نقل جميع الخدمات الحكومية في أبوظبي إلى تمم»، كيف يُعرَّف «all services»؟",
+   "check": "terms_defined",
+   "en": "For “Migrate all Abu Dhabi government services to TAMM”, how is “all services” defined?"
+  },
+  {
+   "ar": "في «نقل جميع الخدمات الحكومية في أبوظبي إلى تمم»، كيف يُعرَّف «one-stop shop»؟",
+   "check": "terms_defined",
+   "en": "For “Migrate all Abu Dhabi government services to TAMM”, how is “one-stop shop” defined?"
+  }
+ ],
+ "C55": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «أكثر من 800 خدمة على منصة تمم 3.0»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Over 800 services on TAMM 3.0 platform” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «أكثر من 800 خدمة على منصة تمم 3.0»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Over 800 services on TAMM 3.0 platform”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «أكثر من 800 خدمة على منصة تمم 3.0»، كيف يُعرَّف «AI-native»؟",
+   "check": "terms_defined",
+   "en": "For “Over 800 services on TAMM 3.0 platform”, how is “AI-native” defined?"
+  }
+ ],
+ "C56": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «نظام أوتو غوف للمهام الحكومية المتكررة»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “AutoGov AI system for recurring government tasks” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «نظام أوتو غوف للمهام الحكومية المتكررة»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “AutoGov AI system for recurring government tasks”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «نظام أوتو غوف للمهام الحكومية المتكررة»، كيف يُعرَّف «AI system»؟",
+   "check": "terms_defined",
+   "en": "For “AutoGov AI system for recurring government tasks”, how is “AI system” defined?"
+  }
+ ],
+ "C57": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «تحويل 30% من الشركات الصناعية الصغيرة إلى التصنيع الذكي»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Transform 30% of manufacturing SMEs to smart manufacturing” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تحويل 30% من الشركات الصناعية الصغيرة إلى التصنيع الذكي»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Transform 30% of manufacturing SMEs to smart manufacturing”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «تحويل 30% من الشركات الصناعية الصغيرة إلى التصنيع الذكي»، كيف يُعرَّف «smart manufacturing»؟",
+   "check": "terms_defined",
+   "en": "For “Transform 30% of manufacturing SMEs to smart manufacturing”, how is “smart manufacturing” defined?"
+  }
+ ],
+ "C58": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «الثورة الصناعية الرابعة تضيف 25 مليار درهم بحلول 2031»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Industry 4.0 to add AED 25 billion by 2031”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «الثورة الصناعية الرابعة تضيف 25 مليار درهم بحلول 2031»، كيف يُعرَّف «add to the economy»؟",
+   "check": "terms_defined",
+   "en": "For “Industry 4.0 to add AED 25 billion by 2031”, how is “add to the economy” defined?"
+  }
+ ],
+ "C59": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «جميع معاملات حكومة دبي بلا ورق 100% بحلول ديسمبر 2021»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Dubai government transactions 100% paperless by December 2021”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «جميع معاملات حكومة دبي بلا ورق 100% بحلول ديسمبر 2021»، كيف يُعرَّف «paperless»؟",
+   "check": "terms_defined",
+   "en": "For “Dubai government transactions 100% paperless by December 2021”, how is “paperless” defined?"
+  },
+  {
+   "ar": "في «جميع معاملات حكومة دبي بلا ورق 100% بحلول ديسمبر 2021»، كيف يُعرَّف «fully digital»؟",
+   "check": "terms_defined",
+   "en": "For “Dubai government transactions 100% paperless by December 2021”, how is “fully digital” defined?"
+  }
+ ],
+ "C60": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «عدم إصدار مستندات ورقية بعد 12 ديسمبر 2021»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “No paper documents issued after 12 December 2021”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «عدم إصدار مستندات ورقية بعد 12 ديسمبر 2021»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “No paper documents issued after 12 December 2021”, and who publishes it, how often?"
+  }
+ ],
+ "C61": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «أول حكومة بلا ورق في العالم»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “World's first paperless government”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «أول حكومة بلا ورق في العالم»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “World's first paperless government”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «أول حكومة بلا ورق في العالم»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “World's first paperless government” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «أول حكومة بلا ورق في العالم»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “World's first paperless government”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «أول حكومة بلا ورق في العالم»، كيف يُعرَّف «first paperless government»؟",
+   "check": "terms_defined",
+   "en": "For “World's first paperless government”, how is “first paperless government” defined?"
+  }
+ ],
+ "C62": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «خفض استهلاك الورق 50% للمجموعة الثالثة بنهاية أبريل 2020»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Group three entities cut paper use 50% by April 2020”, and who publishes it, how often?"
+  }
+ ],
+ "C63": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «خفض استهلاك الورق 50% للمجموعة الرابعة بحلول نوفمبر 2020»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Group four entities cut paper use 50% by November 2020”, and who publishes it, how often?"
+  }
+ ],
+ "C64": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «خفض استهلاك الورق 50% للمجموعة الخامسة بحلول يناير 2021»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Group five entities cut paper use 50% by January 2021”, and who publishes it, how often?"
+  }
+ ],
+ "C65": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «إلغاء الورق من العمليات الداخلية وخدمات المتعاملين»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Eliminate paper from internal operations and customer services”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «إلغاء الورق من العمليات الداخلية وخدمات المتعاملين»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Eliminate paper from internal operations and customer services”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «إلغاء الورق من العمليات الداخلية وخدمات المتعاملين»، كيف يُعرَّف «eliminate»؟",
+   "check": "terms_defined",
+   "en": "For “Eliminate paper from internal operations and customer services”, how is “eliminate” defined?"
+  }
+ ],
+ "C66": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «100% من الخدمات العامة المؤهلة عبر القنوات الرقمية بحلول 2021»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “100% of eligible public services via digital channels by 2021”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «100% من الخدمات العامة المؤهلة عبر القنوات الرقمية بحلول 2021»، كيف يُعرَّف «eligible»؟",
+   "check": "terms_defined",
+   "en": "For “100% of eligible public services via digital channels by 2021”, how is “eligible” defined?"
+  },
+  {
+   "ar": "في «100% من الخدمات العامة المؤهلة عبر القنوات الرقمية بحلول 2021»، كيف يُعرَّف «Zero visits»؟",
+   "check": "terms_defined",
+   "en": "For “100% of eligible public services via digital channels by 2021”, how is “Zero visits” defined?"
+  }
+ ],
+ "C67": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «حكومة بلا ورق وبلا نقد بحلول 2021»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Paperless and cashless government by 2021”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «حكومة بلا ورق وبلا نقد بحلول 2021»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Paperless and cashless government by 2021”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «حكومة بلا ورق وبلا نقد بحلول 2021»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Paperless and cashless government by 2021”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «حكومة بلا ورق وبلا نقد بحلول 2021»، كيف يُعرَّف «cashless»؟",
+   "check": "terms_defined",
+   "en": "For “Paperless and cashless government by 2021”, how is “cashless” defined?"
+  }
+ ],
+ "C68": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «أول مدينة تعمل بالكامل بتقنية البلوك تشين بحلول 2020»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “First city fully powered by blockchain by 2020”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «أول مدينة تعمل بالكامل بتقنية البلوك تشين بحلول 2020»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “First city fully powered by blockchain by 2020”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «أول مدينة تعمل بالكامل بتقنية البلوك تشين بحلول 2020»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “First city fully powered by blockchain by 2020”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «أول مدينة تعمل بالكامل بتقنية البلوك تشين بحلول 2020»، كيف يُعرَّف «fully powered by blockchain»؟",
+   "check": "terms_defined",
+   "en": "For “First city fully powered by blockchain by 2020”, how is “fully powered by blockchain” defined?"
+  }
+ ],
+ "C69": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «25% من رحلات دبي ذكية وبلا سائق بحلول 2030»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “25% of Dubai trips smart and driverless by 2030”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «25% من رحلات دبي ذكية وبلا سائق بحلول 2030»، كيف يُعرَّف «smart»؟",
+   "check": "terms_defined",
+   "en": "For “25% of Dubai trips smart and driverless by 2030”, how is “smart” defined?"
+  },
+  {
+   "ar": "في «25% من رحلات دبي ذكية وبلا سائق بحلول 2030»، كيف يُعرَّف «driverless»؟",
+   "check": "terms_defined",
+   "en": "For “25% of Dubai trips smart and driverless by 2030”, how is “driverless” defined?"
+  },
+  {
+   "ar": "في «25% من رحلات دبي ذكية وبلا سائق بحلول 2030»، كيف يُعرَّف «autonomous»؟",
+   "check": "terms_defined",
+   "en": "For “25% of Dubai trips smart and driverless by 2030”, how is “autonomous” defined?"
+  }
+ ],
+ "C70": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «عوائد استراتيجية التنقل الذاتي حتى 22 مليار درهم سنويا»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Self-driving strategy returns of up to Dh22 billion a year” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «عوائد استراتيجية التنقل الذاتي حتى 22 مليار درهم سنويا»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Self-driving strategy returns of up to Dh22 billion a year”, and who publishes it, how often?"
+  }
+ ],
+ "C71": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «إطلاق الخدمة التجارية بلا سائق في 2026»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Commercial driverless service rollout in 2026”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «إطلاق الخدمة التجارية بلا سائق في 2026»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Commercial driverless service rollout in 2026”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «إطلاق الخدمة التجارية بلا سائق في 2026»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Commercial driverless service rollout in 2026”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «إطلاق الخدمة التجارية بلا سائق في 2026»، كيف يُعرَّف «full scale commercial rollout»؟",
+   "check": "terms_defined",
+   "en": "For “Commercial driverless service rollout in 2026”, how is “full scale commercial rollout” defined?"
+  }
+ ],
+ "C72": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «تجربة مركبات ذاتية القيادة عبر تطبيق أوبر في 2025»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Pilot of autonomous vehicles via Uber app in 2025”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «تجربة مركبات ذاتية القيادة عبر تطبيق أوبر في 2025»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Pilot of autonomous vehicles via Uber app in 2025”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تجربة مركبات ذاتية القيادة عبر تطبيق أوبر في 2025»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Pilot of autonomous vehicles via Uber app in 2025”, and who publishes it, how often?"
+  }
+ ],
+ "C73": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «دبي ضمن أفضل 10 اقتصادات للميتافيرس»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Dubai among top 10 metaverse economies” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «دبي ضمن أفضل 10 اقتصادات للميتافيرس»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Dubai among top 10 metaverse economies”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «دبي ضمن أفضل 10 اقتصادات للميتافيرس»، كيف يُعرَّف «metaverse economy»؟",
+   "check": "terms_defined",
+   "en": "For “Dubai among top 10 metaverse economies”, how is “metaverse economy” defined?"
+  }
+ ],
+ "C74": [
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «أكثر من 40,000 وظيفة افتراضية بحلول 2030»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “More than 40,000 virtual jobs by 2030”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «أكثر من 40,000 وظيفة افتراضية بحلول 2030»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “More than 40,000 virtual jobs by 2030”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «أكثر من 40,000 وظيفة افتراضية بحلول 2030»، كيف يُعرَّف «virtual jobs»؟",
+   "check": "terms_defined",
+   "en": "For “More than 40,000 virtual jobs by 2030”, how is “virtual jobs” defined?"
+  }
+ ],
+ "C75": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «اقتصاد دبي يكسب 100 مليار درهم سنويا من التحول الرقمي»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Dubai economy gains AED 100 billion a year from digital transformation” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «اقتصاد دبي يكسب 100 مليار درهم سنويا من التحول الرقمي»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Dubai economy gains AED 100 billion a year from digital transformation”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «اقتصاد دبي يكسب 100 مليار درهم سنويا من التحول الرقمي»، كيف يُعرَّف «digital transformation contribution»؟",
+   "check": "terms_defined",
+   "en": "For “Dubai economy gains AED 100 billion a year from digital transformation”, how is “digital transformation contribution” defined?"
+  }
+ ],
+ "C76": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «رفع إنتاجية اقتصاد دبي 50% عبر الحلول الرقمية»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Raise Dubai economy productivity 50% through digital solutions” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «رفع إنتاجية اقتصاد دبي 50% عبر الحلول الرقمية»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Raise Dubai economy productivity 50% through digital solutions”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «رفع إنتاجية اقتصاد دبي 50% عبر الحلول الرقمية»، كيف يُعرَّف «productivity»؟",
+   "check": "terms_defined",
+   "en": "For “Raise Dubai economy productivity 50% through digital solutions”, how is “productivity” defined?"
+  }
+ ],
+ "C77": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «أسبوع دبي للذكاء الاصطناعي من 21 إلى 25 أبريل 2025»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “First Dubai AI Week held 21 to 25 April 2025”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «أسبوع دبي للذكاء الاصطناعي من 21 إلى 25 أبريل 2025»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “First Dubai AI Week held 21 to 25 April 2025”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «أسبوع دبي للذكاء الاصطناعي من 21 إلى 25 أبريل 2025»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “First Dubai AI Week held 21 to 25 April 2025”, and who publishes it, how often?"
+  }
+ ],
+ "C78": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «أكاديمية دبي للذكاء الاصطناعي لتدريب 10,000 قائد»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Dubai AI Academy to train 10,000 leaders” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «أكاديمية دبي للذكاء الاصطناعي لتدريب 10,000 قائد»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Dubai AI Academy to train 10,000 leaders”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «أكاديمية دبي للذكاء الاصطناعي لتدريب 10,000 قائد»، كيف يُعرَّف «emerging and experienced leaders»؟",
+   "check": "terms_defined",
+   "en": "For “Dubai AI Academy to train 10,000 leaders”, how is “emerging and experienced leaders” defined?"
+  }
+ ],
+ "C79": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «إطلاق 50 تجربة مدينة رقمية»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Launch 50 digital city experiences” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «إطلاق 50 تجربة مدينة رقمية»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Launch 50 digital city experiences”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «إطلاق 50 تجربة مدينة رقمية»، كيف يُعرَّف «digital city experience»؟",
+   "check": "terms_defined",
+   "en": "For “Launch 50 digital city experiences”, how is “digital city experience” defined?"
+  }
+ ],
+ "C80": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «تأهيل أكثر من 50,000 متخصص بمؤهلات رقمية متقدمة»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Equip over 50,000 professionals with advanced digital qualifications” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «تأهيل أكثر من 50,000 متخصص بمؤهلات رقمية متقدمة»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Equip over 50,000 professionals with advanced digital qualifications”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «تأهيل أكثر من 50,000 متخصص بمؤهلات رقمية متقدمة»، كيف يُعرَّف «advanced digital qualifications»؟",
+   "check": "terms_defined",
+   "en": "For “Equip over 50,000 professionals with advanced digital qualifications”, how is “advanced digital qualifications” defined?"
+  }
+ ],
+ "C81": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «استراتيجية الشارقة للتحول الرقمي 2026-2028 بأكثر من 50 مبادرة»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Sharjah digital strategy 2026-2028 with 50+ initiatives”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «استراتيجية الشارقة للتحول الرقمي 2026-2028 بأكثر من 50 مبادرة»، كيف يُعرَّف «digital transformation»؟",
+   "check": "terms_defined",
+   "en": "For “Sharjah digital strategy 2026-2028 with 50+ initiatives”, how is “digital transformation” defined?"
+  },
+  {
+   "ar": "في «استراتيجية الشارقة للتحول الرقمي 2026-2028 بأكثر من 50 مبادرة»، كيف يُعرَّف «initiatives»؟",
+   "check": "terms_defined",
+   "en": "For “Sharjah digital strategy 2026-2028 with 50+ initiatives”, how is “initiatives” defined?"
+  }
+ ],
+ "C82": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «اللجنة العليا للتكامل الرقمي وميثاق التعاون الرقمي في الشارقة»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Sharjah Higher Committee for Digital Integration and Cooperation Charter” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «اللجنة العليا للتكامل الرقمي وميثاق التعاون الرقمي في الشارقة»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Sharjah Higher Committee for Digital Integration and Cooperation Charter”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «اللجنة العليا للتكامل الرقمي وميثاق التعاون الرقمي في الشارقة»، كيف يُعرَّف «unified oversight»؟",
+   "check": "terms_defined",
+   "en": "For “Sharjah Higher Committee for Digital Integration and Cooperation Charter”, how is “unified oversight” defined?"
+  }
+ ],
+ "C83": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «عجمان: تحويل 100% من الخدمات الحكومية رقمياً بنهاية 2018»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Ajman: 100% of government services digital by end 2018”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «عجمان: تحويل 100% من الخدمات الحكومية رقمياً بنهاية 2018»، كيف يُعرَّف «digital»؟",
+   "check": "terms_defined",
+   "en": "For “Ajman: 100% of government services digital by end 2018”, how is “digital” defined?"
+  },
+  {
+   "ar": "في «عجمان: تحويل 100% من الخدمات الحكومية رقمياً بنهاية 2018»، كيف يُعرَّف «services»؟",
+   "check": "terms_defined",
+   "en": "For “Ajman: 100% of government services digital by end 2018”, how is “services” defined?"
+  }
+ ],
+ "C84": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «عجمان: رقمنة جميع الخدمات الحكومية المشتركة بنهاية 2018»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Ajman: all shared government services digital by end 2018”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «عجمان: رقمنة جميع الخدمات الحكومية المشتركة بنهاية 2018»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Ajman: all shared government services digital by end 2018”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «عجمان: رقمنة جميع الخدمات الحكومية المشتركة بنهاية 2018»، كيف يُعرَّف «digital»؟",
+   "check": "terms_defined",
+   "en": "For “Ajman: all shared government services digital by end 2018”, how is “digital” defined?"
+  },
+  {
+   "ar": "في «عجمان: رقمنة جميع الخدمات الحكومية المشتركة بنهاية 2018»، كيف يُعرَّف «services»؟",
+   "check": "terms_defined",
+   "en": "For “Ajman: all shared government services digital by end 2018”, how is “services” defined?"
+  }
+ ],
+ "C85": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «عجمان: تبني 80% من الخدمات الرقمية بنهاية 2021»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Ajman: 80% adoption of digital services by end 2021”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «عجمان: تبني 80% من الخدمات الرقمية بنهاية 2021»، كيف يُعرَّف «digital»؟",
+   "check": "terms_defined",
+   "en": "For “Ajman: 80% adoption of digital services by end 2021”, how is “digital” defined?"
+  },
+  {
+   "ar": "في «عجمان: تبني 80% من الخدمات الرقمية بنهاية 2021»، كيف يُعرَّف «adoption»؟",
+   "check": "terms_defined",
+   "en": "For “Ajman: 80% adoption of digital services by end 2021”, how is “adoption” defined?"
+  }
+ ],
+ "C86": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «عجمان: رقمنة 30 خدمة ذات أولوية كل 100 يوم»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Ajman: 30 priority services digital every 100 days” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «عجمان: رقمنة 30 خدمة ذات أولوية كل 100 يوم»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Ajman: 30 priority services digital every 100 days”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «عجمان: رقمنة 30 خدمة ذات أولوية كل 100 يوم»، كيف يُعرَّف «digital»؟",
+   "check": "terms_defined",
+   "en": "For “Ajman: 30 priority services digital every 100 days”, how is “digital” defined?"
+  },
+  {
+   "ar": "في «عجمان: رقمنة 30 خدمة ذات أولوية كل 100 يوم»، كيف يُعرَّف «services»؟",
+   "check": "terms_defined",
+   "en": "For “Ajman: 30 priority services digital every 100 days”, how is “services” defined?"
+  }
+ ],
+ "C87": [
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «عجمان: رفع الكفاءة المالية 20% بنهاية 2021»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Ajman: 20% higher financial efficiency by end 2021”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «عجمان: رفع الكفاءة المالية 20% بنهاية 2021»، كيف يُعرَّف «digital»؟",
+   "check": "terms_defined",
+   "en": "For “Ajman: 20% higher financial efficiency by end 2021”, how is “digital” defined?"
+  },
+  {
+   "ar": "في «عجمان: رفع الكفاءة المالية 20% بنهاية 2021»، كيف يُعرَّف «services»؟",
+   "check": "terms_defined",
+   "en": "For “Ajman: 20% higher financial efficiency by end 2021”, how is “services” defined?"
+  }
+ ],
+ "C88": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «رأس الخيمة: تسريع الخدمات ورقمنة خدمات الشركاء 2019-2021»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “RAK: accelerate service delivery and digitise partner services 2019-2021”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «رأس الخيمة: تسريع الخدمات ورقمنة خدمات الشركاء 2019-2021»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “RAK: accelerate service delivery and digitise partner services 2019-2021”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «رأس الخيمة: تسريع الخدمات ورقمنة خدمات الشركاء 2019-2021»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “RAK: accelerate service delivery and digitise partner services 2019-2021”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «رأس الخيمة: تسريع الخدمات ورقمنة خدمات الشركاء 2019-2021»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “RAK: accelerate service delivery and digitise partner services 2019-2021”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «رأس الخيمة: تسريع الخدمات ورقمنة خدمات الشركاء 2019-2021»، كيف يُعرَّف «accelerate»؟",
+   "check": "terms_defined",
+   "en": "For “RAK: accelerate service delivery and digitise partner services 2019-2021”, how is “accelerate” defined?"
+  },
+  {
+   "ar": "في «رأس الخيمة: تسريع الخدمات ورقمنة خدمات الشركاء 2019-2021»، كيف يُعرَّف «digitization»؟",
+   "check": "terms_defined",
+   "en": "For “RAK: accelerate service delivery and digitise partner services 2019-2021”, how is “digitization” defined?"
+  }
+ ],
+ "C89": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «رأس الخيمة: مشاركة المجتمع بزاوية 360 درجة 2019-2021»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “RAK: 360 degree citizen engagement 2019-2021”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «رأس الخيمة: مشاركة المجتمع بزاوية 360 درجة 2019-2021»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “RAK: 360 degree citizen engagement 2019-2021”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «رأس الخيمة: مشاركة المجتمع بزاوية 360 درجة 2019-2021»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “RAK: 360 degree citizen engagement 2019-2021”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «رأس الخيمة: مشاركة المجتمع بزاوية 360 درجة 2019-2021»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “RAK: 360 degree citizen engagement 2019-2021”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «رأس الخيمة: مشاركة المجتمع بزاوية 360 درجة 2019-2021»، كيف يُعرَّف «360 degrees engagement»؟",
+   "check": "terms_defined",
+   "en": "For “RAK: 360 degree citizen engagement 2019-2021”, how is “360 degrees engagement” defined?"
+  },
+  {
+   "ar": "في «رأس الخيمة: مشاركة المجتمع بزاوية 360 درجة 2019-2021»، كيف يُعرَّف «immersive»؟",
+   "check": "terms_defined",
+   "en": "For “RAK: 360 degree citizen engagement 2019-2021”, how is “immersive” defined?"
+  }
+ ],
+ "C90": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «رؤية عجمان 2030: حكومة رائدة ومرنة»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Ajman Vision 2030: a pioneering, agile government”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «رؤية عجمان 2030: حكومة رائدة ومرنة»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Ajman Vision 2030: a pioneering, agile government”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «رؤية عجمان 2030: حكومة رائدة ومرنة»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “Ajman Vision 2030: a pioneering, agile government”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «رؤية عجمان 2030: حكومة رائدة ومرنة»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Ajman Vision 2030: a pioneering, agile government”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «رؤية عجمان 2030: حكومة رائدة ومرنة»، كيف يُعرَّف «pioneering»؟",
+   "check": "terms_defined",
+   "en": "For “Ajman Vision 2030: a pioneering, agile government”, how is “pioneering” defined?"
+  },
+  {
+   "ar": "في «رؤية عجمان 2030: حكومة رائدة ومرنة»، كيف يُعرَّف «agile»؟",
+   "check": "terms_defined",
+   "en": "For “Ajman Vision 2030: a pioneering, agile government”, how is “agile” defined?"
+  }
+ ],
+ "C91": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «رؤية أم القيوين 2033: خدمات رقمية استباقية ومترابطة»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “Umm Al Quwain Vision 2033: proactive interconnected digital services”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «رؤية أم القيوين 2033: خدمات رقمية استباقية ومترابطة»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “Umm Al Quwain Vision 2033: proactive interconnected digital services”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «رؤية أم القيوين 2033: خدمات رقمية استباقية ومترابطة»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “Umm Al Quwain Vision 2033: proactive interconnected digital services”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «رؤية أم القيوين 2033: خدمات رقمية استباقية ومترابطة»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Umm Al Quwain Vision 2033: proactive interconnected digital services”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «رؤية أم القيوين 2033: خدمات رقمية استباقية ومترابطة»، كيف يُعرَّف «proactive»؟",
+   "check": "terms_defined",
+   "en": "For “Umm Al Quwain Vision 2033: proactive interconnected digital services”, how is “proactive” defined?"
+  },
+  {
+   "ar": "في «رؤية أم القيوين 2033: خدمات رقمية استباقية ومترابطة»، كيف يُعرَّف «interconnected»؟",
+   "check": "terms_defined",
+   "en": "For “Umm Al Quwain Vision 2033: proactive interconnected digital services”, how is “interconnected” defined?"
+  }
+ ],
+ "C92": [
+  {
+   "ar": "ما الرقم الذي يُعرّف النجاح في «الإمارات من أكثر الدول ابتكاراً خلال سبع سنوات»، وهل هو حد أدنى أم قيمة محددة أم سقف؟",
+   "check": "numeric_target",
+   "en": "What number defines success for “UAE among most innovative nations within seven years”, and is it a minimum, an exact value or a ceiling?"
+  },
+  {
+   "ar": "ما الذي يُعدّ تحديداً في «الإمارات من أكثر الدول ابتكاراً خلال سبع سنوات»؟ حدّدوا الوحدة والمقام الذي تُقاس به.",
+   "check": "unit_defined",
+   "en": "What exactly is counted for “UAE among most innovative nations within seven years”? Name the unit and the denominator it is measured against."
+  },
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «الإمارات من أكثر الدول ابتكاراً خلال سبع سنوات»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “UAE among most innovative nations within seven years” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «الإمارات من أكثر الدول ابتكاراً خلال سبع سنوات»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “UAE among most innovative nations within seven years”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «الإمارات من أكثر الدول ابتكاراً خلال سبع سنوات»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “UAE among most innovative nations within seven years”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «الإمارات من أكثر الدول ابتكاراً خلال سبع سنوات»، كيف يُعرَّف «most innovative»؟",
+   "check": "terms_defined",
+   "en": "For “UAE among most innovative nations within seven years”, how is “most innovative” defined?"
+  }
+ ],
+ "C93": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «30 مبادرة وطنية للابتكار خلال ثلاث سنوات»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “30 national innovation initiatives within three years” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «30 مبادرة وطنية للابتكار خلال ثلاث سنوات»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “30 national innovation initiatives within three years”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «30 مبادرة وطنية للابتكار خلال ثلاث سنوات»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “30 national innovation initiatives within three years”, and who publishes it, how often?"
+  }
+ ],
+ "C94": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «خفض الجهات الحكومية إنفاقها 1% لصالح البحث والابتكار»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Government entities cut spending 1% for research and innovation” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «خفض الجهات الحكومية إنفاقها 1% لصالح البحث والابتكار»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Government entities cut spending 1% for research and innovation”, and who publishes it, how often?"
+  }
+ ],
+ "C95": [
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «50% من المعاملات الحكومية على البلوك تشين بحلول 2021»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “50% of government transactions on blockchain by 2021”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «50% من المعاملات الحكومية على البلوك تشين بحلول 2021»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “50% of government transactions on blockchain by 2021”, and who publishes it, how often?"
+  },
+  {
+   "ar": "في «50% من المعاملات الحكومية على البلوك تشين بحلول 2021»، كيف يُعرَّف «government transactions»؟",
+   "check": "terms_defined",
+   "en": "For “50% of government transactions on blockchain by 2021”, how is “government transactions” defined?"
+  }
+ ],
+ "C96": [
+  {
+   "ar": "في أي تاريخ ميلادي يجب تحقيق «توقع وفورات سنوية 11 مليار درهم من استراتيجية البلوك تشين»، ومن أي تاريخ بدء يُحتسب؟",
+   "check": "dated_deadline",
+   "en": "By what calendar date must “Blockchain strategy projected AED 11 billion annual savings” be met, and from what start date is it counted?"
+  },
+  {
+   "ar": "ما الجهة المسؤولة عن تنفيذ «توقع وفورات سنوية 11 مليار درهم من استراتيجية البلوك تشين»؟",
+   "check": "owner_named",
+   "en": "Which entity is accountable for delivering “Blockchain strategy projected AED 11 billion annual savings”?"
+  },
+  {
+   "ar": "ما مجموعة البيانات أو التقرير الذي سيُستخدم لقياس «توقع وفورات سنوية 11 مليار درهم من استراتيجية البلوك تشين»، ومن ينشره وبأي دورية؟",
+   "check": "measurement_source",
+   "en": "Which dataset or report will be used to measure “Blockchain strategy projected AED 11 billion annual savings”, and who publishes it, how often?"
+  }
  ]
 }

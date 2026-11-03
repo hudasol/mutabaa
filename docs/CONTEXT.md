@@ -32,6 +32,54 @@ The authoritative list is `data/real/sources.json`. Extraction notes are in `dat
 | S12 | UAE Government (ai.gov.ae) | official statement | https://ai.gov.ae/?p=2362 |
 | S13 | Abu Dhabi Media Office | official statement | https://www.mediaoffice.abudhabi/en/government-affairs/department-of-government-enablement-abu-dhabi-launches-ainative-training-programme-in-collaboration-with-openai-microsoft-and-mbzuai/ |
 | S14 | Abu Dhabi Media Office | official statement | https://www.mediaoffice.abudhabi/en/technology/abu-dhabi-government-accelerates-digital-strategy-with-landmark-microsoft-g42-partnership/ |
+| S15 | U.ae portal (UAE Government) | official statement | https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/uae-national-digital-government-strategy |
+| S16 | U.ae portal (UAE Government) | official statement | https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/zero-government-bureaucracy-programme |
+| S17 | UAE Government Media Office | official statement | https://www.mediaoffice.ae/en/news/2022/april/11-04/mohammed-bin-rashid-chairs-the-cabinet-meeting |
+| S18 | U.ae portal (UAE Government) | official statement | https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/strategies-plans-and-visions-untill-2021/national-agenda |
+| S19 | U.ae portal (UAE Government) | official statement | https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/the-uae-strategy-for-government-services |
+| S20 | U.ae portal (UAE Government) | official statement | https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/finance-and-economy/digital-economy-strategy |
+| S21 | UAE Government Media Office | official statement | https://www.mediaoffice.ae/en/news/2021/june/02-06/mohammed-bin-rashid-directs-to-evalute-1300-digital-government-servies |
+| S22 | UAE Government Media Office (relayed by Dubai Media Office) | official statement | https://mediaoffice.ae/en/news/2026/may/18-05/mohammed-bin-rashid-chairs-uae-cabinet-meeting |
+| S23 | UAE Government Media Office | official statement | https://mediaoffice.ae/en/news/2026/september/02-09/mohammed-bin-rashid-chairs-uae-cabinet-meeting |
+| S24 | U.ae portal (UAE Government) | official statement | https://u.ae/en/information-and-services/finance-and-investment/budget/digital-government-development-budget |
+| S25 | U.ae portal (article by Ministry of Finance Undersecretary) | official statement | https://u.ae/en/participate/blogs/blog?id=1182 |
+| S26 | Integrated Transport Centre (Abu Dhabi Mobility) | official statement | https://admobility.gov.ae/en/news/autonomous-vehicle |
+| S27 | Abu Dhabi Government Media Office | official statement | https://www.mediaoffice.abudhabi/en/transport/integrated-transport-centre-abu-dhabi-mobility-expands-operation-of-autonomous-taxis-to-al-reem-and-al-maryah-islands/ |
+| S28 | Abu Dhabi Government Media Office | official statement | https://www.mediaoffice.abudhabi/en/transport/supported-by-smart-and-autonomous-systems-council-integrated-transport-centre-abu-dhabi-mobility-and-lumo-to-implement-1st-autonomous-public-transport-bus-trial-in-mena-region/ |
+| S29 | Abu Dhabi Government Media Office | official statement | https://www.mediaoffice.abudhabi/en/technology/khaled-bin-mohamed-bin-zayed-oversees-fast-tracking-of-all-government-services-onto-tamm/ |
+| S30 | Abu Dhabi Government Media Office | official statement | https://www.mediaoffice.abudhabi/en/transport/hamdan-bin-mohamed-bin-zayed-chairs-first-meeting-of-smart-and-autonomous-systems-council/ |
+| S31 | Abu Dhabi Government Media Office | official statement | https://www.mediaoffice.abudhabi/en/technology/department-of-government-enablement-abu-dhabi-launches-tamm-3/ |
+| S32 | Abu Dhabi Government Media Office | official statement | https://www.mediaoffice.abudhabi/en/technology/innovative-initiatives-and-projects-unveiled-at-abu-dhabi-government-pavilion-on-day-2-of-gitex-global-2025/ |
+| S33 | Abu Dhabi Government Media Office | official statement | https://www.mediaoffice.abudhabi/en/technology/department-of-government-enablement-abu-dhabi-and-abu-dhabi-government-entities-add-new-ai-powered-services-to-tamm-3-platform-during-gitex-global-2024/ |
+| S34 | Abu Dhabi Department of Economic Development (ADDED) | official statement | https://www.added.gov.ae/en/invest/growth-sectors/advanced-technology |
+| S35 | Government of Dubai Media Office | official statement | https://www.mediaoffice.ae/en/news/2021/October/18-10/Dubai-Completes-98-percent-of-its-paperless-strategy-obiectives |
+| S36 | Government of Dubai Media Office | official statement | https://mediaoffice.ae/en/news/2022/July/18-07/Hamdan-bin-Mohammed-launches-Dubai-Metaverse-Strategy |
+| S37 | UAE Government Portal (u.ae) | official statement | https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/Ai/dubai-universal-blueprint-for-ai |
+| S38 | Roads and Transport Authority, Dubai | official statement | https://www.rta.ae/links/sdt/en/news3.html |
+| S39 | Government of Dubai Media Office | official statement | https://www.mediaoffice.ae/en/news/2023/January/04-01/Mohammed-bin-Rashid-launches-Dubai-Economic-Agenda-D33 |
+| S40 | Government of Dubai Media Office | official statement | https://mediaoffice.ae/news/2020/Apirl/21-04/Paperless-strategy |
+| S41 | UAE Government Portal (u.ae) | official statement | https://u.ae/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/dubai-blockchain-strategy |
+| S42 | Government of Dubai Media Office | official statement | https://www.mediaoffice.ae/en/news/2021/March/01-03/Smart-Dubai |
+| S43 | Government of Dubai Media Office | official statement | https://www.mediaoffice.ae/en/news/2024/june/11-06/dm-ai-map |
+| S44 | UAE Government Portal (u.ae) | official statement | https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/strategies-plans-and-visions-untill-2021/smart-dubai-2021-strategy |
+| S45 | UAE Government Portal (u.ae) | official statement | https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/finance-and-economy/dubai-economic-agenda-d33 |
+| S46 | UAE Government Portal (u.ae) | official statement | https://u.ae/en/about-the-uae/digital-uae/digital-cities/digital-dubai |
+| S47 | Government of Dubai Media Office | official statement | https://mediaoffice.ae/en/news/2023/June/21-06/Hamdan-bin-Mohammed-launches-Dubai-Digital-Strategy |
+| S48 | UAE Government Portal (u.ae) | official statement | https://beta.government.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/dubai-metaverse-strategy |
+| S49 | Government of Dubai Media Office | official statement | https://www.mediaoffice.ae/en/news/2020/jan/26-01/smart-dubai-announces-achievements-of-dubai-blockchain-strategy-2020 |
+| S50 | Khaleej Times | secondary media | https://www.khaleejtimes.com/uae/dubai-rta-driverless-rides |
+| S51 | Protocol Department, Government of Dubai | official statement | https://protocol.dubai.ae/en/media-listing/news-events/hamdan-bin-mohammed-launches-dubai-universal-blueprint-for-artificial-intelligence/ |
+| S52 | Government of Dubai Media Office | official statement | https://mediaoffice.ae/en/news/2025/april/25-04/hamdan-bin-mohammed-launches-dubai-ai-academy-during-dubai-ai-week |
+| S53 | Government of Dubai Media Office | official statement | https://mediaoffice.ae/en/news/2024/december/19-12/dubai-ai-week |
+| S54 | Government of Dubai Media Office | official statement | https://www.mediaoffice.ae/en/news/2025/june/15-06/rta-signs-mou-with-uber-technologies-and-weride-to-launch-pilot-operations-of-autonomous-vehicles |
+| S55 | Sharjah Executive Council | official statement | https://ec.shj.ae/en/?p=5222 |
+| S56 | Ras Al Khaimah Electronic Government Authority | official statement | https://ega.rak.ae/?p=218 |
+| S57 | Government of Ajman | official statement | https://ajman.ae/sites/default/files/2017-10/Ajman%20Plan.pdf |
+| S58 | UAE Government Portal (u.ae) | official statement | https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/innovation-and-future-shaping/ajman-vision-2030 |
+| S59 | UAE Government Portal (u.ae) | official statement | https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/innovation-and-future-shaping/umm-al-quwain-vision-2033 |
+| S60 | UAE Government Portal (u.ae) | official statement | https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/strategies-plans-and-visions-untill-2021/national-innovation-strategy |
+| S61 | UAE Government Portal (u.ae) | official statement | https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/strategies-plans-and-visions-untill-2021/emirates-blockchain-strategy-2021 |
+| S62 | MEED | secondary media | https://www.meed.com/uae-government-aims-complete-50-per-cent-transactions-using-blockchain/ |
 
 S10, S11 and S12 could not be reached by the automated verifier (two return HTTP 403 and one fails certificate validation). They are reported as unreachable. The verifier does not work around a block and never disables certificate checks.
 

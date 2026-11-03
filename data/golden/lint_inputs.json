@@ -1,0 +1,448 @@
+[
+ {
+  "name": "empty",
+  "text": "",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "spaces only",
+  "text": "   \t  ",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "plain number percent",
+  "text": "Reach 40% of services online by 2028.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "percent with owner",
+  "text": "The Ministry of Example Affairs will move 60% of services online by 31 December 2027, measured by the annual service report.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "word half",
+  "text": "Move half of all permits to the new platform within two years.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "amount billion",
+  "text": "The Example Digital Authority will commit AED 3 billion through 2024-2026.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "amount million usd",
+  "text": "The Office for Example Technology will invest USD 25 million by 2029.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "thousand k",
+  "text": "Train 80k employees in data skills by 2027.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "comma thousands",
+  "text": "Issue 1,200,000 digital identities by the end of 2026.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "decimal",
+  "text": "Cut processing time by 12.5% by March 2027.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "range years",
+  "text": "Deliver 200+ solutions during 2025-2027.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "quarter",
+  "text": "The Department of Example Services will launch the portal in Q3 2026.",
+  "kind": "deliverable",
+  "fields": null
+ },
+ {
+  "name": "iso date",
+  "text": "Complete the migration by 2027-06-30.",
+  "kind": "milestone",
+  "fields": null
+ },
+ {
+  "name": "day month year",
+  "text": "Reduce service centres by 50% by 15 March 2028.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "month year",
+  "text": "Open the data platform in June 2027.",
+  "kind": "deliverable",
+  "fields": null
+ },
+ {
+  "name": "month day year",
+  "text": "Finish pilots by December 31, 2026.",
+  "kind": "milestone",
+  "fields": null
+ },
+ {
+  "name": "start date skipped",
+  "text": "Transform services within two years of the 23 April 2026 announcement.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "since date",
+  "text": "Since 2021 the target has been 30% of trips autonomous.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "relative months",
+  "text": "Complete the review within six months.",
+  "kind": "milestone",
+  "fields": null
+ },
+ {
+  "name": "relative next",
+  "text": "Double the number of agents in the next three years.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "no deadline",
+  "text": "Make every service digital first.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "vision text",
+  "text": "A world class digital government that serves everyone.",
+  "kind": "vision",
+  "fields": null
+ },
+ {
+  "name": "vague terms",
+  "text": "Create a smart, seamless, innovative ecosystem for AI native government.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "defined terms",
+  "text": "An AI agent is defined as software that completes a task without a person; deploy 100 agents by 2027.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "measure index",
+  "text": "Rank in the top 5 of the Example Digital Index by 2030, tracked through the annual index.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "measure dashboard",
+  "text": "Publish a public dashboard of service volumes by 2026.",
+  "kind": "deliverable",
+  "fields": null
+ },
+ {
+  "name": "measure survey",
+  "text": "Reach 90% satisfaction by 2027 according to the national customer survey.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "owner committee",
+  "text": "The Higher Committee for Example Review will approve all standards by 2026.",
+  "kind": "milestone",
+  "fields": null
+ },
+ {
+  "name": "owner the",
+  "text": "The Department approves the plan by 2026.",
+  "kind": "milestone",
+  "fields": null
+ },
+ {
+  "name": "owner suffix",
+  "text": "The Dubai Digital Authority will complete 15 projects by 2029.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "owner taskforce",
+  "text": "A taskforce chaired by the Minister will report each year.",
+  "kind": "deliverable",
+  "fields": null
+ },
+ {
+  "name": "units trips",
+  "text": "Reach 25% of trips autonomous by 2030.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "units employees",
+  "text": "Train 5,000 employees by 2026.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "units use cases",
+  "text": "Deploy 100 use cases across entities by 2027.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "units datasets",
+  "text": "Publish 500 datasets by the end of 2025.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "percent no unit",
+  "text": "Achieve 70% by 2030.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "number is year only",
+  "text": "Launch the strategy in 2030.",
+  "kind": "deliverable",
+  "fields": null
+ },
+ {
+  "name": "two numbers",
+  "text": "Hire 300 engineers and train 1,000 staff by 2028.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "big text lowercase",
+  "text": "the ministry of example will do this by 2030",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "kind deliverable",
+  "text": "Establish an office for service quality.",
+  "kind": "deliverable",
+  "fields": null
+ },
+ {
+  "name": "kind assessment",
+  "text": "Assess entity heads on adoption, speed and tool mastery.",
+  "kind": "assessment",
+  "fields": null
+ },
+ {
+  "name": "kind projection",
+  "text": "AI could add AED 335 billion to the economy by 2031.",
+  "kind": "projection",
+  "fields": null
+ },
+ {
+  "name": "kind input",
+  "text": "The government commits AED 13 billion for 2025-2027.",
+  "kind": "input",
+  "fields": null
+ },
+ {
+  "name": "kind milestone",
+  "text": "Approve the policy by 2026-03-01.",
+  "kind": "milestone",
+  "fields": null
+ },
+ {
+  "name": "with fields owner",
+  "text": "Move 50% of services to the platform by 2027.",
+  "kind": "target",
+  "fields": {
+   "owner": "Example Authority"
+  }
+ },
+ {
+  "name": "with fields all",
+  "text": "Make services smart.",
+  "kind": "target",
+  "fields": {
+   "target_number": 50,
+   "unit": "services",
+   "deadline": "2030",
+   "owner": "Example Authority",
+   "measurement_source": "Annual report",
+   "defined_terms": [
+    "smart"
+   ]
+  }
+ },
+ {
+  "name": "with fields deadline relative",
+  "text": "Reach 20% of services.",
+  "kind": "target",
+  "fields": {
+   "deadline": "within two years"
+  }
+ },
+ {
+  "name": "with fields deadline day",
+  "text": "Reach 20% of services.",
+  "kind": "target",
+  "fields": {
+   "deadline": "2029-02-30"
+  }
+ },
+ {
+  "name": "with fields blanks",
+  "text": "Reach 20% of services by 2029.",
+  "kind": "target",
+  "fields": {
+   "owner": "",
+   "unit": null,
+   "defined_terms": []
+  }
+ },
+ {
+  "name": "with fields zero",
+  "text": "Reach services.",
+  "kind": "target",
+  "fields": {
+   "target_number": 0
+  }
+ },
+ {
+  "name": "with fields partial terms",
+  "text": "Create a smart digital ecosystem.",
+  "kind": "target",
+  "fields": {
+   "defined_terms": [
+    "smart",
+    "ecosystem"
+   ]
+  }
+ },
+ {
+  "name": "arabic percent",
+  "text": "تحويل 50% من الخدمات الحكومية إلى الذكاء الاصطناعي بحلول 2031",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "arabic indic digits",
+  "text": "رفع نسبة الخدمات الرقمية إلى ٧٥٪ بحلول ٢٠٢٨ وفق مؤشر سنوي",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "arabic owner",
+  "text": "ستقوم وزارة الشؤون الرقمية بتدريب ٥٠٠٠ موظف خلال عامين",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "arabic relative",
+  "text": "إطلاق ٢٠ خدمة جديدة خلال عامين",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "arabic definition",
+  "text": "يعني الذكاء الاصطناعي الوكيل هنا برنامجاً ينفذ مهمة وحده؛ نشر 40 وكيل بحلول 2027",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "arabic mixed",
+  "text": "Launch 30 خدمة by 2029",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "arabic no number",
+  "text": "نريد حكومة رقمية رائدة",
+  "kind": "vision",
+  "fields": null
+ },
+ {
+  "name": "nbsp-free tabs",
+  "text": "Reach\t30%\tof\tservices\tby\t2027.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "long text",
+  "text": "Increase the share of government services that are fully available online to 85% of all services by the end of 2029. Increase the share of government services that are fully available online to 85% of all services by the end of 2029. Increase the share of government services that are fully available online to 85% of all services by the end of 2029. Increase the share of government services that are fully available online to 85% of all services by the end of 2029. Increase the share of government services that are fully available online to 85% of all services by the end of 2029. Increase the share of government services that are fully available online to 85% of all services by the end of 2029. ",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "percent word",
+  "text": "Reach 30 percent of operations by 2027.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "per cent",
+  "text": "Reach 30 per cent of operations by 2027.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "plus sign",
+  "text": "Deploy 200+ solutions by 2027.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "dollar",
+  "text": "Raise $2 billion for the fund by 2028.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "year inside number",
+  "text": "Serve 20,2025 users.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "february 30",
+  "text": "Complete by 30 February 2027.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "leading",
+  "text": "Be a leading digital government.",
+  "kind": "vision",
+  "fields": null
+ },
+ {
+  "name": "improve",
+  "text": "Improve services and enhance outcomes.",
+  "kind": "target",
+  "fields": null
+ },
+ {
+  "name": "end of year",
+  "text": "Finish the work by the end of the year.",
+  "kind": "milestone",
+  "fields": null
+ },
+ {
+  "name": "owner in arabic with english",
+  "text": "The Authority for Example Registration will register 10,000 vehicles by 2027.",
+  "kind": "target",
+  "fields": null
+ }
+]

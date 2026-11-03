@@ -19,7 +19,7 @@ Mutabaa is a method demonstration built on public information. Read this before 
 
 ## Extraction quality
 
-- Extraction was done by a language model. Quality is reported in `docs/EVALUATION.md` as agreement between two extraction passes over the same notes (the second pass found <!-- fact:agreement.recall.found -->22<!-- /fact --> of <!-- fact:agreement.recall.n -->25<!-- /fact --> ledger commitments). That is **agreement between extractors, not independent human validation.** Treat it as an upper bound sanity check.
+- Extraction was done by a language model. Quality is reported in `docs/EVALUATION.md` as agreement between two extraction passes over the same notes (the second pass found <!-- fact:agreement.recall.found -->93<!-- /fact --> of <!-- fact:agreement.recall.n -->96<!-- /fact --> ledger commitments). That is **agreement between extractors, not independent human validation.** Treat it as an upper bound sanity check.
 - Arabic text in the product was written by a language model and has not been reviewed by a native speaker with domain knowledge. Review before any external use.
 
 ## Definition Lab
