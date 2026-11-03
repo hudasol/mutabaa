@@ -24,8 +24,8 @@ Rows beyond 200,000 are not read. The page and the command line both say so.
 
 | Part | Measured | Budget |
 | --- | --- | --- |
-| First script (React, data, strings) | about 96 kB | 110 kB |
-| All scripts including lazily loaded pages | about 112 kB | 135 kB |
+| First script (React, data, strings) | about 121 kB (96 kB at v1.6.0, before the ledger grew from 25 to 96 commitments) | 125 kB |
+| All scripts including lazily loaded pages | about 144 kB (112 kB at v1.6.0) | 150 kB |
 | Styles | about 4.5 kB | 6 kB |
 | Offline single file (fonts included) | about 525 kB | 600 kB |
 

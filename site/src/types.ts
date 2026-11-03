@@ -70,7 +70,7 @@ export type SweepRow = Definition & { share: number | null };
 export type Payload = {
   sources: Source[]; commitments: Commitment[]; evidence: Evidence[]; claims: Claim[];
   scores: Score[]; statuses: Status[]; synthetic: Registry; sweep: SweepRow[];
-  questions: Record<string, Question[]>; coverage: Coverage[]; searches: SearchEntry[];
+  coverage: Coverage[]; searches: SearchEntry[];
   analysis: Analysis; verification: Verification;
   evaluation: {
     e3: { entities: number; moved_3_or_more: number; exceed_noise: number; noise_only_mean: number };

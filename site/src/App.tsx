@@ -3,7 +3,7 @@ import { C } from "./ctx";
 import { useItemsState } from "./parts";
 import { dict, type Lang } from "./i18n";
 import { buildHash, useRoute } from "./route";
-import { Brief, Clocks, Lab, Ledger, Maturity, Method, Overview, Assurance, Portfolio, Mine, Sources } from "./pagesEntry";
+import { Brief, Clocks, Lab, Ledger, Maturity, Method, Overview, Assurance, Portfolio, Mine, Lint, Sources } from "./pagesEntry";
 import raw from "./data/real.json";
 
 import type { Payload } from "./types";
@@ -12,7 +12,7 @@ const data = raw as unknown as Payload;
 
 const ROUTES = [
   ["overview", "nav_overview", Overview], ["ledger", "nav_ledger", Ledger], ["clocks", "nav_clocks", Clocks],
-  ["lab", "nav_lab", Lab], ["portfolio", "nav_portfolio", Portfolio], ["mine", "nav_mine", Mine], ["maturity", "nav_maturity", Maturity], ["sources", "nav_sources", Sources],
+  ["lab", "nav_lab", Lab], ["portfolio", "nav_portfolio", Portfolio], ["mine", "nav_mine", Mine], ["lint", "nav_lint", Lint], ["maturity", "nav_maturity", Maturity], ["sources", "nav_sources", Sources],
   ["brief", "nav_brief", Brief], ["method", "nav_method", Method], ["assurance", "nav_assurance", Assurance],
 ] as const;
 

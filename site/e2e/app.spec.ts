@@ -3,7 +3,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { pathToFileURL } from "node:url";
 import path from "node:path";
 
-const PAGES = ["overview", "ledger", "clocks", "lab", "maturity", "sources", "brief", "method", "assurance", "portfolio", "mine"];
+const PAGES = ["overview", "ledger", "clocks", "lab", "maturity", "sources", "brief", "method", "assurance", "portfolio", "mine", "lint"];
 
 async function open(page: Page, hash: string, opts: { lang?: "en" | "ar"; theme?: "light" | "dark" } = {}) {
   await page.addInitScript(([l, t]) => {
@@ -257,3 +257,33 @@ test("[print] the brief prints dark text on white even when the dark theme is ch
   });
   expect(colours).toEqual({ paper: "#fff", ink: "#000" });
 });
+
+test("[lint] the wording check reads a sentence, asks questions and rescores with answers", async ({ page }) => {
+  await open(page, "lint");
+  await page.locator("textarea").fill("Reach 40% of services online by 2028.");
+  await expect(page.getByText("Target number").first()).toBeVisible();
+  await expect(page.locator("dl.kv").first()).toContainText("40");
+  await expect(page.locator("ol li").first()).toBeVisible();
+  await expect(page.getByText("Score with your answers")).toHaveCount(0);
+  await page.getByLabel("Owner", { exact: true }).fill("The Example Office");
+  await expect(page.getByText("Score with your answers")).toBeVisible();
+});
+
+test("[lint] an empty box shows the prompt, and Arabic digits are read", async ({ page }) => {
+  await open(page, "lint", { lang: "ar" });
+  await expect(page.locator("#ln-res")).toBeVisible();
+  await page.locator("textarea").fill("إنجاز ٨٠٪ من الخدمات بحلول ٢٠٢٧");
+  await expect(page.locator("dl.kv").first()).toContainText("80");
+});
+
+for (const lang of ["en", "ar"] as const) {
+  for (const theme of ["light", "dark"] as const) {
+    test(`[lint] ${lang} ${theme} with a result: no serious or critical axe violations`, async ({ page }) => {
+      await open(page, "lint", { lang, theme });
+      await page.locator("textarea").fill("We will improve digital services soon.");
+      await expect(page.locator("ol li").first()).toBeVisible();
+      const r = await new AxeBuilder({ page }).analyze();
+      expect(r.violations.filter((v) => v.impact === "serious" || v.impact === "critical")).toEqual([]);
+    });
+  }
+}

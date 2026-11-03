@@ -10,5 +10,6 @@ export const Method = lazy(() => import("./pages/Method"));
 export const Overview = lazy(() => import("./pages/Overview"));
 export const Assurance = lazy(() => import("./pages/Assurance"));
 export const Portfolio = lazy(() => import("./pages/Portfolio"));
+export const Lint = lazy(() => import("./pages/Lint"));
 export const Mine = lazy(() => import("./pages/Mine"));
 export const Sources = lazy(() => import("./pages/Sources"));

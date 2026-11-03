@@ -1,5 +1,6 @@
 import { Fragment, useMemo } from "react";
 import { copyText, download, L, pct, useCtx } from "../ctx";
+import { questionsFor } from "../commitments";
 import { csvCell } from "../engine";
 import { sortCommitments, type SortKey } from "../ledgerSort";
 import { CopyLink, Head, StatusPill, Ticks, VerifyChip } from "../parts";
@@ -10,7 +11,7 @@ function Detail({ c, onClose }: { c: Commitment; onClose: () => void }) {
   const sc = data.scores.find((s) => s.commitment_id === c.id)!;
   const stt = data.statuses.find((s) => s.commitment_id === c.id)!;
   const cov = data.coverage.find((s) => s.commitment_id === c.id);
-  const qs = data.questions[c.id] ?? [];
+  const qs = questionsFor(c, sc);
   const ev = data.evidence.filter((e) => e.commitment_ids.includes(c.id));
   const srcs = data.sources.filter((s) => c.source_ids.includes(s.id));
   const ns = t.lg_not_stated;

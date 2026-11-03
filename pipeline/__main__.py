@@ -345,7 +345,6 @@ def cmd_build() -> int:
     d, scores, statuses = derive()
     out = ROOT / "site" / "src" / "data"
     out.mkdir(parents=True, exist_ok=True)
-    qs = {c.id: questions(c, sc) for c, sc in zip(d.commitments, scores, strict=True)}
     payload = {
         "sources": [s.model_dump(mode="json") for s in d.sources],
         "commitments": [c.model_dump(mode="json") for c in d.commitments],
@@ -353,7 +352,6 @@ def cmd_build() -> int:
         "claims": [k.model_dump(mode="json") for k in d.claims],
         "scores": [s.model_dump(mode="json") for s in scores],
         "statuses": [s.model_dump(mode="json") for s in statuses],
-        "questions": qs,
         "coverage": coverage(d),
         "searches": [q.model_dump(mode="json") for q in d.searches],
         "verification": d.verification,

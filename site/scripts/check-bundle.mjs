@@ -4,8 +4,8 @@ import { gzipSync } from "node:zlib";
 import { join } from "node:path";
 
 const BUDGET = {
-  entryJs: 110_000, // the script every visitor downloads first
-  allJs: 135_000, // entry plus every lazily loaded page
+  entryJs: 125_000, // the script every visitor downloads first (was 110_000 before the ledger grew, see docs/PERFORMANCE.md)
+  allJs: 150_000, // entry plus every lazily loaded page (was 135_000)
   css: 6_000,
   offlineHtml: 600_000, // the single file build, fonts included
 };
