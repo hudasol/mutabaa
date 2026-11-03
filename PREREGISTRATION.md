@@ -196,6 +196,36 @@ Written by Huda Mueen before any of the experiments below was run. The commit th
 
 **Consequence fixed in advance.** A result below a threshold is reported as a miss. Missed commitments are listed by identifier. No commitment is removed because the blind reader missed it.
 
+## E8. Does the verifiability score predict whether a commitment is later reported on publicly?
+
+Registered 2026-11-03, before any score was frozen for this study and before any outcome search.
+
+**Question.** Commitments whose deadline has passed: are those that score higher on the verifiability score more likely to have a later public report on the stated measure than those that score lower?
+
+**Population.** Every commitment in the ledger as released in v1.7.0 whose `deadline` is before 2026-06-30. This is fixed by the rule, not by a list, and gives 36 commitments: C07, C26 to C35, C38, C39, C41 to C43, C59, C60, C62 to C68, C72, C77, C83 to C85, C87 to C89, C92, C93 and C95. No commitment is added or removed after the outcome search begins.
+
+**Step A (score first).** `python -m pipeline e8-freeze` computes the existing score (unchanged), the length of the statement in characters and whether the statement contains a digit, for each commitment in the population, and writes `data/e8/frozen_scores.json`. That file is committed before the first outcome search. The score, its bands and its weights are not changed for this study.
+
+**Step B (outcome, defined before it is looked up).** The outcome is 1 when at least one document is found that satisfies all of the following, and 0 otherwise.
+1. It is published by an official body (a government, government entity or authority, on its own site or in its own document), not by the media.
+2. It carries a date on or after the announcement of the commitment and on or before 2026-11-03.
+3. It reports a figure, count or dated completion on the same measure as the commitment (the same metric and unit; for a milestone or event, that event).
+4. It is not the document in which the commitment was made.
+It is not required that the target was met. A figure that shows a miss counts as 1. The outcome 0 means that no such document was found with the search below. It never means that the commitment was not done. A commitment whose measure is reported only by the media has outcome 0. When the finder cannot decide whether a document satisfies point 3, it records the document, the doubt and outcome 0.
+
+**Search protocol.** For each commitment, at most eight web searches in this order, stopping at the first qualifying document: (1) the title with the owner; (2) the metric and unit with the words annual report or results; (3) the title in Arabic; (4) the owner's own site with the metric; (5) the national government portal with the metric; (6) the metric with the deadline year and the word achieved; (7) the metric with the year after the deadline; (8) a search for the owner's annual report for the year of the deadline. Every search, every page opened and every decision is written to `data/e8/searchlog.json` with the retrieval date. Pages that cannot be read are recorded as unreachable and do not count as a finding.
+
+**Step C (test).** The metric is the area under the curve (AUC) of the score against the outcome. The interval is a percentile bootstrap (2,000 resamples, seed 7). The test is a one sided permutation test of the AUC (10,000 shuffles of the outcome, seed 1; p is the share of shuffles with an AUC at least as large as the observed one, with the observed one counted). Two simple baselines are scored on the same commitments: the length of the statement in characters, and whether the statement contains a digit. Results go to `results/e8.json` with the environment in `results/env/e8.json`.
+
+**Predictions.**
+- P8a. Score AUC is at least 0.55.
+- P8b. The one sided permutation p value is at least 0.05 (the sample is small, so the score will not be separated from chance).
+- P8c. Score AUC is at least the better of the two baselines minus 0.05.
+- P8d. Between 10% and 40% of the population has outcome 1.
+- P8e. Score AUC is above the statement length AUC.
+
+**Consequence fixed in advance.** Misses are reported in the same table as hits. If fewer than five commitments have outcome 1, or fewer than five have outcome 0, the AUC is still computed and reported, with the statement that the study cannot support a conclusion. No threshold, weight, band or search rule is changed after outcomes are seen; any later change is labelled exploratory. The outcome finder and the author of the score share an author, which is a limit stated with the result. The search is limited to what a free web search tool returns on the retrieval date.
+
 ## Amendments
 
 Predictions above were not changed. The entries below record what was done after the results existed, and clarifications of details that the specification left open.
