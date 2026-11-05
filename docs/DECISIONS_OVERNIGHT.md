@@ -35,3 +35,13 @@ Author: Huda Mueen. These decisions were taken without consultation, as the brie
 **D14. Action versions in CI.** The sandbox could not read the action release tags, so the remaining actions in `ci.yml` stay on major version tags. The drift workflow pins its actions by commit. Pinning the rest is listed in `docs/ROADMAP.md`. CI gained `permissions: contents: read` and two explicit steps (the frozen regression test and the Definition Card examples).
 
 **D15. Print view cap.** The one page ledger summary prints at most 24 rows and says how many more exist. A longer list would no longer fit one page, and the CSV export holds all rows.
+
+**D16. Adversarial review (2026-11-05).** An independent reviewer returned 26 findings. Accepted and fixed, each in its own commit: the coverage gate (new tests for the validity code and the new commands), the E8 tie rule (amendment 8 and a second reading shown with equal prominence), the reproduce diff that included machine records, the vendor names inside the voice rules, a missing simulation label on the Assurance page, the missing Arabic notice outside the Wording check, an en dash in a rank range, a fixed date in the blank card, hyphenated compounds, wording of the E7 conclusion, the P8e note, the description of how outcomes were read, the stale preregistration header, the C92 search log note, and the version metadata (below).
+Rejected or deferred, with reasons:
+- *Finding 6, real acronyms in old commit subjects and the test allowlist.* Those subjects are published and the history is not rewritten. The allowlist is the record of that choice (D1).
+- *Finding 16, unpinned actions.* The release tags could not be read from this environment (D14); pinning by guesswork would break the workflows. Listed in the roadmap.
+- *Finding 18, cached rules in the linter.* The rules file is frozen by a hash test, so a stale cache cannot differ from the file during a run. Left as is.
+- *Finding 19, the card label `registry_is_synthetic`.* The registry model has no such field; every record in it carries `is_synthetic: true` by schema, so the constant is correct. A first attempt to read the field failed its tests and was reverted.
+- *Finding 21, scan `i18n.ts` and add a hyphen rule.* The listed compounds were reworded. A general hyphen rule would flag product names, dates and proper nouns, so it is left to a human read.
+- *Finding 24, hook dependency in the Wording check.* Works as written and is covered by the end to end tests.
+- *Finding 26, two status colours at 4.2 to 4.5 to 1.* They are used for dots and borders only, where the ratio required is 3 to 1. They will be darkened before they are used for text.
