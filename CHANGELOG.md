@@ -42,7 +42,7 @@ Milestones are listed with their tag. Tags up to v1.4.0 were first created local
 
 ## v1.2.0: defence technology lens review round
 - Self-hosted fonts, strict CSP (meta and headers), zero third party requests (tested)
-- Single-file offline build with hash-pinned CSP; opens from file://
+- Single-file offline build with CSP pinned by hash; opens from file://
 - Playwright smoke and axe accessibility tests (EN/AR, light/dark); contrast and table-role fixes
 - docs/SECURITY.md (STRIDE), traceability matrix and checker, SBOMs, lock file, Dockerfile, `make reproduce`
 - `python -m pipeline diff REF`; CSV export neutralises formula injection; dev dependencies upgraded (0 audit findings)

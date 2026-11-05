@@ -15,4 +15,4 @@ Likelihood and impact: L (low), M (medium), H (high). Owner is a role, not a per
 | R9 | Arabic text is wrong or stiff | M | M | Reviewer | Native-speaker review before external use; parity test | Reviewer comment |
 | R10 | Entities refuse to engage | M | M | Sponsor | Start with volunteers; questions are specific and short; no league table in the pilot | Fewer than 2 volunteers by week 2 |
 | R11 | Score checks are read as a standard | M | M | Maintainer | Assurance page states floor effect and edge fragility; axes marked as proposals | A request to "certify" |
-| R12 | Scope creep into performance scoring | M | H | Sponsor | Written non-goal in `docs/PILOT.md` and the README | Any request to rank entities by performance |
+| R12 | Scope creep into performance scoring | M | H | Sponsor | Written statement of what is out of scope in `docs/PILOT.md` and the README | Any request to rank entities by performance |

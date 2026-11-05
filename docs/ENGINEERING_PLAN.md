@@ -30,7 +30,7 @@ Written 2026-10-10 against v1.0.0. Every limitation has a root cause, a fix, and
 
 ## 2. Why these gaps and regressions happen
 
-1. **Tooling limits become data limits.** The fetch tool summarises, so notes are second-hand. The fix is not better notes, it is a check that does not depend on them: figure tokens verified against raw pages by a machine that can fetch them.
+1. **Tooling limits become data limits.** The fetch tool summarises, so notes are secondhand. The fix is not better notes, it is a check that does not depend on them: figure tokens verified against raw pages by a machine that can fetch them.
 2. **Manual curation is error prone and nothing watches it.** Dates were wrong because a human like process copied them from a summary. Every field that can be checked mechanically (dates, hashes, anchors, figures, links) gets a check.
 3. **Single-run claims.** The headline came from one seed. Any number shown on the front page must come with its spread.
 4. **Design from the top down.** The score and the ladder were designed from first principles and never exercised against a second reader. Calibrate against an independent rater and publish the disagreement.
