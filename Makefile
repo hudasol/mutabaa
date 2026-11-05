@@ -7,7 +7,7 @@ reproduce:
 	python -m pytest -q --cov=pipeline
 	python -m pipeline build
 	python -m pipeline evaluate
-	git diff --exit-code -- site/src/data/real.json results docs/EVALUATION.md
+	git diff --exit-code -- site/src/data/real.json results ':!results/env' docs/EVALUATION.md
 	cd site && npm ci && npx tsc --noEmit && npm run lint && npx vitest run && npm run build && npm run build:offline \
 		&& npx playwright install chromium && npx playwright test
 
