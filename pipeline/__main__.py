@@ -379,6 +379,31 @@ def _checks(s: dict) -> str:
     return f"{s['passed']} of {s['applicable']} checks ({s['ratio']:.2f}, {s['band']})"
 
 
+def cmd_monitor(args: argparse.Namespace) -> int:
+    """Run the live verifier, compare with the recorded run, write a dated report. Edits no ledger."""
+    import os
+    from datetime import UTC, datetime
+
+    from . import monitor
+
+    d = load_real()
+    rep = run_verify(d.sources)
+    cmp = monitor.compare(d.verification, rep)
+    day = datetime.now(UTC).strftime("%Y-%m-%d")
+    out = Path(args.out)
+    out.mkdir(parents=True, exist_ok=True)
+    (out / f"drift-{day}.md").write_text(monitor.render(day, cmp), encoding="utf-8", newline="\n")
+    (out / f"drift-{day}.json").write_text(
+        json.dumps(cmp, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
+    )
+    attention = monitor.needs_attention(cmp)
+    print(f"{cmp['counts']} attention={str(attention).lower()}")
+    if os.environ.get("GITHUB_OUTPUT"):
+        with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+            fh.write(f"attention={str(attention).lower()}\ndate={day}\n")
+    return 0
+
+
 def cmd_lint(args: argparse.Namespace) -> int:
     """mutabaa lint TEXT: read one commitment sentence and say what it states and what it lacks."""
     from .lint import lint
@@ -492,6 +517,8 @@ def build_parser() -> argparse.ArgumentParser:
         q.add_argument("--strict", action="store_true", help="exit 1 if any row is rejected")
         q.add_argument("--min-ratio", type=_ratio, metavar="R", help="exit 1 if any score is below R")
     sub.add_parser("template", help="print a CSV template with the expected columns")
+    mo = sub.add_parser("monitor", help="weekly drift check of the source pages (needs network)")
+    mo.add_argument("--out", default=str(ROOT / "monitoring"), help="folder for the dated report")
     li = sub.add_parser("lint", help="read one commitment sentence: what it states and what it lacks")
     li.add_argument("text", nargs="?", default="", help="the commitment wording (or use --file)")
     li.add_argument("--file", help="read the wording from a UTF-8 text file")
@@ -546,6 +573,8 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     if args.command in ("score", "questions"):
         return cmd_own(args)
+    if args.command == "monitor":
+        return cmd_monitor(args)
     if args.command == "lint":
         return cmd_lint(args)
     if args.command == "diff":
