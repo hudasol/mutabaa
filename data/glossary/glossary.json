@@ -1,0 +1,15 @@
+{
+ "note": "Bilingual terms used on the site. The Arabic terms are the ones the site already uses; no native speaker has reviewed them. 'source' says where the English term is defined in this repository.",
+ "reviewed_by_native_speaker": false,
+ "terms": [
+  {"id": "commitment", "en": "commitment", "en_match": "commitment", "ar": "التزام", "ar_forms": ["التزام"], "definition": "A public statement that an office will do something, possibly with a number and a date.", "source": "docs/METHODOLOGY.md"},
+  {"id": "ledger", "en": "ledger", "en_match": "ledger", "ar": "سجل", "ar_forms": ["سجل"], "definition": "The list of commitments with their sources, checks and evidence.", "source": "docs/METHODOLOGY.md"},
+  {"id": "evidence", "en": "evidence", "en_match": "evidence", "ar": "دليل", "ar_forms": ["دليل", "أدلة", "الأدلة"], "definition": "A dated public document that reports progress against a commitment.", "source": "docs/METHODOLOGY.md"},
+  {"id": "source", "en": "source", "en_match": "source", "ar": "مصدر", "ar_forms": ["مصدر", "مصادر", "المصدر", "المصادر"], "definition": "A public page or document from which a commitment or an evidence item was read.", "source": "docs/SOURCES_POLICY.md"},
+  {"id": "score", "en": "score", "en_match": "score", "ar": "درجة", "ar_forms": ["درجة", "الدرجة", "درجات"], "definition": "How many of six checks the wording of a commitment passes.", "source": "docs/METHODOLOGY.md"},
+  {"id": "status", "en": "status", "en_match": "status", "ar": "حالة", "ar_forms": ["حالة", "الحالة"], "definition": "What public evidence shows about progress; neutral when none is found.", "source": "docs/METHODOLOGY.md"},
+  {"id": "guardrails", "en": "guardrails", "en_match": "guardrail", "ar": "ضوابط", "ar_forms": ["ضوابط", "الضوابط", "ضابط"], "definition": "Oversight, audit trail, UAE residency and fallback, as required by a definition.", "source": "docs/METHODOLOGY.md"},
+  {"id": "maturity", "en": "maturity", "en_match": "maturity", "ar": "نضج", "ar_forms": ["نضج", "النضج"], "definition": "A level from 0 to 4 for how far an AI use has been adopted.", "source": "docs/METHODOLOGY.md"},
+  {"id": "synthetic", "en": "synthetic", "en_match": "synthetic", "ar": "اصطناعي", "ar_forms": ["اصطناع", "مختلق"], "definition": "Invented data made for the demonstration; never mixed with real numbers.", "source": "docs/DATA_STATEMENT.md"}
+ ]
+}
