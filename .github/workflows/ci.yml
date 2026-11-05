@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   python:
     runs-on: ubuntu-latest
@@ -21,12 +24,17 @@ jobs:
         run: mypy
       - name: Tests with coverage gate (90% of pipeline/)
         run: pytest --cov=pipeline --cov-report=term
+      - name: Frozen regression test (existing score, status engine, sweep and results are unchanged)
+        run: pytest tests/test_regression_frozen.py -q --no-cov
       - name: Preregistered evaluation reproduces the committed results
         run: |
           python -m pipeline evaluate
           git diff --exit-code -- results ':!results/env' docs/EVALUATION.md
       - name: Validate data
         run: python -m pipeline validate
+      - name: Validate the Definition Card examples
+        run: |
+          for f in data/examples/definition_cards/*.json; do python -m pipeline definition validate "$f"; done
       - name: Traceability and risk register
         run: |
           python scripts/check_traceability.py

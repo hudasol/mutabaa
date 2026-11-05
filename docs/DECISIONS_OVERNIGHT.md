@@ -19,3 +19,19 @@ Author: Huda Mueen. These decisions were taken without consultation, as the brie
 **D7. Environment files.** Each result file has a sibling in `results/env/` recording Python, package versions, Node, thread count and platform. CI does not diff `results/env/` because those values differ between machines. They sit in a subfolder so that the facts loader (`results/e*.json`) does not read them as experiments.
 
 **D8. Bundle budget raised for data, not for code.** The first script grew from about 96 kB to 131 kB gzip when the ledger grew from 25 to 96 commitments. Derived question text (about 220 kB raw) was removed from the payload and is now computed in the browser by the same ported function that the golden files already hold to Python, which brought it to 121 kB. The remaining growth is data, so the budgets were raised from 110 and 135 kB to 125 and 150 kB. The linter page adds about 6 kB gzip and loads only when visited. The budget is a guard against code growth and still fails on a further 3 kB of entry growth.
+
+## 2026-11-04 and 2026-11-05
+
+**D9. Drift issue policy.** The weekly check opens or extends one tracking issue only when a page changed or has just become unreachable. A page that was already recorded as unreachable and is still unreachable raises nothing, so the known four do not produce an issue every week. The report in `monitoring/` always lists them.
+
+**D10. Definition Card wraps, it does not replace.** The card is a versioned JSON file around the existing `Definition` (unit, scope, threshold, guardrails). The headline is recomputed with the existing `sensitivity.share` on the synthetic registry, so no scoring code was added or changed. Examples are synthetic and carry `is_synthetic: true`.
+
+**D11. E8 adjudication.** The outcome rule, the search budget and the score were frozen before any outcome was looked at. The registered search budget was not exhausted, and the report states that 53 registered searches never ran. The primary result is reported as it came out and is labelled fragile in `docs/EVALUATION.md`: it is significant against a prediction of non significance (P8b MISS), but the full protocol subset gives AUC 0.52 and most positives come from one source. No re-analysis was made to change the headline.
+
+**D12. Glossary and Arabic strings.** Two Arabic strings did not use the glossary term where the English did (`my_sub`, `ev_media`). They were reworded to use it (درجة, الحالة). This is a wording change by the author, not a review; the README and the review kit say Arabic is unreviewed.
+
+**D13. Narrow screens.** The new 320 pixel check found real overflow on Overview and Clocks (grid tracks sized by content, and a clock mark placed past the end of its track). Both were fixed in CSS and in the clock position function, which now clamps to the track. No data or score changed.
+
+**D14. Action versions in CI.** The sandbox could not read the action release tags, so the remaining actions in `ci.yml` stay on major version tags. The drift workflow pins its actions by commit. Pinning the rest is listed in `docs/ROADMAP.md`. CI gained `permissions: contents: read` and two explicit steps (the frozen regression test and the Definition Card examples).
+
+**D15. Print view cap.** The one page ledger summary prints at most 24 rows and says how many more exist. A longer list would no longer fit one page, and the CSV export holds all rows.

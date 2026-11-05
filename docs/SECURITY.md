@@ -16,6 +16,9 @@ Scope: the static site (Profiles A and B in `docs/ARCHITECTURE.md`) and the Pyth
 - The site makes **zero** third party requests: fonts are bundled, there is no analytics, no API call, no service worker. A browser test fails if any request leaves the origin.
 - `python -m pipeline verify-live` is the only code that uses the network. It sends plain GET requests to the URLs listed in `data/real/sources.json`, with an honest User-Agent, TLS verification on, retries with back-off, and no attempt to get around a refusal (a 403 is reported as *unreachable*). It sends no credentials and no data from the repository.
 
+- `python -m pipeline monitor` and the weekly workflow `.github/workflows/drift.yml` read the same URLs in the same way. The workflow holds the default repository token only, with `contents: write` (to commit a dated report under `monitoring/`) and `issues: write` (to open one tracking issue). It uses no secrets and it never edits a ledger record.
+- The wording check (`#/lint`) and the Definition Card form (`#/card`) run entirely in the browser. Text typed into them is not sent anywhere.
+
 ## Controls
 | Control | Where |
 |---|---|
@@ -24,7 +27,9 @@ Scope: the static site (Profiles A and B in `docs/ARCHITECTURE.md`) and the Pyth
 | `nosniff`, `no-referrer`, restrictive Permissions-Policy, COOP, HSTS, `frame-ancestors 'none'` | `site/vercel.json` |
 | Exact-pinned npm dependencies with a lock file; `npm audit` clean at release | `site/package.json` |
 | Pinned Python versions | `requirements.lock` |
-| SBOMs (CycloneDX) | `sbom/` |
+| SBOMs (CycloneDX), regenerated at each release | `sbom/` |
+| Workflow token limited to read access in CI; the drift workflow lists the two extra permissions it needs | `.github/workflows/` |
+| Linter rules frozen by a hash test; browser and Python results compared on golden files | `tests/test_lint.py`, `data/golden/` |
 | Tamper test: a changed extraction note fails validation | `tests/test_real_data.py` |
 | Payload freshness test: committed JSON equals a rebuild | `tests/test_real_data.py` |
 
@@ -41,6 +46,8 @@ Scope: the static site (Profiles A and B in `docs/ARCHITECTURE.md`) and the Pyth
 | T8 | Denial of service: a huge CSV freezes the tab | File-size cap and row cap with a visible message | See residual risks |
 | T9 | Elevation of privilege: dependency compromise | Pinned and locked versions, audit, SBOM, no runtime dependencies beyond React | Accepted risk (supply chain cannot be reduced to zero) |
 | T10 | Misleading output: a reader treats "no public evidence" as a failure | Neutral wording, search log, explicit "how to read this" text | Mitigated by design, reviewed by people in later rounds |
+| T11 | Tampering: the drift workflow is used to write unreviewed text into the repository | It writes only files in `monitoring/`; a person reads each report; the issue text is fixed and quotes no page content | Mitigated |
+| T12 | Misleading output: a linter result is read as a verdict on a commitment | The page says it checks wording only and says nothing about whether the commitment is met; rules are public and frozen | Mitigated by design |
 
 ## Residual risks
 - T8: confirm the CSV caps in the UI and add a test (tracked in `docs/reviews/03-research-institute-lens.md` if not done in this round).
