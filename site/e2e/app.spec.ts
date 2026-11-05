@@ -94,6 +94,7 @@ test("[offline] the single-file build opens from file:// and renders the headlin
   await page.goto(file);
   await expect(page.locator("h1")).toContainText("commitments");
   await page.getByRole("link", { name: "Ledger" }).first().click();
+  await expect(page.locator("h1")).toContainText("Ledger of commitments");
   await expect(page.locator("table.ledger:not(.compact)")).toBeVisible();
   expect(errors).toEqual([]);
 });
