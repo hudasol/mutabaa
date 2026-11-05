@@ -58,6 +58,14 @@ when a row is malformed or a commitment is mostly unverifiable.
 The score says whether a third party could check a commitment from public information. It says nothing about
 whether the commitment is being met. See [METHODOLOGY.md](METHODOLOGY.md).
 
+## Checking one sentence
+
+`mutabaa lint "Reach 40% of services online by 2028."` reads one commitment wording with fixed rules and prints what is missing and the questions to put to the owner. `--format json` gives a machine readable result; `--lang ar` or `both` sets the question language. The answers you can supply (`--number`, `--unit`, `--deadline`, `--owner`, `--source`) rescore the wording as if they were stated; `--min-ratio` sets a failing exit code. The rules are in `data/config/lint_rules.json`, are frozen by a hash test and are the same in the browser page `#/lint`. The check is about wording only.
+
+## Definition Cards
+
+`mutabaa definition validate card.json` checks a Definition Card against `schema/definition_card.schema.json`, then recomputes its headline on the labelled synthetic registry. Three synthetic examples are in `data/examples/definition_cards/`. The browser form is at `#/card`.
+
 ## Repository commands
 
 | Command | Effect |
@@ -74,3 +82,5 @@ whether the commitment is being met. See [METHODOLOGY.md](METHODOLOGY.md).
 | `golden` | Write the golden files the TypeScript port is tested against |
 | `verify-live [--write] [--only IDS]` | Check source pages for the expected figures (needs network) |
 | `diff [REF]` | Show what changed in the payload since a git ref |
+| `monitor [--out DIR]` | Compare the live source pages with `data/real/verification.json` and write a dated report to `monitoring/` (needs network; run weekly by `.github/workflows/drift.yml`) |
+| `e8-freeze` | Write the frozen E8 scores before outcomes are read (kept for audit; do not rerun to change them) |

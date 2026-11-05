@@ -54,6 +54,9 @@ None of this is criticism. These are normal properties of announcements. But a s
 7. **Governance flags.** For each AI deployment: declared human oversight, audit trail, UAE data residency, fallback path. Rolled up per entity, aligned to National AI Strategy objective 8 (governance and regulation).
 8. **Brief.** Print-ready one page executive summary generated from the data.
 9. **Methodology, Datasheet, Limitations.** In-product, bilingual.
+10. **Wording check.** One commitment sentence is read with fixed public rules; the page shows which checks are open and the questions to ask. Wording only, never a verdict on delivery (v1.8.0).
+11. **Definition Card.** A versioned record of the unit, scope, threshold and guardrails behind a headline figure, validated against a schema and recomputed on the labelled synthetic registry (v1.8.0).
+12. **Weekly source check.** A scheduled workflow that reports when a source page changed or became unreachable. It edits no record (v1.8.0).
 
 ### 3.2 Non-goals
 
@@ -143,6 +146,9 @@ Official sources are preferred; secondary sources are graded lower and flagged. 
 | `v0.6.0` | Definition Lab + CSV upload + maturity self assessment (TypeScript engine, parity tests) |
 | `v0.7.0` | Arabic/RTL, governance flags, brief, exports |
 | `v1.0.0` | Deploy, gold-set evaluation report, final docs |
+| `v1.7.0` | Ledger of 96 commitments from 62 sources, preregistered E7 |
+| `v1.8.0` | Validity study E8, wording linter and E9, weekly drift workflow, Definition Card |
+| `v1.9.0` | Glossary and Arabic review kit, narrow screen and print checks, security and CI updates, adversarial review, overnight report |
 
 ## 10. Path to a pilot with a supervisory office
 

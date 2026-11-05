@@ -59,6 +59,16 @@ mutabaa score commitments.csv --strict --min-ratio 0.5     # exit code 1 if a ro
 
 See [CLI.md](CLI.md) for every option and exit code.
 
+## Checking one sentence, or recording a definition
+
+Open **Wording check** to paste one commitment sentence. The page marks each of the six checks as met or open and lists the questions to put to the owner. Fill in the answers you have and the score updates, so you can see which missing piece costs the most. Nothing you type leaves the browser. From a terminal the same check is `mutabaa lint "..."`.
+
+Open **Definition Card** to write down the unit, scope, threshold and guardrails behind a headline figure. The page checks the card as you type and links to the Definition Lab, which recomputes the headline on the labelled synthetic registry.
+
+## Printing
+
+On **Ledger**, set the filters you want and choose **Print this view**. The printout is a one page summary of the rows on screen (at most 24, with a note of how many more exist), the status wording, the data date and the data version. **Brief** prints the whole ledger summary in the same way.
+
 ## How values are read
 
 - A deadline counts as a calendar date only if the date exists. `31/02/2027` and `2027-02-30` are relative. Where a

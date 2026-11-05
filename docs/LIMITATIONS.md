@@ -31,4 +31,12 @@ Mutabaa is a method demonstration built on public information. Read this before 
 ## Scope
 
 - Focused on AI transformation targets (federal and Abu Dhabi). Other domains are out of scope for now.
-- Static snapshot. Data updates are reviewed commits; there is no live scraping.
+- Static snapshot. Data updates are reviewed commits. A weekly workflow reads the source pages and reports a change in their text, but it edits no ledger record; a person decides what a change means.
+
+## Validity, linter, card and monitoring (v1.8.0)
+
+- **Validity (E8) is weak evidence.** The score separates commitments that later received a dated official report from those that did not with AUC <!-- fact:e8.auc -->0.69<!-- /fact -->, but the interval runs from <!-- fact:e8.ci_low -->0.52<!-- /fact --> to <!-- fact:e8.ci_high -->0.85<!-- /fact -->, and <!-- fact:e8.searches.not_run -->53<!-- /fact --> registered searches never ran. Where the full protocol was run the AUC is <!-- fact:e8.full.auc -->0.52<!-- /fact -->, which is chance. Most positives come from the press office of one government. The study does not show that a clearer wording causes a report, only that the two were associated in <!-- fact:e8.n -->36<!-- /fact --> commitments.
+- **The linter reads wording only.** It recovers whether a number is present (F1 <!-- fact:e9.number.f1 -->0.91<!-- /fact -->) but not who owns a commitment (accuracy <!-- fact:e9.owner -->0.30<!-- /fact -->, below a constant baseline of <!-- fact:e9.owner.baseline -->0.74<!-- /fact -->), and it cannot recover a source. A result says what a sentence leaves open. It never says whether a commitment is met.
+- **The Definition Card is a record, not an endorsement.** It checks that a definition is complete and recomputes a headline on a synthetic registry. It does not say which definition is right.
+- **The weekly check detects changed text, not changed meaning.** A page that moves its content, adds a cookie banner or blocks automated requests can look like a change. Pages that were already unreachable raise no new issue.
+- **Arabic is unreviewed.** The glossary and the review kit prepare the work; they do not replace a native reader.

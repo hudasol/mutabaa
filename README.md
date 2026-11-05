@@ -14,8 +14,10 @@ Public AI transformation targets in the UAE set percentages and deadlines that l
 - **Status with a neutral default.** Written rules applied to graded public evidence. "No public evidence" never means "not done", and media only evidence never moves a status.
 - **Definition Lab and Portfolio.** Recompute a headline "% agentic" under every definition on a labelled synthetic registry or on your own file, and see how much entity rankings move.
 - **My commitments.** Load an office's own commitments (CSV or JSON). Each is scored with the same checks and gets questions in English and Arabic. The file stays in the browser.
+- **Wording check and Definition Card.** Paste one commitment sentence and see which of the six checks it fails and what to ask (`#/lint`, or `mutabaa lint`); fill in a Definition Card to state a unit, scope, threshold and guardrails and recompute the synthetic headline (`#/card`, or `mutabaa definition validate`). Both run in the browser and use fixed, public rules.
+- **Weekly source check and print.** A scheduled workflow compares the live source pages with what was recorded and opens one issue only when a page changed or disappeared ([`docs/MONITORING.md`](docs/MONITORING.md)). Any ledger view prints as a one page summary.
 - **Arabic is unreviewed.** The Arabic text was written by the author and has not been checked by a native speaker. A glossary (`data/glossary/glossary.json`) and a review kit (`docs/review_kits/arabic_review.md`) are provided so that a reviewer can do this.
-- **Assurance and evaluation.** Exploratory analyses on the Assurance page, and preregistered experiments in [`docs/EVALUATION.md`](docs/EVALUATION.md): <!-- fact:evaluation.hits -->31<!-- /fact --> of <!-- fact:evaluation.predictions -->39<!-- /fact --> predictions hit (four experiments on the real ledger, three on synthetic or simulated data), <!-- fact:evaluation.misses -->8<!-- /fact --> missed, and the misses are reported.
+- **Assurance and evaluation.** Exploratory analyses on the Assurance page, and preregistered experiments in [`docs/EVALUATION.md`](docs/EVALUATION.md): <!-- fact:evaluation.hits -->31<!-- /fact --> of <!-- fact:evaluation.predictions -->39<!-- /fact --> predictions hit (six experiments on the real ledger, three on synthetic or simulated data), <!-- fact:evaluation.misses -->8<!-- /fact --> missed, and the misses are reported.
 
 The real ledger holds <!-- fact:commitments.count -->96<!-- /fact --> commitments from <!-- fact:sources.count -->62<!-- /fact --> public sources (<!-- fact:sources.official -->56<!-- /fact --> official, <!-- fact:sources.media -->6<!-- /fact --> secondary media), <!-- fact:evidence.count -->10<!-- /fact --> evidence items and <!-- fact:claims.count -->5<!-- /fact --> media claims held apart from status. <!-- fact:sources.verified -->54<!-- /fact --> sources were verified against the live page; <!-- fact:sources.unreachable -->7<!-- /fact --> could not be reached and are reported as unreachable.
 
@@ -99,16 +101,19 @@ Real and synthetic numbers are never combined into one figure. See [`docs/DATA_S
 | Portfolio view, pilot plan, risks, sources policy, corrections, compliance mapping | done | `v1.4.0` |
 | Voice and identity rules, facts checked against documents, layer and schema contracts, coverage gate, decision records, preregistered evaluation, My commitments | done | `v1.5.0` |
 | Command line, preregistered baselines E5 and E6, type and lint gates, size and speed guards, user guide | done | `v1.6.0` |
+| Extended ledger of 96 commitments, preregistered E7, environment records | done | `v1.7.0` |
+| Validity study E8, wording linter with preregistered E9, weekly drift workflow, Definition Card | done; E8 is reported as fragile | `v1.8.0` |
+| Glossary and Arabic review kit, 320 pixel and print checks, security and CI updates, adversarial review | done | `v1.9.0` |
 | Human review of extraction notes and Arabic; a person labelled gold set; legal reading of the sources policy; a real pilot | open | |
 
 ## Documents
 
-[`docs/USER_GUIDE.md`](docs/USER_GUIDE.md), [`docs/CLI.md`](docs/CLI.md) and [`docs/PERFORMANCE.md`](docs/PERFORMANCE.md) for use. For the method, [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md) first. Then [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md), [`docs/EVALUATION.md`](docs/EVALUATION.md), [`PREREGISTRATION.md`](PREREGISTRATION.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/adr/`](docs/adr/README.md), [`docs/DATA_STATEMENT.md`](docs/DATA_STATEMENT.md), [`docs/CONTEXT.md`](docs/CONTEXT.md), [`docs/SECURITY.md`](docs/SECURITY.md), [`docs/PILOT.md`](docs/PILOT.md) and [`docs/DECISIONS.md`](docs/DECISIONS.md).
+[`docs/USER_GUIDE.md`](docs/USER_GUIDE.md), [`docs/CLI.md`](docs/CLI.md) and [`docs/PERFORMANCE.md`](docs/PERFORMANCE.md) for use. For the method, [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md) first. Then [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md), [`docs/EVALUATION.md`](docs/EVALUATION.md), [`PREREGISTRATION.md`](PREREGISTRATION.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/adr/`](docs/adr/README.md), [`docs/DATA_STATEMENT.md`](docs/DATA_STATEMENT.md), [`docs/CONTEXT.md`](docs/CONTEXT.md), [`docs/SECURITY.md`](docs/SECURITY.md), [`docs/MONITORING.md`](docs/MONITORING.md), [`docs/review_kits/arabic_review.md`](docs/review_kits/arabic_review.md), [`docs/DECISIONS_OVERNIGHT.md`](docs/DECISIONS_OVERNIGHT.md), [`docs/OVERNIGHT_REPORT.md`](docs/OVERNIGHT_REPORT.md), [`docs/PILOT.md`](docs/PILOT.md) and [`docs/DECISIONS.md`](docs/DECISIONS.md).
 
 ## Commands
 
 `mutabaa --help` lists them all; [`docs/CLI.md`](docs/CLI.md) describes each. The repository commands are
-`validate`, `build`, `analyse`, `evaluate`, `facts`, `sync-docs`, `schema`, `golden`, `verify-live` and `diff`.
+`validate`, `build`, `analyse`, `evaluate`, `facts`, `sync-docs`, `schema`, `golden`, `verify-live`, `diff`, `monitor` and `e8-freeze`; the user commands include `score`, `questions`, `template`, `lint` and `definition validate`.
 `cd site && npm run build:offline` writes one HTML file that opens from a USB stick.
 
 ## Principles

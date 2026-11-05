@@ -39,6 +39,14 @@ Can an office that oversees AI programmes use Mutabaa, on a registry it already 
 | Defects that change a status or a share | 0 open at week 12 | Issue tracker |
 | Accessibility (axe, serious or critical) | 0 | CI |
 
+## Tools to use in the pilot
+
+- The wording check (`mutabaa lint`, `#/lint`) at intake, so that each new commitment is read once for missing numbers, units, dates and owners before it is entered. Its owner rule is weak (see `docs/LIMITATIONS.md`), so the person entering a commitment always supplies the owner.
+- The Definition Card to record the definition a sponsor decides on, with the unit, scope, threshold and guardrails written down and dated.
+- The weekly source check (`docs/MONITORING.md`) pointed at the pilot's own sources, with the issue sent to the pilot owner.
+- A one page printout of each ledger view for the review meeting.
+- The Arabic review kit, sent to a native reader in the first fortnight.
+
 ## Stop criteria
 Stop and report if: the office cannot supply exports within week 4; reviewer disagreement exceeds 15%; any data leaves the office's machines; the sponsor withdraws.
 

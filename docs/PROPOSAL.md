@@ -9,7 +9,10 @@
 - A Portfolio view that compares entities under six definitions and shows how far their rank moves.
 - An Assurance page that reports how robust Mutabaa's own claims are.
 - A governance view: how many autonomous items lack oversight, an audit trail, UAE residency or a human fallback.
-- A printable brief and exports.
+- A wording check that reads one commitment sentence and lists what is left open, with the questions to ask, in English and Arabic.
+- A Definition Card to record the definition a sponsor decides on, so the decision is dated and can be recomputed.
+- A weekly check that tells an analyst when a source page changed or disappeared.
+- A printable brief, a one page summary of any ledger view, and exports.
 
 **Pilot.** The current plan is 12 weeks with measures and stop criteria: [`docs/PILOT.md`](PILOT.md). Stages and decision points: [`docs/ROADMAP.md`](ROADMAP.md). Risks: [`docs/RISKS.md`](RISKS.md). Corrections and right of reply: [`docs/CORRECTIONS.md`](CORRECTIONS.md). The earlier 6-week sketch is kept below.
 
