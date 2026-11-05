@@ -151,11 +151,21 @@ def e8() -> dict:
             "auc": None if a is None else round(a, 4),
             "permutation_p": None if a is None else round(permutation_p(ss, yy, a), 4),
         }
+        if lab is not None and a is not None:
+            exploratory[name]["baselines"] = {
+                "statement_length": round(auc_required([length[k] for k in keep], yy), 4),
+                "has_digit": round(auc_required([digit[k] for k in keep], yy), 4),
+            }
     for key, name in (("strict", "doubts_counted_as_zero"), ("full", "full_protocol_only")):
         facts[f"{key}.auc"] = _fact(exploratory[name]["auc"], "f2")
         facts[f"{key}.p"] = _fact(exploratory[name]["permutation_p"], "f3")
         facts[f"{key}.positives"] = _fact(exploratory[name]["positives"], "int")
         facts[f"{key}.n"] = _fact(exploratory[name]["n"], "int")
+    sb = exploratory["doubts_counted_as_zero"].get("baselines", {})
+    if sb:
+        facts["strict.baseline.length"] = _fact(sb["statement_length"], "f2")
+        facts["strict.baseline.digit"] = _fact(sb["has_digit"], "f2")
+        facts["strict.share"] = _fact(exploratory["doubts_counted_as_zero"]["positives"] / len(ids), "pct")
     result.update(
         {
             "exploratory": exploratory,

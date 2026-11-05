@@ -12,6 +12,10 @@
  "exploratory": {
   "doubts_counted_as_zero": {
    "auc": 0.8008,
+   "baselines": {
+    "has_digit": 0.5,
+    "statement_length": 0.3008
+   },
    "n": 36,
    "permutation_p": 0.0226,
    "positives": 4
@@ -112,6 +116,14 @@
    "format": "f2",
    "value": 0.8008
   },
+  "strict.baseline.digit": {
+   "format": "f2",
+   "value": 0.5
+  },
+  "strict.baseline.length": {
+   "format": "f2",
+   "value": 0.3008
+  },
   "strict.n": {
    "format": "int",
    "value": 36
@@ -123,6 +135,10 @@
   "strict.positives": {
    "format": "int",
    "value": 4
+  },
+  "strict.share": {
+   "format": "pct",
+   "value": 0.1111111111111111
   }
  },
  "n": 36,
