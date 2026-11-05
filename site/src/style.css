@@ -150,8 +150,12 @@ blockquote { margin: 0; padding-inline-start: .8rem; border-inline-start: 3px so
   .bar { grid-template-columns: 7rem 1fr 3rem; }
   .clock { grid-template-columns: 1fr; }
 }
+@media screen { .print-only { display: none; } }
+.print-view table.compact { font-size: .78rem; width: 100%; }
+.print-view table.compact th, .print-view table.compact td { padding: .15rem .4rem; text-align: start; }
 @media print {
-  .rail, .no-print, .filters { display: none !important; }
+  .rail, .no-print, .filters, .band-help { display: none !important; }
+  .print-only { display: block; }
   .shell { display: block; } body { background: #fff; color: #000; } main { padding: 0; }
   .panel, .brief-item { break-inside: avoid; border-color: #999; }
   :root, :root[data-theme], :root:not([data-theme="light"]) { --paper: #fff !important; --panel: #fff !important; --ink: #000 !important;

@@ -114,6 +114,38 @@ function Detail({ c, onClose }: { c: Commitment; onClose: () => void }) {
   );
 }
 
+const PRINT_ROWS = 24;
+
+/** Shown only when printing: a one page summary of the rows now on screen. */
+function PrintView({ rows, filters }: { rows: Commitment[]; filters: string[] }) {
+  const { t, lang, data } = useCtx();
+  const shown = rows.slice(0, PRINT_ROWS);
+  return (
+    <section className="print-only print-view" aria-label={t.lg_pv_title}>
+      <h2>{t.lg_pv_title}</h2>
+      <p className="small">{t.lg_pv_filters}: {filters.length ? filters.join(" · ") : t.lg_pv_none}. {t.lg_pv_count(rows.length, data.commitments.length)}</p>
+      <table className="ledger compact">
+        <thead><tr><th>ID</th><th>{t.lg_col_commitment}</th><th>{t.lg_owner}</th><th>{t.lg_checks}</th><th>{t.lg_status}</th></tr></thead>
+        <tbody>
+          {shown.map((c) => {
+            const s = data.statuses.find((x) => x.commitment_id === c.id)!, k = data.scores.find((x) => x.commitment_id === c.id)!;
+            const passed = Object.values(k.checks).filter((v) => v === true).length, applicable = Object.values(k.checks).filter((v) => v !== null).length;
+            return (
+              <tr key={c.id}>
+                <td className="id">{c.id}</td><td>{L(lang, c.title, c.title_ar)}</td><td>{c.owner ?? t.lg_not_stated}</td>
+                <td>{passed}/{applicable}</td><td>{t.st[s.status]}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      {rows.length > shown.length && <p className="small">{t.lg_pv_more(rows.length - shown.length)}</p>}
+      <p className="small">{t.lg_pv_note}</p>
+      <p className="small">{t.ft_asof} {data.build.data_as_of}. {t.br_version}: <span className="mono">{data.build.payload_sha256.slice(0, 12)}</span></p>
+    </section>
+  );
+}
+
 export default function Ledger() {
   const { t, lang, data, route, setParams } = useCtx();
   const p = route.params;
@@ -175,9 +207,10 @@ export default function Ledger() {
         <button className="btn ghost" onClick={exportCsv}>{t.lg_export_csv}</button>
         <button className="btn ghost" onClick={() => download("mutabaa-data.json", JSON.stringify({ build: data.build, commitments: rows }, null, 1), "application/json")}>{t.lg_export_json}</button>
         <CopyLink />
+        <button className="btn ghost" onClick={() => window.print()}>{t.lg_print}</button>
       </div>
       <p className="small band-help">{t.band_help}</p>
-      <div className="table-wrap">
+      <div className="table-wrap no-print">
         <table className="ledger">
           <thead><tr>
             <th aria-sort={ariaSort("id")}><button className="th" onClick={() => toggle("id")}>ID{arrow("id")}</button></th>
@@ -195,6 +228,7 @@ export default function Ledger() {
           </tbody>
         </table>
       </div>
+      <PrintView rows={rows} filters={[q && `“${q}”`, jur && t.jur[jur as keyof typeof t.jur], stat && t.st[stat as keyof typeof t.st], band && t.band[band as keyof typeof t.band]].filter(Boolean) as string[]} />
     </>
   );
 }

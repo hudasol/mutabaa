@@ -311,3 +311,18 @@ test("[card] a card is validated as it is written and the Lab link carries the d
   await expect(page.getByRole("link", { name: /Open the Definition Lab/ })).toHaveAttribute("href", /t=4/);
   await expect(page.getByRole("button", { name: /Download the card/ })).toBeEnabled();
 });
+
+test("[print] the ledger prints a one page summary of the filtered view and hides the interactive table", async ({ page }) => {
+  await open(page, "ledger");
+  await page.goto("/#/ledger?j=abu-dhabi");
+  await expect(page.locator("h1")).toBeVisible();
+  const view = page.locator("section.print-view");
+  await expect(view).toBeHidden();
+  await page.emulateMedia({ media: "print" });
+  await expect(view).toBeVisible();
+  await expect(page.locator("div.table-wrap")).toBeHidden();
+  await expect(view).toContainText("Filters in this view");
+  await expect(view).toContainText("neutral status means no public evidence");
+  const height = await view.evaluate((el) => el.getBoundingClientRect().height);
+  expect(height).toBeLessThan(1000);
+});
