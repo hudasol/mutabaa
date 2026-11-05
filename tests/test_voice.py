@@ -36,7 +36,8 @@ def violations(rel: str, text: str) -> list[str]:
     """Return a list of 'file:line: problem' strings for one prose file."""
     out: list[str] = []
     allowed = set(RULES["allowed_emoji"])
-    vendors = re.compile(r"\b(" + "|".join(map(re.escape, (w[::-1] for w in RULES["vendor_words_reversed"]))) + r")\b")
+    names = [w[::-1] for w in RULES["vendor_words_reversed"]]
+    vendors = re.compile(r"\b(" + "|".join(map(re.escape, names)) + r")\b")
     unis = re.compile("|".join(RULES["university_patterns"]), re.IGNORECASE)
     orgs = re.compile(r"\b(" + "|".join(map(re.escape, RULES["org_names"])) + r")\b")
     check_orgs = rel not in RULES["org_names_allowed_in"]
