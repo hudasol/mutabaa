@@ -52,6 +52,7 @@ const en = {
   ln_empty: "Type a sentence above to see the result.",
   ln_checks_of: (p: number, n: number) => `${p} of ${n} checks`,
   ln_limit: "This says what a sentence states, not whether the commitment is good or whether it was met. Rules and their evaluation are described in docs/EVALUATION.md (E9); the owner rule misses many ledger owners.",
+  ar_unreviewed: "The Arabic text has not been reviewed by a native speaker.", pf_range_to: "to",
   ln_ar_note: "The Arabic text of this page has not been reviewed by a native speaker.",
   my_title: "Check your own commitments",
   my_sub: "Load a file of your office's commitments. Each one is scored with the same six checks as the public ledger, and the questions to put to the owning entity are written for you.",
@@ -75,7 +76,7 @@ const en = {
     Municipal: "Municipal", Social: "Social", Finance: "Finance" } as Record<string, string>,
   synth_entity: (sector: string, letter: string) => `Synthetic ${sector} Authority ${letter}`,
   pf_title: "One definition, many entities: how the ranking moves",
-  pf_sub: "For each entity, the share of in-scope services that qualify under six definitions. The rank range shows how much an entity's position depends on which definition is used.",
+  pf_sub: "For each entity, the share of services in scope that qualify under six definitions. The rank range shows how much an entity's position depends on which definition is used.",
   pf_scope: "Scope", pf_sort: "Sort by", pf_sort_name: "Name", pf_sort_range: "Rank range", pf_sort_share: "Share (L3, no guardrails)",
   pf_entity: "Entity", pf_items: "Items", pf_range: "Rank range", pf_guard: "guardrails", pf_noguard: "no guardrails",
   pf_note: (n: number, moved: number) => `${moved} of ${n} entities change rank by 3 places or more depending on the definition. A league table built on one definition would hide that.`,
@@ -173,8 +174,8 @@ const en = {
   s_citizen: "Citizen services", s_all: "All services", s_ops: "Services and internal operations",
   g_none: "Not required", g_required: "Oversight, audit trail, UAE residency and fallback",
   lb_unit_help: { services: "Each service counts once.", transactions: "Weighted by annual transactions.",
-    entities: "An entity counts when at least half its in-scope items qualify.",
-    sectors: "A sector counts when at least half its in-scope items qualify." },
+    entities: "An entity counts when at least half its items in scope qualify.",
+    sectors: "A sector counts when at least half its items in scope qualify." },
   // maturity
   mt_title: "Maturity and guardrails", mt_sub: "A proposed ladder for what 'agentic' could mean, and the safeguards that should travel with autonomy.",
   mt_ladder: "Proposed ladder (ours, not official)",
@@ -183,7 +184,7 @@ const en = {
   mt_oversight: "Human oversight", mt_audit: "Audit trail", mt_residency: "UAE data residency", mt_fallback: "Fallback to a person",
   mt_gap: (n: number, t: number) => `${n} of ${t} items at level 3 or 4 lack at least one guardrail.`,
   // brief
-  br_title: "Brief", br_sub: "A one-page summary for a meeting. Print or save as PDF.", br_print: "Print or save as PDF",
+  br_title: "Brief", br_sub: "A summary on one page for a meeting. Print or save as PDF.", br_print: "Print or save as PDF",
   br_findings: "What the public record supports", br_gaps: "Largest gaps",
   br_generated: "Generated from the public record retrieved on",
   // method
@@ -199,7 +200,7 @@ const en = {
   me_data: "Data policy", me_data_text: "Public data are stored as short extraction notes with SHA-256 hashes, not republished text. Each commitment carries anchors that must appear in the stored note. Synthetic data are generated from a seed, labelled in the schema, and never combined with public figures in one number.",
   me_limits: "Limits", me_limits_list: [
     "A snapshot retrieved on 9 October 2026. Newer statements are not included.",
-    "Extraction notes were prepared by a model and checked by validators for anchors and hashes. They are not independently human-verified.",
+    "Extraction notes were prepared by a model and checked by validators for anchors and hashes. They are not independently checked by a person.",
     "Arabic text has not been reviewed by a native expert.",
     "The maturity ladder and the definition axes are proposals made for this tool.",
     "A low score describes the wording of a commitment. It is not a judgement on the entity.",
@@ -316,6 +317,7 @@ const ar: Dict = {
   ln_empty: "اكتبوا جملة في الأعلى لرؤية النتيجة.",
   ln_checks_of: (p: number, n: number) => `${p} من ${n} فحوص`,
   ln_limit: "تبيّن هذه الصفحة ما تنص عليه الجملة، لا هل الالتزام جيد ولا هل تحقق. القواعد وتقييمها موصوفان في docs/EVALUATION.md (التجربة E9)، وتفوّت قاعدة الجهة كثيراً من الجهات في السجل.",
+  ar_unreviewed: "لم يراجع متحدث أصلي النص العربي.", pf_range_to: "إلى",
   ln_ar_note: "لم يراجع متحدث أصلي النص العربي في هذه الصفحة.",
   my_title: "تحقّق من التزاماتك",
   my_sub: "حمّل ملفاً بالتزامات مكتبك. يُعطى كل التزام درجة بالفحوص الست نفسها المستخدمة في السجل العام، وتُكتب لك الأسئلة التي تُوجَّه إلى الجهة المسؤولة.",

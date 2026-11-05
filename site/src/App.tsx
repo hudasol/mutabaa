@@ -61,6 +61,7 @@ export default function App() {
         <main id="main"><Suspense fallback={<p className="small" role="status">{t.loading}</p>}><Page /></Suspense>
           <footer className="pagefoot">
             <span>{t.footer(data.build.data_as_of)}</span>
+            {lang === "ar" && <span>{t.ar_unreviewed}</span>}
             <span>{t.ft_asof} {data.build.data_as_of} · <span className="mono">{data.build.payload_sha256.slice(0, 12)}</span></span>
           </footer>
         </main>

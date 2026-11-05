@@ -62,7 +62,7 @@ export default function Portfolio() {
               {rows.map((r) => (
                 <tr key={r.entity}>
                   <th scope="row"><span className="mono">{r.entity}</span> <span className="muted small ename">{names.get(r.entity) ?? r.sector}</span></th>
-                  <td className="mono">{r.rankMin === r.rankMax ? `#${r.rankMin}` : `#${r.rankMin}–${r.rankMax}`}</td>
+                  <td className="mono">{r.rankMin === r.rankMax ? `#${r.rankMin}` : `#${r.rankMin} ${t.pf_range_to} #${r.rankMax}`}</td>
                   <td>{r.items}</td>
                   {r.shares.map((v, i) => (
                     <td key={i} className="cell" style={{ background: `color-mix(in srgb, ${tone} ${Math.round((v ?? 0) * 28)}%, transparent)` }}>

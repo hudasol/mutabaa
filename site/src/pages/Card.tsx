@@ -7,7 +7,7 @@ import { Head, SourceBanner } from "../parts";
 const blank: DefinitionCard = {
   card_version: "1", title: "", headline_claim: "",
   definition: { unit: "services", scope: "all-services", threshold: 3, guardrails: "none" },
-  as_of: "2026-11-03", declared_by: "", notes: "", is_synthetic: true,
+  as_of: new Date().toISOString().slice(0, 10), declared_by: "", notes: "", is_synthetic: true,
 };
 
 export default function Card() {
