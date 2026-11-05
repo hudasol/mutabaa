@@ -29,6 +29,18 @@ for (const lang of ["en", "ar"] as const) {
   }
 }
 
+for (const lang of ["en", "ar"] as const) {
+  for (const p of PAGES) {
+    test(`[narrow] ${p} ${lang} at 320px has no horizontal page overflow`, async ({ page }) => {
+      await page.setViewportSize({ width: 320, height: 700 });
+      await open(page, p, { lang });
+      await page.waitForLoadState("networkidle");
+      const over = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+      expect(over).toBeLessThanOrEqual(0);
+    });
+  }
+}
+
 for (const theme of ["light", "dark"] as const) {
   for (const lang of ["en", "ar"] as const) {
     for (const p of PAGES) {

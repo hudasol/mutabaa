@@ -9,7 +9,7 @@ export default function Clocks() {
   const dated = data.commitments.filter((c) => c.deadline).sort((a, b) => (a.deadline as string).localeCompare(b.deadline as string));
   const undated = data.commitments.filter((c) => !c.deadline && c.kind !== "projection");
   const start = new Date("2025-01-01").getTime(), end = new Date("2031-12-31").getTime();
-  const pos = (iso: string | number) => `${((new Date(iso).getTime() - start) / (end - start)) * 100}%`;
+  const pos = (iso: string | number) => `${Math.min(100, Math.max(0, ((new Date(iso).getTime() - start) / (end - start)) * 100))}%`;
   return (
     <>
       <Head title={t.ck_title} sub={t.ck_sub} />

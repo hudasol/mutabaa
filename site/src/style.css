@@ -46,7 +46,7 @@ button { cursor: pointer; }
 .rail nav a:hover { background: var(--panel); }
 .rail .foot { margin-top: auto; display: grid; gap: .75rem; font-size: .8rem; color: var(--muted); }
 .lang { align-self: start; border: 1px solid var(--line); background: var(--panel); border-radius: 6px; padding: .35rem .8rem; }
-main { padding: 2rem clamp(1rem, 4vw, 3.5rem) 4rem; display: grid; gap: 2rem; align-content: start; min-width: 0; }
+main { padding: 2rem clamp(1rem, 4vw, 3.5rem) 4rem; display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; align-content: start; min-width: 0; }
 .page-head { display: grid; gap: .6rem; }
 .page-head .sub { color: var(--ink-2); }
 
@@ -78,7 +78,7 @@ main { padding: 2rem clamp(1rem, 4vw, 3.5rem) 4rem; display: grid; gap: 2rem; al
 .stat span { color: var(--ink-2); font-size: .9rem; }
 
 .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem; display: grid; gap: 1rem; min-width: 0; }
-.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.25rem; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr)); gap: 1.25rem; }
 .small { font-size: .88rem; color: var(--ink-2); }
 .muted { color: var(--muted); }
 .mono { font-family: var(--mono); font-size: .85em; }
@@ -143,7 +143,7 @@ blockquote { margin: 0; padding-inline-start: .8rem; border-inline-start: 3px so
 .clock.head { color: var(--muted); font-size: .78rem; border-bottom: 2px solid var(--ink); }
 
 @media (max-width: 880px) {
-  .shell { grid-template-columns: 1fr; }
+  .shell { grid-template-columns: minmax(0, 1fr); }
   .rail { position: static; height: auto; flex-direction: row; flex-wrap: wrap; align-items: center; border-inline-end: 0; border-bottom: 1px solid var(--line); padding: .75rem 1rem; gap: .75rem; }
   .rail nav { flex-direction: row; flex-wrap: wrap; width: 100%; order: 3; }
   .rail .foot { display: none; }
@@ -190,7 +190,7 @@ blockquote { margin: 0; padding-inline-start: .8rem; border-inline-start: 3px so
 .textlink { font-weight: 600; justify-self: start; }
 .plainlist { margin: 0; padding-inline-start: 1.2rem; display: grid; gap: .45rem; }
 .qlist { margin: 0; padding-inline-start: 1.3rem; display: grid; gap: .4rem; }
-.two { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+.two { grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr)); }
 .row-between { display: flex; justify-content: space-between; align-items: center; gap: .75rem; flex-wrap: wrap; }
 .bigrow { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
 .check { display: inline-flex; align-items: center; gap: .45rem; font-size: .9rem; }
