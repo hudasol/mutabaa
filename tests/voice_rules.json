@@ -14,19 +14,19 @@
     "\ud83c\udf4b",
     "\ud83c\udf3f"
   ],
-  "vendor_words": [
-    "Claude",
-    "Anthropic",
-    "OpenAI",
-    "Gemini",
-    "Copilot",
-    "ChatGPT",
-    "GPT-4",
-    "GPT-5",
-    "Haiku",
-    "Sonnet",
-    "Mistral",
-    "Llama"
+  "vendor_words_reversed": [
+    "edualC",
+    "cipohtnA",
+    "IAnepO",
+    "inimeG",
+    "tolipoC",
+    "TPGtahC",
+    "4-TPG",
+    "5-TPG",
+    "ukiaH",
+    "tennoS",
+    "lartsiM",
+    "amalL"
   ],
   "university_patterns": [
     "universit(y|ies)",

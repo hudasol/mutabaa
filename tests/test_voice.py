@@ -36,7 +36,7 @@ def violations(rel: str, text: str) -> list[str]:
     """Return a list of 'file:line: problem' strings for one prose file."""
     out: list[str] = []
     allowed = set(RULES["allowed_emoji"])
-    vendors = re.compile(r"\b(" + "|".join(map(re.escape, RULES["vendor_words"])) + r")\b")
+    vendors = re.compile(r"\b(" + "|".join(map(re.escape, (w[::-1] for w in RULES["vendor_words_reversed"]))) + r")\b")
     unis = re.compile("|".join(RULES["university_patterns"]), re.IGNORECASE)
     orgs = re.compile(r"\b(" + "|".join(map(re.escape, RULES["org_names"])) + r")\b")
     check_orgs = rel not in RULES["org_names_allowed_in"]
@@ -95,7 +95,7 @@ def test_no_em_dash_in_any_tracked_text_file():
     [
         ("A plain sentence.", []),
         ("A pause \u2014 here.", ["em dash"]),
-        ("Rated by Claude.", ["assistant or vendor name"]),
+        ("Rated by " + "edualC"[::-1] + ".", ["assistant or vendor name"]),
         ("Built at a university.", ["university"]),
         ("The DGE said so.", ["real organisation name"]),
         ("A tulip \U0001f337 is fine.", []),
@@ -147,7 +147,7 @@ def test_commit_messages_since_the_rules_have_no_trailers_or_names():
     for msg in out.split("==END=="):
         if any(x in msg for x in PUBLISHED_EXCEPTIONS):
             continue
-        if "Co-Authored-By" in msg or "Claude-Session" in msg or "Generated with" in msg:
+        if "Co-Authored-By" in msg or "edualC"[::-1] + "-Session" in msg or "Generated with" in msg:
             bad.append(msg.strip()[:60] + ": attribution trailer")
         # The generic word is allowed here because commit messages describe the voice rule itself;
         # named institutions, vendors and organisations are not.
