@@ -1,0 +1,116 @@
+{
+ "$defs": {
+  "Definition": {
+   "properties": {
+    "guardrails": {
+     "enum": [
+      "none",
+      "required"
+     ],
+     "title": "Guardrails",
+     "type": "string"
+    },
+    "scope": {
+     "enum": [
+      "citizen-services",
+      "all-services",
+      "services-and-operations"
+     ],
+     "title": "Scope",
+     "type": "string"
+    },
+    "threshold": {
+     "enum": [
+      2,
+      3,
+      4
+     ],
+     "title": "Threshold",
+     "type": "integer"
+    },
+    "unit": {
+     "enum": [
+      "services",
+      "transactions",
+      "entities",
+      "sectors"
+     ],
+     "title": "Unit",
+     "type": "string"
+    }
+   },
+   "required": [
+    "unit",
+    "scope",
+    "threshold",
+    "guardrails"
+   ],
+   "title": "Definition",
+   "type": "object"
+  }
+ },
+ "additionalProperties": false,
+ "description": "A versioned statement of how a headline percentage is defined: unit, scope, threshold, guardrails.",
+ "properties": {
+  "as_of": {
+   "format": "date",
+   "title": "As Of",
+   "type": "string"
+  },
+  "card_version": {
+   "const": "1",
+   "default": "1",
+   "title": "Card Version",
+   "type": "string"
+  },
+  "declared_by": {
+   "description": "a role or office, never a person",
+   "maxLength": 120,
+   "minLength": 1,
+   "title": "Declared By",
+   "type": "string"
+  },
+  "definition": {
+   "$ref": "#/$defs/Definition"
+  },
+  "headline_claim": {
+   "maxLength": 400,
+   "minLength": 1,
+   "title": "Headline Claim",
+   "type": "string"
+  },
+  "is_synthetic": {
+   "title": "Is Synthetic",
+   "type": "boolean"
+  },
+  "notes": {
+   "anyOf": [
+    {
+     "maxLength": 500,
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Notes"
+  },
+  "title": {
+   "maxLength": 120,
+   "minLength": 1,
+   "title": "Title",
+   "type": "string"
+  }
+ },
+ "required": [
+  "title",
+  "headline_claim",
+  "definition",
+  "as_of",
+  "declared_by",
+  "is_synthetic"
+ ],
+ "title": "DefinitionCard",
+ "type": "object"
+}

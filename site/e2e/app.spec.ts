@@ -3,7 +3,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { pathToFileURL } from "node:url";
 import path from "node:path";
 
-const PAGES = ["overview", "ledger", "clocks", "lab", "maturity", "sources", "brief", "method", "assurance", "portfolio", "mine", "lint"];
+const PAGES = ["overview", "ledger", "clocks", "lab", "maturity", "sources", "brief", "method", "assurance", "portfolio", "mine", "lint", "card"];
 
 async function open(page: Page, hash: string, opts: { lang?: "en" | "ar"; theme?: "light" | "dark" } = {}) {
   await page.addInitScript(([l, t]) => {
@@ -287,3 +287,15 @@ for (const lang of ["en", "ar"] as const) {
     });
   }
 }
+
+test("[card] a card is validated as it is written and the Lab link carries the definition", async ({ page }) => {
+  await open(page, "card");
+  await expect(page.getByRole("alert")).toContainText("title");
+  await page.getByLabel("Card title").fill("Example card");
+  await page.getByLabel("Headline claim being defined").fill("Example claim.");
+  await page.getByLabel(/Declared by/).fill("Example office");
+  await expect(page.getByText("The card is valid.")).toBeVisible();
+  await page.getByLabel("Minimum maturity").selectOption("4");
+  await expect(page.getByRole("link", { name: /Open the Definition Lab/ })).toHaveAttribute("href", /t=4/);
+  await expect(page.getByRole("button", { name: /Download the card/ })).toBeEnabled();
+});

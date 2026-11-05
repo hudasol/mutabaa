@@ -379,6 +379,31 @@ def _checks(s: dict) -> str:
     return f"{s['passed']} of {s['applicable']} checks ({s['ratio']:.2f}, {s['band']})"
 
 
+def cmd_definition(args: argparse.Namespace) -> int:
+    """mutabaa definition validate FILE: check a card and recompute its headline (synthetic registry)."""
+    from . import card
+
+    try:
+        text = Path(args.file).read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError) as exc:
+        print(f"mutabaa: {args.file}: {exc}", file=sys.stderr)
+        return 2
+    parsed, errors = card.validate(text)
+    if parsed is None:
+        print("INVALID")
+        for e in errors:
+            print(f"  - {e}")
+        return 1
+    reg = Registry.model_validate(json.loads((SYNTH / "registry.json").read_text(encoding="utf-8")))
+    res = card.apply(parsed, reg)
+    shown = "no items in scope" if res["share"] is None else f"{res['share'] * 100:.1f}%"
+    print(f"VALID: {parsed.title}")
+    print(f"Headline under the declared definition, on the SYNTHETIC registry: {shown}")
+    if not parsed.is_synthetic:
+        print("Note: the card is not marked synthetic; the percentage above is still synthetic data.")
+    return 0
+
+
 def cmd_monitor(args: argparse.Namespace) -> int:
     """Run the live verifier, compare with the recorded run, write a dated report. Edits no ledger."""
     import os
@@ -517,6 +542,10 @@ def build_parser() -> argparse.ArgumentParser:
         q.add_argument("--strict", action="store_true", help="exit 1 if any row is rejected")
         q.add_argument("--min-ratio", type=_ratio, metavar="R", help="exit 1 if any score is below R")
     sub.add_parser("template", help="print a CSV template with the expected columns")
+    de = sub.add_parser("definition", help="work with Definition Cards")
+    de_sub = de.add_subparsers(dest="definition_command", metavar="ACTION", required=True)
+    dv = de_sub.add_parser("validate", help="check a card and recompute its headline (synthetic data)")
+    dv.add_argument("file", help="a Definition Card JSON file; see data/examples/definition_cards/")
     mo = sub.add_parser("monitor", help="weekly drift check of the source pages (needs network)")
     mo.add_argument("--out", default=str(ROOT / "monitoring"), help="folder for the dated report")
     li = sub.add_parser("lint", help="read one commitment sentence: what it states and what it lacks")
@@ -573,6 +602,8 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     if args.command in ("score", "questions"):
         return cmd_own(args)
+    if args.command == "definition":
+        return cmd_definition(args)
     if args.command == "monitor":
         return cmd_monitor(args)
     if args.command == "lint":

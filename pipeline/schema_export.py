@@ -14,6 +14,7 @@ from .schemas import (
     Claim,
     Commitment,
     Definition,
+    DefinitionCard,
     Evidence,
     Registry,
     SearchEntry,
@@ -34,6 +35,7 @@ MODELS: dict[str, type[BaseModel]] = {
     "service_item": ServiceItem,
     "registry": Registry,
     "definition": Definition,
+    "definition_card": DefinitionCard,
 }
 
 

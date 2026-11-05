@@ -1,0 +1,15 @@
+{
+ "card_version": "1",
+ "title": "Example office: services with an AI component",
+ "headline_claim": "Example Office reports that most services use AI.",
+ "definition": {
+  "unit": "services",
+  "scope": "all-services",
+  "threshold": 2,
+  "guardrails": "none"
+ },
+ "as_of": "2026-11-03",
+ "declared_by": "Example strategy office",
+ "notes": "Invented example for the synthetic registry. Not a real office or claim.",
+ "is_synthetic": true
+}

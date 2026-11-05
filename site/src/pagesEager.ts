@@ -8,6 +8,7 @@ export { default as Method } from "./pages/Method";
 export { default as Overview } from "./pages/Overview";
 export { default as Assurance } from "./pages/Assurance";
 export { default as Portfolio } from "./pages/Portfolio";
+export { default as Card } from "./pages/Card";
 export { default as Lint } from "./pages/Lint";
 export { default as Mine } from "./pages/Mine";
 export { default as Sources } from "./pages/Sources";

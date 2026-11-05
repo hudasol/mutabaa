@@ -1,0 +1,15 @@
+{
+ "card_version": "1",
+ "title": "Example office: entities with half of services above level three",
+ "headline_claim": "Example Office reports that entities have adopted AI.",
+ "definition": {
+  "unit": "entities",
+  "scope": "services-and-operations",
+  "threshold": 3,
+  "guardrails": "none"
+ },
+ "as_of": "2026-11-03",
+ "declared_by": "Example performance office",
+ "notes": "Invented example for the synthetic registry. Not a real office or claim.",
+ "is_synthetic": true
+}

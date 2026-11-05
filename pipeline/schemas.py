@@ -387,3 +387,18 @@ class Definition(BaseModel):
     scope: Scope
     threshold: Threshold
     guardrails: Guardrails
+
+
+class DefinitionCard(BaseModel):
+    """A versioned statement of how a headline percentage is defined: unit, scope, threshold, guardrails."""
+
+    model_config = _STRICT
+
+    card_version: Literal["1"] = "1"
+    title: str = Field(min_length=1, max_length=120)
+    headline_claim: str = Field(min_length=1, max_length=400)
+    definition: Definition
+    as_of: date
+    declared_by: str = Field(min_length=1, max_length=120, description="a role or office, never a person")
+    notes: str | None = Field(default=None, max_length=500)
+    is_synthetic: bool

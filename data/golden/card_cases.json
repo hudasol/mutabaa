@@ -1,0 +1,209 @@
+[
+ {
+  "name": "valid example",
+  "card": {
+   "card_version": "1",
+   "title": "Example office: services with an AI component",
+   "headline_claim": "Example Office reports that most services use AI.",
+   "definition": {
+    "unit": "services",
+    "scope": "all-services",
+    "threshold": 2,
+    "guardrails": "none"
+   },
+   "as_of": "2026-11-03",
+   "declared_by": "Example strategy office",
+   "notes": "Invented example for the synthetic registry. Not a real office or claim.",
+   "is_synthetic": true
+  },
+  "valid": true
+ },
+ {
+  "name": "missing title",
+  "card": {
+   "card_version": "1",
+   "headline_claim": "Example Office reports that most services use AI.",
+   "definition": {
+    "unit": "services",
+    "scope": "all-services",
+    "threshold": 2,
+    "guardrails": "none"
+   },
+   "as_of": "2026-11-03",
+   "declared_by": "Example strategy office",
+   "notes": "Invented example for the synthetic registry. Not a real office or claim.",
+   "is_synthetic": true
+  },
+  "valid": false
+ },
+ {
+  "name": "empty claim",
+  "card": {
+   "card_version": "1",
+   "title": "Example office: services with an AI component",
+   "headline_claim": "",
+   "definition": {
+    "unit": "services",
+    "scope": "all-services",
+    "threshold": 2,
+    "guardrails": "none"
+   },
+   "as_of": "2026-11-03",
+   "declared_by": "Example strategy office",
+   "notes": "Invented example for the synthetic registry. Not a real office or claim.",
+   "is_synthetic": true
+  },
+  "valid": false
+ },
+ {
+  "name": "bad unit",
+  "card": {
+   "card_version": "1",
+   "title": "Example office: services with an AI component",
+   "headline_claim": "Example Office reports that most services use AI.",
+   "definition": {
+    "unit": "people",
+    "scope": "all-services",
+    "threshold": 2,
+    "guardrails": "none"
+   },
+   "as_of": "2026-11-03",
+   "declared_by": "Example strategy office",
+   "notes": "Invented example for the synthetic registry. Not a real office or claim.",
+   "is_synthetic": true
+  },
+  "valid": false
+ },
+ {
+  "name": "bad threshold",
+  "card": {
+   "card_version": "1",
+   "title": "Example office: services with an AI component",
+   "headline_claim": "Example Office reports that most services use AI.",
+   "definition": {
+    "unit": "services",
+    "scope": "all-services",
+    "threshold": 5,
+    "guardrails": "none"
+   },
+   "as_of": "2026-11-03",
+   "declared_by": "Example strategy office",
+   "notes": "Invented example for the synthetic registry. Not a real office or claim.",
+   "is_synthetic": true
+  },
+  "valid": false
+ },
+ {
+  "name": "bad date",
+  "card": {
+   "card_version": "1",
+   "title": "Example office: services with an AI component",
+   "headline_claim": "Example Office reports that most services use AI.",
+   "definition": {
+    "unit": "services",
+    "scope": "all-services",
+    "threshold": 2,
+    "guardrails": "none"
+   },
+   "as_of": "03/11/2026",
+   "declared_by": "Example strategy office",
+   "notes": "Invented example for the synthetic registry. Not a real office or claim.",
+   "is_synthetic": true
+  },
+  "valid": false
+ },
+ {
+  "name": "missing synthetic flag",
+  "card": {
+   "card_version": "1",
+   "title": "Example office: services with an AI component",
+   "headline_claim": "Example Office reports that most services use AI.",
+   "definition": {
+    "unit": "services",
+    "scope": "all-services",
+    "threshold": 2,
+    "guardrails": "none"
+   },
+   "as_of": "2026-11-03",
+   "declared_by": "Example strategy office",
+   "notes": "Invented example for the synthetic registry. Not a real office or claim."
+  },
+  "valid": false
+ },
+ {
+  "name": "extra field",
+  "card": {
+   "card_version": "1",
+   "title": "Example office: services with an AI component",
+   "headline_claim": "Example Office reports that most services use AI.",
+   "definition": {
+    "unit": "services",
+    "scope": "all-services",
+    "threshold": 2,
+    "guardrails": "none"
+   },
+   "as_of": "2026-11-03",
+   "declared_by": "Example strategy office",
+   "notes": "Invented example for the synthetic registry. Not a real office or claim.",
+   "is_synthetic": true,
+   "extra": "x"
+  },
+  "valid": false
+ },
+ {
+  "name": "wrong version",
+  "card": {
+   "card_version": "2",
+   "title": "Example office: services with an AI component",
+   "headline_claim": "Example Office reports that most services use AI.",
+   "definition": {
+    "unit": "services",
+    "scope": "all-services",
+    "threshold": 2,
+    "guardrails": "none"
+   },
+   "as_of": "2026-11-03",
+   "declared_by": "Example strategy office",
+   "notes": "Invented example for the synthetic registry. Not a real office or claim.",
+   "is_synthetic": true
+  },
+  "valid": false
+ },
+ {
+  "name": "claim too long",
+  "card": {
+   "card_version": "1",
+   "title": "Example office: services with an AI component",
+   "headline_claim": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "definition": {
+    "unit": "services",
+    "scope": "all-services",
+    "threshold": 2,
+    "guardrails": "none"
+   },
+   "as_of": "2026-11-03",
+   "declared_by": "Example strategy office",
+   "notes": "Invented example for the synthetic registry. Not a real office or claim.",
+   "is_synthetic": true
+  },
+  "valid": false
+ },
+ {
+  "name": "notes absent is fine",
+  "card": {
+   "card_version": "1",
+   "title": "Example office: services with an AI component",
+   "headline_claim": "Example Office reports that most services use AI.",
+   "definition": {
+    "unit": "services",
+    "scope": "all-services",
+    "threshold": 2,
+    "guardrails": "none"
+   },
+   "as_of": "2026-11-03",
+   "declared_by": "Example strategy office",
+   "is_synthetic": true
+  },
+  "valid": true
+ }
+]

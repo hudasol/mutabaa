@@ -1,0 +1,15 @@
+{
+ "card_version": "1",
+ "title": "Example office: citizen services at full maturity with guardrails",
+ "headline_claim": "Example Office reports AI use in citizen facing services.",
+ "definition": {
+  "unit": "transactions",
+  "scope": "citizen-services",
+  "threshold": 4,
+  "guardrails": "required"
+ },
+ "as_of": "2026-11-03",
+ "declared_by": "Example delivery unit",
+ "notes": "Invented example for the synthetic registry. Not a real office or claim.",
+ "is_synthetic": true
+}
