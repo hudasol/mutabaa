@@ -1,0 +1,375 @@
+{
+ "changed": [
+  {
+   "id": "S01",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S02",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S06",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S09",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S13",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S14",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S15",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S17",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S19",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S21",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S22",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S23",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S27",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S28",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S29",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S30",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S31",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S32",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S33",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S35",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S36",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S39",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S40",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S42",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S43",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S44",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S46",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S47",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S49",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S50",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S52",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S53",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S54",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S58",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S60",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S61",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  },
+  {
+   "id": "S62",
+   "now": "verified",
+   "reason": "visible text hash",
+   "was": "verified"
+  }
+ ],
+ "counts": {
+  "changed": 37,
+  "newly_unreachable": 2,
+  "recovered": 0,
+  "still_unreachable": 7,
+  "unchanged": 16
+ },
+ "newly_unreachable": [
+  {
+   "error": "empty response",
+   "id": "S07",
+   "now": "unreachable",
+   "was": "verified"
+  },
+  {
+   "error": "empty response",
+   "id": "S08",
+   "now": "unreachable",
+   "was": "verified"
+  }
+ ],
+ "recovered": [],
+ "run_at": "2026-11-09T14:04:23Z",
+ "still_unreachable": [
+  {
+   "error": "HTTP 403",
+   "id": "S10",
+   "now": "unreachable",
+   "was": "unreachable"
+  },
+  {
+   "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'beta.government.ae'. (_ssl.c:1011)>",
+   "id": "S11",
+   "now": "unreachable",
+   "was": "unreachable"
+  },
+  {
+   "error": "HTTP 403",
+   "id": "S12",
+   "now": "unreachable",
+   "was": "unreachable"
+  },
+  {
+   "error": "HTTP 404",
+   "id": "S24",
+   "now": "unreachable",
+   "was": "unreachable"
+  },
+  {
+   "error": "HTTP 404",
+   "id": "S25",
+   "now": "unreachable",
+   "was": "unreachable"
+  },
+  {
+   "error": "HTTP 404",
+   "id": "S41",
+   "now": "unreachable",
+   "was": "unreachable"
+  },
+  {
+   "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'beta.government.ae'. (_ssl.c:1011)>",
+   "id": "S48",
+   "now": "unreachable",
+   "was": "unreachable"
+  }
+ ],
+ "unchanged": [
+  {
+   "id": "S03",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S04",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S05",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S16",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S18",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S20",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S26",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S34",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S37",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S38",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S45",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S51",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S55",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S56",
+   "now": "verified",
+   "was": "verified"
+  },
+  {
+   "id": "S57",
+   "now": "no-expectations",
+   "was": "no-expectations"
+  },
+  {
+   "id": "S59",
+   "now": "verified",
+   "was": "verified"
+  }
+ ]
+}
